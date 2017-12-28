@@ -11,8 +11,8 @@ var headerSearch = new HeaderSearch();
 
 //import HeaderWhatsNewInit from './modules/_header-whats-new';
 
-//import ShrinkHeader from './modules/_element-size';
-//var shrinkHeader = new ShrinkHeader();
+import ShrinkExpand from './modules/_header-shrink-expand';
+new ShrinkExpand();
 
 
 

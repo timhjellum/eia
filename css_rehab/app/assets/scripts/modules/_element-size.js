@@ -24,9 +24,56 @@ import $ from 'jquery';
 */
 
 
-class ShrinkHeader {
+class SizeAndPosition {
     constructor() {
-   
+
+        //var windowScrollPositionTop = $(window).scrollTop();
+        //$(window).scroll(function() {
+        //    console.log(windowScrollPositionTop);
+        //});
+        
+
+        this.browserWindow = $(window);
+        this.Scroll = $(this.browserWindow).scroll(this.events.bind(this));
+    }
+    events() { 
+        if (this.browserWindow.scrollTop() > 96) {
+            console.log("shrink");
+            $('header').addClass('shrink');
+        }
+        if (this.browserWindow.scrollTop() < 97) {
+            console.log("expand");
+            $('header').removeClass('shrink');
+        }
+    }
+
+
+
+
+
+
+
+
+
+/*
+    this.Header = $('header');
+
+    if (windowPositionScrollTop > 96) {
+//        console.log("shrink");
+        $('header').addClass('shrink');
+    }
+    if (windowPositionScrollTop < 97) {
+//        console.log("expand");
+        $('header').removeClass('shrink');
+    }
+*/
+
+
+
+
+
+        /*  
+    constructor(els, pos) {
         $(window).scroll(function() {
 
             var windowPositionScrollTop = $(window).scrollTop();
@@ -39,11 +86,28 @@ class ShrinkHeader {
                 console.log("expand");
                 $('header').removeClass('shrink');
             }
-//            $(window).scroll(function() {
-//                console.log(windowPositionScrollTop);
-//            });
         });
 
-    }    
+
+
+ 
+        $(window).scroll(function() {
+
+            var windowPositionScrollTop = $(window).scrollTop();
+
+            if (windowPositionScrollTop > 96) {
+                console.log("shrink");
+                $('header').addClass('shrink');
+            }
+            if (windowPositionScrollTop < 97) {
+                console.log("expand");
+                $('header').removeClass('shrink');
+            }
+            // $(window).scroll(function() {
+            //  console.log(windowPositionScrollTop);
+            // });
+        });
+        */
+
 }
-export default ShrinkHeader;
+export default SizeAndPosition;

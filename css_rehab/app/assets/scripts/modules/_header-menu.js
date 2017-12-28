@@ -98,16 +98,17 @@ $(document).ready(function() {
 	// shrink / expand header
 	// shrink / expand header
 
-//console.log('header shrink expand script found!');
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-		if (scroll >= 97) {
-			$('header').addClass('shrink');
-		} else {
-			$('header').removeClass('shrink');
-		}
-	});
-
+    //console.log('header shrink expand script found!');
+    /*
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 97) {
+                $('header').addClass('shrink');
+            } else {
+                $('header').removeClass('shrink');
+            }
+        });
+    */
 
 	// fancybox tabs
 	// fancybox tabs
