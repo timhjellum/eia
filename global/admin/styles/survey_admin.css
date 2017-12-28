@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+/****************************************************/
+/* Survey Admin Styles                                */
+/****************************************************/
+
+#ans_choices_table tr {
+	border:solid 1px red;
+	padding-top:20px;
+	margin-top:20px;
+	background-color:#fff;
+}
+
+#ans_choices_table tr td{
+	padding-bottom:3px;
+	padding-top:3px;
+	border-bottom:10px solid #eee;
+}
+
+.followup {
+	padding:4px 18px 4px 18px;
+	margin:6px 0px 4px 0px;
+}
+
+#ans_choices_table .followup_choices td{
+	padding-top:5px;
+	border-bottom: none;
+	border-top: 1px dotted #ccc;
+}
+
+.deletebutton {
+	float:right;
+	position:relative;
+	border:solid 1px #ccc;
+	line-height:12px;
+	padding:0px 2px 2px 2px;
+	margin:0px 2px 0px 0px;
+	cursor:pointer;
+}
+
+.followup_choices .deletebutton {
+	margin-top:3px;
+}

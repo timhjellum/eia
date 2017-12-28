@@ -1,0 +1,372 @@
+.pagecontent.eqcol_temp {
+  margin-top: 18px;
+}
+.feature-section {
+  margin: 12px 22px 16px 22px;
+  border-bottom: 1px solid #668393;
+  padding-bottom: 26px;
+
+}
+.eqcol_temp .main {
+  padding: 0 22px 40px 22px;
+}
+.eqcol_temp .main .main_col {
+  margin-left: 0px;
+  width: 435px;
+  margin-bottom: 20px;
+}
+.eqcol_temp .main .side_col {
+  width: 435px;
+  margin-bottom: 20px;
+}
+.circle
+    {
+    width:100px;
+    height:100px;
+    border-radius:100px;
+    border: 3px solid #cccccc;
+    margin: auto;
+    margin-bottom: 10px;
+    }
+.circle_ng_navigator {background:url('/global/includes/issuestrends/images/interactive/nat_gas_nav.png') 59% 60%;}
+.circle_ng_map {background:url('/global/includes/issuestrends/images/interactive/nat_gas_map.png') 59% 60%;}
+.circle_ng_query {background:url('/global/includes/issuestrends/images/interactive/nat_gas_query.png') 59% 60%;}
+.circle_pet_map {background:url('/global/includes/issuestrends/images/interactive/petroleum_map.png') 59% 60%;}
+.circle_fossil_fuel {background:url('/global/includes/issuestrends/images/interactive/fossil_fuel_map.png') 59% 60%;}
+.circle_disruptions {background:url('/global/includes/issuestrends/images/interactive/disruptions.png') 59% 60%;}
+.circle_steo {background:url('/global/includes/issuestrends/images/interactive/steo.png') 59% 60%;}
+.circle_radio {background:url('/global/includes/issuestrends/images/interactive/radio.png') 59% 60%;}
+.circle_totalenergy_mer {background:url('/global/includes/issuestrends/images/interactive/totalenergy_mer.png') 59% 60%;}
+.circle_elec_data {background:url('/global/includes/issuestrends/images/interactive/elec_data_browse.png') 59% 60%;}
+.circle_coal_data {background:url('/global/includes/issuestrends/images/interactive/coal_data_browse.png') 59% 60%;}
+.circle_renew_data {background:url('/global/includes/issuestrends/images/interactive/renew_plant_map.png') 59% 60%;}
+.circle_crude_import_data {background:url('/global/includes/issuestrends/images/interactive/crude_import_tool.png') 59% 60%;}
+.circle_aeo {background:url('/global/includes/issuestrends/images/interactive/aeo.png') 59% 60%;}
+.circle_video {background:url('/global/includes/issuestrends/images/interactive/video.png') 59% 60%;}
+.circle_nuclear_outages {background:url('/global/includes/issuestrends/images/interactive/nuclear_outages2.png') 59% 60%;}
+.circle_afv {background:url('/global/includes/issuestrends/images/interactive/afv.png') 59% 60%;}
+
+
+<!----gallery styles--->
+.feature-section div .gallery {
+  display: table;
+  height: 188px;
+}
+.gallery .item {
+  background: none;
+  width: 914px;
+  height: 188px;
+  /*margin-left: 4%;
+  margin-right: 4%;
+  padding: 12px 7px 18px 7px;*/
+  text-align: left;
+  display: table-row;
+}
+.gallery .control-operator:nth-of-type(2):target ~ .secondary-controls {
+  display: block;
+}
+/*.gallery .item .secondary-controls*/
+.secondary-controls {
+  display: table-cell;
+  position: relative;
+  width: 30px;
+  overflow: hidden;
+  height: 188px;
+  z-index: 2;
+  pointer-events: none;
+}
+.superfluous {
+  display: block;
+  height: 188px;
+  width: 30px;
+}
+/*.gallery .item .secondary-controls a*/
+.superfluous a {
+  position: absolute;
+  color: transparent;
+  pointer-events: auto;
+  height: 188px;
+  width: 30px;
+  transition: all .25s;
+}
+.secondary-controls.ctrl_left {
+  float: left;
+  background: url('/global/images/btns/arrows.png') no-repeat 4px top;
+  margin-left: 2px;
+  margin-right: 4px;
+}
+.secondary-controls.ctrl_right {
+  float: right;
+  right: 0;
+  background: url('/global/images/btns/arrows.png') no-repeat -42px top;
+  margin-right: 2px;
+  margin-left: 16px;
+}
+.secondary-controls.ctrl_left:hover {
+  background-position: 4px bottom;
+  background-color: #bed5ad;
+}
+.secondary-controls.ctrl_right:hover {
+  background-position: -42px bottom;
+  background-color: #bed5ad;
+}
+.gallery figure:first-of-type {
+  margin-top:12px;
+}
+div.feature-item {
+  width: 154px;
+  height: 188px;
+  margin-left: 12px;
+  position: relative;
+  float: left;
+  display: table-cell;
+  background-color: #f2f2f2;
+}
+div.feature-item a div {
+  position: relative;
+  height: 77px;
+  width: 140px;
+  margin: 7px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-top: 3px solid #5e9c30;
+  border-bottom: 1px solid #5e9c30;
+}
+div.feature-item a div img {
+  width: 138px;
+}
+div.feature-item > a {
+  color: #265281;
+}
+div.feature-item a h3 {
+  border: none;
+  padding: 0;
+  margin: 0 7px 4px 7px;
+  height: 64px;
+  text-transform: none;
+  line-height: 1.2em;
+  color: #265281;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.feature-item p {
+  margin-left: 7px;
+  font-style: italic;
+  font-size: 9pt;
+}
+div.feature-item.gallery-end {
+  width: 1px;
+  background-color: #dadada;
+}
+<!---/gallery styles--->
+
+.eqcol_temp .feature-section h1, .eqcol_temp .main h1, .eqcol_temp .main .main_col h1, .eqcol_temp .main .side_col h1 {
+  font-size:20pt;
+  margin-bottom:10px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+}
+.eqcol_temp .feature-section h1 span {
+  text-transform: none;
+  font-size: 9pt;
+  font-weight: normal;
+  padding-top: 11px;
+}
+.eqcol_temp .main h1, .eqcol_temp .main .main_col h1, .eqcol_temp .main .side_col h1 {
+  margin-bottom:22px;
+}
+.eqcol_temp .main h2, .eqcol_temp .main .main_col h2, .eqcol_temp .main .side_col h2 {
+  border-bottom: 1px solid #dadada;
+  padding: 0 0 2px 0;
+  margin-bottom: 8px;
+  margin-top: 28px;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-size: 11pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.eqcol_temp .main p {
+  font-size: 10pt;
+  margin-bottom: 8px;
+}
+.main .main_col ul {
+  padding-left: 0;
+}
+.main .main_col ul li {
+  list-style: none;
+  font-size: 10pt;
+}
+.main .main_col ul.updated_data, .main .side_col ul.analysis-projections, .main ul.visualizations {
+  display: table;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.main .side_col ul.analysis-projections {
+  padding-left: 0;
+  margin-bottom: 8px;
+}
+.main ul.visualizations {
+  padding-left: 0px;
+  margin: -4px 0px 48px 0px;
+}
+.main .main_col ul.updated_data li {
+  display: table-row;
+  list-style: none;
+}
+.main .side_col ul.analysis-projections li {
+  display: table-row;
+  list-style: none;
+  margin-bottom: 6px;
+}
+.main .main_col ul.updated_data li a, .main .side_col ul.analysis-projections li span, .main ul.visualizations li {
+  display: table-cell;
+  vertical-align: top;
+}
+.main ul.visualizations li {
+  width: 120px;
+  text-align: center;
+  padding-left: 40px;
+}
+.main ul.visualizations li:first-child {
+  padding-left: 0px;
+}
+.main .main_col ul.updated_data li span {
+  display: table-cell;
+  float: none;
+  padding-right: 10px;
+}
+.main .side_col ul.analysis-projections li img {
+  display: table-cell;
+  float: none;
+  padding-right: 16px;
+  padding-top: 12px;
+}
+.main .side_col ul.analysis-projections li h3 {
+  line-height: 1.2em;
+  font-size: 11pt;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2px;
+}
+.main .side_col ul.analysis-projections li h3 a {
+  color: #265281;
+}
+.main .side_col ul.analysis-projections li span {
+  line-height: 1.25em;
+  padding-top: 12px;
+}
+.main .side_col ul.analysis-projections li:first-child img, .main .side_col ul.analysis-projections li:first-child span {
+  padding-top: 0px;
+}
+.main div.ed_section, .main div.ed_section div div {
+  display: table-row;
+  vertical-align: top;
+}
+.main div.ed_section > div {
+  display: table-cell;
+  vertical-align: top;
+  width: 30%;
+  border-left: solid 1px #dadada;
+}
+.main div.ed_section div:first-child {
+  border: none;
+}
+.main div.ed_section div img {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 6px 0 18px;
+}
+.main div.ed_section div span {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 14px;
+}
+.main div.ed_section div:first-child div img {
+  padding-left: 0px;
+}
+.main div.ed_section div:first-child span {
+  padding-bottom: 16px;
+}
+.main div.ed_section span h2 {
+  display: inline;
+  border-bottom: none;
+}
+.main div.ed_section span p {
+  font-size: 12px;
+}
+.main div.ed_section span h2+p em a {
+  color: #333333;
+  font-size: 10pt;
+}
+.basic_table tr td.flag {
+  text-align: left;
+}
+/*--no centering on headers, there should be very few exceptions to this rule--
+.basic_table thead tr th{
+  text-align: center;
+}
+*/
+.basic_table thead tr th span {
+  font-weight: normal;
+  float: none;
+}
+.basic_table {
+  margin-bottom: 12px;
+  margin-top: 0px;
+  border-bottom: 1px solid #189bd7;
+}
+.eqcol_temp .main .basic_table caption p {
+  margin-bottom: 0px;
+}
+.basic_table caption span.units {
+  float:none;
+  display: inline;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 10pt;
+  min-height: 0;
+}
+.basic_table tbody tr:first-child td, .basic_table tbody .section td {
+  padding-top: 5px;
+}
+.basic_table tbody tr:last-child td, .basic_table tbody .section td {
+  padding-bottom: 5px;
+}
+.basic_table.col_1_2_left thead tr th:nth-child(2), .basic_table.col_1_2_left tbody tr td:nth-child(2) {
+  text-align: left;
+}
+/* christian.stauffer@eia.gov added this in here to deal with truncation on the main tag title on the L2 rotator. It's not as elegant as I'd like.*/
+.truncate {
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*---alert styling---*/
+div.alert {
+  border: none;
+  margin: 10px 20px 0px 20px;
+  background-color: #ffd867;
+  color: #333333;
+  font-size: 11pt;
+}
+div.alert p {
+  margin-bottom: 0;
+  font-size: 11pt;
+}
+div.alert a, div.alert p a, div.alert a:hover, div.alert a:visited {
+  color: #333333;
+  text-decoration: underline;
+}
+
+/*---fix for external link icon in visualization section ---*/
+.pagecontent .visualizations a[href*=".com"] {
+  margin: 0;
+  padding: 0;
+}
+.pagecontent .visualizations a[href*=".com"] b {
+  padding-right: 10px;
+}

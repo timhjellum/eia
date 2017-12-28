@@ -1,0 +1,1 @@
+<?phpclass Padd extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT id, name, bitmap_index,decode(id, 'US', '1', name) as "ORDER"FROM petimp.paddsORDER BY decode(id, 'US', '1', name)SQL;

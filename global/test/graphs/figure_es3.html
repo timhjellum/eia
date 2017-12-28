@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Figure ES3. Planned Capacity Additions, 2010-2014</title>
+		
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/jquery/jquery.min-1.4.2.js"></script>
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/highcharts.js"></script>
+		
+		<!-- 1a) Optional: the exporting module -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/modules/exporting.js"></script>
+		
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script type="text/javascript">
+		
+			var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container',
+						defaultSeriesType: 'column'
+					},
+					title: {
+												
+						text: 'Figure ES3. Planned Capacity Additions, 2010-2014' 
+						
+					},
+					subtitle: {	 
+						
+						text: 'gigawatts (GW)<br>'
+					},
+					xAxis: {
+						categories: [
+							'2010', 
+							'2011', 
+							'2012', 
+							'2013',
+							'2014'
+						]
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: ''
+						}
+					},
+					legend: {
+						layout: 'vertical',
+						backgroundColor: '#FFFFDD',
+						align: 'right',
+						verticalAlign: 'top',
+						x: -20,
+						y: 70
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.series.name +'</b><br/>'+
+								this.x +': '+ this.y + ' gigawatts';
+						}
+					},
+					plotOptions: {
+						column: {
+							pointPadding: .01,
+							borderWidth: 0
+						}
+					},
+				        series: [{
+						name: 'Coal',
+						data: [8, 3, 6, 0, 1]
+				
+					}, {
+						name: 'Natural Gas',
+						data: [9.488, 11.51, 9.713, 5.417, 2.501]
+				
+					}, {
+						name: 'Wind',
+						data: [5.78, 3.949, 1.138, 0.415, 0.3]
+				
+					}, 
+					{
+						name: 'Other',
+						data: [2.033, 1.365, 2.754, 1.997, 0.922]
+				
+									
+					}]
+				});
+				
+				
+			});
+				
+		</script>
+		
+	</head>
+	<body>
+		
+		<!-- 3. Add the container -->
+		<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+		
+				
+	</body>
+</html>

@@ -1,0 +1,1 @@
+<?phpclass OriginType extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT ID, Name, 'ot' as "GROUP", plural_namefrom PETIMP.ORIGIN_TYPESSQL;

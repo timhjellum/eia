@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="38pt" viewBox="0 0 38 38" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="Clip0">
+   <path d="M0 0 L28 0 L28 34 L0 34 L0 0 Z" transform="translate(6, 0)"/>
+  </clipPath>
+ </defs>
+ <g id="Background">
+  <g id="total-energy" clip-path="url(#Clip0)">
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M27 0 L0 0 L0 34 L28 34 L28 0 L27 0 Z M26 32 L2 32 L2 2 L26 2 L26 32 Z" transform="translate(6, 0)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(10, 4)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(10, 8)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L20 0 L20 2 L0 2 L0 0 Z" transform="translate(10, 12)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L20 0 L20 2 L0 2 L0 0 Z" transform="translate(10, 16)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L8 0 L8 2 L0 2 L0 0 Z" transform="translate(22, 20)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L8 0 L8 2 L0 2 L0 0 Z" transform="translate(22, 24)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L8 0 L8 2 L0 2 L0 0 Z" transform="translate(22, 28)"/>
+   <path style="fill:#bfd5ad; fill-rule:evenodd;stroke:none;" d="M0 0 L8 0 L8 6 L0 6 L0 0 Z" transform="translate(22, 4)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M2.74 10 L0 10 L0 7.81 L0 0 L2 0 L2 8 L4 8 L4 2 L6 2 L6 4 L8 4 L8 8 L10 8 L10 10 L8.74 10 L6.74 10 L4.74 10 L2.74 10 Z" transform="translate(10, 20)"/>
+  </g>
+ </g>
+</svg>

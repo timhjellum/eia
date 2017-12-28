@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My AngularJS Test</title>
+        <script src="/global/scripts/jquery/jquery-1.11.0.min.js"></script>
+        <script src="/global/scripts/jquery/jquery-migrate-1.2.1.min.js"></script>
+        <script src="/global/scripts/jquery/ui/1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="/global/scripts/angular/angular-1.3.8/angular.js"></script>
+        <link rel="stylesheet" type="text/css" href="buttonset.css">
+        <link rel="stylesheet" type="text/css" href="/global/scripts/jquery/datepicker/jquery-ui-dp.custom.css">
+        <script src="buttonset-ng.js"></script>
+        <script>
+			var myapp = angular.module('myapp', ["buttonset-ng"]);
+
+			myapp.controller('appController', function($scope, $location) {
+                // button config used to create the button set
+                $scope.configRadio = [
+                    {
+                        id:    'btn1a',
+                        value: 1,
+                        label: 'radio label1'
+
+                    },
+                    {
+                        id:    'btn1b',
+                        value: 2,
+                        label: 'radio label2'
+                    },
+                    {
+                        id:    'btn1c',
+                        value: 3,
+                        label: 'radio label3'
+                    },
+                    {
+                        id:    'btn1d',
+                        value: 4,
+                        label: 'radio label4'
+                    }
+                ];
+                // button config used to create the button set
+                $scope.configCheckbox = [
+                    {
+                        id:    'btn1a',
+                        value: 1,
+                        label: 'radio label1'
+
+                    },
+                    {
+                        id:    'btn1b',
+                        value: 2,
+                        label: 'radio label2'
+                    },
+                    {
+                        id:    'btn1c',
+                        value: 3,
+                        label: 'radio label3'
+                    },
+                    {
+                        id:    'btn1d',
+                        value: 4,
+                        label: 'radio label4'
+                    }
+                ];
+
+                //Radio watcher and getter/setter
+                $scope.radMobile = function(val) {
+                    if ( angular.isDefined(val)) {
+                        $location.search(angular.extend({}, $location.search(), {'radMobile' : val}));
+                        //return $scope;
+                    }
+                    return $location.search().radMobile;
+                };
+				$scope.$watch(
+					function() {
+						return $location.search().radMobile
+					},
+					function(newValue, oldValue) {
+						if(newValue !== oldValue) {
+							$scope.radMobile(newValue);
+						}
+					}
+				);
+
+                //Checkbox watcher and getter/setter
+                $scope.checkMobile = function(val) {
+                    if ( angular.isDefined(val)) {
+                        $location.search(angular.extend({}, $location.search(), {'checkMobile' : val}));
+                        //return $scope;
+                    }
+                    return $location.search().checkMobile;
+                };
+                $scope.$watch(
+                        function() {
+                            return $location.search().checkMobile
+                        },
+                        function(newValue, oldValue) {
+                            if(newValue !== oldValue) {
+                                $scope.checkMobile(newValue);
+                            }
+                        }
+                );
+			});
+        </script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div ng-app="myapp" ng-controller="appController">
+            <buttonset id="radio_example" type="radio" hash-sync ng-model="radMobile" ng-model-options="{getterSetter:true}" config="configRadio"></buttonset>
+            <BR>
+            <BR>
+            <buttonset id="checkbox_example" type="checkbox" hash-sync ng-model="checkMobile" ng-model-options="{getterSetter:true}" config="configCheckbox"></buttonset>
+
+        </div>
+    </body>
+</html>

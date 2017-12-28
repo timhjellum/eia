@@ -1,0 +1,1 @@
+import AccordionInit from './modules/_accordion';

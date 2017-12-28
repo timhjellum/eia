@@ -1,0 +1,53 @@
+@import '../../../../../global/less/global_vars';
+
+.ui-buttonset {
+  label {
+    display: inline-block;
+    border : 0;
+    background: none;
+    padding : 0px 6px 0px 6px;
+    color: #a6a6a6;
+    text-align: center;
+    cursor: pointer;
+    .border-radius;
+
+    ~ label {
+      border-left : 1px solid #dadada;
+    }
+
+    &.ui-state-active, &:hover {
+      color: @eia-green;
+      .border-radius;
+    }
+  }
+
+  &.green {
+    &.ui-state-active, &:hover {
+      color: @eia-green;
+    }
+  }
+
+  &.large {
+    .ico {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .col2{
+  	width:50%;
+  }
+  .col3{
+  	width:33%;
+  }
+}
+
+.ui-buttonset[type="checkbox"] {
+	label {
+		float:left;
+	}
+	input {
+		float: left;
+		clear: both;
+	}
+}

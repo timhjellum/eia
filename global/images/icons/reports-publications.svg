@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="38pt" viewBox="0 0 38 38" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="Clip0">
+   <path d="M0 0 L26 0 L26 33 L0 33 L0 0 Z" transform="translate(7, 0)"/>
+  </clipPath>
+ </defs>
+ <g id="Background">
+  <g id="reports-publications" clip-path="url(#Clip0)">
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(17, 12)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L2 0 L2 2 L0 2 L0 0 Z" transform="translate(13.39, 12.31)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(17, 16)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L2 0 L2 2 L0 2 L0 0 Z" transform="translate(13.39, 16.31)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(17, 20)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L2 0 L2 2 L0 2 L0 0 Z" transform="translate(13.39, 20.31)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(17, 24)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L2 0 L2 2 L0 2 L0 0 Z" transform="translate(13.39, 24.31)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L10 0 L10 2 L0 2 L0 0 Z" transform="translate(17, 8)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M0 0 L2 0 L2 2 L0 2 L0 0 Z" transform="translate(13.39, 8.31)"/>
+   <path style="fill:#bfd5ad; fill-rule:evenodd;stroke:none;" d="M2.84217e-14 1.47 L2.84217e-14 31.63 C0.126125 32.2554 0.563968 32.7725 1.16 33 L24.51 33 C25.1887 32.7929 25.7368 32.289 26 31.63 L26 11.9 C25.803 10.5975 25.189 9.39397 24.25 8.47 L17.48 1.75 C16.5705 0.813384 15.3803 0.19898 14.09 0 L1.16 2.84217e-14 C0.553659 0.267539 0.119226 0.81807 0 1.47 L2.84217e-14 1.47 Z M3 3 L11.51 3 L13.09 3.26 C15.67 3.26 16 6 16 6 L16 10 L20 10 C20 10 23 10.75 23 13.24 L23 30 L3 30 L3 3 Z" transform="translate(7, 0)"/>
+  </g>
+ </g>
+</svg>

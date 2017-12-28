@@ -1,0 +1,10 @@
+
+.slick-sort-indicator {
+	background-position: -212px -4px !important;
+}
+.slick-sort-indicator.slick-sort-indicator-asc {
+	background-position: -97px -8px !important;
+}
+.slick-sort-indicator.slick-sort-indicator-desc {
+	background-position: -2px -88px !important;
+}

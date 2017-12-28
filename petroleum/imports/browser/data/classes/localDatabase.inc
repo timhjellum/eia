@@ -1,0 +1,1 @@
+<?phpabstract class localDatabase extends Database {var    $connection_name    = 'petimp_web';var    $nls_date_format    = 'DD-MM-YYYY';//var $nls_date_format = 'DD-MON-YYYY';static $ORACLE_DATE_FORMAT = 'd-M-Y';

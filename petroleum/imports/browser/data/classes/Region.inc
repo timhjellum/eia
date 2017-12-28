@@ -1,0 +1,1 @@
+<?phpclass Region extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT id, name, bitmap_index, origin_type,decode(id, 'WORLD', '1', name) as "ORDER"FROM petimp.regionsORDER BY decode(id, 'WORLD', '1', name)SQL;

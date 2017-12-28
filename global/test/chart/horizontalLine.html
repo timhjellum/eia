@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Weekly Abu Dhabi Murban Spot Price FOB - Test Chart</title>
+  <!--[if IE]><script language="javascript" type="text/javascript" src="/global/scripts/JQuery/jqplot/excanvas.js"></script><![endif]-->
+  
+  <link rel="stylesheet" type="text/css" href="/global/scripts/JQuery/jqplot/jquery.jqplot.css" />
+  <link rel="stylesheet" type="text/css" href="/global/scripts/JQuery/jqplot/examples/examples.css" />
+  
+  <!-- BEGIN: load jquery -->
+  <script language="javascript" type="text/javascript" src="/global/scripts/JQuery/jqplot/jquery-1.4.2.min.js"></script>
+  <!-- END: load jquery -->
+  
+  <!-- BEGIN: load jqplot -->
+  <script language="javascript" type="text/javascript" src="/global/scripts/JQuery/jqplot/jquery.jqplot.js"></script>
+  <script language="javascript" type="text/javascript" src="/global/scripts/JQuery/jqplot/plugins/jqplot.dateAxisRenderer.js"></script>
+  <!-- END: load jqplot -->
+  <style type="text/css" media="screen">
+    .jqplot-axis {
+      font-size: 0.85em;
+    }
+  </style>
+  <script type="text/javascript" language="javascript">
+  
+  $(document).ready(function(){
+      $.jqplot.config.enablePlugins = true;
+
+line1 = [[1980, 20], [1985, 10], [1990, 10], [1995, 10], [2000, 10], [2005, 10], [2010, 10]];
+plot2 = $.jqplot('chart', [line1], {
+    title: 'Weekly Abu Dhabi Murban Spot Price FOB',
+    axes: {
+        xaxis: {
+            renderer: $.jqplot.DateAxisRenderer,
+            numberTicks: 7
+        }
+    },
+    series:[{},{lineWidth:1, color:'#999999', showMarker:false}]
+});
+
+
+  });
+  </script>
+  </head>
+  <body>
+<?php include "nav.inc"; ?>
+    <div id="chart" style="margin-top:20px; margin-left:20px; width:600px; height:400px;"></div>
+  </body>
+</html>

@@ -1,0 +1,3073 @@
+{
+    "modifierKeysToMultiSelectCells":true,
+    "showGridFooter":true,
+    "infiniteScrollPercentage":100,
+    "enableFiltering":true,
+    "columnDefs":[
+        {
+            "name":"pin",
+            "field":"pin",
+            "width":"*",
+            "maxWidth":30,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":true,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false,
+            "cellTemplate":"<a ng-show=\"row.entity.level > 1\" ng-click=\"grid.appScope.pinData(row.entity.level, row.entity.description)\" class=\"ico pin\"></a>",
+            "headerCellTemplate":"<span></span>",
+            "enablePinning":true,
+            "enableColumnResizing":true,
+            "allowCellFocus":true
+        },
+        {
+            "name":"description",
+            "field":"description",
+            "width":"*",
+            "maxWidth":300,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":true,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false,
+            "cellTemplate":"<div ng-class=\"{'level-1':row.entity.level===1,  'level-2':row.entity.level===2,  'level-3':row.entity.level===3,  'level-4':row.entity.level===4,  'level-5':row.entity.level===5,  'level-6':row.entity.level===6,  'level-7':row.entity.level===7,  'level-8':row.entity.level===8,  'level-9':row.entity.level===9}\" class=\"ngCell\">{{row.entity.description}}</div>",
+            "headerCellTemplate":"<div id=\"apiPin\"><div class=\"pin_button\" ><span class=\"ico\"></span><span class=\"text\">Pin</span></div><div class=\"api_button\"><span class=\"ico\"></span><span class=\"text\">API</span></div></div>",
+            "enablePinning":true,
+            "enableColumnResizing":true,
+            "allowCellFocus":true
+        },
+        {
+            "name":"unit",
+            "field":"unit",
+            "width":"*",
+            "maxWidth":50,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":true,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false,
+            "headerCellTemplate":"<span></span>",
+            "enablePinning":true,
+            "enableColumnResizing":true,
+            "allowCellFocus":true
+        },
+        {
+            "name":"globe",
+            "field":"globe",
+            "width":"*",
+            "maxWidth":30,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":true,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false,
+            "cellTemplate":"<a ng-show=\"row.entity.series_id\" ng-click=\"grid.appScope.visualize(row.entity.data_index,0)\" class=\"ico worldmap\" ng-class=\"{selected:row.entity.selected==1}\"></a>",
+            "headerCellTemplate":"<span></span>",
+            "enablePinning":true,
+            "enableColumnResizing":true,
+            "allowCellFocus":true
+        },
+        {
+            "name":"1980",
+            "field":"01-JAN-1980",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1981",
+            "field":"01-JAN-1981",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1982",
+            "field":"01-JAN-1982",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1983",
+            "field":"01-JAN-1983",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1984",
+            "field":"01-JAN-1984",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1985",
+            "field":"01-JAN-1985",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1986",
+            "field":"01-JAN-1986",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1987",
+            "field":"01-JAN-1987",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1988",
+            "field":"01-JAN-1988",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1989",
+            "field":"01-JAN-1989",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1990",
+            "field":"01-JAN-1990",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1991",
+            "field":"01-JAN-1991",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1992",
+            "field":"01-JAN-1992",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1993",
+            "field":"01-JAN-1993",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1994",
+            "field":"01-JAN-1994",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1995",
+            "field":"01-JAN-1995",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1996",
+            "field":"01-JAN-1996",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1997",
+            "field":"01-JAN-1997",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1998",
+            "field":"01-JAN-1998",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"1999",
+            "field":"01-JAN-1999",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2000",
+            "field":"01-JAN-2000",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2001",
+            "field":"01-JAN-2001",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2002",
+            "field":"01-JAN-2002",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2003",
+            "field":"01-JAN-2003",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2004",
+            "field":"01-JAN-2004",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2005",
+            "field":"01-JAN-2005",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2006",
+            "field":"01-JAN-2006",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2007",
+            "field":"01-JAN-2007",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2008",
+            "field":"01-JAN-2008",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2009",
+            "field":"01-JAN-2009",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2010",
+            "field":"01-JAN-2010",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2011",
+            "field":"01-JAN-2011",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        },
+        {
+            "name":"2012",
+            "field":"01-JAN-2012",
+            "width":110,
+            "enableColumnMenu":false,
+            "enableFiltering":false,
+            "pinnedLeft":false,
+            "cellClass":"initCellStyles",
+            "headerCellClass":"headerCellStyles",
+            "enableSorting":false
+        }
+    ],
+    "enableHorizontalScrollbar":0,
+    "enableVerticalScrollbar":0,
+    "data":[
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Total Primary Coal",
+            "has_data":false,
+            "unit":null,
+            "level":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Aruba",
+            "pa":"Total Primary Coal",
+            "country":"Aruba",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Aruba, Annual",
+            "data":{
+                "01-JAN-1985":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA"
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-ABW-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Afghanistan",
+            "pa":"Total Primary Coal",
+            "country":"Afghanistan",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Afghanistan, Annual",
+            "data":{
+                "01-JAN-2000":1,
+                "01-JAN-2011":799,
+                "01-JAN-2008":383,
+                "01-JAN-1987":184,
+                "01-JAN-1986":176,
+                "01-JAN-2006":39,
+                "01-JAN-1984":163,
+                "01-JAN-1993":8,
+                "01-JAN-2009":551,
+                "01-JAN-1980":131,
+                "01-JAN-2010":799,
+                "01-JAN-2005":36,
+                "01-JAN-1994":7,
+                "01-JAN-1991":104,
+                "01-JAN-2003":39,
+                "01-JAN-2002":23,
+                "01-JAN-2007":268,
+                "01-JAN-1998":2,
+                "01-JAN-2001":29,
+                "01-JAN-1985":166,
+                "01-JAN-2004":37,
+                "01-JAN-1990":116,
+                "01-JAN-1983":160,
+                "01-JAN-1995":6,
+                "01-JAN-2012":827,
+                "01-JAN-1989":140,
+                "01-JAN-1997":2,
+                "01-JAN-1992":9,
+                "01-JAN-1981":138,
+                "01-JAN-1988":152,
+                "01-JAN-1996":3,
+                "01-JAN-1999":1,
+                "01-JAN-1982":160
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-AFG-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Africa",
+            "pa":"Total Primary Coal",
+            "country":"Africa",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Angola",
+            "pa":"Total Primary Coal",
+            "country":"Angola",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Albania",
+            "pa":"Total Primary Coal",
+            "country":"Albania",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Albania, Annual",
+            "data":{
+                "01-JAN-1990":2282,
+                "01-JAN-2004":89,
+                "01-JAN-1983":2039,
+                "01-JAN-1995":88,
+                "01-JAN-1989":2417,
+                "01-JAN-2012":22,
+                "01-JAN-1997":43,
+                "01-JAN-1981":1698,
+                "01-JAN-1992":403,
+                "01-JAN-1988":2407,
+                "01-JAN-1996":125,
+                "01-JAN-1999":54,
+                "01-JAN-1982":1874,
+                "01-JAN-2000":33,
+                "01-JAN-2011":10,
+                "01-JAN-2008":94,
+                "01-JAN-1987":2352,
+                "01-JAN-1986":2389,
+                "01-JAN-1984":2216,
+                "01-JAN-2006":71,
+                "01-JAN-1980":1563,
+                "01-JAN-2009":15,
+                "01-JAN-1993":236,
+                "01-JAN-2010":15,
+                "01-JAN-2005":71,
+                "01-JAN-1994":186,
+                "01-JAN-1991":1198,
+                "01-JAN-2003":89,
+                "01-JAN-2002":85,
+                "01-JAN-2007":71,
+                "01-JAN-2001":23,
+                "01-JAN-1998":54,
+                "01-JAN-1985":2370
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-ALB-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"United Arab Emirates",
+            "pa":"Total Primary Coal",
+            "country":"United Arab Emirates",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Argentina",
+            "pa":"Total Primary Coal",
+            "country":"Argentina",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Argentina, Annual",
+            "data":{
+                "01-JAN-2000":286,
+                "01-JAN-2011":99,
+                "01-JAN-2008":102,
+                "01-JAN-1987":411,
+                "01-JAN-1986":401,
+                "01-JAN-1984":560,
+                "01-JAN-2006":155,
+                "01-JAN-1993":184,
+                "01-JAN-1980":430,
+                "01-JAN-2009":90,
+                "01-JAN-2010":72,
+                "01-JAN-2005":28,
+                "01-JAN-1994":384,
+                "01-JAN-1991":322,
+                "01-JAN-2003":98,
+                "01-JAN-2002":106,
+                "01-JAN-1998":319,
+                "01-JAN-2007":121,
+                "01-JAN-2001":206,
+                "01-JAN-1985":441,
+                "01-JAN-2004":56,
+                "01-JAN-1990":305,
+                "01-JAN-1983":536,
+                "01-JAN-1995":336,
+                "01-JAN-1989":568,
+                "01-JAN-2012":88,
+                "01-JAN-1997":276,
+                "01-JAN-1992":223,
+                "01-JAN-1988":564,
+                "01-JAN-1981":549,
+                "01-JAN-1996":343,
+                "01-JAN-1999":370,
+                "01-JAN-1982":568
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-ARG-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Armenia",
+            "pa":"Total Primary Coal",
+            "country":"Armenia",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Armenia, Annual",
+            "data":{
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-ARM-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"American Samoa",
+            "pa":"Total Primary Coal",
+            "country":"American Samoa",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Asia & Oceania",
+            "pa":"Total Primary Coal",
+            "country":"Asia & Oceania",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antarctica",
+            "pa":"Total Primary Coal",
+            "country":"Antarctica",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antigua and Barbuda",
+            "pa":"Total Primary Coal",
+            "country":"Antigua and Barbuda",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Australia",
+            "pa":"Total Primary Coal",
+            "country":"Australia",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Australia, Annual",
+            "data":{
+                "01-JAN-1981":133350,
+                "01-JAN-1988":193591,
+                "01-JAN-1992":251701,
+                "01-JAN-1996":272435,
+                "01-JAN-1999":320775,
+                "01-JAN-1982":139098,
+                "01-JAN-2000":338103,
+                "01-JAN-2011":443390,
+                "01-JAN-2008":432383,
+                "01-JAN-1987":214907,
+                "01-JAN-1986":189059,
+                "01-JAN-2006":412984,
+                "01-JAN-1984":162789,
+                "01-JAN-2009":449631,
+                "01-JAN-1993":249194,
+                "01-JAN-1980":115196,
+                "01-JAN-1991":242075,
+                "01-JAN-2005":408506,
+                "01-JAN-1994":248463,
+                "01-JAN-2010":467823,
+                "01-JAN-2003":373045,
+                "01-JAN-2002":374673,
+                "01-JAN-1998":316750,
+                "01-JAN-2007":431047,
+                "01-JAN-2001":362856,
+                "01-JAN-1985":177170,
+                "01-JAN-1990":225491,
+                "01-JAN-2004":382608,
+                "01-JAN-1983":152683,
+                "01-JAN-1995":266547,
+                "01-JAN-2012":463783,
+                "01-JAN-1989":215458,
+                "01-JAN-1997":291515
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-AUS-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Austria",
+            "pa":"Total Primary Coal",
+            "country":"Austria",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Austria, Annual",
+            "data":{
+                "01-JAN-1982":3634,
+                "01-JAN-2000":1377,
+                "01-JAN-1987":3071,
+                "01-JAN-1986":3273,
+                "01-JAN-1984":3228,
+                "01-JAN-1993":1864,
+                "01-JAN-1980":3158,
+                "01-JAN-1994":1509,
+                "01-JAN-1991":2294,
+                "01-JAN-2003":1270,
+                "01-JAN-2002":1556,
+                "01-JAN-1998":1258,
+                "01-JAN-2001":1329,
+                "01-JAN-1985":3396,
+                "01-JAN-1990":2698,
+                "01-JAN-2004":259,
+                "01-JAN-1983":3352,
+                "01-JAN-1995":1431,
+                "01-JAN-1989":2277,
+                "01-JAN-1997":1247,
+                "01-JAN-1981":3374,
+                "01-JAN-1988":2347,
+                "01-JAN-1992":1952,
+                "01-JAN-1996":1222,
+                "01-JAN-1999":1254
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-AUT-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Azerbaijan",
+            "pa":"Total Primary Coal",
+            "country":"Azerbaijan",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Azerbaijan, Annual",
+            "data":{
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA"
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-AZE-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burundi",
+            "pa":"Total Primary Coal",
+            "country":"Burundi",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Belgium",
+            "pa":"Total Primary Coal",
+            "country":"Belgium",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Belgium, Annual",
+            "data":{
+                "01-JAN-1982":12163,
+                "01-JAN-1987":7392,
+                "01-JAN-1986":10103,
+                "01-JAN-1984":11475,
+                "01-JAN-1980":6971,
+                "01-JAN-1991":699,
+                "01-JAN-1985":11430,
+                "01-JAN-1990":1237,
+                "01-JAN-1983":10934,
+                "01-JAN-1989":2800,
+                "01-JAN-1988":3541,
+                "01-JAN-1992":240,
+                "01-JAN-1981":11698
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-BEL-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Benin",
+            "pa":"Total Primary Coal",
+            "country":"Benin",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burkina Faso",
+            "pa":"Total Primary Coal",
+            "country":"Burkina Faso",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bangladesh",
+            "pa":"Total Primary Coal",
+            "country":"Bangladesh",
+            "has_data":false,
+            "unit":null,
+            "level":2,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Primary Coal Production, Bangladesh, Annual",
+            "data":{
+                "01-JAN-2007":398,
+                "01-JAN-2012":1102,
+                "01-JAN-2011":992,
+                "01-JAN-2008":926,
+                "01-JAN-2006":497,
+                "01-JAN-2009":979,
+                "01-JAN-2010":849,
+                "01-JAN-2005":85
+            },
+            "description":"Total Primary Coal Production",
+            "pa":"Total Primary Coal Production",
+            "has_data":true,
+            "series_id":"INTL.7-1-BGD-TST.A",
+            "unit":"TST",
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Hard Coal",
+            "has_data":false,
+            "unit":null,
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Aruba",
+            "pa":"Hard Coal",
+            "country":"Aruba",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Aruba, Annual",
+            "data":{
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-ABW-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Afghanistan",
+            "pa":"Hard Coal",
+            "country":"Afghanistan",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Afghanistan, Annual",
+            "data":{
+                "01-JAN-1998":2,
+                "01-JAN-2001":29,
+                "01-JAN-1985":166,
+                "01-JAN-1990":116,
+                "01-JAN-2004":37,
+                "01-JAN-1995":6,
+                "01-JAN-1983":160,
+                "01-JAN-1989":140,
+                "01-JAN-2012":827,
+                "01-JAN-1997":2,
+                "01-JAN-1988":152,
+                "01-JAN-1992":9,
+                "01-JAN-1981":138,
+                "01-JAN-1996":3,
+                "01-JAN-1999":1,
+                "01-JAN-1982":160,
+                "01-JAN-2000":1,
+                "01-JAN-2011":799,
+                "01-JAN-2008":383,
+                "01-JAN-1986":176,
+                "01-JAN-1987":184,
+                "01-JAN-1984":163,
+                "01-JAN-2006":39,
+                "01-JAN-2009":551,
+                "01-JAN-1980":131,
+                "01-JAN-1993":8,
+                "01-JAN-1994":7,
+                "01-JAN-2010":799,
+                "01-JAN-2005":36,
+                "01-JAN-1991":104,
+                "01-JAN-2003":39,
+                "01-JAN-2002":23,
+                "01-JAN-2007":268
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-AFG-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Africa",
+            "pa":"Hard Coal",
+            "country":"Africa",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Angola",
+            "pa":"Hard Coal",
+            "country":"Angola",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Albania",
+            "pa":"Hard Coal",
+            "country":"Albania",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"United Arab Emirates",
+            "pa":"Hard Coal",
+            "country":"United Arab Emirates",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Argentina",
+            "pa":"Hard Coal",
+            "country":"Argentina",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Argentina, Annual",
+            "data":{
+                "01-JAN-2001":206,
+                "01-JAN-1985":441,
+                "01-JAN-2004":56,
+                "01-JAN-1990":305,
+                "01-JAN-1983":536,
+                "01-JAN-1995":336,
+                "01-JAN-1989":568,
+                "01-JAN-2012":88,
+                "01-JAN-1997":276,
+                "01-JAN-1981":549,
+                "01-JAN-1988":564,
+                "01-JAN-1992":223,
+                "01-JAN-1996":343,
+                "01-JAN-1999":370,
+                "01-JAN-1982":568,
+                "01-JAN-2000":286,
+                "01-JAN-2011":99,
+                "01-JAN-2008":102,
+                "01-JAN-1987":411,
+                "01-JAN-1986":401,
+                "01-JAN-1984":560,
+                "01-JAN-2006":155,
+                "01-JAN-1980":430,
+                "01-JAN-2009":90,
+                "01-JAN-1993":184,
+                "01-JAN-1991":322,
+                "01-JAN-1994":384,
+                "01-JAN-2010":72,
+                "01-JAN-2005":28,
+                "01-JAN-2003":98,
+                "01-JAN-2002":106,
+                "01-JAN-2007":121,
+                "01-JAN-1998":319
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-ARG-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Armenia",
+            "pa":"Hard Coal",
+            "country":"Armenia",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Armenia, Annual",
+            "data":{
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA"
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-ARM-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"American Samoa",
+            "pa":"Hard Coal",
+            "country":"American Samoa",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Asia & Oceania",
+            "pa":"Hard Coal",
+            "country":"Asia & Oceania",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antarctica",
+            "pa":"Hard Coal",
+            "country":"Antarctica",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antigua and Barbuda",
+            "pa":"Hard Coal",
+            "country":"Antigua and Barbuda",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Australia",
+            "pa":"Hard Coal",
+            "country":"Australia",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Australia, Annual",
+            "data":{
+                "01-JAN-1994":194723,
+                "01-JAN-2010":388358,
+                "01-JAN-2005":330756,
+                "01-JAN-1991":187637,
+                "01-JAN-2003":299401,
+                "01-JAN-2002":301192,
+                "01-JAN-2007":354444,
+                "01-JAN-1998":243712,
+                "01-JAN-2001":291249,
+                "01-JAN-1985":134863,
+                "01-JAN-1990":174796,
+                "01-JAN-2004":309477,
+                "01-JAN-1995":210602,
+                "01-JAN-1983":114424,
+                "01-JAN-1989":162228,
+                "01-JAN-2012":382721,
+                "01-JAN-1997":227410,
+                "01-JAN-1981":97964,
+                "01-JAN-1988":145753,
+                "01-JAN-1992":195788,
+                "01-JAN-1996":213228,
+                "01-JAN-1999":246610,
+                "01-JAN-1982":97688,
+                "01-JAN-2000":263925,
+                "01-JAN-2011":365126,
+                "01-JAN-1987":168826,
+                "01-JAN-2008":355323,
+                "01-JAN-1986":149293,
+                "01-JAN-1984":126194,
+                "01-JAN-2006":334482,
+                "01-JAN-1993":196671,
+                "01-JAN-2009":370223,
+                "01-JAN-1980":78937
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-AUS-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Austria",
+            "pa":"Hard Coal",
+            "country":"Austria",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Azerbaijan",
+            "pa":"Hard Coal",
+            "country":"Azerbaijan",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Azerbaijan, Annual",
+            "data":{
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-AZE-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burundi",
+            "pa":"Hard Coal",
+            "country":"Burundi",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Belgium",
+            "pa":"Hard Coal",
+            "country":"Belgium",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Belgium, Annual",
+            "data":{
+                "01-JAN-1991":699,
+                "01-JAN-1985":11430,
+                "01-JAN-1990":1237,
+                "01-JAN-1983":10934,
+                "01-JAN-1989":2800,
+                "01-JAN-1981":11698,
+                "01-JAN-1988":3541,
+                "01-JAN-1992":240,
+                "01-JAN-1982":12163,
+                "01-JAN-1987":7392,
+                "01-JAN-1986":10103,
+                "01-JAN-1984":11475,
+                "01-JAN-1980":6971
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-BEL-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Benin",
+            "pa":"Hard Coal",
+            "country":"Benin",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burkina Faso",
+            "pa":"Hard Coal",
+            "country":"Burkina Faso",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bangladesh",
+            "pa":"Hard Coal",
+            "country":"Bangladesh",
+            "has_data":false,
+            "unit":null,
+            "level":3,
+            "parent":1
+        },
+        {
+            "pinned_name":"Total Production of Hard Coal, Bangladesh, Annual",
+            "data":{
+                "01-JAN-2011":992,
+                "01-JAN-2008":926,
+                "01-JAN-2006":497,
+                "01-JAN-2009":979,
+                "01-JAN-2010":849,
+                "01-JAN-2005":85,
+                "01-JAN-2007":398,
+                "01-JAN-2012":1102
+            },
+            "description":"Total Production of Hard Coal",
+            "pa":"Total Production of Hard Coal",
+            "has_data":true,
+            "series_id":"INTL.9-1-BGD-TST.A",
+            "unit":"TST",
+            "level":4
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Anthracite",
+            "has_data":false,
+            "unit":null,
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Aruba",
+            "pa":"Anthracite",
+            "country":"Aruba",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Anthracite Coal, Aruba, Annual",
+            "data":{
+                "01-JAN-1983":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1985":"NA"
+            },
+            "description":"Production of Anthracite Coal",
+            "pa":"Production of Anthracite Coal",
+            "has_data":true,
+            "series_id":"INTL.11-1-ABW-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Afghanistan",
+            "pa":"Anthracite",
+            "country":"Afghanistan",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Africa",
+            "pa":"Anthracite",
+            "country":"Africa",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Angola",
+            "pa":"Anthracite",
+            "country":"Angola",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Albania",
+            "pa":"Anthracite",
+            "country":"Albania",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"United Arab Emirates",
+            "pa":"Anthracite",
+            "country":"United Arab Emirates",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Argentina",
+            "pa":"Anthracite",
+            "country":"Argentina",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Armenia",
+            "pa":"Anthracite",
+            "country":"Armenia",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Anthracite Coal, Armenia, Annual",
+            "data":{
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Production of Anthracite Coal",
+            "pa":"Production of Anthracite Coal",
+            "has_data":true,
+            "series_id":"INTL.11-1-ARM-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"American Samoa",
+            "pa":"Anthracite",
+            "country":"American Samoa",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Asia & Oceania",
+            "pa":"Anthracite",
+            "country":"Asia & Oceania",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antarctica",
+            "pa":"Anthracite",
+            "country":"Antarctica",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antigua and Barbuda",
+            "pa":"Anthracite",
+            "country":"Antigua and Barbuda",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Australia",
+            "pa":"Anthracite",
+            "country":"Australia",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Anthracite Coal, Australia, Annual",
+            "data":{
+                "01-JAN-1996":340,
+                "01-JAN-1999":744,
+                "01-JAN-2000":754,
+                "01-JAN-2011":839,
+                "01-JAN-2008":219,
+                "01-JAN-2006":1284,
+                "01-JAN-1993":191,
+                "01-JAN-2009":162,
+                "01-JAN-2010":409,
+                "01-JAN-1994":320,
+                "01-JAN-2005":1122,
+                "01-JAN-1991":283,
+                "01-JAN-2003":1109,
+                "01-JAN-2002":1441,
+                "01-JAN-2007":883,
+                "01-JAN-2001":653,
+                "01-JAN-1998":513,
+                "01-JAN-1990":416,
+                "01-JAN-1995":362,
+                "01-JAN-2004":1011,
+                "01-JAN-2012":688,
+                "01-JAN-1989":395,
+                "01-JAN-1997":535,
+                "01-JAN-1988":89,
+                "01-JAN-1992":425
+            },
+            "description":"Production of Anthracite Coal",
+            "pa":"Production of Anthracite Coal",
+            "has_data":true,
+            "series_id":"INTL.11-1-AUS-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Austria",
+            "pa":"Anthracite",
+            "country":"Austria",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Azerbaijan",
+            "pa":"Anthracite",
+            "country":"Azerbaijan",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Anthracite Coal, Azerbaijan, Annual",
+            "data":{
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1987":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA"
+            },
+            "description":"Production of Anthracite Coal",
+            "pa":"Production of Anthracite Coal",
+            "has_data":true,
+            "series_id":"INTL.11-1-AZE-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burundi",
+            "pa":"Anthracite",
+            "country":"Burundi",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Belgium",
+            "pa":"Anthracite",
+            "country":"Belgium",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Anthracite Coal, Belgium, Annual",
+            "data":{
+                "01-JAN-1982":4914,
+                "01-JAN-1987":2575,
+                "01-JAN-1986":3902,
+                "01-JAN-1984":4484,
+                "01-JAN-1985":4555,
+                "01-JAN-1990":95,
+                "01-JAN-1983":4189,
+                "01-JAN-1989":713,
+                "01-JAN-1981":4879,
+                "01-JAN-1988":799
+            },
+            "description":"Production of Anthracite Coal",
+            "pa":"Production of Anthracite Coal",
+            "has_data":true,
+            "series_id":"INTL.11-1-BEL-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Benin",
+            "pa":"Anthracite",
+            "country":"Benin",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burkina Faso",
+            "pa":"Anthracite",
+            "country":"Burkina Faso",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bangladesh",
+            "pa":"Anthracite",
+            "country":"Bangladesh",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bituminous",
+            "has_data":false,
+            "unit":null,
+            "level":3
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Aruba",
+            "pa":"Bituminous",
+            "country":"Aruba",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Aruba, Annual",
+            "data":{
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-ABW-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Afghanistan",
+            "pa":"Bituminous",
+            "country":"Afghanistan",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Afghanistan, Annual",
+            "data":{
+                "01-JAN-1985":166,
+                "01-JAN-1990":116,
+                "01-JAN-2004":37,
+                "01-JAN-1995":6,
+                "01-JAN-1983":160,
+                "01-JAN-1989":140,
+                "01-JAN-2012":827,
+                "01-JAN-1997":2,
+                "01-JAN-1981":138,
+                "01-JAN-1992":9,
+                "01-JAN-1988":152,
+                "01-JAN-1996":3,
+                "01-JAN-1999":1,
+                "01-JAN-1982":160,
+                "01-JAN-2000":1,
+                "01-JAN-2011":799,
+                "01-JAN-2008":383,
+                "01-JAN-1987":184,
+                "01-JAN-1986":176,
+                "01-JAN-1984":163,
+                "01-JAN-2006":39,
+                "01-JAN-1993":8,
+                "01-JAN-2009":551,
+                "01-JAN-1980":131,
+                "01-JAN-1994":7,
+                "01-JAN-2005":36,
+                "01-JAN-2010":799,
+                "01-JAN-1991":104,
+                "01-JAN-2003":39,
+                "01-JAN-2002":23,
+                "01-JAN-1998":2,
+                "01-JAN-2007":268,
+                "01-JAN-2001":29
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-AFG-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Africa",
+            "pa":"Bituminous",
+            "country":"Africa",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Angola",
+            "pa":"Bituminous",
+            "country":"Angola",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Albania",
+            "pa":"Bituminous",
+            "country":"Albania",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"United Arab Emirates",
+            "pa":"Bituminous",
+            "country":"United Arab Emirates",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Argentina",
+            "pa":"Bituminous",
+            "country":"Argentina",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Argentina, Annual",
+            "data":{
+                "01-JAN-1985":441,
+                "01-JAN-2004":56,
+                "01-JAN-1990":305,
+                "01-JAN-1983":536,
+                "01-JAN-1995":336,
+                "01-JAN-1989":568,
+                "01-JAN-2012":88,
+                "01-JAN-1997":276,
+                "01-JAN-1981":549,
+                "01-JAN-1988":564,
+                "01-JAN-1992":223,
+                "01-JAN-1996":343,
+                "01-JAN-1999":370,
+                "01-JAN-1982":568,
+                "01-JAN-2000":286,
+                "01-JAN-2011":99,
+                "01-JAN-2008":102,
+                "01-JAN-1987":411,
+                "01-JAN-1986":401,
+                "01-JAN-1984":560,
+                "01-JAN-2006":155,
+                "01-JAN-1980":430,
+                "01-JAN-2009":90,
+                "01-JAN-1993":184,
+                "01-JAN-1991":322,
+                "01-JAN-2010":72,
+                "01-JAN-1994":384,
+                "01-JAN-2005":28,
+                "01-JAN-2003":98,
+                "01-JAN-2002":106,
+                "01-JAN-2007":121,
+                "01-JAN-2001":206,
+                "01-JAN-1998":319
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-ARG-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Armenia",
+            "pa":"Bituminous",
+            "country":"Armenia",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Armenia, Annual",
+            "data":{
+                "01-JAN-1985":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1982":"NA",
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA"
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-ARM-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"American Samoa",
+            "pa":"Bituminous",
+            "country":"American Samoa",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Asia & Oceania",
+            "pa":"Bituminous",
+            "country":"Asia & Oceania",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antarctica",
+            "pa":"Bituminous",
+            "country":"Antarctica",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antigua and Barbuda",
+            "pa":"Bituminous",
+            "country":"Antigua and Barbuda",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Australia",
+            "pa":"Bituminous",
+            "country":"Australia",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Australia, Annual",
+            "data":{
+                "01-JAN-1991":187353,
+                "01-JAN-2003":298292,
+                "01-JAN-2002":299752,
+                "01-JAN-2007":353561,
+                "01-JAN-1998":243200,
+                "01-JAN-2001":290597,
+                "01-JAN-1985":134863,
+                "01-JAN-1990":174380,
+                "01-JAN-2004":308466,
+                "01-JAN-1983":114424,
+                "01-JAN-1995":210241,
+                "01-JAN-2012":382034,
+                "01-JAN-1989":161834,
+                "01-JAN-1997":226876,
+                "01-JAN-1981":97964,
+                "01-JAN-1988":145664,
+                "01-JAN-1992":195363,
+                "01-JAN-1996":212888,
+                "01-JAN-1999":245866,
+                "01-JAN-1982":97688,
+                "01-JAN-2000":263171,
+                "01-JAN-2011":364287,
+                "01-JAN-2008":355104,
+                "01-JAN-1986":149293,
+                "01-JAN-1987":168826,
+                "01-JAN-1984":126194,
+                "01-JAN-2006":333198,
+                "01-JAN-2009":370061,
+                "01-JAN-1993":196480,
+                "01-JAN-1980":78937,
+                "01-JAN-2010":387949,
+                "01-JAN-2005":329634,
+                "01-JAN-1994":194404
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-AUS-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Austria",
+            "pa":"Bituminous",
+            "country":"Austria",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Azerbaijan",
+            "pa":"Bituminous",
+            "country":"Azerbaijan",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Azerbaijan, Annual",
+            "data":{
+                "01-JAN-1987":"NA",
+                "01-JAN-1986":"NA",
+                "01-JAN-1984":"NA",
+                "01-JAN-1980":"NA",
+                "01-JAN-1991":"NA",
+                "01-JAN-1985":"NA",
+                "01-JAN-1983":"NA",
+                "01-JAN-1990":"NA",
+                "01-JAN-1989":"NA",
+                "01-JAN-1988":"NA",
+                "01-JAN-1981":"NA",
+                "01-JAN-1982":"NA"
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-AZE-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burundi",
+            "pa":"Bituminous",
+            "country":"Burundi",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Belgium",
+            "pa":"Bituminous",
+            "country":"Belgium",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Belgium, Annual",
+            "data":{
+                "01-JAN-1985":6875,
+                "01-JAN-1990":1142,
+                "01-JAN-1983":6745,
+                "01-JAN-1989":2087,
+                "01-JAN-1981":6819,
+                "01-JAN-1992":240,
+                "01-JAN-1988":2741,
+                "01-JAN-1982":7249,
+                "01-JAN-1987":4817,
+                "01-JAN-1986":6201,
+                "01-JAN-1984":6991,
+                "01-JAN-1980":6971,
+                "01-JAN-1991":699
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-BEL-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Benin",
+            "pa":"Bituminous",
+            "country":"Benin",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burkina Faso",
+            "pa":"Bituminous",
+            "country":"Burkina Faso",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bangladesh",
+            "pa":"Bituminous",
+            "country":"Bangladesh",
+            "has_data":false,
+            "unit":null,
+            "level":4,
+            "parent":1
+        },
+        {
+            "pinned_name":"Production of Bituminous Coal, Bangladesh, Annual",
+            "data":{
+                "01-JAN-2011":992,
+                "01-JAN-2008":926,
+                "01-JAN-2006":497,
+                "01-JAN-2009":979,
+                "01-JAN-2010":849,
+                "01-JAN-2005":85,
+                "01-JAN-2007":398,
+                "01-JAN-2012":1102
+            },
+            "description":"Production of Bituminous Coal",
+            "pa":"Production of Bituminous Coal",
+            "has_data":true,
+            "series_id":"INTL.12-1-BGD-TST.A",
+            "unit":"TST",
+            "level":5
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Gross Natural Gas",
+            "has_data":false,
+            "unit":null,
+            "level":0
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Aruba",
+            "pa":"Gross Natural Gas",
+            "country":"Aruba",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Afghanistan",
+            "pa":"Gross Natural Gas",
+            "country":"Afghanistan",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Afghanistan, Annual",
+            "data":{
+                "01-JAN-1999":8,
+                "01-JAN-2000":8,
+                "01-JAN-2011":5,
+                "01-JAN-2008":2,
+                "01-JAN-2006":0.7,
+                "01-JAN-1993":11,
+                "01-JAN-2009":1,
+                "01-JAN-2005":0.7,
+                "01-JAN-2010":5,
+                "01-JAN-1994":11,
+                "01-JAN-1991":16,
+                "01-JAN-2003":0.7,
+                "01-JAN-2002":2,
+                "01-JAN-2007":1,
+                "01-JAN-1998":8,
+                "01-JAN-2001":2,
+                "01-JAN-1995":7,
+                "01-JAN-1990":17,
+                "01-JAN-2004":0.7,
+                "01-JAN-2012":5,
+                "01-JAN-1997":8,
+                "01-JAN-1992":11,
+                "01-JAN-1996":8
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-AFG-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Africa",
+            "pa":"Gross Natural Gas",
+            "country":"Africa",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Angola",
+            "pa":"Gross Natural Gas",
+            "country":"Angola",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Angola, Annual",
+            "data":{
+                "01-JAN-2000":254,
+                "01-JAN-2011":379,
+                "01-JAN-2008":355,
+                "01-JAN-2006":332,
+                "01-JAN-1993":106,
+                "01-JAN-2009":357,
+                "01-JAN-2010":364,
+                "01-JAN-1994":99,
+                "01-JAN-2005":305,
+                "01-JAN-1991":88,
+                "01-JAN-2003":244,
+                "01-JAN-2002":297,
+                "01-JAN-1998":233,
+                "01-JAN-2007":382,
+                "01-JAN-2001":251,
+                "01-JAN-1990":97,
+                "01-JAN-2004":275,
+                "01-JAN-1995":184,
+                "01-JAN-2012":383,
+                "01-JAN-1997":220,
+                "01-JAN-1992":71,
+                "01-JAN-1996":205,
+                "01-JAN-1999":258
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-AGO-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Albania",
+            "pa":"Gross Natural Gas",
+            "country":"Albania",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Albania, Annual",
+            "data":{
+                "01-JAN-2007":1,
+                "01-JAN-1998":2,
+                "01-JAN-2001":2,
+                "01-JAN-1990":13,
+                "01-JAN-2004":2,
+                "01-JAN-1995":2,
+                "01-JAN-1997":1,
+                "01-JAN-1992":4,
+                "01-JAN-1996":2,
+                "01-JAN-1999":1,
+                "01-JAN-2000":2,
+                "01-JAN-2011":0.7,
+                "01-JAN-2008":2,
+                "01-JAN-2006":2,
+                "01-JAN-1993":3,
+                "01-JAN-2009":2,
+                "01-JAN-1991":11,
+                "01-JAN-1994":2,
+                "01-JAN-2010":1,
+                "01-JAN-2005":2,
+                "01-JAN-2003":2,
+                "01-JAN-2002":2
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-ALB-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"United Arab Emirates",
+            "pa":"Gross Natural Gas",
+            "country":"United Arab Emirates",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, United Arab Emirates, Annual",
+            "data":{
+                "01-JAN-1999":1776,
+                "01-JAN-2000":1784,
+                "01-JAN-2011":2911,
+                "01-JAN-2008":2827,
+                "01-JAN-2006":2561,
+                "01-JAN-1993":1292,
+                "01-JAN-2009":2678,
+                "01-JAN-2010":2817,
+                "01-JAN-2005":2410,
+                "01-JAN-1994":1213,
+                "01-JAN-1991":1162,
+                "01-JAN-2003":2305,
+                "01-JAN-2002":2254,
+                "01-JAN-2007":2649,
+                "01-JAN-1998":1730,
+                "01-JAN-2001":2084,
+                "01-JAN-1995":1443,
+                "01-JAN-2004":2404,
+                "01-JAN-1990":1052,
+                "01-JAN-2012":2960,
+                "01-JAN-1997":1698,
+                "01-JAN-1992":1295,
+                "01-JAN-1996":1622
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-ARE-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Argentina",
+            "pa":"Gross Natural Gas",
+            "country":"Argentina",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Argentina, Annual",
+            "data":{
+                "01-JAN-1999":1498,
+                "01-JAN-2000":1585,
+                "01-JAN-2011":1608,
+                "01-JAN-2008":1783,
+                "01-JAN-2006":1827,
+                "01-JAN-1993":940,
+                "01-JAN-2009":1709,
+                "01-JAN-2010":1663,
+                "01-JAN-2005":1822,
+                "01-JAN-1994":970,
+                "01-JAN-1991":880,
+                "01-JAN-2003":1783,
+                "01-JAN-2002":1616,
+                "01-JAN-2007":1801,
+                "01-JAN-2001":1621,
+                "01-JAN-1998":1364,
+                "01-JAN-1995":1076,
+                "01-JAN-1990":812,
+                "01-JAN-2004":1849,
+                "01-JAN-2012":1557,
+                "01-JAN-1997":1309,
+                "01-JAN-1992":902,
+                "01-JAN-1996":1224
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-ARG-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Armenia",
+            "pa":"Gross Natural Gas",
+            "country":"Armenia",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Armenia, Annual",
+            "data":{
+                "01-JAN-1991":"NA",
+                "01-JAN-1990":"NA"
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-ARM-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"American Samoa",
+            "pa":"Gross Natural Gas",
+            "country":"American Samoa",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Asia & Oceania",
+            "pa":"Gross Natural Gas",
+            "country":"Asia & Oceania",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antarctica",
+            "pa":"Gross Natural Gas",
+            "country":"Antarctica",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Antigua and Barbuda",
+            "pa":"Gross Natural Gas",
+            "country":"Antigua and Barbuda",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Australia",
+            "pa":"Gross Natural Gas",
+            "country":"Australia",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Australia, Annual",
+            "data":{
+                "01-JAN-1990":731,
+                "01-JAN-2004":1317,
+                "01-JAN-1995":1039,
+                "01-JAN-2012":1902,
+                "01-JAN-1997":1065,
+                "01-JAN-1992":812,
+                "01-JAN-1996":1075,
+                "01-JAN-1999":1130,
+                "01-JAN-2000":1170,
+                "01-JAN-2011":1818,
+                "01-JAN-2008":1444,
+                "01-JAN-2006":1330,
+                "01-JAN-1993":871,
+                "01-JAN-2009":1500,
+                "01-JAN-1994":938,
+                "01-JAN-2005":1272,
+                "01-JAN-2010":1716,
+                "01-JAN-1991":762,
+                "01-JAN-2003":1283,
+                "01-JAN-2002":1243,
+                "01-JAN-2007":1404,
+                "01-JAN-1998":1105,
+                "01-JAN-2001":1193
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-AUS-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Austria",
+            "pa":"Gross Natural Gas",
+            "country":"Austria",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Austria, Annual",
+            "data":{
+                "01-JAN-1996":53,
+                "01-JAN-1999":61,
+                "01-JAN-2000":64,
+                "01-JAN-2011":63,
+                "01-JAN-2008":57,
+                "01-JAN-2006":68,
+                "01-JAN-1993":53,
+                "01-JAN-2009":62,
+                "01-JAN-2010":64,
+                "01-JAN-2005":61,
+                "01-JAN-1991":47,
+                "01-JAN-1994":48,
+                "01-JAN-2003":74,
+                "01-JAN-2002":66,
+                "01-JAN-2007":69,
+                "01-JAN-1998":55,
+                "01-JAN-2001":61,
+                "01-JAN-1990":47,
+                "01-JAN-2004":69,
+                "01-JAN-1995":52,
+                "01-JAN-2012":67,
+                "01-JAN-1997":50,
+                "01-JAN-1992":51
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-AUT-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Azerbaijan",
+            "pa":"Gross Natural Gas",
+            "country":"Azerbaijan",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Azerbaijan, Annual",
+            "data":{
+                "01-JAN-2005":372,
+                "01-JAN-2010":1050,
+                "01-JAN-1994":516,
+                "01-JAN-1991":"NA",
+                "01-JAN-2003":326,
+                "01-JAN-2002":461,
+                "01-JAN-2007":712,
+                "01-JAN-1998":461,
+                "01-JAN-2001":489,
+                "01-JAN-2004":322,
+                "01-JAN-1990":"NA",
+                "01-JAN-1995":507,
+                "01-JAN-2012":1048,
+                "01-JAN-1997":470,
+                "01-JAN-1992":682,
+                "01-JAN-1996":510,
+                "01-JAN-1999":506,
+                "01-JAN-2000":487,
+                "01-JAN-2011":990,
+                "01-JAN-2008":946,
+                "01-JAN-2006":340,
+                "01-JAN-2009":936,
+                "01-JAN-1993":565
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-AZE-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burundi",
+            "pa":"Gross Natural Gas",
+            "country":"Burundi",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Belgium",
+            "pa":"Gross Natural Gas",
+            "country":"Belgium",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Belgium, Annual",
+            "data":{
+                "01-JAN-1990":0.4,
+                "01-JAN-1992":0.2,
+                "01-JAN-1996":0.07,
+                "01-JAN-2000":0.07,
+                "01-JAN-1993":0.1,
+                "01-JAN-1994":0.04,
+                "01-JAN-1991":0.3
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-BEL-BCF.A",
+            "unit":"BCF",
+            "level":2
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Benin",
+            "pa":"Gross Natural Gas",
+            "country":"Benin",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Burkina Faso",
+            "pa":"Gross Natural Gas",
+            "country":"Burkina Faso",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":null,
+            "data":{
+
+            },
+            "description":"Bangladesh",
+            "pa":"Gross Natural Gas",
+            "country":"Bangladesh",
+            "has_data":false,
+            "unit":null,
+            "level":1,
+            "parent":1
+        },
+        {
+            "pinned_name":"Gross Natural Gas Production, Bangladesh, Annual",
+            "data":{
+                "01-JAN-2003":429,
+                "01-JAN-2002":392,
+                "01-JAN-2007":575,
+                "01-JAN-1998":290,
+                "01-JAN-2001":364,
+                "01-JAN-1990":162,
+                "01-JAN-2004":463,
+                "01-JAN-1995":260,
+                "01-JAN-2012":772,
+                "01-JAN-1997":269,
+                "01-JAN-1992":216,
+                "01-JAN-1996":267,
+                "01-JAN-1999":320,
+                "01-JAN-2000":343,
+                "01-JAN-2011":710,
+                "01-JAN-2008":632,
+                "01-JAN-2006":541,
+                "01-JAN-2009":692,
+                "01-JAN-1993":216,
+                "01-JAN-1991":173,
+                "01-JAN-2010":703,
+                "01-JAN-1994":235,
+                "01-JAN-2005":494
+            },
+            "description":"Gross Natural Gas Production",
+            "pa":"Gross Natural Gas Production",
+            "has_data":true,
+            "series_id":"INTL.3-1-BGD-BCF.A",
+            "unit":"BCF",
+            "level":2
+        }
+    ],
+    "excludeProperties":[
+        "$$hashKey"
+    ],
+    "enableRowHashing":true,
+    "showHeader":true,
+    "headerRowHeight":30,
+    "rowHeight":30,
+    "minRowsToShow":10,
+    "showColumnFooter":false,
+    "columnFooterHeight":30,
+    "gridFooterHeight":30,
+    "columnWidth":50,
+    "maxVisibleColumnCount":200,
+    "virtualizationThreshold":20,
+    "columnVirtualizationThreshold":10,
+    "excessRows":4,
+    "scrollThreshold":4,
+    "excessColumns":4,
+    "horizontalScrollThreshold":2,
+    "scrollThrottle":70,
+    "enableSorting":true,
+    "enableColumnMenus":true,
+    "minimumColumnSize":10,
+    "headerTemplate":null,
+    "footerTemplate":null,
+    "rowTemplate":"ui-grid/ui-grid-row",
+    "appScopeProvider":null,
+    "enablePinning":true,
+    "enableColumnResizing":true,
+    "enableInfiniteScroll":true,
+    "loadTimout":false
+}

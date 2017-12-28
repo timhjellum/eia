@@ -1,0 +1,12 @@
+<div>
+    <div ng-repeat="col in cols track by $index" ng-class="colClass">
+		<input ng-repeat-start="btn in col" type="{{type}}" id="{{id}}_{{btn.value}}" name="{{id}}"
+			ng-checked="{{btn.checked}}"
+			value="{{btn.value}}">
+		<label ng-repeat-end="btn in col" for="{{id}}_{{btn.value}}">
+			<div class="spacer"></div>
+			<div class="ico {{id}}_{{btn.value}}"></div>
+			<span>{{btn.label}}</span>
+		</label>
+    </div>
+</div>

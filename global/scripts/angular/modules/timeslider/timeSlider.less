@@ -1,0 +1,117 @@
+@import '../../../../../global/less/global_vars';
+.time-slider-container {
+  position: relative;
+  display: inline-block;
+  padding:0.75em 0 0.75em 0;
+  vertical-align: middle;
+  font-size: 12.8px;
+
+  .labelContainer {
+    float:left;
+    width:auto;
+    margin-right:1em;
+    text-transform: uppercase;
+	white-space:nowrap;
+	
+	.currentLow{
+	    position:absolute;
+		top: -12px;
+		text-align:center;
+	}
+	
+	.currentHigh{
+	    position:absolute;
+		top: -12px;
+		text-align:center;
+	}
+
+	.min{
+	    position: absolute;
+	    left: 0px;
+	}
+	
+	.max{
+	    position: absolute;
+	    right: 0px;
+	}
+  }
+
+  .time_slider_tooltip, .time_slider_tooltip:hover {
+    width:100px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: -1.8em;
+  }
+
+  .time_slider_tooltip + .time_slider_tooltip, .time_slider_tooltip + .time_slider_tooltip:hover {
+    text-align: right;
+    left: inherit !important;
+    right: -8px !important;
+  }
+  .ui-slider-handle .time_slider_tooltip, .ui-slider-handle .time_slider_tooltip:hover {
+    margin-top: -1.6em;
+  }
+  .timeSlider {
+    border-color: #cccccc;
+
+    .ui-slider-handle {
+      &.ui-state-default {
+        border: none;
+        margin-top:-0.175em;
+        border-radius:0px;
+        background: url("/global/images/sprites/gc_sprite.png") no-repeat scroll transparent;
+        background-position: -175px -244px;
+
+        &.dual_slider_handle {
+          background-position: -37px -124px;
+        }
+        &.single_slider_handle {
+          background-position: -175px -244px;
+        }
+      }
+    }
+
+    &.ui-slider-horizontal {
+      height: 0.4em;
+      width: 100%;
+      border-color: rgb(172, 225, 250);
+      background-color: rgb(223, 242, 251);
+      background-image: none;
+
+      .ui-slider-handle {
+        &.ui-state-default {
+          background-position: -175px -244px;
+
+          &.dual_slider_handle {
+            background-position: -37px -124px;
+          }
+          &.single_slider_handle {
+            background-position: -175px -244px;
+          }
+        }
+      }
+    }
+
+    &.ui-slider-vertical {
+      width: 0.4em;
+      height: 100%;
+      border-color: rgb(172, 225, 250);
+      background-color: rgb(223, 242, 251);
+      background-image: none;
+
+      .ui-slider-handle {
+        &.ui-state-default {
+          background-position: -7px -124px;
+
+          &.dual_slider_handle {
+            background-position: -66px -124px;
+          }
+          &.single_slider_handle {
+            bakground-position: -37px -124px;
+          }
+        }
+      }
+    }
+  }
+}

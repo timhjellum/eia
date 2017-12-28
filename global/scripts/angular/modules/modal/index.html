@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button sets</title>
+
+    <link rel="stylesheet" href="/global/scripts/jquery/ui/css/smoothness/jquery-ui-1.8.7.custom.css"/> <!-- jquery-ui css -->
+    <link rel="stylesheet" href="/global/scripts/angular/angular-1.3.8/ui-grid/ui-grid.min.css"/>      <!-- angular ui-grid css -->
+
+    <script src="/global/scripts/jquery/jquery-1.11.0.min.js"></script>
+    <script src="/global/scripts/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/global/scripts/jquery/ui/1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/global/scripts/angular/angular-1.3.8/angular.js"></script>
+
+    <script src="/global/scripts/angular/angular-1.3.8/angular-route.min.js"></script>     <!-- AngularJS route -->
+    <script src="/global/scripts/angular/angular-1.3.8/angular-touch.min.js"></script>     <!-- AngularJS touch for grid -->
+    <script src="/global/scripts/angular/angular-1.3.8/angular-animate.min.js"></script>   <!-- AngularJS animate for grid -->
+    <script src="/global/scripts/angular/angular-1.3.8/ui-grid/ui-grid.min.js"></script>   <!-- AngularJS uiGrid js -->
+
+</head>
+<body ng-app="myApp" ng-cloak>                                                 <!-- initiate angular application and hide till framework finishes loading. -->
+
+<div  ng-controller="MainController">
+
+
+
+    <section>
+        <h1>Dialog window <small>(example)</small></h1>
+        <a id="dialog_link" href="#">Open dialog 1</a>
+        <ul>
+            <li>id: {{searchId}}</li>
+            <li>{{config.configRadio}}</li>
+            <li>{{selectedArray}}</li>
+        </ul>
+
+        <my-dialog main-config="config" action="action(x)" radio="searchId">{{text}}</my-dialog>
+    </section>
+
+</div>
+<script src="js/app.js"></script>           <!-- app declaration-->
+<script src="js/controllers.js"></script>   <!-- app controller -->
+<script src="js/directives.js"></script>    <!-- app directive -->
+<script src="js/services.js"></script>      <!-- app data service / factory -->
+
+
+<!-- THIS IS THE TEMPLATE FOR THE MODAL WINDOW ----------------------------------------------------------------- -->
+<script type="text/ng-template" id="dialog.html">
+    <div>
+        <div>template {{mainConfig.modalConfig.title}}</div>
+        <div button-set-wrapper>
+            <input type="radio" id="{{btn.id}}" name="{{btn.name}}"
+                   ng-click="action({x:$index})"
+                   ng-checked="btn.checked"
+                   ng-repeat-start="btn in mainConfig.configRadio"/>
+            <label for="{{btn.id}}"
+                   ng-repeat-end>{{btn.label}}</label>
+        </div>
+        <hr/>
+
+        <div button-set-wrapper>
+            <input type="checkbox" id="{{btn.id}}" name="{{btn.name}}"
+                   ng-click="checkboxAction({x:$index})"
+                   ng-checked="btn.checked"
+                   ng-repeat-start="btn in mainConfig.configCheckbox"/>
+            <label for="{{btn.id}}"
+                   ng-repeat-end>{{btn.label}}</label>
+        </div>
+        <hr/>
+
+        <div>
+            <select ng-model="select2"
+                    ng-options="option.label group by option.group for option in mainConfig.selectOption2">
+            </select>
+        </div>
+        <hr/>
+
+        <div>
+            <ul ng-repeat="item in mainConfig.selectOption">
+                <li><input type="checkbox" ng-model="checked"> {{item.label}}
+                    <ul ng-show="checked">
+                        <li ng-repeat="subItem in item.subItem track by $index"><input type="checkbox">{{subItem}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr/>
+
+    </div>
+</script>
+<!-- END TEMPLATE ---------------------------------------------------------------------------------------------- -->
+
+</body>
+</html>

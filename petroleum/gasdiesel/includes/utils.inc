@@ -1,0 +1,1 @@
+<?php//sorting array on DATE field DESC orderfunction date_compare_date_desc($a, $b){$t1 = strtotime($a['DATE']);$t2 = strtotime($b['DATE']);//for desc orderreturn $t2 - $t1;}//sorting array on DATE field ASC orderfunction date_compare_date_asc($a, $b){$t1 = strtotime($a['DATE']);$t2 = strtotime($b['DATE']);//for asc orderreturn $t1 - $t2;}

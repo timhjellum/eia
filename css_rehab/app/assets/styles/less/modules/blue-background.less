@@ -1,0 +1,110 @@
+/*
+.bold(@fontWeight: 700) {font-weight: @fontWeight }
+.semi-bold(@fontWeight: 600) {font-weight: @fontWeight }
+.normal(@fontWeight: normal) {font-weight: @fontWeight }
+.right(@floatRight: right) { float: @floatRight  }
+.left(@floatLeft: left) { float: @floatLeft  }
+.base-font-size(@baseFontSize: 16) {font-size: @baseFontSize; }
+.align-right(@AlignRight: right) {text-align: @AlignRight; }
+.align-left(@AlignLeft: left) {text-align: @AlignLeft; }
+.no-wrap(@NoWrap: no-wrap) { white-space: @NoWrap;}
+
+// Pixels	EMs	Percent	Points
+// 6px	0.375em	37.5%	5pt
+// 7px	0.438em	43.8%	5pt
+// 8px	0.500em	50.0%	6pt
+// 9px	0.563em	56.3%	7pt
+// 10px	0.625em	62.5%	8pt
+// 11px	0.688em	68.8%	8pt
+// 12px	0.750em	75.0%	9pt
+// 13px	0.813em	81.3%	10pt
+// 14px	0.875em	87.5%	11pt
+// 15px	0.938em	93.8%	11pt
+// 16px	1.000em	100.0%	12pt
+// 17px	1.063em	106.3%	13pt
+// 18px	1.125em	112.5%	14pt
+// 19px	1.188em	118.8%	14pt
+// 20px	1.250em	125.0%	15pt
+// 21px	1.313em	131.3%	16pt
+// 22px	1.375em	137.5%	17pt
+// 23px	1.438em	143.8%	17pt
+// 24px	1.500em	150.0%	18pt
+
+*/
+
+@media @mobile {
+    .blue-background {
+        background: #dff2fb;
+        padding: .8125em; // 13px
+        &.weekly {
+            padding: 1.250em;
+        }
+        hr {
+            background-image: none;
+            border-bottom: 1px solid #ccc;
+        }
+        li {
+            font-size: 0.75rem;
+            padding: 0 0 3px 0;
+            span {
+                font-size: 0.6875rem;
+            }
+            &.title {
+                padding: 0 0 2px 0;
+                a {
+                    display: block;
+                    padding-top: 0.625em;
+                    font-size: 0.75rem;
+                    color: @eia_blue;   
+                    &:after { 
+                        content:"\00a0\203A";
+                        vertical-align: 2px;
+                    } 
+                }
+            }
+            &.date {
+                font-size: 0.75rem;;
+            }
+        }
+        .header h2 {
+            border: none;
+            .header-font;
+            margin: 0px;
+            padding: 0 0 10px 0;
+            font-size: 1.3rem; // 16px;
+            color: @eia_darker_blue;
+        }
+        h3 {
+            margin: 16px 0 6px 0;
+            font-size: 0.75rem; // 12px
+            .font;
+            .bold;
+            color: #333;
+            padding: 0 0 6px 0;
+            display: block;
+            clear: both;
+            border-bottom: solid 1px #dadada;
+            //padding-bottom: 6px;
+            text-transform: uppercase;
+        }
+        .footer {
+            padding: 1em 0 0 0;
+            font-style: italic;
+            .normal;
+        }
+    }
+
+}
+@media @laptop {
+    .blue-background {
+        .header h2 {
+            font-size: 1.125rem;
+        }
+        &.date {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+
+

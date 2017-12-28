@@ -1,0 +1,1099 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link type="text/css" href="/global/scripts/jquery/datepicker/jquery-ui-dp.custom.css" rel="stylesheet" />
+<link rel="stylesheet" href="/global/styles/EIA_global.css" type="text/css" media="screen, projection">
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="/global/styles/ie_fixes.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="/global/styles/print.css" type="text/css" media="print">
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="/global/styles/ie_print.css" type="text/css" media="print">
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="/global/styles/ie_print.css" type="text/css" media="print">
+<![endif]-->
+<script src="/global/scripts/jquery/jquery-1.11.0.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/jquery-migrate-1.2.1.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/ui/1.10.3/js/jquery-ui-1.10.3.custom.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/touch-punch/jquery.ui.touch-punch.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/eia_utils.js">
+</script>
+<script type="text/javascript" src="/global/scripts/eia_global.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/highcharts.src.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/highcharts-more.src.js">
+</script>
+<script type="text/javascript" src="/global/scripts/jquery/highcharts/3.0.10/js/modules/exporting.src.js">
+</script>
+<link rel="shortcut icon" href="http://www.eia.gov/favicon.ico" />
+<link rel="icon" href="http://www.eia.gov/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://www.eia.gov/favicon.ico" />
+<!-- Add fancyBox 2 -->
+<link rel="stylesheet" href="/global/scripts/fancybox2/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/global/scripts/fancybox2/jquery.fancybox.pack.js?v=2.1.5">
+</script>
+<title>All Reports & Publications - U.S. Energy Information Administration (EIA)</title>
+</head>
+<body onLoad="clearForms()" onUnload="clearForms()">
+<div id="outerX">
+<div id="innerX">
+<div class="content">
+<div id="header">
+<div class="print">
+<img src="/global/images/logos/eia_logo_print.png"/>
+</div>
+<a href="/">
+<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+</a>
+<ul class="global-width" id="g-margin3">
+<li class="global-es">
+<a>Sources &amp; Uses</a>
+</li>
+<div class="global_es_menu">
+<span class="global_menu_col1">
+<a href="/petroleum/">
+<h3>Petroleum &amp; Other Liquids</h3>
+<p>Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.</p>
+</a>
+<a href="/naturalgas/">
+<h3>Natural Gas</h3>
+<p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p>
+</a>
+<a href="/electricity/">
+<h3>Electricity</h3>
+<p>Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand & emissions.</p>
+</a>
+<a href="/consumption/">
+<h3>Consumption & Efficiency</h3>
+<p class="no-border no-btm">Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
+</a>
+</span>
+<span class="global_menu_col2">
+<a href="/coal/">
+<h3>Coal</h3>
+<p>Reserves, production, prices, employ- ment and productivity, distribution, stocks, imports and exports.</p>
+</a>
+<a href="/renewable/">
+<h3>Renewable &amp;<br>Alternative Fuels</h3>
+<p class="sp-renewable">Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
+</a>
+<a href="/nuclear/">
+<h3>Nuclear &amp; Uranium</h3>
+<p>Uranium fuel, nuclear reactors, generation, spent fuel.<br />&nbsp;</p>
+</a>
+<a href="/totalenergy/">
+<h3>Total Energy</h3>
+<p class="no-border">Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
+</a>
+</span>
+<span class="global_menu_col3">
+<h3>Highlights</h3>
+<a href="/oog/info/twip/twip.asp">This Week in Petroleum&nbsp;&rsaquo;</a>
+<a href="/petroleum/supply/weekly/">Weekly Petroleum Status Report&nbsp;&rsaquo;</a>
+<a href="http://ir.eia.gov/ngs/ngs.html">Weekly Natural Gas Storage Report&nbsp;&rsaquo;</a>
+<a href="/naturalgas/weekly/">Natural Gas Weekly Update&nbsp;&rsaquo;</a>
+<a href="/electricity/monthly/">Electric Power Monthly&nbsp;&rsaquo;</a>
+<a href="/coal/production/quarterly/">Quarterly Coal Report&nbsp;&rsaquo;</a>
+<a href="/totalenergy/data/monthly/">Monthly Energy Review&nbsp;&rsaquo;</a>
+<a href="/consumption/residential/">Residential Energy Consumption Survey 2009&nbsp;&rsaquo;</a>
+<a href="/electricity/data/browser/">Electricity Data Browser&nbsp;&rsaquo;</a>
+</span>
+</div>
+<li class="global-topics" id="g-margin1">
+<a>Topics</a>
+</li>
+<div class="global_topics_menu">
+<span class="global_menu_col1">
+<a href="/analysis/">
+<h3>Analysis &amp; Projections</h3>
+<p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, Congressional reports.</p>
+</a>
+<a href="/finance/">
+<h3>Markets &amp; Finance</h3>
+<p class="no-border no-btm">Financial market analysis and financial data for major energy companies.</p>
+</a>
+</span>
+<span class="global_menu_col2">
+<a href="/environment/">
+<h3>Environment</h3>
+<p class="sp-environment">Greenhouse gas data, voluntary report- ing, electric power plant emissions.</p>
+</a>
+</span>
+<span class="global_menu_col3">
+<h3>Highlights</h3>
+<a href="/forecasts/steo/">Short-Term Energy Outlook&nbsp;&rsaquo;</a>
+<a href="/forecasts/aeo/">Annual Energy Outlook&nbsp;&rsaquo;</a>
+<a href="/special/disruptions/">Energy Disruptions&nbsp;&rsaquo;</a>
+<a href="/forecasts/ieo/">International Energy Outlook&nbsp;&rsaquo;</a>
+</span>
+</div>
+<li class="global-geo">
+<a>Geography</a>
+</li>
+<div class="global_geo_menu">
+<span class="global_menu_col1">
+<a href="/state/">
+<h3>U.S. States</h3>
+<p>State energy information, including overviews, rankings, data, and analyses.</p>
+</a>
+<a href="/maps/">
+<h3>Maps</h3>
+<p class="no-border no-btm">Maps by energy source and topic, includes forecast maps.</p>
+</a>
+</span>
+<span class="global_menu_col2">
+<a href="/countries/">
+<h3>Countries</h3>
+<p>Country energy information, including overviews, rankings, data, and analyses.</p>
+</a>
+</span>
+<span class="global_menu_col3">
+<h3>Highlights</h3>
+<a href="/state/seds/">State Energy Data System (SEDS)&nbsp;&rsaquo;</a>
+<a href="/cfapps/ipdbproject/IEDIndex3.cfm">International Energy Statistics&nbsp;&rsaquo;</a>
+<a href="/special/gulf_of_mexico/">Gulf of Mexico&nbsp;&rsaquo;</a>
+<a href="/state/maps.cfm">U.S. Energy<br />Mapping System&nbsp;&rsaquo;</a>
+</span>
+</div>
+</ul>
+<ul class="utils">
+<li class="global-tools" id="g-margin2">
+<a>Tools</a>
+</li>
+<div class="global_tools_menu">
+<span class="global_menu_col5">
+<p class="no-border">
+<a href="/tools/glossary/" class="ico_glossary_dblue header_icon_pad">Glossary&nbsp;&rsaquo;</a>
+<br />
+<a href="/reports/" class="ico_reports header_icon_pad">All Reports &amp; Publications&nbsp;&rsaquo;</a>
+<br />
+<a href="/tools/models/" class="ico_mining header_icon_pad">Data Tools &amp; Models&nbsp;&rsaquo;</a>
+<br />
+<a href="/survey/" class="ico_survey header_icon_pad">EIA Survey Forms&nbsp;&rsaquo;</a>
+</p>
+</span>
+<span class="global_menu_col6">
+<p class="no-border">
+<a href="http://facebook.com/eiagov/" target="_blank" class="ico_facebook header_icon_pad">Facebook</a>
+<br />
+<a href="http://twitter.com/eiagov/" target="_blank" class="ico_twitter header_icon_pad">Twitter</a>
+<br />
+<a href="http://youtube.com/eiagov/" target="_blank" class="ico_youtube header_icon_pad">YouTube</a>
+<br />
+<a href="/tools/emailupdates/" class="ico_email header_icon_pad">Email Updates</a>
+<br />
+<a href="/tools/rssfeeds/" class="ico_rss header_icon_pad">RSS Feeds</a>
+</p>
+</span>
+</div>
+<li class="global-learn" id="g-margin2">
+<a>Learn About Energy</a>
+</li>
+<div class="global_learn_menu">
+<span class="global_menu_col8a">
+<h3>
+<a href="/todayinenergy/">Today in Energy</a>
+</h3>
+<p>Short, timely articles with graphics on energy, facts, issues, and trends.</p>
+</span>
+<span class="global_menu_col6">
+<p class="no-border">
+<a href="/tools/faqs/" class="ico_faqs header_icon_pad">FAQs</a>
+<br />
+<a href="/tools/glossary/" class="ico_glossary header_icon_pad">Glossary</a>
+<br />
+<a href="/kids/energy.cfm?page=6" class="ico_teachers header_icon_pad border_learn">For Teachers</a>
+</p>
+</span>
+<span class="global_menu_col8">
+<h3>
+<a href="/energyexplained/">Energy Explained</a>
+</h3>
+<p class="width152">
+<a href="/energyexplained/index.cfm?page=about_home">What is Energy?&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=about_energy_units">Units &amp; Calculators&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=us_energy_use">Use of Energy&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=environment_home">Energy & Environment&nbsp;&rsaquo;</a>
+</p>
+<p class="width110">
+<a href="/energyexplained/index.cfm?page=oil_home">Petroleum&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=natural_gas_home">Natural Gas&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=coal_home">Coal&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=nuclear_home">Nuclear&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=electricity_home">Electricity&nbsp;&rsaquo;</a>
+</p>
+<p class="width181">
+<a href="/energyexplained/index.cfm?page=hydropower_home">Hydropower&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=biofuel_home">Biofuels: Ethanol &amp; Biodiesel&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=wind_home">Wind&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=geothermal_home">Geothermal&nbsp;&rsaquo;</a>
+<br />
+<a href="/energyexplained/index.cfm?page=solar_home">Solar&nbsp;&rsaquo;</a>
+</p>
+</span>
+<span class="global_menu_col9">
+<h3>
+<a href="/energy_in_brief/">Energy in Brief</a>
+</h3>
+<p class="no-border global_menu_col10">
+<a href="/energy_in_brief/article/east_coast.cfm">What's changing in East Coast fuels markets?&nbsp;&rsaquo;</a>
+<br />
+<a href="/energy_in_brief/article/about_shale_gas.cfm">What is shale gas and why is it important?&nbsp;&rsaquo;</a>
+</p>
+<p class="no-border global_menu_col10">
+<a href="/energy_in_brief/article/foreign_oil_dependence.cfm">How dependent are we on foreign oil?&nbsp;&rsaquo;</a>
+<br />
+<a href="/energy_in_brief/article/role_coal_us.cfm">What is the role of coal in the United States?&nbsp;&rsaquo;</a>
+</p>
+</span>
+<span class="global_menu_col6 mt_40">
+<p class="no-border">
+<a href="/kids/" class="ant_banner">Energy Kids</a>
+</p>
+</span>
+</div>
+<li class="global-news">
+<a>News</a>
+</li>
+<div class="global_news_menu">
+<span class="global_menu_col7">
+<h3>
+<a href="/about/new/">What's New?</a>
+</h3>
+<div id="whatsnew3">
+</div>
+</span>
+<span class="global_menu_col3">
+<h3>
+<a href="/pressroom/" style="color:#fff !important;">Press Room</a>
+</h3>
+<a href="/pressroom/releases.cfm">Press Releases&nbsp;&rsaquo;</a>
+<a href="/pressroom/presentations.cfm">Presentations&nbsp;&rsaquo;</a>
+<a href="/pressroom/testimony.cfm">Congressional Testimony&nbsp;&rsaquo;</a>
+<a href="/radio/">Radio Spots&nbsp;&rsaquo;</a>
+</span>
+</div>
+</ul>
+<ul class="utils2">
+<div class="global-search">
+<span style="color:#777">Site search disabled on dev</span>
+</div>
+<li class="global-a-z">
+<a href="/tools/a-z/">A-Z Index</a>
+</li>
+<div class="global_a-z_menu">
+<span class="global_menu_col11">
+<h3>
+<a href="/tools/a-z/">A-Z Index</a>
+</h3>
+<a href="/tools/a-z/index.cfm?id=a">A</a>
+<a href="/tools/a-z/index.cfm?id=b">B</a>
+<a href="/tools/a-z/index.cfm?id=c">C</a>
+<a href="/tools/a-z/index.cfm?id=d">D</a>
+<a href="/tools/a-z/index.cfm?id=e">E</a>
+<a href="/tools/a-z/index.cfm?id=f">F</a>
+<a href="/tools/a-z/index.cfm?id=g">G</a>
+<a href="/tools/a-z/index.cfm?id=h">H</a>
+<a href="/tools/a-z/index.cfm?id=i">I</a>
+<a href="/tools/a-z/index.cfm?id=j">J</a>
+<a href="/tools/a-z/index.cfm?id=k">K</a>
+<a href="/tools/a-z/index.cfm?id=l">L</a>
+<a href="/tools/a-z/index.cfm?id=m">M</a>
+<a href="/tools/a-z/index.cfm?id=n">N</a>
+<a href="/tools/a-z/index.cfm?id=o">O</a>
+<a href="/tools/a-z/index.cfm?id=p">P</a>
+<a href="/tools/a-z/index.cfm?id=q">Q</a>
+<a href="/tools/a-z/index.cfm?id=r">R</a>
+<a href="/tools/a-z/index.cfm?id=s">S</a>
+<a href="/tools/a-z/index.cfm?id=t">T</a>
+<a href="/tools/a-z/index.cfm?id=u">U</a>
+<a href="/tools/a-z/index.cfm?id=v">V</a>
+<a href="/tools/a-z/index.cfm?id=w">W</a>
+<a href="/tools/a-z/index.cfm?id=xyz">XYZ</a>
+</span>
+</div>
+</ul>
+</div>
+<div class="title_head bg_reports">
+<h1>All Reports & Publications</h1>
+</div>
+<script type="text/javascript">
+$(function(){
+// Datepicker
+$('#startDate').datepicker({
+inline: true, onClose: function(){var stdate = $('#startDate').datepicker('getDate');stdate.setDate(stdate.getDate()+1); $('#endDate').datepicker('option', 'minDate', stdate)}
+});
+$('#endDate').datepicker({
+inline: true
+});
+});
+</script>
+<style>
+/* Removed by SNW to allow reports to spread to full width (sidebar was obviated by search options at the top)
+.bookshelf_tb{width:670px;margin:auto;}
+*/
+.bookshelf_tb tr th{
+background-color:#FFF;
+}
+.bookshelf_tb tr td,.bookshelf_tb tr th{
+border-bottom:solid 1px #d8d8d8;
+vertical-align:top;
+/* old
+padding:14px 5px 7px;
+*/
+padding:14px 0 7px;
+}
+.b_title{
+text-align:left;
+}
+.b_title h1{
+border:0;padding-bottom:0;margin-bottom:0;padding-top:0;
+}
+/* This is annoying
+.bookshelf_tb tr td.b_content{padding-left:12px;}
+*/
+/* Old
+.b_data,.b_forecast,.b_analysis,.b_pdf{width:16px;text-align:center;}
+.bs_icon{display:inline-block;width:17px;height:16px;}
+.b_data{background-color:#d7f3ff;}
+.bs_data {background:transparent url('/global/images/icons/bs_d.png');}
+.b_forecast{background-7color:#d7f3ff;border-right:solid 1px #0495d8;}
+.b_forecast .bs_icon{background:transparent url('/global/images/icons/bs_p.png');}
+.b_analysis{background-color:#f8fdff;}
+.b_analysis .bs_icon{background:transparent url('/global/images/icons/bs_a.png');}
+*/
+.report-contents {
+display:inline-block;
+vertical-align: text-bottom;
+width:17px;
+height:16px;
+margin: 0 3px;
+}
+.has-data {
+background:transparent url('/global/images/icons/bs_d.png');
+}
+.has-projections {
+background:transparent url('/global/images/icons/bs_p.png');
+}
+.has-analysis {
+background:transparent url('/global/images/icons/bs_a.png');
+}
+.b_pdf{
+width:40px;text-align:right;
+}
+.dis_Dm,.dis_Pm,.dis_Am{
+visibility:visible;
+}
+.menu_table,.menu_table tr{
+margin:0;padding:0;
+}
+.menu_table tr td{
+border-bottom:0;vertical-align:middle;
+}
+</style>
+<style>
+#more-tab {
+cursor: pointer;
+}
+td span.instances {
+font-size:10px;
+}
+div#tags-holder table {
+margin-top: 0;
+margin-bottom:0;
+margin-right:5px;
+width:100%;
+}
+div#tags-holder table td {
+padding: 4px 2px;
+border-bottom: 0;
+vertical-align: middle;
+line-height: 11px;
+}
+form#date-form input {
+margin:0;
+}
+</style>
+<link rel="stylesheet" href="/global/scripts/selectize/selectize.default.css">
+<script src="/global/scripts/selectize/selectize.min.js">
+</script>
+<!--[if lt IE 9]>
+<script src="/global/scripts/selectize/es5-shim.min.js">
+</script>
+<![endif]-->
+<script type="text/javascript" src="/global/test/snw/hasher/signals.js">
+</script>
+<script type="text/javascript" src="/global/test/snw/hasher/hasher.js">
+</script>
+<script>
+// Fire this event after the DOM is ready to be operated on --->
+$(document).ready(function() {
+window.console && console.log("*** jQuery ready()");
+ignoreHashChange = false;
+ignoreTagAdd = false;
+interceptCreateTag = false;
+/* Removed
+// Set the default pagination (NEED TO SEE WHETHER A COOKE SHOULD OVERRIDE THIS)
+pagination = 20;
+*/
+cannedReports = $("div#reports-holder").html();
+if (cannedReports.length < 40) {
+console.log("WARNING: The canned reports length is only= " + cannedReports.length);
+}
+// ************************************************************************
+// * SELECTIZE JQUERY PLUGIN FOR TAGGING
+// ************************************************************************
+// Create an instance of the Selectize jQuery plugin
+var $select = $('#input-tags').selectize({
+// Do not open the select menu with typehead options until the user enters at least one character
+openOnFocus: false,
+create: true,
+persist: false,
+// The string to separate items by
+delimiter: ',',
+// Add an "X" to each tag so the user can delete them
+plugins: ['remove_button'],
+/* This does not work. For now, allow Selectize to auto-sort based on score
+// ...
+sortField: 'text',
+*/
+/* Invoked once the control is completely initialized */
+onInitialize: function() {
+//window.console && console.log("Selectize.onInitialize()");
+/* NOTE: Can't initialize Hasher here b/c it calls addTag(), which relies on $select[0].selectize, which can't be accessed in here. Also we don't need to init Hasher here, and it's actually less confusing to put this below */
+//	selectize.clear();
+},
+onOptionAdd: function(value, data) {
+//	if (interceptCreateTag) {
+//console.log("Selectize.onOptionAdd() INTERCEPTED CREATING CUSTOM TAG!, value= " + value + ", data=" );;
+//console.log(data);
+/* MOVED TO onItemAdd()
+selectize.removeOption(data.value);
+createTag(data.text, "K" + data.value);
+addTag("K" + data.value);
+*/
+//window.console && console.log("Selectize.onOptionAdd(), value=" + value + ", data= " + data + ",type= " + typeof(value));
+// Hide the dropdown for a nanosecond so it doesn't flash before disappearing
+$(".selectize-dropdown-content").css("display", "none");
+// Wait 1ms so that the dropdown can be closed when an item is removed (Not sure why this is necessary)
+setTimeout(function(){
+selectize.close();
+// Unhide the dropdown
+$(".selectize-dropdown-content").css("display", "block");
+}, 1);
+//	}
+},
+/* Invoked when an item is selected */
+onItemAdd: function(value, item) {
+//	window.console && console.log("Selectize.onItemAdd() fired after addTag() is called, value="+ value + ", item=" + item);
+//console.log(item);
+//console.log(item);
+// If this tag is for THE subject area (only on a subject-specific page), do not add it to the hash
+if (value == "subject") return;
+//            console.log("ADD THE ITEM TO THE HASH, OR RECREATE FROM SCRATCH??");
+/* This only works in onChange(), not onItemAdd()
+console.log("Overwrite the hash with full list of tags in Selectize plugin");
+hasher.setHash(value);
+*/
+// If the item was added as part of rebuilding the Selectize options (instead of by the user), then ignore
+//console.log("!! ignoreTagAdd= " + ignoreTagAdd + ", interceptCreateTag= " + interceptCreateTag);
+if (ignoreTagAdd) {
+//window.console && console.log("ignoring onItemAdd()");
+} else{
+//console.log("NOT IGNORING ONITEMADD()");
+//            console.log("ADD THE ITEM TO THE HASH (OR RECREATE FROM SCRATCH??)");
+// If getHash() has no elements, create an empty array (since hasher.getHashAsArray() stupidly returns an array with 1 empty element)
+if (!hasher.getHash().length) {
+// Create an empty array
+hash_array = [];
+} else{
+hash_array = hasher.getHashAsArray();
+}
+// If this was triggered other than when calling createTag() or addTag(), AND it is not a subject or tag selected from autocomplete
+if (interceptCreateTag && value.substring(1, 0) != "S" && value.substring(1, 0) != "T") {
+console.log(value);
+/*
+console.log("Selectize.onItemAdd() INTERCEPTED ADDING CUSTOM TAG!");
+console.log("value= " + value + ", item=");
+console.log(item);
+console.log(this.options);
+*/
+// Update the text and value to make it a keyword
+var newText  = "Keyword: " + this.options[value].text;
+var newValue  = "K" + this.options[value].value;
+var data   = $.extend({}, this.options[value], {
+text: newText,
+value: newValue
+});
+this.updateOption(value, data);
+//console.log("newValue = " + newValue + ", newText = " + newText + ", data=");
+//console.log(data);
+value = newValue;
+}
+// Update hasher
+hash_array.push(value);
+hasher.setHash(hash_array.toString());
+}
+/* DEV
+item.on("click", function(data) {
+console.log(this);
+console.log($(this));
+})
+*/
+},
+/* Invoked when the user attempts to delete the current selection (as opposed to deselecting an item -- see onItemRemove() below)
+onDelete: function(values) {
+window.console && console.log("Selectize.onDelete(), values=" + values);
+},
+*/
+// Invoked when the value of the control changes (in any way)
+onChange: function(value) {
+//   window.console && console.log("Selectize.onChange(), value= '" + value + "'");
+// Make sure the dropdown is closed after an item is added (after removing requires special treatment-- see below)
+selectize.close();
+// NOTE: THIS NEEDS TO BE REPLACED WITH SOME OTHER METHOD
+// Don't assume we should update the hash b/c this event gets fired constantly
+// hasher.setHash(value);
+// END NOTE
+//console.log("Length= " + this.getValue().length);
+// If any tags are displayed, show the "Clear all" link
+if (selectize.getValue().length) {
+$("span#tags-clear").show();
+} else {
+$("span#tags-clear").hide();
+}
+},
+// Invoked when the user attempts to remove a tag
+onDelete: function(values) {
+//window.console && console.log("Selectize.onDelete(), values=" + values);
+if (values == "subject") {
+/* Just go ahead and do it
+if (confirm("'' is the subject area. Do you want to leave this area, and view all reports?")) {
+removeSubject();
+} else {
+// Retain the subject tag
+return false;
+}
+*/
+removeSubject();
+}
+},
+// Invoked when a tag is removed
+onItemRemove: function(value) {
+//window.console && console.log("Selectize.onItemRemove(), value= " + value);
+// Hide the dropdown for a nanosecond so it doesn't flash before disappearing
+$(".selectize-dropdown-content").css("display", "none");
+// Wait 1ms so that the dropdown can be closed when an item is removed (Not sure why this is necessary)
+setTimeout(function(){
+selectize.close();
+// Unhide the dropdown
+$(".selectize-dropdown-content").css("display", "block");
+}, 1);
+hash_array = hasher.getHashAsArray();
+// If there's just one item in the hash
+if (hash_array.length == 1) {
+/* duplicative
+// Prevent Ajax call
+ignoreHashChange = true;
+// Clear out the hash
+hasher.setHash('');
+// Reload the page to get the canned reports back
+location.reload();
+*/
+clearAllTags();
+} else {
+// Remove from Hasher the one tag that was removed from the Selectize plugin
+hash_array.splice( hash_array.indexOf(value),1);
+hasher.setHash(hash_array.toString());
+}
+//window.console && console.log("Hasher: '" + hash_array[0] + "'");
+// If this was the last item, reload the page in order to get the canned reports
+//  console.log("Setting ignoreHashChange=false");
+//  console.log("Checkpoint");
+//        window.console && console.log($("div#" + newID));
+// Hide the tag under "Add more tags" since it can't be added twice
+}
+}); // END of $('#input-tags').selectize()
+// Fetch the instance of the Selectize jQuery plugin created above
+selectize = $select[0].selectize;
+//window.console && console.log("Calling createTag()");
+// ************************************************************************
+// * END SELECTIZE JQUERY PLUGIN FOR TAGGING
+// ************************************************************************
+// Initialize Hasher
+hasher.separator = ",";
+hasher.changed.add(hasherChanged); //add hash change listener
+hasher.initialized.add(hasherInit); //add initialized listener (to grab initial value in case it is already set)
+hasher.init(); //initialize hasher (start listening for history changes)
+$("#more-tab #instructions").text("HIDE OPTIONS");
+$("#more-options").stop().slideDown(250, "swing", function() { });
+// This is probably overkill
+$("#more-tab").disableSelection(); // Used to refer to a span tag called "more_label"
+// Activate hit area for "More" tab
+$("#more-tab").click(function() {
+//    console.log($("#more-tab #instructions").text());
+if ($("#more-tab #instructions").text() == "HIDE OPTIONS") {
+$("#more-tab #instructions").text("SHOW OPTIONS");
+$("#more-options").stop().slideUp(500, "swing", function() { });
+} else {
+$("#more-tab #instructions").text("HIDE OPTIONS");
+$("#more-options").stop().slideDown(500, "swing", function() { });
+}
+});
+// Activate the jQuery UI datepicker widget
+$(".datepicker").datepicker({
+dateFormat: "m-d-yy"
+});
+// When the user clicks a tag in the "Analysis & Projections", manually hide the entire menu since the page no longer reloads now that we're using Ajax
+$("div.dat_block a").click(function() {
+$("li.dropdown.active.on").removeClass("on");
+$("div.dat_block").hide();7
+});
+// Prevent the date form from submitting automatically
+$('form#date-form').submit(function(e) {
+e.preventDefault();
+});
+// If the user enters something into the start or end date fields
+$("input#start-date,input#end-date").on("keyup", function(eventObject) {
+dateTyped(eventObject);
+});
+// Called by on() keyup immediately above
+function dateTyped(eventObject) {
+//console.log("date changed");
+//console.log(eventObject);
+if (eventObject.keyCode == 13) {
+//console.log("Enter pressed");
+dateChanged();
+}
+}
+// If the user selects a date using the datepicker plugin
+$("input#start-date,input#end-date").on("change", dateChanged);
+// Called by both dateTyped() and on() change above
+function dateChanged() {
+//console.log("Date selected");
+filterByDates();
+}
+}); // END of $(document).ready(function()
+allAvailableTags = {
+};
+// These are the pathnames for redirecting to subject-specific pages
+allAvailableSubjects = {
+}
+function isNumber(n) {
+return !isNaN(parseFloat(n)) && isFinite(n);
+}
+// ************************************************************************
+// * HASHER FUNCTIONS - Initialization is above inside jQuery ready()
+// ************************************************************************
+// Make a tag available to be added (either through autocomplete, or when the user clicks on a suggested tag)
+function createTag(newTag, newID) {
+interceptCreateTag = false;
+//	window.console && console.log("createTag(), newTag= " + newTag + ", newID= " + newID);
+// Ignore if the tag ID no longer exists (or never did)
+if (typeof newTag != "undefined") {
+// Create the tag as an option in the Selectize plugin
+selectize.addOption({
+text: newTag,
+value: newID
+});
+}
+interceptCreateTag = true;
+} // END of createTag()
+// Add a tag that has already been created by createTag() above
+function addTag(newID) {
+interceptCreateTag = false;
+//	window.console && console.log("addTag(), newID=" + newID + ", selectize= " + selectize);
+//console.log(selectize);
+// Add the tag to the Selectize plugin
+selectize.addItem(newID);
+// Hide the tag under "Add more tags" since it can't be added twice
+// window.console && console.log($("div#" + newID));
+interceptCreateTag = true;
+} // END of addTag()
+/* No sense having a function with only one line
+// Called by dynamic links to suggested tags
+function suggestedTagClicked(newID) {
+// Add the tag to the Selectize jQuery plugin
+addTag(newID);
+} // END of suggestedTagClicked()
+*/
+// Handle hash passed in
+function hasherInit(newHash) {
+//	window.console && console.log("Hasher.hasherInit(), newHash= " + newHash);
+// console.log("Add all tags here!");
+/* try without, now that we have a tag for the subject
+if (!hasher.getHash().length) {
+// Create an empty array (since hasher.getHashAsArray() stupidly returns an array with 1 empty element)
+hash_array = [];
+} else{
+*/
+//}
+// Call the server to update the reports and tags
+ajaxCall();
+}
+//handle hash changes
+function hasherChanged(newHash, oldHash){
+//	window.console && console.log("Hasher.hasherChanged(), newHash=" + newHash + ", oldHash=" + oldHash);
+//        console.log("ADD OR REMOVE THE TAG ANY TAGS AS NECESSARY, OR RECREATE ALL FROM SCRATCH???")
+if (ignoreHashChange) {
+window.console && console.log("Ignoring hash change");
+} else{
+hasherInit();
+}
+}
+// Called by "Search for" form
+function submitKeywords() {
+//window.console && console.log($("input#keywords").val());
+/* Access the input field inside ajaxCall() instead
+ajaxCall($("input#keywords").val());
+*/
+ajaxCall();
+}
+// Called by handlers for the "Filter by date range" ("date-form") form
+function filterByDates() {
+window.console && console.log("filterByDates(), start=" + $("input#start-date").val() + ", end=" + $("input#end-date").val());
+/* Old method
+ajaxCall();
+*/
+// Remove any existing dates from hasher
+// Iterate through the tags in hasher
+hash_array = hasher.getHashAsArray();
+for (oneHash=0; oneHash < hash_array.length; oneHash++) {
+hashType = hash_array[oneHash].substring(0, 1);
+// If a beginning or ending start date was already selecte
+if (hashType == "B" || hashType == "E") {
+// Remove that item from the hashe
+window.console && console.log("Removing an existing start or end date: " + hash_array[oneHash].substring(1));
+hash_array.splice(hash_array.indexOf(hashType),1);
+}
+}
+// Add the new start and/or end dates
+if ($("input#start-date").val()) {
+hash_array.push("B" + $("input#start-date").val());
+}
+if ($("input#end-date").val()) {
+hash_array.push("E" + $("input#end-date").val());
+}
+// Update the hash with the results
+hasher.setHash(hash_array.toString());
+}
+// Called by "Clear all" link
+function clearAllTags() {
+//			console.log(hasher.getHash());
+/* Try reinstating the canned reports instead
+//console.log($("div#reports-holder").html().length);
+// Block user input
+setUIActive(false);
+// Remove all tags
+selectize.clear();
+// Prevent Ajax call
+ignoreHashChange = true;
+// Clear all tags from the hash
+hasher.setHash('');
+// Reload the page to get the canned reports back
+location.reload();
+*/
+// Remove all tags
+selectize.clear();
+// Prevent Ajax call-- NO!
+//ignoreHashChange = true;
+// Clear all tags from the hash
+hasher.setHash('');
+/* Moved this to ajaxCall() -- should it be in the hasher event handler instead?
+// Hide the heading DIV
+$("#reports-heading").hide();
+// Reinstate the canned reports
+console.log("Replacing canned reports, length= " + cannedReports.length);
+$("div#reports-holder").empty().html(cannedReports);
+*/
+window.console && console.log("clearAllTags() clearing start and end dates");
+$("input#start-date").val("");
+$("input#end-date").val("");
+}
+// Called by "Clear" link in "Search for" form
+function clearKeywords() {
+// Empty the input field
+$("input#keywords").val("");
+// Hide the "Clear" button
+$("span#search-clear").hide();
+// Re-run the Ajax call
+ajaxCall();
+}
+// Called by the tags listed under each report
+function switchTag(newID) {
+//window.console && console.log(newID);
+// Update the hash to the new TAGID. Callback functions will take care of the rest
+hasher.setHash(newID);
+// Scroll to the top of the page
+$("html, body").animate({scrollTop:0}, '500', 'swing');
+}
+// ************************************************************************
+// * END HASHER FUNCTIONS
+// ************************************************************************
+// Convert milliseconds to seconds, and round to the tenths place
+function getTenths(num) {
+num = (Math.round(num / 100) / 10);
+// Keep them all the same length
+if (num.toString().length == 1) {
+return num + ".0s";
+} else {
+return num + "s";
+}
+}
+/* Not currently used (Selectize sorts automatically by score)
+// Sort alphabetically by the 2nd array element (tag name)
+function Comparator(a,b){
+if (a[1].toLowerCase() < b[1].toLowerCase()) return -1;
+if (a[1].toLowerCase() > b[1].toLowerCase()) return 1;
+return 0;
+}
+*/
+function checkHash(tagType) {
+}
+// Called by: hasherInit(), the "Search for" input field, and the associated "Clear" link
+function ajaxCall() {
+console.log("ajaxCall()");
+// Deactivate the UI
+setUIActive(false);
+// *************************************************************************
+// XXXXXXXXXXXXXXXX
+// *************************************************************************
+// Tell user the tags are being loaded
+$("div#tags-holder").empty().append("<em>Loading tags ...</em>");
+// Tell user the reports are being loaded (or reinstate the canned reports)
+loadingReportsHtml = '<br>
+<em>Loading reports ...</em>
+<br>
+<br>';
+if (!hasher.getHash().length) {
+//	console.log("Didn't show loading because hash= " + hasher.getHashAsArray().toString());
+// Hide the heading DIV
+$("#reports-heading").hide();
+// Reinstate the canned reports
+//	console.log("Replacing canned reports, length= " + cannedReports.length);
+$("div#reports-holder").empty().html(cannedReports);
+// Otherwise at least one tag is selected
+} else {
+// Tell user new tags and reports are currently loading
+$("div#reports-holder").empty().append(loadingReportsHtml);
+}
+// Remove the number of reports during the Ajax call
+$("#num-reports").empty().append('Results');
+// *************************************************************************
+// CREATE & ADD ONLY THE CURRENTLY SELECTED TAGS (ADDITIONAL OPTIONS WILL BE ADDED BELOW)
+// *************************************************************************
+// Clear the Selectize plugin of all the tag options
+selectize.clearOptions();
+// Prevent an infinite loop
+ignoreTagAdd = true;
+// If this is a subject-specific page (e.g. Coal), create and add a simulated tag for it
+// Get the hash array
+hash_array = hasher.getHashAsArray();
+// Clear this item that can only have one value
+delete useSubject;
+// Iterate through the tags in hasher
+for (oneHash=0; oneHash < hash_array.length; oneHash++) {
+// Get the first character to determine the hash type
+hashType = hash_array[oneHash].substring(0, 1);
+hashValue = hash_array[oneHash].substring(1);
+// If an "S" is prepended, this is a subject as a simulated tag
+if (hashType == "S") {
+//console.log("hashType= " + hashType + ", hashValue= " + hashValue);
+// If this is a known subject
+if (typeof(allAvailableSubjects[hashValue]) != "undefined") {
+createTag("Subject: " + allAvailableSubjects[hashValue], "S" + hashValue);
+// Add the existing tag
+addTag(hash_array[oneHash]);
+useSubject = hashValue;
+} else {
+window.console && console.log("WARNING: Unrecognized subject in hash tag. SID=" + hashValue);
+delete useSubject;
+}
+}
+}
+// This could have multiple values, so we need a defined, empty string
+realTags = '';
+// Iterate through the tags in hasher
+for (oneHash=0; oneHash < hash_array.length; oneHash++) {
+// Get the first character to determine the hash type
+hashType = hash_array[oneHash].substring(0, 1);
+hashValue = hash_array[oneHash].substring(1);
+// If a "T" is prepended, this is a real tag
+if (hashType == "T") {
+// Create and add tags in the Selectize plugin for each one in hasher so the already selected tags can be displayed (additional tags will be created but not added below)
+createTag(allAvailableTags[hashValue], "T" + hashValue);
+// Add the existing tag
+addTag(hash_array[oneHash]);
+// Append this tag to the list
+realTags += hashValue + ",";
+}
+}
+// This could have multiple values, so we need a defined, empty string
+useKeywords = '';
+// Iterate through the tags in hasher
+for (oneHash=0; oneHash < hash_array.length; oneHash++) {
+// Get the first character to determine the hash type
+hashType = hash_array[oneHash].substring(0, 1);
+hashValue = hash_array[oneHash].substring(1);
+// If an "K" is prepended, this is/these are KEYWORDS
+if (hashType == "K") {
+useKeywords = decodeURIComponent(hashValue);
+//console.log("Keywords=" + useKeywords);
+createTag("Keyword: " + hashValue, "K" + hashValue);
+// Add the existing tag
+addTag(hash_array[oneHash]);
+}
+}
+window.console && console.log("Clearing start date");
+// Clear the start date input field
+$("input#start-date").val("");
+// Clear this item that can only have one value
+delete useStartDate;
+// Iterate through the tags in hasher
+for (oneHash=0; oneHash < hash_array.length; oneHash++) {
+// Get the first character to determine the hash type
+hashType = hash_array[oneHash].substring(0, 1);
+hashValue = hash_array[oneHash].substring(1);
+// If an "B" is prepended, this is a START DATE
+if (hashType == "B") {
+useStartDate = hashValue;
+createTag("Start date: " + hashValue, "B" + hashValue);
+// Add the existing tag
+addTag(hash_array[oneHash]);
+// Populate the start date input field
+console.log("Setting start date= " + hashValue);
+console.log("Before: " + $("input#start-date").val());
+$("input#start-date").val(hashValue);
+console.log("After: '" + $("input#start-date").val() + "'");
+console.log("Before: " + $("input#steven-test").val());
+$("input#steven-test").val("7-1-2014");
+console.log("After: " + $("input#steven-test").val());
+//throw new Error();
+}
+}
+} // END of ajaxCall()
+// Called by selectize.onItemRemove() and clearAllTags()
+function removeSubject() {
+setUIActive(false);
+window.console && console.log("Transfer this hash to the all-reports page: " + hasher.getHash());
+// Redirect to the main reports page
+window.location.href = "/reports/index_snw.cfm#/" + hasher.getHash();
+}
+// Called by ajaxCall(), jqHXR.done(), and clearAllTags()
+function setUIActive(toggle) {
+if (toggle) {
+// Remove the cover that prevents the user from interacting with the UI during the Ajax call
+$("div#cover-everything").remove();
+} else {
+// Cover the entire page during Ajax call to prevent user from interacting with the UI
+$("body").append('<div id="cover-everything" style="position:fixed; top:0; left:0; height: 100%; width: 100%; margin: 0; padding: 0; background: #000000; opacity: .15; filter: alpha(opacity=15); -moz-opacity: .15; z-index: 101;">
+</div>');
+}
+}
+// Check whether a variable is defined, not null, and has a length
+function isDisplayable(theVar) {
+/* dev
+if (typeof(theVar) == "undefined") {
+console.log("It was UNDEFINED");
+} else if (theVar == null) {
+console.log("It was NULL");
+} else if (theVar.length <= 0) {
+console.log("It was EMPTY!")
+} else {
+console.log("ALL GOOD");
+}
+*/
+return typeof(theVar) != "undefined" && theVar != null && theVar.length > 0;
+} // END of isDisplayable()
+</script>
+<div class="pagecontent temp_rpt" style="margin-bottom:10px;">
+<div class="top_search_box" style="border:0px;margin-bottom:0;">
+<div>
+<strong>Filter by tags:</strong> <span id="tags-clear" style="display:none; font-size:10px;">[<a href="javascript:clearAllTags();">Clear all tags</a>]</span>
+<br>
+<input type="text" id="input-tags" value="" tabindex="-1" style="display: none;" placeholder="Enter tags or keywords to filter reports">
+</div>
+</div>
+<div id="more-options" style="padding:0px 5px 0 5px;  border: 1px solid rgb(156,156,156); background-color: rgb(235,235,235); overflow:auto;">
+<div style="float:left; height:125px; width:600px;  border-right:1px dashed rgb(156,156,156); padding-top:5px; margin-right:5px; padding-right:5px;">
+<p style="margin-bottom:0;">
+<strong>Add more tags:</strong>
+</p>
+<div id="tags-holder" style="height:90px; overflow-y:scroll; padding-bottom:5px; border-top:1px #ddd solid;  border-bottom:1px #ddd solid;">
+<em>Loading tags ...</em>
+</div>
+</div>
+<div style="float:left; width:330px;  padding-top:5px;">
+<form id="date-form">
+<p>
+<strong>Filter by date range:</strong>
+<br>
+From:<br>
+<input id="start-date" type="text" class="datepicker" name="tag_datefrom" placeholder="Select or type date" style="width:120px;">
+<br>
+To:
+<br>
+<input id="end-date" type="text" class="datepicker" name="tag_dateto" placeholder="Select or type date" style="width:120px;">
+</p>
+</form>
+<form>
+<div>
+<input id="steven-test" type="text" class="datepicker" name="tag_datefrom" placeholder="Select or type date" style="width:120px;" value="ASDFASDF">
+</div>
+</form>
+</div>
+</div>
+<div style="background-color: rgb(20, 154, 220); padding:5px;">
+</div>
+<div id="more-tab" style="width:150px; height:23px; margin:0 auto; margin-top:-11px; font-size:14px; text-align:center; user-select:none; background-color:#fff; background-image:url('/global/scripts/selectize/blank_tab.png')">
+<strong>
+<span id="instructions">SHOW OPTIONS</span>
+</strong>
+</div>
+</div>
+<!-- Close div.pagecontent mr_temp1 -->
+<div style="margin:0px 22px 0px 22px;">
+<div id="reports-heading" class="clearfix" style="padding-top:10px;display:none;">
+<div style="float:left;">
+<h1 id="num-reports" style="padding:0; margin:0; font-size:26px">Results</h1>
+</div>
+<div style="float:right">
+<img src="/global/images/icons/bs_d.png" title="Indicates a report includes data" style="vertical-align:text-bottom;"> Data &nbsp;&nbsp;
+<img src="/global/images/icons/bs_a.png" title="Indicates a report includes analysis" style="vertical-align:text-bottom;"> Analysis &nbsp;&nbsp;
+<img src="/global/images/icons/bs_p.png" title="Indicates a report includes projections" style="vertical-align:text-bottom;"> Projections &nbsp;&nbsp;
+</div>
+</div>
+<div class="pagecontent mr_temp1" style="margin:0; padding:0;">
+<div id="reports-holder" style="clear:both;">
+<div class="pagecontent temp_rpt" style="margin:0;">
+<div class="main_col" style="margin:0; display:none;">
+<h1 class="no-border">Most Requested</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

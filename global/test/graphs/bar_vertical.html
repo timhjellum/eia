@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Figure ES 1.  U.S. Electric Power Net Generation, 2009</title>
+		
+
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/jquery/jquery.min-1.4.2.js"></script>
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/highcharts.js"></script>
+		
+		<!-- 1a) Optional: the exporting module -->
+		<!---script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/modules/exporting.js"></script--->
+		
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script type="text/javascript">
+		
+			var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+			        renderTo: 'container',
+			        defaultSeriesType: 'column',
+			        height: 400,
+			        width: 500,
+			        margin: [70, 50, 60, 32],
+			    },
+			    credits: {
+			        enabled: false
+			    },
+			    title: {
+	    				align: 'left',
+							style: {
+			            fontFamily:'arial',
+			            fontWeight: 'bold',
+			            fontSize:'16px'
+			        },
+							text: 'Figure ES3. Planned Capacity Additions, 2010-2014'
+					},	   
+					
+					subtitle: {						
+							align: 'left',
+							style: {
+			            fontFamily:'arial',
+			        },
+							text: 'gigawatts (GW)'					
+					},
+					xAxis: {
+						categories: [
+							'2010', 
+							'2011', 
+							'2012', 
+							'2013',
+							'2014'
+						]
+					},
+					yAxis: {
+						title: {
+		            text: null
+		        }
+					},
+					legend: {
+			    	  align: 'center',
+			    	  backgroundColor: 'white',
+			    	  borderWidth: 0,
+			    	  layout: 'horizontal',
+			    	  verticalAlign: 'bottom',
+			    	  x: 0,
+			    	  y: -20
+			    },
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.series.name +'</b><br/>'+ this.x +': '+ this.y + '%';
+						}
+					},
+					plotOptions: {
+							column: {
+								pointPadding: 0.3,
+								groupPadding: 0.1,
+								pointWidth: 15,
+								borderWidth: 0
+							},
+							series: {
+								borderWidth: 0,							
+								shadow: false,
+	              states: {
+		                hover: {
+		                    brightness: 0.2
+		                }
+		            }
+		          }
+    			},
+				  series: [{
+						name: 'Coal',
+						data: [8, 3, 6, 0, 1]
+				
+					}, {
+						name: 'Natural Gas',
+						data: [9.488, 11.51, 9.713, 5.417, 2.501]
+				
+					}, {
+						name: 'Wind',
+						data: [5.78, 3.949, 1.138, 0.415, 0.3]
+				
+					}, 
+					{
+						name: 'Other',
+						data: [2.033, 1.365, 2.754, 1.997, 0.922]
+				
+					}],
+			    navigation: {
+			        buttonOptions: {
+			            height: 30,
+			            width: 38,
+			            symbolSize: 18,
+			            symbolX: 19,
+			            symbolY: 15,
+			            symbolStrokeWidth: 2
+			        }
+			    },
+					exporting: {
+		        buttons: {
+				            exportButton: {
+				                verticalAlign: 'top',
+				                x: -5,
+				                y: 35
+				            },
+				            printButton: {
+				                verticalAlign: 'top',
+				                x: -5,
+				                y: 0
+				            }
+				        }
+				    }
+				});
+			});
+
+				
+		</script>
+
+	</head>
+	<body>
+		<div style="width: 500px; font-family:arial, helvetica, sans-serif; font-size:12px;">
+			<div id="container" style="margin-bottom:0px;"></div>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS Test</title>
+    <script src="/global/scripts/jquery/jquery-1.11.0.min.js"></script>
+    <script src="/global/scripts/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/global/scripts/jquery/ui/1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/global/scripts/jquery/jquery.event.drag-2.2.js"></script>
+    <script src="/global/scripts/angular/angular-1.3.8/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="/global/styles/screen.css">
+    <link rel="stylesheet" type="text/css" href="/global/styles/print.css">
+    <link rel="stylesheet" type="text/css" href="/global/styles/EIA_global.css">
+    <link rel="stylesheet" type="text/css" href="datagrid.css">
+    <link rel="stylesheet" type="text/css" href="../timeslider/timeslider.css">
+    <link rel="stylesheet" type="text/css" href="/global/scripts/jquery/datepicker/jquery-ui-dp.custom.css">
+    <link rel="stylesheet" type="text/css" href="/global/scripts/angular/angular-1.3.8/ui-grid/ui-grid.min.css">
+    <script src="../timeslider/timeslider-ng.js"></script>
+    <script src="/global/scripts/angular/angular-1.3.8/ui-grid/ui-grid.js"></script>      <!-- AngularJS uiGrid js -->          <!-- AngularJS animate for uiGrid -->
+    <script src="/global/scripts/angular/angular-1.3.8/angular-scroll/angular-scroll.js"></script>           <!-- AngularJS uiGrid js -->
+    <script src="/global/scripts/angular/angular-1.3.8/angular-touch.min.js"></script>              <!-- AngularJS touch for uiGrid -->
+    <script src="/global/scripts/angular/angular-1.3.8/angular-animate.min.js"></script>            <!-- AngularJS animate for uiGrid -->
+    <script src="datagrid-ng.js"></script>
+    <script>
+        var myapp = angular.module('myapp', ["datagrid-ng"]);
+
+        myapp.controller('appController', function($scope, $location, $http) {
+            $scope.data = [];
+            $scope.columns = [];
+            $scope.options = {};
+
+            $http.get('json-data/gridOptions.json').then(function(response){
+                $scope.data = response.data.data;
+                $scope.columns = response.data.columnDefs;
+
+                delete response.data.data;
+                delete response.data.columnDefs;
+
+                $scope.options = response.data;
+
+                //console.log($scope.data);
+                //console.log($scope.columns);
+                //console.log($scope.options);
+            });
+
+        });
+    </script>
+    <style>
+        #grid_example {
+            height : 700px;
+            width : 900px;
+        }
+    </style>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="appController">
+    <datagrid id="grid_example" columns="columns" data="data" options="options"></datagrid>
+</div>
+</body>
+</html>

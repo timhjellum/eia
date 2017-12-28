@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Figure ES 1.  U.S. Electric Power Net Generation, 2009</title>
+		
+
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/jquery/jquery.min-1.4.2.js"></script>
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/highcharts.js"></script>
+		
+		<!-- 1a) Optional: the exporting module -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/modules/exporting.js"></script>
+		
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script type="text/javascript">
+		
+			var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+			        renderTo: 'container',
+			        defaultSeriesType: 'pie',
+			        height: 360,
+			        marginBottom: 20
+			    },
+			    credits: {
+			        enabled: false
+			    },
+			    title: {
+	    				align: 'center',
+							style: {
+			            fontFamily:'arial',
+			            fontWeight: 'bold',
+			            fontSize:'16px'
+			        },
+							text: 'Figure ES 1. U.S. Electric Power Net Generation, 2009'
+					},	   
+					
+					subtitle: {						
+							align: 'center',
+							style: {
+			            fontFamily:'arial',
+			        },
+							text: 'Total = 3,950 billlion kWh'					
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+						}
+					},
+					plotOptions: {
+		        pie: {
+		        		center: ['25%', '45%'],
+		            size: '250',
+                point: {
+                    events: {
+                        mouseOver: function() {
+                            this.slice();
+                        },
+                        mouseOut: function() {
+                            this.slice();
+                        }
+                    }
+                },
+                states: {
+		                hover: {
+		                    brightness: 0.2
+		                }
+		            }
+		        }
+		        
+    			},
+			    legend: {
+			    	  align: 'right',
+			    	  backgroundColor: 'white',
+			    	  borderWidth: 0,
+			    	  layout: 'vertical',
+			    	  verticalAlign: 'top',
+			    	  x: -15,
+			    	  y: 110
+			    },
+				    series: [{
+						type: 'pie',
+						name: 'Electric Power Net Generation',
+						data: [
+							['Coal', 44.5],
+							['Nuclear', 20.2],
+							['Other', .3],
+							['Other Gas', .3],
+							['Petroleum', 1.0],
+							['Naural Gas', 23.3],
+							['Other Renewables', 3.6],
+							['Hydroelectric', 6.8]
+							
+						]
+					}],
+			    navigation: {
+			        buttonOptions: {
+			            height: 30,
+			            width: 38,
+			            symbolSize: 18,
+			            symbolX: 19,
+			            symbolY: 15,
+			            symbolStrokeWidth: 2
+			        }
+			    },
+					exporting: {
+		        buttons: {
+				            exportButton: {
+				                verticalAlign: 'bottom',
+				                x: -20,
+				                y: -20
+				            },
+				            printButton: {
+				                verticalAlign: 'bottom',
+				                x: -65,
+				                y: -20
+				            }
+				        }
+				    }
+				});
+				
+				var query = $.browser.msie ?
+				    '.highcharts-legend span' :
+				    '.highcharts-legend text';
+				$(query).each(function(index, element) {
+				    $(element).hover(function() {
+				        chart.tooltip.refresh(chart.series[0].data[index]);
+				        chart.series[0].data[index].slice();
+				    },function() {
+				        chart.tooltip.hide();
+				        chart.series[0].data[index].slice();
+				    })
+				});
+				
+			});
+			
+
+				
+		</script>
+
+	</head>
+	<body>
+		<div style="width: 500px; font-family:arial, helvetica, sans-serif; font-size:12px;">
+			<div id="container" style="margin-bottom:0px;"></div>
+		<p style="margin:0px; padding:0px;">Electric Utility Plants</em> = 60.1%; Independent Power Producers and Combined Heat and Power Plants = 39.9%</p>
+		</div>
+	
+	</body>
+</html>

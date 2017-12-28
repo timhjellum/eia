@@ -1,0 +1,13 @@
+<!DOCTYPE coldspring [
+	<!ENTITY appMapping "faqs.">
+]>
+<beans>
+<!-- SQLGateway -->
+<bean id="ORMGateway" class="&appMapping;model.gateway.ORMGateway" />
+
+<!-- ResponceFactory -->
+<bean id="ResponceFactory" class="&appMapping;model.responce.ResponceFactory" />
+
+<!-- Utilities -->
+<bean id="UtilityFactory" class="&appMapping;model.utility.UtilityFactory" />
+</beans>

@@ -1,0 +1,17 @@
+.items-2 .control-operator:nth-of-type(2) ~ .item:nth-of-type(2), .items-3 .control-operator:nth-of-type(2) ~ .item:nth-of-type(2), .items-3 .control-operator:nth-of-type(3) ~ .item:nth-of-type(3), .items-4 .control-operator:nth-of-type(2) ~ .item:nth-of-type(2), .items-4 .control-operator:nth-of-type(3) ~ .item:nth-of-type(3), .items-4 .control-operator:nth-of-type(4) ~ .item:nth-of-type(4), .items-5 .control-operator:nth-of-type(2) ~ .item:nth-of-type(2), .items-5 .control-operator:nth-of-type(3) ~ .item:nth-of-type(3), .items-5 .control-operator:nth-of-type(4) ~ .item:nth-of-type(4), .items-5 .control-operator:nth-of-type(5) ~ .item:nth-of-type(5) 
+{
+  pointer-events: auto;
+  opacity: 0; 
+ width: 0%;
+}
+
+
+
+
+.items-2 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2), .items-3 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2), .items-3 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3), .items-4 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2), .items-4 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3), .items-4 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4), .items-5 .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2), .items-5 .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3), .items-5 .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4), .items-5 .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5)
+{
+  pointer-events: auto;
+  opacity: 1; 
+ width: 100%;
+}
+

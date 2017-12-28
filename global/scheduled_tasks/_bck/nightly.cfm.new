@@ -1,0 +1,55 @@
+<!--- IP detection here to allow only to be run from WWWDEV, WWWTEST, WWWlive or from within EIA network --->
+<cfscript>
+/**
+ * Gets the ip address of the server.
+ * 
+ * @return Returns a string. 
+ * @author Robert Everland III (reverland@reactivevision.com) 
+ * @version 1, January 12, 2004 
+ */
+function GetServerIP() {
+   var iaclass="";
+   var addr="";
+      
+   // Init class
+   iaclass=CreateObject("java", "java.net.InetAddress");
+
+   //Get Local host variable
+   addr=iaclass.getLocalHost();
+
+   // Return ip address
+   return addr.getHostAddress();
+}
+</cfscript>
+<cfif GetServerIP() neq cgi.REMOTE_ADDR and left(cgi.REMOTE_ADDR,7) neq "199.75."><cfabort></cfif>
+
+<html>
+<body>
+
+<cfmail to="steve.luminati@eia.gov" from="webmaster@eia.gov" subject="Nightly Server Maintenance Report from Live" type="html">
+
+
+<h2>Nightly Maintenance Task Report</h2>
+<cfoutput>
+Run by ip #cgi.REMOTE_ADDR#<br>
+Run on #GetServerIP()#<br>
+</cfoutput>
+<hr />
+
+
+
+<!--- ordered task sections (may be cfincludes) --->
+
+  <!--- 1. 404 log task: clear prior weeks and email report--->
+
+<cfinclude template="redirect-log-report.cfm">  
+<cfinclude template="redirect-log-trimmer.cfm">
+
+  <!--- 2. Rebuild Reports/Bookshelf's Solar search index--->
+  
+  
+
+<!--- mail results as needed--->
+</cfmail>
+
+</body>

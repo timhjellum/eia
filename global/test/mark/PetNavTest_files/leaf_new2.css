@@ -1,0 +1,93 @@
+TD.Blank {
+	
+}
+TR.Row {
+	BACKGROUND-COLOR: #ffffea
+}
+TH.C1 {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 10pt; VERTICAL-ALIGN: top; FONT-WEIGHT: bold
+}
+TD.Title1 {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+TD.Title2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+TD.A {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+TD.B1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+TD.B2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+TD.B3 {
+	TEXT-ALIGN: right; FONT-FAMILY: "Times New Roman", Times, serif; FONT-SIZE: 9pt
+}
+TD.B4 {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #dddddd; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+TD.B6 {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #dddddd; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+TD.B5 {
+	TEXT-ALIGN: right; BACKGROUND-COLOR: #dddddd; FONT-FAMILY: "Times New Roman", Times, serif; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+TD.Notes {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+TD.C {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+TD.D {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+TD.E {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 8pt
+}
+TD.F {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: black; FONT-SIZE: 9pt
+}
+TD.F2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: black; FONT-SIZE: 8pt
+}
+TH.G {
+	TEXT-ALIGN: right; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: white; FONT-SIZE: 8pt; VERTICAL-ALIGN: bottom; FONT-WEIGHT: bold
+}
+TH.G2 {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: white; FONT-SIZE: 8pt; VERTICAL-ALIGN: bottom; FONT-WEIGHT: bold
+}
+TH.H {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+TD.J {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+TD.K {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: red; FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+TD.SubHead {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+TD.ENB {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+SPAN.Small {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: navy; FONT-SIZE: 8pt; FONT-WEIGHT: normal
+}
+#refer {
+	BACKGROUND-COLOR: #f9e6d0; MARGIN-TOP: 15px; WIDTH: 675px; FONT-FAMILY: Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 15px; COLOR: navy; FONT-SIZE: 9pt
+}
+#rlabel {
+	PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 4px
+}
+#refer P {
+	MARGIN-BOTTOM: -20px
+}
+#refer UL {
+	PADDING-BOTTOM: 5px; LIST-STYLE-TYPE: square; MARGIN: 17px 0px 0px 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; PADDING-TOP: 0px
+}
+#refer LI {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}

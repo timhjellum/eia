@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My AngularJS Columnchart</title>
+        <script src="/global/scripts/jquery/jquery-1.11.0.min.js"></script>
+        <script src="/global/scripts/jquery/jquery-migrate-1.2.1.min.js"></script>
+        <script src="/global/scripts/jquery/ui/1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="/global/scripts/angular/angular-1.3.8/angular.js"></script>
+        <script src="/global/scripts/jquery/highcharts/3.0.10/js/highcharts.js"></script>
+        <link rel="stylesheet" type="text/css" href="columnchart.css">
+        <script src="/global/scripts/jquery/highcharts/3.0.10/js/eia-theme-module.js"></script>
+        <script src="columnchart-ng.js"></script>
+        <script>
+			var myapp = angular.module('myapp', ["columnchart-ng"])
+                .factory('dataFactory', function($http, $q){
+                    return {
+                        chartData: function() {
+                            return $http({
+                                url: 'sample-data.json',
+                                method: 'GET'
+                            });
+                        }
+                    };
+                });
+
+			myapp.controller('appController', [
+                '$scope', '$location', 'dataFactory',
+                function($scope, $location, dataFactory) {
+                    dataFactory.chartData().success(function(data) {
+                        $scope.data = data;
+                    });
+			    }
+           ]);
+        </script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div ng-app="myapp" ng-controller="appController">
+            <div class="row">
+                <h1>Column Chart</h1>
+                <div 
+                    id="columnchart_container"
+                    hash-sync
+                    ng-title="Sample Chart"
+                    options="options"
+                    ng-period="2004"
+                    chartdata="data"
+                    columnchart
+                    style="width:655px;height:373px;"
+                ></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+import TabsInit from './modules/_tabs';

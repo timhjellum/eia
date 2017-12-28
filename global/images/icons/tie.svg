@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="38pt" viewBox="0 0 38 38" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="Clip0">
+   <path d="M0 0 L34.76 0 L34.76 29.48 L0 29.48 L0 0 Z" transform="translate(2, 0)"/>
+  </clipPath>
+ </defs>
+ <g id="Background">
+  <g id="tie" clip-path="url(#Clip0)">
+   <path style="fill:none;stroke:#bfd5ad; stroke-width:4; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M25.84 0 L16.3 10.62 L7.34 5.33 L0 20.28 " transform="translate(7.21, 3.83)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:#5d9731; stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M3.87 14.32 L3.87 1.69 L0 1.69 L0 0 L9.35 0 L9.35 1.69 L5.46 1.69 L5.46 14.32 L3.91 14.32 L3.87 14.32 Z" transform="translate(6.03, 12.2)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:#5d9731; stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M0 14.32 L0 0 L1.55 0 L1.55 14.32 L0 14.32 Z" transform="translate(19.2, 12.2)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:#5d9731; stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M0 14.32 L0 0 L8.49 0 L8.49 1.69 L1.56 1.69 L1.56 6.07 L8.05 6.07 L8.05 7.76 L1.56 7.76 L1.56 12.63 L8.77 12.63 L8.77 14.32 L0.01 14.32 L0 14.32 Z" transform="translate(25.5, 12.2)"/>
+   <path style="fill:none;stroke:#bfd5ad; stroke-width:2.2; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M32.56 27.28 L0.18 27.28 L0 27.28 L0 0 " transform="translate(3.1, 1.1)"/>
+  </g>
+ </g>
+</svg>

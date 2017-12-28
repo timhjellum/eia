@@ -1,0 +1,1 @@
+<?phpclass AreaType extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT ID, Name, 'area' as "GROUP" from PETIMP.AREA_TYPESORDER BY ID ASCSQL;

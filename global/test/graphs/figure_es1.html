@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Figure ES 1.  U.S. Electric Power Net Generation, 2009</title>
+		
+
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/jquery/jquery.min-1.4.2.js"></script>
+		<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/highcharts.js"></script>
+		
+		<!-- 1a) Optional: the exporting module -->
+		<script type="text/javascript" src="../js/modules/exporting.js"></script>
+		
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script type="text/javascript">
+		
+			var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container',
+						defaultSeriesType: 'pie',
+						//margin: [20, 210, 50, 70]
+					},
+					title: {
+						text: 'Figure ES 1.  U.S. Electric Power Net Generation, 2009'	   
+						
+					},	   
+					
+					subtitle: {						
+					text: '      Total = 3,950 billlion kWh'					
+					},
+					plotArea: {
+						shadow: null,
+						borderWidth: null,
+						backgroundColor: null
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+						}
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								formatter: function() {
+									if (this.y > 5) return this.point.name;
+								},
+								color: 'black',
+								style: {
+									font: '11px Trebuchet MS, Verdana, sans-serif'
+								}
+							}
+						}
+					},
+					legend: {
+						layout: 'vertical',	 
+						backgroundColor: '#FFFFFF',
+						align: 'right',
+		        verticalAlign: 'top',
+		        x: 10,
+		        y: 100
+					},
+				    series: [{
+						type: 'pie',
+						name: 'Browser share',
+						data: [
+							['Coal',   44.5],
+							['Nuclear',       20.2],
+							['Other',       .3],
+							{
+								name: 'Other Gas',    
+								y: .3,
+								sliced: true,
+								selected: true
+							},
+							['Petroleum',    1.0],
+							['Naural Gas',     23.3],
+							['Other Renewables',     3.6],
+							['Hydroelectric',     6.8]
+							
+						]
+					}]
+				});
+			});
+				
+		</script>
+	 <link rel="stylesheet" href="http://www.eia.gov/cneaf/styles/cneaf_cj.css" type="text/css">
+	 <link rel="stylesheet" href="/styles/eia_sitewideF.css" type="text/css">	
+	</head>
+	<body>
+	  <!-- <table width="560" style="border: none white" border="0"> <tr><td> -->
+		<!-- 3. Add the container -->
+		<div id="container" style="width: 550px; height: 370px; margin: 0 auto; border-bottom: 0; border-top: 0em">
+		</div>
+		<div class="update"> Electric Utility Plants = 60.1%<br>
+Independent Power Producers and Combined Heat and Power Plants = 39.9% </div>
+	  <!-- </td></tr></table>  -->
+				
+	</body>
+</html>

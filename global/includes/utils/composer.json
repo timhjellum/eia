@@ -1,0 +1,11 @@
+{
+    "name": "eia/utils",
+    "description": "utils previously found in global/includes/utils",
+    "authors": [
+        {
+            "name": "toy",
+            "email": "taylor.ondrey@eia.gov"
+        }
+    ],
+    "require": {}
+}

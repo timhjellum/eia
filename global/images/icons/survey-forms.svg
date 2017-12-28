@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="38pt" viewBox="0 0 38 38" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="Clip0">
+   <path d="M0 0 L35.847 0 L35.847 30.9523 L0 30.9523 L0 0 Z" transform="translate(2, 0)"/>
+  </clipPath>
+ </defs>
+ <g id="Background">
+  <g id="survey-forms" clip-path="url(#Clip0)">
+   <path style="fill:#bfd5ad; fill-rule:evenodd;stroke:none;" d="M26.36 26.41 L4 26.41 L4 4.05 L24.17 4.05 L29 0 L2 0 C0.895431 0 0 0.895431 0 2 L0 28.41 C0 29.5146 0.895431 30.41 2 30.41 L28.41 30.41 C29.5146 30.41 30.41 29.5146 30.41 28.41 L30.41 12.1 L26.36 16.82 L26.36 26.41 L26.36 26.41 Z" transform="translate(2, 0.542264)"/>
+   <path style="fill:#5d9731; fill-rule:evenodd;stroke:none;" d="M28.6378 1.13226 C27.6925 0.0849746 26.0779 0 25.0278 0.942265 L9.71784 14.7223 L5.88784 10.7223 C4.71002 9.50947 2.79342 9.41809 1.50554 10.5133 C0.21767 11.6085 0 13.5149 1.00784 14.8723 L6.69784 22.3423 C6.82545 22.5065 6.96589 22.6603 7.11784 22.8023 C8.55682 24.1242 10.7948 24.0302 12.1178 22.5923 L12.1178 22.5923 L28.6178 4.59226 C29.5162 3.61681 29.5248 2.11803 28.6378 1.13226 Z" transform="translate(8.32216, 0)"/>
+  </g>
+ </g>
+</svg>

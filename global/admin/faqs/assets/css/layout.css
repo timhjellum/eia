@@ -1,0 +1,283 @@
+/******************************************************************************
+Global HTML elements
+******************************************************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, fieldset, 
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+
+body {
+	font: 80.5% "Trebuchet MS", sans-serif;
+	background-color:#fff;
+	text-align:center;
+}
+
+textarea {background-color:#fff;}
+
+img {
+	border: none;
+}
+
+
+
+/******************************************************************************
+Page Frame and Content
+******************************************************************************/
+
+div#pageFrame{
+	text-align:left;
+	margin:10px auto 10px auto;
+	padding:0px 0px 10px 0px;
+	width:70em;
+	clear:both;
+}
+
+div#pageContent {
+	padding:3px 3px 8px 3px;
+}
+
+div#pageContent p {
+	margin:0 0 2em 0;
+}
+
+
+
+/******************************************************************************
+header
+******************************************************************************/
+#header {
+	height:2em;
+	border-bottom:1px dotted silver;
+	padding:.5em;
+	margin-bottom:.5em;
+	background-color:#007;
+}
+
+#header a {
+	color:#fff;
+}
+
+#header #headerLogo {
+	width:35%;
+}
+
+#headerLogo {
+	font-weight:bold;
+	font-size:1.5em;
+	
+}
+
+/******************************************************************************
+mainNav
+******************************************************************************/
+#mainNav {
+	padding-bottom:1em;
+	margin-bottom:1em;
+	border-bottom:dotted 1px silver;
+	
+}
+
+#mainNav ul {
+	clear:left;
+	margin:0em;
+	padding:0em;
+	font-size:.90em;
+}
+#mainNav ul li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 1em;
+	margin:0em;
+}
+
+
+#metaMenu {
+	margin-top:-1.35em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	float:right;
+}
+
+#metaMenu ul {
+	clear:left;
+	margin:0em;
+	padding:0em;
+	font-size:.90em;
+}
+#metaMenu ul li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 1em;
+	margin:0em;
+}
+
+
+
+/******************************************************************************
+pageTags
+******************************************************************************/
+div#pageTags {
+	font-size:.90em;
+	margin-top:-10px;
+	padding-top:0px;
+}
+
+
+/******************************************************************************
+response
+******************************************************************************/
+div#responceWrapper {
+	top:0px;
+	border:dotted 2px #f0f;
+	background-color:black;
+	color:#f0f;
+}
+div#responceWrapper ul li {
+	margin:auto 20px auto -15px;
+	padding-left:0px;
+	list-style-type:none;
+}
+
+a#closeResponce {
+	margin-top:1em;
+	padding:.3em;
+	background-color:green;
+	color:#E3CF57;
+	border:solid 1px orange;
+	cursor:pointer;
+}
+
+
+/******************************************************************************
+Content
+******************************************************************************/
+
+
+
+/*
+ * .dataTable
+ * 
+ */
+.dataTable td {
+	border:solid 1px silver;
+	padding:.1em;
+}
+
+
+#contentOutput {width:65%;}
+#contentOutput p {margin-bottom:1em;}
+#contentOutput img {
+	border:solid 1px black;
+	margin:.4em;
+}
+
+#rightSideBar {
+	background-color:#efefef; padding:1em; width:34%;
+}
+
+#rightSideBar p {
+	padding:1em;
+	font-size:.90em;
+}
+#rightSideBar h3, h4 {
+	border-bottom:solid 1px gray;
+	margin-bottom:1em;	
+}
+
+#contentMenuWrapper div {
+	background-color:#eee; 
+	border-bottom:solid 1px #ccc;
+}
+
+
+
+
+
+/*
+* Tree
+*/
+
+table.tree {
+	border-collapse:collapse;
+}
+table.tree td,
+table.tree th {
+	border:1px solid #777;
+	padding:0.5em;
+}
+table.tree th {
+	background-color:#eee;
+	text-align:left;
+}
+
+
+/******************************************************************************
+footer
+******************************************************************************/
+
+#footer {
+	background-color:#fff;
+	height:40px;
+}
+
+#footer img {float:right;}
+
+#footer p {
+	margin-left:0px;
+}
+
+
+
+/******************************************************************************
+Generic Floats and Clears 
+******************************************************************************/
+.backgroundLight {background-color:#fff;}
+.backgroundMedium {background-color:#fcfcfc;}
+.backgroundDark {background-color:#aaa;}
+
+.left {float:left;}
+.right {float:right;}
+.clear {clear: both;}
+
+/* newer, change to always use these */
+.marginSmall {margin:3px;}
+.marginMedium {margin:7px;}
+.marginBig {margin:15px;}
+/* dont use these anymore */
+.smallMargin {margin:3px;}
+.mediumMargin {margin:7px;}
+.bigMargin {margin:15px;}
+
+.fontSmall {font-size:.85em;}
+.fontMedium {font-size:1em;}
+.fontBig {font-size:2em;}
+
+
+/* newer, change to always use these */
+.paddingSmall {padding:3px;}
+.paddingMedium {padding:7px;}
+.paddingBig {padding:15px;}
+/* dont use these anymore */
+.smallPadding {padding:3px;}
+.mediumPadding {padding:7px;}
+.largPadding, .bigPadding {padding:15px;}
+
+.borders {
+	border-top:solid 1px gray;
+	border-right:solid 2px black;
+	border-bottom:solid 2px black;
+	border-left:solid 1px gray;
+}
+
+.lightBorders {
+	border:solid 1px gray;
+}

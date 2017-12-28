@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>	
+<head>		
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+<title>Figure ES4. Fossil Fuel Costs for Electricity Generation
+</title>						
+<!-- 1. Add these JavaScript inclusions in the head of your page -->		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/highcharts.js"></script>				
+<!-- 1a) Optional: the exporting module -->		
+<script type="text/javascript" src="http://wwwdev.eia.gov/global/scripts/JQuery/highcharts/modules/exporting.js"></script>						<!-- 2. Add the JavaScript to initialize the chart on document ready -->		
+<script type="text/javascript">					
+var chart;			
+$(document).ready(function() 
+{				
+	chart = new Highcharts.Chart
+	({					
+	chart: {						
+	renderTo: 'container',						
+	defaultSeriesType: 'line',						
+	marginRight: 100,						
+	marginBottom: 25					
+	},					
+	title: {						
+	text: 'Figure ES4. Fossil Fuel Costs for Electricity Generation	',						
+	x: 20 //center					
+	},					
+	subtitle: 
+	{						
+	text: '$ per MMBtu',						
+	x: 20					
+	},					
+	xAxis: 
+		{						
+		categories: ['1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009']					
+	},					
+	 yAxis: {	
+	 	
+		title: {	
+			text: ''	
+	
+	},	
+			
+	plotLines: [{							
+	value: 0,				
+	width: 1,							
+	color: '#808080'						
+	}]					
+	},					
+	tooltip: 
+	{						
+	formatter: function() 
+	{				                
+	return '<b>'+ this.series.name +'</b><br/>'+								
+	 this.x +': '+ this.y +' $ per MMBtu';
+						
+	}					
+	},					
+		legend: {						
+		layout: 'vertical',						
+		backgroundColor: '#FFFFDD',
+		align: 'left',						
+		verticalAlign: 'top',						
+		x: 100,						
+		y: 110,						
+		borderWidth: 1					
+		},					
+		series: [{						
+		name: 'coal cost',						
+		data: [1.25,	1.22, 1.20, 1.23, 1.25, 1.28, 1.36, 1.54, 1.69, 1.77, 2.07, 2.22]					}, 
+	{						
+	name: 'natural gas',						
+	data: [2.38, 2.57, 4.3, 4.49, 3.56, 5.39, 5.96, 8.21, 6.94, 7.11, 9.02, 4.74]					}, 
+	{							
+	name: 'petroluem',						
+	data: [2.02, 2.36, 4.18, 3.69, 3.34, 4.33, 4.29, 6.44, 6.23, 7.17, 10.87, 7.02]					}, 
+	
+	{							
+	name: 'all fossil fuels',						
+	data: [1.44, 1.44, 1.74, 1.73, 1.86, 2.28, 2.48, 3.25, 3.02, 3.23, 4.11, 3.05]					 
+						
+}]				
+});											
+});						
+</script>			
+</head>	
+<body>				
+<!-- 3. Add the container -->		
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto">
+</div>							
+</body></html>

@@ -1,0 +1,8 @@
+<div>
+    <div class="grid_container">
+        <div ui-grid="gridOptions"
+             ui-grid-pinning></div>
+    </div>
+    <timeslider id="vertical_scroller" ng-slider-min="-1000" ng-slider-max="0" ng-model="vertical_scroll" ng-orientation="vertical" ng-updateon="both" on-start="slide_start_v" on-stop="slide_stop_v"></timeslider>
+    <timeslider id="horizontal_scroller" ng-slider-min="0" ng-slider-max="1000" ng-model="horizontal_scroll"  ng-orientation="horizontal" ng-updateon="both" on-start="slide_start_h" on-stop="slide_stop_h"></timeslider>
+</div>

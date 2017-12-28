@@ -1,0 +1,4 @@
+<?php $L2Title = "Eia.gov BETA"; ?><div class="betatop" style="background-color:red;padding:4px 10px 4px 10px;margin:0px;">
+<h2 style='color: #FFF;font-family:Arial, Helvetica, sans-serif;font-size:18px;margin:6px;line-height:1.3em;'>Projects published on <a href="/beta" style="color:white;text-decoration:underline;">Beta</A> are not final and may contain programming errors.  They are for
+<?php if(stripos($_SERVER['HTTP_HOST'], "wwwtest") !== false){ ?>EIA employee<?php } else {?>public<?php } ?> testing and comment only. <a href="#" class="openFeedback" onclick="$('.show_menu').trigger('click');" style="color:white;text-decoration:underline;">We welcome your feedback</a>.  For final products, please visit <a href="/" style="color:white;text-decoration:underline;">www.eia.gov</a>.</h2>
+</div>

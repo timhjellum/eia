@@ -1,0 +1,100 @@
+/*
+.bold(@fontWeight: 700) {font-weight: @fontWeight }
+.semi-bold(@fontWeight: 600) {font-weight: @fontWeight }
+.normal(@fontWeight: normal) {font-weight: @fontWeight }
+.right(@floatRight: right) { float: @floatRight  }
+.left(@floatLeft: left) { float: @floatLeft  }
+.base-font-size(@baseFontSize: 16) {font-size: @baseFontSize; }
+.align-right(@AlignRight: right) {text-align: @AlignRight; }
+.align-left(@AlignLeft: left) {text-align: @AlignLeft; }
+.no-wrap(@NoWrap: no-wrap) { white-space: @NoWrap;}
+
+// Pixels	EMs	Percent	Points
+// 6px	0.375em	37.5%	5pt
+// 7px	0.438em	43.8%	5pt
+// 8px	0.500em	50.0%	6pt
+// 9px	0.563em	56.3%	7pt
+// 10px	0.625em	62.5%	8pt
+// 11px	0.688em	68.8%	8pt
+// 12px	0.750em	75.0%	9pt
+// 13px	0.813em	81.3%	10pt
+// 14px	0.875em	87.5%	11pt
+// 15px	0.938em	93.8%	11pt
+// 16px	1.000em	100.0%	12pt
+// 17px	1.063em	106.3%	13pt
+// 18px	1.125em	112.5%	14pt
+// 19px	1.188em	118.8%	14pt
+// 20px	1.250em	125.0%	15pt
+// 21px	1.313em	131.3%	16pt
+// 22px	1.375em	137.5%	17pt
+// 23px	1.438em	143.8%	17pt
+// 24px	1.500em	150.0%	18pt
+
+*/
+
+
+
+@media @mobile {
+  .features {
+    overflow: hidden;
+    margin: 0 0 26px;
+    padding: 22px 0 0 22px;
+    //display: inline-block;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    background: transparent url("https://www.eia.gov/global/images/bg/features_bg.jpg") no-repeat top center;
+    background-size: cover;
+    border-bottom: solid 1px #E3E5E6;
+    h2 {
+      margin: 0 0 6px 0;
+      padding: 0;
+      .header-font;
+    }
+    li {
+      &.header h2 {
+        margin-bottom: 4px;
+        padding: 8px 0 6px;
+        a {
+          .font;
+          font-size: 1rem; // 16px;
+        }
+      }
+    }
+    img {
+      padding: 4px;
+      border: 1px solid #dadada;
+      float: left;
+      margin: 0 18px 10px 0;
+      width: 183px;
+      height: 101px;
+    }
+  }
+}
+@media @tablet {
+  .main-content-container {
+    li {
+      &.header h2 {
+        border-bottom: solid 1px #dadada;
+        font-size: 1rem;
+        .font;
+      }
+    }
+  }
+}
+@media @laptop {
+  .features {
+    h2 {
+      font-size: 1.375rem; //22px
+    }
+
+    li {
+      &.header h2 {
+        font-size: 1rem; // 16px;
+      }
+    }
+  }
+}
