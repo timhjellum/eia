@@ -2,10 +2,6 @@
 import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
-
-
-//console.log("Fancy-Box initiated!");
-
 // check the page resolution on initial page load and if the browser is resized
 $(document).ready(function() {
 	// run on initial page load
@@ -94,22 +90,6 @@ $(document).ready(function() {
 		$('.logo').toggleClass('show');
 	});
 
-	// shrink / expand header
-	// shrink / expand header
-	// shrink / expand header
-
-    //console.log('header shrink expand script found!');
-    /*
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            if (scroll >= 97) {
-                $('header').addClass('shrink');
-            } else {
-                $('header').removeClass('shrink');
-            }
-        });
-    */
-
 	// fancybox tabs
 	// fancybox tabs
 	// fancybox tabs
@@ -162,18 +142,17 @@ function checkSize() {
 	$('.logo').removeClass('show');
 
 	// outer wrapper is set as 990px for laptop and desktop
-	var layoutWrapperWidt = $("#l-outer-wrapper").width();
+	var elementWidth = $("#l-outer-wrapper").width();
 
-
-	if ((layoutWrapperWidt) >= "988") {
-		//console.log(layoutWrapperWidt + " is greater than or equal to 988");
+	if ((elementWidth) >= "988") {
+		//console.log(elementWidth + " is greater than or equal to 988");
 		$(".content").css("margin-top", "0");
-	} else if ((layoutWrapperWidt >= 320) && (layoutWrapperWidt <= 987)) {
+	} else if ((elementWidth >= 320) && (elementWidth <= 987)) {
 		console.log("no");
 		$(".content").css("margin-top", "50px");
 	}
 
-	if ((layoutWrapperWidt) >= "988") {
+	if ((elementWidth) >= "988") {
 		//console.log("laptop and desktop header width");
 		$('.fancybox-menu').fancybox({
 			type: 'inline',
@@ -189,11 +168,6 @@ function checkSize() {
 				closeBtn: '<a title="Close" class="close" href="javascript:;"><i class="ico close">Close</i></a>'
 			},
 			helpers : {
-			//	overlay : {
-			//		css : {
-			//			'background' : 'rgba(0, 60, 87, 0.7)'
-			//		}
-			//	},
 				afterLoad: function() {
 					$('.page_tabs').click(function() {
 						$.fancybox.reposition();
@@ -201,14 +175,14 @@ function checkSize() {
 				}
 			}
 		});
-	} else if ((layoutWrapperWidt >= 320) && (layoutWrapperWidt <= 987)) {
+	} else if ((elementWidth >= 320) && (elementWidth <= 987)) {
 		//console.log("mobile header width");
-		console.log("mobile header width equals " + layoutWrapperWidt);
+		console.log("mobile header width equals " + elementWidth);
 		$('.fancybox-menu').fancybox({
 			padding    		:	0,
 			margin     		:	0,
 			width			:	'100%',
-			//width			:	'layoutWrapperWidt',
+			//width			:	'elementWidth',
 			top				:	0,
 			left			:	0,
 			scrolling		:	'no',
@@ -219,11 +193,6 @@ function checkSize() {
 				closeBtn: '<a title="Close" class="close" href="javascript:;"><i class="ico close">Close</i></a>'
 			},
 			helpers : {
-			//	overlay : {
-			//		css : {
-			//			'background' : 'rgba(0, 60, 87, 0.7)'
-			//		}
-			//	},
 				afterLoad: function() {
 					$('.page_tabs').click(function() {
 						$.fancybox.reposition();

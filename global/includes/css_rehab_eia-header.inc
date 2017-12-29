@@ -310,8 +310,10 @@
 									<form action="https://www.eia.gov/tools/glossary/index.php" method="post" name="frmGlossary">
 										<input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
 										 type="text" />
-										<input type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" class="arrow_go" border="0"
-										 title="Search Glossary">
+										<button type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" type="submit" class="search-submit">
+											<i class="ico search-submit">Search</i>
+										</button>
+										<!-- input class="arrow_go" border="0" type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" title="Search Glossary" -->
 									</form>
 								</div>
 							</div>
@@ -394,8 +396,9 @@
 								<div class="reports-publication-search form-container">
 									<textarea type="text" class="fancy-search-box" id="userInput" placeholder="Enter tags. Tags should be seperated with the + character"
 									 onfocus="this.placeholder=''" onblur="this.placeholder='Enter tags. Tags should be seperated with the + character'">
-</textarea>
-									<button type="submit" id="goBtn" class="arrow_go">
+									</textarea>
+									<button type="submit" id="goBtn" class="search-submit">
+										<i class="ico search-submit">Search</i>
 									</button>
 								</div>
 							</div>
@@ -406,17 +409,25 @@
 								</h3>
 								<div class="form-container">
 									<form>
-
-
-<input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
-<a id="Go" href="" class="arrow_go">GO</a><input type="hidden" id="survey-id">
-
-
-
+										<input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
+										<button type="submit" id="goBtn" class="search-submit">
+											<i class="ico search-submit">Search</i>
+										</button>
+										<input type="hidden" id="survey-id">
+										
+										
+										
+										<!--a id="Go" href="" class="search-submit" input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA">
+											<i class="ico search-submit">Search</i>
+										</a-->
 										<!-- input name="utf8" type="hidden" value="&#x2713;" / -->
 										<!-- input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" / -->
 										<!-- input autocomplete="off" class="usagov-search-autocomplete fancy-search-box" name="query" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" / -->
-										<!-- input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA" -->
+										<!--
+										<button type="submit" id="goBtn" class="search-submit">
+										<i class="ico search-submit">Search</i>
+										</button> input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA"
+									 	-->
 									</form>
 								</div>
 							</div>
@@ -498,18 +509,6 @@
 									</li>
 								</ul>
 							</div>
-							<div class="nav-menu teachers">
-								<div class="left">
-									<i class="ico ico-nav teachers"></i>
-									<h3>
-										<a href="kids/energy.cfm?page=6">For Teachers</a>
-									</h3>
-									<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
-								</div>
-								<div class="right">
-									<a href="kids/"><img src="/global/images/icons/energy_kids.png"></a>
-								</div>
-							</div>
 						</div>
 						<div class="learn right">
 							<div class="nav-menu glossary">
@@ -521,8 +520,10 @@
 									<form action="/tools/glossary/index.cfm" method="post" name="frmGlossary">
 										<input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
 										 type="text" />
-										<input type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" class="arrow_go" border="0"
-										 title="Search Glossary">
+										<button type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" type="submit" class="search-submit">
+											<i class="ico search-submit">Search</i>
+										</button>
+										<!-- input class="arrow_go" border="0" type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" title="Search Glossary" -->
 									</form>
 								</div>
 							</div>
@@ -573,6 +574,26 @@
 								</ul>
 							</div>
 						</div>
+
+
+						<div class="nav-menu teachers">
+							<div class="left">
+								<i class="ico ico-nav teachers"></i>
+								<h3>
+									<a href="kids/energy.cfm?page=6">For Teachers</a>
+								</h3>
+								<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
+							</div>
+							<div class="right">
+								<a href="kids/" class="energy-kids"></a>
+							</div>
+						</div>
+					
+					
+							<!-- div class="nav-menu teachers"></div -->
+
+
+
 					</div>
 					<!--News-->
 					<div id="news">
@@ -703,7 +724,7 @@
 				</div>
 			</div>
 			<div class="nav-search search-panel">
-				<div class="search">
+				<div class="search form-container">
 					<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
 						<input name="utf8" type="hidden" value="&#x2713;" />
 						<input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
@@ -711,7 +732,9 @@
 						<i class="ico search"></i>
 						<input autocomplete="off" class="usagov-search-autocomplete search-box" name="query" type="text" maxlength="256"
 						 placeholder="Search eia.gov" onfocus="this.placeholder=''" onblur="this.placeholder='Search eia.gov'"/>
-						<input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA">
+						<button type="submit" name="search" id="goBtn" class="search-submit">
+							<i class="ico search-submit">Search</i>
+						</button> 
 					</form>
 					<script type="text/javascript">
 						//<![CDATA[

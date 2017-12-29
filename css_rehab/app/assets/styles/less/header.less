@@ -130,10 +130,6 @@
 				&.fancy-search-box {
                     padding: 2px;
                 }
-                &.arrow_go {
-                    position: relative;
-                    bottom: 2px;
-                }
             }
             .sources-uses, .topics, .geography, .tools, .learn, .news {
                 &.left {
@@ -259,10 +255,6 @@
                 }
             }
         }
-		.form-container {
-            display: block;
-			margin: 6px 0 0 80px;
-		}
         ul {
             margin: 8px 0 8px 56px;
             overflow: hidden;
@@ -313,33 +305,37 @@
             }
         }
         &.teachers {
+			margin-right: 16px;
+            margin-left: 16px;
+            border-top: 1px solid #dadada;
             > .left {
                 .left;
-                width: 60%;
-                //float: none;
-                //border: none;
-                border-right: 1px solid #dadada;
+                width: 50%;
             }
             > .right {
                 .right;
-                width: 40%;
-                img {
+                width: 50%;
+                a {
                     .right;
+                    &.energy-kids {
+                        width: 431px;
+                        height: 105px;
+                        background-image: url(../../global/images/energy-kids/energy-kids.png);
+                        &:hover {
+                            background-image: url(../../global/images/energy-kids/energy-kids-hover.png);
+                        }                        
+                    }
                 }
-                //float: none;
-                //margin: 0 0 0 80px;
             }
-
-
-
-
-
 		}
 		&.follow-us {
 			p {
 				margin: 8px 0 0 74px;
 			}
-		}
+        }
+        .form-container {
+            margin: 6px 0 0 80px;          
+        }
     }
 	div {
 		&.az-index {
@@ -370,7 +366,28 @@
 		z-index: 8040;
 		top: 5px;
 		right: 5px;
-	}
+    }
+    .form-container {
+        display: block;
+        margin: 6px 0 0 0;
+        width: 100%;
+        position: relative;
+        button {
+            &.search-submit {
+                background-color: transparent;
+                border: none;
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                top: 4px;
+                margin-left: 7px;
+                .ico {
+                    //top: -3px;
+                    //left: -8px;
+                }
+            }
+        }            
+    }
 }
 
 
@@ -486,6 +503,7 @@
                 &.show {
                     top: 0;
                 }
+
             }
         }
 	   ////shrink 

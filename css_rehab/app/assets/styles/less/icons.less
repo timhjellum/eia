@@ -253,6 +253,22 @@
 			}
 		}
 
+		/*-search submit --------------------------*/
+		&.search-submit {
+			position: relative;
+			top: -3px;
+			left: -8px;
+			&::before {
+				.controls-icon(19px, 19px);
+				.search-submit();
+			}
+			&:hover {
+				&::before {
+					.search-submit();
+				}
+			}
+		}
+
 		/*-Close Icon --------------------------*/
 		&.close {
 			&::before {
@@ -261,7 +277,7 @@
 			}
 			&:hover {
 				&::before {
-					.icon-cancel;
+					.icon-cancel();
 				}
 			}
 		}

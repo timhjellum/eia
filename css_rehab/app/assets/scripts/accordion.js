@@ -1,1 +1,2 @@
-import AccordionInit from './modules/_accordion';
+import Accordion from './modules/_accordion';
+new Accordion();

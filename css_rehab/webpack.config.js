@@ -19,8 +19,8 @@ module.exports = {
 		"scroll-to"				: "./app/assets/scripts/scroll-to.js",
 		"local-scroll"			: "./app/assets/scripts/local-scroll.js",
 		"tabs"					: "./app/assets/scripts/tabs.js",
+		*/		
 		"accordion"				: "./app/assets/scripts/accordion.js",
-		*/
 		"header"				: "./app/assets/scripts/header.js",
 		/*
 		"global"				: "./app/assets/scripts/global.js",

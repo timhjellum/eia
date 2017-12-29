@@ -315,7 +315,12 @@
 
 
 
+/*-Submit search icon ----------------*/
 
+.search-submit(@fill-color: @eia_blue) {
+    @icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18"><defs><linearGradient id="linear-gradient" x1="9.18" y1="0.72" x2="9.18" y2="17.22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0"/><stop offset="1"/></linearGradient></defs><g id="icon-submit-arrow"><path d="M9.18,0.72A8.25,8.25,0,1,0,17.43,9,8.25,8.25,0,0,0,9.18.72ZM10,10.57L7.62,12.51V4.77L10,6.7,12.3,8.64Z" fill="@{fill-color}"/><g opacity="0.5"><path d="M9.18,0.72A8.25,8.25,0,1,0,17.43,9,8.25,8.25,0,0,0,9.18.72ZM10,10.57L7.62,12.51V4.77L10,6.7,12.3,8.64Z" fill="url(#linear-gradient)"/></g></g></svg>';
+	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url @-bg-defaults;
+}
 
 .icon-analysis(@fill-color: @disabled) {
 	@icon-filter-svg: ~'<svg id="icon-analysis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29"><g id="analysis-path"><path id="path" d="M21.8,1.7H1.9V27.3H23.1V1.7H21.8ZM21.6,25.8H3.4V3.2H21.6V25.8Z" fill="@{fill-color}"/><rect id="rectangle" x="5" y="4.7" width="7.5" height="1.51" fill="@{fill-color}"/><rect id="rectangle-2" x="5" y="7.7" width="7.5" height="1.51" fill="@{fill-color}"/><rect id="rectangle-3" x="5" y="10.7" width="15.1" height="1.51" fill="@{fill-color}"/><rect id="rectangle-4" x="5" y="13.7" width="15.1" height="1.51" fill="@{fill-color}"/><rect id="rectangle-5" x="14" y="16.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-6" x="14" y="19.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-7" x="14" y="22.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-8" x="14" y="4.7" width="6" height="4.53" fill="@{fill-color}"/><path id="path-2" d="M6.5,24.3H5V16.8H6.5v6H8V18.3H9.5v1.5H11v3h1.5v1.5h-6Z" fill="@{fill-color}"/></g></svg>';
