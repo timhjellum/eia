@@ -27,50 +27,111 @@ $(document).ready(function() {
 */
 
 class Accordion {
-	constructor() {
-		// dom objects
-		//this.accordionHeader = $('.accordion h2').each();
-		//this.accordionContent = $('.accordion .accordion-content').next();
-		this.accordionHeader = $('.accordion h2').first();
-		this.accordionContentInitial = $('.accordion .accordion-content').first();
-		//this.accordionContentExpanded = $('.accordion .accordion-content.expanded');
-		//this.accordionContentCollapsed = $('.accordion .accordion-content.collapsed');
+	constructor(www, xxx, yyy, zzz) {
+		this.headerInitialState = $('h2').first();
+		this.contentInitialState = $('.accordion-content').first();
+		this.header = $('h2');
+		this.content = $('.accordion-content');
+
+		this.firstHeaderInitialState = www;
+		this.firstContentInitialState = xxx;
+		this.allHeadersInitialState = yyy;
+		this.allContentInitialState = zzz;
+
 		this.initialState();
 		this.events();
 	}
 
 	initialState() {
-		//console.log('hi');
-		this.accordionHeader.addClass('active');
-		this.accordionContentInitial.addClass('expanded');
+		this.headerInitialState.addClass(this.firstHeaderInitialState);
+		this.contentInitialState.addClass(this.firstContentInitialState);
+		this.header.addClass(this.allHeadersInitialState);
+		this.content.addClass(this.allContentInitialState);
 	}
 
 	events() {
-		$(".accordion h2").click(function() {
-			//$("accordion-content").addClass("expanded");
-			console.log("clicked");
-			$(".accordion h2").removeClass("active");
-			$(".accordion-content").removeClass("expanded");
-			$(this).addClass("active");
-			$(this).next(".accordion-content").addClass("expanded");
+		$(this.header).click(function() {
+			console.log('clicked');
+			$('h2').removeClass('active');
+			$('.accordion-content').removeClass('expanded');
+			$(this).addClass('active');
+			$(this).next('.accordion-content').addClass('expanded');
 		});
 
-		$(".accordion-expand-all").click(function() {
-			$(".accordion h2").addClass("active");
-			$(".accordion-content").addClass("expanded");
+		$('.accordion-expand-all').click(function() {
+			$('h2').addClass('active');
+			$('.accordion-content').addClass('expanded');
 		});
 		
-		$(".accordion-collapse-all").click(function() {
-			$(".accordion h2").removeClass("active");
-			$(".accordion-content").removeClass("expanded");
+		$('.accordion-collapse-all').click(function() {
+			$('h2').removeClass('active');
+			$('.accordion-content').removeClass('expanded');
 		});
 	}
-	/*
-	accordionToggle() {
-	console.log("clicked");
-	//	this.accordionContent.addClass("expanded");
 
-	*/	
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* this works
+	constructor() {
+		this.headerInitialState = $('h2').first();
+		this.contentInitialState = $('.accordion-content').first();
+		this.initialState();
+		this.events();
+	}
+
+	initialState() {
+		this.headerInitialState.addClass('active');
+		this.contentInitialState.addClass('expanded');
+	}
+
+	events() {
+		$(this.header).click(function() {
+			console.log('clicked');
+			$(this.header).removeClass('active');
+			$('.accordion-content').removeClass('expanded');
+			$(this).addClass('active');
+			$(this).next('.accordion-content').addClass('expanded');
+		});
+
+		$('.accordion-expand-all').click(function() {
+			$(this.header).addClass('active');
+			$('.accordion-content').addClass('expanded');
+		});
+		
+		$('.accordion-collapse-all').click(function() {
+			$(this.header).removeClass('active');
+			$('.accordion-content').removeClass('expanded');
+		});
+	}
+	*/
 }
 export default Accordion;  

@@ -1,2 +1,3 @@
 import Accordion from './modules/_accordion';
-new Accordion();
+new Accordion("active", "expanded", "", "");
+//

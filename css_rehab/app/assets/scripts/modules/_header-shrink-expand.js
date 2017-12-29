@@ -6,7 +6,6 @@ class ShrinkExpand {
         this.browserWindow = $(window);
         this.Scroll = $(this.browserWindow).scroll(this.events.bind(this));
     }
-
     events() { 
         if (this.browserWindow.scrollTop() > 96) {
             //console.log("shrink");

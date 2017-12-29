@@ -301,7 +301,7 @@
 					<!--Tools-->
 					<div id="tools">
 						<div class="tools left">
-							<div class="nav-menu glossary">
+							<div class="nav-menu glossary" style="width: 100%">
 								<i class="ico ico-nav glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
@@ -361,7 +361,7 @@
 							</div>
 						</div>
 						<div class="tools right">
-							<div class="nav-menu reports">
+							<div class="nav-menu reports" style="width: 100%">
 								<i class="ico ico-nav reports"></i>
 								<h3>
 									<a href="reports/">All Reports &amp; Publications</a>
@@ -402,7 +402,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="nav-menu survey-forms">
+							<div class="nav-menu survey-forms" style="width: 100%">
 								<i class="ico ico-nav survey-forms"></i>
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
@@ -509,9 +509,18 @@
 									</li>
 								</ul>
 							</div>
+
+							<div class="nav-menu teachers">
+								<i class="ico ico-nav teachers"></i>
+								<h3>
+									<a href="kids/energy.cfm?page=6">For Teachers</a>
+								</h3>
+								<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
+							</div>
+
 						</div>
 						<div class="learn right">
-							<div class="nav-menu glossary">
+							<div class="nav-menu glossary" style="width: 100%">
 								<i class="ico ico-nav glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
@@ -573,27 +582,10 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-
-
-						<div class="nav-menu teachers">
-							<div class="left">
-								<i class="ico ico-nav teachers"></i>
-								<h3>
-									<a href="kids/energy.cfm?page=6">For Teachers</a>
-								</h3>
-								<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
-							</div>
-							<div class="right">
+							<div class="nav-menu energy-kids">
 								<a href="kids/" class="energy-kids"></a>
 							</div>
 						</div>
-					
-					
-							<!-- div class="nav-menu teachers"></div -->
-
-
-
 					</div>
 					<!--News-->
 					<div id="news">
