@@ -1,4 +1,5 @@
-<?php $locale = 'data'; ?><!DOCTYPE html>
+<?php $locale = 'data'; ?>
+<!DOCTYPE html>
 <html>
 <head>
 <?php include(ROOT.'global/includes/css_rehab_eia-head.inc'); ?>
@@ -13,9 +14,9 @@
 bars below for information on petroleum prices, crude reserves and production, refining and processing, imports/exports,
 stocks, and consumption/sales.
 </p>
-<div id="accordion">
-<div class="accordion-expand-all"><a href="#">+ Expand all</a></div>
-<h2 class="accordion-panel" id="summary"><div class="expand-collapse-container"></div><a name="summary"></a>Summary<div class="right">Additional formats</div></h2>
+		<div class="accordion">
+			<div class="expand-collapse-container"><i class="ico expand-all">+ Expand all</i><i class="ico collapse-all">- Collapse all</i></div>
+<h2 id="summary"><i class="ico expand-collapse"></i><a name="summary"></a>Summary<div class="right">Additional formats</div></h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/dnav/pet/pet_sum_sndw_dcus_nus_w.htm">Weekly supply estimates</a></li>
@@ -59,7 +60,7 @@ Petroleum production, consumption, trade, and stock change</li>
 <li class="date">annual, selected quarterly, monthly</li>
 </ul>
 </div>
-<h2 class="accordion-panel" id="prices"><div class="expand-collapse-container"></div><a name="prices"></a>Prices<div class="right">Additional formats</div></h2>
+<h2 id="prices"><i class="ico expand-collapse"></i><a name="prices"></a>Prices<div class="right">Additional formats</div></h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/petroleum/gasdiesel/">Gasoline and diesel fuel update</a></li>
@@ -193,7 +194,7 @@ Selected crude types and World, U.S., OPEC, non-OPEC averages </li></li>
 <li class="date">monthly, annual; past and projected values</li>
 </ul>
 </div>
-<h2 class="accordion-panel" id="prices"><div class="expand-collapse-container"></div><a name="crude"></a>Crude Reserves and Production<div class="right">Additional formats</div></h2>
+<h2 id="prices"><i class="ico expand-collapse"></i><a name="crude"></a>Crude Reserves and Production<div class="right">Additional formats</div></h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/dnav/pet/pet_crd_crpdn_adc_mbbl_m.htm">Crude oil production</a></li>
@@ -292,8 +293,8 @@ Selected crude types and World, U.S., OPEC, non-OPEC averages </li></li>
 <li class="date">annual</li>
 </ul>
 </div>
-<h2 class="accordion-panel" id="refining">
-<div class="expand-collapse-container"></div><a name="refining"></a>Refining and processing
+<h2 id="refining">
+<i class="ico expand-collapse"></i><a name="refining"></a>Refining and processing
 <div class="right">Additional formats</div>
 </h2>
 <div class="accordion-content">
@@ -419,7 +420,7 @@ Selected crude types and World, U.S., OPEC, non-OPEC averages </li></li>
 <li>The U.S. Energy Information Administration release showing national and regional monthly biodiesel production. In addition to biodiesel production, data included producer sales, producer stocks, and feedstock inputs. </li>
 </ul>
 </div>
-<h2 class="accordion-panel" id="imports"><div class="expand-collapse-container"></div><a name="imports"></a>Imports/exports &amp; movements</h2>
+<h2 id="imports"><i class="ico expand-collapse"></i><a name="imports"></a>Imports/exports &amp; movements</h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/dnav/pet/pet_move_wkly_dc_NUS-Z00_mbblpd_w.htm">Weekly imports &amp; exports</a></li>
@@ -542,7 +543,7 @@ by country, region and country groups
 </ul>
 -->
 </div>
-<h2 class="accordion-panel" id="stocks"><div class="expand-collapse-container"></div><a name="stocks"></a>Stocks</h2>
+<h2 id="stocks"><i class="ico expand-collapse"></i><a name="stocks"></a>Stocks</h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/dnav/pet/pet_stoc_wstk_dcu_nus_w.htm">Total stocks</a></li>
@@ -593,7 +594,7 @@ by country, region and country groups
 <li class="date"> semi-annual</li>
 </ul>
 </div>
-<h2 class="accordion-panel" id="consumption"><div class="expand-collapse-container"></div><a name="consumption"></a>Consumption/sales</h2>
+<h2 id="consumption"><i class="ico expand-collapse"></i><a name="consumption"></a>Consumption/sales</h2>
 <div class="accordion-content">
 <ul>
 <li class="sub-header"><a href="/dnav/pet/pet_cons_wpsup_k_w.htm">U.S. weekly product supplied</a></li>

@@ -2,6 +2,8 @@
 import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
+
+
 // check the page resolution on initial page load and if the browser is resized
 $(document).ready(function() {
 	// run on initial page load
@@ -83,12 +85,7 @@ $(document).ready(function() {
 
 
 //console.log('search panel toggle script found!');
-	$('.search-menu-toggle').click(function() {
-		//console.log('toggle class show');
-		$('.search-panel').toggleClass('show');
-		$('header').toggleClass('show');
-		$('.logo').toggleClass('show');
-	});
+
 
 	// fancybox tabs
 	// fancybox tabs

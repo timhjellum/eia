@@ -10,24 +10,25 @@
 <?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>
 <?php include('../../../includes/subnav_petroleum.inc'); ?>
 <div class="l-row header report-details"><div class="l-full-width-column">
-        
-                <a href="/petroleum/marketing/prime/">&lsaquo; Prime Supplier Report</a>
-                <h2>
+	
+		<a href="/petroleum/marketing/prime/">&lsaquo; Prime Supplier Report</a>
+		<h2>
 Prime Supplier Report Archives
 </h2>
-        </div>
+	</div>
 </div>
 <?php /* Report Title Treatment #1 */ ?>
 <div class="l-row">
 <div class="l-full-width-column">
 <p>Choose the year of the Prime Supplier Report you wish to view.
 </p>
-<div id="accordion">
-<div class="accordion-expand-all"><a href="#">+ Expand all</a></div>
-<h2 class="accordion-panel" id="2016-2017"><div class="expand-collapse-container"></div>
-<tr>
-<th colspan="6"><a name="2016-2017"></a>2016 - 2017</h2>
-<div class="accordion-content">
+		<div class="accordion">
+			<div class="expand-collapse-container">
+				<i class="ico expand-all">+ Expand all</i>
+				<i class="ico collapse-all">- Collapse all</i>
+			</div>
+			<h2><a name="2016-2017"></a>2016 - 2017</h2>
+			<div class="accordion-content">
 <div class="zebra-container">
 <table class="data">
 <thead>
@@ -140,7 +141,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2014-2015"><div class="expand-collapse-container"></div>
+<h2 id="2014-2015"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2014-2015"></a>2014 - 2015</h2>
 <div class="accordion-content">
@@ -246,7 +247,7 @@ Prime Supplier Report Archives
 <td>December</td>
 <td><a href="/petroleum/marketing/prime/archive/2015/2015_12/csv/psrall.csv" ><i class="ico csv">CSV</i>CSV</a></td>
 <td><a href="/petroleum/marketing/prime/archive/2015/2015_12/pdf/psrall.pdf" ><i class="ico pdf">PDF</i>PDF</a></td>
-<h2 class="accordion-panel" id="2012-2013"><div class="expand-collapse-container"></div>
+<h2 id="2012-2013"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2012-2013"></a>2012 - 2013</h2>
 <div class="accordion-content">
@@ -360,7 +361,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2010-2011"><div class="expand-collapse-container"></div>
+<h2 id="2010-2011"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2010-2011"></a>2010 - 2011</h2>
 <div class="accordion-content">
@@ -474,7 +475,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2008-2009"><div class="expand-collapse-container"></div>
+<h2 id="2008-2009"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2008-2009"></a>2008 - 2009</h2>
 <div class="accordion-content">
@@ -588,7 +589,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2006-2007"><div class="expand-collapse-container"></div>
+<h2 id="2006-2007"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2006-2007"></a>2006 - 2007</h2>
 <div class="accordion-content">
@@ -702,7 +703,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2004-2005"><div class="expand-collapse-container"></div>
+<h2 id="2004-2005"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2004-2005"></a>2004 - 2005</h2>
 <div class="accordion-content">
@@ -816,7 +817,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2002-2003"><div class="expand-collapse-container"></div>
+<h2 id="2002-2003"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2002-2003"></a>2002 - 2003</h2>
 <div class="accordion-content">
@@ -930,7 +931,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="2000-2001"><div class="expand-collapse-container"></div>
+<h2 id="2000-2001"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="2000-2001"></a>2000 - 2001</h2>
 <div class="accordion-content">
@@ -1044,7 +1045,7 @@ Prime Supplier Report Archives
 </tbody>
 </div>
 </div>
-<h2 class="accordion-panel" id="1998-1999"><div class="expand-collapse-container"></div>
+<h2 id="1998-1999"><i class="ico expand-collapse"></i>
 <tr>
 <th colspan="6"><a name="1998-1999"></a>1998 - 1999</h2>
 <div class="accordion-content">

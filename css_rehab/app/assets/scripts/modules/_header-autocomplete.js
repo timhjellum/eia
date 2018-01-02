@@ -1,4 +1,5 @@
-console.log("Header jQuery UI Autocomplete checking in...")
+console.log("Header jQuery UI Autocomplete checking in...");
+
 
 $(document).ready(function() {
     var surveys = [
@@ -413,6 +414,7 @@ $(document).ready(function() {
       
             }
         ];
+    
     $("#survey").autocomplete({
         minLength: 2,
         source: surveys,
@@ -432,6 +434,7 @@ $(document).ready(function() {
             }, 0);
         }
     })
+    $("#survey").attr('autocomplete', 'on')
     .autocomplete("instance")._renderItem = function(ul, item) {
         return $("<li>")
         .append("<div>" + item.label +"</div>")

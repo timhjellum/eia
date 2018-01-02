@@ -306,16 +306,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<div class="form-container">
-									<form action="https://www.eia.gov/tools/glossary/index.php" method="post" name="frmGlossary">
-										<input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
-										 type="text" />
-										<button type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" type="submit" class="search-submit">
-											<i class="ico search-submit">Search</i>
-										</button>
-										<!-- input class="arrow_go" border="0" type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" title="Search Glossary" -->
-									</form>
-								</div>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu data-tools-model">
 								<i class="ico ico-nav data-tools-model"></i>
@@ -384,7 +375,7 @@
 										// for each element in the array of search terms, call the function to trim wrap with "" and encode
 										forEach(searchTerms, addCurTermToResult);
 										// update the output display
-										window.location.href = '/reports/#/' + result;
+										window.location.href = 'https://www.eia.gov/reports/#/' + result;
 										function addCurTermToResult(curTerm, index) {
 											if (index != 0)                     // put a comma before all terms except the first one
 												result += ',';
@@ -407,29 +398,7 @@
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
 								</h3>
-								<div class="form-container">
-									<form>
-										<input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
-										<button type="submit" id="goBtn" class="search-submit">
-											<i class="ico search-submit">Search</i>
-										</button>
-										<input type="hidden" id="survey-id">
-										
-										
-										
-										<!--a id="Go" href="" class="search-submit" input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA">
-											<i class="ico search-submit">Search</i>
-										</a-->
-										<!-- input name="utf8" type="hidden" value="&#x2713;" / -->
-										<!-- input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" / -->
-										<!-- input autocomplete="off" class="usagov-search-autocomplete fancy-search-box" name="query" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" / -->
-										<!--
-										<button type="submit" id="goBtn" class="search-submit">
-										<i class="ico search-submit">Search</i>
-										</button> input type="submit" name="search" alt="enter terms to search" class="arrow_go" border="0" title="Click to search EIA"
-									 	-->
-									</form>
-								</div>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-survey-search.inc'); ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico ico-nav email-complex"></i>
@@ -525,16 +494,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<div class="form-container">
-									<form action="/tools/glossary/index.cfm" method="post" name="frmGlossary">
-										<input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
-										 type="text" />
-										<button type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" type="submit" class="search-submit">
-											<i class="ico search-submit">Search</i>
-										</button>
-										<!-- input class="arrow_go" border="0" type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" title="Search Glossary" -->
-									</form>
-								</div>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu faq">
 								<i class="ico ico-nav faq"></i>
@@ -715,8 +675,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="nav-search search-panel">
-				<div class="search form-container">
+			<div class="nav-search search-panel form-container">
+				<div class="search">
 					<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
 						<input name="utf8" type="hidden" value="&#x2713;" />
 						<input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />

@@ -74,3 +74,8 @@
         </ul>
     </div>
 </footer>
+
+<script src='<?php print HTTP; ?>global/vendor/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src='<?php print HTTP; ?>global/scripts/header.min.js'></script>
+<script src='<?php print HTTP; ?>global/scripts/accordion.min.js'></script>

@@ -17,13 +17,13 @@
 </div>
 <div class="l-row">
 <div class="l-main-column">
-<div id="accordion">
+		<div class="accordion">
 <div class="accordion-expand-all">
         
         <a href="#">+ Expand all</a>
 </div>
-<h2 class="accordion-panel">
-<div class="expand-collapse-container"></div>2017 Imports by Month</h2>
+<h2>
+<i class="ico expand-collapse"></i>2017 Imports by Month</h2>
 <div class="accordion-content">
 <div class="zebra-container">
 <table class="data">
@@ -80,8 +80,8 @@
 </table>
 </div>
 </div>
-<h2 class="accordion-panel">
-<div class="expand-collapse-container"></div>2016 Imports by Month</h2>
+<h2>
+<i class="ico expand-collapse"></i>2016 Imports by Month</h2>
 <div class="accordion-content">
 <div class="zebra-container">
 <table class="data">
@@ -186,8 +186,8 @@
 </table>
 </div>
 </div>
-<h2 class="accordion-panel">
-<div class="expand-collapse-container"></div>Historical Imports by Month Including Final Revisions</h2>
+<h2>
+<i class="ico expand-collapse"></i>Historical Imports by Month Including Final Revisions</h2>
 <div class="accordion-content">
 <div class="zebra-container">
 <table class="data">
