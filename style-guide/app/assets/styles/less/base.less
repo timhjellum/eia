@@ -543,97 +543,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@media @desktop-lg { // hi-res laptops and desktops
-
-}
 
 
 
-
-
-
-
-
-
-
-
-
-
-//.left-align {
-//  .left-align;
-//}
-//.right-align {
-//  .right-align;
-//}
-
-
-
-/*
-h1 {
-width: 100%;
-font-size: 1.75em;
-line-height: 1.25;
-font-family: "Times New Roman", "Times", serif;
-font-weight: normal;
-.header-font;
-border-bottom: @lt_gray_border;
-margin-bottom: .5em; // 8px;
-display: block;
-font-size: 1.625; // 26px;
-border-bottom: solid 1px #dadada;
-padding-bottom: 6px;
-padding-top: 1em; //16px;
-clear: both;
-}
-
-h2 {
-font-size: 1.125em;
-line-height: 1.5;
-
-}
-
-h3 {
-font-size: 0.9375em;
-line-height: 1.6;
-
-text-transform: uppercase;
-}
-
-h4  {
-font-size: 0.9375em;
-line-height: 1.6;
-
-}
-
-h5 {
-font-size: 0.8em;
-line-height: 1.75;
-.header-font;
-}
-
-h6 {
-font-size: 0.8em;
-line-height: 1.75;
-.header-font;
-.header-italic;
-}
-
-p {
-font-size: 0.875em;
-line-height: 1.75;
-margin: 0 0 1em 0;
-}
-
-ul, ol {
-margin: 1em 0 1em 0;
-}
-
-li {
-font-size: 0.875em;
-line-height: 1.75;
-
-}
-*/
 sup, sub {
 font-size: 0.688rem;
 line-height: 1;
@@ -766,4 +678,41 @@ span.line-break {
 .responsive {
 	max-width: 100%;
 	margin: 0 auto;
+}
+
+
+
+
+
+
+// this is temp layout for header / footer to work
+
+@media @mobile {
+	.page-wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+	#l-outer-wrapper {
+		background-color: #e2e6eb;
+		height: 100%;
+		position: relative;
+		padding: 0 1px; // 990px - 2px = 988px width
+		margin: 0 auto;		
+		border: 0;
+		max-width: 990px;
+		min-width: 990px;
+		width: 990px;
+	}
+	#l-inner-wrapper {
+		display: table;
+		border: 0;
+		border-right: 1px solid #dbdfe5;
+		border-left: 1px solid #dbdfe5; // 988px - 2px = 986px width
+		background-color: #fff;
+		width: 988px;
+		padding: 106px 15px 50px 15px;
+		&.show {
+			padding: 90px 0 50px;
+		}
+	}
 }

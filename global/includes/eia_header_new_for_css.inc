@@ -9,7 +9,7 @@ if($a40412 != "y"){
 $(document).ready(function() {
 function position() {
 $( "#sticker.positionable" ).position({
-of: $( "#outerX" ),
+of: $( ".page-wrapper" ),
 my: "left top",
 at: "right top"
 });

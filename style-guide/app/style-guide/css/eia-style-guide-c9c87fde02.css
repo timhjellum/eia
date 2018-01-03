@@ -698,7 +698,7 @@ template {
 /*-Submit search icon ----------------*/
 /*-EIA logo --------------------------*/
 @media (min-width: 1px) {
-  #outerX {
+  .page-wrapper {
     width: 100%;
     margin: 0 auto;
   }

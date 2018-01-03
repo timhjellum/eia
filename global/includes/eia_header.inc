@@ -1,4 +1,5 @@
-<?php// if parameter n is set to "true" value then use new css header under development - Scott Gearhart 6/27/2017
+<?php
+// if parameter n is set to "true" value then use new css header under development - Scott Gearhart 6/27/2017
 if (
 isset($_GET['n']) && $_GET['n'] && (
 strpos($_SERVER['HTTP_HOST'],'wwwdev') !== false ||
@@ -17,7 +18,7 @@ if($a40412 != "y"){
 <script>
 $(document).ready(function() {
 function position() {
-$( "#sticker.positionable" ).position({
+$( "#sti.page-wrappersitionable" ).position({
 of: $( "#outerX" ),
 my: "left top",
 at: "right top"
@@ -385,4 +386,4 @@ include $_SERVER['DOCUMENT_ROOT'] . "/global/includes/fback_form.inc";
 }
 }
 ?>
-<?php } ?>
+<?php } ?>
