@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 var path = require('path');
 
 
-gulp.task('less', function() {
+gulp.task('less', ['copy-global-scripts'], function() {
   // compile the .less files
   return gulp.src('./app/assets/styles/eia-styles.css')
   .pipe(less())
@@ -18,10 +18,10 @@ gulp.task('less', function() {
   }))
   .pipe(rename("eia-styles.min.css"))
   .pipe(gulp.dest('../global/styles'))
-  .on(error, function swallowError (error) {
-      console.log(error.toString())
-      this.emit('end')
-    });
+//  .on(error, function swallowError (error) {
+//      console.log(error.toString())
+//      this.emit('end')
+//    });
 });
 
 

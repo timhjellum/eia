@@ -50,6 +50,133 @@
 <div class="l-two-column"
 -->
 <h1>CSS Rahab</h1>
+
+
+<table>
+    <thead>   
+        <tr>
+            <th>Scheduled</th>
+            <th>Current Page</th>
+            <th>CSS Rehab</th>
+            <th>Development</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>15-JAN-18</td>
+            <td><a href="https://www.eia.gov">Home</a></td>
+            <td><a href="https://www.eia.gov/css_rehab/archive/index.php">Home</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/petroleum/">Petroleum &amp; Other Liquids</a></td>
+            <td><a href="https://www.eia.gov/css_rehab/archive/petroleum/">Petroleum &amp; Other Liquids</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/petroleum/data.php">Petroleum &amp; Other Liquids - Data</a></td>
+            <td><a href="https://www.eia.gov/css_rehab/archive/petroleum/data.php">Petroleum &amp; Other Liquids - Data</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/naturalgas/">Natural Gas</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/naturalgas/data.php">Natural Gas - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/electricity/">Electricity</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/electricity/data.php">Electricity - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/consumption/">Consumption &amp; Efficiency</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/consumption/data.php">Consumption &amp; Efficiency - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/coal/">Coal</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/coal/data.php">Coal - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/renewable/">Renewable &amp; Alternative Fuels</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/renewable/data.php">Renewable &amp; Alternative Fuels - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/nuclear/">Nuclear &amp; Uranium</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/nuclear/data.php">Nuclear &amp; Uranium - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/totalenergy/">Total Energy</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29-JAN-18</td>
+            <td><a href="https://www.eia.gov/totalenergy/data.php">Total Energy - Data</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </tfoot>
+</table>
+
+
+
+
 <ol class="sitemap">
     <li><a href="<?php print HTTP; ?>petroleum/index.php"><h2>Petroleum</h2></a>
         <ol>
@@ -65,51 +192,9 @@
     </li>
     <li>
         <ol>
+        https://www.eia.gov/petroleum/
+        https://www.eia.gov/petroleum/data.php
 
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/index.php"><h2>articles</h2></a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/782index.php">LEGACY - 782/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/accuracyindex.php">LEGACY - accuracy/index.php</a> - linked to legacy files</li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/art9904index.php">LEGACY - art9904/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/capexpansionindex.php">LEGACY - capexpansion/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/capriceindex.php">LEGACY - caprice/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/compareindex.php">LEGACY - compare/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/contrastdistindex.php">LEGACY - contrastdist/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/crudeforecastindex.php">LEGACY - crudeforecast/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/dalezyrnindex.php">LEGACY - dalezyrn/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/dependenceindex.php">LEGACY - dependence/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/distillateassessindex.php">LEGACY - distillateassess/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/distillateprodindex.php">LEGACY - distillateprod/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/exxonindex.php">LEGACY - exxon/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/ferganaindex.php">LEGACY - fergana/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/futureansindex.php">LEGACY - futureans/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/gasanalaysis96index.php">LEGACY - gasanalaysis96/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/gasassess97index.php">LEGACY - gasassess97/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/gasassessindex.php">LEGACY - gasassess/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/gaspsindex.php">LEGACY - gasps/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/hollyindex.php">LEGACY - holly/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/index1.php">LEGACY - index1.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/issuestrendsindex.php">LEGACY - issuestrendsindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/longtermindex.php">LEGACY - longtermindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/lsdoutlookindex.php">LEGACY - lsdoutlookindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/mtbeindex.php">LEGACY - mtbeindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/northeastindex.php">LEGACY - northeastindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/oilgasdevindex.php">LEGACY - oilgasdevindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/oilgasexplindex.php">LEGACY - oilgasexplindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/oilsupplyindex.php">LEGACY - oilsupplyindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/passthroughindex.php">LEGACY - passthroughindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/pricecompareindex.php">LEGACY - pricecompareindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/profileindex.php">LEGACY - profileindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/propassessindex.php">LEGACY - propassessindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/reform95index.php">LEGACY - reform95index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/reformindex.php">LEGACY - reformindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/refoutagesindex.php">LEGACY - refoutagesindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/siberiaindex.php">LEGACY - siberiaindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/sidewaysindex.php">LEGACY - sidewaysindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/spgmogasindex.php">LEGACY - spgmogasindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/stickyindex.php">LEGACY - stickyindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/stocklevelsindex.php">LEGACY - stocklevelsindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/utilizationindex.php">LEGACY - utilizationindex.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/legacy-articles/vzimpactsindex.php">LEGACY - vzimpactsindex.php</a></li>
             </ol>
     </li>
     <li>
@@ -117,7 +202,7 @@
 
             <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/index.php"><h2>articles</h2></a></li>
             <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/782index.php">782/index.php</a></li>
-            <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/accuracyindex.php">accuracy/index.php</a> - linked to legacy files</li>
+            <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/accuracyindex.php">accuracy/index.php</a></li>
             <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/art9904index.php">art9904/index.php</a></li>
             <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/capexpansionindex.php">capexpansion/index.php</a></li>
             <li class="complete"><a href="<?php print HTTP; ?>petroleum/articles/capriceindex.php">caprice/index.php</a></li>

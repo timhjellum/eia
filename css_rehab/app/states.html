@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,30 +8,24 @@
     <meta name="author" content="">
     <title>EIA Style Guide</title>
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+    <!-- start style guide required vendor styles -->
+	<link href="style-guide/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- end style guide required vendor styles -->
 
-    <script src="style-guide/js/nav.js"></script>
+    <!-- start style guide custom styles -->
+	<link href="global/styles/eia-styles.css" rel="stylesheet" />
+	<link href="style-guide/css/style-guide.css" rel="stylesheet" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+	<link href="style-guide/css/themify-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="style-guide/css/highlight/ir-black.css" />
+    <!-- start style guide required styles -->
 
-    <link href="style-guide/css/bootstrap.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="style-guide/css/highlight/ir-black.css" />
-    <script src="style-guide/js/highlight.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <link href="style-guide/css/style-guide.css" rel="stylesheet" />
-    <!--  Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="style-guide/css/themify-icons.css" rel="stylesheet">
-
+    <!-- start page specific styles -->
+    <script src='global/vendor/jquery.ui.autocomplete/jquery-ui.min.css'></script>
+    <!-- end page specific styless -->
 
 </head>
-
 <body>
     <div class="wrapper">
         <div class="sidebar" data-background-color="white" data-active-color="danger">
@@ -89,6 +82,24 @@
             </div>
         </div>
     </div>
-</body>
+    <!-- start style guide required vendor scripts -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- end style guide required vendor scripts -->
 
+    <!-- start style guide custom scripts -->
+    <script src="style-guide/js/nav.js"></script>
+    <script src="style-guide/js/highlight.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!-- start style guide required files -->
+
+    <!-- start page specific scripts -->
+    <script src='global/vendor/jquery.ui.autocomplete/jquery-ui.min.js'></script>
+    <script src='global/scripts/header.min.js'></script>
+    <!-- end page specific scripts -->
+
+</body>
 </html>
