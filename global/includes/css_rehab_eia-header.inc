@@ -1,4 +1,5 @@
-<div class="page-wrapper">
+<!-- div class="page-wrapper" -->
+<div id="outerX">
 	<header>
 		<div class="print">
 			<img src="https://www.eia.gov/global/images/logos/eia_logo_print.png" />
@@ -602,25 +603,6 @@
 									<a href="about/new/">What's New?</a>
 								</h3>
 								<div id="whatsnew3"></div>
-								<!--
-									div id="whatsnew3">
-									<p>
-										<i>Dec 14, 2017</i>
-										<br>
-										<a href="biofuels/biomass/">Monthly Densified Biomass Fuel Report&nbsp;›</a>
-									</p>
-									<p>
-										<i>Dec 12, 2017</i>
-										<br>
-										<a href="outlooks/steo/">Short-Term Energy Outlook &nbsp;›</a>
-									</p>
-									<p>
-										<i>Dec 11, 2017</i>
-										<br>
-										<a href="petroleum/wells/">U.S. Oil and Natural Gas Wells by Production Rate&nbsp;›</a>
-									</p>
-								</div
-								-->
 							</div>
 							<div class="nav-menu upcoming">
 								<i class="ico ico-nav upcoming"></i>
