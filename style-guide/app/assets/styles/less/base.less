@@ -19,14 +19,12 @@
 // 23px	1.438rem	143.8%	17pt
 // 24px	1.500rem	150.0%	18pt
 
-
 // 16px reset
 .font-size(@font-size: @baseFontSize) {
 	@rem: (@font-size / @baseFontSize);
 	font-size: @font-size * 1px;
 	font-size: ~"@{rem}rem";
 }
-
 .bold {
 		.font(@default_font; 600; normal; @eia_dk_gray);
 }
@@ -41,13 +39,14 @@
 }
 
 
-
+/*
 body, html {
 	background-color: #e8ecf2;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
+*/
 
 html {
 	font-size: 16px;
@@ -74,19 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-// move to base
-.arrow_go {
-	background:url(https://www.eia.gov/global/images/btns/arrow_go.png) no-repeat;
-	cursor:pointer;
-	width: 17px;
-	height: 19px;
-	border: none;
-	text-indent: -9999px;
-}
-.arrow_go:hover {
-	background:url(https://www.eia.gov/global/images/btns/arrow_go_over.png) no-repeat;
-}
 
 // caption
 .source {

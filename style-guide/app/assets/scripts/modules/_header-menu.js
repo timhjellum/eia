@@ -3,7 +3,6 @@ import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
 
-
 // check the page resolution on initial page load and if the browser is resized
 $(document).ready(function() {
 	// run on initial page load
@@ -13,13 +12,6 @@ $(document).ready(function() {
 	
 
 
-
-
-	// What's New Menu Loader
-	//$("#whatsnew3").load("https://www.eia.gov/CFusionMX7/global/data/whatsnew.htm", function() {
-	//	alert( "Load was performed." );
-	//});
-	$('#whatsnew3').load('https://www.eia.gov/CFusionMX7/global/data/whatsnew.htm');
 		
 		
 		
@@ -61,25 +53,7 @@ $(document).ready(function() {
 	});
 	*/
 
-	// fancybox lightbox
-	// fancybox lightbox
-	// fancybox lightbox
-	
-    //console.log("fancybox lightbox");
-    $("a.lightbox").fancybox({
-		autoResize      :     false, // To sidestep issue with Highcharts in Fancybox 2 disappearing when the browser is resized -SNW
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	false
-	});
-	// For HTML content, since Fancybox 2 now requires specifying IFRAME mode explicitly for non-images
-	$("a.lightboxhtml").fancybox({
-		type: "iframe",
-		fitToView: true,
-		autoSize: true
-	});
+
 
 
 
@@ -87,15 +61,6 @@ $(document).ready(function() {
 //console.log('search panel toggle script found!');
 
 
-	// fancybox tabs
-	// fancybox tabs
-	// fancybox tabs
-
-
-	//console.log('handle the fancybox tabs script found!');
-	//$(".fancybox-menu").click(function() {
-	//	console.log( "Handler for .click() called." );
-	//});
 
 
 
@@ -131,8 +96,7 @@ $(document).ready(function() {
 });
 
 function checkSize() {
-	console.log('check size initiated in the header-init.min.js');
-	
+	//console.log('check size initiated in the header-init.min.js');
 	//console.log('Browser window opened or resized!');
 	$('.search-panel').removeClass('show');
 	$('header').removeClass('show');

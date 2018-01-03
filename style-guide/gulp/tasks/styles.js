@@ -3,34 +3,46 @@ var cleanCSS = require('gulp-clean-css');
 var less = require('gulp-less');
 var rename = require('gulp-rename');
 var path = require('path');
+const rev = require('gulp-rev');
 
 
-gulp.task('less', ['copy-global-scripts'], function() {
-  // compile the .less files
-  return gulp.src('./app/assets/styles/eia-styles.css')
+// this compiles a production CSS from only the required LESS files and makes a pretty and ugly (minified) version in the global folder and style-guide folder
+
+gulp.task('less', ['compile-style-guide-less'], () =>
+  gulp.src('./app/assets/styles/eia-styles.css')
   .pipe(less())
   .pipe(gulp.dest('../global/styles'))
   .pipe(gulp.dest('app/style-guide/css'))
-
   .pipe(cleanCSS({debug: true}, function(details) {
     console.log(details.name + ': ' + details.stats.originalSize);
     console.log(details.name + ': ' + details.stats.minifiedSize);
   }))
+//  .pipe(rev())
   .pipe(rename("eia-styles.min.css"))
   .pipe(gulp.dest('../global/styles'))
 //  .on(error, function swallowError (error) {
 //      console.log(error.toString())
 //      this.emit('end')
 //    });
-});
+);
+
+// this compiles a working CSS from ALL the LESS files and makes a pretty version for the global folder and style-guide folder
+
+gulp.task('compile-style-guide-less', ['copy-global-scripts'], () =>
+  // compile the .less files
+  gulp.src('./app/assets/styles/eia-style-guide.css')
+  .pipe(less())
+//  .pipe(rev())
+  .pipe(gulp.dest('app/style-guide/css'))
+);
 
 
 
 
-// run this to import the latest vendor css from the node_modules
+// this moves any vendor files from their corresponding node folders and moves them into the LESS folder for further compilation
 
-gulp.task('import-vendor-css', ['import-vendor-js'], function() {
-  return gulp.src([
+gulp.task('import-vendor-css', ['import-vendor-js'], () =>
+  gulp.src([
     './node_modules/fancybox/dist/css/jquery.fancybox.css',
     './node_modules/normalize.css/normalize.css'
   ])
@@ -42,16 +54,15 @@ gulp.task('import-vendor-css', ['import-vendor-js'], function() {
     return opt;
   }))
   // move them to vendor so they can be processed with the other .less files
-  .pipe(gulp.dest('./app/assets/styles/less/vendor'));
-});
+  .pipe(gulp.dest('./app/assets/styles/less/vendor'))
+);
 
 
-gulp.task('import-vendor-js', ['import-vendor-images'], function() {
-  return gulp.src([
+gulp.task('import-vendor-js', ['import-vendor-images'], () =>
+  gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/jquery/jquery.js',
     './node_modules/bxslider/dist/jquery.bxslider.js',
-//    './node_modules/jquery-ui/ui/widgets/accordion.js',
     './node_modules/jquery.scrollto/jquery.scrollTo.js',
     './node_modules/jquery.localscroll/jquery.localScroll.js',
     /*    
@@ -75,7 +86,6 @@ gulp.task('import-vendor-js', ['import-vendor-images'], function() {
     './node_modules/jquery-ui/ui/tabbable.js',
     './node_modules/jquery-ui/ui/unique-id.js',
     './node_modules/jquery-ui/ui/version.js',
-    */
     './node_modules/jquery-ui/ui/widget.js',
     './node_modules/jquery-ui/ui/widgets/accordion.js',
     './node_modules/jquery-ui/ui/widgets/autocomplete.js',
@@ -98,10 +108,11 @@ gulp.task('import-vendor-js', ['import-vendor-images'], function() {
     './node_modules/jquery-ui/ui/widgets/spinner.js',
     './node_modules/jquery-ui/ui/widgets/tabs.js',
     './node_modules/jquery-ui/ui/widgets/tooltip.js',
+    */
   ])
   // move them to vendor so they can be processed with the other .less files
-  .pipe(gulp.dest('./app/global/vendor'));
-});
+  .pipe(gulp.dest('./app/global/vendor'))
+);
 
 //, function() {
 // gulp.src('./node_modules/fancybox/**/*.{gif,png}')
@@ -111,87 +122,10 @@ gulp.task('import-vendor-js', ['import-vendor-images'], function() {
 // import the latest vendor images from the node_modules
 // even if the images are not used we should keep them to avoid any missing file errors
 
-gulp.task('import-vendor-images', function() {
-  return gulp.src([
+gulp.task('import-vendor-images', () =>
+  gulp.src([
     './node_modules/fancybox/dist/img/*.*'
   ])
-  .pipe(gulp.dest('../global/img'));
-});
+  .pipe(gulp.dest('../global/img'))
+);
 
-
-
-
-
-
-
-
-
-
-
-/*
-gulp.task('base', function () {
-  // compile the .less files
-  return gulp.src('./app/assets/styles/base.css')
-  .pipe(less({
-    paths: [ path.join(__dirname, './app/temp/styles') ]
-  }))
-  .pipe(cleanCSS({debug: true}, function(details) {
-    console.log(details.name + ': ' + details.stats.originalSize);
-    console.log(details.name + ': ' + details.stats.minifiedSize);
-  }))
-  .pipe(rename("base.css"))
-  .pipe(gulp.dest('./app/temp/styles/'));
-});
-
-gulp.task('header', function () {
-  // compile the .less files
-  return gulp.src('./app/assets/styles/header.css')
-  .pipe(less({
-    paths: [ path.join(__dirname, './app/temp/styles') ]
-  }))
-  .pipe(rename("header.css"))
-  .pipe(gulp.dest('./app/temp/styles'));
-});
-
-gulp.task('stickers', function () {
-  // compile the .less files
-  return gulp.src('./app/assets/styles/sticker.css')
-  .pipe(less({
-    paths: [ path.join(__dirname, './app/temp/styles') ]
-  }))
-  .pipe(rename("sticker.css"))
-  .pipe(gulp.dest('./app/temp/styles'));
-});
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//postcss = require('gulp-postcss'),
-//autoprefixer = require('autoprefixer'),
-//cssvars = require('postcss-simple-vars'),
-//nested = require('postcss-nested'),
-//cssImport = require('postcss-import'),
-//mixins = require('postcss-mixins'),
-//hexrgba = require('postcss-hexrgba');
-/*
-gulp.task('styles', function() {
-  return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
-    .on('error', function(errorInfo) {
-      console.log(errorInfo.toString());
-      this.emit('end');
-    })
-    .pipe(gulp.dest('./app/temp/styles'));
-});
-*/
