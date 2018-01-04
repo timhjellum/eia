@@ -39,23 +39,29 @@
 }
 
 
-/*
+
 body, html {
 	background-color: #e8ecf2;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
-*/
+
 
 html {
 	font-size: 16px;
 //  .font;
 }
+// move to ...
+//h1, h2, h3, h4, h5, h6 {
+//	clear: both;
+//}
 
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-}
+
+
+
+
+
 .no-wrap {
 	.no-wrap;
 }
@@ -687,7 +693,7 @@ span.line-break {
 
 // this is temp layout for header / footer to work
 
-@media @mobile {
+//@media @mobile {
 	.page-wrapper {
 		width: 100%;
 		margin: 0 auto;
@@ -702,6 +708,8 @@ span.line-break {
 		max-width: 990px;
 		min-width: 990px;
 		width: 990px;
+		box-sizing: border-box;
+		// 988px w/o box-sizing
 	}
 	#l-inner-wrapper {
 		display: table;
@@ -709,10 +717,14 @@ span.line-break {
 		border-right: 1px solid #dbdfe5;
 		border-left: 1px solid #dbdfe5; // 988px - 2px = 986px width
 		background-color: #fff;
-		width: 988px;
 		padding: 106px 15px 50px 15px;
-		&.show {
-			padding: 90px 0 50px;
-		}
+		box-sizing: border-box;
+		max-width: 988px;
+		min-width: 988px;
+		width: 988px;
+		// 956px w/o box-sizing
+//		&.show {
+//			padding: 90px 0 50px;
+//		}
 	}
-}
+//}

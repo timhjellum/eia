@@ -4,15 +4,11 @@
 
 @import "less/global_vars";
 @import "less/global_mixins";
-@import "less/layouts";
 @import "less/base";
 
 @import "less/footer";
 @import "less/header";
 
 @import "less/icons";
-@import "less/slider-home";
-@import "less/slider-multi-cards";
-@import "less/sticker";
 
 

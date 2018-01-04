@@ -302,8 +302,8 @@
 					<!--Tools-->
 					<div id="tools">
 						<div class="tools left">
-							<div class="nav-menu glossary" style="width: 100%">
-								<i class="ico ico-nav glossary"></i>
+							<div class="nav-menu eia-glossary" style="width: 100%">
+								<i class="ico ico-nav eia-glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
@@ -490,8 +490,8 @@
 
 						</div>
 						<div class="learn right">
-							<div class="nav-menu glossary" style="width: 100%">
-								<i class="ico ico-nav glossary"></i>
+							<div class="nav-menu eia-glossary" style="width: 100%">
+								<i class="ico ico-nav eia-glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>

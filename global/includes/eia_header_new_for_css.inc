@@ -394,8 +394,8 @@ position();
 <!--Tools-->
 <div id="tools">
 <div class="tools left">
-<div class="nav-menu glossary">
-<i class="ico ico-nav glossary">
+<div class="nav-menu eia-glossary">
+<i class="ico ico-nav eia-glossary">
 </i>
 <h3>
 <a href="/tools/glossary/">Glossary</a>
@@ -588,8 +588,8 @@ position();
 </ul>
 </div>
 <div class="learn right">
-<div class="nav-menu glossary">
-<i class="ico ico-nav glossary">
+<div class="nav-menu eia-glossary">
+<i class="ico ico-nav eia-glossary">
 </i>
 <h3>
 <a href="/tools/glossary/">Glossary</a>
