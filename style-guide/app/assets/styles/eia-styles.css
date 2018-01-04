@@ -5,6 +5,7 @@
 @import "less/global_vars";
 @import "less/global_mixins";
 @import "less/base";
+@import "less/layouts";
 
 @import "less/footer";
 @import "less/header";

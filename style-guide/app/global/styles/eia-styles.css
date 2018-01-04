@@ -758,6 +758,32 @@ html {
   text-decoration: none;
 }
 @media (min-width: 1px) {
+  .l-column .container,
+  .l-full-width-column .container,
+  .l-main-column .container,
+  .l-middle-column .container,
+  .l-side-column .container,
+  .l-split-narrow .container,
+  .l-split-wide .container,
+  .l-one-third-column .container,
+  .l-two-column .container,
+  .l-two-third-column .container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-column *,
+  .l-full-width-column *,
+  .l-main-column *,
+  .l-middle-column *,
+  .l-side-column *,
+  .l-split-narrow *,
+  .l-split-wide *,
+  .l-one-third-column *,
+  .l-two-column *,
+  .l-two-third-column * {
+    box-sizing: border-box;
+  }
   .l-column h1,
   .l-full-width-column h1,
   .l-main-column h1,
@@ -1629,6 +1655,21 @@ html {
   }
 }
 @media (min-width: 988px) {
+  .l-column .container,
+  .l-full-width-column .container,
+  .l-main-column .container,
+  .l-middle-column .container,
+  .l-side-column .container,
+  .l-split-narrow .container,
+  .l-split-wide .container,
+  .l-one-third-column .container,
+  .l-two-column .container,
+  .l-two-third-column .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 956px;
+  }
   .l-column h1,
   .l-full-width-column h1,
   .l-main-column h1,
@@ -2174,32 +2215,6 @@ span.line-break {
   max-width: 100%;
   margin: 0 auto;
 }
-.page-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-#l-outer-wrapper {
-  background-color: #e2e6eb;
-  height: 100%;
-  position: relative;
-  padding: 0 1px;
-  margin: 0 auto;
-  border: 0;
-  max-width: 990px;
-  min-width: 990px;
-  width: 990px;
-  box-sizing: border-box;
-}
-#l-inner-wrapper {
-  display: table;
-  border: 0;
-  border-right: 1px solid #dbdfe5;
-  border-left: 1px solid #dbdfe5;
-  background-color: #fff;
-  width: 988px;
-  padding: 106px 15px 50px 15px;
-  box-sizing: border-box;
-}
 @media (min-width: 1px) {
   footer {
     border-top: 1px solid #265281;
@@ -2744,7 +2759,6 @@ span.line-break {
   }
   .form-container {
     display: block;
-    margin: 6px 0 0 0;
     width: 250px;
     position: relative;
   }
@@ -2806,9 +2820,7 @@ span.line-break {
     color: #333;
     font-size: 1rem;
     color: #fff;
-    text-decoration: none;
-    padding: 5px 15px 5px 12px;
-    display: block;
+    padding: 0 15px 15px 12px;
   }
   header .navigation .nav-primary .nav-primary-item a:hover {
     background-color: #189bd7;

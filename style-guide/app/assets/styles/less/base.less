@@ -126,7 +126,14 @@ html {
 	.l-one-third-column,
 	.l-two-column,
 	.l-two-third-column {
-
+		.container {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		* {
+			box-sizing: border-box;
+		}
 		h1 {
 			.header-font;
 			display: block;
@@ -425,6 +432,12 @@ html {
 	.l-one-third-column,
 	.l-two-column,
 	.l-two-third-column {
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			max-width: 956px;
+		}
 		h1 {
 			font-size: 1.75rem; // 28px;
 		}
@@ -686,45 +699,3 @@ span.line-break {
 	margin: 0 auto;
 }
 
-
-
-
-
-
-// this is temp layout for header / footer to work
-
-//@media @mobile {
-	.page-wrapper {
-		width: 100%;
-		margin: 0 auto;
-	}
-	#l-outer-wrapper {
-		background-color: #e2e6eb;
-		height: 100%;
-		position: relative;
-		padding: 0 1px; // 990px - 2px = 988px width
-		margin: 0 auto;		
-		border: 0;
-		max-width: 990px;
-		min-width: 990px;
-		width: 990px;
-		box-sizing: border-box;
-		// 988px w/o box-sizing
-	}
-	#l-inner-wrapper {
-		display: table;
-		border: 0;
-		border-right: 1px solid #dbdfe5;
-		border-left: 1px solid #dbdfe5; // 988px - 2px = 986px width
-		background-color: #fff;
-		padding: 106px 15px 50px 15px;
-		box-sizing: border-box;
-		max-width: 988px;
-		min-width: 988px;
-		width: 988px;
-		// 956px w/o box-sizing
-//		&.show {
-//			padding: 90px 0 50px;
-//		}
-	}
-//}
