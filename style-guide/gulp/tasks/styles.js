@@ -3,10 +3,14 @@ var cleanCSS = require('gulp-clean-css');
 var less = require('gulp-less');
 var rename = require('gulp-rename');
 var path = require('path');
-const rev = require('gulp-rev');
+var del = require('del');
 
 
 // this compiles a production CSS from only the required LESS files and makes a pretty and ugly (minified) version in the global folder and style-guide folder
+
+//gulp.task('less', ['compile-styles-less'], () =>
+//  del(['../global/styles/eia-styles.min.css', '../global/styles/eia-styles.min.css'])
+//);
 
 gulp.task('less', ['compile-style-guide-less'], () =>
   gulp.src('./app/assets/styles/eia-styles.css')
