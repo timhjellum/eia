@@ -2658,6 +2658,9 @@ span.line-break {
 
 */
   }
+  .footer * {
+    box-sizing: border-box;
+  }
   .footer li {
     list-style: none;
   }
@@ -3189,6 +3192,9 @@ span.line-break {
 @media (min-width: 988px) {
   header {
     height: 94px;
+  }
+  header * {
+    box-sizing: border-box;
   }
   header .navigation {
     width: 955px;
