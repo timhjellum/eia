@@ -1,5 +1,4 @@
-<!-- div class="page-wrapper" -->
-<div id="outerX">
+<div class="page-wrapper">
 	<header>
 		<div class="print">
 			<img src="https://www.eia.gov/global/images/logos/eia_logo_print.png" />
@@ -307,7 +306,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include '/global/includes/css_rehab_eia-header-glossary.inc'; ?>
 							</div>
 							<div class="nav-menu data-tools-model">
 								<i class="ico ico-nav data-tools-model"></i>
@@ -399,7 +398,7 @@
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
 								</h3>
-								<?php include(ROOT.'global/includes/css_rehab_eia-header-survey-search.inc'); ?>
+								<?php include '/global/includes/css_rehab_eia-header-survey-search.inc'); ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico ico-nav email-complex"></i>
@@ -495,7 +494,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include '/global/includes/css_rehab_eia-header-glossary.inc'; ?>
 							</div>
 							<div class="nav-menu faq">
 								<i class="ico ico-nav faq"></i>
@@ -684,5 +683,5 @@
 		</nav>
 	</header>
 	<section>
-		<div id="l-outer-wrapper">
-			<div id="l-inner-wrapper">
+		<div class="l-outer-wrapper" id="outerX">
+			<div class="l-inner-wrapper" id="innerX">

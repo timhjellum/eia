@@ -2216,8 +2216,7 @@ span.line-break {
   margin: 0 auto;
 }
 @media (min-width: 1px) {
-  #outerX,
-  .page-wrapper {
+  .page-wrapper#outerX {
     width: 100%;
     height: 100%;
     border: none;
@@ -2226,10 +2225,7 @@ span.line-break {
     padding: 0;
     box-sizing: border-box;
   }
-  #outerX #innerX,
-  .page-wrapper #innerX,
-  #outerX .l-outer-wrapper,
-  .page-wrapper .l-outer-wrapper {
+  .page-wrapper#outerX .l-outer-wrapper#innerX {
     margin: 0 auto;
     background-color: #e2e6eb;
     border: 0;
@@ -2241,10 +2237,7 @@ span.line-break {
     width: 990px;
     box-sizing: border-box;
   }
-  #outerX #innerX .content .l-inner-wrapper,
-  .page-wrapper #innerX .content .l-inner-wrapper,
-  #outerX .l-outer-wrapper .content .l-inner-wrapper,
-  .page-wrapper .l-outer-wrapper .content .l-inner-wrapper {
+  .page-wrapper#outerX .l-outer-wrapper#innerX .l-inner-wrapper {
     background-color: #fff;
     display: table;
     border-right: 1px solid #dbdfe5;
@@ -2415,6 +2408,9 @@ span.line-break {
 100% 254 opacity 1
 
 */
+  }
+  .footer * {
+    box-sizing: border-box;
   }
   .footer li {
     list-style: none;
@@ -2947,6 +2943,9 @@ span.line-break {
 @media (min-width: 988px) {
   header {
     height: 94px;
+  }
+  header * {
+    box-sizing: border-box;
   }
   header .navigation {
     width: 955px;
