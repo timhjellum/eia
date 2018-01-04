@@ -3193,9 +3193,6 @@ span.line-break {
   header {
     height: 94px;
   }
-  header * {
-    box-sizing: border-box;
-  }
   header .navigation {
     width: 955px;
     height: 94px;
@@ -3240,7 +3237,9 @@ span.line-break {
     color: #333;
     font-size: 1rem;
     color: #fff;
-    padding: 0 15px 15px 12px;
+    text-decoration: none;
+    padding: 4px 15px 4px 12px;
+    display: block;
   }
   header .navigation .nav-primary .nav-primary-item a:hover {
     background-color: #189bd7;
