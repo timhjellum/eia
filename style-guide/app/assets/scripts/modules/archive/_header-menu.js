@@ -148,7 +148,7 @@ function checkSize() {
 	$('.logo').removeClass('show');
 
 	// outer wrapper is set as 990px for laptop and desktop
-	var elementWidth = $("#l-outer-wrapper").width();
+	var elementWidth = $(".l-outer-wrapper").width();
 
 
 	if ((elementWidth) >= "988") {

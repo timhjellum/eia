@@ -288,8 +288,8 @@ February 15, 2017
     	</div><?php /* end .l-row */ ?>
 
       </div><?php /* end .content */ ?>
-    </div><?php /* end #l-inner-wrapper */ ?>
-  </div><?php /* end #l-outer-wrapper */ ?>
+    </div><?php /* end .l-inner-wrapper */ ?>
+  </div><?php /* end .l-outer-wrapper */ ?>
 </section><?php /* end section */ ?>
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 

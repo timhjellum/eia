@@ -44,8 +44,8 @@ Contact: <a href="mailto:Alex.Wood@eia.gov">Alex Wood</a>, (202) 586-3537
     	</div><?php /* end .l-row */ ?>
 
       </div><?php /* end .content */ ?>
-    </div><?php /* end #l-inner-wrapper */ ?>
-  </div><?php /* end #l-outer-wrapper */ ?>
+    </div><?php /* end .l-inner-wrapper */ ?>
+  </div><?php /* end .l-outer-wrapper */ ?>
 </section><?php /* end section */ ?>
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 

@@ -2,69 +2,17 @@
 import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
-
 // check the page resolution on initial page load and if the browser is resized
 $(document).ready(function() {
 	// run on initial page load
     checkSize();
     // run on window resize
 	$(window).resize(checkSize);
-	
 
-
-		
-		
-		
-		
-/*	remove this script
-	var defaultTitle = 'U.S. Energy Information Administration - EIA - Independent Statistics and Analysis',
-	titlePrefix = 'EIA';
-	// if title is blank
-	if( document.title == '' ) {
-		var title = titlePrefix,
-		titleMMain = $('.title a').text(),
-		titleMain = $('.title h1').text(),
-		titleSub = $('.subnav .active').text();
-		if(titleMain != '') {
-			if( titleMMain != '')
-			title += ' - ' + titleMMain.substring(titleMMain.indexOf(titleMMain.charAt(1)));
-			title += ' - ' + titleMain;
-			if(titleSub!= '')
-			title += ' - ' + titleSub;
-		} else 
-		title = defaultTitle;  
-		document.title = title;
-	}
-*/
-
-
-
-
-
-
-
-	/*
-	$("#youtube").fancybox({
-		'scrolling'		: 'no',
-		'titleShow'		: false,
-		'onClosed'		: function() {
-			$("#login_error").hide();
-		}
-	});
-	*/
-
-
-
-
-
-
-//console.log('search panel toggle script found!');
-
-
-
-
+	console.log("dilly dilly");
 
 	$('.fancybox-menu').click(function () {
+		console.log("clicked");
   		var target = $(this).data("target");
     	var options = {active : 0};
 		switch(target) {
@@ -96,25 +44,25 @@ $(document).ready(function() {
 });
 
 function checkSize() {
-	//console.log('check size initiated in the header-init.min.js');
-	//console.log('Browser window opened or resized!');
+	console.log('Browser window opened or resized!');
 	$('.search-panel').removeClass('show');
 	$('header').removeClass('show');
 	$('.logo').removeClass('show');
 
 	// outer wrapper is set as 990px for laptop and desktop
-	var elementWidth = $("#l-outer-wrapper").width();
+	var layoutWrapperWidth = $(".l-outer-wrapper").width();
 
-	if ((elementWidth) >= "988") {
-		//console.log(elementWidth + " is greater than or equal to 988");
-		$(".content").css("margin-top", "0");
-	} else if ((elementWidth >= 320) && (elementWidth <= 987)) {
-		console.log("no");
-		$(".content").css("margin-top", "50px");
-	}
 
-	if ((elementWidth) >= "988") {
-		//console.log("laptop and desktop header width");
+//	if ((layoutWrapperWidth) >= "988") {
+//		console.log(layoutWrapperWidth + " = laptop");
+//		$(".content").css("margin-top", "0");
+//	} else if ((layoutWrapperWidth >= 320) && (layoutWrapperWidth <= 987)) {
+//		console.log("no");
+//		$(".content").css("margin-top", "50px");
+//	}
+
+	if ((layoutWrapperWidth) >= "988") {
+		console.log(layoutWrapperWidth + " = laptop and desktop");
 		$('.fancybox-menu').fancybox({
 			type: 'inline',
 			//scrolling: 'no',
@@ -136,14 +84,13 @@ function checkSize() {
 				}
 			}
 		});
-	} else if ((elementWidth >= 320) && (elementWidth <= 987)) {
-		//console.log("mobile header width");
-		console.log("mobile header width equals " + elementWidth);
+	} else if ((layoutWrapperWidth >= 320) && (layoutWrapperWidth <= 987)) {
+		console.log(layoutWrapperWidth + " = mobile");
 		$('.fancybox-menu').fancybox({
 			padding    		:	0,
 			margin     		:	0,
 			width			:	'100%',
-			//width			:	'elementWidth',
+			//width			:	'layoutWrapperWidth',
 			top				:	0,
 			left			:	0,
 			scrolling		:	'no',

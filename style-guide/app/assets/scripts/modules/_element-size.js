@@ -7,7 +7,7 @@ class ElementSize {
         this.pageLoad = $(this.browserWindow).ready(this.events.bind(this));
     }
     events() { 
-        var elementWidth = $("#l-outer-wrapper").width();
+        var elementWidth = $(".l-outer-wrapper").width();
         console.log(elementWidth);
     }
 }

@@ -1,4 +1,4 @@
-console.log("Header jQuery UI Autocomplete checking in...");
+console.log("autocomplete checking in...");
 
 
 $(document).ready(function() {

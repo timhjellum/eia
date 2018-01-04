@@ -1,15 +1,15 @@
 //import $ from 'jquery';
 
 import HeaderMenu from './modules/_header-menu';
-//new HeaderMenu();
 
 import HeaderSearch from './modules/_header-search';
 new HeaderSearch();
 
 // required jquery ui
-//import HeaderAutocompleteInit from './modules/_header-autocomplete';
+import HeaderAutocComplete from './modules/_header-autocomplete';
 
-import HeaderWhatsNewInit from './modules/_header-whats-new';
+import HeaderWhatsNew from './modules/_header-whats-new';
+new HeaderWhatsNew();
 
 import ShrinkExpand from './modules/_header-shrink-expand';
 new ShrinkExpand();

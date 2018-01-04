@@ -645,8 +645,8 @@ Petroleum Supply Monthly Archives
 </div><!-- end .l-side-column  -->
 </div><!-- end .l-row  -->
 </div><!-- end .content  -->
-</div><!-- end #l-inner-wrapper  -->
-</div><!-- end #l-outer-wrapper  -->
+</div><!-- end .l-inner-wrapper  -->
+</div><!-- end .l-outer-wrapper  -->
 </section><!-- end section  -->
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 </body>

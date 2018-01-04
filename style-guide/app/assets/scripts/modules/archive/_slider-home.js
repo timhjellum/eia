@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 function checkSize() {
     // outer wrapper is set as 990px for laptop and desktop
-    var layoutWrapperWidth = $("#l-outer-wrapper").width();
+    var layoutWrapperWidth = $(".l-outer-wrapper").width();
 
     if ((layoutWrapperWidth) >= "988") {
         console.log("laptop and desktop");

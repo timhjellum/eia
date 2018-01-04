@@ -702,7 +702,7 @@ template {
     width: 100%;
     margin: 0 auto;
   }
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     margin: 0 auto;
     background-color: #e2e6eb;
     padding: 0;
@@ -714,14 +714,14 @@ template {
     max-width: 479px;
     min-width: 320px;
   }
-  #l-inner-wrapper {
+  .l-inner-wrapper {
     background-color: white;
     display: table;
     border: 0;
     width: 100%;
     padding: 80px 0 50px 0;
   }
-  #l-inner-wrapper.show {
+  .l-inner-wrapper.show {
     padding: 90px 0 50px;
   }
   .container {
@@ -853,13 +853,13 @@ template {
   }
 }
 @media (min-width:480px) {
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     max-width: 599px;
     min-width: 480px;
   }
 }
 @media (min-width: 600px) {
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     max-width: 800px;
     min-width: 600px;
   }
@@ -893,13 +893,13 @@ template {
   }
 }
 @media (min-width: 801px) {
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     max-width: 801px;
     min-width: 989px;
   }
 }
 @media (min-width: 988px) {
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     margin: 0 auto;
     padding: 0 1px;
     border: 0;
@@ -907,7 +907,7 @@ template {
     min-width: 990px;
     width: 990px;
   }
-  #l-inner-wrapper {
+  .l-inner-wrapper {
     border-right: 1px solid #dbdfe5;
     border-left: 1px solid #dbdfe5;
     background-color: #fff;
@@ -5465,7 +5465,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
 }
 
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
-  #l-outer-wrapper {
+  .l-outer-wrapper {
     //
   }
 }
@@ -5580,14 +5580,14 @@ C:\localhost\global\images\icons\iconize\yim.gif
 }
 /* these may be used later
 @media @desktop { // big landscape tablets, laptops, and desktops
-  #l-outer-wrapper {
+  .l-outer-wrapper {
       //max-width: 1280px;
       //min-width: 1025px;
       //width: 990px;
   }
 }
 @media @desktop-lg { // hi-res laptops and desktops
-  #l-outer-wrapper {
+  .l-outer-wrapper {
       //min-width: 1281px;
       //width: 990px;
   }

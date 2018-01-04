@@ -106,7 +106,7 @@ function checkSize() {
 //console.log('initiate and configure the fancybox script found!');
 
 	// outer wrapper is set as 990px for laptop and desktop
-	var elementWidth = $("#l-outer-wrapper").width();
+	var elementWidth = $(".l-outer-wrapper").width();
 
 	if ((elementWidth) >= "988") {
 		console.log("laptop and desktop header width");

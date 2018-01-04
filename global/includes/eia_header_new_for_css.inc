@@ -801,6 +801,6 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </nav>
 </header>
 <section class="content">
-<div id="l-outer-wrapper">
-<div id="l-inner-wrapper">
+<div class="l-outer-wrapper">
+<div class="l-inner-wrapper">
 <div class="content">

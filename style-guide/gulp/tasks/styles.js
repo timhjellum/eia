@@ -32,7 +32,7 @@ gulp.task('less', ['compile-style-guide-less'], () =>
 
 // this compiles a working CSS from ALL the LESS files and makes a pretty version for the global folder and style-guide folder
 
-gulp.task('compile-style-guide-less', ['copy-global-scripts'], () =>
+gulp.task('compile-style-guide-less', () =>
   // compile the .less files
   gulp.src('./app/assets/styles/eia-style-guide.css')
   .pipe(less())

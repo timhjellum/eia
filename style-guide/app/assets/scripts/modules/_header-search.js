@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+console.log("header search checking in...");
+
 class HeaderSearch {
     constructor() {
         this.searchPanel = $('.search-panel');

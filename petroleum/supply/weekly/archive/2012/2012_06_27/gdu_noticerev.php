@@ -60,8 +60,8 @@ Table 14 of the <a href="/oil_gas/petroleum/data_publications/weekly_petroleum_s
     	</div><?php /* end .l-row */ ?>
 
       </div><?php /* end .content */ ?>
-    </div><?php /* end #l-inner-wrapper */ ?>
-  </div><?php /* end #l-outer-wrapper */ ?>
+    </div><?php /* end .l-inner-wrapper */ ?>
+  </div><?php /* end .l-outer-wrapper */ ?>
 </section><?php /* end section */ ?>
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 

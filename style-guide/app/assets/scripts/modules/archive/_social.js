@@ -5,7 +5,7 @@ console.log("Social script loaded!");
 $(document).ready(function() {
     function position() {
         $("#sticker.positionable").position({
-            of: $("#l-outer-wrapper"),
+            of: $(".l-outer-wrapper"),
             my: "left top",
             at: "right top"
         });

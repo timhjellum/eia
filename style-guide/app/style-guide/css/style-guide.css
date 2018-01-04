@@ -2976,8 +2976,8 @@ h2.style-guide.style-guide {
     display: table;
     background-color: #99cc00}
 
-.style-guide-image-container #l-outer-wrapper,
-.style-guide-image-container #l-inner-wrapper {
+.style-guide-image-container .l-outer-wrapper,
+.style-guide-image-container .l-inner-wrapper {
   padding: 0 inherit !important;
   margin: 0 inherit !important;
   background-color: transparent !important}

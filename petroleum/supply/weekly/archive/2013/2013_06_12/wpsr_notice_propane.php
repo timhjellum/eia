@@ -44,8 +44,8 @@ Errata Sheet for WPSR Week Ending 6/7/2013 - <a href="wpsrerrata_sheet_06072013.
     	</div><?php /* end .l-row */ ?>
 
       </div><?php /* end .content */ ?>
-    </div><?php /* end #l-inner-wrapper */ ?>
-  </div><?php /* end #l-outer-wrapper */ ?>
+    </div><?php /* end .l-inner-wrapper */ ?>
+  </div><?php /* end .l-outer-wrapper */ ?>
 </section><?php /* end section */ ?>
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 

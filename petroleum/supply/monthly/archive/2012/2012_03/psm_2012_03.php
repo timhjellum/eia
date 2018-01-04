@@ -9,8 +9,8 @@
 <body>
 <?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>
 <section class="content">
-<div id="l-outer-wrapper">
-<div id="l-inner-wrapper">
+<div class="l-outer-wrapper">
+<div class="l-inner-wrapper">
 <div class="content">
 <div class="l-row header">
 <div class="l-full-width-column">
@@ -591,8 +591,8 @@ Revised State-level estimates from January 2010 to December 2011 are now reporte
 </div><!-- end .l-side-column  -->
 </div><!-- end .l-row  -->
 </div><!-- end .content  -->
-</div><!-- end #l-inner-wrapper  -->
-</div><!-- end #l-outer-wrapper  -->
+</div><!-- end .l-inner-wrapper  -->
+</div><!-- end .l-outer-wrapper  -->
 </section><!-- end section  -->
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
 </body>

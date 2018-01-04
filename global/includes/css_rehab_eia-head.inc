@@ -12,6 +12,12 @@
 <link rel="shortcut icon" href="<?php print HTTP; ?>favicon.ico" />
 <link rel="icon" href="<?php print HTTP; ?>favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php print HTTP; ?>favicon.ico" />
+
+
+<script src='<?php print HTTP; ?>global/vendor/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
 <?php
 $glossary_path = '<?php print HTTP; ?>/tools/glossary/';
 $faqs_path = '<?php print HTTP; ?>/tools/faqs/';
