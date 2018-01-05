@@ -43,6 +43,28 @@ gulp.task('compile-style-guide-less', () =>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // this moves any vendor files from their corresponding node folders and moves them into the LESS folder for further compilation
 
 gulp.task('import-vendor-css', ['import-vendor-js'], () =>
@@ -117,11 +139,6 @@ gulp.task('import-vendor-js', ['import-vendor-images'], () =>
   // move them to vendor so they can be processed with the other .less files
   .pipe(gulp.dest('./app/global/vendor'))
 );
-
-//, function() {
-// gulp.src('./node_modules/fancybox/**/*.{gif,png}')
-//  .pipe(gulp.dest('./fancybox/img'));
-//});
 
 // import the latest vendor images from the node_modules
 // even if the images are not used we should keep them to avoid any missing file errors

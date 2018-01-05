@@ -2989,6 +2989,9 @@ span.line-break {
     border-right: 1px solid #809ca9;
     border-left: 1px solid #001c29;
   }
+  header .navigation .nav-primary .nav-primary-item:hover {
+    background-color: #189bd7;
+  }
   header .navigation .nav-primary .nav-primary-item:hover i {
     color: #fff;
   }
@@ -3008,9 +3011,6 @@ span.line-break {
     text-decoration: none;
     padding: 4px 15px 4px 12px;
     display: block;
-  }
-  header .navigation .nav-primary .nav-primary-item a:hover {
-    background-color: #189bd7;
   }
   header .navigation .nav-secondary {
     display: block;
@@ -3045,7 +3045,7 @@ span.line-break {
   }
   header .navigation .search-panel {
     opacity: 1;
-    top: 50px;
+    top: 55px;
     right: 1px;
     display: block;
     height: 20px;
