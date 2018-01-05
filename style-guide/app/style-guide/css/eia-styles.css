@@ -2805,6 +2805,9 @@ span.line-break {
     clear: both;
     position: relative;
   }
+  .nav-menu * {
+    box-sizing: border-box;
+  }
   .nav-menu i {
     position: absolute;
   }
