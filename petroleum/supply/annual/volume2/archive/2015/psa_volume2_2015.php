@@ -8,8 +8,8 @@
 <body>
 <?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>
 <section class="content">
-<div class="l-outer-wrapper">
-<div class="l-inner-wrapper">
+<div class="l-outer-wrapper" id="outerX">
+<div class="l-inner-wrapper" id="innerX">
 <div class="content">
 <div class="l-row header">
 <div class="l-full-width-column">

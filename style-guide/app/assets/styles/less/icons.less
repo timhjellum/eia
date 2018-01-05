@@ -25,7 +25,7 @@
 			font-size: 0;	
 			&::before {
 				.controls-icon(75px, 60px);
-				.icon-eia-logomark(full, "#333");
+				.icon-eia-logomark(full, "@eia-dark-gray");
 			}
 		}
 	}
@@ -838,15 +838,15 @@
 		&.linechart {
 			&::before {
 				.controls-icon;
-				&.line-chart(tint(@eia_blue, 40%););
+				&.line-chart(tint(@eia-blue, 40%););
 					//Less has some useful color functions. The function tint() lightens the color by whatever percentage we pass. This is similar to how I've created some of the lighter colors in Illustrator so I'm looking into how we might use this. It's not something we need to worry about right now since we'll be able to make these changes easily later on.
 				height: 29px;
 				background-position: center bottom; //you'll notice that the background position is already set in the icons file. I needed these aligned differently here.
 			}
 			&.ui-state-active, &.ui-state-hover {
-				color: @eia_blue;
+				color: @eia-blue;
 				&::before {
-					&.line-chart(@eia_blue);
+					&.line-chart(@eia-blue);
 					background-position: center bottom;
 				}
 			}
@@ -988,13 +988,13 @@
 			height: 0;
 			float: right;
 			margin: 13px 0 0 6px;
-			border-top: 4px solid @eia_blue;
+			border-top: 4px solid @eia-blue;
 			border-right: 4px solid transparent;
 			border-left: 4px solid transparent;
 		}
 		.active {
 			  .arrow-down {
-				border-top: 4px solid @eia_darker_blue;
+				border-top: 4px solid @eia-darker-blue;
 			  }
 		}
       	/*subnav dropdown arrows*/
@@ -1020,7 +1020,7 @@
 		/*Accordion Menu + Icon*/
 		&.plus-eiablue {
 			.bold;
-			color: @eia_blue;
+			color: @eia-blue;
 		}
 
 		/*Total Energy Visualization icons */
@@ -1071,13 +1071,13 @@
 	//			border-color: #fff;
 				&.faq {
 					&::before {
-						.icon-faq(@fill-color: @eia_darker_blue, @fill-color-lt: @eia_lt_blue);
+						.icon-faq(@fill-color: @eia-darker-blue, @fill-color-lt: @eia-light-blue);
 						.nav-bar-icon();
 					}
 				}
 				&.petroleum {
 					&::before {
-						.icon-petroleum(@fill-color: @eia_brown-orange);
+						.icon-petroleum(@fill-color: @eia-brown-orange);
 						.nav-bar-icon();
 					}
 				}
@@ -1097,7 +1097,7 @@
 			&.search {
 				&::before {
 					.controls-icon(16px, 16px);
-					.icon-search(@eia_blue);
+					.icon-search(@eia-blue);
 					position: relative;
 					top: 3px;
 					margin-right: 5px;
@@ -1115,7 +1115,7 @@
 			&.search {
 				&::before {
 					.controls-icon(20px, 20px);
-					.icon-search(@greyishblue);
+					.icon-search(@greyish-blue);
 					float: right;
 					margin: -5px 12px;
 				}
@@ -1130,13 +1130,13 @@
 	&.plus-yellow {
 		.font;
 		.bold;
-		color: @eia_yellow;
+		color: @eia-yellow;
 		font-size: 18px;
 	}
-	&.plus-greyishblue {
+	&.plus-greyish-blue {
 		.font;
 		.bold;
-		color: @greyishblue;
+		color: @greyish-blue;
 		font-size: 12px;
 	}
 	a {
@@ -1303,7 +1303,7 @@
 		&:after{
 			content: "";
 			position: absolute;
-			background-color: #333;
+			background-color: @eia-dark-gray;
 			transition: transform 0.25s ease-out;
 		}
 		&.expand {

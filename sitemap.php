@@ -1,8 +1,8 @@
-<?php include_once('../config.php'); ?>
+<?php include_once('config.php'); ?>
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
 <?php include(ROOT.'global/includes/css_rehab_eia-head.inc'); ?>
 <style>
     ol.sitemap {

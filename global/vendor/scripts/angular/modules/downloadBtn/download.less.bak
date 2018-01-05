@@ -1,0 +1,122 @@
+@import '../../../../../global/less/global_vars';
+
+.backgroundSprite() {
+  background: url(@gc_icons) no-repeat scroll 0 0 transparent;
+}
+
+@right_padding: 8px;
+
+#download_dialog_wrap {
+  display:    inline-block;
+  float:     right;
+  width:      108px;
+  margin-top: 16px;
+  padding-right: @right_padding*1.5;
+  &:hover {
+      background-color: @gradient-background;
+  }
+}
+
+.download_menu {
+  margin-bottom: 0;
+}
+
+#main_download_button {
+  border:      none;
+  cursor:      pointer;
+  height:      22px;
+  text-align:  center;
+  width:      104px;
+  padding: .4em  @right_padding;
+  .simplemodal-data & {
+    background-color: @gradient-background;
+  }
+
+  &.active {
+    background-color: #d8e6ce;
+  }
+  .download_button_text {
+    display:        inline-block;
+    text-transform: none;
+
+    &:after {
+      .backgroundSprite;
+      content:     "";
+      display:     inline-block;
+      height:      7px;
+      margin-left: 10px;
+      width:       10px;
+    }
+    &.green {
+      color: @eia-green;
+      &:after {
+        background-position: -319px -37px;
+      }
+    }
+    &.blue {
+      color: @eia_blue;
+      &:after {
+        background-position: -319px -37px;
+      }
+    }
+    &.black {
+      color: #222;
+      &:after {
+        background-position: -319px -37px;
+      }
+    }
+    &.white {
+      color: #fff;
+      &:after {
+        background-position: -319px -37px;
+      }
+    }
+
+  }
+  .download_icon {
+    .backgroundSprite;
+    display:      inline-block;
+    width:        16px;
+    height:       14px;
+    margin-right: 10px;
+	position: relative;
+	top: 2px;
+    &.green {
+      background-position: -246px -318px
+    }
+    &.blue {
+      background-position: -316px -318px
+    }
+    &.black {
+      background-position: -390px -318px
+    }
+    &.white {
+      background-position: -461px -318px
+    }
+
+  }
+}
+
+#download_dialog {
+  display:    none;
+  background-color: #fff;
+  > div {
+    padding: 16px;
+  }
+
+  dd {
+    cursor: pointer;
+	margin-left: 2px
+  }
+
+  dt {
+	margin-top: 8px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+  }
+  dl {
+	margin-bottom: 0;
+  }
+}

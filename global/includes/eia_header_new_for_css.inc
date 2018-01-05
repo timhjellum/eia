@@ -802,5 +802,5 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </header>
 <section class="content">
 <div class="l-outer-wrapper">
-<div class="l-inner-wrapper">
+<div class="l-inner-wrapper" id="innerX">
 <div class="content">

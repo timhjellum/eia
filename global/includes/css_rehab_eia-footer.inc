@@ -3,7 +3,7 @@
         </div>
     </div>
 </section>
-<footer class="clearfix">
+<footer class="clearfix footer">
     <div class="l-row address-bar">
         <div class="l-two-third-column">
             <ul class="above-address-links">
