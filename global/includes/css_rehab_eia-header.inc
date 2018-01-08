@@ -398,14 +398,7 @@
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
 								</h3>
-								<div class="form-container">
-									<form>
-										<input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
-										<button type="submit" id="SurveySearch" class="search-submit">
-											<i class="ico search-submit">Search</i>
-										</button>
-									</form>
-								</div>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-survey-search.inc'); ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico ico-nav email-complex"></i>

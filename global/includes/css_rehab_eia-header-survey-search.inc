@@ -1,12 +1,13 @@
 <div class="form-container">
-
-
-<form>
+    <form>
         <input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
-        <button type="submit" id="goBtn" class="search-submit">
-            <i class="ico search-submit">Search</i>
-        </button>
-</form>
+        <a href="" id="SurveySearch">
+            <button type="submit" class="search-submit">
+                <i class="ico search-submit">Search</i>
+            </button>
+        </a>
+    </form>
+</div>
         
         
 
@@ -23,10 +24,6 @@
         <i class="ico search-submit">Search</i>
     </button>
 </form>
--->
-
-
-<!-- 
 <input name="utf8" type="hidden" value="&#x2713;" />
 <input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
 <input autocomplete="off" class="usagov-search-autocomplete fancy-search-box" name="query" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" />
@@ -41,7 +38,7 @@ input type="submit" name="search" alt="enter terms to search" class="arrow_go" b
 -->
 
 
-</div>
+
 
 
 
