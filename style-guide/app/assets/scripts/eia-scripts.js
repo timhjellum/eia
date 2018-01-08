@@ -1,4 +1,3 @@
-//import $ from 'jquery';
 
 import HeaderMenu from './modules/_header-menu';
 
@@ -8,8 +7,8 @@ new HeaderSearch();
 // required jquery ui
 import HeaderAutocComplete from './modules/_header-autocomplete';
 
-//import HeaderWhatsNew from './modules/_header-whats-new';
-//new HeaderWhatsNew();
+import HeaderWhatsNew from './modules/_header-whats-new';
+new HeaderWhatsNew();
 
 import ShrinkExpand from './modules/_header-shrink-expand';
 new ShrinkExpand();

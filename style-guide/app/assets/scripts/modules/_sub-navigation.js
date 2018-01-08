@@ -17,7 +17,6 @@ $(document).ready(function() {
 	  });
 });
 */
-
 // EIA Global JS Include
 /*
 $.fn.dd = function( options ){

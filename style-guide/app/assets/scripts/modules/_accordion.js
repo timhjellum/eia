@@ -12,7 +12,6 @@ class Accordion {
 		this.initialState();
 		this.events();
 	}
-
 	initialState() {
 		this.headerExpandCollapse.addClass('expand');
 		this.headerInitialState.addClass('active');

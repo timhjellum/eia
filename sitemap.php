@@ -40,6 +40,7 @@
         color: #a33340;
     }
 </style>
+<!-- link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" -->
 </head>
 <body>
 <?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>

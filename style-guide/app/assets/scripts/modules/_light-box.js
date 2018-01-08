@@ -7,6 +7,7 @@
 		'speedOut'		:	200, 
 		'overlayShow'	:	false
 	});
+	
 	// For HTML content, since Fancybox 2 now requires specifying IFRAME mode explicitly for non-images
 	$("a.lightboxhtml").fancybox({
 		type: "iframe",

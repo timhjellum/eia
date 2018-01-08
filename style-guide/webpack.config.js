@@ -22,24 +22,6 @@ module.exports = {
 				exclude: /node_modules/
 			},
 			
-			//      {
-			//          test: /\.css$/,
-			//          include: /node_modules/,
-			//          loader:  'style!css'
-			//      },
 		]
-		},
-		//		resolve: {
-		//	alias: {
-		//		'jquery-ui': 'jquery-ui-dist/jquery-ui.js'
-		//	}
-		//},
-		//  resolve: {
-		//      extensions: ['.css'],
-		//      alias: {
-		//          main: path.join(__dirname, '/src/scss/main.scss'),
-		//          fancybox: path.join(__dirname, '/node_modules/fancybox/dist/css/'), //jquery.fancybox.css
-		//          normalize: path.join(__dirname, '/node_modules/normalize.css')
-		//      }
-		//	}
+	},
 } // module.exports
