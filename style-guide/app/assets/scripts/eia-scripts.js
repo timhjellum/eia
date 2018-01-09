@@ -5,7 +5,7 @@ import HeaderSearch from './modules/_header-search';
 new HeaderSearch();
 
 // required jquery ui
-import HeaderAutocComplete from './modules/_header-autocomplete';
+//import HeaderAutocComplete from './modules/_header-autocomplete';
 
 import HeaderWhatsNew from './modules/_header-whats-new';
 new HeaderWhatsNew();
