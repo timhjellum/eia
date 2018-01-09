@@ -46,10 +46,9 @@
 <?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>
 <div class="l-row">
 <div class="l-full-width-column">
+
+
 <!--
-/div>
-<div class="l-two-column"
--->
 <h1>CSS Rahab</h1>
 
 
@@ -629,6 +628,7 @@
         </ol>
     </li>
 </ol>
+-->
 </div>
 </div>
 <?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
