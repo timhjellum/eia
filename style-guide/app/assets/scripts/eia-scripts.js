@@ -13,6 +13,9 @@ new HeaderWhatsNew();
 import ShrinkExpand from './modules/_header-shrink-expand';
 new ShrinkExpand();
 
+import SocialSticker from './modules/_social-sticker';
+new SocialSticker();
+
 //import header from './modules/header.js';
 //import headermenu from './modules/header-menu.js';
 //import slider from './modules/slider.js';

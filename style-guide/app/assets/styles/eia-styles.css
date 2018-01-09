@@ -7,6 +7,7 @@
 @import "less/base";
 @import "less/layouts";
 
+@import "less/social-sticker";
 @import "less/footer";
 @import "less/header";
 @import "less/header-menu";

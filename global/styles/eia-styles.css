@@ -711,6 +711,9 @@ html {
   text-decoration: none;
 }
 @media (min-width: 1px) {
+  input[type=text] {
+    margin: 0 !important;
+  }
   .l-column .container,
   .l-full-width-column .container,
   .l-main-column .container,
@@ -2334,6 +2337,89 @@ span.line-break {
   }
 }
 @media (min-width: 1px) {
+  #sticker {
+    display: none;
+  }
+}
+@media (min-width: 988px) {
+  #sticker {
+    display: block;
+    color: white;
+    text-align: center;
+    right: 0;
+    margin: 0 -36px 0 0;
+    overflow: hidden;
+    float: right;
+    width: 35px;
+    height: 74px;
+    transition: opacity 0.25s ease-out;
+    -moz-transition: opacity 0.25s ease-out;
+    -webkit-transition: opacity 0.25s ease-out;
+  }
+  #sticker.shrink {
+    transition: opacity 0.25s ease-in;
+    -moz-transition: opacity 0.25s ease-in;
+    -webkit-transition: opacity 0.25s ease-in;
+  }
+  #sticker .social {
+    position: relative;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    float: none;
+  }
+  #sticker .social li {
+    clear: left;
+    margin-bottom: 2px;
+    height: 35px;
+    line-height: 35px;
+    background: #F6F6F6;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  #sticker .social li.link {
+    padding: 5px 0 0 5px;
+  }
+  #sticker .social li.link.facebook {
+    padding-top: 8px;
+    height: 27px;
+    overflow: hidden;
+  }
+  #sticker .social li.link.pin {
+    top: 8px;
+  }
+  #sticker .social li a {
+    float: right;
+  }
+  .lt-ie8 #sticker1 {
+    display: none;
+  }
+  div.addthis_toolbox {
+    float: right;
+  }
+  .positionable {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  .tweet {
+    padding-top: 2px;
+  }
+  .facebook {
+    padding-top: 5px;
+  }
+  .imgalpha:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+  }
+  .addthis_button_facebook_like {
+    overflow: hidden;
+  }
+}
+@media (min-width: 1px) {
   .footer {
     border-top: 1px solid #265281;
     font-size: 16px;
@@ -2632,8 +2718,8 @@ span.line-break {
   }
   header .navigation .search-panel .search .search-box {
     color: #a9c1da;
-    border: none;
-    font-size: 13px;
+    border: 1px solid #a9c1da;
+    font-size: 0.813rem;
     background-color: #336075;
     width: 183px;
     padding: 3px 5px 2px 5px;
@@ -2724,7 +2810,7 @@ span.line-break {
     font-size: 1rem;
     color: #fff;
     text-decoration: none;
-    padding: 4px 15px 4px 12px;
+    padding: 0 15px 0 12px;
     display: block;
   }
   header .navigation .nav-secondary {
@@ -3097,7 +3183,7 @@ span.line-break {
     width: 19px;
     height: 19px;
     position: absolute;
-    top: 4px;
+    top: 8px;
     right: -30px;
   }
   .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete {

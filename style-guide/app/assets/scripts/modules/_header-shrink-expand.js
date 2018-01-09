@@ -12,10 +12,14 @@ class ShrinkExpand {
         if (this.browserWindow.scrollTop() > 96) {
             //console.log("shrink");
             $('header').addClass('shrink');
+            //$('#sticker').offset({top:$('header').scrollTop()+60});
+            //$('#sticker').addClass('shrink');
         }
         if (this.browserWindow.scrollTop() < 97) {
             //console.log("expand");
             $('header').removeClass('shrink');
+            //$('#sticker').offset({top:$('header').scrollTop()+96});
+            //$('#sticker').removeClass('shrink');
         }
     }
 }

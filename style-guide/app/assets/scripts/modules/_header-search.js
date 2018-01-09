@@ -8,18 +8,13 @@ class HeaderSearch {
         this.header = $('header');
         this.logo = $('.logo');
         this.searchIcon = $('.search-menu-toggle');
-//        this.windowLoad();
         this.events();
     }
-
-//    windowLoad() {
-//        this.searchPanel.addClass('hidden');
-//    }
-
+    
     events() {
         this.searchIcon.click(this.toggleSearchPanel.bind(this));       
     }
-    
+
     toggleSearchPanel() {
         this.header.toggleClass('show');
         this.logo.toggleClass('show');
@@ -28,13 +23,3 @@ class HeaderSearch {
 }
 
 export default HeaderSearch;
-
-
-
-/*
-	$('.search-menu-toggle').click(function() {
-		//console.log('toggle class show');
-
-    });
-    
-    */

@@ -37,8 +37,8 @@ var surveys = [
         anchor: 'eia-8a',
     
         }, {
-        value: 'EIA-14 - Refiners' Monthly Cost Report',
-        label: 'EIA-14 - Refiners' Monthly Cost Report',
+        value: 'EIA-14 - Refiners Monthly Cost Report',
+        label: 'EIA-14 - Refiners Monthly Cost Report',
         anchor: 'eia-14',
     
         }, {
@@ -142,13 +142,13 @@ var surveys = [
         anchor: 'eia-767',
     
         }, {
-        value: 'EIA-782A - Refiners'/Gas Plant Operators' Monthly Petroleum Product Sales Report',
-        label: 'EIA-782A - Refiners'/Gas Plant Operators' Monthly Petroleum Product Sales Report',
+        value: 'EIA-782A - Refiners/Gas Plant Operators Monthly Petroleum Product Sales Report',
+        label: 'EIA-782A - Refiners/Gas Plant Operators Monthly Petroleum Product Sales Report',
         anchor: 'eia-782a',
     
         }, {
-        value: 'EIA-782B - Resellers'/Retailers' Monthly Petroleum Product Sales Report (Suspended)',
-        label: 'EIA-782B - Resellers'/Retailers' Monthly Petroleum Product Sales Report (Suspended)',
+        value: 'EIA-782B - Resellers/Retailers Monthly Petroleum Product Sales Report (Suspended)',
+        label: 'EIA-782B - Resellers/Retailers Monthly Petroleum Product Sales Report (Suspended)',
         anchor: 'eia-782b',
     
         }, {
