@@ -384,7 +384,7 @@
 										}
 									}
 								</script>
-								<div class="reports-publication-search form-container">
+								<div class="reports-publication-search form-wrapper">
 									<textarea type="text" class="fancy-search-box" id="userInput" placeholder="Enter tags. Tags should be seperated with the + character"
 									 onfocus="this.placeholder=''" onblur="this.placeholder='Enter tags. Tags should be seperated with the + character'">
 									</textarea>
@@ -656,7 +656,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="nav-search search-panel form-container">
+			<div class="nav-search search-panel form-wrapper">
 				<div class="search">
 					<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
 						<input name="utf8" type="hidden" value="&#x2713;" />

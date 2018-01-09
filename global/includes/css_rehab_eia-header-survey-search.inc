@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-wrapper">
     <form>
         <input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
         <a href="" id="SurveySearch">

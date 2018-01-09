@@ -20,9 +20,9 @@ print "<a href=\"/petroleum/drilling/\">&lsaquo; See Current Issue</a>";
                                         <a href="pdf/dpr-full.pdf">full report</a><i class="ico pdf">PDF</i></div>
 </div>
 </div><div class="l-split-narrow gradient">
-                <span class="form-container-outer">
+                <span class="form-wrapper-outer">
                         <h4>Previous Issues</h4>
-                        <span class="form-container-inner">
+                        <span class="form-wrapper-inner">
                                 <form name="form" id="form">
 <label style="color:#000">month:&nbsp;</label>
 <select name="jumpMenu" size="1" id="jumpMenu" style="width:120px">\

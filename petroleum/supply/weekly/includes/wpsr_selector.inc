@@ -20,9 +20,9 @@
                 </div>
         </div>
         <div class="l-split-narrow gradient">
-                <span class="form-container-outer">
+                <span class="form-wrapper-outer">
                         <h4>Previous Issues</h4>
-                        <span class="form-container-inner">
+                        <span class="form-wrapper-inner">
                                 <form name="form" id="form">
                                                 <label>Week:</label>
                                         <select name="jumpMenu" id="jumpMenu">

@@ -22,9 +22,9 @@ a href="/petroleum/reports.cfm">&lsaquo; See All Petroleum & Other Liquids Repor
                 </div>
         </div>
         <div class="l-split-narrow gradient">
-                <span class="form-container-outer">
+                <span class="form-wrapper-outer">
                         <h4>Previous Issues</h4>
-                        <span class="form-container-inner">
+                        <span class="form-wrapper-inner">
                                 <form name="form" id="form">
                                         <label>Month:</label>
                                         <select name="jumpMenu" id="jumpMenu">

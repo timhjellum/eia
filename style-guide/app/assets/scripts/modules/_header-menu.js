@@ -52,15 +52,6 @@ function checkSize() {
 	// outer wrapper is set as 990px for laptop and desktop
 	var layoutWrapperWidth = $(".l-outer-wrapper").width();
 
-
-//	if ((layoutWrapperWidth) >= "988") {
-//		console.log(layoutWrapperWidth + " = laptop");
-//		$(".content").css("margin-top", "0");
-//	} else if ((layoutWrapperWidth >= 320) && (layoutWrapperWidth <= 987)) {
-//		console.log("no");
-//		$(".content").css("margin-top", "50px");
-//	}
-
 	if ((layoutWrapperWidth) >= "988") {
 		console.log(layoutWrapperWidth + " = laptop and desktop");
 		$('.fancybox-menu').fancybox({

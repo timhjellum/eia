@@ -175,10 +175,8 @@
                 margin: 55px 0 0 0;
                 transition: all 0.3s ease-in-out;
                 .nav-primary-item {
-                    height: 28px;
                     display: block;
                     float: left;
-                    //cursor: pointer;
                     margin: 0;
                     padding: 0;
                     border-right: 1px solid #809ca9;
@@ -200,7 +198,7 @@
                         font-size: 1rem;
                         color: #fff;
                         text-decoration: none;
-                        padding: 0 15px 0 12px;
+                        padding: 2px 15px 2px 12px;
                         display: block;
                     }
                 }
@@ -253,20 +251,29 @@
                 }
             }
         }
+        .logo {
+            padding: 0 12px;
+        }
 	   ////shrink 
 	   &.shrink {
-            height: 40px;
+            height: 50px;
             .navigation {
-                height: 40px;
+                height: 50px;
+
+                .logo {
+                    padding: 5px 12px;
+                }
+
+
                 .nav-primary {
-                    margin: 6px 0 0 0;
+                    margin: 16px 0 0 250px;
                 }
                 .nav-secondary {
                     display: none;
                 }
                 .search-panel {
                     opacity: 1;
-                    top: 3px;
+                    top: 16px;
                     transition: all 0.3s ease-in-out;
                 }
             }
@@ -277,3 +284,14 @@
         }
     }
 }
+
+
+
+
+ 
+/*
+- Set border radius to 0 on the page_tabs class (bottom corners of the overlay are currently rounded). This is one of the things jQuery is mucking with (see “.fancybox-wrap .fancybox-inner .page_tabs”).
+- The linked headers (e.g., petroleum, coal, electricity, etc.) in the overlay should underline on hover. See “.fancybox-wrap .fancybox-inner .page_tabs .nav-menu h3 a”. I think that “.page_tabs a” in the EIA_global.css file is overriding “a:hover” in the new css.
+- The spacing between the What’s New items still looks a little off as compared to the mockups: https://xd.adobe.com/view/5640b9cb-0166-4a60-8230-ca722a632cf9/screen/artboard8/f-news
+- The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
+*/

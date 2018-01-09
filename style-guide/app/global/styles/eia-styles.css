@@ -2911,7 +2911,7 @@ span.line-break {
   .nav-menu.follow-us p {
     margin: 8px 0 0 74px;
   }
-  .nav-menu .form-container {
+  .nav-menu .form-wrapper {
     margin: 6px 0 0 80px;
     width: 300px;
   }
@@ -2942,12 +2942,12 @@ span.line-break {
     top: 5px;
     right: 5px;
   }
-  .form-container {
+  .form-wrapper {
     display: block;
     width: 250px;
     position: relative;
   }
-  .form-container button.search-submit {
+  .form-wrapper button.search-submit {
     background-color: transparent;
     border: none;
     width: 19px;

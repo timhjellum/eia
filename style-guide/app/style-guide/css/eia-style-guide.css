@@ -2948,7 +2948,6 @@ span.line-break {
     transition: all 0.3s ease-in-out;
   }
   header .navigation .nav-primary .nav-primary-item {
-    height: 28px;
     display: block;
     float: left;
     margin: 0;
@@ -2976,7 +2975,7 @@ span.line-break {
     font-size: 1rem;
     color: #fff;
     text-decoration: none;
-    padding: 0 15px 0 12px;
+    padding: 2px 15px 2px 12px;
     display: block;
   }
   header .navigation .nav-secondary {
@@ -3024,27 +3023,39 @@ span.line-break {
   header .navigation .search-panel.show {
     top: 0;
   }
+  header .logo {
+    padding: 0 12px;
+  }
   header.shrink {
-    height: 40px;
+    height: 50px;
   }
   header.shrink .navigation {
-    height: 40px;
+    height: 50px;
+  }
+  header.shrink .navigation .logo {
+    padding: 5px 12px;
   }
   header.shrink .navigation .nav-primary {
-    margin: 6px 0 0 0;
+    margin: 16px 0 0 250px;
   }
   header.shrink .navigation .nav-secondary {
     display: none;
   }
   header.shrink .navigation .search-panel {
     opacity: 1;
-    top: 3px;
+    top: 16px;
     transition: all 0.3s ease-in-out;
   }
   header .print {
     display: none;
   }
 }
+/*
+- Set border radius to 0 on the page_tabs class (bottom corners of the overlay are currently rounded). This is one of the things jQuery is mucking with (see “.fancybox-wrap .fancybox-inner .page_tabs”).
+- The linked headers (e.g., petroleum, coal, electricity, etc.) in the overlay should underline on hover. See “.fancybox-wrap .fancybox-inner .page_tabs .nav-menu h3 a”. I think that “.page_tabs a” in the EIA_global.css file is overriding “a:hover” in the new css.
+- The spacing between the What’s New items still looks a little off as compared to the mockups: https://xd.adobe.com/view/5640b9cb-0166-4a60-8230-ca722a632cf9/screen/artboard8/f-news
+- The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
+*/
 @media (min-width: 1px) {
   ul.ui-widget-content {
     border: 1px solid #aaaaaa;
@@ -3245,6 +3256,7 @@ span.line-break {
   }
   .fancybox-wrap .fancybox-inner .page_tabs .nav-menu ul {
     margin: 8px 0 8px 56px;
+    padding-left: 40px;
     overflow: hidden;
   }
   .fancybox-wrap .fancybox-inner .page_tabs .nav-menu ul li {
@@ -3312,7 +3324,6 @@ span.line-break {
     display: block;
   }
   .fancybox-wrap .fancybox-inner .page_tabs .nav-menu.az-index .az-list {
-    margin-top: 1em;
     position: relative;
     display: block;
     margin-left: 80px;
@@ -3322,13 +3333,13 @@ span.line-break {
     display: inline-block;
     padding: 5px;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper {
     margin: 6px 0 0 80px;
     display: block;
     width: 250px;
     position: relative;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container input[type='text'] {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper input[type='text'] {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -3336,14 +3347,14 @@ span.line-break {
     font-size: 0.875rem;
     width: 250px;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container input.fancy-search-box {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper input.fancy-search-box {
     padding: 2px;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container textarea.fancy-search-box {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper textarea.fancy-search-box {
     width: 250px;
     height: auto;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container button.search-submit {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper button.search-submit {
     background-color: transparent;
     border: none;
     width: 19px;
@@ -3352,12 +3363,12 @@ span.line-break {
     top: 8px;
     right: -30px;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper .ui-autocomplete {
     position: absolute;
     cursor: default;
     background-color: #eee;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete .ui-menu-item {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper .ui-autocomplete .ui-menu-item {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -3365,14 +3376,14 @@ span.line-break {
     margin-bottom: .5em;
     font-size: 0.813rem;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
     background-color: #fff;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete.ui-widget-content {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper .ui-autocomplete.ui-widget-content {
     border: 1px solid #dddddd;
     color: #333;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-container .ui-autocomplete.ui-menu {
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu .form-wrapper .ui-autocomplete.ui-menu {
     list-style: none;
     padding: .5em;
     margin: 0;
@@ -3399,24 +3410,6 @@ span.line-break {
     position: fixed;
     bottom: 0;
     right: 0;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs div.az-index {
-    margin: 0 40px;
-    border-top: 1px solid #dadada;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs div.az-index p {
-    margin-bottom: 5px;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs div.az-index .az-list {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #333;
-    font-size: 1em;
-    margin-top: 10px;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs div.az-index .az-list a {
-    padding: 0 4px;
   }
   .fancybox-wrap .fancybox-inner .page_tabs .sources-uses.left,
   .fancybox-wrap .fancybox-inner .page_tabs .topics.left,
@@ -3491,6 +3484,24 @@ span.line-break {
     border: none;
     margin: 0 25px;
   }
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu.az-index {
+    margin: 0 40px;
+    border-top: 1px solid #dadada;
+  }
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu.az-index p {
+    margin-bottom: 5px;
+  }
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu.az-index .az-list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #333;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  .fancybox-wrap .fancybox-inner .page_tabs .nav-menu.az-index .az-list a {
+    padding: 0 4px;
+  }
   .close {
     top: -10px;
     right: -10px;
@@ -3502,7 +3513,6 @@ span.line-break {
     font-size: 0;
     float: left;
     transition: all 0.3s ease-in-out;
-    padding: 0 12px;
   }
   a.logo::before {
     content: ' ';
