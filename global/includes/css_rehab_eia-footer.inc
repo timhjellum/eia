@@ -74,7 +74,4 @@
         </ul>
     </div>
 </footer>
-
-
-<script src='<?php print HTTP; ?>global/scripts/eia-scripts.min.js'></script>
-
+<script src='/global/scripts/eia-scripts.min.js'></script>

@@ -1,26 +1,4 @@
-		<script>
-
-    </script>
-	<div id="sticker" class="social-fixed positionable">
-		<div class="addthis_toolbox addthis_default_style ">
-			<ul class="social shider">
-				<li>
-					<a href="https://twitter.com/EIAgov" target="_blank"><img src="https://www.eia.gov/global/images/icons/social-twitter.jpg" class="imgalpha"></a>
-					<div class="link twt">
-						<div class="tweet"><a class="addthis_button_tweet"></a></div>
-					</div>
-				</li>
-				<li>
-					<a href="https://www.facebook.com/eiagov" target="_blank"><img src="https://www.eia.gov/global/images/icons/social-facebook.jpg" class="imgalpha"></a>
-					<div class="link facebook">
-						<div id="share-facebook"><a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"></a></div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514b0d4a047a687f" async="async"></script>
-
+<?php include(ROOT.'global/includes/css_rehab_eia-social-sticker.inc'); ?>
 <div class="page-wrapper">
 	<header>
 		<div class="print">
@@ -59,15 +37,15 @@
 			<ul class="nav-secondary">
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="tools">
-						<i class="ico plus-greyishblue">+</i> Tools</a>
+						<i class="ico plus-greyish-blue">+</i> Tools</a>
 				</li>
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="learn">
-						<i class="ico plus-greyishblue">+</i> Learn About Energy</a>
+						<i class="ico plus-greyish-blue">+</i> Learn About Energy</a>
 				</li>
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="news">
-						<i class="ico plus-greyishblue">+</i> News</a>
+						<i class="ico plus-greyish-blue">+</i> News</a>
 				</li>
 			</ul>
 			<div class="nav-menu" style="display: none">

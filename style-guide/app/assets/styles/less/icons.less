@@ -854,7 +854,7 @@
 		*/
 
 		//////////////////////////////////////////////////////////////////
-		//  logo                                                       //
+		//  document                                                   //
 		////////////////////////////////////////////////////////////////
 
       	/*PDF Icon*/
@@ -947,29 +947,23 @@
 
 
 
-		/* define search icon in navigation */
-		//////////////////////////////////////////////////////////////////
-		//  logo                                                       //
-		////////////////////////////////////////////////////////////////
-//		&.magnifying-glass-mobile {
-//			background: url(../images/sprites/gc_sprite.svg);
-//			width: 30px;
-//			height: 30px;
-//			float: right;
-//			margin: 5px 12px;
-//			background-position: -382px -596px;
-//			background-size: 5200% 5200%;
-//		}
-//		&.magnifying-glass {
-//			background: url(../images/sprites/gc_sprite.svg);
-//			width: 21px;
-//			height: 21px;
-//			background-position: -246px -383px;
-//			background-size: 4800% 4800%;
-//			position: relative;
-//			top: 8px;
-//			margin-right: 5px
-//		}
+		&.plus-yellow {
+			.font;
+			.bold;
+			color: @eia-yellow;
+			font-size: 18px;
+		}
+		&.plus-greyish-blue {
+			.font;
+			.bold;
+			color: @greyish-blue;
+			font-size: 12px;
+		}
+		/*Accordion Menu + Icon*/
+		&.plus-eiablue {
+			.bold;
+			color: @eia-blue;
+		}
 
 
 
@@ -1017,11 +1011,6 @@
 			height: 17px;
 		}
 
-		/*Accordion Menu + Icon*/
-		&.plus-eiablue {
-			.bold;
-			color: @eia-blue;
-		}
 
 		/*Total Energy Visualization icons */
 		&.circle {
@@ -1126,19 +1115,6 @@
 
 
 @media @laptop {
-
-	&.plus-yellow {
-		.font;
-		.bold;
-		color: @eia-yellow;
-		font-size: 18px;
-	}
-	&.plus-greyish-blue {
-		.font;
-		.bold;
-		color: @greyish-blue;
-		font-size: 12px;
-	}
 	a {
 		&.logo {
 			&::before {

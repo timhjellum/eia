@@ -3056,11 +3056,33 @@ span.line-break {
 - The spacing between the What’s New items still looks a little off as compared to the mockups: https://xd.adobe.com/view/5640b9cb-0166-4a60-8230-ca722a632cf9/screen/artboard8/f-news
 - The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
 */
+.page_tabs.ui-widget-content {
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+}
+.page_tabs.ui-widget-content ul .ui-tabs-nav,
+.page_tabs.ui-widget-content ul ul.ui-corner-all,
+.page_tabs.ui-widget-content ul ul.ui-helper-reset,
+.page_tabs.ui-widget-content ul ul.ui-helper-clearfix,
+.page_tabs.ui-widget-content ul ul.ui-widget-header {
+  border: none  !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #333;
+  font-weight: normal;
+}
+.page_tabs.ui-widget-content ul li .ui-state-active,
+.page_tabs.ui-widget-content ul li .ui-widget-content .ui-state-active,
+.page_tabs.ui-widget-content ul li .ui-state-default,
+.page_tabs.ui-widget-content ul li .ui-widget-content .ui-state-default,
+.page_tabs.ui-widget-content ul li .ui-state-hover,
+.page_tabs.ui-widget-content ul li .ui-widget-content .ui-state-hover {
+  border: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  outline: none !important;
+}
 @media (min-width: 1px) {
-  ul.ui-widget-content {
-    border: 1px solid #aaaaaa;
-    background: #ffffff;
-  }
   ul.ui-widget {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -3126,15 +3148,6 @@ span.line-break {
     padding-bottom: 1em;
     margin-bottom: 2em;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper .ui-widget-content {
-    border: none !important;
-    background-color: transparent !important;
-    color: #333;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper .ui-widget {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-  }
   .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul {
     max-width: 90%;
     margin-right: 15px;
@@ -3142,28 +3155,11 @@ span.line-break {
     padding: 0;
     list-style-type: none;
   }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul.ui-tabs-nav {
-    margin: 0;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul.ui-corner-all {
-    margin: 0;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul.ui-helper-reset {
-    margin: 0;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul.ui-helper-clearfix {
-    margin: 0;
-  }
-  .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul.ui-widget-header {
-    border: none ;
-    background-color: transparent !important;
-    background-image: none !important;
-    color: #333;
-    font-weight: normal;
-  }
   .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul li {
     margin: 15px 15px 5px;
     display: inline-block;
+    border-bottom-width: 0 !important;
+    padding: 0;
   }
   .fancybox-wrap .fancybox-inner .page_tabs .tabs-wrapper ul li a {
     display: block;
@@ -3617,10 +3613,9 @@ span.line-break {
 			}
 		  }
 		  */
-    /* define search icon in navigation */
+    /*Accordion Menu + Icon*/
     /*subnav dropdown arrows*/
     /*Beta Interactive Icon */
-    /*Accordion Menu + Icon*/
     /*Total Energy Visualization icons */
   }
   .ico.ico-nav {
@@ -4510,6 +4505,34 @@ span.line-break {
   .ico.csv.grey {
     background: transparent url(../images/petroleum/supply/weekly/includes/csvgrey.png);
   }
+  .ico.plus-yellow {
+    font-weight: normal;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    color: #ffc702;
+    font-size: 18px;
+  }
+  .ico.plus-greyish-blue {
+    font-weight: normal;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    color: #a9c1da;
+    font-size: 12px;
+  }
+  .ico.plus-eiablue {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+    color: #189bd7;
+  }
   .ico .arrow-right {
     width: 0;
     height: 0;
@@ -4545,14 +4568,6 @@ span.line-break {
     text-indent: -9999px;
     width: 17px;
     height: 17px;
-  }
-  .ico.plus-eiablue {
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    color: #333;
-    color: #189bd7;
   }
   .ico.circle {
     width: 100px;
@@ -4626,26 +4641,6 @@ span.line-break {
   }
 }
 @media (min-width: 988px) {
-  .plus-yellow {
-    font-weight: normal;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    color: #333;
-    color: #ffc702;
-    font-size: 18px;
-  }
-  .plus-greyish-blue {
-    font-weight: normal;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    color: #333;
-    color: #a9c1da;
-    font-size: 12px;
-  }
   a.logo::before {
     content: ' ';
     height: 101px;
