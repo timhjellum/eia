@@ -1,37 +1,49 @@
+console.log("social sticker checking in...");
 
+class SocialSticker {
+    constructor() {
+//        this.searchPanel = $("#sticker.positionable");
+//        this.sticker = $('#sticker');
+//        this.logo = $('header');
+//        this.events();
 
-$(document).ready(function() {
-    function position() {
-        $('#sticker.positionable').position({
-            of: $('#outerX'),
-            my: 'left top',
-            at: 'right top'
-        });
-        console.log("dilly dilly");
-//        if ($('header').height() > 96) {
-//            console.log($('header').height());
-            $('#sticker').offset({top:$(window).scrollTop()+96});
-//        }
-//        if ($('header').height() < 40) {
-//            console.log($('header').height());
-//            $('#sticker').offset({top:$(window).scrollTop()+96});
-//        }
+            function position() {
+                $("#sticker.positionable").position({
+                    of: $(".l-outer-wrapper"),
+                    my: "left top",
+                    at: "right top"
+                });
+                $('#sticker').offset({top:$(window).scrollTop() + $('header').height()+2});
+            }
 
+            position();
+            $('#sticker').hover(function(event) {
+                $(this).stop(true,false).animate({right: '-125px', width: '160px'}, 'slow');
+            },function(event){
+                $(this).stop(true,true).animate({right: '0', width: '35px'}, 'slow');
+            });
+            $(window).scroll(function() {
+                position();
+            });
+            $(window).resize(function() {
+                position();
+            });
+            $('header').on('transitionend', function() {
+                position();
+            });
 
-
-        
 
     }
-    
-    position();
+/*
+    events() {
+        this.sticker.hover(this.hoverEvent.bind(this));       
+    }
+    hoverEvent() {
+        this.header.toggleClass('show');
+        this.logo.toggleClass('show');
+        this.searchPanel.toggleClass('show');
+    } 
+*/
 
-    $('#sticker').hover(function(event){
-        $(this).stop(true,false).animate({right: '-125px', width: '160px'}, 'slow');
-    },function(event){  
-        $(this).stop(true,true).animate({right: '0', width: '35px'}, 'slow');
-    });
-    $(window).scroll(function () {position();});
-    $(window).resize(function () {position();});
-});
-
-
+}
+export default SocialSticker;
