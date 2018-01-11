@@ -2962,62 +2962,89 @@ span.line-break {
   }
 }
 /*
-- Set border radius to 0 on the section-tabs class (bottom corners of the overlay are currently rounded). This is one of the things jQuery is mucking with (see “.fancybox-wrap .fancybox-inner .page_tabs”).
+- Set border radius to 0 on the section-tabs class (bottom corners of the overlay are currently rounded). This is one of the things jQuery is mucking with (see “.fancybox-wrap .fancybox-inner .section-tabs”).
 - The linked headers (e.g., petroleum, coal, electricity, etc.) in the overlay should underline on hover. See “.fancybox-wrap .fancybox-inner .section-tabs .nav-menu h3 a”. I think that “.section-tabs a” in the EIA_global.css file is overriding “a:hover” in the new css.
 - The spacing between the What’s New items still looks a little off as compared to the mockups: https://xd.adobe.com/view/5640b9cb-0166-4a60-8230-ca722a632cf9/screen/artboard8/f-news
 - The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
 */
-.section-tabs.ui-widget-content {
-  border: 1px solid #aaaaaa;
-  background: #ffffff;
-}
-.section-tabs.ui-widget-content ul .ui-tabs-nav,
-.section-tabs.ui-widget-content ul ul.ui-corner-all,
-.section-tabs.ui-widget-content ul ul.ui-helper-reset,
-.section-tabs.ui-widget-content ul ul.ui-helper-clearfix,
-.section-tabs.ui-widget-content ul ul.ui-widget-header {
-  border: none  !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  color: #333;
-  font-weight: normal;
-}
-.section-tabs.ui-widget-content ul li .ui-state-active,
-.section-tabs.ui-widget-content ul li .ui-widget-content .ui-state-active,
-.section-tabs.ui-widget-content ul li .ui-state-default,
-.section-tabs.ui-widget-content ul li .ui-widget-content .ui-state-default,
-.section-tabs.ui-widget-content ul li .ui-state-hover,
-.section-tabs.ui-widget-content ul li .ui-widget-content .ui-state-hover {
-  border: none !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  outline: none !important;
-}
+/*
+div.section-tabs
+    &.ui-tabs {}
+    &.ui-widget {}
+    &.ui-widget-content {}
+    &.ui-corner-all {}
+        div.tabs-wrapper {}
+            ul.ui-tabs-nav {}
+            ul.ui-helper-reset {}
+            ul.ui-helper-clearfix {}
+            ul.ui-widget-header {}
+            ul.ui-corner-all {}
+                li.ui-state-default {}
+                li.ui-corner-top {}
+                li.ui-tabs-active {}
+                li.ui-state-active {}
+*/
 @media (min-width: 1px) {
-  ul.ui-widget {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #333;
-  }
-  ul.ui-menu {
-    list-style: none;
-    padding: 5px 12px;
-    margin: 0;
-    font-size: 0.875rem;
-  }
-  ul.ui-autocomplete {
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: default;
-  }
-  ul.ui-autocomplete li {
-    margin-bottom: 8px;
-  }
-  ul.ui-autocomplete li:hover {
-    color: #189bd7;
-  }
+  /*
+    .ui-autocomplete {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: default;
+        li {
+            margin-bottom: 8px;
+            &:hover {
+                color: @eia-blue;
+            }
+        }
+    }
+    .section-tabs {
+        .ui-tabs { 
+            padding: 0 !important;
+            margin: 0 !important;
+            background-color: transparent !important;
+            background-image: none !important; 
+            .ui-tabs-nav { 
+                padding: 0 !important;
+                margin: 0 !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                li { 
+                    a { 
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        background-color: transparent !important;
+                        background-image: none !important;
+                    }
+                    &.ui-tabs-selected {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        background-color: transparent !important;
+                        background-image: none !important;
+                    }
+                }
+                .ui-tabs-panel {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    background-color: transparent !important;
+                    background-image: none !important;
+                }
+            }
+        }
+    }
+
+    //                    .ui-widget-content {
+    //                        border: none !important;
+    //                        background-color: transparent !important;
+    //                        color: #333;
+    //                    }
+    //                    .ui-widget {
+    //                        font-family: Arial, Helvetica, sans-serif;
+    //                        font-size: 1rem;
+    //                    }
+
+
+    */
   .fancybox-wrap {
     position: absolute;
     top: 0;
@@ -3034,25 +3061,6 @@ span.line-break {
   .fancybox-wrap .fancybox-inner .section-tabs {
     background-color: #fff;
     border-radius: 0;
-  }
-  .fancybox-wrap .fancybox-inner .section-tabs .sources-uses.left,
-  .fancybox-wrap .fancybox-inner .section-tabs .topics.left,
-  .fancybox-wrap .fancybox-inner .section-tabs .geography.left,
-  .fancybox-wrap .fancybox-inner .section-tabs .tools.left,
-  .fancybox-wrap .fancybox-inner .section-tabs .learn.left,
-  .fancybox-wrap .fancybox-inner .section-tabs .news.left {
-    width: 100%;
-    padding: 0 1em;
-    border: none;
-  }
-  .fancybox-wrap .fancybox-inner .section-tabs .sources-uses.right,
-  .fancybox-wrap .fancybox-inner .section-tabs .topics.right,
-  .fancybox-wrap .fancybox-inner .section-tabs .geography.right,
-  .fancybox-wrap .fancybox-inner .section-tabs .tools.right,
-  .fancybox-wrap .fancybox-inner .section-tabs .learn.right,
-  .fancybox-wrap .fancybox-inner .section-tabs .news.right {
-    width: 100%;
-    padding: 0 1em;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper {
     background: #003C57;
@@ -3075,7 +3083,7 @@ span.line-break {
   .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li a {
     display: block;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a {
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-default a {
     color: #fff;
     font-size: 1.5rem;
     font-family: "Times New Roman", "Times", serif;
@@ -3084,7 +3092,7 @@ span.line-break {
     box-sizing: border-box;
     position: relative;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a::before {
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-default a::before {
     box-sizing: inherit;
     content: '';
     position: absolute;
@@ -3099,17 +3107,36 @@ span.line-break {
     transform: scale3d(0, 1, 1);
     transition: transform 0.05s;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a:hover::before {
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-default a:hover::before {
     transform: scale3d(1, 1, 1);
     transition: transform 0.05s;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-active a {
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-active a {
     -webkit-box-shadow: 0 7px 0 -2px #ffc702;
     -moz-box-shadow: 0 7px 0 -2px #ffc702;
     box-shadow: 0 7px 0 -2px #ffc702;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-active a:hover {
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-active a:hover {
     transform: none !important;
+  }
+  .fancybox-wrap .fancybox-inner .section-tabs .sources-uses.left,
+  .fancybox-wrap .fancybox-inner .section-tabs .topics.left,
+  .fancybox-wrap .fancybox-inner .section-tabs .geography.left,
+  .fancybox-wrap .fancybox-inner .section-tabs .tools.left,
+  .fancybox-wrap .fancybox-inner .section-tabs .learn.left,
+  .fancybox-wrap .fancybox-inner .section-tabs .news.left {
+    width: 100%;
+    padding: 0 1em;
+    border: none;
+  }
+  .fancybox-wrap .fancybox-inner .section-tabs .sources-uses.right,
+  .fancybox-wrap .fancybox-inner .section-tabs .topics.right,
+  .fancybox-wrap .fancybox-inner .section-tabs .geography.right,
+  .fancybox-wrap .fancybox-inner .section-tabs .tools.right,
+  .fancybox-wrap .fancybox-inner .section-tabs .learn.right,
+  .fancybox-wrap .fancybox-inner .section-tabs .news.right {
+    width: 100%;
+    padding: 0 1em;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu {
     padding: 15px 0 10px 0;
@@ -3275,12 +3302,12 @@ span.line-break {
     top: 8px;
     right: -30px;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .form-wrapper .ui-autocomplete {
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .ui-autocomplete {
     position: absolute;
     cursor: default;
     background-color: #eee;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .form-wrapper .ui-autocomplete .ui-menu-item {
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .ui-autocomplete .ui-menu-item {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -3288,14 +3315,14 @@ span.line-break {
     margin-bottom: .5em;
     font-size: 0.813rem;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .form-wrapper .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
     background-color: #fff;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .form-wrapper .ui-autocomplete.ui-widget-content {
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .ui-autocomplete.ui-widget-content {
     border: 1px solid #dddddd;
     color: #333;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .form-wrapper .ui-autocomplete.ui-menu {
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu .ui-autocomplete.ui-menu {
     list-style: none;
     padding: .5em;
     margin: 0;

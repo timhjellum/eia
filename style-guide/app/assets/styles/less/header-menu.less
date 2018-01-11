@@ -25,14 +25,9 @@ div.section-tabs
 
 
 
-
-
-
-
-
-
 @media @mobile {
-    &.ui-autocomplete {
+    /*
+    .ui-autocomplete {
         position: absolute;
         top: 0;
         left: 0;
@@ -78,6 +73,19 @@ div.section-tabs
             }
         }
     }
+
+    //                    .ui-widget-content {
+    //                        border: none !important;
+    //                        background-color: transparent !important;
+    //                        color: #333;
+    //                    }
+    //                    .ui-widget {
+    //                        font-family: Arial, Helvetica, sans-serif;
+    //                        font-size: 1rem;
+    //                    }
+
+
+    */
     .fancybox-wrap {
         position: absolute;
         top: 0;
@@ -89,24 +97,13 @@ div.section-tabs
         .fancybox-inner {
             width: 100%;
             height: auto;
-            }
             .section-tabs {
                 background-color: #fff;
                 border-radius: 0;
-
                 .tabs-wrapper {
                     background: @eia-darker-blue;
                     padding-bottom: 1em;
                     margin-bottom: 2em;
-//                    .ui-widget-content {
-//                        border: none !important;
-//                        background-color: transparent !important;
-//                        color: #333;
-//                    }
-//                    .ui-widget {
-//                        font-family: Arial, Helvetica, sans-serif;
-//                        font-size: 1rem;
-//                    }
                     ul {
                         max-width: 90%;
                         margin-right: 15px;
@@ -116,60 +113,56 @@ div.section-tabs
                         li {
                             margin: 15px 15px 5px;
                             display: inline-block;
-                            
                             border-bottom-width: 0 !important;
-                            
                             padding: 0;
-
-
-
                             a {
                                 display: block;
                             }
-                        }
-                        .ui-state-default {
-                            a {
-                                //display: block;
-                                color: #fff;
-                                font-size: 1.5rem;
-                                font-family: "Times New Roman","Times",serif;
-                                font-weight: 100;
-                                // start underline effects
-                                border: 0;
-                                box-sizing: border-box;
-                                position: relative;
-                                &::before {
-                                    box-sizing: inherit;
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 100%;
-                                    top: 0;
-                                    left: 0;
-                                    transform-origin: center;
-                                    // ensure scaling is done from the center (expands outwards)
+//                        }
+                            &.ui-state-default {
+                                a {
+                                    //display: block;
+                                    color: #fff;
+                                    font-size: 1.5rem;
+                                    font-family: "Times New Roman","Times",serif;
+                                    font-weight: 100;
+                                    // start underline effects
+                                    border: 0;
+                                    box-sizing: border-box;
+                                    position: relative;
+                                    &::before {
+                                        box-sizing: inherit;
+                                        content: '';
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        transform-origin: center;
+                                        // ensure scaling is done from the center (expands outwards)
+                                        -webkit-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                        -moz-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                        box-shadow: 0 7px 0 -2px @eia-yellow;
+                                        transform: scale3d(0,1,1);
+                                        // shrink only width
+                                        transition: transform 0.05s;
+                                    }
+                                    &:hover::before {
+                                        transform: scale3d(1,1,1);
+                                        // show full-size
+                                        transition: transform 0.05s;
+                                    }
+                                }
+                            }
+                            &.ui-state-active {
+                                a {
+                                    // use box shadow to have flat left and right edges
                                     -webkit-box-shadow: 0 7px 0 -2px @eia-yellow;
                                     -moz-box-shadow: 0 7px 0 -2px @eia-yellow;
                                     box-shadow: 0 7px 0 -2px @eia-yellow;
-                                    transform: scale3d(0,1,1);
-                                    // shrink only width
-                                    transition: transform 0.05s;
-                                }
-                                &:hover::before {
-                                    transform: scale3d(1,1,1);
-                                    // show full-size
-                                    transition: transform 0.05s;
-                                }
-                            }
-                        }
-                        .ui-state-active {
-                            a {
-                                // use box shadow to have flat left and right edges
-                                -webkit-box-shadow: 0 7px 0 -2px @eia-yellow;
-                                -moz-box-shadow: 0 7px 0 -2px @eia-yellow;
-                                box-shadow: 0 7px 0 -2px @eia-yellow;
-                                &:hover {
-                                    transform: none !important;
+                                    &:hover {
+                                        transform: none !important;
+                                    }
                                 }
                             }
                         }
@@ -179,8 +172,6 @@ div.section-tabs
                     &.left {
                         width: 100%;
                         padding: 0 1em;
-                        // move to tablet
-                        //border-bottom: 1px solid @light-gray;
                         border: none;
                     }
                     &.right {
@@ -198,7 +189,6 @@ div.section-tabs
                     position: relative;
                     i {
                         position: absolute;
-                        //  left: 0;
                     }
                     h3 {
                         margin: 0 0 0 80px;
@@ -351,33 +341,33 @@ div.section-tabs
                                 top: 8px;
                                 right: -30px;
                             }
-                        } 
-                        .ui-autocomplete {
-                            position: absolute;
-                            cursor: default;
-                            background-color: #eee;
-                            .ui-menu-item {
-                                .font;
-                                margin-bottom: .5em;
-                                font-size: 0.813rem;
-                                .ui-menu-item-wrapper {
-                                    &:hover {
-                                        background-color: #fff;
-                                    }
+                        }
+                    }
+                    .ui-autocomplete {
+                        position: absolute;
+                        cursor: default;
+                        background-color: #eee;
+                        .ui-menu-item {
+                            .font;
+                            margin-bottom: .5em;
+                            font-size: 0.813rem;
+                            .ui-menu-item-wrapper {
+                                &:hover {
+                                    background-color: #fff;
                                 }
                             }
-                            &.ui-widget-content {
-                                border: 1px solid #dddddd;
-                                //background: #ffffff;
-                                color: @eia-dark-gray;
-                            }
-                            &.ui-menu {
-                                list-style: none;
-                                padding: .5em;
-                                margin: 0;
-                                display: block;
-                                outline: 0;
-                            }
+                        }
+                        &.ui-widget-content {
+                            border: 1px solid #dddddd;
+                            //background: #ffffff;
+                            color: @eia-dark-gray;
+                        }
+                        &.ui-menu {
+                            list-style: none;
+                            padding: .5em;
+                            margin: 0;
+                            display: block;
+                            outline: 0;
                         }
                     }
                 }
