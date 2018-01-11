@@ -8,16 +8,8 @@
 <meta name="description" content="Energy Information Administration - EIA - Official Energy Statistics from the U.S. Government" />
 
 
-<link href='<?php print HTTP; ?>global/styles/eia-styles.css' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="<?php print HTTP; ?>favicon.ico" />
-<link rel="icon" href="<?php print HTTP; ?>favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php print HTTP; ?>favicon.ico" />
-<?php
-$glossary_path = '<?php print HTTP; ?>/tools/glossary/';
-$faqs_path = '<?php print HTTP; ?>/tools/faqs/';
-?>
-<?php
-if(isset($pageTitle) && $pageTitle) {
-print "<title>" . $pageTitle . "</title>"; print PHP_EOL;
-}
-?>
+<link href='/global/styles/eia-styles.css' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="https://www.eia.gov/favicon.ico" />
+<link rel="icon" href="https://www.eia.gov/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://www.eia.gov/favicon.ico" />
+

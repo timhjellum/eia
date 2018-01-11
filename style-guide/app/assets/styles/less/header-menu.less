@@ -1,84 +1,83 @@
-.page_tabs {
-    // ul
-    &.ui-widget-content {
-        border: 1px solid #aaaaaa;
-        background: #ffffff;
-        ul {        
-            .ui-tabs-nav,
-            ul.ui-corner-all,
-            ul.ui-helper-reset,
-            ul.ui-helper-clearfix,
-            ul.ui-widget-header {
-                border: none  !important;
-                background-color: transparent !important; 
-                background-image: none !important; 
-                color: #333; 
-                font-weight: normal; 
-            }
-            li {
-                .ui-state-active,
-                .ui-widget-content .ui-state-active,
-                .ui-state-default,
-                .ui-widget-content .ui-state-default,
-                .ui-state-hover,
-                .ui-widget-content .ui-state-hover {
-                    border: none !important;
-                    background-color: transparent !important;
-                    background-image: none !important;
-                    outline: none !important;
-                }
-            }
-        }
-    }
-}
+
+
+
+
+
+/*
+div.section-tabs
+    &.ui-tabs {}
+    &.ui-widget {}
+    &.ui-widget-content {}
+    &.ui-corner-all {}
+        div.tabs-wrapper {}
+            ul.ui-tabs-nav {}
+            ul.ui-helper-reset {}
+            ul.ui-helper-clearfix {}
+            ul.ui-widget-header {}
+            ul.ui-corner-all {}
+                li.ui-state-default {}
+                li.ui-corner-top {}
+                li.ui-tabs-active {}
+                li.ui-state-active {}
+*/
+
+
+
+
+
+
+
+
+
 
 
 @media @mobile {
-
-
-
-
-
-     //.ui-state-active
-    ul {
-        &.ui-widget {
-            .font;
+    &.ui-autocomplete {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: default;
+        li {
+            margin-bottom: 8px;
+            &:hover {
+                color: @eia-blue;
+            }
         }
-
-        &.ui-menu {
-            list-style: none;
-            padding: 5px 12px;
-            margin: 0;
-            font-size: 0.875rem;
-            //display: block;
-            //outline: 0;
-        }
-        
-
-        &.ui-autocomplete {
-            position: absolute;
-            top: 0;
-            left: 0;
-            cursor: default;
-            li {
-                margin-bottom: 8px;
-                &:hover {
-                    color: @eia-blue;
+    }
+    .section-tabs {
+        .ui-tabs { 
+            padding: 0 !important;
+            margin: 0 !important;
+            background-color: transparent !important;
+            background-image: none !important; 
+            .ui-tabs-nav { 
+                padding: 0 !important;
+                margin: 0 !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                li { 
+                    a { 
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        background-color: transparent !important;
+                        background-image: none !important;
+                    }
+                    &.ui-tabs-selected {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        background-color: transparent !important;
+                        background-image: none !important;
+                    }
+                }
+                .ui-tabs-panel {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    background-color: transparent !important;
+                    background-image: none !important;
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
     .fancybox-wrap {
         position: absolute;
         top: 0;
@@ -90,22 +89,11 @@
         .fancybox-inner {
             width: 100%;
             height: auto;
-            .page_tabs {
+            }
+            .section-tabs {
                 background-color: #fff;
                 border-radius: 0;
-                .sources-uses, .topics, .geography, .tools, .learn, .news {
-                    &.left {
-                        width: 100%;
-                        padding: 0 1em;
-                        // move to tablet
-                        //border-bottom: 1px solid @light-gray;
-                        border: none;
-                    }
-                    &.right {
-                        width: 100%;
-                        padding: 0 1em;
-                    }
-                }
+
                 .tabs-wrapper {
                     background: @eia-darker-blue;
                     padding-bottom: 1em;
@@ -185,6 +173,19 @@
                                 }
                             }
                         }
+                    }
+                }
+                .sources-uses, .topics, .geography, .tools, .learn, .news {
+                    &.left {
+                        width: 100%;
+                        padding: 0 1em;
+                        // move to tablet
+                        //border-bottom: 1px solid @light-gray;
+                        border: none;
+                    }
+                    &.right {
+                        width: 100%;
+                        padding: 0 1em;
                     }
                 }
                 .nav-menu {
@@ -406,7 +407,7 @@
     }
     .fancybox-wrap {
         .fancybox-inner {
-            .page_tabs {
+            .section-tabs {
                 .sources-uses, .topics, .geography, .tools, .learn, .news {
                     &.left {
                         width: 50%;

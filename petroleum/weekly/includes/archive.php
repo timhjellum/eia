@@ -5584,8 +5584,8 @@ WTI and Brent prices to converge</a></td>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
-$(".page_tabs").tabs();
-$(".page_tabs > ul").after("<hr>");
+$(".section-tabs").tabs();
+$(".section-tabs > ul").after("<hr>");
 $("table a").click(function(){
 parent.window.location.assign(this);
 });

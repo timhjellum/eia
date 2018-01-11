@@ -30,9 +30,9 @@ $(document).ready(function() {
     //]]>
 
 	console.log("page tabs found");
-	$(".page_tabs").tabs();
-	$(".page_tabs").localScroll({
-		target:".page_tabs",
+	$(".section-tabs").tabs();
+	$(".section-tabs").localScroll({
+		target:".section-tabs",
 		duration:0,
 		hash:true
 	});

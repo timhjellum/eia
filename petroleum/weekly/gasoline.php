@@ -35,6 +35,6 @@ include(ROOT.'global/includes/css_rehab_eia-footer.inc');
 </html>
 <script type="text/javascript">
 $(document).ready(function(){
-$(".page_tabs").tabs();
+$(".section-tabs").tabs();
 });
 </script>

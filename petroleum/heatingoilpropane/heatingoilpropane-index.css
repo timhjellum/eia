@@ -2,10 +2,10 @@
 .ui-tabs .ui-tabs-nav li {
 margin-bottom: -1px;
 }
-div.page_tabs > div > img:first-child {
+div.section-tabs > div > img:first-child {
 margin-left: -10px;
 }
-.main_col div.page_tabs {
+.main_col div.section-tabs {
 margin-bottom: 20px;
 }
 div#wholesale_propane, div#wholesale_heating, div#distillate_supply, div#propane_supply {

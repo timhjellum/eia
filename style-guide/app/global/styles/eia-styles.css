@@ -2709,10 +2709,10 @@ span.line-break {
     left: -12345px;
     position: absolute;
   }
-  .fancybox-inner .page_tabs {
+  .fancybox-inner .section-tabs {
     background-color: #fff;
   }
-  .fancybox-inner .page_tabs input[type='text'] {
+  .fancybox-inner .section-tabs input[type='text'] {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -2720,48 +2720,48 @@ span.line-break {
     font-size: 0.875rem;
     width: 250px;
   }
-  .fancybox-inner .page_tabs input.fancy-search-box {
+  .fancybox-inner .section-tabs input.fancy-search-box {
     padding: 2px;
   }
-  .fancybox-inner .page_tabs .sources-uses.left,
-  .fancybox-inner .page_tabs .topics.left,
-  .fancybox-inner .page_tabs .geography.left,
-  .fancybox-inner .page_tabs .tools.left,
-  .fancybox-inner .page_tabs .learn.left,
-  .fancybox-inner .page_tabs .news.left {
+  .fancybox-inner .section-tabs .sources-uses.left,
+  .fancybox-inner .section-tabs .topics.left,
+  .fancybox-inner .section-tabs .geography.left,
+  .fancybox-inner .section-tabs .tools.left,
+  .fancybox-inner .section-tabs .learn.left,
+  .fancybox-inner .section-tabs .news.left {
     width: 100%;
     padding: 0 1em;
     border: none;
   }
-  .fancybox-inner .page_tabs .sources-uses.right,
-  .fancybox-inner .page_tabs .topics.right,
-  .fancybox-inner .page_tabs .geography.right,
-  .fancybox-inner .page_tabs .tools.right,
-  .fancybox-inner .page_tabs .learn.right,
-  .fancybox-inner .page_tabs .news.right {
+  .fancybox-inner .section-tabs .sources-uses.right,
+  .fancybox-inner .section-tabs .topics.right,
+  .fancybox-inner .section-tabs .geography.right,
+  .fancybox-inner .section-tabs .tools.right,
+  .fancybox-inner .section-tabs .learn.right,
+  .fancybox-inner .section-tabs .news.right {
     width: 100%;
     padding: 0 1em;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper {
+  .fancybox-inner .section-tabs .tabs-wrapper {
     background: #003C57;
     padding-bottom: 1em;
     margin-bottom: 2em;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul {
+  .fancybox-inner .section-tabs .tabs-wrapper ul {
     max-width: 90%;
     margin-right: 15px;
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul li {
+  .fancybox-inner .section-tabs .tabs-wrapper ul li {
     margin: 15px 15px 5px;
     display: inline-block;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul li a {
+  .fancybox-inner .section-tabs .tabs-wrapper ul li a {
     display: block;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul .ui-state-default a {
+  .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a {
     color: #fff;
     font-size: 1.5em;
     font-family: "Times New Roman", "Times", serif;
@@ -2770,7 +2770,7 @@ span.line-break {
     box-sizing: border-box;
     position: relative;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul .ui-state-default a::before {
+  .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a::before {
     box-sizing: inherit;
     content: '';
     position: absolute;
@@ -2785,16 +2785,16 @@ span.line-break {
     transform: scale3d(0, 1, 1);
     transition: transform 0.05s;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul .ui-state-default a:hover::before {
+  .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-default a:hover::before {
     transform: scale3d(1, 1, 1);
     transition: transform 0.05s;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul .ui-state-active a {
+  .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-active a {
     -webkit-box-shadow: 0 7px 0 -2px #ffc702;
     -moz-box-shadow: 0 7px 0 -2px #ffc702;
     box-shadow: 0 7px 0 -2px #ffc702;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper ul .ui-state-active a:hover {
+  .fancybox-inner .section-tabs .tabs-wrapper ul .ui-state-active a:hover {
     transform: none !important;
   }
   .nav-menu {
@@ -3077,14 +3077,14 @@ span.line-break {
   header .print {
     display: none;
   }
-  .fancybox-inner .page_tabs div.az-index {
+  .fancybox-inner .section-tabs div.az-index {
     margin: 0 40px;
     border-top: 1px solid #dadada;
   }
-  .fancybox-inner .page_tabs div.az-index p {
+  .fancybox-inner .section-tabs div.az-index p {
     margin-bottom: 5px;
   }
-  .fancybox-inner .page_tabs div.az-index .az-list {
+  .fancybox-inner .section-tabs div.az-index .az-list {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -3092,90 +3092,90 @@ span.line-break {
     font-size: 1em;
     margin-top: 10px;
   }
-  .fancybox-inner .page_tabs div.az-index .az-list a {
+  .fancybox-inner .section-tabs div.az-index .az-list a {
     padding: 0 4px;
   }
-  .fancybox-inner .page_tabs .sources-uses.left,
-  .fancybox-inner .page_tabs .topics.left,
-  .fancybox-inner .page_tabs .geography.left,
-  .fancybox-inner .page_tabs .tools.left,
-  .fancybox-inner .page_tabs .learn.left,
-  .fancybox-inner .page_tabs .news.left {
+  .fancybox-inner .section-tabs .sources-uses.left,
+  .fancybox-inner .section-tabs .topics.left,
+  .fancybox-inner .section-tabs .geography.left,
+  .fancybox-inner .section-tabs .tools.left,
+  .fancybox-inner .section-tabs .learn.left,
+  .fancybox-inner .section-tabs .news.left {
     width: 50%;
     padding-right: 18px;
     border-right: 1px solid #dadada;
     margin-bottom: 1em;
     float: left;
   }
-  .fancybox-inner .page_tabs .sources-uses.right,
-  .fancybox-inner .page_tabs .topics.right,
-  .fancybox-inner .page_tabs .geography.right,
-  .fancybox-inner .page_tabs .tools.right,
-  .fancybox-inner .page_tabs .learn.right,
-  .fancybox-inner .page_tabs .news.right {
+  .fancybox-inner .section-tabs .sources-uses.right,
+  .fancybox-inner .section-tabs .topics.right,
+  .fancybox-inner .section-tabs .geography.right,
+  .fancybox-inner .section-tabs .tools.right,
+  .fancybox-inner .section-tabs .learn.right,
+  .fancybox-inner .section-tabs .news.right {
     width: 50%;
     float: right;
   }
-  .fancybox-inner .page_tabs .sources-uses div:last-child,
-  .fancybox-inner .page_tabs .topics div:last-child,
-  .fancybox-inner .page_tabs .geography div:last-child,
-  .fancybox-inner .page_tabs .tools div:last-child,
-  .fancybox-inner .page_tabs .learn div:last-child,
-  .fancybox-inner .page_tabs .news div:last-child {
+  .fancybox-inner .section-tabs .sources-uses div:last-child,
+  .fancybox-inner .section-tabs .topics div:last-child,
+  .fancybox-inner .section-tabs .geography div:last-child,
+  .fancybox-inner .section-tabs .tools div:last-child,
+  .fancybox-inner .section-tabs .learn div:last-child,
+  .fancybox-inner .section-tabs .news div:last-child {
     border-bottom: none;
   }
-  .fancybox-inner .page_tabs .ui-widget-header {
+  .fancybox-inner .section-tabs .ui-widget-header {
     border: none;
   }
-  .fancybox-inner .page_tabs .tabs-wrapper {
+  .fancybox-inner .section-tabs .tabs-wrapper {
     background: #003C57;
     min-height: 95px;
     border: none;
     margin: 0 0 15px 0;
     padding: 30px 0 0 15px;
   }
-  .fancybox-inner .page_tabs .ui-state-default {
+  .fancybox-inner .section-tabs .ui-state-default {
     background: none;
     border: none;
   }
-  .fancybox-inner .page_tabs .ui-state-default a {
+  .fancybox-inner .section-tabs .ui-state-default a {
     color: #fff;
     font-size: 1.714em;
     font-family: "Times New Roman", Times, serif;
     font-weight: 200;
   }
-  .fancybox-inner .page_tabs .ui-state-active {
+  .fancybox-inner .section-tabs .ui-state-active {
     background: none;
   }
-  .fancybox-inner .page_tabs .ui-state-active a {
+  .fancybox-inner .section-tabs .ui-state-active a {
     border-bottom: 4px solid #ffc702;
   }
-  .fancybox-inner .page_tabs :focus {
+  .fancybox-inner .section-tabs :focus {
     outline: none;
   }
-  .fancybox-inner .page_tabs .ui-tabs-nav {
+  .fancybox-inner .section-tabs .ui-tabs-nav {
     margin: 0;
     padding: 0;
   }
-  .fancybox-inner .page_tabs .ui-tabs-nav li {
+  .fancybox-inner .section-tabs .ui-tabs-nav li {
     margin: 30px 22px 0 22px;
     display: inline-block;
   }
-  .fancybox-inner .page_tabs .ui-tabs-nav li a {
+  .fancybox-inner .section-tabs .ui-tabs-nav li a {
     padding: 0 0 4px 0;
     border-bottom-width: 4px;
     text-decoration: none;
   }
-  .fancybox-inner .page_tabs .ui-tabs-panel {
+  .fancybox-inner .section-tabs .ui-tabs-panel {
     padding: 0;
     border: none;
     margin: 0 25px;
   }
-  .fancybox-inner .page_tabs .reports-publication-search textarea.fancy-search-box {
+  .fancybox-inner .section-tabs .reports-publication-search textarea.fancy-search-box {
     width: 250px;
     height: auto;
   }
-  .fancybox-inner .page_tabs .reports-publication-search .arrow_go {
+  .fancybox-inner .section-tabs .reports-publication-search .arrow_go {
     position: relative;
     bottom: 3px;
   }

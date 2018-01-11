@@ -1,4 +1,4 @@
-<?php include(ROOT.'global/includes/css_rehab_eia-social-sticker.inc'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/global/includes/css_rehab_eia-social-sticker.inc'); ?>
 <div class="page-wrapper">
 	<header>
 		<div class="print">
@@ -49,7 +49,7 @@
 				</li>
 			</ul>
 			<div class="nav-menu" style="display: none">
-				<div class="page_tabs" id="menu">
+				<div class="section-tabs" id="menu">
 					<div class="tabs-wrapper">
 						<ul>
 							<li>

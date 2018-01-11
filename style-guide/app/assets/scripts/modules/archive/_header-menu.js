@@ -133,7 +133,7 @@ $(document).ready(function() {
 			case 'default':
 			options.active = 0;
 		}
-    	$('.page_tabs').tabs(options);
+    	$('.section-tabs').tabs(options);
 	});
 
 
@@ -181,7 +181,7 @@ function checkSize() {
 			//		}
 			//	},
 				afterLoad: function() {
-					$('.page_tabs').click(function() {
+					$('.section-tabs').click(function() {
 						$.fancybox.reposition();
 					});
 				}
@@ -211,7 +211,7 @@ function checkSize() {
 			//		}
 			//	},
 				afterLoad: function() {
-					$('.page_tabs').click(function() {
+					$('.section-tabs').click(function() {
 						$.fancybox.reposition();
 					});
 				}
