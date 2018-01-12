@@ -1,4 +1,4 @@
-<?php include($_SERVER['DOCUMENT_ROOT'].'/global/includes/css_rehab_eia-social-sticker.inc'); ?>
+<?php include(ROOT.'global/includes/css_rehab_eia-social-sticker.inc'); ?>
 <div class="page-wrapper">
 	<header>
 		<div class="print">

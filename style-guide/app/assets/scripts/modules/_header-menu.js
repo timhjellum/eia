@@ -9,7 +9,6 @@ $(document).ready(function() {
     // run on window resize
 	$(window).resize(checkSize);
 
-	console.log("dilly dilly");
 
 	$('.fancybox-menu').click(function () {
 		console.log("clicked");
@@ -39,8 +38,6 @@ $(document).ready(function() {
 		}
     	$('.section-tabs').tabs(options);
 	});
-
-
 });
 
 function checkSize() {
@@ -50,9 +47,9 @@ function checkSize() {
 	$('.logo').removeClass('show');
 
 	// outer wrapper is set as 990px for laptop and desktop
-	var layoutWrapperWidth = $(".l-outer-wrapper").width();
+	var layoutWrapperWidth = $("footer").width();
 
-	if ((layoutWrapperWidth) >= "988") {
+	if ((layoutWrapperWidth) >= 988) {
 		console.log(layoutWrapperWidth + " = laptop and desktop");
 		$('.fancybox-menu').fancybox({
 			type: 'inline',

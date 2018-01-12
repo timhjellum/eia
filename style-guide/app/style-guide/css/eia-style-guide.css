@@ -852,7 +852,7 @@ template {
     min-width: 989px;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .l-outer-wrapper {
     padding: 0 1px;
     max-width: 990px;
@@ -1967,7 +1967,7 @@ html {
     font-size: 1rem;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .l-column .container,
   .l-full-width-column .container,
   .l-main-column .container,
@@ -2193,7 +2193,7 @@ html {
     font-size: 0.875rem;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .l-column h1,
   .l-full-width-column h1,
   .l-main-column h1,
@@ -2659,7 +2659,7 @@ span.line-break {
     margin: 0;
     text-align: center;
     border-top: 1px solid #eee;
-    font-family: "Times New Roman", "Times", serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     color: #333;
@@ -2707,7 +2707,7 @@ span.line-break {
     font-size: 1.063rem;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .footer .address-bar {
     padding-bottom: 2em;
   }
@@ -2925,7 +2925,7 @@ span.line-break {
     position: absolute;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   header {
     height: 94px;
   }
@@ -3056,88 +3056,44 @@ span.line-break {
 - The spacing between the What’s New items still looks a little off as compared to the mockups: https://xd.adobe.com/view/5640b9cb-0166-4a60-8230-ca722a632cf9/screen/artboard8/f-news
 - The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
 */
-/*
-div.section-tabs
-    &.ui-tabs {}
-    &.ui-widget {}
-    &.ui-widget-content {}
-    &.ui-corner-all {}
-        div.tabs-wrapper {}
-            ul.ui-tabs-nav {}
-            ul.ui-helper-reset {}
-            ul.ui-helper-clearfix {}
-            ul.ui-widget-header {}
-            ul.ui-corner-all {}
-                li.ui-state-default {}
-                li.ui-corner-top {}
-                li.ui-tabs-active {}
-                li.ui-state-active {}
-*/
 @media (min-width: 1px) {
-  /*
-    .ui-autocomplete {
-        position: absolute;
-        top: 0;
-        left: 0;
-        cursor: default;
-        li {
-            margin-bottom: 8px;
-            &:hover {
-                color: @eia-blue;
-            }
-        }
-    }
-    .section-tabs {
-        .ui-tabs { 
-            padding: 0 !important;
-            margin: 0 !important;
-            background-color: transparent !important;
-            background-image: none !important; 
-            .ui-tabs-nav { 
-                padding: 0 !important;
-                margin: 0 !important;
-                background-color: transparent !important;
-                background-image: none !important;
-                li { 
-                    a { 
-                        padding: 0 !important;
-                        margin: 0 !important;
-                        background-color: transparent !important;
-                        background-image: none !important;
-                    }
-                    &.ui-tabs-selected {
-                        padding: 0 !important;
-                        margin: 0 !important;
-                        background-color: transparent !important;
-                        background-image: none !important;
-                    }
-                }
-                .ui-tabs-panel {
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    background-color: transparent !important;
-                    background-image: none !important;
-                }
-            }
-        }
-    }
-
-    //                    .ui-widget-content {
-    //                        border: none !important;
-    //                        background-color: transparent !important;
-    //                        color: #333;
-    //                    }
-    //                    .ui-widget {
-    //                        font-family: Arial, Helvetica, sans-serif;
-    //                        font-size: 1rem;
-    //                    }
-
-
-    */
+  .ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+  }
+  .ui-autocomplete li {
+    margin-bottom: 8px;
+  }
+  .ui-autocomplete li:hover {
+    color: #189bd7;
+  }
+  .section-tabs .ui-tabs,
+  .section-tabs .ui-tabs-nav,
+  .section-tabs .ui-tabs-selected,
+  .section-tabs .ui-tabs-panel,
+  .section-tabs .ui-widget-content,
+  .section-tabs .ui-widget,
+  .section-tabs .ui-widget-header,
+  .section-tabs .ui-state-active,
+  .section-tabs .ui-widget-content .ui-state-active,
+  .section-tabs .ui-state-default,
+  .section-tabs .ui-widget-content .ui-state-default,
+  .section-tabs.ui-tabs .ui-tabs-nav li a {
+    padding: 0;
+    margin: 0;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    color: transparent;
+    outline: none;
+  }
   .fancybox-wrap {
     position: absolute;
     top: 0;
     left: 0;
+    margin: 0 0 40px 0;
     z-index: 8020;
   }
   .fancybox-wrap * {
@@ -3171,12 +3127,12 @@ div.section-tabs
   }
   .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li a {
     display: block;
-  }
-  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-default a {
     color: #fff;
     font-size: 1.5rem;
     font-family: "Times New Roman", "Times", serif;
     font-weight: 100;
+  }
+  .fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li.ui-state-default a {
     border: 0;
     box-sizing: border-box;
     position: relative;
@@ -3426,7 +3382,7 @@ div.section-tabs
     right: 5px;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .fancybox-overlay {
     top: 0;
     left: 0;
@@ -3438,6 +3394,10 @@ div.section-tabs
     position: fixed;
     bottom: 0;
     right: 0;
+  }
+  .fancybox-wrap {
+    margin: 20px auto 40px auto;
+    width: 960px;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .sources-uses.left,
   .fancybox-wrap .fancybox-inner .section-tabs .topics.left,
@@ -4667,7 +4627,7 @@ div.section-tabs
     margin: -5px 12px;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   a.logo::before {
     content: ' ';
     height: 101px;
@@ -4741,7 +4701,7 @@ div.section-tabs
     display: block;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .ico.ico-footer {
     margin: 0 4px -6px 0;
     padding: 2px 0;
@@ -5220,7 +5180,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
     color: #b3c2c9;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .slider-home-top {
     border-bottom: solid 1px #d5d5d5;
     padding-bottom: 1px;
@@ -5506,7 +5466,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
   }
 }
 */
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .feature-section {
     margin: 12px 0 16px 0;
     border-bottom: 1px solid #668393;
@@ -5935,7 +5895,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
     display: none;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   #sticker {
     display: block;
     color: white;
@@ -6025,7 +5985,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
   }
 }
 */
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .subnav {
     width: 100%;
     height: 30px;
@@ -7039,17 +6999,17 @@ C:\localhost\global\images\icons\iconize\yim.gif
     font-size: 2.188rem;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .title-banner h1 {
     font-size: 2.125rem;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   .title-banner h1 {
     font-size: 2rem;
   }
 }
-@media (min-width: 1281px) {
+@media (min-width: 2300px) {
   .title-banner h1 {
     font-size: 2rem;
   }
@@ -7065,7 +7025,7 @@ C:\localhost\global\images\icons\iconize\yim.gif
     padding: 15px 0 0 20px;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .title-banner {
     border-bottom: solid 1px #ededee;
     background-repeat: no-repeat;
@@ -7915,7 +7875,7 @@ ul .square {
     padding-right: 0px;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .content-container {
     margin-bottom: 1em;
   }
@@ -7954,7 +7914,7 @@ ul .square {
     }
 }
 */
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .content-container ul {
     padding: 0;
     margin: 0;
@@ -8053,7 +8013,7 @@ ul .square {
     color: #333;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .features h2 {
     font-size: 1.375rem;
   }
@@ -8156,7 +8116,7 @@ ul .square {
     background: transparent url('/global/images/icons/bs_p.png');
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .reports-heading {
     padding-top: 10px;
     border-bottom: 1px solid #dadada;
@@ -8256,7 +8216,7 @@ ul .square {
     display: none;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .report-details {
     display: none;
   }
@@ -9179,7 +9139,7 @@ ul .square {
     font-weight: normal;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .blue-background .header h2 {
     font-size: 1.125rem;
   }
@@ -9327,7 +9287,7 @@ ul .square {
     color: #999;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .main-content-container h1 {
     font-size: 1.375rem;
   }
@@ -9431,7 +9391,7 @@ ul .square {
     border-bottom: 1px solid #ccc;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .dark-top-border-container li.header h2 {
     font-size: 1.3rem;
     margin: 14px 0 0 0;
@@ -9518,7 +9478,7 @@ ul .square {
     color: #189bd7;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .visualizations li {
     font-size: 13px;
     line-height: 1.313em;
@@ -9599,7 +9559,7 @@ ul .square {
     content: "\00a0\203A";
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .energy-education ul {
     margin: 0 0 2em .5em;
   }
@@ -10033,7 +9993,7 @@ ul .square {
     margin-right: .25em;
   }
 }
-@media (min-width: 988px) {
+@media (min-width: 1000px) {
   .legend {
     list-style-type: none;
     margin: 0;

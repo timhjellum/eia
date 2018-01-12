@@ -1,32 +1,5 @@
-
-
-
-
-
-/*
-div.section-tabs
-    &.ui-tabs {}
-    &.ui-widget {}
-    &.ui-widget-content {}
-    &.ui-corner-all {}
-        div.tabs-wrapper {}
-            ul.ui-tabs-nav {}
-            ul.ui-helper-reset {}
-            ul.ui-helper-clearfix {}
-            ul.ui-widget-header {}
-            ul.ui-corner-all {}
-                li.ui-state-default {}
-                li.ui-corner-top {}
-                li.ui-tabs-active {}
-                li.ui-state-active {}
-*/
-
-
-
-
-
 @media @mobile {
-    /*
+    
     .ui-autocomplete {
         position: absolute;
         top: 0;
@@ -39,57 +12,37 @@ div.section-tabs
             }
         }
     }
+
+
     .section-tabs {
-        .ui-tabs { 
-            padding: 0 !important;
-            margin: 0 !important;
+        .ui-tabs,
+        .ui-tabs-nav,
+        .ui-tabs-selected,
+        .ui-tabs-panel,
+        .ui-widget-content,
+        .ui-widget,
+        .ui-widget-header,
+        .ui-state-active,
+        .ui-widget-content .ui-state-active,
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        &.ui-tabs .ui-tabs-nav li a {
+            padding: 0;
+            margin: 0;
             background-color: transparent !important;
-            background-image: none !important; 
-            .ui-tabs-nav { 
-                padding: 0 !important;
-                margin: 0 !important;
-                background-color: transparent !important;
-                background-image: none !important;
-                li { 
-                    a { 
-                        padding: 0 !important;
-                        margin: 0 !important;
-                        background-color: transparent !important;
-                        background-image: none !important;
-                    }
-                    &.ui-tabs-selected {
-                        padding: 0 !important;
-                        margin: 0 !important;
-                        background-color: transparent !important;
-                        background-image: none !important;
-                    }
-                }
-                .ui-tabs-panel {
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    background-color: transparent !important;
-                    background-image: none !important;
-                }
-            }
+            background-image: none !important;
+            border: none !important;
+            color: transparent;
+            outline: none;
         }
     }
 
-    //                    .ui-widget-content {
-    //                        border: none !important;
-    //                        background-color: transparent !important;
-    //                        color: #333;
-    //                    }
-    //                    .ui-widget {
-    //                        font-family: Arial, Helvetica, sans-serif;
-    //                        font-size: 1rem;
-    //                    }
 
-
-    */
     .fancybox-wrap {
         position: absolute;
         top: 0;
         left: 0;
+        margin: 0 0 40px 0;
         z-index: 8020;
         * {
             box-sizing: border-box;
@@ -117,15 +70,15 @@ div.section-tabs
                             padding: 0;
                             a {
                                 display: block;
+                                //padding: .5em 1em;
+                                color: #fff;
+                                font-size: 1.5rem;
+                                font-family: "Times New Roman","Times",serif;
+                                font-weight: 100;
                             }
 //                        }
                             &.ui-state-default {
                                 a {
-                                    //display: block;
-                                    color: #fff;
-                                    font-size: 1.5rem;
-                                    font-family: "Times New Roman","Times",serif;
-                                    font-weight: 100;
                                     // start underline effects
                                     border: 0;
                                     box-sizing: border-box;
@@ -396,6 +349,8 @@ div.section-tabs
         right: 0;
     }
     .fancybox-wrap {
+        margin: 20px auto 40px auto;
+        width: 960px;
         .fancybox-inner {
             .section-tabs {
                 .sources-uses, .topics, .geography, .tools, .learn, .news {

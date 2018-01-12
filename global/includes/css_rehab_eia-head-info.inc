@@ -42,7 +42,7 @@ isset($highstock) || $highstock = '';
 
 <?php /* ***** start custom styles ***** */ ?>
 <link rel="stylesheet" href="/global/styles/screen.css" type="text/css" media="screen, projection"/>
-<link rel="stylesheet" href="/global/styles/eia-styles.min.css" />
+<link rel="stylesheet" href="/global/styles/eia-styles.css" />
 
 <!--[if lt IE 8]><link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection"><![endif]-->
