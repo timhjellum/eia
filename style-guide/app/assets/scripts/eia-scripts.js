@@ -1,5 +1,6 @@
 
 import HeaderMenu from './modules/_header-menu';
+new HeaderMenu();
 
 import HeaderSearch from './modules/_header-search';
 new HeaderSearch();

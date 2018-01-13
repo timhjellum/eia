@@ -37,12 +37,22 @@
         }
     }
 
-
     .fancybox-wrap {
         position: absolute;
         top: 0;
         left: 0;
-        margin: 0 0 40px 0;
+        //margin: 0 auto 40px auto;
+        width: 100%;
+        //border: 3px solid yellow;
+        &.fancybox-mobile {
+            //border: 3px solid yellow;
+            position: static !important;
+            margin: 0 auto 40px auto;
+            -moz-transition: opacity 0.4s ease-in-out;
+            -o-transition: opacity 0.4s ease-in-out;
+            -webkit-transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+        }
         z-index: 8020;
         * {
             box-sizing: border-box;
@@ -351,6 +361,14 @@
     .fancybox-wrap {
         margin: 20px auto 40px auto;
         width: 960px;
+        &.fancybox-desktop {
+            width: 960px !important;
+            //        border: 3px solid red;
+            -moz-transition: opacity 0.4s ease-in-out;
+            -o-transition: opacity 0.4s ease-in-out;
+            -webkit-transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+        }
         .fancybox-inner {
             .section-tabs {
                 .sources-uses, .topics, .geography, .tools, .learn, .news {
