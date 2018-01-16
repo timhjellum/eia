@@ -2424,20 +2424,22 @@ span.line-break {
     display: block;
     color: white;
     text-align: center;
-    right: 0;
     margin: 0 -36px 0 0;
     overflow: hidden;
-    float: right;
     width: 35px;
     height: 74px;
-    transition: opacity 0.25s ease-out;
-    -moz-transition: opacity 0.25s ease-out;
-    -webkit-transition: opacity 0.25s ease-out;
+    transition: 0.25s;
+    transition-timing-function: ease-out;
+    float: right;
   }
-  #sticker.shrink {
-    transition: opacity 0.25s ease-in;
-    -moz-transition: opacity 0.25s ease-in;
-    -webkit-transition: opacity 0.25s ease-in;
+  #sticker.hover {
+    width: 135px;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+  }
+  #sticker.positionable {
+    position: absolute;
+    display: block;
   }
   #sticker .social {
     position: relative;
@@ -2456,46 +2458,37 @@ span.line-break {
     position: relative;
     overflow: hidden;
   }
-  #sticker .social li.link {
-    padding: 5px 0 0 5px;
-  }
-  #sticker .social li.link.facebook {
-    padding-top: 8px;
-    height: 27px;
-    overflow: hidden;
-  }
-  #sticker .social li.link.pin {
-    top: 8px;
+  #sticker .social li > div {
+    padding: 6px 10px 0 10px;
+    width: 100px;
+    height: 35px;
   }
   #sticker .social li a {
     float: right;
   }
-  .lt-ie8 #sticker1 {
-    display: none;
-  }
+  /*
+	.lt-ie8 #sticker1 {
+		display: none;
+	}
+	*/
   div.addthis_toolbox {
     float: right;
   }
-  .positionable {
-    position: absolute;
-    display: block;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-  }
-  .tweet {
-    padding-top: 2px;
-  }
-  .facebook {
-    padding-top: 5px;
-  }
-  .imgalpha:hover {
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-  }
-  .addthis_button_facebook_like {
-    overflow: hidden;
-  }
+  /*
+	.tweet {
+		padding-top: 2px;
+	}
+	.facebook {
+		padding-top: 5px;
+	}
+	.imgalpha:hover {
+		opacity: 0.7;
+		filter: alpha(opacity=70); // For IE8 and earlier
+	}
+	.addthis_button_facebook_like {
+		overflow: hidden;
+	}
+	*/
 }
 @media (min-width: 1px) {
   .footer {
@@ -4642,6 +4635,20 @@ span.line-break {
     content: ' ';
     height: 16px;
     width: 16px;
+    display: block;
+  }
+  .ico.ico-sticker.facebook::before {
+    background: url('data:image/svg+xml,%3Csvg%20id%3D%22icon-facebook%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20id%3D%22Blue%22%20x%3D%225%22%20y%3D%225%22%20width%3D%2230%22%20height%3D%2230%22%20rx%3D%221.66%22%20ry%3D%221.66%22%20fill%3D%22%23189bd7%22/%3E%3Cpath%20id%3D%22f%22%20d%3D%22M25.7,35V23.38h3.9l0.58-4.53H25.7V16c0-1.31.36-2.21,2.24-2.21h2.4v-4a32.62,32.62,0,0,0-3.49-.18c-3.46,0-5.82,2.11-5.82,6v3.34H17.12v4.53H21V35H25.7Z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E') no-repeat center center;
+    content: ' ';
+    height: 35px;
+    width: 35px;
+    display: block;
+  }
+  .ico.ico-sticker.twitter::before {
+    background: url('data:image/svg+xml,%3Csvg%20id%3D%22icon-twitter%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%2230%22%20height%3D%2230%22%20rx%3D%221.71%22%20ry%3D%221.71%22%20fill%3D%22%23189bd7%22/%3E%3Cpath%20d%3D%22M31.33,13.18a8.89,8.89,0,0,1-2.55.7,4.46,4.46,0,0,0,1.95-2.45,8.87,8.87,0,0,1-2.81,1.08,4.44,4.44,0,0,0-7.67,3,4.49,4.49,0,0,0,.11,1,12.57,12.57,0,0,1-9.14-4.63,4.44,4.44,0,0,0,1.37,5.92,4.4,4.4,0,0,1-2-.56v0.06a4.43,4.43,0,0,0,3.55,4.35,4.45,4.45,0,0,1-2,.08,4.44,4.44,0,0,0,4.14,3.08,8.9,8.9,0,0,1-5.51,1.9,8.78,8.78,0,0,1-1.06-.06A12.61,12.61,0,0,0,29.13,16c0-.19,0-0.38,0-0.57A9,9,0,0,0,31.33,13.18Z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E') no-repeat center center;
+    content: ' ';
+    height: 35px;
+    width: 35px;
     display: block;
   }
 }

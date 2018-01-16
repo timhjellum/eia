@@ -8,42 +8,27 @@
 		display: block;
 		color: white;
 		text-align: center;
-		right: 0;
 		margin: 0 -36px 0 0;
 		overflow: hidden;
-		.right;
 		width: 35px;
 		height: 74px;
+		//	ease-in: when things are moving out.
+		//	ease-out: when things are moving in.
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+		.right;
+		&.hover {
+			width: 135px;
+			transition-timing-function: ease-in;
+			transition: 0.2s;
 
-		transition: opacity .25s ease-out;
-		-moz-transition: opacity .25s ease-out;
-		-webkit-transition: opacity .25s ease-out;
-		&.shrink {
-			transition: opacity .25s ease-in;
-			-moz-transition: opacity .25s ease-in;
-			-webkit-transition: opacity .25s ease-in;
 		}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		&.positionable {
+			position: absolute;
+			display: block;
+		}
 		.social {
 			position: relative;
 			width: 160px;
@@ -59,40 +44,35 @@
 				display: block;
 				position: relative;
 				overflow: hidden;
-				&.link {
-					padding: 5px 0 0 5px;
+				> div {
+					padding: 6px 10px 0 10px;
+					width: 100px;
+					height: 35px;
 				}
-				&.link {
-					&.facebook {
-						padding-top: 8px;
-						height: 27px;
-						overflow: hidden;
-					}
-				}
-				&.link {
-					&.pin {
-						top: 8px;
-					}
-				}
+
+
+
+
+
+				// tweet color hover:hover {
+				// background-color: #0c7abf;
+			
 				a {
 					.right;
 				}
+
 			}
 		}
 	}
+/*
 	.lt-ie8 #sticker1 {
 		display: none;
 	}
+	*/
 	div.addthis_toolbox {
 		.right;
 	}
-	.positionable {
-			position: absolute;
-			display: block;
-			right: 0;
-			bottom: 0;
-			text-align: center;
-	}
+/*
 	.tweet {
 		padding-top: 2px;
 	}
@@ -106,4 +86,5 @@
 	.addthis_button_facebook_like {
 		overflow: hidden;
 	}
+	*/
 }
