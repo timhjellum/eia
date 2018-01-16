@@ -2,7 +2,7 @@
 <div class="page-wrapper">
 	<header>
 		<div class="print">
-			<img src="https://www.eia.gov/global/images/logos/eia_logo_print.png" />
+			<img src="/global/images/logos/eia_logo_print.png" />
 		</div>
 		<nav class="navigation">
 			<a class="logo" href="/">
@@ -78,22 +78,22 @@
 							<div class="nav-menu petroleum">
 								<i class="ico ico-nav petroleum"></i>
 								<h3>
-									<a href='https://www.eia.gov/petroleum/'>Petroleum &amp; Other Liquids</a>
+									<a href='/petroleum/'>Petroleum &amp; Other Liquids</a>
 								</h3>
 								<p>Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/petroleum/weekly/'>This Week in Petroleum</a>
+										<a href='/petroleum/weekly/'>This Week in Petroleum</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/petroleum/supply/weekly/'>Weekly Petroleum Status Report</a>
+										<a href='/petroleum/supply/weekly/'>Weekly Petroleum Status Report</a>
 									</li>
 								</ul>
 							</div>
 							<div class="nav-menu natural-gas">
 								<i class="ico ico-nav natural-gas"></i>
 								<h3>
-									<a href='https://www.eia.gov/naturalgas/'>Natural Gas</a>
+									<a href='/naturalgas/'>Natural Gas</a>
 								</h3>
 								<p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p>
 								<ul>
@@ -101,7 +101,7 @@
 										<a href='http://ir.eia.gov/ngs/ngs.html'>Weekly Natural Gas Status Report</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/naturalgas/weekly/'>Natural Gas Weekly Update</a>
+										<a href='/naturalgas/weekly/'>Natural Gas Weekly Update</a>
 									</li>
 								</ul>
 							</div>
@@ -114,10 +114,10 @@
 								</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/electricity/monthly/'>Electric Power Monthly</a>
+										<a href='/electricity/monthly/'>Electric Power Monthly</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/electricity/data/browser/'>Electricity Data Browser</a>
+										<a href='/electricity/data/browser/'>Electricity Data Browser</a>
 									</li>
 								</ul>
 							</div>
@@ -129,10 +129,10 @@
 								<p>Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/consumption/data.php#rec'>RECS 2009</a>
+										<a href='/consumption/data.php#rec'>RECS 2009</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/consumption/data.php#cec'>CBECS</a>
+										<a href='/consumption/data.php#cec'>CBECS</a>
 									</li>
 								</ul>
 							</div>
@@ -146,10 +146,10 @@
 								<p>Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/coal/production/quarterly/'>Quarterly Coal Report</a>
+										<a href='/coal/production/quarterly/'>Quarterly Coal Report</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/beta/coal/data/browser/'>Coal Data Browser</a>
+										<a href='/beta/coal/data/browser/'>Coal Data Browser</a>
 									</li>
 								</ul>
 							</div>
@@ -161,7 +161,7 @@
 								<p>Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/renewable/afv/'>Alternative Fuel Vehicle Browser</a>
+										<a href='/renewable/afv/'>Alternative Fuel Vehicle Browser</a>
 									</li>
 								</ul>
 							</div>
@@ -173,7 +173,7 @@
 								<p>Uranium fuel, nuclear reactors, generation, spent fuel.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/nuclear/outages/'>Status of Nuclear Outages</a>
+										<a href='/nuclear/outages/'>Status of Nuclear Outages</a>
 									</li>
 								</ul>
 							</div>
@@ -185,10 +185,10 @@
 								<p>Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/totalenergy/data/monthly/'>Monthly Energy Review</a>
+										<a href='/totalenergy/data/monthly/'>Monthly Energy Review</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/totalenergy/data/annual/i'>Annual Energy Review</a>
+										<a href='/totalenergy/data/annual/i'>Annual Energy Review</a>
 									</li>
 								</ul>
 							</div>
@@ -206,13 +206,13 @@
 								</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/outlooks/steo/'>Short Term Energy Outlook</a>
+										<a href='/outlooks/steo/'>Short Term Energy Outlook</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/analysis/reports.php/#T186,T128'>Annual Energy Outlook</a>
+										<a href='/analysis/reports.php/#T186,T128'>Annual Energy Outlook</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/analysis/reports.php/#T186,T132'>International Energy Outlook</a>
+										<a href='/analysis/reports.php/#T186,T132'>International Energy Outlook</a>
 									</li>
 								</ul>
 							</div>
@@ -224,7 +224,7 @@
 								<p>Financial market analysis and financial data for major energy companies.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/finance/data.php#mpurc'>Market Prices and Uncertainty Report</a>
+										<a href='/finance/data.php#mpurc'>Market Prices and Uncertainty Report</a>
 									</li>
 									<li>
 										<a href='/'>Energy &amp; Financial Markets: What Drives Crude Oil Prices?</a>
@@ -244,7 +244,7 @@
 										<a href='/'>Energy-Related Carbon Dioxide Emissions at the State Level, 2000-2013</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/environment/emissions/state/'>State Carbon Dioxide Emissions</a>
+										<a href='/environment/emissions/state/'>State Carbon Dioxide Emissions</a>
 									</li>
 								</ul>
 							</div>
@@ -261,7 +261,7 @@
 								<p>State energy information, including overviews, rankings, data, and analyses.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/state/seds/'>State Energy Data System (SEDS)</a>
+										<a href='/state/seds/'>State Energy Data System (SEDS)</a>
 									</li>
 								</ul>
 							</div>
@@ -273,13 +273,13 @@
 								<p>Maps by energy source and topic, includes forecast maps.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/state/maps.php'>U.S. Energy Mapping System</a>
+										<a href='/state/maps.php'>U.S. Energy Mapping System</a>
 									</li>
 									<li>
 										<a href='/'>Gulf of Mexico</a>
 									</li>
 									<li>
-										<a href='https://www.eia.gov/special/disruptions/'>Energy Disruptions</a>
+										<a href='/special/disruptions/'>Energy Disruptions</a>
 									</li>
 								</ul>
 							</div>
@@ -293,7 +293,7 @@
 								<p>International energy information, including overviews, rankings, data, and analyses.</p>
 								<ul>
 									<li>
-										<a href='https://www.eia.gov/beta/international/data/browser/'>International Energy Statistics</a>
+										<a href='/beta/international/data/browser/'>International Energy Statistics</a>
 									</li>
 								</ul>
 							</div>
@@ -376,7 +376,7 @@
 										// for each element in the array of search terms, call the function to trim wrap with "" and encode
 										forEach(searchTerms, addCurTermToResult);
 										// update the output display
-										window.location.href = 'https://www.eia.gov/reports/#/' + result;
+										window.location.href = '/reports/#/' + result;
 										function addCurTermToResult(curTerm, index) {
 											if (index != 0)                     // put a comma before all terms except the first one
 												result += ',';

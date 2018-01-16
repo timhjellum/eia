@@ -1251,22 +1251,28 @@
 	}
 	.ico {
 		&.ico-sticker {
+			background-color: @eia-blue;
+			display: block;
+			position: relative;
 			&.facebook {
 				&::before {
 					.icon-facebook();
-					.controls-icon(35px, 35px);
+					.controls-icon(39px, 42px);
+					top: -10px;
+					right: 0px;
 				}
 			}
 			&.twitter {
 				&::before {
 					.icon-twitter();
-					.controls-icon(35px, 35px);
+					.controls-icon(42px, 42px);
+					top: -3px;
+					right: -3px;
 				}
 			}
 		}
 	}
 }
-
 
 //////////////////////////////////////////////////////////////////
 //  accordion                                                  //
