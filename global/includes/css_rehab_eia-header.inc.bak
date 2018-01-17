@@ -156,7 +156,7 @@
 							<div class="nav-menu renewable">
 								<i class="ico ico-nav renewable"></i>
 								<h3>
-									<a href="/renewable/">Renewable &amp; Alternative Fuels</a>
+									<a href="renewable/">Renewable &amp; Alternative Fuels</a>
 								</h3>
 								<p>Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
 								<ul>
@@ -168,7 +168,7 @@
 							<div class="nav-menu nuclear">
 								<i class="ico ico-nav nuclear"></i>
 								<h3>
-									<a href="/nuclear/">Nuclear &amp; Uranium</a>
+									<a href="nuclear/">Nuclear &amp; Uranium</a>
 								</h3>
 								<p>Uranium fuel, nuclear reactors, generation, spent fuel.</p>
 								<ul>
@@ -180,7 +180,7 @@
 							<div class="nav-menu total-energy">
 								<i class="ico ico-nav total-energy"></i>
 								<h3>
-									<a href="/totalenergy/">Total Energy</a>
+									<a href="totalenergy/">Total Energy</a>
 								</h3>
 								<p>Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
 								<ul>
@@ -200,7 +200,7 @@
 							<div class="nav-menu analysis">
 								<i class="ico ico-nav analysis-projections"></i>
 								<h3>
-									<a href="/analysis/">Analysis &amp; Projections</a>
+									<a href="analysis/">Analysis &amp; Projections</a>
 								</h3>
 								<p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, Congressional reports.
 								</p>
@@ -219,7 +219,7 @@
 							<div class="nav-menu markets-finance">
 								<i class="ico ico-nav markets-finance"></i>
 								<h3>
-									<a href="/finance/">Markets &amp; Finance</a>
+									<a href="finance/">Markets &amp; Finance</a>
 								</h3>
 								<p>Financial market analysis and financial data for major energy companies.</p>
 								<ul>
@@ -600,7 +600,7 @@
 							<div class="nav-menu whats-new">
 								<i class="ico ico-nav whats-new"></i>
 								<h3>
-									<a href="/about/new/">What's New?</a>
+									<a href="about/new/">What's New?</a>
 								</h3>
 								<?php include ('/global/includes/css_rehab_eia-header-whats-new.inc'); ?>
 							</div>
