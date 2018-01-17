@@ -6,19 +6,20 @@
 @media @laptop {
 	#sticker {
 		display: block;
-		color: white;
-		text-align: center;
-		//	margin: 0 -36px 0 0;
 		overflow: hidden;
-		width: 39px;
-		//	height: 88px;
+		margin: 0 0 0 0 !important;
+		width: 42px !important;
+		height: 84px !important;
 		//	ease-in: when things are moving out.
 		//	ease-out: when things are moving in.
 		transition: 0.25s;
 		transition-timing-function: ease-out;
 		.right;
+		* {
+            box-sizing: border-box;
+        }
 		&.hover {
-			width: 135px;
+			width: 135px !important;
 			transition-timing-function: ease-in;
 			transition: 0.2s;
 		}
@@ -41,9 +42,9 @@
 				display: block;
 				position: relative;
 				overflow: hidden;
-				width: 135px;
+				width: 160px;
 				> div {
-					padding: 8px 52px 0 0;
+					margin: 6px 52px 0 0;
 					height: 39px;
 				}		
 				a {

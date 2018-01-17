@@ -156,7 +156,7 @@
 							<div class="nav-menu renewable">
 								<i class="ico ico-nav renewable"></i>
 								<h3>
-									<a href="renewable/">Renewable &amp; Alternative Fuels</a>
+									<a href="/renewable/">Renewable &amp; Alternative Fuels</a>
 								</h3>
 								<p>Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
 								<ul>
@@ -168,7 +168,7 @@
 							<div class="nav-menu nuclear">
 								<i class="ico ico-nav nuclear"></i>
 								<h3>
-									<a href="nuclear/">Nuclear &amp; Uranium</a>
+									<a href="/nuclear/">Nuclear &amp; Uranium</a>
 								</h3>
 								<p>Uranium fuel, nuclear reactors, generation, spent fuel.</p>
 								<ul>
@@ -180,7 +180,7 @@
 							<div class="nav-menu total-energy">
 								<i class="ico ico-nav total-energy"></i>
 								<h3>
-									<a href="totalenergy/">Total Energy</a>
+									<a href="/totalenergy/">Total Energy</a>
 								</h3>
 								<p>Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
 								<ul>
@@ -200,7 +200,7 @@
 							<div class="nav-menu analysis">
 								<i class="ico ico-nav analysis-projections"></i>
 								<h3>
-									<a href="analysis/">Analysis &amp; Projections</a>
+									<a href="/analysis/">Analysis &amp; Projections</a>
 								</h3>
 								<p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, Congressional reports.
 								</p>
@@ -219,7 +219,7 @@
 							<div class="nav-menu markets-finance">
 								<i class="ico ico-nav markets-finance"></i>
 								<h3>
-									<a href="finance/">Markets &amp; Finance</a>
+									<a href="/finance/">Markets &amp; Finance</a>
 								</h3>
 								<p>Financial market analysis and financial data for major energy companies.</p>
 								<ul>
@@ -307,7 +307,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<?php include ('/global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu data-tools-model">
 								<i class="ico ico-nav data-tools-model"></i>
@@ -399,7 +399,7 @@
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
 								</h3>
-								<?php include ('/global/includes/css_rehab_eia-header-survey-search.inc'); ?>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-survey-search.inc'); ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico ico-nav email-complex"></i>
@@ -495,7 +495,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<?php include ('/global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include(ROOT.'global/includes/css_rehab_eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu faq">
 								<i class="ico ico-nav faq"></i>
@@ -602,7 +602,7 @@
 								<h3>
 									<a href="about/new/">What's New?</a>
 								</h3>
-								<?php include ('/global/includes/css_rehab_eia-header-whats-new.inc'); ?>
+								<div id="whatsnew3"></div>
 							</div>
 							<div class="nav-menu upcoming">
 								<i class="ico ico-nav upcoming"></i>

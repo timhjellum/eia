@@ -2196,7 +2196,7 @@ span.line-break {
     display: table;
     border-right: 1px solid #dbdfe5;
     border-left: 1px solid #dbdfe5;
-    padding: 106px 15px 50px 15px;
+    padding: 106px 15px 0 15px;
     max-width: 988px;
     min-width: 988px;
     width: 988px;
@@ -2422,16 +2422,19 @@ span.line-break {
 @media (min-width: 1000px) {
   #sticker {
     display: block;
-    color: white;
-    text-align: center;
     overflow: hidden;
-    width: 39px;
+    margin: 0 0 0 0 !important;
+    width: 42px !important;
+    height: 84px !important;
     transition: 0.25s;
     transition-timing-function: ease-out;
     float: right;
   }
+  #sticker * {
+    box-sizing: border-box;
+  }
   #sticker.hover {
-    width: 135px;
+    width: 135px !important;
     transition-timing-function: ease-in;
     transition: 0.2s;
   }
@@ -2453,10 +2456,10 @@ span.line-break {
     display: block;
     position: relative;
     overflow: hidden;
-    width: 135px;
+    width: 160px;
   }
   #sticker .social li > div {
-    padding: 8px 52px 0 0;
+    margin: 6px 52px 0 0;
     height: 39px;
   }
   #sticker .social li a {
@@ -2990,7 +2993,13 @@ span.line-break {
     color: transparent;
     outline: none;
   }
-  .section-tabs .ui-widget-content a {
+  .section-tabs.ui-widget-content {
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    color: transparent;
+  }
+  .section-tabs.ui-widget-content a {
     color: transparent;
   }
   .fancybox-wrap {
@@ -4660,7 +4669,6 @@ span.line-break {
     display: block;
     top: -3px;
     right: -3px;
-    background-size: 120%;
   }
 }
 .expand-all {
