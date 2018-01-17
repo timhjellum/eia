@@ -1,3 +1,4 @@
+/*
 import $ from 'jquery';
 
 console.log('whats new checking in...');
@@ -8,5 +9,6 @@ class HeaderWhatsNew {
     }
 }
 export default HeaderWhatsNew;
+*/
 
 
