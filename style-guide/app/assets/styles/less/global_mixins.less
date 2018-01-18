@@ -313,8 +313,6 @@
 
 
 
-
-
 /*-Submit search icon ----------------*/
 
 .search-submit(@fill-color: @eia-blue) {
@@ -326,7 +324,7 @@
 	@icon-filter-svg: ~'<svg id="icon-analysis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29"><g id="analysis-path"><path id="path" d="M21.8,1.7H1.9V27.3H23.1V1.7H21.8ZM21.6,25.8H3.4V3.2H21.6V25.8Z" fill="@{fill-color}"/><rect id="rectangle" x="5" y="4.7" width="7.5" height="1.51" fill="@{fill-color}"/><rect id="rectangle-2" x="5" y="7.7" width="7.5" height="1.51" fill="@{fill-color}"/><rect id="rectangle-3" x="5" y="10.7" width="15.1" height="1.51" fill="@{fill-color}"/><rect id="rectangle-4" x="5" y="13.7" width="15.1" height="1.51" fill="@{fill-color}"/><rect id="rectangle-5" x="14" y="16.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-6" x="14" y="19.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-7" x="14" y="22.8" width="6" height="1.51" fill="@{fill-color}"/><rect id="rectangle-8" x="14" y="4.7" width="6" height="4.53" fill="@{fill-color}"/><path id="path-2" d="M6.5,24.3H5V16.8H6.5v6H8V18.3H9.5v1.5H11v3h1.5v1.5h-6Z" fill="@{fill-color}"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }
-.icon-cancel(@fill-color: @eia-blue, @fill-opacity: 0.8) {
+.icon-cancel(@fill-color: @eia-blue, @fill-opacity: 1) {
     @icon-filter-svg: ~'<svg id="icon-cancel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><g id="cancel-path"><circle cx="18" cy="18" r="16.5" fill="@{fill-color}" opacity="@{fill-opacity}"/><polygon points="25.8 22.7 21.1 18 25.8 13.3 22.7 10.2 18 14.9 13.3 10.2 10.2 13.3 14.9 18 10.2 22.7 13.3 25.8 18 21.1 22.7 25.8 25.8 22.7" fill="#ffffff"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }

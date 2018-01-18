@@ -302,7 +302,7 @@
 					<!--Tools-->
 					<div id="tools">
 						<div class="tools left">
-							<div class="nav-menu eia-glossary" style="width: 100%">
+							<div class="nav-menu eia-glossary">
 								<i class="ico ico-nav eia-glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
@@ -353,7 +353,7 @@
 							</div>
 						</div>
 						<div class="tools right">
-							<div class="nav-menu reports" style="width: 100%">
+							<div class="nav-menu reports">
 								<i class="ico ico-nav reports"></i>
 								<h3>
 									<a href="reports/">All Reports &amp; Publications</a>
@@ -394,7 +394,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="nav-menu survey-forms" style="width: 100%">
+							<div class="nav-menu survey-forms">
 								<i class="ico ico-nav survey-forms"></i>
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
@@ -490,7 +490,7 @@
 
 						</div>
 						<div class="learn right">
-							<div class="nav-menu eia-glossary" style="width: 100%">
+							<div class="nav-menu eia-glossary">
 								<i class="ico ico-nav eia-glossary"></i>
 								<h3>
 									<a href="tools/glossary/">Glossary</a>

@@ -80,7 +80,7 @@ class HeaderMenu {
 
 			$('.fancybox-menu').fancybox({
 				type: 'inline',
-				//width: 960,
+				scrolling: no,
 				margin: [0, 0, 0, 0],
 				height: 'auto',
 				padding: 0,

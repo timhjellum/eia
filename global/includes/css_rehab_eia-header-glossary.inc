@@ -1,12 +1,10 @@
 <script language="javascript">
-	<!--
 	function validate(){	
 		if(document.forms.frmGlossary.glossary.value == "") {
 			alert("You must enter a value in the search term field!"); 
 		}
 		document.frmGlossary.submit();	
 	} 	
-	//-->
 </script>
 <div class="form-wrapper">
     <form action="https://www.eia.gov/tools/glossary/index.php" method="post" name="frmGlossary">
