@@ -1,0 +1,80 @@
+@media @mobile {
+	#sticker {
+		display: none;
+	}
+}
+@media @laptop {
+	#sticker {
+		display: block;
+		overflow: hidden;
+		margin: 0 0 0 0 !important;
+		width: 42px !important;
+		height: 84px !important;
+		//	ease-in: when things are moving out.
+		//	ease-out: when things are moving in.
+		transition: 0.25s;
+		transition-timing-function: ease-out;
+		.right;
+		* {
+            box-sizing: border-box;
+        }
+		&.hover {
+			width: 135px !important;
+			transition-timing-function: ease-in;
+			transition: 0.2s;
+		}
+		&.positionable {
+			position: absolute;
+			display: block;
+		}
+		.social {
+			position: relative;
+//			width: 160px;
+			margin: 0;
+			padding: 0;
+			float: none;
+			li {
+				clear: left;
+				margin-bottom: 2px;
+				height: 39px;
+//				line-height: 35px;
+				background: #F6F6F6;
+				display: block;
+				position: relative;
+				overflow: hidden;
+				width: 160px;
+				> div {
+					margin: 6px 52px 0 0;
+					height: 39px;
+				}		
+				a {
+					.right;
+				}
+
+			}
+		}
+	}
+/*
+	.lt-ie8 #sticker1 {
+		display: none;
+	}
+	*/
+	div.addthis_toolbox {
+		.right;
+	}
+/*
+	.tweet {
+		padding-top: 2px;
+	}
+	.facebook {
+		padding-top: 5px;
+	}
+	.imgalpha:hover {
+		opacity: 0.7;
+		filter: alpha(opacity=70); // For IE8 and earlier
+	}
+	.addthis_button_facebook_like {
+		overflow: hidden;
+	}
+	*/
+}

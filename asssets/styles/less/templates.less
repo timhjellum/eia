@@ -1,0 +1,799 @@
+.pagecontent {
+  display: inline-block;
+  margin-top: 26px;
+  width: 100%;
+
+  .main-col {
+    .conference-speakers {
+      width: 100%;
+      .speaker-img {
+        display: inline-block;
+        width: 18.5%;
+        margin-right: 10px;
+        vertical-align: top;
+
+        p {
+          max-width: 90%;
+          margin-top: 10px;
+          font-size: 0.75em;
+          line-height: 1.2em;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.75em;
+
+      a {
+        background: none;
+        padding: 0;
+
+        &.external {
+          background: url(/global/images/icons/external_link.png) no-repeat scroll right center transparent;
+          padding-right: 10px;
+          margin-right: 1px;
+        }
+
+        .sais {
+          float: right;
+          margin: 0 10px 10px 0;
+        }
+      }
+    }
+
+    ul {
+      li {
+        font-size: 0.75em;
+        a {
+          background: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.main-template /* use this class to replace mr_temp1, mr_temp2, mr_temp3, mr_temp5, mr_temp6, mr_temp7 */ {
+
+  .main-col {
+    margin: 0 22px;
+    float: left;
+    width: 650px;
+
+    h1 {
+      font-size: 1.625em;
+    }
+
+    p {
+      font-size: 0.75em;
+    }
+
+    ul {
+      li {
+        font-size: 0.75em;
+      }
+    }
+
+    .article-subtitle {
+      font-size: 1.125em;
+      font-family: "Times New Roman", "Helvetica", serif;
+      font-weight: normal;
+      clear: none;
+      line-height: 1.2;
+      padding-bottom: 3px;
+
+    }
+
+    .grey-side {
+      padding: 17px;
+      background-color: #f4f4f4;
+      margin-bottom: 16px;
+      border: 1px solid #e3e5e6;
+      font-size: 0.8em;
+    }
+
+    .weeklies {
+      background: #fff;
+      padding: 4px;
+      border: 1px solid #dadada;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 1em;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 100;
+        color: @eia-dark-blue;
+        line-height: 1.3em;
+      }
+
+      h3 {
+        margin-top: 10px;
+        font-size: 0.85em;
+        font-weight: 700;
+        border-bottom: 1px solid @light-gray;
+      }
+
+      p {
+        margin-top: 14px;
+      }
+
+      .weeklies-content {
+        background: #dff2fb;
+        padding: 20px;
+        border: 1px solid @light-gray;
+      }
+    }
+
+    .ltblue-callout {
+      width: 525px;
+      display: block;
+      background-color: #fff;
+      padding: 4px;
+      margin: 0 16px 16px 16px;
+      border: 1px solid #e3e5e6;
+
+      span {
+        background-color: #dff2fb;
+        padding: 13px;
+        display: inline-block;
+
+        h4 {
+          text-transform: uppercase;
+          font-size: 0.75em;
+        }
+
+        p {
+          font-size: 0.75em;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .right {
+      float: right;
+
+      .ltblue-callout {
+        width: 225px;
+      }
+    }
+
+    .links {
+      float: right;
+      font-size: 0.635em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .release-date {
+      font-size: 0.75em;
+      color: @disabled;
+    }
+
+    .footnotes {
+      p {
+        sup {
+          a {
+            font-size: 1.36em;
+          }
+        }
+      }
+    }
+  }
+
+  .side-col {
+    margin-left: 22px;
+    width: 240px;
+    float: left;
+
+    .grey-side {
+      padding: 17px;
+      background-color: #f4f4f4;
+      margin-bottom: 16px;
+      border: 1px solid #e3e5e6;
+      font-size: 0.8em;
+
+      h4 {
+        padding: 0 0 14px 0;
+        margin-bottom: 0;
+        background: transparent url(/global/images/bg/h_line_shadow_rc.png) no-repeat bottom center;
+        font-size: 1em;
+        font-weight: bold;
+        font-family: "Arial", "Helvetica", sans-serif;
+        line-height: 1.2;
+        color: @eia-dark-gray;
+      }
+
+      p {
+        font-size: 0.93em;
+        margin: 0;
+        padding: 8px 0 10px 0;
+        border-bottom: 1px solid #e3e5e6;
+        line-height: 1.3;
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      ul {
+        margin: 0.5em 1.5em 1.5em 0;
+        padding-left: 1.5em;
+
+        li {
+          font-size: 0.938em;
+        }
+      }
+    }
+
+    .blue-side {
+      display: block;
+      padding: 19px 11px 10px 11px;
+      border: 7px solid #a9c5e1;
+      margin-bottom: 16px;
+      background: #a9c5e1 url(/global/images/bg/white_fade.png) repeat-x top center;
+
+      .q-side {
+        padding: 0 0 0 37px;
+        background: transparent url(/global/images/icons/Q.png) no-repeat top left;
+        line-height: 1.3;
+        margin-bottom: 6px;
+
+        a {
+          color: @eia-dark-blue;
+          font-weight: normal;
+          font-size: 1em;
+        }
+      }
+
+      p {
+        border-top: 1px solid #9db7d2;
+        padding: 8px 0 10px 0;
+        font-size: 0.75em;
+        margin: 0;
+
+        a {
+          color: #476381;
+        }
+      }
+    }
+
+    .dblue-side-top {
+      display: block;
+      background: #00405d;
+      color: #fff;
+      padding: 10px 17px;
+      border: 1px solid #e3e4e5;
+    }
+
+    .white-box {
+      display: block;
+      background-color: #fff;
+      padding: 17px;
+      border: 1px solid #e3e5e6;
+      margin-bottom: 16px;
+
+      .eia-tie {
+        p {
+          padding: 8px 0 10px 0;
+          font-size: 0.75em;
+          margin: 0;
+          line-height: 1.3;
+        }
+      }
+    }
+
+    .blue-top {
+      border-top: 4px solid @eia-blue;
+    }
+
+    .green-top {
+      border-top: 4px solid @eia-green;
+    }
+  }
+}
+
+.fullwidth-template /* use this class to replace temprpt, mr_temp4 */ {
+
+  .main-col {
+    margin: 0 22px;
+    width: 915px;
+  }
+}
+
+.publishing-template /* use this class to replace mpub_temp, temp_period */ {
+
+  .main-col {
+    margin: 0 44px 0 22px;
+    width: 540px;
+    float: left;
+
+    p {
+      font-size: 0.75em;
+    }
+
+    ul {
+      margin-top: 0;
+      li {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .side-col {
+    margin-right: 22px;
+    width: 330px;
+    float: left;
+
+    .grey-side {
+      padding: 17px;
+      background-color: #f4f4f4;
+      margin-bottom: 16px;
+      border: 1px solid #e3e5e6;
+      font-size: 0.85em;
+
+      p {
+        padding: 8px 0 10px 0;
+        margin: 0;
+        border-bottom: @light-gray_border;
+        line-height: 1.3;
+      }
+    }
+
+    .blue-top {
+      border-top: 4px solid @eia-blue;
+    }
+  }
+}
+
+.equal-column-template /*use this to replace eqcol-template on section index pages i.e. total energy, coal, etc. */ {
+  margin-top: 18px;
+
+  .feature-section {
+    margin: 12px 22px 16px 22px;
+    border-bottom: 1px solid #668393;
+    padding-bottom: 26px;
+
+    h1 {
+      font-size: 1.625em;
+      padding: 16px 0 6px 0;
+      margin-bottom: 13px;
+      line-height: 1;
+
+      .right {
+        float: right;
+        padding-top: 11px;
+
+        a {
+          font-size: 0.4615em;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+
+  .main {
+    padding: 0 22px 40px 22px;
+    .main-col {
+      margin: 0 22px 20px 0;
+      width: 435px;
+      float: left;
+
+      h1 {
+        font-size: 1.625em;
+        padding: 16px 0 6px 0;
+        margin-bottom: 22px;
+        line-height: 1;
+      }
+
+      h3 {
+        border-bottom: @light-gray_border;
+        margin: 28px 0 8px 0;
+      }
+
+      p {
+        a {
+          font-size: 0.9em;
+        }
+      }
+
+      ul /*updated data */ {
+
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          font-size: 0.833em;
+          width: inherit;
+          padding: 0;
+        }
+      }
+    }
+
+    .side-col {
+      width: 435px;
+      margin-left: 22px;
+      margin-bottom: 20px;
+      float: left;
+
+      h1 {
+        font-size: 1.625em;
+        padding: 16px 0 6px 0;
+        margin-bottom: 22px;
+        line-height: 1;
+      }
+
+      ul {
+        margin-bottom: 8px;
+        padding: 0;
+        line-height: 1.5;
+
+        li {
+          list-style: none;
+          margin-bottom: 6px;
+          display: table-row;
+          text-align: left;
+
+          img {
+            display: table-cell;
+            padding: 12px 16px 0 0;
+            float: none;
+          }
+
+          &:first-child img {
+            padding-top: 0;
+          }
+
+          &:first-child span {
+            padding-top: 0;
+          }
+
+          span {
+            display: table-cell;
+            vertical-align: top;
+            padding-top: 12px;
+
+            h3 {
+              line-height: 1;
+              text-transform: none;
+              font-size: 1.19em;
+              color: @eia-dark-blue;
+              border: none;
+              margin: 0;
+            }
+
+            em {
+              font-size: 0.9em;
+              line-height: 1.3;
+              &:after {
+                content: " | tags: ";
+                padding: 0 0 0 2px;
+                font-style: normal;
+              }
+            }
+
+            a {
+              font-size: 0.9em;
+              line-height: 1.3;
+
+              &:after {
+                content: ", ";
+                color: @eia-dark-gray;
+              }
+
+              &:last-child {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+
+      p {
+        a {
+          font-size: 0.95em;
+        }
+      }
+
+      h3 {
+        border-bottom: @light-gray_border;
+        padding-bottom: 2px;
+        margin: 28px 0 8px 0;
+      }
+    }
+
+    h1 {
+      font-size: 1.625em;
+      padding: 16px 0 6px 0;
+      margin-bottom: 22px;
+      line-height: 1;
+      clear: both;
+    }
+
+    ul /*visualizations*/ {
+      padding-left: 0;
+      margin: -4px 0 48px 0;
+
+      li {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        padding-left: 40px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        a {
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    .ed-section {
+
+      .energy-in-brief, .faq {
+        display: inline-block;
+        vertical-align: top;
+        border-right: @light-gray_border;
+        padding: 0 16px 16px 0;
+
+        &:nth-child(2) {
+          border: none;
+          padding-right: 0;
+        }
+
+        img {
+          display: inline;
+
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+
+          h3 {
+            a {
+              color: @eia-dark-blue;
+            }
+          }
+
+          p {
+            margin-bottom: 8px;
+            line-height: 1.2;
+
+            a {
+                font-size: 0.95em;
+            }
+
+            &:nth-child(2) a {
+              color: @eia-dark-gray;
+            }
+
+            &:nth-child(4) a {
+              font-size: 0.86em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media @mobile {
+
+  .main-template {
+    margin: 26px 20px 0 20px;
+    width: auto;
+
+    .main-col {
+      width: 100%;
+      margin: 0;
+
+      ul {
+        padding-left: 15px;
+      }
+
+      h3 {
+        margin: 5px 17px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .weeklies {
+        margin: 18px 0;
+      }
+
+      .ltblue-callout {
+        width: 100%;
+        margin: 15px 0;
+        padding: 0;
+      }
+
+      .right {
+        float: none;
+
+        .ltblue-callout {
+          width: 100%;
+        }
+      }
+    }
+
+    .side-col {
+      width: 100%;
+      margin: 0;
+
+      .grey-side {
+        h4 {
+          background: none;
+          padding: 0 0 5px 0;
+          border-bottom: 1px solid @eia-dark-gray;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .equal-column-template {
+    .feature-section {
+      h1 {
+        font-size: 1.3em;
+
+        .right {
+          padding-top: 7px;
+          display: inline-block;
+          a {
+            font-size: 0.57em;
+          }
+        }
+      }
+    }
+    .main {
+      .main-col {
+        width: 100%;
+        margin: 0;
+
+        h1 {
+          font-size: 1.3em;
+        }
+
+        ul /*updated_data*/ {
+          li {
+            text-align: left;
+            display: block;
+          }
+        }
+      }
+
+      .side-col {
+        width: inherit;
+        margin-left: 0;
+
+        h1 {
+          font-size: 1.3em;
+        }
+      }
+
+      h1 {
+        font-size: 1.3em;
+      }
+
+      ul /*visualizations*/ {
+        margin-bottom: 15px;
+        li {
+          padding-left: 0;
+          padding-bottom: 15px;
+        }
+      }
+      .ed-section {
+        .energy-in-brief, .faq {
+          display: block;
+          border-right: none;
+          border-bottom: @light-gray_border;
+
+          &:nth-child(2) {
+            border: none;
+            padding-top: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .publishing-template {
+    .main-col {
+      width: auto;
+      margin: 0 22px;
+      float: none;
+
+      .contact-info {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-top: 1px solid @eia-blue;
+        border-bottom: 1px solid @eia-blue;
+      }
+    }
+
+    .side-col {
+      width: auto;
+      margin: 0 22px;
+      float: none;
+    }
+  }
+}
+
+@media @tablet {
+
+  .main-template {
+
+    .main-col {
+      float: left;
+      width: 64.2%;
+      margin: 0 2.5%;
+
+      h3 {
+        margin: 5px 17px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .ltblue-callout {
+        margin: 15px 0;
+      }
+
+      .right {
+        margin-left: 22px;
+      }
+    }
+
+    .side-col {
+      float: left;
+      width: 28.3%;
+      margin-right: 2.5%;
+      margin-left: 0;
+    }
+  }
+
+  .equal-column-template {
+    .main {
+      .main-col {
+        width: 47%;
+        margin: 0 3% 0 0;
+      }
+      .side-col {
+        width: 47%;
+        margin: 0 0 0 3%;
+      }
+    }
+  }
+
+  .publishing-template {
+
+    .main-col {
+      margin: 0 4.6% 0 2.3%;
+      width: 55%;
+    }
+
+    .side-col {
+      margin-right: 2.3%;
+      width: 35.8%;
+    }
+  }
+}

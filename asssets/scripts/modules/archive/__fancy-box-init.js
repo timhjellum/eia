@@ -1,0 +1,1 @@
+import FancyBoxInit from './modules/_fancy-box';
