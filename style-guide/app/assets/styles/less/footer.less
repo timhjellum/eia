@@ -3,8 +3,23 @@
 		* {
 			box-sizing: border-box;
 		}
+//		.l-one-third-column {
+//			background-color: red;
+//		}
+		.l-column,
+		.l-full-width-column,
+		.l-one-third-column,
+		.l-two-third-column {
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			margin: 0;
+			float: left;
+		}
+
+
 		border-top: 1px solid @eia-dark-blue;
-		.font-size;
+//		.font-size;
 		float: left;
 		clear: both;
 		padding: 1em 0 3em;
@@ -36,13 +51,13 @@
 			display: table;
 			width: 100%;
 			max-width: 990px;
-			padding: 0 0 2em 2em;
+			padding: 1em 0 2em 0;
 			margin: 0 auto;
 			ul.above-address-links {
 				padding: 0 0 2em 2em;
 				margin: 0;
 				text-align: center;
-				font-size: 1.3rem;
+//				font-size: 1.3rem;
 				li {
 					display: inline-block;
 					margin: 0 12px 0 0;
@@ -65,13 +80,12 @@
 			}
 			.address {
 				margin: 0;
+				padding: 0;
 				text-align: center;
-				border-top: 1px solid #eee;
 				.font;
-				font-size: 13px;
+				font-size: .6875rem;
 				color: #a6a5a6; // @eia-dark-gray;
 				display: block;
-				padding: 1em 1em 2em;
 			}
 		}
 		.footer-links  {
@@ -80,13 +94,12 @@
 			padding: 0 2em;
 			margin: 0 auto;
 			ul {
-				//min-height: 300px;
 				padding: 1em 0;
 				border-top: 1px solid #eee;
 				li {
 					.font;
 					.bold;
-					font-size: 1.188rem; // 19px
+					font-size: .6875rem;
 					margin-bottom: .2em;
 					a {
 						.normal;
@@ -96,43 +109,132 @@
 		}
 	}
 }
-
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+	.footer {
+//		.l-one-third-column {
+//			background-color: black;
+//		}
+		.l-column,
+		.l-one-third-column,
+		.l-two-third-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 50%;
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			width: 50%;
+		}
+		.address-bar {
+			.address {
+				padding: 1em 1em 2em;
+				text-align: right;
+				border-right: 1px solid #a6a5a6; // @eia-dark-gray;
+				padding: 0 25px 0 0;	
+			}
+		}
+	}
+}
+@media @tablet {  // mobile panorama
+	.footer {
+//		.l-one-third-column {
+//			background-color: greenyellow;
+//		}
+		.l-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 33.333333%;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+		}
+		.l-one-third-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 33.333333%;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+		}
+		.l-two-third-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 66.666667%;
+			-ms-flex: 0 0 66.666667%;
+			flex: 0 0 66.666667%;
+			max-width: 66.666667%;
+			width: 66.666667%;
+		}
+	}
+}
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+	.footer {
+//		.l-one-third-column {
+//			background-color: yellow;
+//		}
+		.l-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 16.666667%;
+			-ms-flex: 0 0 16.666667%;
+			flex: 0 0 16.666667%;
+			max-width: 16.666667%;
+		}
+	}
+}
 @media @tablet {
 	.footer {
 		.address-bar {
-			font-size: 1.1rem;
-		}
-		.address {
-			font-size: 12px;
-			padding: 1em;
+			.address {
+				padding: 1em;
+			}
 		}
 		.footer-links  {
 			ul {
 				min-height: 300px;
-				li {
-				font-size: 1.063rem; // 17px
-				}
 			}
 		}
 	}
 }
 @media @laptop {
   	.footer {
+		font-size: .6875rem;
+//		.l-one-third-column {
+//			background-color: brown;
+//		}
+		.l-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 16.666667%;
+			-ms-flex: 0 0 16.666667%;
+			flex: 0 0 16.666667%;
+			max-width: 16.666667%;
+		}
+		.l-one-third-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 33.333333%;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+			// added
+			width: 33.333333%;
+			padding-right: 44px;
+		}
+		.l-two-third-column {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 66.666667%;
+			-ms-flex: 0 0 66.666667%;
+			flex: 0 0 66.666667%;
+			max-width: 66.666667%;
+			// added
+			width: 66.666667%;
+		}
 		.address-bar {
-	  		padding-bottom: 2em;
-	  		.l-one-third-column {
-				padding-right: 44px;
-				.address {
-					float: right;
-					padding: 0 25px 0 0;
-					border-right: 1px solid #a6a5a6; // @eia-dark-gray;
-					text-align: right;
-					font-size: .7rem;
-					border-top: none;
-				}
-	  		}
+//			padding: 0 0 2em 2em;
+		  	.address {
+				float: right;
+				padding: 0 25px 0 0;
+				border-right: 1px solid #a6a5a6; // @eia-dark-gray;
+				text-align: right;
+				font-size: .6875rem;
+				border-top: none;
+			}
 			ul.above-address-links {
-				padding: 0;
+				padding: 1em 0 0 0;
 				margin: 0;
 				li {
 					float: left;
@@ -162,7 +264,7 @@
 				padding-right: 1.1em;     
 				li {
 					margin-bottom: .5em;
-					font-size: .6875rem;
+//font-size: .6875rem;
 					line-height: 1.2em;
 					a[href^="http:"],
 					a[href^="https:"],
