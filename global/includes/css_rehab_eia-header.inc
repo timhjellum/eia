@@ -1,5 +1,5 @@
-<?php include('global/includes/css_rehab_eia-social-sticker.inc'); ?>
 <div class="page-wrapper">
+		<?php include('global/includes/css_rehab_eia-social-sticker.inc'); ?>
 	<header>
 		<div class="print">
 			<img src="/global/images/logos/eia_logo_print.png" />
