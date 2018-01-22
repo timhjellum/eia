@@ -12,7 +12,7 @@ var del = require('del');
 //  del(['../global/styles/eia-styles.min.css', '../global/styles/eia-styles.min.css'])
 //);
 
-gulp.task('less', ['compile-style-guide-less'], () =>
+gulp.task('less', ['compile-home-less'], () =>
   gulp.src('./app/assets/styles/eia-styles.css')
   .pipe(less())
   .pipe(gulp.dest('../global/styles'))
@@ -21,7 +21,6 @@ gulp.task('less', ['compile-style-guide-less'], () =>
     console.log(details.name + ': ' + details.stats.originalSize);
     console.log(details.name + ': ' + details.stats.minifiedSize);
   }))
-//  .pipe(rev())
   .pipe(rename("eia-styles.min.css"))
   .pipe(gulp.dest('../global/styles'))
 //  .on(error, function swallowError (error) {
@@ -30,13 +29,43 @@ gulp.task('less', ['compile-style-guide-less'], () =>
 //    });
 );
 
+gulp.task('compile-home-less', ['compile-style-guide-less'], () =>
+  gulp.src('./app/assets/styles/eia-styles-home.css')
+  .pipe(less())
+  .pipe(gulp.dest('../global/styles'))
+  .pipe(gulp.dest('app/style-guide/css'))
+  .pipe(cleanCSS({debug: true}, function(details) {
+    console.log(details.name + ': ' + details.stats.originalSize);
+    console.log(details.name + ': ' + details.stats.minifiedSize);
+  }))
+  .pipe(rename("eia-styles-home.min.css"))
+  .pipe(gulp.dest('../global/styles'))
+//  .on(error, function swallowError (error) {
+//      console.log(error.toString())
+//      this.emit('end')
+//    });
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // this compiles a working CSS from ALL the LESS files and makes a pretty version for the global folder and style-guide folder
 
 gulp.task('compile-style-guide-less', () =>
   // compile the .less files
   gulp.src('./app/assets/styles/eia-style-guide.css')
   .pipe(less())
-//  .pipe(rev())
   .pipe(gulp.dest('app/style-guide/css'))
 );
 

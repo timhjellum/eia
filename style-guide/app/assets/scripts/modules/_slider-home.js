@@ -2,7 +2,6 @@ var jQuery = require('jquery');
 //import SliderHome from './modules/_slider-home';
 
 
-
 // check the page resolution on initial page load and if the browser is resized
 $(document).ready(function() {
     $('.slider-home h2 a, .slider-home h3 a').attr( "href", function(ind,attr) {
