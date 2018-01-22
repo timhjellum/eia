@@ -2198,7 +2198,7 @@ span.line-break {
     display: table;
     border-right: 1px solid #dbdfe5;
     border-left: 1px solid #dbdfe5;
-    padding: 56px 15px 0 15px;
+    padding: 41px 15px 0 15px;
     max-width: 988px;
     min-width: 988px;
     width: 988px;
@@ -2842,7 +2842,7 @@ span.line-break {
     display: block;
     width: 250px;
     position: absolute;
-    top: 30px;
+    top: 36px;
     right: 16px;
     z-index: 0;
     transition: opacity 0.25s ease-out;

@@ -2938,7 +2938,7 @@ span.line-break {
     display: block;
     width: 250px;
     position: absolute;
-    top: 30px;
+    top: 36px;
     right: 16px;
     z-index: 0;
     transition: opacity 0.25s ease-out;
