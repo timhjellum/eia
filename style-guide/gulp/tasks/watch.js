@@ -36,7 +36,8 @@ gulp.task('watch', function() {
       baseDir: "app"
     }
   });
-  watch('./app/index.html', function() {
+  //watch('./app/index.html', function() {
+  watch('../index.php', function() {
     browserSync.reload();
   });
 // watch styles

@@ -40,31 +40,6 @@ gulp.task('compile-style-guide-less', () =>
   .pipe(gulp.dest('app/style-guide/css'))
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // this moves any vendor files from their corresponding node folders and moves them into the LESS folder for further compilation
 
 gulp.task('import-vendor-css', ['import-vendor-js'], () =>
@@ -149,4 +124,3 @@ gulp.task('import-vendor-images', () =>
   ])
   .pipe(gulp.dest('../global/img'))
 );
-

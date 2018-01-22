@@ -42,7 +42,6 @@ class HeaderMenu {
 			$('.section-tabs').tabs(options);
 		});
 
-
 		console.log('Open Menu');
 		var viewPortWidth = window.innerWidth;
 		var viewPortHeight = window.innerHeight;

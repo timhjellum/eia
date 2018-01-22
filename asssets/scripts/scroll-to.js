@@ -1,1 +1,0 @@
-import ScrollToInit from './modules/_scroll-to';
