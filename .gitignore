@@ -3,5 +3,7 @@
 
 
 */node_modules/
-
+.[title].
+*.[title].
+.[title].*
 
