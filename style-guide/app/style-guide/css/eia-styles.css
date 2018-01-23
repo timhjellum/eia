@@ -3084,15 +3084,12 @@ span.line-break {
   .section-tabs.ui-widget-content a {
     color: transparent;
   }
-  .fancybox-lock .fancybox-overlay {
-    overflow: hidden;
-    overflow-y: scroll;
-  }
   .fancybox-overlay {
     top: 0;
     left: 0;
+    overflow: hidden;
     overflow: hidden !important;
-    overflow-y: scroll !importan;
+    overflow-y: scroll !important;
     z-index: 8010;
     background: rgba(0, 0, 0, 0.7);
   }

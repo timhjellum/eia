@@ -47,6 +47,7 @@ class HeaderMenu {
 		if ((viewPortWidth) > 960) {
 			console.log(viewPortWidth + " = laptop and desktop");
 			$('.fancybox-menu').fancybox({
+				//scrolling: scroll,
 				type: 'inline',
 				width: 960,
 				margin: [40, 20, 20, 10],
@@ -74,7 +75,7 @@ class HeaderMenu {
 
 			$('.fancybox-menu').fancybox({
 				type: 'inline',
-				scrolling: no,
+				//scrolling: true,
 				width: '100%',
 				margin: [0, 0, 0, 0],
 				height: 'auto',
