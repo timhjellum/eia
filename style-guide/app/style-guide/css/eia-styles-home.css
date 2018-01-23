@@ -273,7 +273,7 @@
     background: url("https://www.eia.gov/global/images/bg/h_line_shadow_feature_banner.png") no-repeat top center;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1025px) {
   .slider-home {
     margin: inherit;
   }

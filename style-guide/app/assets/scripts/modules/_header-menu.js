@@ -40,6 +40,8 @@ class HeaderMenu {
 			$('.section-tabs').tabs(options);
 		});
 
+
+
 		console.log('Open Menu');
 		var viewPortWidth = window.innerWidth;
 		var viewPortHeight = window.innerHeight;
@@ -47,15 +49,18 @@ class HeaderMenu {
 		if ((viewPortWidth) > 960) {
 			console.log(viewPortWidth + " = laptop and desktop");
 			$('.fancybox-menu').fancybox({
-				//scrolling: scroll,
+				//scrolling: 'no',
 				type: 'inline',
-				width: 960,
-				margin: [40, 20, 20, 10],
+				//width: 960,
+				width: 980,
+				autoSize: false, // required for width
+				margin: [40, 0, 20, 0],
 				height: 'auto',
 				padding: 0,
-				fitToView: false,
+				//fitToView: false,
 				topRatio: 0,
-				autoSize: false,
+				autoDimension: false,
+
 				tpl: {
 					closeBtn: '<a title="Close" class="close" href="javascript:;"><i class="ico close">Close</i></a>'
 				},
@@ -67,22 +72,22 @@ class HeaderMenu {
 					}
 				}
 			});
-
 		} else if ((viewPortWidth) <= 960) {
 			console.log(viewPortWidth + " = mobile");
-//			$('.fancybox-wrap').addClass('fancybox-mobile');
-//			$('.fancybox-wrap').removeClass('fancybox-laptop');
 
 			$('.fancybox-menu').fancybox({
+				//scrolling: 'no',
 				type: 'inline',
-				//scrolling: true,
-				width: '100%',
+				//scrollOutside: false,
 				margin: [0, 0, 0, 0],
 				height: 'auto',
+
 				padding: 0,
-				fitToView: true,
+				//fitToView: false,
+				//autoDimension: false,
 				topRatio: 0,
-				autoSize: true,
+				//autoWidth: true,
+				//autoSize: true,
 				tpl: {
 					closeBtn: '<a title="Close" class="close" href="javascript:;"><i class="ico close">Close</i></a>'
 				},
@@ -95,7 +100,6 @@ class HeaderMenu {
 				}
 			});
 		}
-
 		/*
 		console.log("clicked");
 		var target = $(this).data("target");
@@ -132,15 +136,21 @@ class HeaderMenu {
 		console.log('viewport width is: '+ viewPortWidth + ' and viewport height is:' + viewPortHeight);
 		if ((viewPortWidth) > 960) {
 			console.log(viewPortWidth + " = laptop and desktop");
+
+
+
 			$('.fancybox-wrap').addClass('fancybox-laptop');
 			$('.fancybox-wrap').removeClass('fancybox-mobile');
+
 		} else if ((viewPortWidth) <= 960) {
 			console.log(viewPortWidth + " = mobile");
+
+
+
 			$('.fancybox-wrap').addClass('fancybox-mobile');
 			$('.fancybox-wrap').removeClass('fancybox-laptop');
 		}
 	}
-
 
 /*
 		this.searchPanel.removeClass('show');

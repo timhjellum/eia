@@ -624,36 +624,38 @@
 							</div>
 						</div>
 					</div>
-					<div class="nav-menu az-index">
-						<i class="ico ico-nav az-index"></i>
-						<h3>
-							<a href="tools/a-z/">A-Z Index</a>
-						</h3>
-						<div class="az-list">
-							<a href="tools/a-z/index.cfm?id=a">A</a> |
-							<a href="tools/a-z/index.cfm?id=b">B</a> |
-							<a href="tools/a-z/index.cfm?id=c">C</a> |
-							<a href="tools/a-z/index.cfm?id=d">D</a> |
-							<a href="tools/a-z/index.cfm?id=e">E</a> |
-							<a href="tools/a-z/index.cfm?id=f">F</a> |
-							<a href="tools/a-z/index.cfm?id=g">G</a> |
-							<a href="tools/a-z/index.cfm?id=h">H</a> |
-							<a href="tools/a-z/index.cfm?id=i">I</a> |
-							<a href="tools/a-z/index.cfm?id=j">J</a> |
-							<a href="tools/a-z/index.cfm?id=k">K</a> |
-							<a href="tools/a-z/index.cfm?id=l">L</a> |
-							<a href="tools/a-z/index.cfm?id=m">M</a> |
-							<a href="tools/a-z/index.cfm?id=n">N</a> |
-							<a href="tools/a-z/index.cfm?id=o">O</a> |
-							<a href="tools/a-z/index.cfm?id=p">P</a> |
-							<a href="tools/a-z/index.cfm?id=q">Q</a> |
-							<a href="tools/a-z/index.cfm?id=r">R</a> |
-							<a href="tools/a-z/index.cfm?id=s">S</a> |
-							<a href="tools/a-z/index.cfm?id=t">T</a> |
-							<a href="tools/a-z/index.cfm?id=u">U</a> |
-							<a href="tools/a-z/index.cfm?id=v">V</a> |
-							<a href="tools/a-z/index.cfm?id=w">W</a> |
-							<a href="tools/a-z/index.cfm?id=xyz">XYZ</a>
+					<div class="a-z-bottom">
+						<div class="nav-menu az-index">
+							<i class="ico ico-nav az-index"></i>
+							<h3>
+								<a href="tools/a-z/">A-Z Index</a>
+							</h3>
+							<div class="az-list">
+								<a href="tools/a-z/index.cfm?id=a">A</a> |
+								<a href="tools/a-z/index.cfm?id=b">B</a> |
+								<a href="tools/a-z/index.cfm?id=c">C</a> |
+								<a href="tools/a-z/index.cfm?id=d">D</a> |
+								<a href="tools/a-z/index.cfm?id=e">E</a> |
+								<a href="tools/a-z/index.cfm?id=f">F</a> |
+								<a href="tools/a-z/index.cfm?id=g">G</a> |
+								<a href="tools/a-z/index.cfm?id=h">H</a> |
+								<a href="tools/a-z/index.cfm?id=i">I</a> |
+								<a href="tools/a-z/index.cfm?id=j">J</a> |
+								<a href="tools/a-z/index.cfm?id=k">K</a> |
+								<a href="tools/a-z/index.cfm?id=l">L</a> |
+								<a href="tools/a-z/index.cfm?id=m">M</a> |
+								<a href="tools/a-z/index.cfm?id=n">N</a> |
+								<a href="tools/a-z/index.cfm?id=o">O</a> |
+								<a href="tools/a-z/index.cfm?id=p">P</a> |
+								<a href="tools/a-z/index.cfm?id=q">Q</a> |
+								<a href="tools/a-z/index.cfm?id=r">R</a> |
+								<a href="tools/a-z/index.cfm?id=s">S</a> |
+								<a href="tools/a-z/index.cfm?id=t">T</a> |
+								<a href="tools/a-z/index.cfm?id=u">U</a> |
+								<a href="tools/a-z/index.cfm?id=v">V</a> |
+								<a href="tools/a-z/index.cfm?id=w">W</a> |
+								<a href="tools/a-z/index.cfm?id=xyz">XYZ</a>
+							</div>
 						</div>
 					</div>
 				</div>
