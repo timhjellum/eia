@@ -6,7 +6,7 @@
     margin: 15px 24px 5px;
 */
 @media @mobile {
-   
+    
     .ui-autocomplete {
         position: absolute;
         top: 0;
@@ -50,25 +50,6 @@
                 color: transparent;
             }
         }
-    }
-//    .fancybox-lock .fancybox-overlay {
-//        overflow: hidden;
-//        overflow-y: scroll;        
-//    }
-
-    .fancybox-overlay {
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        overflow: hidden !important;
-        overflow-y: scroll !important; 
-        z-index: 8010;
-        background: rgba(0,0,0,0.7);
-    }
-    .fancybox-overlay-fixed {
-        position: fixed;
-        bottom: 0;
-        right: 0;
     }
     .fancybox-wrap {
         position: absolute;
@@ -411,6 +392,18 @@
     }
 }
 @media @laptop {
+    .fancybox-overlay {
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 8010;
+        background: rgba(0,0,0,0.7);
+    }
+    .fancybox-overlay-fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
     .fancybox-wrap {
         margin: 20px auto 40px auto;
         width: 960px;
