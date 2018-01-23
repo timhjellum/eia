@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-		<?php include('global/includes/css_rehab_eia-social-sticker.inc'); ?>
+		<?php include('global/includes/css_rehab_eia-social-sticker.inc') ?>
 	<header>
 		<div class="print">
 			<img src="/global/images/logos/eia_logo_print.png" />
@@ -11,7 +11,7 @@
 			<a href="#" class="search-menu-toggle">
 				<i class="ico search">Search</i>
 			</a>
-			<a class="fancybox-menu menu-toggle" href="#menu" data-target="default">
+			<a class="fancybox-menu menu-toggle" href="#menu" data-target="sources">
 				<div class="toggle-bar">
 				</div>
 				<div class="toggle-bar">
@@ -307,7 +307,7 @@
 								<h3>
 									<a href="tools/glossary/">Glossary</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include('global/includes/css_rehab_eia-header-glossary.inc') ?>
 							</div>
 							<div class="nav-menu data-tools-model">
 								<i class="ico ico-nav data-tools-model"></i>
@@ -399,7 +399,7 @@
 								<h3>
 									<a href="survey/">EIA Survey Forms</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-survey-search.inc'); ?>
+								<?php include('global/includes/css_rehab_eia-header-survey-search.inc') ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico ico-nav email-complex"></i>
@@ -551,27 +551,14 @@
 					<!--News-->
 					<div id="news">
 						<div class="news left">
-							<div class="nav-menu featured-reports">
-								<i class="ico ico-nav featured-reports"></i>
+							<div class="nav-menu whats-new">
+								<i class="ico ico-nav whats-new"></i>
 								<h3>
-									<a href='/'>Featured Reports</a>
+									<a href="/about/new/">What's New?</a>
 								</h3>
-								<p>Reports requested by congress or otherwise deemed important.</p>
-								<ul>
-									<li>
-										<a href='/'>Important Report #1</a>
-									</li>
-									<li>
-										<a href='/'>Important Report #2</a>
-									</li>
-									<li>
-										<a href='/'>Important Report #3</a>
-									</li>
-									<li>
-										<a href='/'>Important Report #4</a>
-									</li>
-								</ul>
+								<?php include('global/includes/css_rehab_eia-header-whats-new.inc') ?>
 							</div>
+
 							<div class="nav-menu press-room">
 								<i class="ico ico-nav press-room"></i>
 								<h3>
@@ -597,13 +584,6 @@
 							</div>
 						</div>
 						<div class="news right">
-							<div class="nav-menu whats-new">
-								<i class="ico ico-nav whats-new"></i>
-								<h3>
-									<a href="/about/new/">What's New?</a>
-								</h3>
-								<?php include('global/includes/css_rehab_eia-header-whats-new.inc'); ?>
-							</div>
 							<div class="nav-menu upcoming">
 								<i class="ico ico-nav upcoming"></i>
 								<h3>
@@ -618,6 +598,27 @@
 									</li>
 									<li>
 										<a href='/'>Annual Coal Report</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu featured-reports">
+								<i class="ico ico-nav featured-reports"></i>
+								<h3>
+									<a href='/'>Featured Reports</a>
+								</h3>
+								<p>Reports requested by congress or otherwise deemed important.</p>
+								<ul>
+									<li>
+										<a href='/'>Important Report #1</a>
+									</li>
+									<li>
+										<a href='/'>Important Report #2</a>
+									</li>
+									<li>
+										<a href='/'>Important Report #3</a>
+									</li>
+									<li>
+										<a href='/'>Important Report #4</a>
 									</li>
 								</ul>
 							</div>

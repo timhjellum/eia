@@ -46,20 +46,6 @@ gulp.task('compile-home-less', ['compile-style-guide-less'], () =>
 //    });
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // this compiles a working CSS from ALL the LESS files and makes a pretty version for the global folder and style-guide folder
 
 gulp.task('compile-style-guide-less', () =>
@@ -68,6 +54,18 @@ gulp.task('compile-style-guide-less', () =>
   .pipe(less())
   .pipe(gulp.dest('app/style-guide/css'))
 );
+
+
+
+
+
+
+
+
+
+
+
+
 
 // this moves any vendor files from their corresponding node folders and moves them into the LESS folder for further compilation
 

@@ -1,241 +1,255 @@
 @media @mobile {
-  //////////////////////////////////////////////////////////////////
-  //  home slider ratio is 283 / 958 = 29.123%                 //
-  ////////////////////////////////////////////////////////////////
-  .slider-home-top {
-    border-bottom: solid 1px #d5d5d5;
-    padding-bottom: 1px;
-  }
-  .slider-home {
-    padding-top: 1px !important;
-    padding-bottom: 1px !important;
-    width: 100%;
-    overflow: hidden;
-    .bx-wrapper {
-      position: relative;
-      //margin-bottom: 60px;
-      margin: 0;
-      padding: 0;
-      *zoom: 1;
-      -ms-touch-action: pan-y;
-      touch-action: pan-y;
-      .bx-viewport {
-        /*fix other elements on the page moving (on Chrome)*/
-        -webkit-transform: translatez(0);
-        //padding-top: 29.123%;
-        ul.bxslider {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          li {
-            background-repeat: no-repeat;
-            background-size: cover;
-            list-style: none;
-            img {
-              max-width: 100%;
-              display: block;
-            }
-          .slider-overlay
-          //,
-          //.slider-overlay2
-          {
-            display: block;
-            margin: 1em auto;
-            width: 90%;
-            background-color: rgba(0, 60, 87, 0.7); // must be rgba - do not use var
-              .slider-content {
-                padding: 1em;
-                h2 {
-                  .header-font;
-                  color:#fff;
-                  font-size: 1.5rem; //24px
-                  line-height:32px;
-                  a {
-                    color:#FFF;
-                  }
-                }
-                h3 {
-                  .header-font;
-                  color:#b3c2c9;
-                  font-size: 1.25rem; //20px
-                  line-height:32px;
-                  text-transform:  none;
-                  a {
-                    color:#b3c2c9;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .bx-controls.bx-has-pager {
-      display: table;
-      margin: 0.75em auto .5em;
-      .bx-pager-item {
-        position: relative;
-        float: left;
-        display: block;
-        z-index: 10 !important;
-        .bx-pager-link {
-          //float:left;
-          text-indent: -99999px;
-          border-radius: 50%;
-          display: inline-block;
-          margin-right: 0.5em;
-          width: 5px;
-          height: 5px;
-          background-color: @greyish-blue; // @eia-blue;
-          padding: 0;
-          border: 0;
-          &:hover {
-            background-color: @eia-yellow;
-          }
-          &.active {
-            background-color: @eia-yellow;
-          }
-        }
-      }
-    }
-  }
-  .feature_new1 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner1.jpg);}
-  .feature_new2 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner2.jpg);}
-  .feature_new3 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner3.jpg);}
-  .feature_new4 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner4.jpg);}
-  .feature_new5 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner5.jpg);}
-  .feature_new6 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner6.jpg);}
-  .feature_new7 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner7.jpg);}
-  .feature_new8 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner8.jpg);}
-  .feature_new9 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner9.jpg);}
-  .feature_new10 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner10.jpg);}
-  .feature_new11 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner11.jpg);}
-  .feature_new12 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner12.jpg);}
-  .feature_new13 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner13.jpg);}
-  .feature_new14 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner14.jpg);}
-  .feature_new15 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner15.jpg);}
-  .feature_new16 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner16.jpg);}
-  .feature_new17 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner17.jpg);}
-  .feature_new18 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner18.jpg);}
-  .feature_new19 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner19.jpg);}
-  .feature_new20 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner20.jpg);}
+	//////////////////////////////////////////////////////////////////
+	//  home slider ratio is 283 / 958 = 29.123%                 //
+	////////////////////////////////////////////////////////////////
+	.slider-home-top {
+		border-bottom: solid 1px #d5d5d5;
+		padding-bottom: 1px;
+	}
+	.slider-home {
+		padding-top: 1px !important;
+		padding-bottom: 1px !important;
+		width: 100%;
+		overflow: hidden;
+		.bx-wrapper {
+			position: relative;
+			//margin-bottom: 60px;
+			margin: 0;
+			padding: 0;
+			*zoom: 1;
+			-ms-touch-action: pan-y;
+			touch-action: pan-y;
+			.bx-viewport {
+				/*fix other elements on the page moving (on Chrome)*/
+				-webkit-transform: translatez(0);
+				//padding-top: 29.123%;
+				ul.bxslider {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						background-repeat: no-repeat;
+						background-size: cover;
+						list-style: none;
+						img {
+							max-width: 100%;
+							display: block;
+						}
+					.slider-overlay
+					//,
+					//.slider-overlay2
+					{
+						display: block;
+						margin: 1em auto;
+						width: 90%;
+						background-color: rgba(0, 60, 87, 0.7); // must be rgba - do not use var
+							.slider-content {
+								padding: 1em;
+								h2 {
+									.header-font;
+									color:#fff;
+									font-size: 1.5rem; //24px
+									line-height:32px;
+									a {
+										color:#FFF;
+									}
+								}
+								h3 {
+									.header-font;
+									color:#b3c2c9;
+									font-size: 1.25rem; //20px
+									line-height:32px;
+									text-transform:  none;
+									a {
+										color:#b3c2c9;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.bx-controls.bx-has-pager {
+			display: table;
+			margin: 0.75em auto .5em;
+			.bx-pager-item {
+				position: relative;
+				float: left;
+				display: block;
+				z-index: 10 !important;
+				.bx-pager-link {
+					//float:left;
+					text-indent: -99999px;
+					border-radius: 50%;
+					display: inline-block;
+					margin-right: 0.5em;
+					width: 5px;
+					height: 5px;
+					background-color: @greyish-blue; // @eia-blue;
+					padding: 0;
+					border: 0;
+					&:hover {
+						background-color: @eia-yellow;
+					}
+					&.active {
+						background-color: @eia-yellow;
+					}
+				}
+			}
+		}
+	}
+	.feature_new1 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner1.jpg);}
+	.feature_new2 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner2.jpg);}
+	.feature_new3 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner3.jpg);}
+	.feature_new4 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner4.jpg);}
+	.feature_new5 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner5.jpg);}
+	.feature_new6 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner6.jpg);}
+	.feature_new7 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner7.jpg);}
+	.feature_new8 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner8.jpg);}
+	.feature_new9 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner9.jpg);}
+	.feature_new10 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner10.jpg);}
+	.feature_new11 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner11.jpg);}
+	.feature_new12 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner12.jpg);}
+	.feature_new13 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner13.jpg);}
+	.feature_new14 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner14.jpg);}
+	.feature_new15 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner15.jpg);}
+	.feature_new16 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner16.jpg);}
+	.feature_new17 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner17.jpg);}
+	.feature_new18 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner18.jpg);}
+	.feature_new19 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner19.jpg);}
+	.feature_new20 {background: url(https://www.eia.gov/global/images/homepage_rotating_features/homepage_banner20.jpg);}
 }
 @media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-  .slider-home {
-    .bx-wrapper {
-      .bx-viewport {
-        ul.bxslider {
-          li {
-            .slider-overlay {
-              float: right;
-              margin: 1em;
-              min-height: 180px;
-              width: 50%;
-            }
-          }
-        }
-      }
-    }
-  }
+	.slider-home {
+		.bx-wrapper {
+			.bx-viewport {
+				ul.bxslider {
+					li {
+						.slider-overlay {
+							float: right;
+							margin: 1em;
+							min-height: 180px;
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media @tablet {
-  .slider-home {
-    .slider-overlay {
-      .slider-content {
-        padding: 1em;
-        h2 {
-          .header-font;
-          font-size: 1.5rem; //24px
-          color:#fff;
-          line-height:32px;
-          a {
-            color:#FFF;
-          }
-        }
-        h3 {
-          .header-font;
-          color:#b3c2c9;
-          line-height:32px;
-          a {
-            color:#b3c2c9;
-          }
-        }
-      }
-    }
-  }
+	.slider-home {
+		.slider-overlay {
+			.slider-content {
+				padding: 1em;
+				h2 {
+					.header-font;
+					font-size: 1.5rem; //24px
+					color:#fff;
+					line-height:32px;
+					a {
+						color:#FFF;
+					}
+				}
+				h3 {
+					.header-font;
+					color:#b3c2c9;
+					line-height:32px;
+					a {
+						color:#b3c2c9;
+					}
+				}
+			}
+		}
+	}
 }
 @media @laptop {
-  //////////////////////////////////////////////////////////////////
-  //  home slider                                              //
-  ////////////////////////////////////////////////////////////////
-  .slider-home-top {
-    border-bottom: solid 1px #d5d5d5;
-    padding-bottom: 1px;
-  }
-  .slider-home {
-    width: 956px !important;
-    height: 280px !important;
-    .bx-wrapper {
-      width: 956px !important;
-      height: 280px !important;
-      .bx-viewport {
-        width: 956px !important;
-        height: 280px !important;
-        li {
-          width: 956px !important;
-          height: 280px !important;
-          .slider-overlay {
-            //float: right;
-            margin: 28px;
-            width: 353px !important;
-            height: 234px !important; // 290 - ( 28 - 28 ) = 234
-            .slider-content {
-              padding: 17px 24px 17px 24px !important;
-              h2 {
-                font-size: 1.5rem; //24px
-                line-height:32px;
-              }
-              h3 {
-                font-size: 1.25rem; //20px
-                line-height:32px;
-                text-transform:  none;
-              }
-            }
-          }
-        }
-      }
-    }
+	//////////////////////////////////////////////////////////////////
+	//  min 956                                                    //
+	////////////////////////////////////////////////////////////////
+	.slider-home-top {
+		width: 956px;
+		border-bottom: solid 1px #d5d5d5;
+		padding-bottom: 1px;
+	}
+	.slider-home {
+		width: 956px !important;
+		height: 280px !important;
+		.bx-wrapper {
+			width: 956px !important;
+			height: 280px !important;
+			.bx-viewport {
+				width: 956px !important;
+				height: 280px !important;
+				li {
+					width: 956px !important;
+					height: 280px !important;
+					.slider-overlay {
+						//float: right;
+						margin: 28px;
+						width: 353px !important;
+						height: 234px !important; // 290 - ( 28 - 28 ) = 234
+						.slider-content {
+							padding: 17px 24px 17px 24px !important;
+							h2 {
+								font-size: 1.5rem; //24px
+								line-height:32px;
+							}
+							h3 {
+								font-size: 1.25rem; //20px
+								line-height:32px;
+								text-transform:  none;
+							}
+						}
+					}
+				}
+			}
+		}
 
 
-    .bx-controls.bx-has-pager {
-      position: relative;
-      top: -90px;
-      left: 615px;
-      width: 305px;
-      display: block;
-      margin: 0;
-      .bx-pager.bx-default-pager {
-          float: left;
-        }
-      .bx-pager-item {
-        //float:left;
-        //top: -64px;
-        //left: 592px;
-        //top: -90px;
-        //left: 220px;
-        .bx-pager-link {
-          //margin-right: 12px;
-          width: 13px;
-          height: 13px;
-        }
-      }
-    }
-  }
-  .slider-home-bottom {
-    width: 100%;
-    height: 18px;
-    //margin-top: -17px;
-    background: url("https://www.eia.gov/global/images/bg/h_line_shadow_feature_banner.png") no-repeat top center;
-  }
+		.bx-controls.bx-has-pager {
+			position: relative;
+			top: -90px;
+			left: 615px;
+			width: 305px;
+			display: block;
+			margin: 0;
+			.bx-pager.bx-default-pager {
+					float: left;
+				}
+			.bx-pager-item {
+				//float:left;
+				//top: -64px;
+				//left: 592px;
+				//top: -90px;
+				//left: 220px;
+				.bx-pager-link {
+					//margin-right: 12px;
+					width: 13px;
+					height: 13px;
+				}
+			}
+		}
+	}
+	.slider-home-bottom {
+		width: 956px;
+		height: 18px;
+		float: left;
+		background: url("https://www.eia.gov/global/images/bg/h_line_shadow_feature_banner.png") no-repeat top center;
+	}
+}
+
+
+
+
+
+@media @desktop {
+	//////////////////////////////////////////////////////////////////
+	//  minimum 990                                                //
+	////////////////////////////////////////////////////////////////
+	.slider-home {
+		margin: inherit;
+	}
 }

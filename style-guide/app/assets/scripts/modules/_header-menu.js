@@ -1,11 +1,9 @@
 import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
-
 class HeaderMenu {
 	constructor() {
 		this.menuItem = $('.fancybox-menu');
-//		$('.fancybox-wrap') = $('.fancybox-wrap');
 		this.searchPanel = $('.search-panel');
 		this.header = $('header');
 		this.footer = $('footer');
@@ -48,9 +46,6 @@ class HeaderMenu {
 		console.log('viewport width is: '+ viewPortWidth + ' and viewport height is:' + viewPortHeight);
 		if ((viewPortWidth) > 960) {
 			console.log(viewPortWidth + " = laptop and desktop");
-//			$('.fancybox-wrap').addClass('fancybox-laptop');
-//			$('.fancybox-wrap').removeClass('fancybox-mobile');
-
 			$('.fancybox-menu').fancybox({
 				type: 'inline',
 				width: 960,
@@ -80,6 +75,7 @@ class HeaderMenu {
 			$('.fancybox-menu').fancybox({
 				type: 'inline',
 				scrolling: no,
+				width: '100%',
 				margin: [0, 0, 0, 0],
 				height: 'auto',
 				padding: 0,

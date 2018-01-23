@@ -1207,7 +1207,8 @@
 			&.email,
 			&.rss {
 				&::before {
-					.controls-icon(32px, 32px);
+					//.controls-icon(32px, 32px);
+					.controls-icon(16px, 16px);
 				}
 			}
 		}
@@ -1225,14 +1226,16 @@
 			&.rss {
 				&::before {
 					.controls-icon(40px, 40px);
+
 				}
 			}
 		}
 	}
 }
 
-@media @laptop {
-	.ico {
+@media @desktop {
+
+		/*
 		&.ico-footer {
 			margin: 0 4px -6px 0;
 			padding: 2px 0;
@@ -1248,7 +1251,7 @@
 				}
 			}
 		}
-	}
+		*/
 	.ico {
 		&.ico-sticker {
 			background-color: @eia-blue;

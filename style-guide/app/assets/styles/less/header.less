@@ -1,3 +1,8 @@
+
+//.fancybox-margin {
+//    margin-right: 0 !important;
+//}
+
 @media @mobile {
     li.dropdown {
         position: relative;
@@ -43,6 +48,9 @@
             //height: 46px;
             min-width: 320px !important;
             position: relative;
+            .logo {
+                padding: 0 16px;
+            }
             h1 {
                 border: none;
                 display: none;
@@ -247,21 +255,18 @@
                     top: 0;
                 }
             }
+            .logo {
+                padding: 0 12px;
+            }            
         }
-        .logo {
-            padding: 0 12px;
-        }
-	   ////shrink 
-	   &.shrink {
+	    //shrink 
+	    &.shrink {
             height: 50px;
             .navigation {
                 height: 50px;
-
                 .logo {
                     padding: 5px 12px;
                 }
-
-
                 .nav-primary {
                     margin: 16px 0 0 250px;
                 }
