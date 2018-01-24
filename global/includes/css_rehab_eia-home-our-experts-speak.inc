@@ -1,14 +1,20 @@
-<!-- start module our experts speak -->
-<!-- start module our experts speak -->
-<!-- start module our experts speak -->
-
-<h2>Our Experts Speak</h2>
-<h5><a href="/pressroom/events/pdf/Propane_01102018.pdf">Rob Merriam, Office of Petroleum and Biofuels Statistics and Warren Wilczewski, Office of Petroleum, Natural Gas, and Biofuels Analysis, EIA presented EIA’s propane market indicators and measures of supply adequacy</em>&nbsp;&rsaquo;</a></h5>
-<p>January 10, 2018</p>
-<h5><a href="/pressroom/presentations/hess_10112017.pdf">Tim Hess, Office of Energy Analysis, presented EIA’s Winter Fuels Outlook</em>&nbsp;&rsaquo;</a></h5>
-<p>October 11, 2017</p>    
-<h5><b><a href="pressroom/">More</a></b></h5>
-
-<!-- end module our experts speak -->
-<!-- end module our experts speak -->
-<!-- end module our experts speak -->
+<div class="content-container dark-top-border-container">
+    <ul>
+        <li class="header">
+            <h2>Our Experts Speak</h2>
+        </li>
+        <li>
+            <a href="/pressroom/presentations/gruenspecht_05032017.pdf">Acting EIA Administrator Howard Gruenspecht presented the outlook for natural gas production, demand, and
+                trade</a>
+        </li>
+        <li class="date">January 31, 2017</li>
+        <li>
+            <a href="/pressroom/presentations/gruenspecht_04252017.pdf">Acting EIA Administrator Howard Gruenspecht presented the outlook for oil and natural gas production in
+                the United States</a>
+        </li>
+        <li class="date">January 5, 2017</li>
+        <li class="footer">
+            <a href="pressroom/">More</a>
+        </li>
+    </ul>
+</div>

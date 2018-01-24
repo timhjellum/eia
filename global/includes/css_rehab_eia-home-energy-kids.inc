@@ -1,11 +1,6 @@
-<!-- start module -->
-<!-- start module -->
-<!-- start module -->
 <div class="content-container dark-top-border-container">
 <ul>
-<li class="header">
-<h2>What's New</h2>
-</li>
+<li class="header"><h2>What's New</h2></li>
 <li>
 <a href="/">Drilling Productivity Report</a>
 </li>
@@ -40,6 +35,4 @@
 </li>
 </ul>
 </div>
-<!-- end module -->
-<!-- end module -->
-<!-- end module -->
+

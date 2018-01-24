@@ -1,11 +1,9 @@
-<!-- start module coming up -->
-<!-- start module coming up -->
-<!-- start module coming up -->
-    <h2>Coming Up</h2>         
-    <h5><a href="/environment/emissions/state/analysis/">State-Level Energy-Related Carbon Dioxide Emissions</a>&nbsp;&rsaquo;</h5>
-    <h5><a href="/beta/international/analysis.cfm?iso=IRN">Iran Country Analysis Brief&nbsp;&rsaquo;</a></h5>
-    <h5><a href="/forecasts/aeo/"> Annual Energy Outlook&nbsp;&rsaquo;</a></h5>
-    <h5><b><a href="/reports/upcoming.cfm">More &rsaquo;</a></b></h5>
-<!-- end module coming up -->
-<!-- end module coming up -->
-<!-- end module coming up -->
+<div class="content-container dark-top-border-container">
+    <ul>
+        <li class="header"><h2>Coming Up</h2></li>
+        <li><a href="/environment/emissions/state/analysis/">State-Level Energy-Related Carbon Dioxide Emissions</a></li>
+        <li><a href="/beta/international/analysis.cfm?iso=IRN">Iran Country Analysis Brief&nbsp</a></li>
+        <li><a href="/forecasts/aeo/"> Annual Energy Outlook</a></li>
+        <li class="more"><a href="/reports/upcoming.cfm">More</a></li>
+    </ul>
+</div>

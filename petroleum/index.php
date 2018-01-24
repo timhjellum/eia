@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <?php  if(!isset($no_titling)) include "global/includes/titling.inc"; ?>
 
-<?php include('global/includes/eia_head_info.inc'); ?>
+<?php include('global/includes/css_rehab_eia-head-info.inc') ?>
 <script src="/global/vendor/bxslider/dist/jquery.bxslider.min.js"></script>
 <script src="/global/scripts/slider-multi-cards-init.min.js"></script>
 
@@ -22,9 +22,8 @@
 
 </head>
 <body>
-<div id="outerX"><?php /* Outer Wrapper */ ?>
-  <?php include ('global/includes/eia_header.inc') ; ?>
-      <?php include ('includes/subnav_petroleum.inc') ; ?>
+    <?php include('global/includes/css_rehab_eia-header.inc') ?>
+      <?php include('petroleum/includes/subnav_petroleum.inc') ?>
       <?php /* Page/Body Content */ ?>
       <div class="pagecontent eqcol_temp">
           <?php /*<div class="alert"><p><strong>What's changed?</strong> &nbsp; See <a href="/about/eia_explained.cfm#l2_enhancements" id="enhance" style="background:none; padding-right:0; margin-right:0">highlights of new features</a> or <a href="#video" id="youtube" style="background:none; padding-right:0; margin-right:0">take a 60 second video tour</a>.</p></div>*/ ?>
@@ -163,10 +162,9 @@
       <?php /*end Energy education section*/ ?>
        <?php /*Main*/ ?>
     </div>
-    <?php /*/ Page/Body Content */ ?>
-    <?php include ('global/includes/eia_footer.inc') ; ?>
-</div>
-<?php /*/ Outer Wrapper */ ?>
+
+    <?php include'global/includes/css_rehab_eia-footer.inc' ?>
+
 <script>
 $("#youtube").fancybox({
 	'scrolling'		: 'no',

@@ -1,11 +1,7 @@
-<!-- start module learn about energy -->
-<!-- start module learn about energy -->
-<!-- start module learn about energy -->
-
-  <h4>Learn About Energy</h4>
-    <p><a href="/energyexplained">Energy Explained</a></p>
-    <p class="no_btm_border"><a href="tools/faqs/">Frequently Asked Questions</a></p>
-
-<!-- end module learn about energy -->
-<!-- end module learn about energy -->
-<!-- end module learn about energy -->
+<div class="content-container dark-top-border-container">
+    <ul>
+        <li class="header"><h2>Learn About Energy</h2></li>
+        <li><a href="/energyexplained">Energy Explained</a></li>
+        <li><a href="tools/faqs/">Frequently Asked Questions</a></li>
+    </ul>
+</div>
