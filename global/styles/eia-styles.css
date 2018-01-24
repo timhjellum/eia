@@ -1889,7 +1889,6 @@ span.line-break {
   }
   .fancybox-wrap .fancybox-inner {
     width: 100% !important;
-    height: auto;
   }
   .fancybox-wrap .fancybox-inner .section-tabs {
     border-radius: 0;
@@ -1994,14 +1993,8 @@ span.line-break {
     padding: 1em 0;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .a-z-bottom {
-    width: 94%;
-    margin: 0 3%;
     border: none;
-  }
-  .fancybox-wrap .fancybox-inner .section-tabs .a-z-bottom > div {
-    width: 100%;
-    margin: 0;
-    padding: 1em 0;
+    padding: 1em 1.4em;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu {
     border-bottom: 1px solid #dadada;
@@ -2128,6 +2121,12 @@ span.line-break {
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu.whats-new ul li a {
     margin-top: -6px;
   }
+  .fancybox-wrap .fancybox-inner .section-tabs .nav-menu.az-index {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 1em 0 2em 0;
+    border-bottom: none;
+  }
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu.az-index .az-list {
     position: relative;
     display: block;
@@ -2225,11 +2224,9 @@ span.line-break {
     right: 0;
   }
   .fancybox-wrap {
-    margin: 20px auto 40px auto;
     width: 980px !important;
   }
   .fancybox-wrap.fancybox-laptop {
-    width: 980px;
     -moz-transition: opacity 0.4s ease-in-out;
     -o-transition: opacity 0.4s ease-in-out;
     -webkit-transition: opacity 0.4s ease-in-out;
@@ -2287,18 +2284,14 @@ span.line-break {
     border-bottom: none;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .a-z-bottom {
-    width: 95%;
-    margin: 0 2.5%;
     border: none;
   }
-  .fancybox-wrap .fancybox-inner .section-tabs .a-z-bottom > div {
-    width: 100%;
-    margin: 0;
-    padding: 1em 0;
-  }
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu.az-index {
+    width: 95%;
+    margin: 0 2.5%;
     padding: 1em 0 2em 0;
     border-top: 1px solid #dadada;
+    border-bottom: none;
   }
   .fancybox-wrap .fancybox-inner .section-tabs .nav-menu.az-index p {
     margin-bottom: 5px;
