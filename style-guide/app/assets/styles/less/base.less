@@ -19,6 +19,8 @@
 // 23px	1.438rem	143.8%	17pt
 // 24px	1.500rem	150.0%	18pt
 
+
+
 // 16px reset
 .font-size(@font-size: @baseFontSize) {
 	@rem: (@font-size / @baseFontSize);
@@ -40,57 +42,97 @@
 
 
 
-body, html {
-	background-color: #e8ecf2;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-
-html {
-	font-size: 16px;
-//  .font;
-}
-// move to ...
-//h1, h2, h3, h4, h5, h6 {
-//	clear: both;
-//}
 
 
 
 
 
 
-.no-wrap {
-	.no-wrap;
-}
 
 
 
 
-.gradient {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cccccc+100 */
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #ffffff 0%,#dddddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
-}
+.page-wrapper {
 
-
-
-// caption
-.source {
-	width: 100%;
-	display: block;
-	text-align: center;
-	color: #666;
-	text-decoration: none;
-	&:hover {
-			text-decoration: none;
+	body, html {
+		background-color: #e8ecf2;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	html {
+		font-size: 16px;
+	//  .font;
+	}
+	// move to ...
+	//h1, h2, h3, h4, h5, h6 {
+	//	clear: both;
+	//}
+	.no-wrap {
+		.no-wrap;
+	}
+	.gradient {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cccccc+100 */
+		background: #ffffff; /* Old browsers */
+		background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #ffffff 0%,#dddddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+	}
+	// caption
+	.source {
+		width: 100%;
+		display: block;
+		text-align: center;
+		color: #666;
+		text-decoration: none;
+		&:hover {
+				text-decoration: none;
+		}
+	}
+	sup, sub {
+		font-size: 0.688rem;
+		line-height: 1;
+	}
+	.date {
+		.italic;
+	}
+	p {
+		font-size: 0.75rem;
+	}
+	a {
+		text-decoration: none;
+		color: @eia-blue;
+	
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	hr {
+		background: @light-gray;
+		color: @light-gray;
+		clear: both;
+		float: none;
+		width: 100%;
+		height: 1px;
+		margin: 0 0 1.45em;
+		border: none;
+	}
+	a:hover {
+		span.line-break {
+			text-decoration: underline !important;
+		}
 	}
 }
+
+
+
+
+
+
+
+
+/*
 
 @media @mobile { // mobile
 	input[type=text] {
@@ -542,44 +584,11 @@ html {
 		}
 	}
 }
+*/
 
 
 
 
-sup, sub {
-font-size: 0.688rem;
-line-height: 1;
-}
-
-
-.date {
-	.italic;
-}
-p {
-	font-size: 0.75rem;
-}
-
-
-
-a {
-	text-decoration: none;
-	color: @eia-blue;
-
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-hr {
-	background: @light-gray;
-	color: @light-gray;
-	clear: both;
-	float: none;
-	width: 100%;
-	height: 1px;
-	margin: 0 0 1.45em;
-	border: none;
-}
 
 
 
@@ -589,11 +598,9 @@ hr {
 // <span class="line">Data Tools, Apps,</span> <span class="line">and Maps</span>
 // Line will break after the Apps,
 
-a:hover {
-	span.line-break {
-		text-decoration: underline !important;
-	}
-}
+
+
+
 
 
 
