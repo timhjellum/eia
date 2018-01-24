@@ -84,7 +84,7 @@ class HeaderMenu {
 
 				autoSize: true, // required for width
 				padding: 0,
-				//fitToView: false,
+				fitToView: false,
 				//autoDimension: false,
 				topRatio: 0,
 				//autoWidth: true,
