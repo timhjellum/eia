@@ -115,6 +115,10 @@ $glossary_path = '/tools/glossary/';
 $faqs_path = '/tools/faqs/';
 ?>
 
+<!-- Add fancyBox 2 -->
+<link rel="stylesheet" href="/global/scripts/fancybox2/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/global/scripts/fancybox2/jquery.fancybox.pack.js?v=2.1.5"></script>
+
 <?php
 	// Since the failover DB doesn't allow writes, we shouldn't include the survey_engine js
 	if(isset($_SERVER["COMPUTERNAME"]) && $_SERVER["COMPUTERNAME"] === 'WWW3'){

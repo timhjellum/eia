@@ -1,47 +1,13 @@
-
 @import "less/vendor/fancybox";
 @import "less/vendor/normalize";
-
 @import "less/global_vars";
 @import "less/global_mixins";
-/* @import "less/layouts-responsive"; */
 @import "less/base";
-
-/* @import "less/energy-explained"; */
-
 @import "less/footer";
 @import "less/header";
 @import "less/header-menu";
-
 @import "less/icons";
-/* @import "less/report-title"; */
-@import "less/slider-home";
 @import "less/layouts";
-/* @import "less/slider-multi-cards"; */
 @import "less/social-sticker";
-/* @import "less/subnav"; */
-/* @import "less/tables"; */
-/* @import "less/templates"; */
-/* @import "less/title"; */
 
-/* @import "less/modules/analysis-projections"; */
-/* @import "less/modules/accordion"; */
-/* @import "less/modules/tabs"; */
-/* @import "less/modules/messaging"; */
-@import "less/modules/content-container";
-/* @import "less/modules/features"; */
-/* @import "less/modules/reports"; */
-/* @import "less/modules/report-details"; */
-@import "less/modules/standard-container";
-@import "less/modules/standard-table";
-@import "less/modules/blue-background";
-@import "less/modules/grey-background";
-@import "less/modules/light-top-border-container";
-@import "less/modules/main-content-container";
-@import "less/modules/dark-top-border-container";
-/* @import "less/modules/visualizations"; */
-/* @import "less/modules/energy-education"; */
-/* @import "less/modules/page-tabs"; */
-
-/* @import "less/modules/legend"; */
 

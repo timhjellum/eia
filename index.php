@@ -6,12 +6,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
 <?php if(!isset($no_titling)) include'global/includes/titling.inc' ?>
 
-<?php include'global/includes/css_rehab_eia-head-info.inc' ?>
-
-<link href="/global/styles/eia-styles-home.css" rel="stylesheet" />
+<?php include'global/includes/eia_head_info.inc' ?>
 </head>
 <body>
-<?php include('global/includes/css_rehab_eia-header.inc'); ?>
+<?php include('global/includes/eia_header.inc'); ?>
 
 <?php include('global/includes/css_rehab_eia-home-slider.inc'); ?>
 
@@ -46,14 +44,13 @@
         </div>
     </div>
 
-    <?php include('global/includes/css_rehab_eia-footer.inc'); ?>
+    <?php include('global/includes/eia_footer.inc'); ?>
 
     <!-- start page specific vendor scripts -->
     <script src="/global/vendor/bxslider/dist/jquery.bxslider.min.js"></script>
-    <!-- endpage specific vendor scripts -->
+    <!-- end page specific vendor scripts -->
 
     <!-- start page specific scripts -->
-    <script src="/global/scripts/slider-home.min.js"></script>
     <?php /* the script below appends a query string to the end of each image name in the homepage rotating banner forcing the browser to fetch a new, updated image*/ ?>
     <!--
         script>

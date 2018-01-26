@@ -11,7 +11,7 @@
         <input class="fancy-search-box" name="glossary" placeholder="Search the glossary" onfocus="this.placeholder=''" onblur="this.placeholder='Search the glossary'"
             type="text" />
         <button onClick="validate()" class="search-submit">
-            <i class="ico search-submit">Search</i>
+            <i class="ico-menu search-submit">Search</i>
         </button>
         <!-- input class="arrow_go" border="0" type="button" value="Search" name="search" alt="enter terms to search" onClick="validate()" title="Search Glossary" -->
     </form>

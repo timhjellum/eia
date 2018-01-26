@@ -11,6 +11,20 @@
 		padding-bottom: 1px !important;
 		width: 100%;
 		overflow: hidden;
+		ul.bxslider {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				background-repeat: no-repeat;
+				background-size: cover;
+				list-style: none;
+				img {
+					max-width: 100%;
+					display: block;
+				}
+			}
+		}
 		.bx-wrapper {
 			position: relative;
 			//margin-bottom: 60px;
@@ -23,47 +37,30 @@
 				/*fix other elements on the page moving (on Chrome)*/
 				-webkit-transform: translatez(0);
 				//padding-top: 29.123%;
-				ul.bxslider {
-					list-style: none;
-					margin: 0;
-					padding: 0;
-					li {
-						background-repeat: no-repeat;
-						background-size: cover;
-						list-style: none;
-						img {
-							max-width: 100%;
-							display: block;
+				.slider-overlay {
+					display: block;
+					margin: 1em auto;
+					width: 90%;
+					background-color: rgba(0, 60, 87, 0.7); // must be rgba - do not use var
+					.slider-content {
+						padding: 1em;
+						h2 {
+							.header-font;
+							color:#fff;
+							font-size: 1.5rem; //24px
+							line-height:32px;
+							a {
+								color:#FFF;
+							}
 						}
-					.slider-overlay
-					//,
-					//.slider-overlay2
-					{
-						display: block;
-						margin: 1em auto;
-						width: 90%;
-						background-color: rgba(0, 60, 87, 0.7); // must be rgba - do not use var
-							.slider-content {
-								padding: 1em;
-								h2 {
-									.header-font;
-									color:#fff;
-									font-size: 1.5rem; //24px
-									line-height:32px;
-									a {
-										color:#FFF;
-									}
-								}
-								h3 {
-									.header-font;
-									color:#b3c2c9;
-									font-size: 1.25rem; //20px
-									line-height:32px;
-									text-transform:  none;
-									a {
-										color:#b3c2c9;
-									}
-								}
+						h3 {
+							.header-font;
+							color:#b3c2c9;
+							font-size: 1.25rem; //20px
+							line-height:32px;
+							text-transform:  none;
+							a {
+								color:#b3c2c9;
 							}
 						}
 					}

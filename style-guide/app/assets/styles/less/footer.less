@@ -17,7 +17,7 @@
 			float: left;
 		}
 		border-top: 1px solid @eia-dark-blue;
-//		.font-size;
+		//.font-size;
 		float: left;
 		clear: both;
 		padding: 1em 0 3em;
@@ -55,13 +55,20 @@
 				padding: 0 0 2em 2em;
 				margin: 0;
 				text-align: center;
-//				font-size: 1.3rem;
+				font-size: 0.938rem;
 				li {
 					display: inline-block;
 					margin: 0 12px 0 0;
 					padding: 3px 10px 3px 0px;
 					.arrow-right {
-						display: none;
+						display: block;
+						width: 0;
+						height: 0;
+						float: right;
+						margin: 6px 0 0 6px;
+						border-top: 4px solid transparent;
+						border-bottom: 4px solid transparent;
+						border-left: 4px solid #a6a5a6; // #666;
 					}
 				}
 				a {
@@ -102,6 +109,19 @@
 					a {
 						.normal;
 					}
+					line-height: 1.2em;
+					a[href^="http:"],
+					a[href^="https:"],
+					a[href*=".com"] {
+						background: url(/global/images/icons/external_link.png) no-repeat scroll right center transparent;
+						padding-right: 10px;
+						margin-right: 1px;
+						a {
+							&:hover {
+								text-decoration: underline !important;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -134,9 +154,6 @@
 }
 @media @tablet {  // mobile panorama
 	.footer {
-//		.l-one-third-column {
-//			background-color: greenyellow;
-//		}
 		.l-column {
 			-webkit-box-flex: 0;
 			-webkit-flex: 0 0 33.333333%;
@@ -191,10 +208,6 @@
 }
 @media @laptop {
   	.footer {
-		font-size: .6875rem;
-//		.l-one-third-column {
-//			background-color: brown;
-//		}
 		.l-column {
 			-webkit-box-flex: 0;
 			-webkit-flex: 0 0 16.666667%;
@@ -222,13 +235,11 @@
 			width: 66.666667%;
 		}
 		.address-bar {
-//			padding: 0 0 2em 2em;
 		  	.address {
 				float: right;
 				padding: 0 25px 0 0;
 				border-right: 1px solid #a6a5a6; // @eia-dark-gray;
 				text-align: right;
-				font-size: .6875rem;
 				border-top: none;
 			}
 			.above-address-links {
@@ -238,17 +249,6 @@
 					float: left;
 					margin: 0 12px 0 0;
 					padding: 3px 10px 3px 0px;
-					font-size: .9375rem;
-					.arrow-right {
-						display: block;
-						width: 0;
-						height: 0;
-						float: right;
-						margin: 10px 0 0 6px;
-						border-top: 4px solid transparent;
-						border-bottom: 4px solid transparent;
-						border-left: 4px solid #a6a5a6; // #666;
-					}
 				}
 			}
 		}
@@ -259,23 +259,10 @@
 				margin: 0;
 				padding: 0;
 				border: none;
-				padding-right: 1.1em;     
+				padding-right: 1.1em;
 				li {
 					margin-bottom: .5em;
-//font-size: .6875rem;
 					line-height: 1.2em;
-					a[href^="http:"],
-					a[href^="https:"],
-					a[href*=".com"] {
-						background: url(/global/images/icons/external_link.png) no-repeat scroll right center transparent;
-						padding-right: 10px;
-						margin-right: 1px;
-						a {
-							&:hover {
-								text-decoration: underline !important;
-							}
-						}
-					}
 				}
 			}
 		}

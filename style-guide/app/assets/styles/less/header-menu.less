@@ -1,10 +1,3 @@
-/*
-.fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul {
-    width: 100%;
-    margin: 0;
-.fancybox-wrap .fancybox-inner .section-tabs .tabs-wrapper ul li {
-    margin: 15px 24px 5px;
-*/
 @media @mobile {
     
     .ui-autocomplete {
@@ -43,7 +36,7 @@
         }
         &.ui-widget-content {
             border: none;
-            background-color: transparent;
+            //background-color: transparent;
             background-image: none;
             color: transparent;
             a {
@@ -55,13 +48,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100% !important;
         z-index: 8020;        
         &.fancybox-mobile {
             top: 0;
             left: 0;
-            width: 100% !important;
-            position: static !important;
             margin: 0 auto 0 auto;
             -moz-transition: opacity 0.4s ease-in-out;
             -o-transition: opacity 0.4s ease-in-out;
@@ -73,8 +63,6 @@
             box-sizing: border-box;
         }
         .fancybox-inner {
-            width: 100% !important;
-            //height:100%;
             .section-tabs {
                 border-radius: 0;
                 .tabs-wrapper {
@@ -94,10 +82,9 @@
                             padding: 0;
                             a {
                                 display: block;
-                                //padding: .5em 1em;
+                                .header-font;
                                 color: #fff;
                                 font-size: 1.3rem;
-                                font-family: "Times New Roman","Times",serif;
                                 font-weight: 100;
                                 &:hover {
                                     text-decoration: none;
@@ -407,9 +394,10 @@
         bottom: 0;
         right: 0;
     }
+//    (min-aspect-ratio: 7/8) {
     .fancybox-wrap {
         //margin: 20px auto 40px auto;
-        width: 980px !important;
+        //width: 980px !important;
         &.fancybox-laptop {
             -moz-transition: opacity 0.4s ease-in-out;
             -o-transition: opacity 0.4s ease-in-out;
@@ -470,16 +458,6 @@
                         }
                     }
                 }
-
-
-
-
-
-
-
-
-
-
                 .tabs-wrapper {
                     min-height: 95px;
                     border: none;

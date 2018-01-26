@@ -1,6 +1,3 @@
-<!-- start prototype specific files -->
-<!-- start prototype specific files -->
-<!-- start prototype specific files -->
 <div class="l-row header">
 	<div class="slider-home-top"></div>
 	<div class="slider-home">
@@ -104,6 +101,3 @@
 	</div>
 	<div class="slider-home-bottom"></div>
 </div>
-<!-- end prototype specific files -->
-<!-- end prototype specific files -->
-<!-- end prototype specific files -->

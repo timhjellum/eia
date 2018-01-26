@@ -64,20 +64,19 @@
         </ul>
         <ul class="l-column">
             <li>Stay Connected</li>
-            <li><a href="http://facebook.com/eiagov/" target="_blank"><i class="ico ico-footer facebook"></i>Facebook</a></li>
-            <li><a href="http://twitter.com/eiagov/" target="_blank"><i class="ico ico-footer twitter"></i>Twitter</a></li>
-            <li><a href="http://youtube.com/eiagov/" target="_blank"><i class="ico ico-footer youtube"></i>Youtube</a></li>
-            <li><a href="https://www.flickr.com/photos/eiagov/" target="_blank"><i class="ico ico-footer flickr"></i>Flickr</a></li>
-            <li><a href="http://linkedin.com/company/u-s-energy-information-administration" target="_blank"><i class="ico ico-footer linkedin"></i>LinkedIn</a></li>
-            <li><a href="/tools/emailupdates/" target="_blank"><i class="ico ico-footer email"></i>Email Updates</a></li>
-            <li><a href="/tools/rssfeeds/" target="_blank"><i class="ico ico-footer rss"></i>RSS Feeds</a></li>
+            <li><a href="http://facebook.com/eiagov/" target="_blank"><i class="ico-footer facebook"></i>Facebook</a></li>
+            <li><a href="http://twitter.com/eiagov/" target="_blank"><i class="ico-footer twitter"></i>Twitter</a></li>
+            <li><a href="http://youtube.com/eiagov/" target="_blank"><i class="ico-footer youtube"></i>Youtube</a></li>
+            <li><a href="https://www.flickr.com/photos/eiagov/" target="_blank"><i class="ico-footer flickr"></i>Flickr</a></li>
+            <li><a href="http://linkedin.com/company/u-s-energy-information-administration" target="_blank"><i class="ico-footer linkedin"></i>LinkedIn</a></li>
+            <li><a href="/tools/emailupdates/" target="_blank"><i class="ico-footer email"></i>Email Updates</a></li>
+            <li><a href="/tools/rssfeeds/" target="_blank"><i class="ico-footer rss"></i>RSS Feeds</a></li>
         </ul>
     </div>
 </footer>
 <script>
-$('').addClass('');
-
 $('#outerX').removeAttr('id');
 $('.l-outer-wrapper').attr('id', 'outerX');
 </script>
+
 <script src='/global/scripts/eia-scripts.min.js'></script>

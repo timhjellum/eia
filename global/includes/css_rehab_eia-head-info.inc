@@ -108,6 +108,55 @@ if($widgets == "y"){
 
   <script src="/global/scripts/api/eia_hc_widget.js" type="text/javascript"></script>
   <script src="/global/scripts/api/eia_api_widgets.js" type="text/javascript"></script>
+  <style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+	.fancybox-margin{margin-right:0 !important;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </style>
 <?php
 }
 

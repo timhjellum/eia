@@ -9,7 +9,7 @@
 				<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
 			</a>
 			<a href="#" class="search-menu-toggle">
-				<i class="ico search">Search</i>
+				<i class="ico-menu search">Search</i>
 			</a>
 			<a class="fancybox-menu menu-toggle" href="#menu" data-target="sources">
 				<div class="toggle-bar">
@@ -23,29 +23,29 @@
 			<ul class="nav-primary">
 				<li class="nav-primary-item">
 					<a class="fancybox-menu" href="#menu" data-target="sources">
-						<i class="ico plus-yellow">+</i> Sources &amp; Uses</a>
+						<i class="plus-yellow">+</i> Sources &amp; Uses</a>
 				</li>
 				<li class="nav-primary-item">
 					<a class="fancybox-menu" href="#menu" data-target="topics">
-						<i class="ico plus-yellow">+</i> Topics</a>
+						<i class="plus-yellow">+</i> Topics</a>
 				</li>
 				<li class="nav-primary-item">
 					<a class="fancybox-menu" href="#menu" data-target="geography">
-						<i class="ico plus-yellow">+</i> Geography</a>
+						<i class="plus-yellow">+</i> Geography</a>
 				</li>
 			</ul>
 			<ul class="nav-secondary">
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="tools">
-						<i class="ico plus-greyish-blue">+</i> Tools</a>
+						<i class="plus-greyish-blue">+</i> Tools</a>
 				</li>
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="learn">
-						<i class="ico plus-greyish-blue">+</i> Learn About Energy</a>
+						<i class="plus-greyish-blue">+</i> Learn About Energy</a>
 				</li>
 				<li class="nav-secondary-item">
 					<a class="fancybox-menu" href="#menu" data-target="news">
-						<i class="ico plus-greyish-blue">+</i> News</a>
+						<i class="plus-greyish-blue">+</i> News</a>
 				</li>
 			</ul>
 			<div class="nav-menu" style="display: none">
@@ -76,7 +76,7 @@
 					<div id="sources">
 						<div class="sources-uses left">
 							<div class="nav-menu petroleum">
-								<i class="ico ico-nav petroleum"></i>
+								<i class="ico-menu ico-nav petroleum"></i>
 								<h3>
 									<a href='/petroleum/'>Petroleum &amp; Other Liquids</a>
 								</h3>
@@ -91,7 +91,7 @@
 								</ul>
 							</div>
 							<div class="nav-menu natural-gas">
-								<i class="ico ico-nav natural-gas"></i>
+								<i class="ico-menu ico-nav natural-gas"></i>
 								<h3>
 									<a href='/naturalgas/'>Natural Gas</a>
 								</h3>
@@ -106,9 +106,9 @@
 								</ul>
 							</div>
 							<div class="nav-menu electricity">
-								<i class="ico ico-nav electricity"></i>
+								<i class="ico-menu ico-nav electricity"></i>
 								<h3>
-									<a href="electricity/">Electricity</a>
+									<a href='/electricity/'>Electricity</a>
 								</h3>
 								<p>Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand &amp; emissions.
 								</p>
@@ -122,26 +122,26 @@
 								</ul>
 							</div>
 							<div class="nav-menu consumption">
-								<i class="ico ico-nav consumption"></i>
+								<i class="ico-menu ico-nav consumption"></i>
 								<h3>
-									<a href="consumption/">Consumption &amp; Efficiency</a>
+									<a href='/consumption/'>Consumption &amp; Efficiency</a>
 								</h3>
 								<p>Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
 								<ul>
 									<li>
-										<a href='/consumption/data.php#rec'>RECS 2009</a>
+										<a href='/consumption/residential/'>RECS 2009</a>
 									</li>
 									<li>
-										<a href='/consumption/data.php#cec'>CBECS</a>
+										<a href='/consumption/commercial/'>CBECS</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="sources-uses right">
 							<div class="nav-menu coal">
-								<i class="ico ico-nav coal"></i>
+								<i class="ico-menu ico-nav coal"></i>
 								<h3>
-									<a href="coal">Coal</a>
+									<a href='/coal/'>Coal</a>
 								</h3>
 								<p>Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.</p>
 								<ul>
@@ -154,7 +154,7 @@
 								</ul>
 							</div>
 							<div class="nav-menu renewable">
-								<i class="ico ico-nav renewable"></i>
+								<i class="ico-menu ico-nav renewable"></i>
 								<h3>
 									<a href="/renewable/">Renewable &amp; Alternative Fuels</a>
 								</h3>
@@ -166,7 +166,7 @@
 								</ul>
 							</div>
 							<div class="nav-menu nuclear">
-								<i class="ico ico-nav nuclear"></i>
+								<i class="ico-menu ico-nav nuclear"></i>
 								<h3>
 									<a href="/nuclear/">Nuclear &amp; Uranium</a>
 								</h3>
@@ -178,7 +178,7 @@
 								</ul>
 							</div>
 							<div class="nav-menu total-energy">
-								<i class="ico ico-nav total-energy"></i>
+								<i class="ico-menu ico-nav total-energy"></i>
 								<h3>
 									<a href="/totalenergy/">Total Energy</a>
 								</h3>
@@ -188,7 +188,7 @@
 										<a href='/totalenergy/data/monthly/'>Monthly Energy Review</a>
 									</li>
 									<li>
-										<a href='/totalenergy/data/annual/i'>Annual Energy Review</a>
+										<a href='/totalenergy/data/annual/'>Annual Energy Review</a>
 									</li>
 								</ul>
 							</div>
@@ -198,7 +198,7 @@
 					<div id="topics">
 						<div class="topics left">
 							<div class="nav-menu analysis">
-								<i class="ico ico-nav analysis-projections"></i>
+								<i class="ico-menu ico-nav analysis-projections"></i>
 								<h3>
 									<a href="/analysis/">Analysis &amp; Projections</a>
 								</h3>
@@ -209,39 +209,39 @@
 										<a href='/outlooks/steo/'>Short Term Energy Outlook</a>
 									</li>
 									<li>
-										<a href='/analysis/reports.php/#T186,T128'>Annual Energy Outlook</a>
+										<a href='/outlooks/aeo/'>Annual Energy Outlook</a>
 									</li>
 									<li>
-										<a href='/analysis/reports.php/#T186,T132'>International Energy Outlook</a>
+										<a href='/outlooks/ieo/'>International Energy Outlook</a>
 									</li>
 								</ul>
 							</div>
 							<div class="nav-menu markets-finance">
-								<i class="ico ico-nav markets-finance"></i>
+								<i class="ico-menu ico-nav markets-finance"></i>
 								<h3>
 									<a href="/finance/">Markets &amp; Finance</a>
 								</h3>
 								<p>Financial market analysis and financial data for major energy companies.</p>
 								<ul>
 									<li>
-										<a href='/finance/data.php#mpurc'>Market Prices and Uncertainty Report</a>
+										<a href='/finance/data.php'>Market Prices and Uncertainty Report</a>
 									</li>
 									<li>
-										<a href='/'>Energy &amp; Financial Markets: What Drives Crude Oil Prices?</a>
+										<a href='/finance/markets/crudeoil/'>Energy &amp; Financial Markets: What Drives Crude Oil Prices?</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="topics right">
 							<div class="nav-menu environment">
-								<i class="ico ico-nav environment"></i>
+								<i class="ico-menu ico-nav environment"></i>
 								<h3>
-									<a href="environment/">Environment</a>
+									<a href="/environment/">Environment</a>
 								</h3>
 								<p>Greenhouse gas data, voluntary report-ing, electric power plant emissions.</p>
 								<ul>
 									<li>
-										<a href='/'>Energy-Related Carbon Dioxide Emissions at the State Level, 2000-2013</a>
+										<a href='/environment/emissions/state/analysis/'>Energy-Related Carbon Dioxide Emissions at the State Level, 2000-2015</a>
 									</li>
 									<li>
 										<a href='/environment/emissions/state/'>State Carbon Dioxide Emissions</a>
@@ -254,9 +254,9 @@
 					<div id="geography">
 						<div class="geography left">
 							<div class="nav-menu states">
-								<i class="ico ico-nav states"></i>
+								<i class="ico-menu ico-nav states"></i>
 								<h3>
-									<a href="state/">U.S. States</a>
+									<a href="/state/">U.S. States</a>
 								</h3>
 								<p>State energy information, including overviews, rankings, data, and analyses.</p>
 								<ul>
@@ -266,9 +266,9 @@
 								</ul>
 							</div>
 							<div class="nav-menu maps">
-								<i class="ico ico-nav maps"></i>
+								<i class="ico-menu ico-nav maps"></i>
 								<h3>
-									<a href="maps/">Maps</a>
+									<a href="/maps/">Maps</a>
 								</h3>
 								<p>Maps by energy source and topic, includes forecast maps.</p>
 								<ul>
@@ -276,7 +276,7 @@
 										<a href='/state/maps.php'>U.S. Energy Mapping System</a>
 									</li>
 									<li>
-										<a href='/'>Gulf of Mexico</a>
+										<a href='/special/gulf_of_mexico/'>Gulf of Mexico</a>
 									</li>
 									<li>
 										<a href='/special/disruptions/'>Energy Disruptions</a>
@@ -286,9 +286,9 @@
 						</div>
 						<div class="geography right">
 							<div class="nav-menu international">
-								<i class="ico ico-nav international"></i>
+								<i class="ico-menu ico-nav international"></i>
 								<h3>
-									<a href="beta/international/">International</a>
+									<a href="/beta/international/">International</a>
 								</h3>
 								<p>International energy information, including overviews, rankings, data, and analyses.</p>
 								<ul>
@@ -303,60 +303,60 @@
 					<div id="tools">
 						<div class="tools left">
 							<div class="nav-menu eia-glossary">
-								<i class="ico ico-nav eia-glossary"></i>
+								<i class="ico-menu ico-nav eia-glossary"></i>
 								<h3>
-									<a href="tools/glossary/">Glossary</a>
+									<a href="/tools/glossary/">Glossary</a>
 								</h3>
 								<?php include('global/includes/css_rehab_eia-header-glossary.inc') ?>
 							</div>
 							<div class="nav-menu data-tools-model">
-								<i class="ico ico-nav data-tools-model"></i>
+								<i class="ico-menu ico-nav data-tools-model"></i>
 								<h3>
-									<a href="tools/models/">Data Tools &amp; Models</a>
+									<a href="/tools/">Data Tools, Apps, &amp; Maps</a>
 								</h3>
 								<p>Tools to customize searches, view specific data sets, study detailed documentation, and access time-series data.</p>
 							</div>
 							<div class="nav-menu open-data">
-								<i class="ico ico-nav open-data"></i>
+								<i class="ico-menu ico-nav open-data"></i>
 								<h3>
-									<a href="beta/api/">Open Data</a>
+									<a href="/beta/api/">Open Data</a>
 								</h3>
 								<p>EIA's free and open data available as API, Excel add-in, bulk files, and widgets</p>
 							</div>
 							<div class="nav-menu beta">
-								<i class="ico ico-nav beta"></i>
+								<i class="ico-menu ico-nav beta"></i>
 								<h3>
-									<a href="beta">EIA Beta</a>
+									<a href="/beta">EIA Beta</a>
 								</h3>
 								<p>Come test out some of the products still in development and let us know what you think!</p>
 							</div>
 							<div class="nav-menu follow-us">
-								<i class="ico ico-nav follow-us"></i>
+								<i class="ico-menu ico-nav follow-us"></i>
 								<h3>Follow us. . .</h3>
 								<p>
 									<a href="http://facebook.com/eiagov/" target="_blank">
-										<i class="ico ico-menu facebook"></i>
+										<i class="ico-menu facebook"></i>
 									</a>
 									<a href="http://twitter.com/eiagov/" target="_blank">
-										<i class="ico ico-menu twitter"></i>
+										<i class="ico-menu twitter"></i>
 									</a>
 									<a href="http://youtube.com/eiagov/" target="_blank">
-										<i class="ico ico-menu youtube"></i>
+										<i class="ico-menu youtube"></i>
 									</a>
 									<a href="https://www.flickr.com/photos/eiagov/">
-										<i class="ico ico-menu flickr"></i>
+										<i class="ico-menu flickr"></i>
 									</a>
 									<a href="https://www.linkedin.com/company/u-s-energy-information-administration">
-										<i class="ico ico-menu linkedin"></i>
+										<i class="ico-menu linkedin"></i>
 									</a>
 								</p>
 							</div>
 						</div>
 						<div class="tools right">
 							<div class="nav-menu reports">
-								<i class="ico ico-nav reports"></i>
+								<i class="ico-menu ico-nav reports"></i>
 								<h3>
-									<a href="reports/">All Reports &amp; Publications</a>
+									<a href="/reports/">All Reports &amp; Publications</a>
 								</h3>
 								<script type="text/javascript">
 									function byId(id) { return document.getElementById(id) }
@@ -390,28 +390,28 @@
 									 onfocus="this.placeholder=''" onblur="this.placeholder='Enter tags. Tags should be seperated with the + character'">
 									</textarea>
 									<button type="submit" id="goBtn" class="search-submit">
-										<i class="ico search-submit">Search</i>
+										<i class="ico-menu search-submit">Search</i>
 									</button>
 								</div>
 							</div>
 							<div class="nav-menu survey-forms">
-								<i class="ico ico-nav survey-forms"></i>
+								<i class="ico-menu ico-nav survey-forms"></i>
 								<h3>
-									<a href="survey/">EIA Survey Forms</a>
+									<a href="/survey/">EIA Survey Forms</a>
 								</h3>
 								<?php include('global/includes/css_rehab_eia-header-survey-search.inc') ?>
 							</div>
 							<div class="nav-menu email-complex">
-								<i class="ico ico-nav email-complex"></i>
+								<i class="ico-menu ico-nav email-complex"></i>
 								<h3>
-									<a href="tools/emailupdates/">Email Updates</a>
+									<a href="/tools/emailupdates/">Email Updates</a>
 								</h3>
 								<p>Sign up for email subcriptions to receive messages about specific EIA products</p>
 							</div>
 							<div class="nav-menu rss-complex">
-								<i class="ico ico-nav rss-complex"></i>
+								<i class="ico-menu ico-nav rss-complex"></i>
 								<h3>
-									<a href="tools/rssfeeds/">RSS Feeds</a>
+									<a href="/tools/rssfeeds/">RSS Feeds</a>
 								</h3>
 								<p>Subscribe to feeds for updates on EIA products including Today in Energy and What's New.</p>
 							</div>
@@ -421,69 +421,74 @@
 					<div id="learn">
 						<div class="learn left">
 							<div class="nav-menu today-in-energy">
-								<i class="ico ico-nav today-in-energy"></i>
+								<i class="ico-menu ico-nav today-in-energy"></i>
 								<h3>
-									<a href="todayinenergy/">Today in Energy</a>
+									<a href="/todayinenergy/">Today in Energy</a>
 								</h3>
 								<p>Short, timely articles with graphics on energy, facts, issues, and trends.</p>
 							</div>
 							<div class="nav-menu energy-explained">
-								<i class="ico ico-nav energy-explained"></i>
+								<i class="ico-menu ico-nav energy-explained"></i>
 								<h3>
-									<a href="energyexplained/">Energy Explained</a>
+									<a href="/energyexplained/">Energy Explained</a>
 								</h3>
 								<ul class="energy-explained-list left">
 									<li>
-										<a href="energyexplained/index.cfm?page=about_home">What is Energy?</a>
+										<a href="/energyexplained/index.cfm?page=about_home">What is Energy?</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=about_energy_units">Units &amp; Calculators</a>
+										<a href="/energyexplained/index.cfm?page=about_energy_units">Units &amp; Calculators</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=us_energy_use">Use of Energy</a>
+										<a href="/energyexplained/index.cfm?page=us_energy_use">Use of Energy</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=environment_home">Energy &amp; Environment</a>
+										<a href="/energyexplained/index.cfm?page=environment_home">Energy &amp; Environment</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=oil_home">Petroleum</a>
+										<a href="/energyexplained/index.cfm?page=oil_home">Petroleum</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=natural_gas_home">Natural Gas</a>
+										<a href="/energyexplained/index.cfm?page=hgls_home">Hydrocarbon Gas Liquids</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=coal_home">Coal</a>
+										<a href="/energyexplained/index.cfm?page=natural_gas_home">Natural Gas</a>
 									</li>
-									<li>
-										<a href="energyexplained/index.cfm?page=nuclear_home">Nuclear</a>
-									</li>
+									
+									
 								</ul>
 								<ul class="energy-explained-list right">
 									<li>
-										<a href="energyexplained/index.cfm?page=electricity_home">Electricity</a>
+										<a href="/energyexplained/index.cfm?page=coal_home">Coal</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=hydropower_home">Hydropower</a>
+										<a href="/energyexplained/index.cfm?page=nuclear_home">Nuclear</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=biofuel_home">Biofuels: Ethanol &amp; Biodiesel</a>
+										<a href="/energyexplained/index.cfm?page=electricity_home">Electricity</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=wind_home">Wind</a>
+										<a href="/energyexplained/index.cfm?page=hydropower_home">Hydropower</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=geothermal_home">Geothermal</a>
+										<a href="/energyexplained/index.cfm?page=biofuel_home">Biofuels: Ethanol &amp; Biodiesel</a>
 									</li>
 									<li>
-										<a href="energyexplained/index.cfm?page=solar_home">Solar</a>
+										<a href="/energyexplained/index.cfm?page=wind_home">Wind</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=geothermal_home">Geothermal</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=solar_home">Solar</a>
 									</li>
 								</ul>
 							</div>
 
 							<div class="nav-menu teachers">
-								<i class="ico ico-nav teachers"></i>
+								<i class="ico-menu ico-nav teachers"></i>
 								<h3>
-									<a href="kids/energy.cfm?page=6">For Teachers</a>
+									<a href="/kids/energy.cfm?page=6">For Teachers</a>
 								</h3>
 								<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
 							</div>
@@ -491,60 +496,60 @@
 						</div>
 						<div class="learn right">
 							<div class="nav-menu eia-glossary">
-								<i class="ico ico-nav eia-glossary"></i>
+								<i class="ico-menu ico-nav eia-glossary"></i>
 								<h3>
-									<a href="tools/glossary/">Glossary</a>
+									<a href="/tools/glossary/">Glossary</a>
 								</h3>
 								<?php include('global/includes/css_rehab_eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu faq">
-								<i class="ico ico-nav faq"></i>
+								<i class="ico-menu ico-nav faq"></i>
 								<h3>
-									<a href="tools/faqs/">FAQs</a>
+									<a href="/tools/faqs/">FAQs</a>
 								</h3>
 								<ul class="faq-list left">
 									<li>
-										<a href="tools/faqs/#coal">Coal</a>
+										<a href="/tools/faqs/#coal">Coal</a>
 									</li>
 									<li>
-										<a href="tools/faqs/#conversion equivalents">Conversion &amp; Equivalents</a>
+										<a href="/tools/faqs/#conversion equivalents">Conversion &amp; Equivalents</a>
 									</li>
 									<li>
-										<a href="tools/faqs/#crudeoil">Crude Oil</a>
+										<a href="/tools/faqs/#crudeoil">Crude Oil</a>
 									</li>
 									<li>
-										<a href="tools/faqs/#diesel">Diesel</a>
+										<a href="/tools/faqs/#diesel">Diesel</a>
 									</li>
 									<li>
-										<a href="tools/faqs/#electricity">Electricity</a>
+										<a href="/tools/faqs/#electricity">Electricity</a>
 									</li>
 									<li>
-										<a href="tools/faqs/#environment">Environment</a>
+										<a href="/tools/faqs/#environment">Environment</a>
 									</li>
 								</ul>
 								<ul class="faq-list right">
 									<li>
-										<a href="tools/faqs/index.cfm#gasoline">Gasoline</a>
+										<a href="/tools/faqs/index.cfm#gasoline">Gasoline</a>
 									</li>
 									<li>
-										<a href="tools/faqs/index.cfm#generalenergy">General Energy</a>
+										<a href="/tools/faqs/index.cfm#generalenergy">General Energy</a>
 									</li>
 									<li>
-										<a href="tools/faqs/index.cfm#naturalgas">Natural Gas</a>
+										<a href="/tools/faqs/index.cfm#naturalgas">Natural Gas</a>
 									</li>
 									<li>
-										<a href="tools/faqs/index.cfm#nuclear">Nuclear</a>
+										<a href="/tools/faqs/index.cfm#nuclear">Nuclear</a>
 									</li>
 									<li>
-										<a href="tools/faqs/index.cfm#prices">Prices</a>
+										<a href="/tools/faqs/index.cfm#prices">Prices</a>
 									</li>
 									<li>
-										<a href="tools/faqs/index.cfm#renewables">Renewables</a>
+										<a href="/tools/faqs/index.cfm#renewables">Renewables</a>
 									</li>
 								</ul>
 							</div>
 							<div class="nav-menu energy-kids">
-								<a href="kids/" class="energy-kids"></a>
+								<a href="/kids/" class="energy-kids"></a>
 							</div>
 						</div>
 					</div>
@@ -552,7 +557,7 @@
 					<div id="news">
 						<div class="news left">
 							<div class="nav-menu whats-new">
-								<i class="ico ico-nav whats-new"></i>
+								<i class="ico-menu ico-nav whats-new"></i>
 								<h3>
 									<a href="/about/new/">What's New?</a>
 								</h3>
@@ -560,34 +565,34 @@
 							</div>
 
 							<div class="nav-menu press-room">
-								<i class="ico ico-nav press-room"></i>
+								<i class="ico-menu ico-nav press-room"></i>
 								<h3>
-									<a href="pressroom/">Press Room</a>
+									<a href="/pressroom/">Press Room</a>
 								</h3>
 								<ul>
 									<li>
-										<a href="pressroom/releases.cfm">Press Releases</a>
+										<a href="/pressroom/releases.cfm">Press Releases</a>
 									</li>
 									<li>
-										<a href="pressroom/testimony.cfm">Congressional Testimony</a>
+										<a href="/pressroom/testimony.cfm">Congressional Testimony</a>
 									</li>
 									<li>
-										<a href="pressroom/presentations.cfm">Presentations</a>
+										<a href="/pressroom/presentations.cfm">Presentations</a>
 									</li>
 									<li>
-										<a href="pressroom/events.cfm">Events</a>
+										<a href="/pressroom/events.cfm">Events</a>
 									</li>
 									<li>
-										<a href="radio/">Radio Spots</a>
+										<a href="/radio/">Radio Spots</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="news right">
 							<div class="nav-menu upcoming">
-								<i class="ico ico-nav upcoming"></i>
+								<i class="ico-menu ico-nav upcoming"></i>
 								<h3>
-									<a href='/'>Coming Up</a>
+									<a href='/reports/upcoming.php'>Coming Up</a>
 								</h3>
 								<ul>
 									<li>
@@ -602,23 +607,26 @@
 								</ul>
 							</div>
 							<div class="nav-menu featured-reports">
-								<i class="ico ico-nav featured-reports"></i>
+								<i class="ico-menu ico-nav featured-reports"></i>
 								<h3>
 									<a href='/'>Featured Reports</a>
 								</h3>
 								<p>Reports requested by congress or otherwise deemed important.</p>
 								<ul>
 									<li>
-										<a href='/'>Important Report #1</a>
+										<a href='/analysis/transportationfuels/padd2n4/'>Midwest and Rocky Mountain Transportation Fuels Markets</a>
 									</li>
 									<li>
-										<a href='/'>Important Report #2</a>
+										<a href='/analysis/transportationfuels/padd1n3/'>East Coast and Gulf Coast Transportation Fuels Markets</a>
 									</li>
 									<li>
-										<a href='/'>Important Report #3</a>
+										<a href='/analysis/transportationfuels/padd5/'>West Coast Transportation Fuels Markets</a>
 									</li>
 									<li>
-										<a href='/'>Important Report #4</a>
+										<a href='/special/disruptions/socal/winter/'>Southern California Daily Energy Report</a>
+									</li>
+									<li>
+										<a href='/outlooks/archive/aeo16/section_issues.cfm#cpp'>Effects of the Clean Power Plan</a>
 									</li>
 								</ul>
 							</div>
@@ -626,35 +634,35 @@
 					</div>
 					<div class="a-z-bottom">
 						<div class="nav-menu az-index">
-							<i class="ico ico-nav az-index"></i>
+							<i class="ico-menu ico-nav az-index"></i>
 							<h3>
-								<a href="tools/a-z/">A-Z Index</a>
+								<a href="/tools/a-z/">A-Z Index</a>
 							</h3>
 							<div class="az-list">
-								<a href="tools/a-z/index.cfm?id=a">A</a> |
-								<a href="tools/a-z/index.cfm?id=b">B</a> |
-								<a href="tools/a-z/index.cfm?id=c">C</a> |
-								<a href="tools/a-z/index.cfm?id=d">D</a> |
-								<a href="tools/a-z/index.cfm?id=e">E</a> |
-								<a href="tools/a-z/index.cfm?id=f">F</a> |
-								<a href="tools/a-z/index.cfm?id=g">G</a> |
-								<a href="tools/a-z/index.cfm?id=h">H</a> |
-								<a href="tools/a-z/index.cfm?id=i">I</a> |
-								<a href="tools/a-z/index.cfm?id=j">J</a> |
-								<a href="tools/a-z/index.cfm?id=k">K</a> |
-								<a href="tools/a-z/index.cfm?id=l">L</a> |
-								<a href="tools/a-z/index.cfm?id=m">M</a> |
-								<a href="tools/a-z/index.cfm?id=n">N</a> |
-								<a href="tools/a-z/index.cfm?id=o">O</a> |
-								<a href="tools/a-z/index.cfm?id=p">P</a> |
-								<a href="tools/a-z/index.cfm?id=q">Q</a> |
-								<a href="tools/a-z/index.cfm?id=r">R</a> |
-								<a href="tools/a-z/index.cfm?id=s">S</a> |
-								<a href="tools/a-z/index.cfm?id=t">T</a> |
-								<a href="tools/a-z/index.cfm?id=u">U</a> |
-								<a href="tools/a-z/index.cfm?id=v">V</a> |
-								<a href="tools/a-z/index.cfm?id=w">W</a> |
-								<a href="tools/a-z/index.cfm?id=xyz">XYZ</a>
+								<a href="/tools/a-z/index.cfm?id=a">A</a> |
+								<a href="/tools/a-z/index.cfm?id=b">B</a> |
+								<a href="/tools/a-z/index.cfm?id=c">C</a> |
+								<a href="/tools/a-z/index.cfm?id=d">D</a> |
+								<a href="/tools/a-z/index.cfm?id=e">E</a> |
+								<a href="/tools/a-z/index.cfm?id=f">F</a> |
+								<a href="/tools/a-z/index.cfm?id=g">G</a> |
+								<a href="/tools/a-z/index.cfm?id=h">H</a> |
+								<a href="/tools/a-z/index.cfm?id=i">I</a> |
+								<a href="/tools/a-z/index.cfm?id=j">J</a> |
+								<a href="/tools/a-z/index.cfm?id=k">K</a> |
+								<a href="/tools/a-z/index.cfm?id=l">L</a> |
+								<a href="/tools/a-z/index.cfm?id=m">M</a> |
+								<a href="/tools/a-z/index.cfm?id=n">N</a> |
+								<a href="/tools/a-z/index.cfm?id=o">O</a> |
+								<a href="/tools/a-z/index.cfm?id=p">P</a> |
+								<a href="/tools/a-z/index.cfm?id=q">Q</a> |
+								<a href="/tools/a-z/index.cfm?id=r">R</a> |
+								<a href="/tools/a-z/index.cfm?id=s">S</a> |
+								<a href="/tools/a-z/index.cfm?id=t">T</a> |
+								<a href="/tools/a-z/index.cfm?id=u">U</a> |
+								<a href="/tools/a-z/index.cfm?id=v">V</a> |
+								<a href="/tools/a-z/index.cfm?id=w">W</a> |
+								<a href="/tools/a-z/index.cfm?id=xyz">XYZ</a>
 							</div>
 						</div>
 					</div>
@@ -666,11 +674,11 @@
 						<input name="utf8" type="hidden" value="&#x2713;" />
 						<input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
 						<label class="accessibility" for="query">Enter Search Term(s):</label>
-						<i class="ico search"></i>
+						<i class="ico-menu search"></i>
 						<input autocomplete="off" class="usagov-search-autocomplete search-box" name="query" type="text" maxlength="256"
 						 placeholder="Search eia.gov" onfocus="this.placeholder=''" onblur="this.placeholder='Search eia.gov'"/>
 						<button type="submit" name="search" id="goBtn" class="search-submit">
-							<i class="ico search-submit">Search</i>
+							<i class="ico-menu search-submit">Search</i>
 						</button> 
 					</form>
 					<script type="text/javascript">
