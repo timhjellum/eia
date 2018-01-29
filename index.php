@@ -4,14 +4,13 @@
 
 <head>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
-<?php if(!isset($no_titling)) include'global/includes/titling.inc' ?>
-
-<?php include'global/includes/eia_head_info.inc' ?>
+<?php include('global/includes/css_rehab_eia-head.inc') ?>
 </head>
 <body>
-<?php include('global/includes/eia_header.inc'); ?>
+<div id="outerX">
+<?php include('global/includes/eia_header.inc') ?>
 
-<?php include('global/includes/css_rehab_eia-home-slider.inc'); ?>
+<?php /* include('global/includes/css_rehab_eia-home-slider.inc') */ ?>
 
     <!-- 25% / 50% / 25% --> 
     <div class="l-row">

@@ -22,6 +22,7 @@
 
 </head>
 <body>
+<div id="outerX">
     <?php include('global/includes/css_rehab_eia-header.inc') ?>
       <?php include('petroleum/includes/subnav_petroleum.inc') ?>
       <?php /* Page/Body Content */ ?>

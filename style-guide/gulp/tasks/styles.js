@@ -1,49 +1,74 @@
-var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-var less = require('gulp-less');
-var rename = require('gulp-rename');
-var path = require('path');
-var del = require('del');
+let gulp = require('gulp');
+let cleanCSS = require('gulp-clean-css');
+let less = require('gulp-less');
+let rename = require('gulp-rename');
+let path = require('path');
+let del = require('del');
 
 
 // this compiles a production CSS from only the required LESS files and makes a pretty and ugly (minified) version in the global folder and style-guide folder
+/*
 
-//gulp.task('less', ['compile-styles-less'], () =>
-//  del(['../global/styles/eia-styles.min.css', '../global/styles/eia-styles.min.css'])
-//);
+1. Compile NEW EIA Styles [less]
+  Output:
+    * /global/styles/ compiled but not minimized
+    * app/style-guide/css/ compiled but not minimized
+    * /global/styles/ compiled and minimized
 
-gulp.task('less', ['compile-home-less'], () =>
+2. Compile NEW Print Styles [compile-print-less]
+  Output:
+    * /global/styles/ compiled but not minimized
+    * app/style-guide/css/ compiled but not minimized
+    * /global/styles/ compiled and minimized
+
+3. Compile OLD Print Styles [compile-old-print-less]
+  Output:
+    * /global/styles/ compiled but not minimized
+    * app/style-guide/css/ compiled but not minimized
+    * /global/styles/ compiled and minimized
+
+4. Compile Style Guide Styles [compile-old-style-guide-less]
+  Output:
+    * app/style-guide/css/ compiled but not minimized
+*/
+
+gulp.task('less', ['compile-print-less'], () =>
   gulp.src('./app/assets/styles/eia-styles.css')
   .pipe(less())
   .pipe(gulp.dest('../global/styles'))
   .pipe(gulp.dest('app/style-guide/css'))
-  .pipe(cleanCSS({debug: true}, function(details) {
-    console.log(details.name + ': ' + details.stats.originalSize);
-    console.log(details.name + ': ' + details.stats.minifiedSize);
+  .pipe(cleanCSS({debug: true}, (details) => {
+    console.log(`${details.name}: ${details.stats.originalSize}`);
+    console.log(`${details.name}: ${details.stats.minifiedSize}`);
   }))
   .pipe(rename("eia-styles.min.css"))
   .pipe(gulp.dest('../global/styles'))
-//  .on(error, function swallowError (error) {
-//      console.log(error.toString())
-//      this.emit('end')
-//    });
 );
 
-gulp.task('compile-home-less', ['compile-style-guide-less'], () =>
-  gulp.src('./app/assets/styles/eia-styles-home.css')
+gulp.task('compile-print-less', ['compile-old-print-less'], () =>
+  gulp.src('./app/assets/styles/eia-print.css')
   .pipe(less())
   .pipe(gulp.dest('../global/styles'))
   .pipe(gulp.dest('app/style-guide/css'))
-  .pipe(cleanCSS({debug: true}, function(details) {
-    console.log(details.name + ': ' + details.stats.originalSize);
-    console.log(details.name + ': ' + details.stats.minifiedSize);
+  .pipe(cleanCSS({debug: true}, (details) => {
+    console.log(`${details.name}: ${details.stats.originalSize}`);
+    console.log(`${details.name}: ${details.stats.minifiedSize}`);
   }))
-  .pipe(rename("eia-styles-home.min.css"))
+  .pipe(rename("eia-print.min.css"))
   .pipe(gulp.dest('../global/styles'))
-//  .on(error, function swallowError (error) {
-//      console.log(error.toString())
-//      this.emit('end')
-//    });
+);
+
+gulp.task('compile-old-print-less', ['compile-style-guide-less'], () =>
+  gulp.src('../global/styles/print.css')
+//  .pipe(less())
+//  .pipe(gulp.dest('../global/styles'))
+  .pipe(gulp.dest('app/style-guide/css'))
+  .pipe(cleanCSS({debug: true}, (details) => {
+    console.log(`${details.name}: ${details.stats.originalSize}`);
+    console.log(`${details.name}: ${details.stats.minifiedSize}`);
+  }))
+//  .pipe(rename("print.min.css"))
+  .pipe(gulp.dest('../global/styles'))
 );
 
 // this compiles a working CSS from ALL the LESS files and makes a pretty version for the global folder and style-guide folder
