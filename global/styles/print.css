@@ -1,0 +1,871 @@
+/* -----------------------------------------------------------------------
+
+----------------------------------------------------------------------- */
+
+/* print.css */
+body {line-height:1.5;font-family:Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;margin:0px;padding:0px;}
+.container {background:none;}
+hr {/*background:#ccc;color:#ccc;*/width:100%;height:1px;margin:2em 0;padding:0;border:none;}
+hr.space {background:#fff;color:#fff;visibility:hidden;}
+h1, h2, h3, h4, h5, h6 {font-family:"Times New Roman", Times, serif;}
+code {font:.9em "Courier New", Monaco, Courier, monospace;}
+a img {border:none;}
+p img.top {margin-top:0;}
+blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
+.small {font-size:.9em;}
+.large {font-size:1.1em;}
+.quiet {color:#999;}
+.hide, .do-not-print, .fblink_give {display:none;}
+a:link, a:visited {background:transparent;font-weight:normal;text-decoration:underline;}
+.page_break_after {page-break-after:always;}
+.highcharts-button {display:none;}
+
+
+/*.pagecontent a:link:after, .pagecontent a:visited:after {content:" (" attr(href) ")";font-size:90%;}*/
+
+/* -------------------------------------------------------------------- */
+/* EIA Print Styles  *****                                                   */
+/* -------------------------------------------------------------------- */
+
+head,
+#header ul,
+#header h1,
+.subnav, 
+.pagecontent .side_col, 
+#footer, 
+#header_old,
+#footer_old,
+script,
+.pub_title a,
+footer_old a,
+a href,
+.aeo_footer,
+.thumbs a, .no_print, .rtitle a, .frame_print_button {display:none;visibility:hidden;}
+div.title, div.pub_title {background-image: none !important;}
+
+/*  #header1{background:none !important; height:auto !important; min-height:0px !important; margin:0px 0px 0px 0px !important; padding:0px 0px 0px 0px !important; border: none !important; display: inline !important; float:none !important;}
+  #header1 a h1, #header1 h1{background-image:none !important; font-size: 2em !important; width:auto !important; height:auto !important; display: inline !important; text-align:left !important; margin:0px !important; padding:0px !important;}*/
+#header .print img, #header1 .print img, #pr_head img {
+	display:block;
+	width: 100%;
+	margin-bottom: 20px;
+	border-top: 5px solid #189BD7;
+}
+
+.logo-eia { padding: 10px 0; float:right; width:450px; }
+
+html {font-size:100.01%;}
+body {font-size:80%;color:#333333;background:#fff;font-family:Arial, Helvetica, sans-serif;}
+
+pagecontent,
+.pub_title p a
+ {display:block !important;visibility:visible !important;}
+
+
+/* */
+html {font-size:100.01%;}
+body {font-size:80%;color:#333333;font-family:Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#189bd7;font-family:"Times New Roman", Times, serif;}
+h1 {font-size:1.7em;margin-top:0px;margin-bottom:2px;line-height: 1.2;}
+h2 {font-size:1.5em;padding-bottom:0px;margin-top:0em;margin-bottom:0px; line-height: 1.5;}
+h3 {font-size:1.25em;margin-bottom:0px;}
+h4 {font-size:1.15em;margin-bottom:0px;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:0px;}
+h6 {font-size:1em;font-weight:bold;margin-bottom:0px;}
+p {	font-size:0.95em;
+	margin:0em 0em 1.25em;
+}
+li {	font-size:0.95em;
+}
+a {text-decoration:none !important; color:#189bd7;}
+p img {float:left; margin-right:30px; margin-bottom:20px;padding:4px;border: 1px solid #dadada;}
+hr {display:block;clear:both;margin:10px 0px 0px 0px;padding:0px;border-bottom: 1px solid #cccccc;}
+
+/* Tables -------------------------- */
+
+tbody td {line-height:1.2em;vertical-align:top;}
+
+/* Lists --------------------------- */
+
+.no_bullet li {
+	list-style-type: none;
+}
+.double_space li{
+	margin-bottom:14px;
+}
+li ul, li ol {margin:0;}
+ul, ol {margin:0 1.5em 1.5em 0;padding-left:1.5em;}
+/* Page Feature -------------------- */
+.feature {
+	display:inline-block;
+	background: #FFF;
+	padding:4px;
+	border: 1px solid #dadada;
+	margin-bottom:20px;
+/*	width:640px;*/
+}
+.feature span {
+	display:inline-block;
+	padding:30px;
+	border: 1px solid #dadada;
+/*	width:578px;*/
+
+}
+.feature h1 {
+	display:inline-block !important;
+	border:none;
+	clear:none !important;
+	margin-bottom:0px;
+	padding-top:0px;
+}
+.feature h2 {
+	display:inline-block !important;
+	border:none;
+	clear:none !important;
+	margin:0px;
+	padding: 0px !important;
+	font-size:20px;
+	line-height:1.3em;
+}
+.feature p {
+	font-size:14px;
+/*	line-height:1.4em !important;*/
+	margin-bottom:0px;
+	margin-top:14px;
+}
+.feature hr {
+	margin: 10px 0px 10px 0px;
+	color:#616060;
+}
+
+/* Carousels ------------------------- */
+
+.carousel {
+	display:inline;
+	padding:0px;
+	margin-bottom:16px;
+	max-height:auto;
+	min-height:410px;
+	height:auto !important;
+	height:430px;
+	/*overflow:hidden;	*/
+	position: relative;
+}
+.carousel img {border:0px !important;}
+.carousel_image {
+/*	height:320px;
+	width:648px;
+	text-align:center;*/
+}
+.carousel_image p, .carousel_image h4, .carousel_image h4 a {
+	text-align:left;
+	float:left;
+}
+.carousel_footer {
+	/*font-size:11px;*/
+	background-color: #ffffff;
+	margin:0px;
+	width:648px;
+	position: relative;
+	height:100%;
+}
+.carousel_footer div {
+	position:absolute;
+	top:0;
+	left:0;
+}
+/*.carousel_footer2 {
+	font-size:11px;
+	background-color: #f4f4f4;
+	margin:0px;
+	margin-bottom:10px;
+	color:#00405d;
+	clear:left;
+	width:648px;
+}*/
+.carousel_footer form {
+	font-size:11px;
+	margin:0px;
+/*	padding:0px;*/
+	padding:11px;
+/*	background-color:#0F0;*/
+}
+/*.carousel_footer select  {font-size:11px;}*/
+.carousel_footer p, .carousel_footer2 p {
+	font-size:11px;
+	padding: 0px;
+	padding-left:0px;
+	margin:0px;
+	padding-bottom:0px;
+}
+.carousel_footer2 p {padding:8px; clear:left;}
+.carousel h1, .carousel2 h1, .carouselfo h1  {
+	margin:0px;
+	padding-top:0px;
+	color:#00405d;
+}
+.carousel h1 span, .carousel2 h1 span, .carouselfo h1 span {
+	display:inline;
+	color:#5e625e;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	margin-top:-5px;
+}
+
+.carousel h4 a, .carousel2 h4 a, .carouselfo h4 a {
+    margin:0px;
+	padding-top:0px;
+	font-weight:normal;
+}
+
+/* SLIDER ------------------------------------------ */
+
+#slider1, .slider {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	}
+
+#slider1 li, .slider li {
+	padding: 0px;
+	margin: 0px;
+	zoom:1;
+	height:430px;
+	overflow: hidden;
+}
+#slider1 p,#slider1 img, #slider1 object, 
+#slider1 h2, #slider1 h3, #slider1 h5, #slider1 h6,
+.slider1 p,.slider1 img, .slider object, 
+.slider1 h2, .slider1 h3, .slider h5, .slider h6{
+	margin: 0px;;
+}
+
+/* Lists ------------------------------------------ */
+
+.mr_temp5 .split_2columns {
+	float:left;
+	margin-right:15px;
+	width:31%;
+}
+
+.mr_temp5 .right img {
+	float:right;
+	margin-left: 12px;
+	margin-right: 0px;
+}
+
+.contable {
+	display:table;
+	clear:both;
+	width:100%;
+	margin:0px;
+	margin-top:45px;
+	border-collapse:collapse;
+}
+
+.condaterange {
+	display:block;
+	clear:both;
+	width:100%;
+	font-size:11px;
+	margin-bottom:-26px;
+	color:#7d7d7d;
+}
+.contable td {
+	border-bottom: 1px solid #ccc;
+}
+
+.contable th:first-child {
+	/*padding: 45px 10px 7px 6px;*/
+	margin:0px;
+	text-align:left;
+}
+
+.contable th {
+	border-bottom: 2px solid #189BD7;
+	font-weight: bold;
+}
+/*.contable thead:first-child tr th{
+	padding: 7px 10px 7px 6px;
+}*/
+
+.contable th span.right {
+	font-weight: normal;
+}
+/*.contable th.active {
+  border:0px;
+	border-bottom: 1px solid #fff;
+	padding: 7px 10px 7px 22px;
+	background: #00405d transparent url(/global/images/icons/arrow_bl_d_pad.png) no-repeat center left !important;
+}*/
+.contable th a.pdf{
+	text-align:left;
+	font-size:11px;
+	padding: 0px 20px 0px 16px;
+	background: transparent url(/global/images/icons/pdf.png) no-repeat center left !important;
+}
+.contable td a.pdf{
+	text-align:left;
+	font-size:11px;
+	padding: 0px 10px 0px 16px;
+	background: transparent url(/global/images/icons/pdf.png) no-repeat center left !important;
+}
+.contable th a {color:#fff;}
+.contable th a:hover, .contable th a:visited {color:#89d8ff;text-decoration:none;}
+.contable th span a:hover, .contable th span a:visited {text-decoration:underline;}
+
+.contable tr td {
+/*	display:block;*/
+/*	padding: 12px 10px 12px 40px;*/
+/*    margin-top:-4px;*/
+/*	border-bottom: 1px solid #ecedee;*/
+}
+.condaterange a {
+	padding: 0px 8px 0px 8px;
+	border-right: 1px solid #bbb;
+	line-height:1em;
+}
+.condaterange .active {
+	color:#00405d;
+}
+.expandall {
+	display:none;
+}
+.collapseall {
+	display:none;
+}
+.contable td {
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.contable tbody tr:first-child td, .contable tbody tr.summary td{
+	/*background-color:#ddf0f9;*/
+	border-bottom: 2px solid #ccc;
+}
+.contable tbody tr.white_first:first-child {
+	background-color:#FFF;
+	}
+
+/*	.contable tr:hover {background-color:#FFFFC6;} /** 2011.04.21 - Christian.stauffer@eia.gov **/
+
+.contable tbody tr:first-child td:first-child, .contable tbody tr.summary td:first-child{
+	padding-left:24px;
+/*	text-indent:13px;*/
+}
+.contable td:first-child {
+	padding-left:24px;
+/*	text-indent:26px;*/
+}
+.contable_noindent td:first-child {
+	text-indent:0px;
+}
+.contable h2 {
+	font-size:1.15em;
+}
+.mapcontainer {
+	width:100%;
+}
+.mapcontainer img {
+	float:left !important;
+}
+.numeric tr td {
+	text-align:right;
+}
+
+.numeric td:first-child {
+	text-align:left;
+}
+.numeric_last tr td {
+	text-align:left;
+}
+.img_container {
+	width:45%;
+	border: solid 1px #cccccc;
+	padding:10px;
+}
+.img_container p {
+	font-weight:bold;
+	width:95%;
+	margin:0px;
+	padding:0px;
+}
+.total td{
+	font-weight:bold;
+}
+.equal_col .side_left, .equal_col .side_right, .equal_col .main {
+	width: 304px !important;
+}
+
+/* Simple Tables ------------------------------ */
+.simpletable {
+	display:table;
+	clear:both;
+/*	width:100%;*/
+	margin:0px;
+	margin-bottom:16px;
+	border-collapse:collapse;
+	}
+.simpletable thead tr{}
+.simpletable th {
+	font-weight: bold;
+	background-color:#FFF;
+/*	color:#000; */
+	color:#333;
+	border-bottom:3px solid #0097d6;
+	vertical-align:bottom;
+	line-height:1.2em;
+	text-align:right;
+}
+.simpletable tr th:first-child {text-align:left;}
+.simpletable h5 {color:#265281;font-size:14px;margin:0px;}
+.simpletable td {
+	border-bottom:1px solid #ccc;
+	vertical-align:bottom;
+	text-align:right;
+	color:#333;
+}
+.simpletable tr td:first-child {text-align:left;}
+
+.simpletable4 {
+	display:table;
+	clear:both;
+/*	width:100%;*/
+	margin:0px;
+	margin-bottom:16px;
+	border-collapse:collapse;
+	}
+.simpletable4 thead {	}
+.simpletable4 th {
+	font-weight: bold;
+	background-color:#FFF;
+/*	color:#000; */
+	color:#333;
+	border-bottom:3px solid #0097d6;
+	vertical-align:bottom;
+	line-height:1.2em;
+	text-align:right;
+}
+.simpletable4 thead tr:first-child th{
+	border-bottom:1px solid #ccc;
+	text-align:left;
+}
+.simpletable4 thead tr:first-child th:first-child{
+	border-bottom:none;
+}
+.simpletable4 tr th:first-child {text-align:left;}
+.simpletable4 h5 {color:#265281;font-size:14px;margin:0px;}
+.simpletable4 td {
+	border-bottom:1px solid #ccc;
+	vertical-align:bottom;
+	text-align:right;
+	color:#333;
+}
+.simpletable4 tr td:first-child {text-align:left;}
+.simpletable4 .total td {
+	border-top:2px solid #0097d6;
+	border-bottom:none;
+}
+.no_btm_border_table td {
+	border-bottom:none;
+}
+
+.carousel_table {
+	height:auto;
+	width:648px;
+	text-align:center;
+	padding-bottom: 20px;
+}
+#slider1_table, #slider2_table, #slider3_table, .slider_table {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	clear:both;
+	}
+#slider1_table p, #slider2_table p, #slider3_table p, .slider_table p{
+	text-align: left;
+	margin: 0px 18px 0px 18px;
+	color:#888888;
+}
+
+#slider1_table li, #slider2_table li, #slider3_table li, .slider_table li{
+	padding: 0px;
+	margin: 0px;
+	zoom:1;
+	height:auto;
+	overflow: hidden;
+}
+#slider1_table table , #slider2_table table, #slider3_table table, .slider_table table{
+	margin: 0px 18px 16px 18px;
+}
+/* THUMBS ---------------------------------- */
+.thumbs_table2, .thumbs_table3 {
+	/*display:block;
+	min-height:25px;
+	height:auto !important;
+	height:25px;*/
+	padding-right:15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.thumbs_table2 a, .thumbs_table3 a {
+	display: inline-block;
+	text-indent: -9999px;
+/*	height: 25px;*/
+	width: 11px;
+	background-image: url(/global/images/icons/thumb_off.png);
+}
+.thumbs_table2 a:hover, .thumbs_table3 a:hover, .thumbs_table2 a.pager-active_table2, .thumbs_table3 a.pager-active_table3 {background-image: url(/global/images/icons/thumb_on.png) /*!important*/;}
+
+/* removing tab styling ----------------------*/
+.ui-tabs .ui-tabs-panel, .ui-tabs .ui-tabs-hide, .ui-tabs .ui-tabs-hide img {
+	position: relative;
+	display:block !important;
+	clear:both !important;
+}
+
+.ui-tabs-nav, .ui-tabs-nav li{
+	border:none !important;
+	display:none;
+}
+.ui-tabs-panel, .ui-tabs {
+	border:none !important;
+}
+
+/*------- New basic table style ----------*/
+.basic_table, .zebra {
+	border-collapse: collapse;
+	table-layout: fixed;
+	color: #333;
+}
+.fullwidth {
+	width: 100%;
+}
+.basic_table tr td, .basic_table tr th, .zebra tr td, .zebra tr th {
+	padding-right: 10px;
+	vertical-align: bottom;
+	color: #333;
+}
+.zebra thead th, .zebra tr th, .zebra tr th a{
+	background:none;
+	font-weight:bold;
+	color: #333;
+}
+.basic_table thead th, .basic_table tr th{
+	background:none;
+	font-weight:bold;
+}
+.basic_table .double-header th[colspan]{
+	border-bottom: 1px solid #ccc;
+	border-right: 6px solid #fff;
+	text-align: left;
+}
+.basic_table .double-header th[colspan]:last-child{
+	border-right:none;
+}
+.basic_table tr:last-child th, .zebra tr:last-child th, .zebra tbody th {
+	border-bottom: 2px solid #189bd7;
+}
+.basic_table tr td, .zebra tr td {
+	border-bottom: 1px dashed #ccc;
+	vertical-align: top;
+}
+.zebra tr th {
+	padding-top:20px;
+}
+.zebra tr .bar {
+	padding-top:4px;
+}
+.basic_table td, .basic_table th {
+	text-align: right;
+}
+.basic_table td:first-child, .basic_table th:first-child {
+	text-align: left;
+}
+.zebra td, .zebra th {
+	text-align: left;
+}
+.basic_table td:first-child, .basic_table th:first-child {
+	padding-left:10px;
+}
+.indented td:first-child {
+	padding-left:20px;
+}
+.basic_table thead+tbody tr:first-child td {
+	border-top: none;
+}
+.basic_table tbody tr:last-child td {
+	padding-bottom: 6px;
+	border-bottom: none;
+}
+.basic_table tfoot tr:first-child td {
+	padding-left: 10px;
+	padding-top: 12px;
+	border-top: 2px solid #189bd7;
+}
+.basic_table tfoot tr td {
+	border-bottom: none;
+	font-style: italic;
+}
+.basic_table tbody tr:first-child td, .basic_table tbody .section td{
+	padding-top: 12px;
+	padding-left: 10px;
+	border-top: 1px solid #189bd7;
+}
+.basic_table tbody tr:last-child td, .basic_table tbody .section:last-child td{
+	padding-bottom: 12px;
+}
+.basic_table tbody .sectionhead td{
+	border-bottom: 1px solid #ccc;
+}
+.basic_table .sectionhead td{
+	font-weight: bold;
+}
+.basic_table caption {
+	background: none;
+	padding:0px 0px 6px 0px;
+/*  border-bottom: 1px solid #CCCCCC;
+  font-family: Times New Roman;*/
+  font-size: 11pt;
+  text-align: left;
+  font-weight: bold;
+}
+.basic_table caption p {
+	margin:0px 0px 6px 0px;
+	font: inherit;
+}
+.basic_table tbody+thead tr th {
+	padding-top:20px;
+}
+.basic_table.all_left td, .basic_table.all_left th {
+	text-align: left;
+}
+.basic_table .triple-header tr th{
+	border-left: 1px solid #bababa;
+	border-top: 1px solid #bababa;
+}
+.basic_table .triple-header tr th:first-child{
+	border-left: none;
+}
+.basic_table tr.no-border td {
+	border-bottom: none;
+}
+/*------- End new basic table style ------*/
+
+/*------- States Rankings page fixes ----------*/
+#left_column_cws #map_container_cws+div {
+	clear:left;
+}
+#map_container_cws {
+	margin-bottom:200px;
+	margin-top:40px;
+}
+#map_instructions, #map_legend {
+	float:left;
+}
+
+
+/*------- End States Rankings page fixes ------*/
+/*------- Natural Gas Weekly Update (NGWU) ----------*/
+#ngwu_left_column {width:500px;}
+.ngwu_tables {width:100%;
+	clear:none;}
+.ngwu_highcharts {
+	width:100%;}
+.ngwu_text_box {
+	width:100%;}
+.ngw_div .main_col {
+	width:100%;
+}
+
+.ngwu_temp_map_container {
+  background-color:#fff;
+  background-image:url(/global/images/logos/eia_logo_xsmall.png);
+  background-repeat:no-repeat;
+  background-position:bottom left;
+}
+.ngwu_temp_map_title {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  color:#000;
+  margin:0 0 -10px 0;
+}
+.ngwu_temp_map_subtitle {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  color:#888;
+  margin:10px 0 5px 0;
+}
+.ngwu_temp_map_source {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:11px;
+  color:#888;
+  margin:314px 0 0 35px;
+}
+.ngwu_temp_map_crop1 {
+  float:left;
+  margin:0;
+  overflow:hidden; /* this is important */
+  /*border:1px solid #ccc;*/
+  padding-left:15px;
+}
+/* input values to crop the image */
+.ngwu_temp_map_crop1 img {
+  margin:-49px -63px -360px -41px;
+}
+.ngwu_temp_map_crop2 {
+  float:left;
+  margin:0;
+  overflow:hidden; /* this is important */
+  /*border:1px solid #ccc;*/
+  padding-left:15px;
+}
+/* input values to crop the image */
+.ngwu_temp_map_crop2 img {
+  margin:-403px -63px -5px -41px;
+}
+.ngwu_image_container {
+	width:498px;
+	margin:38px 0 0 0;
+	border:1px solid #ccc;
+	padding:17px 0;
+}
+.ngwu_image_container img {
+	float:left;
+	margin:0;
+	overflow:hidden; /* this is important */
+	padding-left:15px;
+	margin-bottom:10px;
+}
+.ngwu_image_title {
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+	margin:0 0 0 23px;
+}
+.ngwu_image_subtitle {
+	font-size:12px;
+	font-weight:bold;
+	color:#888;
+	margin:0 0 10px 23px;
+}
+.ngwu_image_source {
+	font-size:11px;
+	color:#888;
+	background-image:url(/global/images/logos/eia_logo_xsmall.png);
+	background-repeat:no-repeat;
+	background-position:left;
+  float:left;
+	padding:5px 0 0 35px;
+	margin:0 17px 0 23px;
+	}
+/*------- Natural Gas Weekly Update (NGWU) ------*/
+
+.highcharts-buttonGroup {
+	display:none;
+}
+
+/*------- State Narratives ------*/
+/* Christian.stauffer@eia.gov 2014-08-21 */
+.pullquote {
+	float:right; 
+	position:relative; 
+	margin:-4px 0 15px 20px; 
+	padding:0px 10px 10px 0px; 
+	border-left: 2px solid #eee;
+	width:27%;
+	height:auto;
+	/*color: #777777;*/
+	color:#189bd7;
+}
+
+.pullquote p {
+	font-size:1.5em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 0px 10px 0px 20px;
+	margin-bottom:0px;
+	font-style:italic;
+	/*text-indent: -.9em;*/
+}
+
+.pullquote p:before, .pullquote p:after{
+	font-size: 2.25em;
+	line-height: 0em;
+	position: relative;
+	color: #189bd7;
+}
+
+/*--- Energy in Brief template ------ */
+
+.eib .left_col div.graph img {
+	max-width: 6.5in;
+}
+
+.eib .right_col img.intro, .title_head.bg_eib h1, .title_head.bg_eib a {
+	display: none;
+}
+
+.eib .right_col div.graph img {
+	max-width: 6.5in;
+}
+
+.eib .did-u-know .ltblue_side {
+	/*border: 1px solid #bababa;*/
+	background-color: #DFF2FB;
+	padding: 0.1in 0.2in 0.05in 0.2in;
+	margin-bottom: 0.25in;
+}
+
+.eib .did-u-know .ltblue_side h2 {
+	color: #333333;
+}
+
+.eib .right_col .graph p:first-child {
+	font-size: 16px;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 1.2em;
+	margin-top: 0.1in;
+	margin-bottom: 0.1in;
+	page-break-after: avoid;
+}
+
+.eib .left_col h1 {
+	font-size: 1.8em;;
+}
+
+.eib .left_col h2 {
+  page-break-after: avoid;
+}
+
+.eib .left_col h1 + p.release_date {
+	font-style: italic;
+}
+
+.eib_url {
+  position: absolute;
+  right: 0.1in;
+  top: 0.125in;
+  z-index: 100;
+}
+
+/*---/ Energy in Brief template ------ */
+.highcharts-buttonGroup {
+	display:none;
+}
+#sticker {
+	display:none;
+}
+
+/*--- print only ---*/
+.print_only {display: block; width: 100%;}
+
+/*--- Issues in Focus image scaling ---*/
+  .mr_temp2.if_article .main_col img {
+      max-width: 7.0in;
+  }

@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-		<?php include('global/includes/css_rehab_eia-social-sticker.inc') ?>
+		<?php include('global/includes/eia-social-sticker.inc') ?>
 	<header>
 		<div class="print">
 			<img src="/global/images/logos/eia_logo_print.png" />
@@ -129,7 +129,7 @@
 								<p>Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
 								<ul>
 									<li>
-										<a href='/consumption/residential/'>RECS 2009</a>
+										<a href='/consumption/residential/'>RECS</a>
 									</li>
 									<li>
 										<a href='/consumption/commercial/'>CBECS</a>
@@ -571,16 +571,16 @@
 								</h3>
 								<ul>
 									<li>
-										<a href="/pressroom/releases.cfm">Press Releases</a>
+										<a href="/pressroom/releases.php">Press Releases</a>
 									</li>
 									<li>
-										<a href="/pressroom/testimony.cfm">Congressional Testimony</a>
+										<a href="/pressroom/testimony.php">Congressional Testimony</a>
 									</li>
 									<li>
-										<a href="/pressroom/presentations.cfm">Presentations</a>
+										<a href="/pressroom/presentations.php">Presentations</a>
 									</li>
 									<li>
-										<a href="/pressroom/events.cfm">Events</a>
+										<a href="/pressroom/events/">Events</a>
 									</li>
 									<li>
 										<a href="/radio/">Radio Spots</a>

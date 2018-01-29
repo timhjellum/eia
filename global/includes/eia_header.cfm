@@ -1,287 +1,699 @@
-<!--- <cfcache action="flush"> --->
-<!--- Social links --->
-<cfif #cgi.HTTP_HOST# NEQ 'wwwdev.eia.gov' AND #cgi.HTTP_HOST# NEQ 'wwwtest.eia.gov' AND #cgi.HTTP_HOST# NEQ 'wwwdev'>
-<!--- Disable the social media icons on the 404 File Not Found page --->
-<cfparam name="a40412" default="">
-<cfif a40412 NEQ 'y'>
-<script>
-$(document).ready(function() {
-    function position() {
-      $( "#sticker.positionable" ).position({
-        of: $( "#outerX" ),
-        my: "left top",
-        at: "right top"
-      });
-	  $('#sticker').offset({top:$(window).scrollTop()+10});
-    }
- 
-    position();
+<div class="page-wrapper">
+		<cfinclude template="/global/includes/eia-social-sticker.cfm" />
+	<header>
+		<div class="print">
+			<img src="/global/images/logos/eia_logo_print.png" />
+		</div>
+		<nav class="navigation">
+			<a class="logo" href="/">
+				<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+			</a>
+			<a href="#" class="search-menu-toggle">
+				<i class="ico-menu search">Search</i>
+			</a>
+			<a class="fancybox-menu menu-toggle" href="#menu" data-target="sources">
+				<div class="toggle-bar">
+				</div>
+				<div class="toggle-bar">
+				</div>
+				<div class="toggle-bar">
+				</div>
+				<p>Menu</p>
+			</a>
+			<ul class="nav-primary">
+				<li class="nav-primary-item">
+					<a class="fancybox-menu" href="#menu" data-target="sources">
+						<i class="plus-yellow">+</i> Sources &amp; Uses</a>
+				</li>
+				<li class="nav-primary-item">
+					<a class="fancybox-menu" href="#menu" data-target="topics">
+						<i class="plus-yellow">+</i> Topics</a>
+				</li>
+				<li class="nav-primary-item">
+					<a class="fancybox-menu" href="#menu" data-target="geography">
+						<i class="plus-yellow">+</i> Geography</a>
+				</li>
+			</ul>
+			<ul class="nav-secondary">
+				<li class="nav-secondary-item">
+					<a class="fancybox-menu" href="#menu" data-target="tools">
+						<i class="plus-greyish-blue">+</i> Tools</a>
+				</li>
+				<li class="nav-secondary-item">
+					<a class="fancybox-menu" href="#menu" data-target="learn">
+						<i class="plus-greyish-blue">+</i> Learn About Energy</a>
+				</li>
+				<li class="nav-secondary-item">
+					<a class="fancybox-menu" href="#menu" data-target="news">
+						<i class="plus-greyish-blue">+</i> News</a>
+				</li>
+			</ul>
+			<div class="nav-menu" style="display: none">
+				<div class="section-tabs" id="menu">
+					<div class="tabs-wrapper">
+						<ul>
+							<li>
+								<a href="#sources">Sources &amp; Uses</a>
+							</li>
+							<li>
+								<a href="#topics">Topics</a>
+							</li>
+							<li>
+								<a href="#geography">Geography</a>
+							</li>
+							<li>
+								<a href="#tools">Tools</a>
+							</li>
+							<li>
+								<a href="#learn">Learn About Energy</a>
+							</li>
+							<li>
+								<a href="#news">News</a>
+							</li>
+						</ul>
+					</div>
+					<!--Sources and Uses-->
+					<div id="sources">
+						<div class="sources-uses left">
+							<div class="nav-menu petroleum">
+								<i class="ico-menu ico-nav petroleum"></i>
+								<h3>
+									<a href='/petroleum/'>Petroleum &amp; Other Liquids</a>
+								</h3>
+								<p>Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.</p>
+								<ul>
+									<li>
+										<a href='/petroleum/weekly/'>This Week in Petroleum</a>
+									</li>
+									<li>
+										<a href='/petroleum/supply/weekly/'>Weekly Petroleum Status Report</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu natural-gas">
+								<i class="ico-menu ico-nav natural-gas"></i>
+								<h3>
+									<a href='/naturalgas/'>Natural Gas</a>
+								</h3>
+								<p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p>
+								<ul>
+									<li>
+										<a href='http://ir.eia.gov/ngs/ngs.html'>Weekly Natural Gas Status Report</a>
+									</li>
+									<li>
+										<a href='/naturalgas/weekly/'>Natural Gas Weekly Update</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu electricity">
+								<i class="ico-menu ico-nav electricity"></i>
+								<h3>
+									<a href='/electricity/'>Electricity</a>
+								</h3>
+								<p>Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand &amp; emissions.
+								</p>
+								<ul>
+									<li>
+										<a href='/electricity/monthly/'>Electric Power Monthly</a>
+									</li>
+									<li>
+										<a href='/electricity/data/browser/'>Electricity Data Browser</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu consumption">
+								<i class="ico-menu ico-nav consumption"></i>
+								<h3>
+									<a href='/consumption/'>Consumption &amp; Efficiency</a>
+								</h3>
+								<p>Energy use in homes, commercial buildings, manufacturing, and transportation.</p>
+								<ul>
+									<li>
+										<a href='/consumption/residential/'>RECS</a>
+									</li>
+									<li>
+										<a href='/consumption/commercial/'>CBECS</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sources-uses right">
+							<div class="nav-menu coal">
+								<i class="ico-menu ico-nav coal"></i>
+								<h3>
+									<a href='/coal/'>Coal</a>
+								</h3>
+								<p>Reserves, production, prices, employment and productivity, distribution, stocks, imports and exports.</p>
+								<ul>
+									<li>
+										<a href='/coal/production/quarterly/'>Quarterly Coal Report</a>
+									</li>
+									<li>
+										<a href='/beta/coal/data/browser/'>Coal Data Browser</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu renewable">
+								<i class="ico-menu ico-nav renewable"></i>
+								<h3>
+									<a href="/renewable/">Renewable &amp; Alternative Fuels</a>
+								</h3>
+								<p>Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p>
+								<ul>
+									<li>
+										<a href='/renewable/afv/'>Alternative Fuel Vehicle Browser</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu nuclear">
+								<i class="ico-menu ico-nav nuclear"></i>
+								<h3>
+									<a href="/nuclear/">Nuclear &amp; Uranium</a>
+								</h3>
+								<p>Uranium fuel, nuclear reactors, generation, spent fuel.</p>
+								<ul>
+									<li>
+										<a href='/nuclear/outages/'>Status of Nuclear Outages</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu total-energy">
+								<i class="ico-menu ico-nav total-energy"></i>
+								<h3>
+									<a href="/totalenergy/">Total Energy</a>
+								</h3>
+								<p>Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p>
+								<ul>
+									<li>
+										<a href='/totalenergy/data/monthly/'>Monthly Energy Review</a>
+									</li>
+									<li>
+										<a href='/totalenergy/data/annual/'>Annual Energy Review</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Topics-->
+					<div id="topics">
+						<div class="topics left">
+							<div class="nav-menu analysis">
+								<i class="ico-menu ico-nav analysis-projections"></i>
+								<h3>
+									<a href="/analysis/">Analysis &amp; Projections</a>
+								</h3>
+								<p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, Congressional reports.
+								</p>
+								<ul>
+									<li>
+										<a href='/outlooks/steo/'>Short Term Energy Outlook</a>
+									</li>
+									<li>
+										<a href='/outlooks/aeo/'>Annual Energy Outlook</a>
+									</li>
+									<li>
+										<a href='/outlooks/ieo/'>International Energy Outlook</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu markets-finance">
+								<i class="ico-menu ico-nav markets-finance"></i>
+								<h3>
+									<a href="/finance/">Markets &amp; Finance</a>
+								</h3>
+								<p>Financial market analysis and financial data for major energy companies.</p>
+								<ul>
+									<li>
+										<a href='/finance/data.php'>Market Prices and Uncertainty Report</a>
+									</li>
+									<li>
+										<a href='/finance/markets/crudeoil/'>Energy &amp; Financial Markets: What Drives Crude Oil Prices?</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="topics right">
+							<div class="nav-menu environment">
+								<i class="ico-menu ico-nav environment"></i>
+								<h3>
+									<a href="/environment/">Environment</a>
+								</h3>
+								<p>Greenhouse gas data, voluntary report-ing, electric power plant emissions.</p>
+								<ul>
+									<li>
+										<a href='/environment/emissions/state/analysis/'>Energy-Related Carbon Dioxide Emissions at the State Level, 2000-2015</a>
+									</li>
+									<li>
+										<a href='/environment/emissions/state/'>State Carbon Dioxide Emissions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Geography-->
+					<div id="geography">
+						<div class="geography left">
+							<div class="nav-menu states">
+								<i class="ico-menu ico-nav states"></i>
+								<h3>
+									<a href="/state/">U.S. States</a>
+								</h3>
+								<p>State energy information, including overviews, rankings, data, and analyses.</p>
+								<ul>
+									<li>
+										<a href='/state/seds/'>State Energy Data System (SEDS)</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu maps">
+								<i class="ico-menu ico-nav maps"></i>
+								<h3>
+									<a href="/maps/">Maps</a>
+								</h3>
+								<p>Maps by energy source and topic, includes forecast maps.</p>
+								<ul>
+									<li>
+										<a href='/state/maps.php'>U.S. Energy Mapping System</a>
+									</li>
+									<li>
+										<a href='/special/gulf_of_mexico/'>Gulf of Mexico</a>
+									</li>
+									<li>
+										<a href='/special/disruptions/'>Energy Disruptions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="geography right">
+							<div class="nav-menu international">
+								<i class="ico-menu ico-nav international"></i>
+								<h3>
+									<a href="/beta/international/">International</a>
+								</h3>
+								<p>International energy information, including overviews, rankings, data, and analyses.</p>
+								<ul>
+									<li>
+										<a href='/beta/international/data/browser/'>International Energy Statistics</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Tools-->
+					<div id="tools">
+						<div class="tools left">
+							<div class="nav-menu eia-glossary">
+								<i class="ico-menu ico-nav eia-glossary"></i>
+								<h3>
+									<a href="/tools/glossary/">Glossary</a>
+								</h3>
+								<?php include('global/includes/css_rehab_eia-header-glossary.inc') ?>
+							</div>
+							<div class="nav-menu data-tools-model">
+								<i class="ico-menu ico-nav data-tools-model"></i>
+								<h3>
+									<a href="/tools/">Data Tools, Apps, &amp; Maps</a>
+								</h3>
+								<p>Tools to customize searches, view specific data sets, study detailed documentation, and access time-series data.</p>
+							</div>
+							<div class="nav-menu open-data">
+								<i class="ico-menu ico-nav open-data"></i>
+								<h3>
+									<a href="/beta/api/">Open Data</a>
+								</h3>
+								<p>EIA's free and open data available as API, Excel add-in, bulk files, and widgets</p>
+							</div>
+							<div class="nav-menu beta">
+								<i class="ico-menu ico-nav beta"></i>
+								<h3>
+									<a href="/beta">EIA Beta</a>
+								</h3>
+								<p>Come test out some of the products still in development and let us know what you think!</p>
+							</div>
+							<div class="nav-menu follow-us">
+								<i class="ico-menu ico-nav follow-us"></i>
+								<h3>Follow us. . .</h3>
+								<p>
+									<a href="http://facebook.com/eiagov/" target="_blank">
+										<i class="ico-menu facebook"></i>
+									</a>
+									<a href="http://twitter.com/eiagov/" target="_blank">
+										<i class="ico-menu twitter"></i>
+									</a>
+									<a href="http://youtube.com/eiagov/" target="_blank">
+										<i class="ico-menu youtube"></i>
+									</a>
+									<a href="https://www.flickr.com/photos/eiagov/">
+										<i class="ico-menu flickr"></i>
+									</a>
+									<a href="https://www.linkedin.com/company/u-s-energy-information-administration">
+										<i class="ico-menu linkedin"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+						<div class="tools right">
+							<div class="nav-menu reports">
+								<i class="ico-menu ico-nav reports"></i>
+								<h3>
+									<a href="/reports/">All Reports &amp; Publications</a>
+								</h3>
+								<script type="text/javascript">
+									function byId(id) { return document.getElementById(id) }
+									// useful for HtmlCollection, NodeList, String types
+									function forEach(array, callback, scope) { for (var i = 0, n = array.length; i < n; i++)callback.call(scope, array[i], i, array); } // passes back stuff we need
+									window.addEventListener('load', onDocLoaded, false);
+									function onDocLoaded(evt) {
+										byId('goBtn').addEventListener('click', onGoBtnClicked);
+									}
+									function onGoBtnClicked(evt) {
+										// get the user input
+										var inputString = byId('userInput').value;
+										// split it into an array of terms, based on the | char
+										var searchTerms = inputString.split('+');
+										// init the result
+										var result = '';
+										// for each element in the array of search terms, call the function to trim wrap with "" and encode
+										forEach(searchTerms, addCurTermToResult);
+										// update the output display
+										window.location.href = '/reports/#/' + result;
+										function addCurTermToResult(curTerm, index) {
+											if (index != 0)                     // put a comma before all terms except the first one
+												result += ',';
+											var trimmedTerm = curTerm.trim();   // remove leading/trailing spaces
+											result += 'K' + encodeURI(trimmedTerm);    // wrap with "" then URI encode it, suitable for use as a URL
+										}
+									}
+								</script>
+								<div class="reports-publication-search form-wrapper">
+									<textarea type="text" class="fancy-search-box" id="userInput" placeholder="Enter tags. Tags should be seperated with the + character"
+									 onfocus="this.placeholder=''" onblur="this.placeholder='Enter tags. Tags should be seperated with the + character'">
+									</textarea>
+									<button type="submit" id="goBtn" class="search-submit">
+										<i class="ico-menu search-submit">Search</i>
+									</button>
+								</div>
+							</div>
+							<div class="nav-menu survey-forms">
+								<i class="ico-menu ico-nav survey-forms"></i>
+								<h3>
+									<a href="/survey/">EIA Survey Forms</a>
+								</h3>
+								<?php include('global/includes/css_rehab_eia-header-survey-search.inc') ?>
+							</div>
+							<div class="nav-menu email-complex">
+								<i class="ico-menu ico-nav email-complex"></i>
+								<h3>
+									<a href="/tools/emailupdates/">Email Updates</a>
+								</h3>
+								<p>Sign up for email subcriptions to receive messages about specific EIA products</p>
+							</div>
+							<div class="nav-menu rss-complex">
+								<i class="ico-menu ico-nav rss-complex"></i>
+								<h3>
+									<a href="/tools/rssfeeds/">RSS Feeds</a>
+								</h3>
+								<p>Subscribe to feeds for updates on EIA products including Today in Energy and What's New.</p>
+							</div>
+						</div>
+					</div>
+					<!--Learn-->
+					<div id="learn">
+						<div class="learn left">
+							<div class="nav-menu today-in-energy">
+								<i class="ico-menu ico-nav today-in-energy"></i>
+								<h3>
+									<a href="/todayinenergy/">Today in Energy</a>
+								</h3>
+								<p>Short, timely articles with graphics on energy, facts, issues, and trends.</p>
+							</div>
+							<div class="nav-menu energy-explained">
+								<i class="ico-menu ico-nav energy-explained"></i>
+								<h3>
+									<a href="/energyexplained/">Energy Explained</a>
+								</h3>
+								<ul class="energy-explained-list left">
+									<li>
+										<a href="/energyexplained/index.cfm?page=about_home">What is Energy?</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=about_energy_units">Units &amp; Calculators</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=us_energy_use">Use of Energy</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=environment_home">Energy &amp; Environment</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=oil_home">Petroleum</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=hgls_home">Hydrocarbon Gas Liquids</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=natural_gas_home">Natural Gas</a>
+									</li>
+									
+									
+								</ul>
+								<ul class="energy-explained-list right">
+									<li>
+										<a href="/energyexplained/index.cfm?page=coal_home">Coal</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=nuclear_home">Nuclear</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=electricity_home">Electricity</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=hydropower_home">Hydropower</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=biofuel_home">Biofuels: Ethanol &amp; Biodiesel</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=wind_home">Wind</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=geothermal_home">Geothermal</a>
+									</li>
+									<li>
+										<a href="/energyexplained/index.cfm?page=solar_home">Solar</a>
+									</li>
+								</ul>
+							</div>
 
-	$('#sticker').hover(function(event){
-	   $(this).stop(true,false).animate({right: '-125px', width: '160px'}, 'slow');
-	},function(event){  
-		$(this).stop(true,true).animate({right: '0', width: '35px'}, 'slow');
-	});
-	$(window).scroll(function () {position();});
-	$(window).resize(function () {position();});
-});
-</script>
-<div id="sticker" class="social-fixed positionable">
-  <div class="addthis_toolbox addthis_default_style ">
-    <ul class="social shider">
-      <li><a href="https://twitter.com/EIAgov" target="_blank"><img src="/global/images/icons/social-twitter.jpg" class="imgalpha"></a>
-        <div class="link twt">
-          <div class="tweet"><a class="addthis_button_tweet"></a></div>
-        </div>
-      </li>
-      <li><a href="https://www.facebook.com/eiagov" target="_blank"><img src="/global/images/icons/social-facebook.jpg" class="imgalpha"></a>
-        <div class="link facebook">
-          <div id="share-facebook"><a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"></a></div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-<!---script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script---> 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514b0d4a047a687f" async="async"></script>
-</cfif></cfif>
-<!---/Social links --->
-<div id="innerX"><!--- Inner Wrapper --->
-  <div class="content"><!--- Page Wrapper --->
-<!--- Print Header --->
-<!--- Header --->
-    <div id="header">
-    <div class="print"><img src="/global/images/logos/eia_logo_print.png"/></div>
-<!--- Global Navigation --->
-      <a href="/"><h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1></a>
-      <ul class="global-width" id="g-margin3">
-        <li class="global-es"><a>Sources &amp; Uses</a></li>
-          <div class="global_es_menu">
-            <span class="global_menu_col1">
-              <a href="/petroleum/"><h3>Petroleum &amp; Other Liquids</h3><p>Crude oil, gasoline, heating oil, diesel, propane, and other liquids including biofuels and natural gas liquids.</p></a>
-              <a href="/naturalgas/"><h3>Natural Gas</h3><p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p></a>
-              <a href="/electricity/"><h3>Electricity</h3><p>Sales, revenue and prices, power plants, fuel use, stocks, generation, trade, demand & emissions.</p></a>
-              <a href="/consumption/"><h3>Consumption & Efficiency</h3><p class="no-border no-btm">Energy use in homes, commercial buildings, manufacturing, and transportation.</p></a>
-            </span>
-            <span class="global_menu_col2">
-              <a href="/coal/"><h3>Coal</h3><p>Reserves, production, prices, employ- ment and productivity, distribution, stocks, imports and exports.</p></a>
-              <a href="/renewable/"><h3>Renewable &amp;<br>Alternative Fuels</h3><p class="sp-renewable">Includes hydropower, solar, wind, geothermal, biomass and ethanol.</p></a>
-              <a href="/nuclear/"><h3>Nuclear &amp; Uranium</h3><p>Uranium fuel, nuclear reactors, generation, spent fuel.<br />&nbsp;</p></a>
-              <a href="/totalenergy/"><h3>Total Energy</h3><p class="no-border">Comprehensive data summaries, comparisons, analysis, and projections integrated across all energy sources.</p></a>
-            </span>
-            <span class="global_menu_col3">
-              <h3>Highlights</h3>
-              <a href="/petroleum/weekly/">This Week in Petroleum&nbsp;&rsaquo;</a>
-              <a href="/petroleum/supply/weekly/">Weekly Petroleum Status Report&nbsp;&rsaquo;</a>
-              <a href="http://ir.eia.gov/ngs/ngs.html">Weekly Natural Gas Storage Report&nbsp;&rsaquo;</a>
-              <a href="/naturalgas/weekly/">Natural Gas Weekly Update&nbsp;&rsaquo;</a>
-              <a href="/electricity/monthly/">Electric Power Monthly&nbsp;&rsaquo;</a>
-              <a href="/coal/production/quarterly/">Quarterly Coal Report&nbsp;&rsaquo;</a>
-              <a href="/totalenergy/data/monthly/">Monthly Energy Review&nbsp;&rsaquo;</a>
-              <a href="/consumption/residential/">Residential Energy Consumption Survey 2015&nbsp;&rsaquo;</a>
-              <a href="/electricity/data/browser/">Electricity Data Browser&nbsp;&rsaquo;</a>
-            </span>
-            <!---span class="global_menu_col4"><a href="/totalenergy/"><h3>All Sources</h3><p class="no-border">Data summaries, comparisons, analysis, and projections integrated across all energy sources.</p></a></span--->
-          </div>
-        <li class="global-topics" id="g-margin1"><a>Topics</a></li>
-          <div class="global_topics_menu">
-            <span class="global_menu_col1">
-              <a href="/analysis/"><h3>Analysis &amp; Projections</h3><p>Monthly and yearly energy forecasts, analysis of energy topics, financial analysis, Congressional reports.</p></a>
-              <a href="/finance/"><h3>Markets &amp; Finance</h3><p class="no-border no-btm">Financial market analysis and financial data for major energy companies.</p></a>
-            </span>
-            <span class="global_menu_col2">
-              <a href="/environment/"><h3>Environment</h3><p class="sp-environment">Greenhouse gas data, voluntary report- ing, electric power plant emissions.</p></a>
-            </span>
-            <span class="global_menu_col3">
-              <h3>Highlights</h3>
-              <a href="/outlooks/steo/">Short-Term Energy Outlook&nbsp;&rsaquo;</a>
-              <a href="/outlooks/aeo/">Annual Energy Outlook&nbsp;&rsaquo;</a>
-              <a href="/special/disruptions/">Energy Disruptions&nbsp;&rsaquo;</a>
-              <a href="/outlooks/ieo/">International Energy Outlook&nbsp;&rsaquo;</a>
-              <a href="/beta/api/excel/">Excel Data Add-In&nbsp;&rsaquo;</a>
-            </span>
-          </div>
-        <li class="global-geo"><a>Geography</a></li>
-          <div class="global_geo_menu">
-            <span class="global_menu_col1">
-              <a href="/state/"><h3>U.S. States</h3><p>State energy information, including overviews, rankings, data, and analyses.</p></a>
-              <a href="/maps/"><h3>Maps</h3><p class="no-border no-btm">Maps by energy source and topic, includes forecast maps.</p></a>
-            </span>
-            <span class="global_menu_col2">
-              <a href="/beta/international/"><h3>International</h3><p>International energy information, including overviews, rankings, data, and analyses.</p></a>
-              <!---a href="/regions/"><h3>Energy Regions</h3><p class="no-border no-btm">Energy use and cost by geographic region.</p></a--->
-            </span>
-            <span class="global_menu_col3">
-              <h3>Highlights</h3>
-              <a href="/state/seds/">State Energy Data System (SEDS)&nbsp;&rsaquo;</a>
-              <a href="/cfapps/ipdbproject/IEDIndex3.cfm">International Energy Statistics&nbsp;&rsaquo;</a>
-              <a href="/special/gulf_of_mexico/">Gulf of Mexico&nbsp;&rsaquo;</a>
-              <a href="/state/maps.cfm">U.S. Energy<br />Mapping System&nbsp;&rsaquo;</a>
-              <!---a href="/countries/mena/">Middle East &amp; North Africa&nbsp;&rsaquo;</a--->
-            </span>
-          </div>
-      </ul>
-      <ul class="utils">
-        <li class="global-tools" id="g-margin2"><a>Tools</a></li>
-          <div class="global_tools_menu">
-            <span class="global_menu_col5">
-              <p class="no-border">
-              <a href="/tools/glossary/" class="ico_glossary_dblue header_icon_pad">Glossary&nbsp;&rsaquo;</a><br />
-              <a href="/reports/" class="ico_reports header_icon_pad">All Reports &amp; Publications&nbsp;&rsaquo;</a><br />
-              <a href="/tools/" class="ico_mining header_icon_pad">Data Tools, Apps, and Maps&nbsp;&rsaquo;</a><br />
-              <a href="/survey/" class="ico_survey header_icon_pad">EIA Survey Forms&nbsp;&rsaquo;</a>              
-              <a href="/beta/api/" class="ico_api header_icon_pad">Open Data&nbsp;&rsaquo;</a>              
-              </p>
-            </span>
-            <span class="global_menu_col6">
-              <p class="no-border"><a href="https://facebook.com/eiagov/" target="_blank" class="ico_facebook header_icon_pad">Facebook</a><br />
-              <a href="https://twitter.com/eiagov/" target="_blank" class="ico_twitter header_icon_pad">Twitter</a><br />
-              <a href="https://youtube.com/eiagov/" target="_blank" class="ico_youtube header_icon_pad">YouTube</a><br />
-              <a href="/tools/emailupdates/" class="ico_email header_icon_pad">Email Updates</a><br />
-              <a href="/tools/rssfeeds/" class="ico_rss header_icon_pad">RSS Feeds</a></p>
-            </span>
-          </div>
-        <li class="global-learn" id="g-margin2"><a>Learn About Energy</a></li>
-          <div class="global_learn_menu">
-            <span class="global_menu_col8a">
-              <h3><a href="/todayinenergy/">Today in Energy</a></h3>
-              <p>Short, timely articles with graphics on energy, facts, issues, and trends.</p>
-            </span>
-            <span class="global_menu_col6">
-              <p class="no-border"><a href="/tools/faqs/" class="ico_faqs header_icon_pad">FAQs</a><br />
-              <a href="/tools/glossary/" class="ico_glossary header_icon_pad">Glossary</a><br />
-              <a href="/kids/energy.cfm?page=6" class="ico_teachers header_icon_pad border_learn">For Teachers</a></p>
-            </span>
-            <span class="global_menu_col8">
-              <h3><a href="/energyexplained/">Energy Explained</a></h3>
-              <p class="width152"><a href="/energyexplained/index.cfm?page=about_home">What is Energy?&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=about_energy_units">Units &amp; Calculators&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=us_energy_use">Use of Energy&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=environment_home">Energy & Environment&nbsp;&rsaquo;</a><br>
-              <a href="/energyexplained/index.cfm?page=electricity_home">Electricity&nbsp;&rsaquo;</a></p>
-              <p class="width110"><a href="/energyexplained/index.cfm?page=oil_home">Petroleum&nbsp;&rsaquo;</a>
-              <a href="/energyexplained/index.cfm?page=hgls_home">Hydrocarbon Gas Liquids&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=natural_gas_home">Natural Gas&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=coal_home">Coal&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=nuclear_home">Nuclear&nbsp;&rsaquo;</a></p>
-              <p class="width181"><a href="/energyexplained/index.cfm?page=electricity_home">Electricity&nbsp;&rsaquo;</a><br>
-              <a href="/energyexplained/index.cfm?page=hydropower_home">Hydropower&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=biofuel_home">Biofuels: Ethanol &amp; Biodiesel&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=wind_home">Wind&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=geothermal_home">Geothermal&nbsp;&rsaquo;</a><br />
-              <a href="/energyexplained/index.cfm?page=solar_home">Solar&nbsp;&rsaquo;</a></p>
-            </span>
-            <!---span class="global_menu_col9">
-              <h3><a href="/energy_in_brief/">Energy in Brief</a></h3>
-				<p class="no-border global_menu_col10"><a href="/energy_in_brief/article/renewable_electricity.cfm">How much U.S. electricity is generated from renewable energy?&nbsp;&rsaquo;</a><br />
-				<a href="/energy_in_brief/article/shale_in_the_united_states.cfm">Shale in the United States&nbsp;&rsaquo;</a></p>
-				<p class="no-border global_menu_col10"><a href="/energy_in_brief/article/world_oil_market.cfm">Who are the major players supplying the world oil market?&nbsp;&rsaquo;</a><br />
-				<a href="/energy_in_brief/article/role_coal_us.cfm">What is the role of coal in the United States?&nbsp;&rsaquo;</a></p>
-            </span--->
-            <span class="global_menu_col6 mt_40">
-              <p class="no-border"><a href="/kids/" class="ant_banner">Energy Kids</a></p>
-            </span>
-          </div>
-        <li class="global-news"><a>News</a></li>
-          <div class="global_news_menu">
-            <span class="global_menu_col7">
-              <h3><a href="/about/new/">What's New?</a></h3>
-              <!--- Jquery is loading the What's new file --->
-              <div id="whatsnew3"></div>
-            </span>
-            <span class="global_menu_col3">
-              <h3><a href="/pressroom/" style="color:#fff !important;">Press Room</a></h3>
-              <a href="/pressroom/releases.cfm">Press Releases&nbsp;&rsaquo;</a>
-              <a href="/pressroom/presentations.cfm">Presentations&nbsp;&rsaquo;</a>
-              <a href="/pressroom/testimony.cfm">Congressional Testimony&nbsp;&rsaquo;</a>
-              <a href="/radio/">Radio Spots&nbsp;&rsaquo;</a>
-            </span>
-          </div>
-      </ul>
-      <ul class="utils2">
-      <div class="global-search">
-          <!--- Disable site search on dev site to speed up iterative development, and to keep the typeahead history data accurate -SNW --->
-          <cfif Find('wwwdev',CGI.HTTP_HOST)>
-            <span style="color:#777">Site search disabled on dev</span>
-          <cfelse>
-      			<!--- NOTE the "affiliate" and "siteHandle" of "eia.doe.gov" are just an arbitrary identifier associated with type-ahead history built up over years, so it doesn't matter that the site is now "www.eia.gov" --->
-      			<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
-                <input name="utf8" type="hidden" value="&#x2713;" />
-      			    <input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
-      			    <label class="accessibility" for="query">Enter Search Term(s):</label>
-      			    <input autocomplete="off" class="usagov-search-autocomplete" id="search-input" name="query" type="text" maxlength="256" style="width:150px" value="Search eia.gov" />
-     	          <input type="submit" name="search" alt="enter terms to search" class="arrow_go" align="absmiddle" border="0" title="Click to search EIA">
-      			</form>
-            <script type="text/javascript">
-            //<![CDATA[
-                var usasearch_config = { siteHandle:"eia.doe.gov" };
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.src = "/global/scripts/search.usa.gov/remote.loader.js"; // NOTE this may need to be updated from //search.usa.gov/javascripts/remote.loader.js" periodically
-                document.getElementsByTagName("head")[0].appendChild(script);
-            //]]>
-            </script>
-          </cfif>
-      </div>
-      <li class="global-a-z"><a href="/tools/a-z/">A-Z Index</a></li>
-      <div class="global_a-z_menu">
-        <span class="global_menu_col11">
-        <h3><a href="/tools/a-z/">A-Z Index</a></h3>
-          <a href="/tools/a-z/index.cfm?id=a">A</a>
-          <a href="/tools/a-z/index.cfm?id=b">B</a>
-          <a href="/tools/a-z/index.cfm?id=c">C</a>
-          <a href="/tools/a-z/index.cfm?id=d">D</a>
-          <a href="/tools/a-z/index.cfm?id=e">E</a>
-          <a href="/tools/a-z/index.cfm?id=f">F</a>
-          <a href="/tools/a-z/index.cfm?id=g">G</a>
-          <a href="/tools/a-z/index.cfm?id=h">H</a>
-          <a href="/tools/a-z/index.cfm?id=i">I</a>
-          <a href="/tools/a-z/index.cfm?id=j">J</a>
-          <a href="/tools/a-z/index.cfm?id=k">K</a>
-          <a href="/tools/a-z/index.cfm?id=l">L</a>
-          <a href="/tools/a-z/index.cfm?id=m">M</a>
-          <a href="/tools/a-z/index.cfm?id=n">N</a>
-          <a href="/tools/a-z/index.cfm?id=o">O</a>
-          <a href="/tools/a-z/index.cfm?id=p">P</a>
-          <a href="/tools/a-z/index.cfm?id=q">Q</a>
-          <a href="/tools/a-z/index.cfm?id=r">R</a>
-          <a href="/tools/a-z/index.cfm?id=s">S</a>
-          <a href="/tools/a-z/index.cfm?id=t">T</a>
-          <a href="/tools/a-z/index.cfm?id=u">U</a>
-          <a href="/tools/a-z/index.cfm?id=v">V</a>
-          <a href="/tools/a-z/index.cfm?id=w">W</a>
-          <a href="/tools/a-z/index.cfm?id=xyz">XYZ</a>
-        </span>
-      </div>
-      </ul>
-    </div><!---/ Global Navigation --->
-    <!--- EIA Con banner --->
-      <!---div style="height: 60px; background-color:#b3ddf5; padding:8px; text-align:center;" class="conBanner do-not-print">
-        <a href="https://www.eia.gov/conference/2017/?src=home-b3" ><img src="/global/images/web_3.jpg"/></a>
-      </div--->
-    <!--- EIA Con banner --->
-<!---/Header --->
-<!--- Shutdown --->
-<!---cfif sect NEQ 'home'>
-<div style="background-color:#fff6bf;padding:4px 10px 4px 10px;margin:0px;border-bottom:2px solid #ffd324;">
-    <h2 style="color: #000;font-family:Arial, Helvetica, sans-serif;font-size:18px;margin:6px;line-height:1.3em;text-align:center;">EIA is closed due to a lapse in appropriations. EIA will not update this website until the agency reopens.</h2>
-</div>
-</cfif--->
-<!---/Shutdown--->
-<!---Beta header --->
-<cfparam name="betasite" default="">
-<cfif betasite EQ 'y'>
-<cftry>
-  <script type="text/javascript" src="/beta/includes/beta_header.js"></script>
-  <cfinclude template="/beta/includes/subnav_beta.cfm">
-  <cfif betafback EQ 'y'>
-    <link rel="stylesheet" href="/beta/includes/feedback.css" type="text/css" media="screen, projection">
-    <!---[if IE]><link rel="stylesheet" href="/beta/includes/feedbackie.css" type="text/css" media="screen, projection"><![endif]--->
-    <!---script type="text/javascript" src="/global/scripts/JQuery/pslide/jquery.pageslide.min.js"></script--->
-    <cfinclude template="/beta/includes/fback_form.cfm">
-    <div class="fblink_give hide_menu">Feedback</div>
-  </cfif>
-<cfcatch><h1>ERROR... I'm working on it...</h1><cfdump var="#cfcatch#"><cfabort></cfcatch>
-</cftry>
-</cfif>
-<!---/Beta header--->
+							<div class="nav-menu teachers">
+								<i class="ico-menu ico-nav teachers"></i>
+								<h3>
+									<a href="/kids/energy.cfm?page=6">For Teachers</a>
+								</h3>
+								<p>Lesson plans, science fair experiments, field trips, teacher guide, and career corner.</p>
+							</div>
+
+						</div>
+						<div class="learn right">
+							<div class="nav-menu eia-glossary">
+								<i class="ico-menu ico-nav eia-glossary"></i>
+								<h3>
+									<a href="/tools/glossary/">Glossary</a>
+								</h3>
+								<?php include('global/includes/css_rehab_eia-header-glossary.inc'); ?>
+							</div>
+							<div class="nav-menu faq">
+								<i class="ico-menu ico-nav faq"></i>
+								<h3>
+									<a href="/tools/faqs/">FAQs</a>
+								</h3>
+								<ul class="faq-list left">
+									<li>
+										<a href="/tools/faqs/#coal">Coal</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#conversion equivalents">Conversion &amp; Equivalents</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#crudeoil">Crude Oil</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#diesel">Diesel</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#electricity">Electricity</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/#environment">Environment</a>
+									</li>
+								</ul>
+								<ul class="faq-list right">
+									<li>
+										<a href="/tools/faqs/index.cfm#gasoline">Gasoline</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.cfm#generalenergy">General Energy</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.cfm#naturalgas">Natural Gas</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.cfm#nuclear">Nuclear</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.cfm#prices">Prices</a>
+									</li>
+									<li>
+										<a href="/tools/faqs/index.cfm#renewables">Renewables</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu energy-kids">
+								<a href="/kids/" class="energy-kids"></a>
+							</div>
+						</div>
+					</div>
+					<!--News-->
+					<div id="news">
+						<div class="news left">
+							<div class="nav-menu whats-new">
+								<i class="ico-menu ico-nav whats-new"></i>
+								<h3>
+									<a href="/about/new/">What's New?</a>
+								</h3>
+								<?php include('global/includes/css_rehab_eia-header-whats-new.inc') ?>
+							</div>
+
+							<div class="nav-menu press-room">
+								<i class="ico-menu ico-nav press-room"></i>
+								<h3>
+									<a href="/pressroom/">Press Room</a>
+								</h3>
+								<ul>
+									<li>
+										<a href="/pressroom/releases.php">Press Releases</a>
+									</li>
+									<li>
+										<a href="/pressroom/testimony.php">Congressional Testimony</a>
+									</li>
+									<li>
+										<a href="/pressroom/presentations.php">Presentations</a>
+									</li>
+									<li>
+										<a href="/pressroom/events/">Events</a>
+									</li>
+									<li>
+										<a href="/radio/">Radio Spots</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="news right">
+							<div class="nav-menu upcoming">
+								<i class="ico-menu ico-nav upcoming"></i>
+								<h3>
+									<a href='/reports/upcoming.php'>Coming Up</a>
+								</h3>
+								<ul>
+									<li>
+										<a href='/'>Annual Coal Distribution Report</a>
+									</li>
+									<li>
+										<a href='/'>International Energy Outlook</a>
+									</li>
+									<li>
+										<a href='/'>Annual Coal Report</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-menu featured-reports">
+								<i class="ico-menu ico-nav featured-reports"></i>
+								<h3>
+									<a href='/'>Featured Reports</a>
+								</h3>
+								<p>Reports requested by congress or otherwise deemed important.</p>
+								<ul>
+									<li>
+										<a href='/analysis/transportationfuels/padd2n4/'>Midwest and Rocky Mountain Transportation Fuels Markets</a>
+									</li>
+									<li>
+										<a href='/analysis/transportationfuels/padd1n3/'>East Coast and Gulf Coast Transportation Fuels Markets</a>
+									</li>
+									<li>
+										<a href='/analysis/transportationfuels/padd5/'>West Coast Transportation Fuels Markets</a>
+									</li>
+									<li>
+										<a href='/special/disruptions/socal/winter/'>Southern California Daily Energy Report</a>
+									</li>
+									<li>
+										<a href='/outlooks/archive/aeo16/section_issues.cfm#cpp'>Effects of the Clean Power Plan</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="a-z-bottom">
+						<div class="nav-menu az-index">
+							<i class="ico-menu ico-nav az-index"></i>
+							<h3>
+								<a href="/tools/a-z/">A-Z Index</a>
+							</h3>
+							<div class="az-list">
+								<a href="/tools/a-z/index.cfm?id=a">A</a> |
+								<a href="/tools/a-z/index.cfm?id=b">B</a> |
+								<a href="/tools/a-z/index.cfm?id=c">C</a> |
+								<a href="/tools/a-z/index.cfm?id=d">D</a> |
+								<a href="/tools/a-z/index.cfm?id=e">E</a> |
+								<a href="/tools/a-z/index.cfm?id=f">F</a> |
+								<a href="/tools/a-z/index.cfm?id=g">G</a> |
+								<a href="/tools/a-z/index.cfm?id=h">H</a> |
+								<a href="/tools/a-z/index.cfm?id=i">I</a> |
+								<a href="/tools/a-z/index.cfm?id=j">J</a> |
+								<a href="/tools/a-z/index.cfm?id=k">K</a> |
+								<a href="/tools/a-z/index.cfm?id=l">L</a> |
+								<a href="/tools/a-z/index.cfm?id=m">M</a> |
+								<a href="/tools/a-z/index.cfm?id=n">N</a> |
+								<a href="/tools/a-z/index.cfm?id=o">O</a> |
+								<a href="/tools/a-z/index.cfm?id=p">P</a> |
+								<a href="/tools/a-z/index.cfm?id=q">Q</a> |
+								<a href="/tools/a-z/index.cfm?id=r">R</a> |
+								<a href="/tools/a-z/index.cfm?id=s">S</a> |
+								<a href="/tools/a-z/index.cfm?id=t">T</a> |
+								<a href="/tools/a-z/index.cfm?id=u">U</a> |
+								<a href="/tools/a-z/index.cfm?id=v">V</a> |
+								<a href="/tools/a-z/index.cfm?id=w">W</a> |
+								<a href="/tools/a-z/index.cfm?id=xyz">XYZ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nav-search search-panel form-wrapper">
+				<div class="search">
+					<form accept-charset="UTF-8" action="//search.usa.gov/search" id="search_form" method="get">
+						<input name="utf8" type="hidden" value="&#x2713;" />
+						<input id="affiliate" name="affiliate" type="hidden" value="eia.doe.gov" />
+						<label class="accessibility" for="query">Enter Search Term(s):</label>
+						<i class="ico-menu search"></i>
+						<input autocomplete="off" class="usagov-search-autocomplete search-box" name="query" type="text" maxlength="256"
+						 placeholder="Search eia.gov" onfocus="this.placeholder=''" onblur="this.placeholder='Search eia.gov'"/>
+						<button type="submit" name="search" id="goBtn" class="search-submit">
+							<i class="ico-menu search-submit">Search</i>
+						</button> 
+					</form>
+					<script type="text/javascript">
+						//<![CDATA[
+						var usasearch_config = { siteHandle: "eia.doe.gov" };
+						var script = document.createElement("script");
+						script.type = "text/javascript";
+						script.src = "/global/scripts/search.usa.gov/remote.loader.js"; // NOTE this may need to be updated from //search.usa.gov/javascripts/remote.loader.js" periodically
+						document.getElementsByTagName("head")[0].appendChild(script);
+                        //]]>
+					</script>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="l-outer-wrapper">
+			<div class="l-inner-wrapper" id="innerX">

@@ -1,75 +1,94 @@
 <cfparam name="interests" default="">
 <cfparam name="url.ints" default="">
 <cfset interests = url.ints>
-<!--- Footer --->
-    <div id="footer">
-    <a name="btm"></a>
-      <div class="clear">
-      <cfparam name="sect" default="">
-      <!---/ Bookshelf Related Items --->
-        <div id="rs_home"></div>
-        <!---div id="rs"><!--- Rating Stars --->
-          <span class="stars right">Rate this page: <a id="star" style="cursor:pointer;"><img src="/global/images/slush/stars.jpg" class="trigger"/></a> (3 votes)</span>
+            <!-- start footer -->
+            </div>
         </div>
-      </cfif--->
-	  <!--- /Rating Stars --->
-      </div>
-      <div id="addbar"><!--- Address Bar --->
-      <a href="/"><h2 class="right">EIA - 1000 Independence Avenue, SW, Washington, DC 20585</h2></a>
-        <h3><a href="/about/">About EIA</a></h3>
-        <h3><a href="/beta/api/">Open Data<!---&nbsp;<img src="/beta/api/excel/images/icon-api.png" alt="API Key"---></a></h3>
-        <h3><a href="/pressroom/">Press Room</a></h3>
-        <h3><a href="/about/careers/">Careers</a></h3>
-        <!---h3><a href="/about/feedback/">Feedback</a></h3--->
-        <h3><a href="/about/contact/">Contact Us</a></h3>
-      </div><!---/ Address Bar --->
-      <div id="quicklinks"><!--- Quick Links --->
-        <!---h3>Quick Links</h3--->
-        <p><b>Sources & Uses</b><br />
-           <a href="/petroleum/">Petroleum</a><br />
-           <a href="/coal/">Coal</a><br />
-           <a href="/naturalgas/">Natural Gas</a><br />
-           <a href="/renewable/">Renewable<!--- &<br />Alternative Fuels---></a><br />
-           <a href="/nuclear/">Nuclear</a><br />
-           <a href="/electricity/">Electricity</a><br />
-           <a href="/consumption/">Consumption<!--- &<br>Efficiency---></a><br />
-           <a href="/totalenergy/">Total Energy</a></p>
-        <p><b>Topics</b><br />
-           <a href="/analysis/">Analysis & Projections</a><br />
-           <a href="/environment">Environment</a><br />
-           <a href="/finance/">Markets & Finance</a><br />
-           <a href="/todayinenergy/">Today in Energy</a><br><br>
-         <b>Geography</b><br />
-           <a href="/state/">States</a><br />
-           <a href="/countries/">Countries</a><br />
-           <a href="/maps/">Maps</a><br />
-        <p><b>Tools</b><br />
-           <a href="/tools/a-z/">A-Z Index</a><br />
-           <a href="/reports/">All Reports<br />& Publications</a><br />
-           <a href="/tools/">Data Tools, Apps,<br />and Maps</a><br />
-           <a href="/survey/">EIA Survey Forms</a><br />
-           <a href="/beta/">EIA Beta</a></p>
-        <p><b>Policies</b><br />
-           <a href="/about/privacy_security_policy.cfm">Privacy/Security</a><br />
-           <a href="/about/copyrights_reuse.cfm">Copyright & Reuse</a><br />
-           <a href="/about/accessability.cfm">Accessibility</a></p>
-        <p><b>Related Sites</b><br />
-           <a href="https://www.energy.gov/">U.S. Department of Energy</a><br />
-           <a href="https://www.usa.gov/">USA.gov</a><br />
-           <a href="https://fedstats.sites.usa.gov/">FedStats</a></p>
-        <p><b>Stay Connected</b><br />
-           <a href="https://facebook.com/eiagov/" target="_blank" class="ico_facebook ft_icon_pad">Facebook<span class="external">&nbsp;</span></a><br />
-           <a href="https://twitter.com/eiagov/" target="_blank" class="ico_twitter ft_icon_pad">Twitter<span class="external">&nbsp;</span></a><br />
-           <a href="https://youtube.com/eiagov/" target="_blank" class="ico_youtube ft_icon_pad">YouTube<span class="external">&nbsp;</span></a><br />
-           <a href="https://www.flickr.com/photos/eiagov/" target="_blank" class="ico_flickr ft_icon_pad">Flickr<span class="external">&nbsp;</span></a><br />
-           <a href="https://www.linkedin.com/company/u-s-energy-information-administration" target="_blank" class="ico_linkedin ft_icon_pad">LinkedIn<span class="external">&nbsp;</span></a><br />
-           <a href="/tools/emailupdates/" class="ico_email ft_icon_pad">Email Updates</a><br />
-           <a href="/tools/rssfeeds/" class="ico_rss ft_icon_pad">RSS Feeds</a></p>
-      </div><!---/ Quick Links --->
-      <div class="clear"></div><!--- Fixes footer bottom spacing --->
-
     </div>
-<!---/ Footer --->
-  </div><!---/ Page Wrapper --->
-</div><!---/ Inner Wrapper --->
+</section>
+<footer class="clearfix footer">
+    <div class="l-row address-bar">
+        <div class="l-two-third-column">
+            <ul class="above-address-links">
+                <li><a href="/about/">About EIA</a><div class="arrow-right"></div></li>
+                <li><a href="/beta/api/">Open Data</a><div class="arrow-right"></div></li>
+                <li><a href="/pressroom/">Press Room</a><div class="arrow-right"></div></li>
+                <li><a href="/about/careers/">Careers</a><div class="arrow-right"></div></li>
+                <li><a href="/about/contact/">Contact Us</a><div class="arrow-right"></div></li>
+            </ul>
+        </div>
+        <div class="l-one-third-column">
+            <div class="address">Energy Information Agency<br />1000 Independence Ave., SW <br />Washington, DC 20585</div>
+        </div>
+    </div>
+    <div class="l-row footer-links">
+        <ul class="l-column">
+            <li>Sources &amp; Uses</li>
+            <li><a href="/petroleum/">Petroleum</a></li>
+            <li><a href="/coal/">Coal</a></li>
+            <li><a href="/naturalgas/">Natural Gas</a></li>
+            <li><a href="/renewable/">Renewable</a></li>
+            <li><a href="/nuclear/">Nuclear</a></li>
+            <li><a href="/electricity/">Electricity</a></li>
+            <li><a href="/consumption/">Consumption</a></li>
+            <li><a href="/totalenergy/">Total Energy</a></li>
+        </ul>
+        <ul class="l-column">
+            <li>Topics</li>
+            <li><a href="/analysis/">Analysis &amp; Projections</a></li>
+            <li><a href="/environment">Environment</a></li>
+            <li><a href="/finance/">Markets &amp; Finance</a></li>
+            <li><a href="/todayinenergy/">Today in Energy</a></li>
+            <li><br /></li>
+            <li>Geography</li>
+            <li><a href="/state/">States</a></li>
+            <li><a href="/countries/">Countries</a></li>
+            <li><a href="/maps/">Maps</a></li>
+        </ul>
+        <ul class="l-column">
+            <li>Tools</li>
+            <li><a href="/tools/a-z/">A-Z Index</a></li>
+            <li><a href="/reports/"><span class="line-break">All Reports &amp;</span> <span class="line-break">Publications</span></a></li>
+            <li><a href="/tools/"><span class="line-break">Data Tools, Apps,</span> <span class="line-break">and Maps</span></a></li>
+            <li><a href="/survey/">EIA Survey Forms</a></li>
+            <li><a href="/beta/">EIA Beta</a></li>
+        </ul>
+        <ul class="l-column">
+            <li>Policies</li>
+            <li><a href="/about/privacy_security_policy.cfm">Privacy/Security</a></li>
+            <li><a href="/about/copyrights_reuse.cfm">Copyright &amp; Reuse</a></li>
+            <li><a href="/about/accessability.cfm">Accessibility</a></li>
+        </ul>
+        <ul class="l-column">
+            <li>Related Sites</li>
+            <li><a href="https://www.energy.gov/">U.S. Department of Energy</a></li>
+            <li><a href="https://www.usa.gov/">USA.gov</a></li>
+            <li><a href="https://fedstats.sites.usa.gov/">FedStats</a></li>
+        </ul>
+        <ul class="l-column">
+            <li>Stay Connected</li>
+            <li><a href="http://facebook.com/eiagov/" target="_blank"><i class="ico-footer facebook"></i>Facebook</a></li>
+            <li><a href="http://twitter.com/eiagov/" target="_blank"><i class="ico-footer twitter"></i>Twitter</a></li>
+            <li><a href="http://youtube.com/eiagov/" target="_blank"><i class="ico-footer youtube"></i>Youtube</a></li>
+            <li><a href="https://www.flickr.com/photos/eiagov/" target="_blank"><i class="ico-footer flickr"></i>Flickr</a></li>
+            <li><a href="http://linkedin.com/company/u-s-energy-information-administration" target="_blank"><i class="ico-footer linkedin"></i>LinkedIn</a></li>
+            <li><a href="/tools/emailupdates/" target="_blank"><i class="ico-footer email"></i>Email Updates</a></li>
+            <li><a href="/tools/rssfeeds/" target="_blank"><i class="ico-footer rss"></i>RSS Feeds</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+$('#outerX').removeAttr('id');
+$('.l-outer-wrapper').attr('id', 'outerX');
+
+$(document).ready(function(){
+		$(".page_tabs").tabs();
+		$(".page_tabs").localScroll({
+			                            target:".page_tabs",
+			                            duration:0,
+			                            hash:true
+		                            });
+	});
+</script>
+<script src='/global/scripts/eia-scripts.min.js'></script>
 <cfinclude template="/global/includes/titling.cfm" />
