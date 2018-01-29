@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div class="l-one-third-column">
-            <div class="address">Energy Information Agency<br />1000 Independence Ave., SW <br />Washington, DC 20585</div>
+            <div class="address">U.S. Energy Information Administration<br />1000 Independence Ave., SW <br />Washington, DC 20585</div>
         </div>
     </div>
     <div class="l-row footer-links">

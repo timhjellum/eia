@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div class="l-one-third-column">
-            <div class="address">Energy Information Agency<br />1000 Independence Ave., SW <br />Washington, DC 20585</div>
+            <div class="address">U.S. Energy Information Administration<br />1000 Independence Ave., SW <br />Washington, DC 20585</div>
         </div>
     </div>
     <div class="l-row footer-links">
@@ -77,16 +77,15 @@
 <script>
 $('#outerX').removeAttr('id');
 $('.l-outer-wrapper').attr('id', 'outerX');
-/*
+
 $(document).ready(function(){
-    $(".page_tabs").tabs();
-    $(".page_tabs").localScroll({
-        target:".page_tabs",
-        duration:0,
-        hash:true
-    });
-});
-*/
+		$(".page_tabs").tabs();
+		$(".page_tabs").localScroll({
+			                            target:".page_tabs",
+			                            duration:0,
+			                            hash:true
+		                            });
+	});
 </script>
 
 <script src='/global/scripts/eia-scripts.min.js'></script>

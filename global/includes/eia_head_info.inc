@@ -32,19 +32,20 @@ isset($highstock) || $highstock = '';
 <meta name="Description" content="Energy Information Administration - EIA - Official Energy Statistics from the U.S. Government" />
 
 <?php /* Framework CSS Includes */ ?>
-<link rel="stylesheet" href="/global/styles/screen.css" type="text/css" media="screen, projection"/>
-<link rel="stylesheet" href="/global/styles/eia-styles.css" />
+<link href="/global/styles/screen.css" type="text/css" media="screen, projection" rel="stylesheet" />
+<link href="/global/styles/eia-styles.min.css" media="screen, projection" rel="stylesheet" />
 
 <?php /*EIA CSS Includes */ ?>
 <link type="text/css" href="/global/scripts/jquery/datepicker/jquery-ui-dp.custom.css" rel="stylesheet" />
-<link rel="stylesheet" href="/global/styles/EIA_global.css" type="text/css" media="screen, projection">
+<link href="/global/styles/EIA_global.css" type="text/css" media="screen, projection" rel="stylesheet" />
 
-<!--[if lt IE 8]><link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/global/styles/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" href="/global/styles/ie_fixes.css" type="text/css" media="screen, projection"><![endif]-->
-<link rel="stylesheet" href="/global/styles/print.css" type="text/css" media="print">
-<!--[if lte IE 8]><link rel="stylesheet" href="/global/styles/ie_print.css" type="text/css" media="print"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/global/styles/ie_print.css" type="text/css" media="print"><![endif]-->
+<!--[if lt IE 8]><link href="/global/styles/ie.css" type="text/css" media="screen, projection" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="/global/styles/ie.css" type="text/css" media="screen, projection" rel="stylesheet" /><![endif]-->
+<!--[if lte IE 8]><link href="/global/styles/ie_fixes.css" type="text/css" media="screen, projection" rel="stylesheet" /><![endif]-->
+<link href="/global/styles/print.css" type="text/css" media="print" rel="stylesheet" />
+<link href="/global/styles/eia-print.min.css" type="text/css" media="print" rel="stylesheet" />
+<!--[if lte IE 8]><link href="/global/styles/ie_print.css" type="text/css" media="print" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="/global/styles/ie_print.css" type="text/css" media="print" rel="stylesheet" /><![endif]-->
 
 <?php /* jQuery itself */ ?>
 <script src="/global/scripts/jquery/jquery-1.11.1.min.js"></script>
@@ -77,16 +78,16 @@ if($widgets == "y"){
 	if($jvm2 == 'y'){
 ?>
 		<script src="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.min.js"></script>
-        <link rel="stylesheet" href="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
+        <link href="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
 <?php
 	}else{
 ?>
-      <link rel="stylesheet" href="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+      <link href="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
       <script src="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.min.js"></script>
 <?php
 	}
 ?>
-  <link rel="stylesheet" href="/global/scripts/api/eia_api_widgets.css" type="text/css" media="screen"/>
+  <link href="/global/scripts/api/eia_api_widgets.css" type="text/css" media="screen"/>
   <script src="/global/scripts/jquery/vector-map/jquery-jvectormap-us-aea-en.js"></script>
   <script src="/global/scripts/jquery/vector-map/jquery-jvectormap-world-mill-en.js"></script>
   <script src="/global/scripts/modules/lib/jvectormap/maps/us-merc-en.js"></script>
@@ -116,7 +117,7 @@ $faqs_path = '/tools/faqs/';
 ?>
 
 <!-- Add fancyBox 2 -->
-<link rel="stylesheet" href="/global/scripts/fancybox2/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<link href="/global/scripts/fancybox2/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script type="text/javascript" src="/global/scripts/fancybox2/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 <?php
@@ -126,7 +127,7 @@ $faqs_path = '/tools/faqs/';
 	} else {
 ?>	
 	<script type="text/javascript" src="/global/survey/engine/js/survey_engine.js"></script>
-	<link rel="stylesheet" href="/global/survey/engine/css/layout.css" type="text/css" media="screen" />
+	<link href="/global/survey/engine/css/layout.css" type="text/css" media="screen" />
 <?php
 	} // End checking for failover host
 ?>
