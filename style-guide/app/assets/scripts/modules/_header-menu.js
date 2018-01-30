@@ -7,11 +7,17 @@ class HeaderMenu {
 		this.searchPanel = $('.search-panel');
 		this.header = $('header');
 		this.footer = $('footer');
-		this.logo = $('.logo');	
+		this.logo = $('.logo');
+		this.closeButton = $('fancybox-close');
 		this.window = $(window);
 		this.checkSize();
 		this.events();
 		this.openMenu();
+		this.lightBox();
+
+	}
+	lightBox() {
+		this.closeButton.prepend('<i class="ico-menu close">Close</i>');
 	}
 	events() {
 		this.window.resize(this.checkSize.bind(this));
