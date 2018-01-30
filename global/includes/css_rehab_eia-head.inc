@@ -10,11 +10,8 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<link href='global/styles/eia-styles.css' rel='stylesheet' type='text/css' media="screen, projection">
-<link href='global/styles/print.css' rel='stylesheet' type='text/css' media="print">
-<link href='global/styles/eia-print.css' rel='stylesheet' type='text/css' media="print">
-
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+<link href='<?php print HTTP; ?>global/styles/eia-styles.css' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="<?php print HTTP; ?>favicon.ico" />
+<link rel="icon" href="<?php print HTTP; ?>favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php print HTTP; ?>favicon.ico" />
 
