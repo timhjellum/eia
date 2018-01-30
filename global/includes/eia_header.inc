@@ -307,7 +307,7 @@
 								<h3>
 									<a href="/tools/glossary/">Glossary</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-glossary.inc') ?>
+								<?php include('global/includes/eia-header-glossary.inc') ?>
 							</div>
 							<div class="nav-menu data-tools-model">
 								<i class="ico-menu ico-nav data-tools-model"></i>
@@ -399,7 +399,7 @@
 								<h3>
 									<a href="/survey/">EIA Survey Forms</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-survey-search.inc') ?>
+								<?php include('global/includes/eia-header-survey-search.inc') ?>
 							</div>
 							<div class="nav-menu email-complex">
 								<i class="ico-menu ico-nav email-complex"></i>
@@ -500,7 +500,7 @@
 								<h3>
 									<a href="/tools/glossary/">Glossary</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-glossary.inc'); ?>
+								<?php include('global/includes/eia-header-glossary.inc'); ?>
 							</div>
 							<div class="nav-menu faq">
 								<i class="ico-menu ico-nav faq"></i>
@@ -561,7 +561,7 @@
 								<h3>
 									<a href="/about/new/">What's New?</a>
 								</h3>
-								<?php include('global/includes/css_rehab_eia-header-whats-new.inc') ?>
+								<?php include('global/includes/eia-header-whats-new.inc') ?>
 							</div>
 
 							<div class="nav-menu press-room">
