@@ -43,7 +43,7 @@
 <!-- link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" -->
 </head>
 <body>
-<?php include(ROOT.'global/includes/css_rehab_eia-header.inc'); ?>
+<?php include('global/includes/eia_header.inc'); ?>
 <div class="l-row">
 <div class="l-full-width-column">
 
@@ -630,6 +630,6 @@
 -->
 </div>
 </div>
-<?php include(ROOT.'global/includes/css_rehab_eia-footer.inc'); ?>
+<?php include('global/includes/eia_footer.inc'); ?>
 </body>
 </html>

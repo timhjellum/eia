@@ -107,9 +107,17 @@
 					font-size: .6875rem;
 					margin-bottom: .2em;
 					a {
+						text-decoration: none;
+						color: @eia-blue;
 						.normal;
+						line-height: 1.2em;						
+						&:hover {
+							text-decoration: underline;
+							.line-break {
+								text-decoration: underline !important;
+							}
+						}
 					}
-					line-height: 1.2em;
 					a[href^="http:"],
 					a[href^="https:"],
 					a[href*=".com"] {

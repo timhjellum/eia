@@ -6,14 +6,7 @@
 @media @mobile {
     
 
-    input[type=text],
-    input[type=password],
-    input.text,
-    input.title,
-    textarea,
-    select {
-        margin: 00;
-    }
+
     
     li.dropdown {
         position: relative;
@@ -55,6 +48,10 @@
         z-index: 999;
         * {
             box-sizing: border-box;
+        }
+        input[type=text],
+        textarea {
+            margin: 0;
         }
         &.show {
             transition: all 0.3s ease-in-out;

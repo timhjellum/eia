@@ -2,7 +2,7 @@
 		<?php include('global/includes/eia-social-sticker.inc') ?>
 	<header>
 		<div class="print">
-			<img src="/global/images/logos/eia_logo_print.png" />
+			<img src="/global/images/logos/eia-logo-print.png" />
 		</div>
 		<nav class="navigation">
 			<a class="logo" href="/">

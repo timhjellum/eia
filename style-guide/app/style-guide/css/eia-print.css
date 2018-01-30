@@ -27,6 +27,20 @@
     display: none;
     visibility: hidden;
   }
+  .rtitle_form {
+    display: none;
+    visibility: hidden;
+  }
+  .rtitle {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    width: 100% !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+  }
   header {
     background-color: transparent;
     height: 100px !important;

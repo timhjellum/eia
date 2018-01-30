@@ -105,7 +105,6 @@
                         list-style-type: none;
                         li {
                             margin: 15px 20px 5px;
-//                            margin: 15px 24px 5px;
                             display: inline-block;
                             border-bottom-width: 0 !important;
                             padding: 0;
@@ -115,11 +114,11 @@
                                 color: #fff;
                                 font-size: 1.3rem;
                                 font-weight: 100;
+                                text-decoration: none;
                                 &:hover {
                                     text-decoration: none;
                                 }
                             }
-//                        }
                             &.ui-state-default {
                                 a {
                                     // start underline effects
@@ -241,17 +240,21 @@
                         padding-left: 40px;
                         overflow: hidden;
                         li {
+                            .font;                            
                             line-height: 1.6em;
-                            .font;
                             font-size: 0.875rem;
                             cursor: pointer;
                             a {
-                                color: @eia-blue;
+                                text-decoration: none;
+                                color: @eia-blue; 
                                 display: block;
                                 &:after {
                                     content: "\00a0\203A";
                                 }
-                            }
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }                           
                         }
                     }
                     &.energy-explained {
@@ -343,7 +346,9 @@
                         display: block;   
                         width: 250px;
                         position: relative;
-                        input[type='text'] {
+                        input[type=text],
+                        textarea {
+                            margin: 0;
                             .font;
                             font-size: 0.875rem;
                             width: 250px;
