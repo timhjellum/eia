@@ -4,17 +4,18 @@ console.log("Page Tabs checking in...");
 
 class PageTabs {
     constructor() {
-        this.pageTabs = $(".page_tabs");
         this.onLoad();
     }
 
     onLoad() {
-        this.pageTabs.tabs();    
-        this.pageTabs.localScroll({
+        $(".page_tabs").tabs();
+        $(".page_tabs").localScroll({
             target:".page_tabs",
             duration:0,
             hash:true
         });
+        $(".rtitle_form").css("width", "30%");
+        $(".rtitle").css("width", "70%");
     }
 }
 
