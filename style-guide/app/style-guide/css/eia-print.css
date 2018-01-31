@@ -41,6 +41,10 @@
     clear: both !important;
     box-sizing: border-box !important;
   }
+  body.winter header {
+    display: none;
+    visibility: hidden;
+  }
   header {
     background-color: transparent;
     height: 100px !important;

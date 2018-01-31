@@ -12,4 +12,3 @@ import SocialSticker from './modules/_social-sticker';
 new SocialSticker();
 
 import PageTabs from './modules/_page-tabs';
-new PageTabs();

@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
 	entry: {
 		"eia-scripts"		: "./app/assets/scripts/eia-scripts",
-		"eia-scripts-home"	: "./app/assets/scripts/eia-scripts-home",
+//		"eia-scripts-home"	: "./app/assets/scripts/eia-scripts-home",
 	},
 	output: {
 		//path: "../global/scripts",

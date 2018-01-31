@@ -1942,22 +1942,38 @@ span.line-break {
   li.dropdown {
     position: relative;
   }
+  .dat_block {
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    left: 113px !important;
+  }
+  .dat_block:last-child {
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    left: 173px !important;
+  }
   /*
-    .dat_block {
-        -moz-transition: opacity 0.4s ease-in-out;
-        -o-transition: opacity 0.4s ease-in-out;
-        -webkit-transition: opacity 0.4s ease-in-out;
-        transition: opacity 0.4s ease-in-out;
-        left: 113px !important;
+    .rtitle_form,
+	.l-split-narrow {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 41.666%;
+		-ms-flex: 0 0 41.666%;
+		flex: 0 0 41.666%;
+		max-width: 41.666%;
     }
-    .dat_block:last-child {
-        -moz-transition: opacity 0.4s ease-in-out;
-        -o-transition: opacity 0.4s ease-in-out;
-        -webkit-transition: opacity 0.4s ease-in-out;
-        transition: opacity 0.4s ease-in-out;
-        left: 173px !important;
+    .rtitle,
+	.l-split-wide {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 58.333%;
+		-ms-flex: 0 0 58.333%;
+		flex: 0 0 58.333%;
+		max-width: 58.333%;
     }
-    */
+*/
   header {
     position: fixed;
     top: 0;
@@ -2234,12 +2250,6 @@ span.line-break {
 - The spacing in the footer is off. I think we had more spacing between columns before? And there should be more space above the row of serif links (About EIA, Open Data, etc.). Also, just noticed that the font-family for the address is wrong, should be the Arial stack (did that shift or did neither one of us notice it before?). Here’s a screenshot that has roughly the right spacing (this is the one I sent a long time ago, we hadn’t yet made the decision to remove the logo, so ignore that). The border between the top row of serif links and the columns of links should be there, however. I think we both forgot about this one.
 */
 @media (min-width: 1px) {
-  .rtitle {
-    width: 70%;
-  }
-  .rtitle_form {
-    width: 30%;
-  }
   .fancybox-skin {
     background: #fff;
     -webkit-border-radius: 0;
@@ -2254,18 +2264,20 @@ span.line-break {
   .fancybox-prev span {
     background-image: none;
   }
-  .ui-autocomplete {
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: default;
-  }
-  .ui-autocomplete li {
-    margin-bottom: 8px;
-  }
-  .ui-autocomplete li:hover {
-    color: #189bd7;
-  }
+  /*
+    .ui-autocomplete {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: default;
+        li {
+            margin-bottom: 8px;
+            &:hover {
+                color: @eia-blue;
+            }
+        }
+    }
+    */
   .section-tabs .ui-tabs,
   .section-tabs .ui-tabs-nav,
   .section-tabs .ui-tabs-selected,
@@ -3996,6 +4008,16 @@ span.line-break {
     background: url('data:image/svg+xml,%3Csvg%20id%3D%22icon-search%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2025%2025%22%3E%3Cpath%20d%3D%22M0.9,20.3c-0.4,1.1,1.3,3.5,3.2,3.5s6-6.5,6.6-7.1a6.4,6.4,0,0,1-2.3-2.3c-0.8.8-7.1,4.7-7.5,5.9%22%20fill%3D%22%23a9c1da%22/%3E%3Cpath%20d%3D%22M18.7,1.7A8,8,0,1,0,23.2,13l0.2-.4,0.3-.7a8,8,0,0,0,.4-3.3V8.2a8,8,0,0,0-5.3-6.6m2.9,9.5a5.9,5.9,0,0,1-.6,1.2l-0.3.4A5.9,5.9,0,1,1,18,3.7h0a5.8,5.8,0,0,1,3.4,3V7.3a5.8,5.8,0,0,1,0,3.9%22%20fill%3D%22%23a9c1da%22/%3E%3Cpath%20d%3D%22M0.9,20.3c-0.4,1.1,1.3,3.5,3.2,3.5s6-6.5,6.6-7.1a6.4,6.4,0,0,1-2.3-2.3c-0.8.8-7.1,4.7-7.5,5.9%22%20fill%3D%22%23a9c1da%22/%3E%3Cpath%20d%3D%22M18.7,1.7A8,8,0,1,0,23.2,13l0.2-.4,0.3-.7a8,8,0,0,0,.4-3.3V8.2a8,8,0,0,0-5.3-6.6m2.9,9.5a5.9,5.9,0,0,1-.6,1.2l-0.3.4A5.9,5.9,0,1,1,18,3.7h0a5.8,5.8,0,0,1,3.4,3V7.3a5.8,5.8,0,0,1,0,3.9%22%20fill%3D%22%23a9c1da%22/%3E%3C/svg%3E') no-repeat center center;
     float: right;
     margin: -10px 12px;
+  }
+  .fancybox-close::before {
+    content: ' ';
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: url('data:image/svg+xml,%3Csvg%20id%3D%22icon-cancel%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2036%2036%22%3E%3Cg%20id%3D%22cancel-path%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2218%22%20r%3D%2216.5%22%20fill%3D%22%23189bd7%22%20opacity%3D%221%22/%3E%3Cpolygon%20points%3D%2225.8%2022.7%2021.1%2018%2025.8%2013.3%2022.7%2010.2%2018%2014.9%2013.3%2010.2%2010.2%2013.3%2014.9%2018%2010.2%2022.7%2013.3%2025.8%2018%2021.1%2022.7%2025.8%2025.8%2022.7%22%20fill%3D%22%23ffffff%22/%3E%3C/g%3E%3C/svg%3E') no-repeat center center;
+  }
+  .fancybox-close:hover::before {
+    background: url('data:image/svg+xml,%3Csvg%20id%3D%22icon-cancel%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2036%2036%22%3E%3Cg%20id%3D%22cancel-path%22%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2218%22%20r%3D%2216.5%22%20fill%3D%22%23189bd7%22%20opacity%3D%221%22/%3E%3Cpolygon%20points%3D%2225.8%2022.7%2021.1%2018%2025.8%2013.3%2022.7%2010.2%2018%2014.9%2013.3%2010.2%2010.2%2013.3%2014.9%2018%2010.2%2022.7%2013.3%2025.8%2018%2021.1%2022.7%2025.8%2025.8%2022.7%22%20fill%3D%22%23ffffff%22/%3E%3C/g%3E%3C/svg%3E') no-repeat center center;
   }
 }
 @media (min-width: 956px) {

@@ -1081,6 +1081,21 @@
 			}
 		}
 	}
+
+
+	.fancybox-close {
+		&::before {
+			.controls-icon(40px, 40px);
+			.icon-cancel();
+		}
+		&:hover {
+			&::before {
+				.icon-cancel();
+			}
+		}
+	}
+
+
 }
 
 
@@ -1105,15 +1120,6 @@
 			}
 		}
 	}
-//	.l-side-column {
-//		i {
-//			&.ico {
-//				.left;
-//				width: 17px;
-//				height: 17px;             
-//			}
-//		}
-//	}
 }
 
 

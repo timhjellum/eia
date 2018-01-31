@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
 
 
-gulp.task('cssInject', ['less'], function() {
+gulp.task('cssInject', ['compile-eia-styles-less'], function() {
   return gulp.src('./app/temp/styles/eia-styles.min.css')
     .pipe(browserSync.stream());
 });

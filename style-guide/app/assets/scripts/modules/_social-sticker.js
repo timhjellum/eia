@@ -1,11 +1,9 @@
-console.log("social sticker checking in...");
+//console.log("social sticker checking in...");
 
 class SocialSticker {
     constructor() {
         this.target = $('#sticker');
         this.hover(this.target);
-        console.log("new"+this.target);
-
 
         function position() {
             $("#sticker.positionable").position({

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<configuration>
+	<title>Large Fire Locaton</title>
+    <description>
+    	<![CDATA[
+<B>Fire Name</B>: {FIRE_NAME}
+<B>Report Date</B>: {REPORT_DATE}
+<B>State</B>: {STATE}
+<B>Acres</B>: {ACRES}
+<B>Latitude</B>: {LATITUDE}
+<B>Longitude</B>: {LONGITUDE}
+	]]>
+    </description>    
+    <fields>
+        <field name="FIRE_NAME"/> 
+        <field name="ACRES"/>
+        <field name="REPORT_DATE">
+		    <format dateformat="shortDateShortTime"/>
+        </field>
+        <field name="LATITUDE"/> 
+        <field name="LONGITUDE "/> 
+        <field name="STATE"/> 
+    </fields>
+</configuration>

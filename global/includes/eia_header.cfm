@@ -2,7 +2,7 @@
 		<cfinclude template="/global/includes/eia-social-sticker.cfm" />
 	<header>
 		<div class="print">
-			<img src="/global/images/logos/eia_logo_print.png" />
+			<img src="/global/images/logos/eia-logo-print.png" />
 		</div>
 		<nav class="navigation">
 			<a class="logo" href="/">
@@ -98,7 +98,7 @@
 								<p>Exploration and reserves, storage, imports and exports, production, prices, sales.</p>
 								<ul>
 									<li>
-										<a href='http://ir.eia.gov/ngs/ngs.html'>Weekly Natural Gas Status Report</a>
+										<a href='http://ir.eia.gov/ngs/ngs.html'>Weekly Natural Gas Storage Report</a>
 									</li>
 									<li>
 										<a href='/naturalgas/weekly/'>Natural Gas Weekly Update</a>

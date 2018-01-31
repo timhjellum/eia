@@ -8,23 +8,40 @@ class HeaderMenu {
 		this.header = $('header');
 		this.footer = $('footer');
 		this.logo = $('.logo');
-		this.closeButton = $('fancybox-close');
 		this.window = $(window);
 		this.checkSize();
 		this.events();
 		this.openMenu();
-		this.lightBox();
+
 
 	}
 	lightBox() {
-		this.closeButton.prepend('<i class="ico-menu close">Close</i>');
+
+		// this.closeButton.prepend('<i class="ico-menu close">Close</i>');
+		// console.log("fancybox lightbox");
+		$("a.lightbox").fancybox({
+			autoResize      :     false, // To sidestep issue with Highcharts in Fancybox 2 disappearing when the browser is resized -SNW
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'speedIn'		:	600, 
+			'speedOut'		:	200, 
+			'overlayShow'	:	false
+		});
+		
+		// For HTML content, since Fancybox 2 now requires specifying IFRAME mode explicitly for non-images
+		$("a.lightboxhtml").fancybox({
+			type: "iframe",
+			fitToView: true,
+			autoSize: true
+		});
 	}
 	events() {
 		this.window.resize(this.checkSize.bind(this));
+	//	$("a.lightbox").click(lightBox());
 	}
 	openMenu() {
 		$('.fancybox-menu').click(function () {
-			console.log("clicked");
+			//console.log("clicked");
 			var target = $(this).data("target");
 			var options = {active : 0};
 			switch(target) {
@@ -44,10 +61,10 @@ class HeaderMenu {
 			}
 			$('.section-tabs').tabs(options);
 		});
-		console.log('Open Menu');
+		//console.log('Open Menu');
 		var viewPortWidth = window.innerWidth;
 		var viewPortHeight = window.innerHeight;
-		console.log('viewport width is: ' + viewPortWidth + ' and viewport height is:' + viewPortHeight);
+		//console.log('viewport width is: ' + viewPortWidth + ' and viewport height is:' + viewPortHeight);
 		var fbWidth = 980;
 
 		$('.fancybox-menu').fancybox({
@@ -97,16 +114,16 @@ class HeaderMenu {
 		});
 	}
 	checkSize() {
-		console.log('Checking size');
+		//console.log('Checking size');
 		var viewPortWidth = window.innerWidth;
 		var viewPortHeight = window.innerHeight;
-		console.log('viewport width is: ' + viewPortWidth + ' and viewport height is:' + viewPortHeight);
+		//console.log('viewport width is: ' + viewPortWidth + ' and viewport height is:' + viewPortHeight);
 		if (viewPortWidth > 960) {
-			console.log(viewPortWidth + " = laptop and desktop");
+			//console.log(viewPortWidth + " = laptop and desktop");
 			$('.fancybox-wrap').addClass('fancybox-laptop');
 			$('.fancybox-wrap').removeClass('fancybox-mobile');
 		} else if (viewPortWidth <= 960) {
-			console.log(viewPortWidth + " = mobile");
+			//console.log(viewPortWidth + " = mobile");
 			$('.fancybox-wrap').addClass('fancybox-mobile');
 			$('.fancybox-wrap').removeClass('fancybox-laptop');
 		}

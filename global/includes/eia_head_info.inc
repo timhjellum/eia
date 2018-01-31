@@ -78,11 +78,11 @@ if($widgets == "y"){
 	if($jvm2 == 'y'){
 ?>
 		<script src="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.min.js"></script>
-        <link href="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/global/scripts/jquery/vector-map2/jquery-jvectormap-2.0.1.css" type="text/css" media="screen"/>
 <?php
 	}else{
 ?>
-      <link href="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+      <link rel="stylesheet" href="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
       <script src="/global/scripts/jquery/vector-map/jquery-jvectormap-1.2.2.min.js"></script>
 <?php
 	}

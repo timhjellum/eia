@@ -1,0 +1,23 @@
+        <cfset what = 'coal'>
+        <cfinclude template="/global/threespot/about/new/whatsnew_sitewide.cfm">
+         <span class="grey_side blue_top">
+      <h4>Survey Forms, Changes & Announcements</h4>
+            <p><a href="/cneaf/coal/page/coalforms.html">Coal survey forms &rsaquo;</a> </p>
+            <p><a href="/cneaf/coal/page/surveys/coal_survey_auth.html">Coal survey authorization 2011-14 &rsaquo;</a></p>
+       <p><a href="/cneaf/coal/page/schedule/product_description.html">Coal data & analysis products: descriptions & schedules &rsaquo;</a> </p>
+          </span>
+       <span class="grey_side green_top">
+            <h4>Coal Maps</h4>
+            <p><a href="/energyexplained/index.cfm?page=coal_where">Coal Production by Coal-Producing Region, 2009</a></p>
+          <p>  <a href="http://www.eia.doe.gov/energyexplained/index.cfm?page=coal_where"><img src="/global/threespot/coal/images/coal_regions_2009.jpg" ></a><br/><br/><a href="/global/threespot/maps/">See more coal maps &rsaquo;</a></p>
+          </span>
+        <!--- FAQ Promo --->
+        <span class="blue_side">
+          <h4 class="q_side"><a href="http://www.eia.doe.gov/ask/coal_faqs.asp#coal_state_production">Which States produce the most coal? &rsaquo;</a></h4>
+          <p><a href="http://www.eia.doe.gov/ask/coal_faqs.asp">See all coal FAQs  &rsaquo;</a></p>
+        </span>
+         <!--- Energy Explained Promo --->
+        
+        <p><a href="/energyexplained/index.cfm?page=electricity_home"><img src="/energyexplained/images/section-banners/coal.jpg" alt="Energy Explained - Coal"  /></a></p>
+        <!--- Kids Promo --->
+        <p><a href="#"><img src="/global/images/side_features/kids_electricity.png" width="240" height="142" alt="Energy Kids" /></a></p>

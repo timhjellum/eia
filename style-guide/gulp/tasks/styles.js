@@ -32,7 +32,7 @@ let del = require('del');
     * app/style-guide/css/ compiled but not minimized
 */
 
-gulp.task('less', ['compile-print-less'], () =>
+gulp.task('compile-eia-styles-less', ['compile-print-less'], () =>
   gulp.src('./app/assets/styles/eia-styles.css')
   .pipe(less())
   .pipe(gulp.dest('../global/styles'))

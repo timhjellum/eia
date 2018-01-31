@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script language="JavaScript" src="toggle.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div style="font-family:Arial, Helvetica, sans-serif; font-size: 10pt; width: 716px; height:500px; border:#999 1px solid; padding: 5px;">
+    <div style="background-color:#FFF; width:716px; height:368px; margin-bottom:5px;">
+        <img src="images/gcei_city-dots.png" style="z-index:16; position:absolute;" id="cities"/>
+        <img src="images/gcei_state-names.png" style="z-index:15; position:absolute;" id="state_names"/>
+        <img src="images/gcei_city-names.png" style="z-index:14; position:absolute;" id="city_names"/>
+        <img src="images/gcei_legend.png" style="z-index:13; position:absolute;" id="legend"/>
+        <img src="images/gcei_nat-gas-processing.png" style="z-index:12; position:absolute;" id="nat_gas_proc"/>
+        <img src="images/gcei_strategic-petroleum-reserve.png" style="z-index:11; position:absolute;" id="strat_petro_res"/>
+        <img src="images/gcei_propane-hub-loop.png" style="z-index:10; position:absolute;" id="propane_hub"/>
+        <img src="images/gcei_electric-power-plants.png" style="z-index:9; position:absolute;" id="elec_power_plants"/>
+        <img src="images/gcei_oil-import_seaport.png" style="z-index:8; position:absolute;" id="oil_imp_seaport"/>
+        <img src="images/gcei_refineries.png" style="z-index:7; position:absolute;" id="refineries"/>
+        <img src="images/gcei_electric-line.png" style="z-index:6; position:absolute;" id="elec_line"/>
+        <img src="images/gcei_LNG.png" style="z-index:5; position:absolute;" id="lng"/>
+        <img src="images/gcei_nat-gas-hubs.png" style="z-index:4; position:absolute;" id="nat_gas_hubs"/>
+        <img src="images/gcei_nat-gas-pipelines.png" style="z-index:3; position:absolute;" id="nat_gas_pipelines"/>
+        <img src="images/gcei_map-bg.png" style="z-index:1; position:absolute;" id="map_bg"/>
+    </div>
+    <div style="width:716px; padding-left:5px;"><em>Uncheck or check an item to hide or show it in the map.</em></div>
+    <div style="width:370px; position:relative; float:left;">
+        <ul style="list-style:none; padding-left:10px; padding-top:5px; margin:0px;">
+            <li><label><input type="checkbox" name="lng" checked="checked" onclick="toggle('lng');" />LNG terminals</label></li>
+            <li><label><input type="checkbox" name="nat_gas_hubs" checked="checked" onclick="toggle('nat_gas_hubs');"/>Natural Gas Market Centers(Hubs)</label></li>
+            <li><label><input type="checkbox" name="nat_gas_proc" checked="checked" onclick="toggle('nat_gas_proc');"/>Natural Gas Processing Plants</label></li>
+            <li><label><input type="checkbox" name="nat_gas_pipelines" checked="checked" onclick="toggle('nat_gas_pipelines');"/>Natural Gas Interstate, Intrastate, and gathering pipelines</label></li>
+            <li><label><input type="checkbox" name="elec_line" checked="checked" onclick="toggle('elec_line');"/>Electric Transmission Line (>=345kV)</label></li>
+        </ul>
+    </div>
+    <div style="width:340px; position:relative; float:right;">
+        <ul style="list-style:none; padding-left:0px; padding-left:10px; padding-top:5px; margin:0px;">
+            <li><label><input type="checkbox" name="oil_imp_seaport" checked="checked" onclick="toggle('oil_imp_seaport');" />Oil Import Site & Oil Seaport</label></li>
+            <li><label><input type="checkbox" name="propane_hub" checked="checked" onclick="toggle('propane_hub');"/>Propane Hub & Louisiana Offshore Oil Port</label></li>
+            <li><label><input type="checkbox" name="refineries" checked="checked" onclick="toggle('refineries');"/>Refinery</label></li>
+            <li><label><input type="checkbox" name="strat_petro_res" checked="checked" onclick="toggle('strat_petro_res');"/>Strategic Petroleum Reserve</label></li>
+            <li><label><input type="checkbox" name="elec_power_plants" checked="checked" onclick="toggle('elec_power_plants');"/>Electric Power Plants (>=100 MW)</label></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

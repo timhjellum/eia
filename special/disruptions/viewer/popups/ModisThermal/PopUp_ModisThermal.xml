@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<configuration>
+	<title>MODIS Hotspot/Fire Location</title>
+    <description>
+    	<![CDATA[
+<B>Brightness temperature (using MODIS channels 21/22 and 31)</B>: {BRIGHTNESS} K
+<B>Channel 31 brightness temperature</B>: {BRIGHT_T31} K
+<B>Acquisition date</B>: {ACQ_DATE}	
+	]]>
+    </description>    
+    <fields>
+        <field name="ACQ_DATE">
+		    <format dateformat="shortDateShortTime"/>
+        </field>		
+        <field name="BRIGHTNESS"/>
+		<field name="BRIGHT_T31"/>
+        <field name="CONFIDENCE"/>
+    </fields>
+</configuration>

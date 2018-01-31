@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<configuration>
+	<title>Earthquakes</title>
+    <description>
+    	<![CDATA[
+<B>Location</B>: {LOCATION}		
+<B>Magnitude</B>: {MAGNITUDE}
+<B>Depth</B>: {DEPTH}
+<B>Date</B>: {UTC_DATETIME}
+	]]>
+    </description>    
+    <fields>
+        <field name="MAGNITUDE"/>		
+        <field name="DEPTH"/>
+		<field name="LOCATION"/>
+        <field name="UTC_DATETIME">
+		    <format dateformat="shortDateShortTime" useutc="true"/>
+        </field>
+    </fields>
+</configuration>
