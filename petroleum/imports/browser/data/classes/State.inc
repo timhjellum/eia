@@ -1,1 +1,0 @@
-<?phpclass State extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT id, name, padd_id AS padd, bitmap_index,decode(id, 'US', '1', name) as "ORDER"FROM petimp.statesORDER BY decode(id, 'US', '1', name)SQL;

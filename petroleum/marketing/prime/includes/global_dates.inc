@@ -1,1 +1,0 @@
-<?php $todayDate = Now(); ?><?php $oneYearAgo = todayDate - 364; ?><?php $twoYearsAgo = todayDate - 730; ?><?php $fiveYearsAgo = todayDate - 1825; ?><?php $todayDate_sql = $DateFormat(todayDate, "yyyy-mm-dd"); ?><?php $oneYearAgo_sql = $DateFormat(oneYearAgo, "yyyy-mm-dd"); ?>

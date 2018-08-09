@@ -1,1 +1,0 @@
-<?phpclass View extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT id, name, json from petimp.reportsORDER BY idSQL;
