@@ -1,0 +1,111 @@
+@media @mobile {
+    .dilly {
+        border-top: 4px solid @eia-blue;
+        ul {
+            margin: 0;
+            li  {
+                .font;
+                font-size: 0.750rem * 1.10%; // 12 pixels
+                line-height: 150%; // 18 pixels
+                padding: 0 0 10px 0;
+                margin: 10px 0 0; //8px 0 0 0;
+// move to home - i think
+// border-bottom: 1px solid @eia-divider;
+                &:last-child {
+                    border-bottom: none;
+                    padding: 0;
+                }
+                a {
+                    display: block;
+                    color: @eia-blue;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    } 
+                }
+                &.head {
+                    padding: 0 0 7px 0;
+                    margin: 14px 0 7px 0;
+                    border-bottom: 1px solid shade(white, 16.8%);
+                    h2  {
+                        .font;
+                        .bold;
+                        font-size: 0.750rem * 1.35%;
+
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                &.sub-head {
+                    padding: 0 0 7px 0;
+                    margin: 14px 0 7px 0;
+                    border-bottom: none;
+                    //h3  {
+                    .font;
+                    .bold;
+                    font-size: 0.750rem * 1.35%;
+                    .font-size;
+                    padding: 0;
+                    margin: 0;
+                    //}
+                }
+                ul {
+                    padding: 0;
+                    margin: 0 17px;
+                    border-bottom: none;
+                    li {
+                        padding: 0;
+                        margin: 0;
+                        border-bottom: none;
+                    }
+                }
+                /*
+                li {
+                    border-bottom: none;
+                    padding: 0;
+                    margin: .4em 0;
+
+                }
+                */
+
+                /*
+                &.sub-head {
+                    padding: 8px 0 10px 0px;
+                    .bold;
+                }
+                &.form-label {
+                    padding: 0;
+                    .bold;
+                }
+                */
+            }
+        }
+    }
+}
+
+@media @laptop {
+    .dilly {
+        ul {
+            padding: 17px;
+            li  {
+                padding: 0 0 10px 0;
+                font-size: 0.8rem; // 12 pixels
+                &.head {
+                    padding: 0 0 7px 0;
+                    margin: 0 0 7px 0;
+                    h2  {
+                        font-size: 0.8rem; // 12 pixels
+                    }
+                }
+                &.sub-head {
+                    padding: 0 0 7px 0;
+                    margin: 0 0 7px 0;
+                    font-size: 0.8rem; // 12 pixels
+                    h3  {
+                        font-size: 0.8rem; // 12 pixels
+                    }
+                }
+            }
+        }
+    }
+}

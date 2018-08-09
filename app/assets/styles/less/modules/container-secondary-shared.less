@@ -1,0 +1,246 @@
+/*
+REMs        Pixels
+---------------------
+font-size: 0.625rem; // 10 pixels	
+font-size: 0.688rem; // 11 pixels
+font-size: 0.750rem; // 12 pixels
+font-size: 0.813rem; // 13 pixels
+font-size: 0.875rem; // 14 pixels
+font-size: 0.938rem; // 15 pixels
+font-size: 1.000rem; // 16 pixels
+font-size: 1.063rem; // 17 pixels
+font-size: 1.125rem; // 18 pixels
+font-size: 1.188rem; // 19 pixels
+font-size: 1.250rem; // 20 pixels
+font-size: 1.313rem; // 21 pixels
+font-size: 1.375rem; // 22 pixels
+font-size: 1.438rem; // 23 pixels
+font-size: 1.500rem; // 24 pixels
+font-size: 1.5625rem; // 25
+font-size: 1.625rem; // 26px pixels
+*/
+	.content-container {
+		display: inline-block;
+		width: 100%;
+		ul {
+			list-style: none;
+			li {
+				vertical-align: top;
+				&.foot {
+					.font;
+					.bold;
+					padding: 0;
+					margin: 10px 0 0;
+					a {
+						display: block;
+						color: @eia-blue;
+						font-size: .8125rem; //13px;
+						&:after { 
+							content:"\00a0\203A";
+						} 
+					}
+				}
+                a {
+					display: inline-block;
+                    color: @eia-blue;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    } 
+				}
+				ul {
+					list-style-type: disc;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+@media @mobile {
+	// these are shared styles across all secondary styles
+	.secondary-alt,
+	.secondary {
+		margin-bottom: 2em;
+		ul {
+			li {
+				a {
+					color: @eia-blue;
+					text-decoration: none;
+					span {
+						&.link-label {
+							//margin-left: 60px;
+							display: table-cell;
+						}
+					}
+					em {
+						.italic;
+						color: @eia-dark-grey;
+					}
+					span {
+						&.date {
+							font-style: normal;
+							color: @eia-dark-grey;
+							text-decoration: none;
+							display: table-cell;
+							padding-right: 12px;				
+						}
+					}
+					&:hover {
+						text-decoration: underline;
+						span {
+							&.date {
+								text-decoration: underline solid white;
+							}
+						}
+						em {
+							text-decoration: underline solid white;
+						}
+					}
+				}
+				// creates a new list with a single bullet
+				&.list-item {
+					list-style-type: none;
+					ul {
+						padding: 0 0 0 17px;
+						display: block;
+						li {
+							list-style-type: none;
+							&:first-child {
+								list-style-type: disc;
+							}
+		
+						}
+					}
+				}
+				// creates vertical space to indicate a new list
+				&.list-spacer {
+					list-style-type: none;
+					ul {
+						margin: 1em 0;
+						padding: 0 0 0 0;
+						display: block;
+						li {
+							list-style-type: none;	
+						}
+					}
+				}
+				&.sub-head {
+					margin: 8px 0 10px 0;
+				}
+				&.description {
+					margin: 8px 0 10px 0;
+				}
+				&.image {
+					img {
+						width: 100%;
+					}
+					margin-bottom: 1em;
+				}
+				&.icon {
+					a {
+						text-decoration: none;
+						width: 100%;
+						display: table;
+						.ico {
+							.right;
+						}
+						span {
+							&.date {
+								font-style: normal;
+								color: @eia-dark-grey;
+								position: absolute;
+								display: table;
+								text-decoration: none;						
+							}
+						}
+						span {
+							&.link-label {
+								margin-left: 60px;
+								display: block;
+							}
+						}
+						&:hover {
+							text-decoration: underline;
+							.ico {
+								text-decoration: underline;
+							}
+							span {
+								&.date {
+									text-decoration: none;									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&>ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			&>li {
+				.font;
+				line-height: 1.5em;
+				min-height: 0.875rem;
+				padding: 0;
+				margin: 0;
+				vertical-align: top;
+				width: 100%;
+				&.foot {
+					margin-top: 10px;
+					a {
+						.bold;
+						color: @eia-blue;
+						&:after { 
+							content:"\00a0\203A";
+						}
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				// <li class="icon"><a><i></i><span class="date">xxx</span> <span class="label">xxx</span></a></li>
+
+
+				ul {
+					padding: 0 0 0 17px;
+					display: block;
+					list-style-type: disc;
+					li {
+						&.foot {
+							.font;
+							.bold;
+							padding: 0;
+							margin: 0;
+							a {
+								display: block;
+								color: @eia-blue;
+								&:after { 
+									content:"\00a0\203A";
+								} 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet {
+	.secondary-alt,
+	.secondary {
+		margin-bottom: 3em;
+	}
+}
+@media @laptop {
+	.secondary-alt,
+	.secondary {
+		margin-bottom: 1em;
+	}
+}

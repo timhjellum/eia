@@ -1,0 +1,92 @@
+
+@media @mobile {
+    //	.l-full-width-col,
+	.l-main-col,
+//	.l-middle-col,
+//	.l-split-narrow-col,
+//	.l-split-wide-col,
+//	.l-one-third-col,
+	.l-two-col
+//	.l-two-third-col
+//	.l-main-col 
+{
+		.primary-alt,
+		.primary,
+		.secondary-alt,
+		.secondary {
+            margin-bottom: 3em;
+            h1 {
+                display: block;
+                border-bottom: 1px solid shade(white, 16.8%);
+                padding: 1em 0 6px 0;
+                clear: both;
+                line-height: 1;
+                margin-bottom: 13px;
+                font-weight: normal;
+                .header-font;
+                font-size: 26px;
+                color: @eia-dark-grey;  
+            }
+            h4 {
+                width: 100%;
+                font-size: 18px;
+                margin-bottom: 4px;
+                padding-bottom: 0px;
+                line-height: 1;
+                font-weight: normal;
+                .header-font;
+                color: @eia-dark-grey;
+                vertical-align: baseline;
+                span {
+                    .right;
+                    &.alert {
+                        .font;
+                        color: red;
+                        .bold;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            h2 {
+                padding: 0;
+                margin: 0 0 7px 0;
+                color: @eia-dark-grey;
+                border-bottom: 1px solid shade(white, 40%);
+                .font;
+                .bold;
+                font-size: 0.938rem; // 15 pixels
+                text-transform: uppercase;
+                &.alt {
+                    border-bottom: none;
+                }           
+            }
+            ul {
+                &.upcoming-releases {
+                    li {
+                        margin-bottom: 14px
+                    }
+                }
+                &.presentations {
+                    li {
+
+                        &.date {
+                            .italic;
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
+@media @tablet {
+	.l-main-col,
+    .l-two-col {
+        .primary-alt 
+        .primary,
+        .secondary-alt,
+        .secondary {
+		    margin-bottom: 2em;
+        }
+    }
+}

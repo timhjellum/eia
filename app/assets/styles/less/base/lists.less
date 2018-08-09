@@ -1,0 +1,245 @@
+@media @mobile {
+    .primary-alt,
+    .primary,
+    .secondary-alt,
+    .secondary,
+    .accordion-content {
+        ul {
+            list-style: none;
+            &.list-seperator {
+                //margin-top: 1.5em;
+                border-top: 1px solid silver;
+                //padding-top: 2em;
+            }
+            &.numbered {
+                &>li {
+                    position: relative;
+                    width: 100%;
+                    padding-left: 50px;
+                    span {
+                        &.number {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50px;
+                        }
+                    }
+                    &>ul {
+                        list-style: none;
+                        margin: 0;
+                        &.sub-list,
+                        &.list-spacer {
+                            list-style: none;
+                            margin: 0;
+                        }
+                        &>li {
+                            list-style: none;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            li {
+                .font;
+                line-height: 1.4;
+                color: @eia-dark-grey;
+                font-size: .875rem; // * 1.20%;
+                &.head {
+                    .bold;
+                }
+                &.hide-bullet {
+                    list-style: none;
+                }
+                a {
+                    color: @eia-blue;
+                    font-size: .875rem; // * 1.20%; 
+                    text-decoration: none;
+                    span {
+                        &.date {
+                            margin-right:  12px;
+                            color: @eia-dark-grey;
+                            display: inline-block;
+                            text-decoration: none;						
+                        }
+                    }
+                    span {
+                        &.link-label {
+                            margin-right: 12px;
+                        }
+                    }
+                    &.link-label {
+                        em {
+                            color: @eia-dark-grey;
+                        }
+                        span {
+                            color: @eia-dark-grey;
+                        }
+                        &:hover {
+                            em {
+                               text-decoration-line: underline;
+                               text-decoration-color: #fff;
+                            }
+                            span {
+                                text-decoration-line: underline;
+                                text-decoration-color: #fff; 
+                            }
+                        }
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                        .ico {
+                            text-decoration: underline;
+                        }
+                        span {
+                            &.date {
+                                text-decoration: none;									
+                            }
+                        }
+                    }
+                }
+                &.release-schedule {
+                    .italic;
+                }
+                &.list-item {
+                    list-style: none;
+                    &>ul {
+                        display: block;
+                        &>li {
+                            list-style-type: none;
+                            &:first-child {
+                                list-style-type: disc;
+                            }
+                        }
+                        &:last-child {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+                &.pdf {
+                    position: relative;
+                    list-style: none;
+                    margin-left: 0;
+                    &:before {
+                        .icon-file-type(pdf);
+                        .controls-icon(15px, 16px);
+                        position: absolute;
+                    }
+                    a {
+                        padding-left: 20px;
+                        display: table;
+                    }
+                }
+                &.xls {
+                    position: relative;
+                    list-style: none;
+                    margin-left: 0;
+                    &:before {
+                        .icon-file-type(xls);
+                        .controls-icon(15px, 16px);
+                        position: absolute;
+                    }
+                    a {
+                        padding-left: 20px;
+                        display: table;
+                    }
+                }
+                &.csv {
+                    position: relative;
+                    list-style: none;
+                    margin-left: 0;
+                    &:before {
+                        .icon-file-type(csv);
+                        .controls-icon(15px, 16px);
+                        position: absolute;
+                    }
+                    a {
+                        padding-left: 20px;
+                        display: table;
+                    }
+                }
+
+                /*
+                &.interactive {
+                    position: relative;
+                    list-style: none;
+                    margin-left: 0;
+                    &:before {
+                        .icon-file-type(interactive);
+                        .controls-icon(15px, 16px);
+                        position: absolute;
+                    }
+                    a {
+                        padding-left: 20px;
+                        display: table;
+                    }
+                }
+                */
+                ul {
+                    li {
+                        margin: 3px 0 0 17px;
+                        list-style-type: disc;
+                    }
+                }
+                // creates vertical space to indicate a new list
+                &.sub-list,
+                &.list-spacer {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    ul {
+                        margin: 1em 0;
+                        padding: 0;
+                        display: block;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &:first-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &>ul{
+            &>li {
+				.font;
+				line-height: 1.4;
+				min-height: 0.875rem;
+				vertical-align: top;
+				width: 100%;
+                &.head {
+                    .bold;
+                }
+                &.foot {
+					margin-top: 10px;
+					a {
+						.bold;
+						color: @eia-blue;
+						&:after { 
+							content:"\00a0\203A";
+						}
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+            }
+        }
+    }
+}
+
+@media @tablet {
+    .primary-alt,
+    .primary,
+    .secondary-alt,
+    .secondary,
+    .content {
+        ul {
+            li {
+                font-size: .875rem;
+                a {
+                    font-size: .875rem;
+                }
+            }
+        }
+    }
+}

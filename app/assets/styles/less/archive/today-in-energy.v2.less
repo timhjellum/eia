@@ -1,0 +1,180 @@
+@media @mobile {
+	.main-primary {
+		a {
+			color: @eia-blue;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			} 
+		}
+		h1 {
+			.header-font;
+			font-size: 1.375rem * 1.60%; 
+			padding: 0 0 4px 0;
+			margin: 0;
+			border-bottom: 1px solid shade(white, 16.8%);
+			.date {
+				.left;
+				.italic;
+				.header-font;
+				width: 100%;
+				display: block;
+				font-size: 0.875rem * 1.20%; 
+				color: @eia-date-light;
+				padding: 0;
+				margin: 10px 5px 0 0;
+				text-transform: none;
+			}
+		}
+		h2 {
+			.font;
+			line-height: 120%;
+			font-size: 1em * 1.20%;;
+			.bold;
+			padding: 0;
+			margin:  2em 0 1em;
+			a {
+				color: @eia-blue;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				} 
+				&:after { 
+					content:"\00a0\203A";
+				} 
+			}
+		}
+		p {
+			.font;
+			font-size: 1rem * 1.20%;;
+			padding: 8px 0 10px 0;
+			margin: 0;
+			font-size: 0.750rem * 1.20%; 
+			line-height: 130%;
+			clear: both;
+			a {
+				color: @eia-blue;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				} 
+				&:last-child {
+					.bold;	
+					&:after { 
+						content:"\00a0\203A";
+					}									
+				}
+			}
+		}
+		.media {
+			text-align: center;
+			margin: 2em auto .5em auto;
+			a {
+				display: block;
+				width: 100%;
+//				background: url(images/bg.jpg) no-repeat center center fixed; 
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				padding-top: 29%; // 956:280 Aspect Ratio 
+				//position: relative; // If you want text inside of it
+
+
+
+
+
+
+//				img {
+//					width: 300px;
+//					height: 150px;
+//				}
+			}
+		}    
+		figure {
+			.font;
+			color: fade(@eia-black, 40%);
+			font-size: 0.688rem * 1.20%;
+			line-height: 110%; // 11 pixels
+			padding: 8px 0 10px 0;
+			margin: 0;
+		}
+	}
+}
+/*
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+	.main-{
+		.media {
+			a {
+				img {
+					width: 430px;
+					height: 215px;
+				}
+			}
+		}
+	}
+}
+@media @tablet {
+	.main-{
+		.media {
+			a {
+				img {
+					width: 576px;
+					height: 288px;
+				}
+					//450x250
+					//600x300
+			}
+		}
+	}
+}
+@media @tablet-landscape {
+	.main-{
+		.media {
+			a {
+				img {
+					width: 800px;
+					height: 400px;
+					//800x400
+				}
+			}
+		}
+	}
+}
+*/
+@media @laptop {
+	.main-{
+		h1 {
+			.header-font;
+			font-size: 1.375rem; // 22 pixels
+			.date {
+				.right;
+				display: table;
+				width: auto;
+				font-size: 0.875rem; // 14 pixels
+			}
+		}
+		h2 {
+			font-size: 1em;
+			margin:  8px 0 10px;
+		}
+		p {
+			font-size: 0.750rem; // 12 pixels
+		}
+		/*
+		.media {
+			text-align: center;
+			margin: 0 auto 0 auto;
+			a {
+				img {
+					width: 430px;
+					height: 215px;
+				}
+			}
+		}
+		*/
+		figure {
+			font-size: 0.688rem; // 11 pixels
+		}
+	}
+}

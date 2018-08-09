@@ -1,0 +1,187 @@
+@media @mobile {
+    table {
+        width: 100%;
+        border-collapse: collapse; // eliminate all cellspacing
+        border-spacing: 0;
+        color: @eia-dark-grey;
+        a {
+            color: @eia-blue;
+            font-size: 0.750rem; // 12 pixels
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &.highlight-col-1 {
+            th:nth-child(1),
+            td:nth-child(1) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-2 {
+            th:nth-child(2),
+            td:nth-child(2) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-3 {
+            th:nth-child(3),
+            td:nth-child(3) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-4 {
+            th:nth-child(4),
+            td:nth-child(4) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-5 {
+            th:nth-child(5),
+            td:nth-child(5) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-6 {
+            th:nth-child(6),
+            td:nth-child(6) {
+                background-color: #f7f7f7;
+            }
+        }
+        caption {
+            font-size: .938rem; //15px / 11pt;
+            .align-left;
+            caption-side: top;
+            color: @eia-dark-grey;
+            .font;
+            .bold;
+            a {
+                color: @eia-blue;
+                font-size: 0.750rem; // 12 pixels
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            em {
+                .normal;
+                text-transform: none;
+font-weight: 400;
+            }
+            .right {
+                .normal;
+                text-transform: none;
+            }
+            p {
+                .normal;
+                .font;
+                font-size: 12px;
+                text-transform: none;
+            }
+        }
+        thead {
+            tr {
+                &.double-header {
+                    th[colspan] {
+                        border-bottom: 1px solid #d8d8d8;;
+                        border-right: 6px solid #fff;
+                        .align-left;
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+                }
+                th {
+                    font-size: .750rem; // 12px;
+                    vertical-align: bottom;
+                    .align-left;                     
+                    padding: 6px 0 5px 0;
+                    color: @eia-dark-grey;
+                    .font;
+                    .bold;
+                    &.divider {
+                        border-color:  #fff;
+                        padding: 0;
+                        width: 6px;
+                    }
+
+                }
+                td {
+                    color: RED;// used to identify bad formatted HTML tables
+                }
+            }
+            &.nested-header {
+                th {
+                    border-top: 1px solid #d8d8d8;;
+                    background-color: #fff;
+                    padding: 8px 10px 7px 10px;
+                    font-weight: 13px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    font-size: .750rem; // 12px;
+                    color: @eia-dark-grey;
+                    .font;
+                    vertical-align: top;
+                    .align-left;
+                    padding: 6px 10px 5px 10px;
+                    h4 {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    &.divider {
+                        border-color: #fff;
+                        padding: 0;
+                        width: 6px;
+                        &:first-child {
+                            td {
+                                border-top: 3px solid #fff;
+                            }
+                        }
+                    }
+        
+                }
+                &.past-holiday{
+                    td {
+                        border-bottom:1px solid #d8d8d8;;
+                        //vertical-align:bottom;
+                        //text-align:right;
+                        color:fade(@eia-black, 40%);
+                    }
+                }
+                &.total {
+                    td {
+                        .semi-bold;
+                    }
+                }
+                &.indented {
+                    td {
+                        &:first-child {
+                            padding-left: 20px;
+                        }
+                        &.indented {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }   
+        }
+        tfoot {
+            tr {
+                td {
+                    font-size: .750rem; // 12px;
+                    color: @eia-dark-grey;
+                    .font;
+                    vertical-align: top;
+                    .align-left;                     
+                    padding: 6px 10px 5px 10px; 
+                }
+            }    
+        }
+    }
+}
+
+

@@ -1,0 +1,1579 @@
+@media @mobile {
+
+
+
+
+
+
+
+
+
+
+
+    a {
+		&.logo {
+			text-indent: -9999px;
+			font-size: 0;			
+			.left;
+			transition: all 0.3s ease-in-out;
+
+			&:before {
+				.controls-icon(44px, 35px);
+				.icon-eia-logomark();
+				transition: all 0.3s ease-in-out;
+			}
+			&.show {
+				&:before {
+					.controls-icon(75px, 60px);
+					.icon-eia-logomark();
+					transition: all 0.3s ease-in-out;					
+				}
+			}
+		}
+		&.logo-white-background {
+			text-indent: -9999px;
+			font-size: 0;	
+			&:before {
+				.controls-icon(75px, 60px);
+				.icon-eia-logomark(full, "@eia-dark-grey");
+			}
+		}
+
+	}
+
+
+	.plus-yellow {
+		.font;
+		.bold;
+		color: @eia-yellow;
+		font-size: 18px;
+	}
+	.plus-greyish-blue {
+		.font;
+		.bold;
+		color: @eia-greyish-blue;
+		font-size: 12px;
+	}
+	/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+	.down-arrow {			
+		text-indent: -9999px;
+		&:before {
+			.icon-down-arrow();
+			.controls-icon(14px, 16px);
+			.left;
+			margin-right: 6px;
+//			background-position: bottom center;
+		}
+	}
+	.up-arrow {
+		text-indent: -9999px;		
+		&:before {
+			.icon-up-arrow();
+			.controls-icon(14px, 16px);
+			.left;
+			margin-right: 6px;
+//			background-position: bottom center;
+		}
+	}
+	/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+	.ico_down {			
+		text-indent: -9999px;
+		font-size: 0;
+		&:before {
+			.icon-down-arrow();
+			.controls-icon(12px, 14px);
+			.left;
+			margin-right: 3px;
+	
+		}
+	}
+	.ico_up {
+		text-indent: -9999px;
+		font-size: 0;	
+		&:before {
+			.icon-up-arrow();
+			.controls-icon(12px, 14px);
+			.left;
+			margin-right: 3px;
+		}
+	}
+
+
+	/*---Right arrow for use in footer and similar---*/
+	.right-arrow-head {
+		&:before {
+			.icon-right-arrow-head();
+			.controls-icon(14px, 14px);
+			.left;
+			margin: 6px 0 0 4px;
+		}
+	}
+
+
+	.ico-menu {
+		display: inline-block;
+		font-size:	0;
+		font-size: 0;
+		line-height: 0;
+
+
+        /*-search submit --------------------------*/
+		&.search-submit {
+            top: -6px;
+            left: -8px;
+            cursor: pointer;
+            &:before {
+                .controls-icon(19px, 19px);
+                .search-submit();
+            }
+            &:hover {
+                &:before {
+                    .search-submit();
+                }
+            }
+		}
+		/*-Close Icon --------------------------*/
+		&.close-menu {
+			&:before {
+				.controls-icon(40px, 40px);
+				.icon-cancel();
+			}
+			&:hover {
+				&:before {
+					.icon-cancel();
+				}
+			}
+		}
+		&.ico-nav {
+			&.analysis-projections {
+				&:before {
+					.icon-analysis-projections();
+					.nav-bar-icon();
+					background-position: 60% 70%;
+				}
+			}
+			&.markets-finance {
+				&:before {
+					.icon-markets-finance();
+					.nav-bar-icon();
+				}
+			}
+			&.environment {
+				&:before {
+					.icon-environment();
+					.nav-bar-icon();
+					background-position-y: 45%;
+				}
+			}
+
+			/*-Sources & Uses Icons --------------*/
+			&.petroleum {
+				&:before {
+					.icon-petroleum();
+					.nav-bar-icon();
+				}
+			}
+			&.natural-gas {
+				&:before {
+					.icon-natural-gas();
+					.nav-bar-icon();
+				}
+			}
+			&.electricity {
+				&:before {
+					.icon-electricity();
+					.nav-bar-icon();
+				}
+			}
+			&.consumption {
+				&:before {
+					.icon-consumption();
+					.nav-bar-icon();
+				}
+			}
+			&.coal {
+				&:before {
+					.icon-coal();
+					.nav-bar-icon();
+					background-position-y: 45%;
+				}
+			}
+			&.nuclear {
+				&:before {
+					.icon-nuclear();
+					.nav-bar-icon();
+				}
+			}
+			&.renewable {
+				&:before {
+					.icon-renewable();
+					.nav-bar-icon();
+				}
+			}
+			&.total-energy {
+				&:before {
+					.icon-total-energy();
+					.nav-bar-icon();
+				}
+			}
+
+			/*-News Icons -------------------------------*/
+			&.featured-reports {
+				&:before {
+					.icon-featured-reports();
+					.nav-bar-icon();
+				}
+			}
+			&.press-room {
+				&:before {
+					.icon-press-room();
+					.nav-bar-icon();
+				}
+			}
+			&.whats-new {
+				&:before {
+					.icon-whats-new();
+					.nav-bar-icon();
+				}
+			}
+			&.upcoming {
+				&:before {
+					.icon-upcoming();
+					.nav-bar-icon();
+				}
+			}
+
+			/*-Tools Icons ----------------------------*/
+			&.eia-glossary {
+				&:before {
+					.icon-glossary();
+					.nav-bar-icon();
+					background-position-y: 45%;
+					background-position-x: 67%;
+				}
+			}
+			&.data-tools-model {
+				&:before {
+					.icon-data-tools-model();
+					.nav-bar-icon();
+				}
+			}
+			&.open-data {
+				&:before {
+					.icon-open-data();
+					.nav-bar-icon();
+				}
+			}
+			&.beta {
+				&:before {
+					.icon-beta();
+					.nav-bar-icon();
+				}
+			}
+			&.follow-us {
+				&:before {
+					.icon-follow-us();
+					.nav-bar-icon();
+				}
+			}
+			&.reports {
+				&:before {
+					.icon-reports();
+					.nav-bar-icon();
+				}
+			}
+			&.survey-forms {
+				&:before {
+					.icon-survey-forms();
+					.nav-bar-icon();
+				}
+			}
+			&.email-complex {
+				&:before {
+					.icon-email-complex();
+					.nav-bar-icon();
+				}
+			}
+			&.rss-complex {
+				&:before {
+					.icon-rss-complex();
+					.nav-bar-icon();
+				}
+			}
+
+			/*-Learn About Energy Icons -----------------*/
+			&.today-in-energy {
+				&:before {
+					.icon-today-in-energy();
+					.nav-bar-icon();
+				}
+			}
+			&.energy-explained {
+				&:before {
+					.icon-energy-explained();
+					.nav-bar-icon();
+				}
+			}
+			&.energy-in-brief {
+				&:before {
+					.icon-energy-in-brief();
+					.nav-bar-icon();
+				}
+			}
+			&.faq {
+				&:before {
+					.icon-faq();
+					.nav-bar-icon();
+				}
+			}
+			&.teachers {
+				&:before {
+					.icon-teachers();
+					.nav-bar-icon();
+				}
+			}
+
+			/*-Geography Icons ------------------------*/
+			&.states {
+				&:before {
+					.icon-states();
+					.nav-bar-icon();
+				}
+			}
+			&.maps {
+				&:before {
+					.icon-maps();
+					.nav-bar-icon();
+					background-size: 100% 100%;
+				}
+			}
+			&.international {
+				&:before {
+					.icon-international();
+					.nav-bar-icon();
+					background-size: 100% 100%;
+				}
+			}
+			/*-A-Z Icon --------------------------*/
+			&.a-z-index {
+				&:before {
+					.icon-a-z-index();
+					.nav-bar-icon();
+				}
+			}
+
+			/*-search submit --------------------------*/
+			&.search-submit {
+
+				top: -6px;
+				left: -8px;
+				cursor: pointer;
+				&:before {
+					.controls-icon(19px, 19px);
+					.search-submit();
+				}
+				&:hover {
+					&:before {
+						.search-submit();
+					}
+				}
+			}
+		}
+	}		
+		/*-general Icon --------------------------*/
+		/*
+		.arrow {
+			text-indent: -9999px;
+			&.down {
+				//&.eia-blue {
+					display: inline-block;
+					Margin-top: -1px;
+					padding: 0px 0px 0px 16px;
+					background: transparent url(https://www.eia.gov/global/images/icons/down.png) no-repeat center left;
+				//}
+			}
+			&.up {
+				//	&.eia-blue {
+					display: inline-block;
+					Margin-top: -1px;
+					padding: 0px 0px 0px 16px;
+					background: transparent url(https://www.eia.gov/global/images/icons/up.png) no-repeat center left;
+				//}
+			}
+		}
+		*/
+
+
+
+
+
+
+
+
+	.ico {
+		margin-left: 4px;
+		font-size: 0;
+		line-height: 0;
+		span {
+			.normal;
+			margin-left: 4px;
+			//color: @eia-blue;
+			font-size: 0.750rem; // 12 pixels
+		}
+		&.analysis {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-analysis();
+			}
+			&:hover {
+				&:before {
+					.icon-analysis;
+				}
+			}
+		}
+		&.cancel {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-cancel();
+			}
+			&:hover {
+				&:before {
+					.icon-cancel;
+				}
+			}
+		}
+		&.column-chart {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-column-chart();
+			}
+			&:hover {
+				&:before {
+					.icon-column-chart;
+				}
+			}
+		}
+		&.compare {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-compare();
+			}
+			&:hover {
+				&:before {
+					.icon-compare;
+				}
+			}
+		}
+		&.d-arrow {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-d-arrow();
+			}
+			&:hover {
+				&:before {
+					.icon-d-arrow;
+				}
+			}
+		}
+		&.download {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-download();
+			}
+			&:hover {
+				&:before {
+					.icon-download;
+				}
+			}
+		}
+		&.edit {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-edit();
+			}
+			&:hover {
+				&:before {
+					.icon-edit;
+				}
+			}
+		}
+		&.filter {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-filter();
+			}
+			&:hover {
+				&:before {
+					.icon-filter;
+				}
+			}
+		}
+		&.grab-dot {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grab-dot();
+			}
+			&:hover {
+				&:before {
+					.icon-grab-dot;
+				}
+			}
+		}
+		&.grid-column {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-column();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-column;
+				}
+			}
+		}
+		&.grid-line {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-line();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-line;
+				}
+			}
+		}
+		&.grid-map {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-map();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-map;
+				}
+			}
+		}
+		&.grid-parent-column {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-parent-column();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-parent-column;
+				}
+			}
+		}
+		&.grid-parent-line {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-parent-line();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-parent-line;
+				}
+			}
+		}
+		&.grid-parent-map {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-parent-map();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-parent-map;
+				}
+			}
+		}
+		&.grid-parent-pin {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-parent-pin();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-parent-pin;
+				}
+			}
+		}
+		&.grid-pin {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-pin();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-pin;
+				}
+			}
+		}
+		&.grid-key {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-grid-key();
+			}
+			&:hover {
+				&:before {
+					.icon-grid-key;
+				}
+			}
+		}
+		&.help {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-help();
+			}
+			&:hover {
+				&:before {
+					.icon-help;
+				}
+			}
+		}
+		&.key {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-key();
+			}
+			&:hover {
+				&:before {
+					.icon-key;
+				}
+			}
+		}
+		&.l-arrow {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-l-arrow();
+			}
+			&:hover {
+				&:before {
+					.icon-l-arrow;
+				}
+			}
+		}
+		&.l-range {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-l-range();
+			}
+			&:hover {
+				&:before {
+					.icon-l-range;
+				}
+			}
+		}
+		&.line-chart {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-line-chart();
+			}
+			&:hover {
+				&:before {
+					.icon-line-chart;
+				}
+			}
+		}
+		&.map {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-map();
+			}
+			&:hover {
+				&:before {
+					.icon-map;
+				}
+			}
+		}
+		&.pause {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-pause();
+			}
+			&:hover {
+				&:before {
+					.icon-pause;
+				}
+			}
+		}
+		&.pin {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-pin();
+			}
+			&:hover {
+				&:before {
+					.icon-pin;
+				}
+			}
+		}
+		&.play {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-play();
+			}
+			&:hover {
+				&:before {
+					.icon-play;
+				}
+			}
+		}
+		&.r-arrow {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-r-arrow();
+			}
+			&:hover {
+				&:before {
+					.icon-r-arrow;
+				}
+			}
+		}
+		&.r-range {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-r-range();
+			}
+			&:hover {
+				&:before {
+					.icon-r-range;
+				}
+			}
+		}
+		&.remove {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-remove();
+			}
+			&:hover {
+				&:before {
+					.icon-remove;
+				}
+			}
+		}
+		&.reset {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-reset();
+			}
+			&:hover {
+				&:before {
+					.icon-reset;
+				}
+			}
+		}
+		&.reset-animation {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-reset-animation();
+			}
+			&:hover {
+				&:before {
+					.icon-reset-animation;
+				}
+			}
+		}
+		&.scroll-h {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-scroll-h();
+			}
+			&:hover {
+				&:before {
+					.icon-scroll-h;
+				}
+			}
+		}
+		&.scroll-v {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-scroll-v();
+			}
+			&:hover {
+				&:before {
+					.icon-scroll-v;
+				}
+			}
+		}
+		&.search {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-search();
+			}
+			&:hover {
+				&:before {
+					.icon-search;
+				}
+			}
+		}
+		&.slide {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-slide();
+			}
+			&:hover {
+				&:before {
+					.icon-slide;
+				}
+			}
+		}
+		&.sort {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-sort();
+			}
+			&:hover {
+				&:before {
+					.icon-sort;
+				}
+			}
+		}
+		&.sort-down {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-sort-down();
+			}
+			&:hover {
+				&:before {
+					.icon-sort-down;
+				}
+			}
+		}
+		&.sort-up {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-sort-up();
+			}
+			&:hover {
+				&:before {
+					.icon-sort-up;
+				}
+			}
+		}
+		&.submit {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-submit();
+			}
+			&:hover {
+				&:before {
+					.icon-submit;
+				}
+			}
+		}
+		&.checkmark {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-checkmark();
+			}
+			&:hover {
+				&:before {
+					.icon-checkmark;
+				}
+			}
+		}
+		&.dash {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-dash();
+			}
+			&:hover {
+				&:before {
+					.icon-dash;
+				}
+			}
+		}
+		&.dot {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-dot();
+			}
+			&:hover {
+				&:before {
+					.icon-dot;
+				}
+			}
+		}
+		&.collapse {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-collapse();
+			}
+		}
+		&.facebook {
+			&:before {
+				.icon-facebook();
+				.controls-icon(20px, 20px);
+			}
+		}
+		&.twitter {
+			&:before {
+				.icon-twitter();
+				.controls-icon(20px, 20px);
+			}
+		}
+		&.youtube {
+			&:before {
+				.icon-you-tube();
+				.controls-icon(20px, 20px);
+			}
+		}
+
+		&.flickr {
+			&:before {
+				.icon-flickr();
+				.controls-icon(20px, 20px);
+			}
+		}
+
+		&.linkedin {
+			&:before {
+				.icon-linked-in();
+				.controls-icon(20px, 20px);
+			}
+		}
+
+		&.email {
+			&:before {
+				.icon-email();
+				.controls-icon(20px, 20px);
+			}
+		}
+
+		&.rss {
+			&:before {
+				.icon-rss();
+				.controls-icon(20px, 20px);
+			}
+		}
+	
+		&.residential {
+			&:before {
+				.icon-residential();
+				.controls-icon(55px, 55px);
+			}
+		}
+		&.commercial {
+			&:before {
+				.icon-commercial();
+				.controls-icon(55px, 55px);
+			}
+		}
+		&.industrial {
+			&:before {
+				.icon-industrial();
+				.controls-icon(55px, 55px);
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*-search submit --------------------------*/
+		&.submit {
+			top: -6px;
+			left: -8px;
+			cursor: pointer;
+			&:before {
+				.controls-icon(19px, 19px);
+				.search-submit();
+			}
+			&:hover {
+				&:before {
+					.search-submit();
+				}
+			}
+		}
+
+//		&.dap-single {
+			&.d {
+				&:before {
+					.icon-single(@fill-color: @eia-blue, @letter: D);
+					.controls-icon(35px, 35px);
+				}
+			}
+			&.a {
+				&:before {
+					.icon-single(@fill-color: @eia-green, @letter: A);
+					.controls-icon(35px, 35px);
+				}
+			}
+			&.p {
+				&:before {
+					.icon-single(@fill-color: @eia-brown, @letter: P);
+					.controls-icon(35px, 35px);
+				}
+			}
+//		}
+//		&.dap-dual {
+			&.da {
+				&:before {
+					.icon-dual(@fill-color-top: @eia-blue, @fill-color-bottom: @eia-green, @letter-top: D, @letter-bottom: A);
+					.controls-icon(35px, 35px);
+					
+				}
+			}
+//		}
+//		&.dap-dual {
+			&.ap {
+				&:before {
+					.icon-dual(@fill-color-top: @eia-green, @fill-color-bottom: @eia-brown, @letter-top: A, @letter-bottom: P);
+					.controls-icon(35px, 35px);
+				}
+			}
+//		}
+//		&.dap-dual {
+			&.dp {
+				&:before {
+					.icon-dual(@fill-color-top: @eia-blue, @fill-color-bottom: @eia-brown, @letter-top: D, @letter-bottom: P);
+					.controls-icon(35px, 35px);
+				}
+			}
+//		}
+		&.dap {
+			&:before {
+				.icon-triple();
+				.controls-icon(35px, 35px);
+			}
+		}
+
+
+		&.pdf {
+			&:before {
+				.icon-file-type(pdf);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.xls {
+			&:before {
+				.icon-file-type(xls);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.csv {
+			&:before {
+				.icon-file-type(csv);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.printer {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-print;
+				display: inline-block;
+				margin-bottom: -5px;
+			}
+		}
+		&.beta {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-beta;
+				display: inline-block;
+				margin-bottom: -5px;
+			}
+		}
+		&.interactive {
+			margin-left: 0;
+			&:before {
+				.icon-interactive;
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.external-link {
+			&:before {
+				.icon-external-link();
+				.controls-icon(12px, 12px);
+				display: inline-block;
+			}
+		}
+		&.tour {
+			&:before {
+				.icon-tour();
+				.controls-icon(20px, 20px);
+				display: inline-block;
+				position: relative;
+				top: 4px;
+			}
+		}
+		&.info {
+			&:before {
+				.icon-info();
+				.controls-icon(20px, 20px);
+				display: inline-block;
+				position: relative;
+				top: 4px;
+			}
+		}
+	}
+
+
+
+
+
+
+		//////////////////////////////////////////////////////////////////
+		//  legacy                                                     //
+		////////////////////////////////////////////////////////////////
+		/*
+		&.telephone {
+			background-image: url(../images/icons/phone-icon.jpg);
+		}
+		//&.email {}
+		//&.rss {}
+		&.calendar {
+			background-image: url(../images/icons/calendar.png);
+		}
+		&.radio {
+			background-image: url(../images/icons/radio_spot.png);
+		}
+
+
+
+		&.linechart {
+			&:before {
+				.controls-icon;
+				&.line-chart(tint(@eia-blue, 40%);
+					//Less has some useful color functions. The function tint() lightens the color by whatever percentage we pass. This is similar to how I've created some of the lighter colors in Illustrator so I'm looking into how we might use this. It's not something we need to worry about right now since we'll be able to make these changes easily later on.
+				height: 29px;
+				background-position: center bottom; //you'll notice that the background position is already set in the icons file. I needed these aligned differently here.
+			}
+			&.ui-state-active, &.ui-state-hover {
+				color: @eia-blue;
+				&:before {
+					&.line-chart(@eia-blue);
+					background-position: center bottom;
+				}
+			}
+		}
+		*/
+		
+
+		
+		
+		
+
+		
+		
+		/*
+		&.up,
+		&.down,
+		&.blank {
+			margin: 0 5px 0 0;
+			width: 13px; // 13px actual size
+			height: 13px; // 13px actual size
+		}
+		&.up {
+			background: transparent url(https://www.eia.gov/petroleum/gasdiesel/images/upred.gif) no-repeat center left; 
+		}
+		&.down {
+			background: transparent url(https://www.eia.gov/petroleum/gasdiesel/images/dwngrn.gif) no-repeat center left;
+		}
+		&.blank { 
+			width: 100%; // 13px actual size
+			height: 100%; // 13px actual size
+			&:after { 
+				content: "Values are not available. - ";
+				width: 100%; // 13px actual size
+				height: 100%; // 13px actual size
+			} 
+		} 
+		&.value {
+			&.up,
+			&.down {
+				text-indent: -9999px;
+				width: 8px;
+				height: 12px;
+				margin-left: 2px;
+				display: inline-block;
+				float: none;
+				background: url(https://www.eia.gov/petroleum/heatingoilpropane/images/icons/arrows.png) no-repeat center;
+			}
+			&.up {
+				background-position-y: 1px;
+			}
+			&.down {
+				background-position-y: bottom;
+			}
+		}
+		&.arrow-right {
+			width: 0;
+			height: 0;
+			.right;
+			margin: 7px 0 0 6px;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			border-left: 4px solid #666;
+		}
+		&.arrow-down {
+			width: 0;
+			height: 0;
+			.right;
+			margin: 13px 0 0 6px;
+			border-top: 4px solid @eia-blue;
+			border-right: 4px solid transparent;
+			border-left: 4px solid transparent;
+		}
+		.active {
+			.arrow-down {
+				border-top: 4px solid @eia-darker-blue;
+			}
+		}
+		&.down-arrow {
+			background-image: url(../images/icons/arrow_bl_d.png);
+			display: inline-block;
+			height: 7px;
+			margin-bottom: 3px;
+			margin-left: 5px;
+			width: 7px;
+		}
+		*/
+
+
+
+
+
+
+
+
+	/*
+	.??? {
+		i {
+			&.ico {
+				.left;
+				width: 24px;
+				height: 24px;
+				text-indent: -9999px;
+				//top: -8px;
+				margin-right: 12px;
+			}
+		}
+	}
+	*/
+
+	/*-Search Icon Mobile--------------------------*/
+	.search {	
+		.ico-menu {
+			&.search {
+				&:before {
+					.controls-icon(16px, 16px);
+					.icon-search(@eia-blue);
+					position: relative;
+					top: 3px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	.search-menu-toggle {	
+		.ico-menu {
+			&.search {
+				&:before {
+					.controls-icon(20px, 20px);
+					.icon-search(@eia-greyish-blue);
+					.right;
+					margin: 10px;;
+				}
+			}
+		}
+	}
+
+
+	.fancybox-close {
+		&:before {
+			.controls-icon(40px, 40px);
+			.icon-cancel();
+		}
+		&:hover {
+			&:before {
+				.icon-cancel();
+			}
+		}
+	}
+}
+
+
+@media @laptop {
+	a {
+		&.logo {
+			&:before {
+				.controls-icon(302px, 101px);
+				.icon-logo;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+	.shrink {
+		a {
+			&.logo {
+				&:before {
+					.controls-icon(50px, 40px);
+					.icon-eia-logomark;
+					transition: all 0.3s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+//  social                                                     //
+////////////////////////////////////////////////////////////////
+@media @mobile {
+
+
+
+
+
+	
+	&.ico-footer {
+		margin: 0 4px -8px 0;
+		padding: 0 0 5px 0;
+		display: inline-block;
+		font-size: 0;
+		&.facebook {
+			&:before {
+				.icon-facebook();
+			}
+		}
+		&.twitter {
+			&:before {
+				.icon-twitter();
+			}
+		}
+		&.youtube {
+			&:before {
+				.icon-you-tube();
+			}
+		}
+		&.flickr {
+			&:before {
+				.icon-flickr();
+			}
+		}
+		&.linkedin {
+			&:before {
+				.icon-linked-in();
+			}
+		}
+		&.email {
+			&:before {
+				.icon-email();
+			}
+		}
+		&.rss {
+			&:before {
+				.icon-rss();
+			}
+		}
+		&.facebook,
+		&.twitter,
+		&.youtube,
+		&.flickr,
+		&.linkedin,
+		&.email,
+		&.rss {
+			&:before {
+				.controls-icon(16px, 16px);
+			}
+		}
+	}
+	&.ico-menu {
+		.left;
+		padding: 0;
+		text-indent: -9999px;
+		&.facebook {
+			padding: 0;
+			&:before {
+				.icon-facebook();
+			}
+		}
+		&.twitter {
+			&:before {
+				.icon-twitter();
+			}
+		}
+		&.youtube {
+			&:before {
+				.icon-you-tube();
+			}
+		}
+		&.flickr {
+			&:before {
+				.icon-flickr();
+			}
+		}
+		&.linkedin {
+			&:before {
+				.icon-linked-in();
+			}
+		}
+		&.email {
+			&:before {
+				.icon-email();
+			}
+		}
+		&.rss {
+			&:before {
+				.icon-rss();
+			}
+		}
+		&.facebook,
+		&.twitter,
+		&.youtube,
+		&.flickr,
+		&.linkedin,
+		&.email,
+		&.rss {
+			&:before {
+				.controls-icon(40px, 40px);
+
+			}
+		}
+	}
+}
+
+
+
+
+@media @desktop {
+
+
+
+
+		/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+		.down-arrow {			
+			&:before {
+				.controls-icon(12px, 14px);
+				position: relative;
+				top: -2px;
+			}
+		}
+		.up-arrow {
+			&:before {
+				.controls-icon(12px, 14px);
+				position: relative;
+				top: -2px;
+			}
+		}
+		/*---Right arrow for use in footer and similar---*/
+		.right-arrow-head {
+			&:before {
+				.controls-icon(12px, 12px);
+			}
+		}
+
+
+
+
+
+
+	&.ico-sticker {
+		display: inline-block;
+		background-color: @eia-blue;
+		&.facebook {
+			&:before {
+				.icon-facebook();
+				.controls-icon(39px, 42px);
+				top: -3px;
+				right: 2px;
+				position: relative;
+				display: block;
+			}
+		}
+		&.twitter {
+			&:before {
+				.icon-twitter();
+				.controls-icon(39px, 42px);
+				position: relative;
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+//////////////////////////////////////////////////////////////////
+//  accordion                                                  //
+////////////////////////////////////////////////////////////////
+
+/*
+
+
+&.plus-eiablue {
+	.bold;
+	color: @eia-blue;
+}
+
+&.expand-all {
+	color: red;
+	.font;
+	text-indent: 0;
+}
+&.collapse-all{
+		color: BLUE;
+		.font;
+		text-indent: 0;
+}
+.ico {
+	&.expand-collapse {
+		position: relative;
+		width: 10px;
+		height: 10px;
+		margin-right: 6px;
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			background-color: @eia-dark-grey;
+			transition: transform 0.25s ease-out;
+		}
+		&.expand {
+			&:before{
+				top: 0;
+				left: 50%;
+				width: 4px;
+				height: 100%;
+				margin-left: -2px;
+			}
+		}
+		&:after{
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			margin-top: -2px;
+		}
+		
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+*/

@@ -1,0 +1,221 @@
+.slick-container {
+  .slick-slider {
+    width: 830px; /* Sets the slider width */
+    height: 200px; /* Allocates vertical space before following items start (see below for setting the slider height) */
+    margin: 0 auto; /* Centers the slider on the page */
+
+    .slick-list {
+      /* Kludge to fix the Slick jQuery plugin's right arrow mysteriously being hidden as soon as the seemingly unrelated jQuery UI v1.10 Button widget is activated - Caused by the "ui-helper-hidden-accessible" class in jquery-ui-dp.custom.css (jQuery UI v1.7 Datepicker widget CSS) */
+      z-index: 0;
+      /* END kludge */
+      .slick-track {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: block;
+        zoom: 1;
+
+        &:before, &:after {
+          content:"";
+          display: table;
+        }
+
+        .one-container {
+          background: #fff;
+          height: 200px;
+          overflow: hidden;
+
+          .one-slide {
+            width: 154px;
+            height: 100%;
+            margin: 0 auto;
+            background: #f2f2f2;
+
+            .one-contentarea {
+              padding: 7px;
+
+              .img-wrapper {
+                border-top: 3px solid @eia-green;
+                border-bottom: @green_border;
+                background-color: #fff;
+                width: 140px;
+                height: 77px;
+                overflow: hidden;
+
+                a {
+                  color: @eia-dark-blue;
+                  line-height: 1.2;
+                  font-size: 0.688em;
+                  img {
+                    width: 140px;
+                  }
+                }
+              }
+
+              h3 {
+                margin: 5px 0 2px 0;
+                font-size: 0.8em;
+                font-weight: bold;
+                border: none;
+                padding: 0;
+                height: 63px;
+                overflow: hidden;
+                text-transform: none;
+                line-height: 1.3;
+
+                a {
+                  color: @eia-dark-blue;
+                }
+
+                sub, sup {
+                  line-height: 0;
+                }
+              }
+
+              p {
+                margin: 8px 0 0 0;
+                padding-bottom: 0;
+                font-size: 0.66em;
+                line-height: 1.4;
+                font-weight: normal;
+                overflow: hidden;
+                height: 30px;
+
+                &:before {
+                  content: "tags: ";
+                  color: @eia-dark-grey;
+                }
+
+                .capsule {
+                  &:after {
+                    content: ", ";
+                    color: @eia-dark-grey;
+                  }
+
+                  &:last-child {
+                    content: "";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slick-prev, .slick-next {
+      height: 188px;
+      width: 30px;
+      margin-top: 0;
+
+      &.slick-disabled {
+        &:before {
+          opacity: 0.25;
+        }
+      }
+    }
+
+    /*Custom Next Prev Control*/
+    .slick-prev {
+      left: -40px;
+      top: -4px;
+
+      &:hover:before {
+        color:rgb(93,151,50); /* dark green */
+        background-color:rgb(190,213,173); /* light green */
+      }
+
+      &:before {
+        content:"\2039"; /* This character is: ‹ */
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        font-size: 80px;
+        line-height: 1;
+        color: @eia-dark-grey333;
+        opacity: 0.85;
+        padding: 43px 2px 65px 1px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all .6s;
+      }
+    }
+
+    .slick-next {
+      right: -40px;
+      top: 10px;
+
+      &:hover:before {
+        color:rgb(93,151,50); /* dark green */
+        background-color:rgb(190,213,173); /* light green */
+      }
+
+      &:before {
+        content:"\203A"; /* This character is: › */
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        font-size: 80px;
+        line-height: 0;
+        color: @eia-dark-grey333;
+        opacity: 0.85;
+        padding: 43px 2px 65px 2px;
+        margin-left:-3px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all .6s;
+      }
+    }
+  }
+}
+
+.slick-slide {
+  .left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+
+  img {
+    display: block;
+  }
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+@media @mobile {
+  .slick-container {
+    .slick-slider {
+      width: 85%;
+
+      .slick-prev {
+        left: -25px;
+      }
+
+      .slick-next {
+        right: -25px;
+      }
+    }
+  }
+}
+
+@media @tablet {
+  .slick-container {
+    .slick-slider {
+      width: 85%;
+    }
+  }
+}

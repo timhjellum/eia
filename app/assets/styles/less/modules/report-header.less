@@ -1,0 +1,109 @@
+@media @mobile {
+    .report-header {
+		border-bottom: solid 1px #ededee; // check
+		display: table;
+		width: 100%;
+        border-left: 22px solid white;
+		border-bottom: solid 1px #ededee; // check
+//        background-color: white;
+        padding-bottom: 6px;
+        //min-height: 123px;
+        margin-bottom: 1.5em;
+		h2 {
+			.header-font;
+            font-size: 26px;
+            margin: 0;
+            padding: 0;
+        //    padding-top: 40px;
+        }
+        .publish-metadata {
+            .font;
+            width: 100%;
+            clear: both;
+            font-size: 0.688rem; // 11 pixels
+            margin: 0px;
+            padding: 2px 0px;
+            color: #7d7d7d;
+            &>span {
+                &:before {
+                    content: '|';
+                    margin: 0 6px 0 3px;
+                }
+                a {
+                    display: inline-block;
+                    color: @eia-blue;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &:hover {
+                        text-decoration: underline;
+                    } 
+                }
+                .pdf {
+                    .left;
+                    margin: -3px 6px 0 0;
+                    span {
+                        position: absolute;
+                        left: -10000px;
+                        top: auto;
+                        width: 1px;
+                        height: 1px;
+                        overflow: hidden;
+                    }
+                }
+            }
+            &>span {
+                &:first-child {
+                    &:before {
+                        content: '';
+                        margin: 0 6px 0 3px;
+                    }						
+                }
+            }
+        }
+        /*
+        .gradient {
+            min-height: 123px;
+            .gradient(@stops:rgba(255,255,255,1) 0,rgba(255,255,255,1) 20%,rgba(227,227,227,1) 100%,#eeeeee 100%;);
+        }
+        */
+
+
+
+
+        
+        .report-selector-container {
+            font-size: 0.813rem; // 13 pixels
+            .font;
+            .bold;
+            margin: 0;
+            padding: 6px 0 12px 0;
+            color: #626262; // check
+            //fieldset {
+            //    padding-top: 6px;
+            //}
+        }
+
+
+
+        /*
+        form {
+            margin: 8px 0;
+            select {
+                width: 100px;
+            }
+            .button {
+                position: absolute;
+                margin-left: 6px;
+                span {
+                    position: absolute;
+                    left: -10000px;
+                    top: auto;
+                    width: 1px;
+                    height: 1px;
+                    overflow: hidden;
+                }
+            }					
+        }
+        */
+    }
+}

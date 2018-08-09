@@ -1,0 +1,463 @@
+// | 15 | l-row, left 22; l-two-col:first-of-type, left 0 |-----------| l-two-col:first-of-type, right 22 | l-two-col, left 22 |-----------|l-row, right 22| 15| 
+//instead of first-child, it should be first-of-type. That way if there's a header or something in the row, it won't mess with the order
+
+
+
+
+@media @mobile {
+	// overide for non-responsive mobile (move to laptop+ when responsive is activated)	
+	.page-wrapper {
+		width: 100%;
+		min-width: 320px;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		.l-outer-wrapper {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+			width: 100%;
+			padding: 0;
+			background-color: #fff;		
+			.l-inner-wrapper{
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 100%;
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				width: 100%;
+				padding: 39px 0 0;
+				margin: 0;
+				&>.l-row {
+					&:last-child {
+						display: table;
+						margin-bottom: 3em;
+					}
+				}
+			}
+		}
+	}
+	.container {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container-fluid {
+		position: relative;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.l-col,
+	.l-full-width-col,
+	.l-main-col,
+	.l-middle-col,
+	.l-narrow-col,
+	.l-split-narrow-col,
+	.l-split-wide-col,
+	.l-one-third-col,
+	.l-two-col,
+	.l-two-third-col {
+		position: relative;
+//		width: 100%;
+		min-height: 1px;
+		margin: 0;
+		.left;
+	}
+	.l-row {
+		padding: 0 12px;
+		//		display: table; <--- cannot be a table
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%;
+		clear: both;
+		.l-col,
+		.l-full-width-col,
+		.l-main-col,
+		.l-middle-col,
+		.l-narrow-col,
+		.l-split-narrow-col,
+		.l-split-wide-col,
+		.l-one-third-col,
+		.l-two-col,
+		.l-two-third-col { 
+			margin-top: inherit;
+		}
+		&.header {
+			padding: 0;
+			.l-col,
+			.l-full-width-col,
+			.l-main-col,
+			.l-middle-col,
+			.l-narrow-col,
+			.l-split-narrow-col,
+			.l-split-wide-col,
+			.l-one-third-col,
+			.l-two-col,
+			.l-two-third-col { 
+				border-top: none;
+				
+			}
+		}
+	}
+
+
+
+
+/*
+	.l-full-width-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+*/
+	.container,
+	/*
+	 {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		clear: both;
+	}
+	*/
+	.l-col,
+	.l-narrow-col,// 3 or 25%
+	.l-one-third-col,// 4 or one-third
+	.l-two-col,// 6 or 50%
+//	.l-middle-col,
+	// 6 or 50%
+	.l-split-narrow-col,// 5
+	.l-split-wide-col,// 7
+	.l-two-third-col,// 8 or two-thirds
+	.l-main-col,// 9 or 75%
+	.l-full-width-col { // 12 or full
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%;
+	}
+
+/*
+	.l-3-col-reorder {
+		-ms-box-orient: horizontal;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		clear: both;
+	}
+	.l-reorder-second {
+		-webkit-box-ordinal-group: 2;   
+		-moz-box-ordinal-group: 2;      
+		-ms-flex-order: 2;              
+		-webkit-order: 2;               
+		order: 2;                       
+	}
+	.l-reorder-third {
+		-webkit-box-ordinal-group: 3;  
+		-moz-box-ordinal-group: 3;     
+		-ms-flex-order: 3;     
+		-webkit-order: 3;  
+		order: 3;
+	}
+	.l-reorder-first {
+		-webkit-box-ordinal-group: 1;  
+		-moz-box-ordinal-group: 1;     
+		-ms-flex-order: 1;     
+		-webkit-order: 1;  
+		order: 1;
+	}
+*/
+
+
+
+}
+
+
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+	.l-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+		width: 50%;
+	}
+}
+
+@media @tablet {	// mobile panorama
+	.l-row {
+		padding: 0 1em;
+	}
+}
+
+
+
+
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+	.l-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 33.333333%;
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		width: 33.333333%;
+	}
+//	.l-one-third-col,
+//	.l-split-narrow-col,
+//	.l-split-wide-col,
+	.l-two-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+		width: 50%;
+		.left;
+		&:first-child {
+			padding: 0 22px 0 0;
+		}		
+		&:last-child {
+			padding: 0 0 0 22px;
+		}
+	}
+	.l-two-third-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 66.666667%;
+		-ms-flex: 0 0 66.666667%;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+		width: 66.666667%;
+		&:first-child {
+			padding: 0 22px 0 0;
+		}		
+		&:last-child {
+			padding: 0 0 0 22px;
+		}
+	}
+	.l-one-third-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 33.333333%;
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		width: 33.333333%;
+		&:first-child {
+			padding: 0 22px 0 0;
+		}		
+		&:last-child {
+			padding: 0 0 0 22px;
+		}
+	}
+	.l-row {
+		.l-row {
+			padding: 0;
+//			.l-two-col,
+			.l-two-third-col,
+			.l-one-third-col {
+				&:first-child {
+					padding: 0 11px 0 0;
+				}		
+				&:last-child {
+					padding: 0 0 0 11px;
+				}
+			}
+		}
+	}
+}
+@media @laptop {
+	body {
+		background-color: #e8ecf2;
+	}
+	.page-wrapper {
+		.l-outer-wrapper {
+			// normall 1025 - big landscape tablets, laptops, and desktops
+			margin: 0 auto;
+			background-color: #e2e6eb;
+			border: 0;
+			padding: 0 1px;
+			max-width: 992px;
+			min-width: 992px;
+			width: 992px;
+			display: table;
+			.l-inner-wrapper {
+				border-right: 1px solid #dbdfe5;
+				border-left: 1px solid #dbdfe5;
+				background-color: #fff;
+				padding: 94px 15px 0 15px;
+				max-width: 990px;
+				min-width: 990px;
+				width: 990px;
+				margin: 0;
+				display: table-cell;
+				&.show {
+					padding: 90px 0 50px;
+				}			
+			}
+		}
+	}
+
+	// this is a col reset to keep all the mobile spacing from interfering with the laptop <
+	.l-row.header > div,
+	.l-row.header > h1,
+	.l-row.header > h2,
+	.l-row.header > h3,
+	.l-row.header > h4,
+	.l-row.header > h5,
+	.l-row.header > h6,
+	.l-row.header > p,
+	.l-row.header > ul,
+	.l-row.header > ol,
+	.l-col,
+	.l-narrow-col,
+	.l-one-third-col,
+//	.l-two-col,
+	.l-middle-col,
+	.l-split-narrow-col,
+	.l-split-wide-col,
+	.l-two-third-col,
+	.l-main-col,
+	.l-full-width-col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	// this is fallback incase a l-row isn't used.. 
+	/*
+	.l-row > h1,
+	.l-row > h2,
+	.l-row > h3,
+	.l-row > h4,
+	.l-row > h5,
+	.l-row > h6,
+	.l-row > p,
+	.l-row > ul,
+	.l-row > ol {
+		padding-right: 22px;
+	}
+	*/
+	.container {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		//max-width: 956px;
+	}
+	.l-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 16.666667%;
+		-ms-flex: 0 0 16.666667%;
+		flex: 0 0 16.666667%;
+		max-width: 16.666667%;
+		width: 16.666667%;
+	}
+	.l-narrow-col {
+		// 3 or 25%
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 25%;
+		-ms-flex: 0 0 25%;
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+	.l-one-third-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 33.333333%;
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+		width: 33.333333%;
+	}
+
+	.l-split-narrow-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 41.666%;
+		-ms-flex: 0 0 41.666%;
+		flex: 0 0 41.666%;
+		max-width: 41.666%;
+	}
+
+//	.l-main-col,
+	.l-middle-col
+	/*,
+	.l-two-col
+	*/ {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+		width: 50%;
+
+	}
+
+	.l-split-wide-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 58.333%;
+		-ms-flex: 0 0 58.333%;
+		flex: 0 0 58.333%;
+		max-width: 58.333%;
+	}
+
+	.l-two-third-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 66.666667%;
+		-ms-flex: 0 0 66.666667%;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+		width: 66.666667%;
+	}
+
+	.l-main-col {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 75%;
+		-ms-flex: 0 0 75%;
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+	.l-full-width-col {
+		padding: 0;
+		width: 100%;
+	}
+	.l-row {
+		padding-left: 22px;
+		padding-right: 0;
+	}
+	.l-row {
+		&>div {
+			padding-right: 44px;
+			&.l-full-width-col {
+				padding-right: 22px;
+			}
+			&:last-of-type {
+				padding-right: 0;
+			}
+			// if nested, remove all padding, margins and make 100%
+			.l-row {
+				padding: 0;
+				width: 100%;
+			}			
+		}
+		&.header {
+			padding: 0;
+			width: 100%;
+			.l-full-width-col {
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+}

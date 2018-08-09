@@ -1,0 +1,328 @@
+@media @mobile {
+    div {
+        &.energy-education {
+            margin: 0 0 3em;
+            display: inline-block;
+            width: 100%;
+            ul {
+                list-style: none;
+                li {
+                    vertical-align: top;
+                    &.foot {
+                        .font;
+                        .bold;
+                        padding: 0;
+                        margin: 10px 0 0;
+                        a {
+                            display: block;
+                            color: @eia-blue;
+                            font-size: .8125rem; //13px;
+                            &:after { 
+                                content:"\00a0\203A";
+                            }
+                        }
+                    }
+                    ul {
+                        list-style-type: disc;
+                    }
+                }
+            }
+            .l-one-third-col {
+                padding: 1em 0 1.5em 0;
+                img {
+                    margin: 0 auto 0 auto;
+                    height: 94px;
+                    float: none;
+                    clear: both;
+                }
+                i {
+                    //margin: 0 auto 1em auto;
+                    //width: 100%;
+                    //height: 100px;
+                    .left;
+                    width: 75px;
+                    height: 66px;
+                    margin: 0;
+                    &.ico {
+                        &.energy-education {
+                            .left;
+                            width: 66px;
+                            height: 75px;
+                            &.faq {
+                                &::before {
+                                    .icon-faq(@fill-color: @eia-darker-blue, @fill-color-lt: @eia-blue);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.petroleum {
+                                &::before {
+                                    .icon-petroleum(@fill-color: @eia-brown);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.energy-kids {
+                                background: url(/global/images/energy-education/energy-kids.png) no-repeat right;
+                                background-size: 68%;
+                            }
+                            &.natural-gas {
+                                &:before {
+                                    .icon-natural-gas(@fill-color: @eia-blue);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.bio-fuel {
+                                background: url(/global/images/energy-education/bio-fuel.png) no-repeat;
+                            }
+                            &.coal {
+                                &:before {
+                                    .icon-coal(@fill-color: @eia-dark-grey, @fill-color-lt: shade(@eia-brown, 30%)); //  #7a6b4d
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                    background-position-y: 45%;
+                                }
+                            }
+                            &.consumption {
+                                &:before {
+                                    .icon-consumption(@fill-color: @eia-green);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.environment {
+                                &:before {
+                                    .icon-environment(@fill-color: @eia-dark-green, @fill-color-lt: @eia-yellow); 
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                    background-position-y: 45%;
+                                }
+                            }
+                            &.electricity {
+                                &:before {
+                                    .icon-electricity(@fill-color: @eia-yellow);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.nuclear {
+                                &:before {
+                                    .icon-nuclear(@fill-color: @eia-red);
+                                    .nav-bar-icon(75px, 66px);
+                                    //background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.renewable {
+                                &:before {
+                                    .icon-renewable(@fill-color: @eia-green);
+                                    .nav-bar-icon(75px, 66px);
+                                    background-size: 90%;
+                                    margin-left: 0;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.eib {
+                                background: url(/global/images/energy-education/eib.png) no-repeat;
+                            }
+                        }
+                        &.consumption-surveys {
+                            .left;
+                            &.residential {
+                                background: url(/global/images/consumption/residential.png) no-repeat;
+                            }
+                            &.commercial {
+                                background: url(/global/images/consumption/commercial.png) no-repeat;
+                            }
+                            &.industrial {
+                                background: url(/global/images/consumption/industrial.png) no-repeat;
+                                margin-left: 10px;
+
+                            }
+                        }
+                    }
+                }
+                &:first-child {
+                    i {
+                        width: 55px;
+                    }
+                }
+                &:last-child {
+                    img {
+                        .left;
+                        margin: 0 0 0 13px;
+                    }
+                    ul {
+                        margin: 0 0 0 85px;
+                    }
+                }
+
+
+
+
+                ul {
+                    clear: none;
+                    margin: 0 0 0 80px;
+                    position: relative;
+                    .align-left;
+                    li {
+                        &.head {
+                            padding: 0 0 2px 0;
+                            margin-top: 4px;
+                            text-align: center;
+                            h2 {
+                                .font;
+                                .bold;
+                                color: @eia-dark-blue;
+                                line-height: 1.2em;
+                                text-transform: uppercase;
+                                font-size: .9375rem; //15px
+                                .align-left;
+                                a {
+                                    .font;
+                                    .bold;
+                                    color: @eia-dark-blue;
+                                    line-height: 1.2em;
+                                    text-transform: uppercase;
+                                    font-size: .9375rem; //15px
+                                    .align-left;
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    } 
+                                }
+                            }
+                        }
+                        &.sub-head {
+                            .font;
+                            font-style: italic;
+                            font-size: .8125rem; // 13px
+                            line-height: 1.5em;
+                            color: @eia-dark-grey;
+                            .align-left;
+                            a {
+                                .font;
+                                font-style: italic;
+                                font-size: .8125rem; // 13px
+                                line-height: 1.5em;
+                                color: @eia-dark-grey;
+                                display: inline-block;
+                                text-decoration: none;
+                                &:hover {
+                                    text-decoration: underline;
+                                } 
+                            }
+                        }
+                        &.foot {
+                            margin-top: 8px;
+                            .align-left;
+                            a {
+                                font-size: .750rem; // 12px
+                                line-height: 1.375em; // 22px
+                                display: inline-block;
+                                color: @eia-blue;
+                                text-decoration: none;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                                &:after { 
+                                    content:"\00a0\203A";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+    div {
+        &.energy-education {
+            .l-one-third-col {
+                padding: 1em 0 1.5em 0;
+                -webkit-box-flex: 0;
+                -webkit-flex: 0 0 33.333333%;
+                -ms-flex: 0 0 33.333333%;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                width: 33.333333%;
+            }
+        }
+    }
+}
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+    div {
+        &.energy-education {
+            .l-one-third-col {
+                padding: 0;
+                i {
+                    margin: 0;
+                    /*
+                    &.ico {
+                        &.energy-education {
+                            .left;
+                            &.faq {
+                                &:before {
+                                    //margin-left: -17px;
+                                }
+                            }
+                            &.petroleum {
+                                &::before {
+                                    margin-left: -17px;
+                                }
+                            }
+                        }
+                    }
+                    */
+                }
+                ul {
+                    //margin: 0 0 0 0;
+                    margin: 0 0 0 80px;
+                    img {
+                        margin: 0;
+                    }
+                }
+                //&:first-child {
+                //    ul {
+                //        margin: 0 0 0 60px;
+                //    }
+                //}
+                &.border {
+                    border-left: 1px solid shade(white, 17%);
+                    border-right: 1px solid shade(white, 17%);
+                    padding: 0 10px 20px 10px;
+                }
+                &:first-child {
+                    padding: 0 10px 0 0;
+                }
+            }
+        }
+    }
+}

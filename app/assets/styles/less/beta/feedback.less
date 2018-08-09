@@ -1,0 +1,150 @@
+header {
+	.logo-beta {
+		background: url(https://www.eia.gov/global/images/logos/beta_logo.png) no-repeat top left;
+		padding: 0 12px;
+		/*  width: 321px actual */
+		/*    height: actual 91px; */
+		width: 321px;
+		height: 91px;
+		display: block;
+		.left;
+		transition: all .3s ease-in-out;
+	}
+	&.shrink {
+		.logo-beta {
+			height: 50px;
+			width: 176px;
+			background-size: 100% 100%;
+			transition: all .3s ease-in-out;
+		}
+	}
+}
+.fblink_give {
+	width: 130px;
+	height: 28px;
+	text-indent: -99999px;
+	background: url(/global/images/btns/give_feedback_btn_off.png) no-repeat;
+	margin: 1px 0 0 0;
+	cursor: pointer;
+	&:hover {
+		background: url(/global/images/btns/give_feedback_btn.png) no-repeat;
+	}
+}
+#secondary {
+	color: #fff;
+	padding: 10px 35px;
+	background-color: #003851;
+	margin-top:1px;    
+}
+.secondary {
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	background-color: #003851;
+}
+
+
+#pageslide-slide-wrap {
+		background-color: #003851;
+}
+
+
+
+
+
+#pageslide-content h2, #secondary h2, .secondary h2 {
+/*  color: #0CF;*/
+	color: #FC3;
+	margin-bottom:6px;
+	font-family:"Times New Roman", Times, serif;
+	font-weight:normal;
+	font-size:26px;
+}
+
+#pageslide-content a { 
+	font-size:12px;
+	padding:20px;
+}
+
+.pageslide-close {
+	font-size: 12px;
+	font-weight: bold;
+	padding:10px !important; 
+	border: 1px solid #C60;
+}
+.fblink {
+	color:#fff;
+	display:block;
+	width: 65px;
+	height:19px;
+	background-color: #003851;
+	font-size:15px;
+	margin:1px 0px 0px 0px;
+	padding:4px 10px 7px 10px;
+	cursor:pointer;	
+}
+/*
+.fblink_give {
+	width:130px;
+	height:28px;
+	text-indent:-99999px;
+	background: url(/global/images/btns/give_feedback_btn_off.png) no-repeat;
+	margin:1px 0px 0px 0px;
+	cursor:pointer;
+}
+.fblink_give:hover {
+	background: url(/global/images/btns/give_feedback_btn.png) no-repeat;
+}
+*/
+.fblink_hide {
+	width:130;
+	height:28px;
+	text-indent:-99999px;
+	background: url(/global/images/btns/hide_feedback_btn_off.png) no-repeat;
+	margin:1px 0px 0px 0px;
+	cursor:pointer;
+}
+.fblink_hide:hover {
+	background: url(/global/images/btns/hide_feedback_btn.png) no-repeat;
+}
+#feedcomments {
+	display:block;
+	overflow:auto;
+/*	background-color:#F09;*/
+		padding-right:4px;
+	width:520px;
+	height:300px;
+}
+/*#feedcomments b{
+	color:#0CF;
+}*/
+#feedcomments blockquote {
+	color:#6F6;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom:2px;
+}
+
+#feedcomments p {
+	margin-bottom:2px;
+	padding-bottom: 0;
+}
+.fbcomment {
+	display:block;
+/*	border:1px solid #fff;*/
+	padding:8px;
+	margin-bottom:6px;
+	background-color:#0d4e6e;
+}
+
+.submit_btn{
+	background:url(/global/images/btns/submit.png) no-repeat center left;
+	cursor:pointer;
+	width: 56px;
+	height: 20px;
+	border: none;
+	text-indent: -99999px;
+}
+.submit_btn:hover{
+	background:url(/global/images/btns/submit_over.png) no-repeat center left;
+}

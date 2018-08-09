@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+
+@media @mobile {
+	ul {
+		&.updated-data-series {
+			li {
+				position: relative;
+				width: 100%;
+				padding-left: 80px;
+				span {
+					&.date {
+						position: absolute;
+						top: 0;
+						left: 0;
+						//width: 80px;
+						display: inline-block;
+					}
+				}
+				&.head {
+					padding-left: 0;
+				}
+
+				a {
+					&.pdf {
+						position: relative;
+						list-style: none;
+						&:after {
+							.icon-file-type(pdf);
+							.controls-icon(15px, 16px);
+							display: inline-block;
+							position: relative;
+							top: 2px;
+							margin: -2px 0 0 0;
+						}
+					}
+					&.xls {
+						position: relative;
+						list-style: none;
+						&:after {
+							.icon-file-type(xls);
+							.controls-icon(15px, 16px);
+							display: inline-block;
+							position: relative;
+							top: 2px;
+							margin: -2px 0 0 0;
+						}
+					}
+					&.csv {
+						position: relative;
+						list-style: none;
+						&:after {
+							.icon-file-type(csv);
+							.controls-icon(15px, 16px);
+							display: inline-block;
+							position: relative;
+							top: 2px;
+							margin: -2px 0 0 0;
+						}
+					}
+					/*
+					&.interactive {
+						position: relative;
+						list-style: none;
+						margin: -2px 0 0 0;
+						&:after {
+							.icon-file-type(interactive);
+							.controls-icon(15px, 16px);
+						}
+					}
+					*/
+
+				}
+			}
+		}
+	}
+}
