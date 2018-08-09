@@ -44,7 +44,7 @@ gulp.task('copy-global-styles', /* ['copy-vendor-files'], */ function() {
 //  .pipe(gulp.dest('./style-guide/global/vendor'));
 //});
 
-gulp.task('scripts', ['clean'], ['copy-global-styles']);
+gulp.task('deploy', ['clean'], ['copy-global-styles']);
 
 
 
