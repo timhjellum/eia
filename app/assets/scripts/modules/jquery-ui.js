@@ -26,7 +26,6 @@ class jqueryUI {
             hash:true
         });
         */
-        console.log('Dilly Tabs');
         $('.fancybox-menu').click(function() {
             var section = $(this).data("target");
             var options = { active: 0 };

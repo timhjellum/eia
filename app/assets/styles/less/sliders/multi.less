@@ -59,6 +59,7 @@
 			margin: 0 auto;
 			.bx-viewport {
 				display: table;
+				overflow: visible !important;
 				/*fix other elements on the page moving (on Chrome)*/
 				-webkit-transform: translatez(0);
 			}
@@ -103,15 +104,9 @@
 					}
 				}
 			}
-			.bx-controls {
-				display: none;
-			}
-		}
-		// default pager location under the slider
-		.bx-controls.bx-has-pager {
-			clear: both;
-			display: block;
-			width: 100%;
+//.bx-controls {
+//	display: none;
+//}
 		}
 	}
 }
@@ -125,12 +120,13 @@
 	}
 }
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+
 	.slider-multi-header {
-		//margin: 2em 0 0 0;
 		.right {
 			.slider-multi-pager {
 				margin: 6px 0 0 0;
 				display: table;
+				visibility: hidden;
 				.bx-pager {
 					&.bx-default-pager {
 						.bx-pager-item {
@@ -183,8 +179,6 @@
 			.right;
 			margin: 6px 0 0 0;
 			.slider-multi-pager {
-				//margin: 6px 0 0 0;
-				display: table;
 				.bx-pager {
 					&.bx-default-pager {
 						.bx-pager-item {
@@ -246,7 +240,7 @@
 				display: block; // required to have fixed height
 				width: 830px;
 				height: 200px;
-				overflow: hidden;
+				overflow: hidden !important;
 				margin: 0 auto;
 			}
 			ul {
@@ -302,22 +296,26 @@
 					}
 				}				
 			}
+
+			
 			.bx-controls {
-				display: block;
+				&.show {
+					display: block;
+				}
+				&.hide {
+					display: none;
+				}
 				&.bx-has-controls-direction {
+
 					width: 912px;
 					height: 1px;
-					//height: 158px;
 					position: absolute;
-					//border: 1px solid blue;
 					left: -44px; // same as width
 					top: 0;
-					//width: 100%;
-					//border: 3px solid red;
 					.bx-controls-direction {
 						position: absolute;
 						width: 912px; // wrapper
-						//height: 158px;
+
 						height: 1px;
 						a {
 							width: 24px;

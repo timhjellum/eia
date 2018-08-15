@@ -1,13 +1,11 @@
 const gulp = require('gulp');
-const cleanCSS = require('gulp-clean-css');
-const less = require('gulp-less');
-const rename = require('gulp-rename');
-const path = require('path');
-const del = require('del');
+const gulpLess = require('gulp-less');
+const gulpStrip = require('gulp-strip-css-comments');
+const gulpRename = require('gulp-rename');
+const log = require('fancy-log');
 
 
-const styleGuideDist = './app/src/css';
-const dist = './app/temp/styles/';
+
 
 // this compiles a production CSS from only the required LESS files and makes a pretty and ugly (minified) version in the global folder and style-guide folder
 /*
@@ -37,26 +35,40 @@ const dist = './app/temp/styles/';
 
 // use for wwwdev: const dist = '//WWWDEV/website/global/styles';
 
+const styleGuideDist = './app/src/css';
+const distTemp = './app/temp/styles/';
+const distStyles = '../global/styles/';//	/global and /style-guide are at the same level so
 
-
-gulp.task('styles', ['eia-styles']);
-
-gulp.task('eia-styles', ['eia-style-guide'], () =>
+/*
+gulp.task('styles', ['style-guide'], function () {
 	gulp.src('./app/assets/styles/global.css')
-	.pipe(less())
-	.pipe(cleanCSS())
-	.pipe(gulp.dest(dist))
-//	.pipe(rename("global.css"))
-	.pipe(gulp.dest(styleGuideDist))
-);
-
-// $ npm run gulp style-guide
-
-gulp.task('eia-style-guide', () =>
+	.pipe(gulpLess())
+	.pipe(gulpStrip())
+	.pipe(gulp.dest(distTemp))
+	.pipe(gulpUglify({
+		'max-line-len': 0 // no line ending
+	}))
+	.pipe(gulpRename('global.min.css'))
+	.pipe(gulp.dest(distStyles))
+});
+*/
+gulp.task('style-guide', () =>
 	gulp.src('./app/assets/styles/styles.css')
-	.pipe(less())
-	.pipe(gulp.dest(styleGuideDist))
+	.pipe(gulpLess())
+	.pipe(gulpStrip())
+	.pipe(gulp.dest('./app/temp/styles/'))
 );
+gulp.task('styles', ['style-guide'], function() {
+	return gulp.src('./app/assets/styles/global.css')
+	.pipe(gulpLess())
+	.pipe(gulpStrip())
+	.on('error', function(errorInfo) {
+		console.log(errorInfo.toString());
+		this.emit('end');
+	})
+	.pipe(gulp.dest('./app/temp/styles/'));
+});
+
 
 
 // print specific files

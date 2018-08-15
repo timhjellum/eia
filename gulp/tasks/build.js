@@ -1,21 +1,51 @@
 const gulp = require('gulp');
-const gulpClean = require('gulp-clean');
-const gulpUglify = require('gulp-uglify');
+const gulpUglifyCSS = require('gulp-uglifycss');
 const gulpRename = require('gulp-rename');
-//var pump = require('pump');
+const gulpUglify = require('gulp-uglify');
+const log = require('fancy-log');
 
 
-const distScripts = '//WWWDEV/website/css_rehab/archive/global';
-const distStyles = '//WWWDEV/website/css_rehab/archive/global';
+const distScripts = '../global/scripts/';//  /global and /style-guide are at the same level so
+const distStyles = '../global/styles/';//	/global and /style-guide are at the same level so
+//const distScripts = './app/temp/scripts/';
+//const distStyles = './app/temp/styles/';
 
-
-gulp.task('clean', function () {
-	return gulp.src('./app/temp/global.js')
-	.pipe(gulpClean({force: true}))
-	.pipe(gulpRename("global.clean.css"))
-	.pipe(gulp.dest('./app/temp/'));
+gulp.task('deployScripts', function () {
+	gulp.src('./app/temp/scripts/global.js')
+	.pipe(gulpUglify())
+	.pipe(gulpRename('global.min.js'))
+	.pipe(gulp.dest('../global/scripts/'))
+	log.error('gulp.dest scripts completed');
 });
-gulp.task('uglify', ['clean'], function (cb) {
+gulp.task('deployStyles', function() {
+	gulp.src('./app/temp/styles/global.css')
+//	.pipe(gulpUglifyCSS())
+	.pipe(gulpRename('global.min.css'))
+	.on('error', function(errorInfo) {
+		console.log(errorInfo.toString());
+		this.emit('end');
+	})
+	.pipe(gulp.dest('../global/styles/'))
+	log.error('gulp.dest styles completed');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+gulp.task('uglify', ['copy-global-styles'], function (cb) {
 	pump([
 		  gulp.src('./app/temp/global.clean.css'),
 		  gulpUglify()
@@ -24,27 +54,24 @@ gulp.task('uglify', ['clean'], function (cb) {
 	  ],
 	  cb);
 });
+*/
 
 
 
-gulp.task('copy-global-styles', /* ['copy-vendor-files'], */ function() {
-	return gulp.src([
-		'.app/temp/styles/*.css'
-	])
-	.pipe(gulp.dest(distStyles));
+
+
+/*
+gulp.task('copy-vendor-files', function() {
+	gulp.task('copy-global-styles', function() {
+		return gulp.src([
+			'./app/temp/styles/global.css'
+		])
+		.pipe(gulpRename('global.min.css'))
+		.pipe(gulp.dest(distStyles));
+	});
 });
+*/
 
-//gulp.task('copy-vendor-files', function() {
-//  return gulp.src([
-//    '../global/vendor/*.*',
-//    '../global/vendor/*/*.*',
-//    '../global/vendor/*/*/*.*',
-//    '../global/vendor/*/*/*/*.*'
-//  ])
-//  .pipe(gulp.dest('./style-guide/global/vendor'));
-//});
-
-gulp.task('deploy', ['clean'], ['copy-global-styles']);
 
 
 

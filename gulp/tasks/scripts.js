@@ -12,3 +12,8 @@ gulp.task('scripts', ['modernizr'], function(callback) {
     callback();
   });
 });
+
+const distScripts = '../global/scripts/'; //  /global and /style-guide are at the same level so
+//const distScripts = './app/temp/scripts/';
+
+

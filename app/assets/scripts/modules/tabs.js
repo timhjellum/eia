@@ -9,7 +9,6 @@ class Tabs {
 		this.initialState();
         this.events();
     }
-
 	initialState() {
         this.tabOne.addClass('active');
         this.contentOne.addClass('show');

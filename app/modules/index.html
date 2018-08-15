@@ -8,18 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>EIA Style Guide</title>
-    <!-- color favicon -->
-    <!--
-	<link rel="apple-touch-icon" sizes="180x180" href="/style-guide/src/img/color/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/style-guide/src/img/color/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/style-guide/src/img/color/favicon-16x16.png">
-	<link rel="manifest" href="/style-guide/src/color/img/site.webmanifest">
-	<link rel="mask-icon" href="/style-guide/src/img/color/safari-pinned-tab.svg" color="#003c57">
-	<link rel="shortcut icon" href="/style-guide/src/img/color/favicon.ico">
-	<meta name="msapplication-TileColor" content="#003c57">
-	<meta name="msapplication-config" content="/style-guide/src/img/color/browserconfig.xml">
-	<meta name="theme-color" content="#003c57">
-	-->
+
     <!-- b&w favicon -->
 
     <link href="/style-guide/src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
@@ -31,53 +20,40 @@
     <meta name="theme-color" content="#292929">
 
     <!-- start style guide required vendor styles -->
-    <link href="../src/css/bootstrap.min.css" rel="stylesheet" />
+
     <!-- end style guide required vendor styles -->
 
     <!-- start style guide vendor styles -->
-    <link href="../src/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,300" rel="stylesheet" />
-    <link href="../src/css/themify-icons.css" rel="stylesheet">
-    <link href="../src/css/highlight/tomorrow.css" rel="stylesheet" />
+
+
     <!-- start style guide required styles -->
 
     <!-- start page specific styles -->
-    <link href="../src/css/eia-style-guide.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../temp/styles/styles.css">
+    <!-- end page specific styless -->
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../temp/styles/global.css">
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
     <!-- end page specific styless -->
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="sidebar" data-background-color="white" data-active-color="danger">
-            <div class="sidebar-wrapper">
-                <div class="logo-styleguide"></div>
-                <div id="nav"></div>
+    <div class="_header">
+    </div>
 
-            </div>
-        </div>
-
-        <div class="main-panel">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand">Modules</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                    </div>
-                </div>
-            </nav>
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row-style-guide">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="header-style-guide">
-                                    <article>
-                                        <h1 class="style-guide">Module Rules</h1>
+    <div class="_container clearfix">
+        <div class="_content">
+            <div class="_content-inner">
+                <h2 class="_h2">Modules
+                                        <h3 class="_h3">Module Rules</h3>
 
                                         <p class="style-guide">As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the
                                             page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible.
                                             If done right, Modules can easily be moved to different parts of the layout without breaking.</p>
+
+                                        
+
 
 
                                         <p class="style-guide">When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent
@@ -94,7 +70,19 @@
 }</code></pre>
                                         </div>
 
-                                        <h2 id="avoid">Avoid element selectors</h2>
+
+
+
+
+
+
+
+
+
+
+<ul class="dilly-dilly">
+    <li class="dilly-dilly">
+                                        <h3 class="_h3">Avoid element selectors</h3>
 
                                         <p class="style-guide">Use child or descendant selectors with element selectors if the element selectors will and can be predictable. Using <code>.module span</code> is great if a span will predictably be used and styled the same way
                                             every time while within that module.</p>
@@ -145,11 +133,11 @@
                                             with greater semantics like headings are more likely to appear by themselves within a container and you are more likely able to use an element selector successfully.</p>
 
 
-                                        <h2 id="newcontexts">New Contexts</h2>
+                                            <h3 class="_h3">New Contexts</h3>
                                         <p class="style-guide">Using the module approach also allows us to better understand where context changes are likely to occur. The need for a new positioning context, for example, is likely to happen at either the layout level or at
                                             the root of a module.</p>
 
-                                        <h2 id="subclassing">Subclassing Modules</h2>
+                                        <h3 class="_h3">Subclassing Modules</h3>
 
                                         <p class="style-guide">When we have the same module in different sections, the first instinct is to use a parent element to style that module differently.</p>
 
@@ -260,7 +248,7 @@
                                     <p class="style-guide">Modules are the reusable and modular components of the page. Modules can be
                                         <strong>nested</strong> and each Module should be designed to exist as a
                                         <strong>standalone component</strong>. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.</p>
-                                    <h2 class="style-guide">Examples of modules</h2>
+                                    <h3 class="_h3">Examples of modules</h3>
                                     <ul class="style-guide">
                                         <li>Navigation elements</li>
                                         <li>Sliders</li>
@@ -268,7 +256,7 @@
                                         <li>Content Containers</li>
                                     </ul>
 
-                                    <h2 class="style-guide">Naming Best-Practices</h2>
+                                    <h3 class="_h3">Naming Best-Practices</h3>
                                     <p class="style-guide">Unlike layouts that have a designation within the class name to indicate it's a layout element, Modules do not and instead have symantec names to indicate what the module is.</p>
 
                                     <p class="style-guide">When defining the rule set for a module, Avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or
@@ -315,7 +303,7 @@ p { padding: 5px; } /* Avoid */
                                     </p>
 
                                     <div class="row-style-guide">
-                                        <h3 class="style-guide">Subclassing Modules</h3>
+                                        <h3 class="_h3">Subclassing Modules</h3>
                                     </div>
                                     <p class="style-guide">When we have the same module in different sections, the first instinct is to use a parent element to style that module differently.
                                     </p>
@@ -362,38 +350,36 @@ p { padding: 5px; } /* Avoid */
                                     <!-- end  style guide -->
                                     <!-- end  style guide -->
                                     <!-- end  style guide -->
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="_right-sidebar">
+                        <div class="_right-sidebar-inner">
+                            <ul class="dilly-dilly">
+                                <li class="active"><a href="#one">Lorem ipsum dolor sit amet</a></li>
+                                <li><a href="#two">In congue nunc vitae magna</a></li>
+                                <li><a href="#thr">Curabitur rhoncus, arcu</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="footer"></div>
-</body>
-<!-- start style guide required vendor scripts -->
-<script src="../src/js/jquery.min.js"></script>
-<script src="../src/js/tether.min.js"></script>
-<script src="../src/js/bootstrap.min.js"></script>
-<!-- end style guide required vendor scripts -->
-
-<!-- start style guide custom scripts -->
-<script src="../src/js/style-guide-side-nav.js"></script>
-<script src="../src/js/style-guide-header.js"></script>
-<script src="../src/js/style-guide-footer.js"></script>
-<script src="../src/js/highlight.js"></script>
-<script>
-    hljs.initHighlightingOnLoad();
-
-    if ($('.navbar-brand:contains(Modules)').length > 0) {
-        $('#nav-4').prop('checked', true);
-    }
-</script>
-<!-- start style guide required scripts -->
-
-<!-- start page specific scripts -->
-<script src="../src/js/global.min.js"></script>
-<!-- end page specific scripts -->
-
-</html>
+            
+                <div class="_footer"></div>
+            </body>
+            <!-- build:js assets/scripts/script.min.js -->
+            <script src="../temp/scripts/scripts.js"></script>
+            <!-- endbuild -->
+            <!-- build:js assets/scripts/highlight.js -->
+            <script src="../src/js/highlight.js"></script>
+            <!-- endbuild -->
+            <!-- build:js assets/scripts/_header.js -->
+            <script src="../src/js/_header.js"></script>
+            <!-- endbuild -->
+            <!-- build:js assets/scripts/_footer.js -->
+            <script src="../src/js/_footer.js"></script>
+            <!-- endbuild -->
+            <script>
+                hljs.initHighlightingOnLoad();
+            </script>
+            </html>

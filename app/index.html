@@ -1,34 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EIA Style Guide</title>
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- b&w favicon -->
 
-	<title></title>
+    <link href="/style-guide/src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/style-guide/src/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/style-guide/src/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/style-guide/src/img/site.webmanifest" rel="manifest">
+    <link href="/style-guide/src/img/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#292929">
 
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-	<meta name="viewport" content="width=device-width" />
+    <!-- start style guide required vendor styles -->
 
-	<!-- build:css assets/styles/styles.min.css -->
-	<link rel="stylesheet" href="./temp/styles/styles.css">
-	<!-- endbuild -->
+    <!-- end style guide required vendor styles -->
+
+    <!-- start style guide vendor styles -->
+
+
+    <!-- start style guide required styles -->
+
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../temp/styles/styles.css">
+    <!-- end page specific styless -->
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../temp/styles/global.css">
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
+    <!-- end page specific styless -->
 </head>
 
 <body>
-	<div class="_header">
-			<h1>Site Title</h1>
-	</div>
+    <div class="_header">
+    </div>
 
-	<div class="_container clearfix">
+    <div class="_container clearfix">
+        <div class="_content">
+            <div class="_content-inner">
+                <h2 class="_h2">Categorizing CSS Rules</h1>
+						<p class="style-guide">Every project needs some organization. Throwing every new style you create onto the end of a single file would make finding things more difficult and would be very confusing for anybody else working on the project.
+							Of course, you likely have some organization in place already. Hopefully, what you read among these pages will highlight what works with your existing process and, if I’m lucky, you will see new ways in which
+							you can improve your process.</p>
 
-		<div class="_content">
-			<div class="_content-inner">
-				<ul class="dilly">
-					<li class="active"><a name="one"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus id leo et aliquam. Proin consectetur ligula vel neque cursus laoreet. Nullam dignissim, augue at consectetur pellentesque, metus ipsum interdum sapien, quis ornare quam enim vel ipsum.</li>
-					<li><a name="two"></a>In congue nunc vitae magna tempor ultrices. Cras ultricies posuere elit. Nullam ultrices purus ante, at mattis leo placerat ac. Nunc faucibus ligula nec lorem sodales venenatis. Curabitur nec est condimentum, blandit tellus nec, semper arcu. Nullam in porta ipsum, non consectetur mi. Sed pharetra sapien nisl. Aliquam ac lectus sed elit vehicula scelerisque ut vel sem. Ut ut semper nisl.</li>
-					<li><a name="thr"></a>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</li>
+						<p class="style-guide">How do you decide whether to use ID selectors, or class selectors, or any number of selectors that are at your disposal? How do you decide which elements should get the styling magic you wish to bestow upon it?
+							How do you make it easy to understand how your site and your styles are organized? </p>
+
+						<p class="style-guide">At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.</p>
+
+						<p class="style-guide">There are five types of categories:</p>
+						<ul class="style-guide">
+							<li>Base</li>
+							<li>Layout</li>
+							<li>Module</li>
+							<li>State</li>
+							<li>Theme</li>
+						</ul>
+						<p class="style-guide">We often find ourselves mixing styles across each of these categories. If we are more aware of what we are trying to style, we can avoid the complexity that comes from intertwining these rules.</p>
+
+						<p class="style-guide">Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and <em>why</em> are
+							we going to code them that way?</p>
+
+						<p class="style-guide">Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience.
+							These are all wins. Exceptions to the rule can be advantageous but they should be justified.</p>
+
+						<p class="style-guide"><strong>Base rules</strong> are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially,
+							a base style says that wherever this element is on the page, it should look like <em>this</em>.</p>
+
+						<div class="example">
+							<p class="exm-caption">Examples of Base Styles</p>
+							<pre><code class="css">html {
+line-height: 1.15; 
+	-ms-text-size-adjust: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 16px; 
+	box-sizing: border-box;
+}
+* {
+	box-sizing: border-box;
+}
+.print {
+	display: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}</code></pre>
+						</div>
+
+						<p class="style-guide"><strong>Layout rules</strong> divide the page into sections. Layouts hold one or more modules together.
+							</p><p class="style-guide">Layout class names always have a <code>l-</code>.</p>
+
+							<p class="style-guide"><strong>Modules</strong> are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.</p>
+
+							<p class="style-guide"><strong>State rules</strong> are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or
+								layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.</p>
+
+							<p class="style-guide">Finally, <strong>Theme rules</strong> are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.</p>
+
+							<h3 class="_h3">Naming Rules</h3>
+
+							<p class="style-guide">By separating rules into the five categories, naming convention is beneficial for immediately understanding which category a particular style belongs to and its role within the overall scope of the page. On
+								large projects, it is more likely to have styles broken up across multiple files. In these cases, naming convention also makes it easier to find which file a style belongs to.</p>
+
+							For State rules, I like <code>is-</code> as in <code>is-hidden</code> or <code>is-collapsed</code>. This helps describe things in a very readable way.<p></p>
+
+						<p class="style-guide">Modules are going to be the bulk of any project. As a result, having every module start with a prefix like <code>.module-</code> would be needlessly verbose. Modules just use the name of the module itself. </p>
+
+						<div class="example">
+							<p class="exm-caption">Example classes</p>
+							<pre><code class="css">/* coming soon */
+</code></pre>
+						</div>
+
+						<p class="style-guide">Related elements within a module use the base name as a prefix. On this site, code examples use <code>.exm</code> and the captions use <code>.exm-caption</code>. I can instantly look at the caption class and understand
+							that it is related to the code examples and where I can find the styles for that.</p>
+
+						<p class="style-guide">Modules that are a variation on another module should also use the base module name as a prefix. Sub-classing is covered in more detail in the Module Rules chapter.</p>
+
+						<p class="style-guide">This naming convention will be used throughout these pages. Like most other things that I have outlined here, don’t feel like you have to stick to these guidelines rigidly. Have a convention, document it, and stick
+							to it.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -49,12 +163,14 @@ hi
 			</div>
 		</div>
 	</div>
-
-	<footer>
-		<p>Very Tall Footer</p>
-	</footer>
+	<div id="footer"></div>
 </body>
-<!-- build:js assets/scripts/script.min.js -->
+
 <script src="./temp/scripts/scripts.js"></script>
-<!-- endbuild -->
+
+<script src="./src/js/highlight.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
 </html>

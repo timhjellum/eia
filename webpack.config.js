@@ -3,12 +3,12 @@ const path = require('path');
 
 
 const dist = './app/temp/scripts/';
-//const dist = '//REPLICATOR/website/css_rehab/archive/global/scripts';
+//const dist = '//REPLICATOR/website/adaptive/global/scripts';
 
 
 module.exports = {
     entry: {
-        global: "./app/assets/scripts/global",
+        global: "./app/assets/scripts/global.js",
         scripts: "./app/assets/scripts/scripts.js"
     },
     output: {
@@ -46,7 +46,7 @@ module.exports = {
             exclude: /node_modules/
         }],
     }
-    /*
+
     ,
     plugins: [
         new webpack.ProvidePlugin({
@@ -56,5 +56,5 @@ module.exports = {
             "window.$": "jquery"
         })
     ]
-    */
-} // module.exports
+
+}

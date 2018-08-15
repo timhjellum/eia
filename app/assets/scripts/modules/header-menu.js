@@ -1,4 +1,4 @@
-//const $ = require("jquery");
+const $ = require("jquery");
 import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
 import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
 
@@ -13,9 +13,7 @@ class HeaderMenu {
         //this.events();
         this.openMenu();
     }
-
-
-
+    
     lightBox() {
         // this.closeButton.prepend('<i class="ico-menu close">Close</i>');
         // console.log("fancybox lightbox");
@@ -81,7 +79,7 @@ class HeaderMenu {
                     };
                 },
                 beforeShow: function() {
-                    $('.dilly-tabs').parent().parent().parent().parent().addClass('global-nav');
+                    $('.section-tabs').parent().parent().parent().parent().addClass('global-nav');
                 },
                 onUpdate: function() {
                     if (window.innerWidth <= fbWidth) {
@@ -93,7 +91,7 @@ class HeaderMenu {
                         this.fitToView = false;
                     };
                     $.fancybox.reposition();
-                    $('.dilly-tabs .ui-tabs-anchor').click(function() {
+                    $('.section-tabs .ui-tabs-anchor').click(function() {
                         $.fancybox.update();
                     });
                 },
