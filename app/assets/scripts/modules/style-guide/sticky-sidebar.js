@@ -1,10 +1,10 @@
-import '../../../../node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.js';
+import '../../../../../node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.js';
 
 class StickySidebar {
 	constructor() {
 
 		$('._right-sidebar').stickySidebar({
-			topSpacing: 20,
+			topSpacing: 120,
 			bottomSpacing: 20,
 			containerSelector: '._container',
 			innerWrapperSelector: '._right-sidebar-inner'
@@ -17,7 +17,6 @@ class StickySidebar {
 			innerWrapperSelector: '._right-sidebar-inner'
 		});
 		*/
-
 		var scrollTop = $(window).scrollTop();
 
 		$.fn.scrollFunction = function () {

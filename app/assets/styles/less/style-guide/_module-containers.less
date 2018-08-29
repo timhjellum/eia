@@ -1,15 +1,27 @@
 
 //@media @mobile {
-.example {
+._example {
 	background-color: #fff;
 	margin: 1em 0 1em 0;
 	p {
-		&.example-caption {
-			margin: 0 0 0 10px;
-			color: #ccc;
-		}
+		margin: 0 0 0 10px !important;
+		font-size: 11px !important;
+		color: #999 !important;
 	}
 }
+p {
+	margin: 0 !important;
+	padding: 0  !important;
+	._caption {
+		width: 100% !important;
+		text-align: center !important;
+		margin: 0 !important;
+		font-size: 11px !important;
+		color: #999 !important;
+	}
+}
+
+//}
 pre {
 	border: none !important;
 	margin: 0 !important;

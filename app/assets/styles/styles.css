@@ -3,5 +3,6 @@
 @import "less/style-guide/_module-containers";
 @import "less/style-guide/_icons";
 @import "less/style-guide/_header";
+@import "less/style-guide/_color-palette";
 @import "less/base/vars";
 @import "less/base/mixins";

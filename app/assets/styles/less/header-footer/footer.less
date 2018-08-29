@@ -1,22 +1,14 @@
 @media @mobile {
-	.footer {
-
-		// fixed footer
-		position: absolute;
-		bottom: 0;
-		width: 100%;
+	.push {
 		height: 2000px;
-
-
-
+	}
+	.footer {
+		height: 2000px;
+		width: 100%;
 		border-top: 1px solid @eia-dark-blue;
-		.left;
 		clear: both;
 		padding: 1em 0;
-		display: table;
-		width: 100%;
 		min-width: 320px;
-		min-height: 400px;
 		background: @gradient-background;
 		.gradient(@stops: rgba(238,238,238,1) 0, rgba(244,244,244,1) 50%, rgba(252,252,252,1) 90%, rgba(254,254,254,1) 100%;);
 		.l-col,
@@ -140,6 +132,9 @@
 	}
 }
 @media @mobile-landscape {
+	.push {
+		height: 900px;
+	}
 	.footer {
 		height: 900px;
 		.l-col {
@@ -199,8 +194,12 @@
 }
 //@media @tablet {  // mobile panorama
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+	.push {
+		height: 660px;
+	}	
 	.footer {
 		height: 660px;
+
 		.l-col {
 			-webkit-box-flex: 0;
 			-webkit-flex: 0 0 33.333333%;
@@ -250,11 +249,11 @@
 	}
 }
 @media @laptop {
+	.push {
+	  height: 500px;
+	}
 	.footer {
 		height: 500px;
-
-
-
 		.l-col {
 			-webkit-box-flex: 0;
 			-webkit-flex: 0 0 16.666667%;

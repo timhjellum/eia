@@ -12,6 +12,49 @@ class HeaderMenu {
         this.window = $(window);
         //this.events();
         this.openMenu();
+        this.headerTabs = $('.section-tabs');
+        this.checkForBaseAndCorrectTabHrefs();
+        this.headerTabs.tabs();
+    }
+
+    setActiveTab(section) {
+      var options = { active: 0 };
+      switch (section) {
+        case 'nav-sources':
+          options.active = 0;
+          break;
+        case 'nav-topics':
+          options.active = 1;
+          break;
+        case 'nav-geography':
+          options.active = 2;
+          break;
+        case 'nav-tools':
+          options.active = 3;
+          break;
+        case 'nav-learn':
+          options.active = 4;
+          break;
+        case 'nav-news':
+          options.active = 5;
+          break;
+        case 'nav-default':
+          options.active = 0;
+      }
+      this.headerTabs.tabs("option", "active", options.active);
+    }
+
+    checkForBaseAndCorrectTabHrefs() {
+        var base = $('base');
+        if(base.length > 0) {
+            var baseHref = base.attr('href');
+            $.each($('ul:first a', this.headerTabs), function(index, anchor) {
+                if(!$(anchor).data('orig-href')) {
+                  $(anchor).data('orig-href', $(anchor).attr('href'));
+                }
+                $(anchor).attr('href', window.location.pathname + $(anchor).data('orig-href'));
+            });
+        }
     }
     
     lightBox() {
@@ -49,6 +92,8 @@ class HeaderMenu {
             var viewPortWidth = window.innerWidth;
             var viewPortHeight = window.innerHeight;
             var fbWidth = 980;
+            var self = this;
+
             //	console.log(fbWidth);
             $('.fancybox-menu').fancybox({
                 scrolling: 'visible',
@@ -80,6 +125,7 @@ class HeaderMenu {
                 },
                 beforeShow: function() {
                     $('.section-tabs').parent().parent().parent().parent().addClass('global-nav');
+                    self.setActiveTab($(this.element).data('target'));
                 },
                 onUpdate: function() {
                     if (window.innerWidth <= fbWidth) {

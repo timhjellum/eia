@@ -38,6 +38,7 @@ html * {
   ._content {
     float: left;
     padding: 0;
+    margin: 60px 0 0 0;
     width: 100%;
     color: darkgrey;
     background-color: #eee;
@@ -269,13 +270,25 @@ p._p {
   clear: both;
   padding: 0 0 1em 0 !important;
 }
-.example {
+._example {
   background-color: #fff;
   margin: 1em 0 1em 0;
 }
-.example p.example-caption {
-  margin: 0 0 0 10px;
-  color: #ccc;
+._example p {
+  margin: 0 0 0 10px !important;
+  font-size: 11px !important;
+  color: #999 !important;
+}
+p {
+  margin: 0 !important;
+  padding: 0  !important;
+}
+p ._caption {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+  font-size: 11px !important;
+  color: #999 !important;
 }
 pre {
   border: none !important;
@@ -367,31 +380,76 @@ span.style-guide {
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: 80px;
     background-color: #003C57;
+    background-color: #fff;
     transition: all 0.3s ease-in-out;
     z-index: 999;
+    
+    
   }
-  ._header.show {
-    transition: all 0.3s ease-in-out;
-    height: 70px;
-  }
-  ._header .logo {
-    padding: 0 8px;
+  ._header .logo-white-background {
+    padding: 0;
+    margin: 10px 40px 10px 20px;
+    float: left;
   }
   ._header h1 {
     border: none;
     display: none;
+    float: left;
   }
-  ._header .nav-primary {
+  ._header a {
+    text-decoration: none;
+  }
+  ._header ul {
+    font-family: arial;
+  }
+  ._header ul._nav {
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+    float: left;
+  }
+  ._header ul._nav li {
+    color: #333;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+  ._header ul._nav li a {
+    color: #333;
+  }
+  ._header ul._nav li:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+  ._header ul._nav li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  ._header ul._nav li ul {
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
     display: none;
   }
-  ._header .menu-toggle {
-    height: 20px;
-    float: right;
+  ._header ul._nav li ul:hover {
+    visibility: visible;
+    opacity: 1;
     display: block;
-    margin: 12px 65px 10px 0;
-    clear: right;
+  }
+  ._header ul._nav li ul li {
+    clear: both;
+    width: 100%;
   }
 }
 @media (min-width: 600px) {
@@ -401,70 +459,343 @@ span.style-guide {
 }
 @media (min-width: 956px) {
   ._header {
-    height: 94px;
+    height: 80px;
+    
   }
-  ._header .nav-primary {
-    display: table;
-    list-style: none;
-    float: left;
+  ._header .logo-white-background {
     padding: 0;
-    margin: 55px 0 7px 0;
-    transition: all 0.3s ease-in-out;
-    line-height: 1.5em;
   }
-  ._header .nav-primary .nav-primary-item {
-    display: block;
+  
+}
+@media (min-width: 1px) {
+  .color-palette .row {
+    margin: 20px 0;
+  }
+  .color-palette .row > div {
+    margin-bottom: 20px;
+  }
+  .card {
+    margin-bottom: 2em;
+  }
+  .font-black {
+    font-size: 0px;
+  }
+  .font-white {
+    font-size: 0px;
+  }
+  .swatch-wrapper {
+    width: 11.111%;
+    text-align: center;
+    padding: 12px 0;
     float: left;
+    color: #666;
+  }
+  .swatch-wrapper.base-color .swatch {
+    border: 2px solid #000;
+  }
+  .swatch-wrapper.base-color ul.color-swatch-description li {
+    color: #333;
+    font-weight: bold;
+  }
+  .swatch {
+    height: 90px;
+    width: 100%;
+    text-align: center;
+    padding-top: 40%;
+  }
+  .eia-333333 {
+    background-color: #333333;
+  }
+  .eia-666666 {
+    background-color: #666666;
+  }
+  .eia-767676 {
+    background-color: #767676;
+  }
+  .eia-999999 {
+    background-color: #999999;
+  }
+  .eia-d8d8d8 {
+    background-color: #cccccc;
+  }
+  .eia-b2b2b2 {
+    background-color: #b2b2b2;
+  }
+  .eia-d3d3d3 {
+    background-color: #d3d3d3;
+  }
+  .eia-d4d4d4 {
+    background-color: #d4d4d4;
+  }
+  .eia-dddddd {
+    background-color: #dddddd;
+  }
+  .eia-e5e5e5 {
+    background-color: #e5e5e5;
+  }
+  .eia-efefef {
+    background-color: #ededed;
+  }
+  .misc-one {
+    background-color: #003C57;
+  }
+  .misc-two {
+    background-color: #3380a2;
+  }
+  .misc-thr {
+    background-color: #6e6e6e;
+  }
+  .misc-fou {
+    background-color: #a9c1da;
+  }
+  .misc-fiv {
+    background-color: #d0d0d0;
+  }
+  .misc-six {
+    background-color: #dff2fB;
+  }
+  ul.color-swatch-description {
+    border: 0;
     margin: 0;
     padding: 0;
-    border-right: 1px solid #809ca9;
-    border-left: 1px solid #001c29;
   }
-  ._header .nav-primary .nav-primary-item:hover {
+  ul.color-swatch-description li {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    font-family: "Segoe UI", Helvetica Neue, Tahoma, Arial, sans-serif;
+    font-size: .6rem;
+    color: #666;
+  }
+  .eia-dark-blue.swatch {
+    background-color: #003c56;
+  }
+  .eia-dark-blue-75.swatch {
+    background-color: #005376;
+  }
+  .eia-dark-blue-50.swatch {
+    background-color: #006997;
+  }
+  .eia-dark-blue-25.swatch {
+    background-color: #0080b7;
+  }
+  .eia-blue {
     background-color: #0096d7;
   }
-  ._header .nav-primary .nav-primary-item:hover i {
+  .eia-light-blue-25.swatch {
+    background-color: #26a6dd;
+  }
+  .eia-light-blue-50.swatch {
+    background-color: #4db6e3;
+  }
+  .eia-light-blue-75.swatch {
+    background-color: #73c5e9;
+  }
+  .eia-light-blue.swatch {
+    background-color: #99d5ef;
+  }
+  .eia-dark-green.swatch {
+    background-color: #253c14;
+  }
+  .eia-dark-green-75.swatch {
+    background-color: #33531c;
+  }
+  .eia-dark-green-50.swatch {
+    background-color: #416a23;
+  }
+  .eia-dark-green-25.swatch {
+    background-color: #4f802b;
+  }
+  .eia-green {
+    background-color: #5d9732;
+  }
+  .eia-light-green-25.swatch {
+    background-color: #75a751;
+  }
+  .eia-light-green-50.swatch {
+    background-color: #8eb670;
+  }
+  .eia-light-green-75.swatch {
+    background-color: #a6c68e;
+  }
+  .eia-light-green.swatch {
+    background-color: #bed5ad;
+  }
+  .eia-dark-red.swatch {
+    background-color: #41141a;
+  }
+  .eia-dark-red-75.swatch {
+    background-color: #5a1c23;
+  }
+  .eia-dark-red-50.swatch {
+    background-color: #72242d;
+  }
+  .eia-dark-red-25.swatch {
+    background-color: #8b2b36;
+  }
+  .eia-red {
+    background-color: #a33340;
+  }
+  .eia-light-red-25.swatch {
+    background-color: #b1525d;
+  }
+  .eia-light-red-50.swatch {
+    background-color: #bf7079;
+  }
+  .eia-light-red-75.swatch {
+    background-color: #cc8f96;
+  }
+  .eia-light-red.swatch {
+    background-color: #daadb3;
+  }
+  .eia-dark-yellow.swatch {
+    background-color: #665001;
+  }
+  .eia-dark-yellow-75.swatch {
+    background-color: #8c6d01;
+  }
+  .eia-dark-yellow-50.swatch {
+    background-color: #b38b01;
+  }
+  .eia-dark-yellow-25.swatch {
+    background-color: #d9a902;
+  }
+  .eia-yellow {
+    background-color: #ffc702;
+  }
+  .eia-light-yellow-25.swatch {
+    background-color: #ffcf28;
+  }
+  .eia-light-yellow-50.swatch {
+    background-color: #ffd84e;
+  }
+  .eia-light-yellow-75.swatch {
+    background-color: #ffe074;
+  }
+  .eia-light-yellow.swatch {
+    background-color: #ffe99a;
+  }
+  .eia-dark-purple.swatch {
+    background-color: #201831;
+  }
+  .eia-dark-purple-75.swatch {
+    background-color: #2d2143;
+  }
+  .eia-dark-purple-50.swatch {
+    background-color: #392a55;
+  }
+  .eia-dark-purple-25.swatch {
+    background-color: #453368;
+  }
+  .eia-purple {
+    background-color: #513c7a;
+  }
+  .eia-light-purple-25.swatch {
+    background-color: #6b598e;
+  }
+  .eia-light-purple-50.swatch {
+    background-color: #8577a2;
+  }
+  .eia-light-purple-75.swatch {
+    background-color: #9f94b6;
+  }
+  .eia-light-purple.swatch {
+    background-color: #b9b1ca;
+  }
+  .eia-dark-brown.swatch {
+    background-color: #4c2e11;
+  }
+  .eia-dark-brown-75.swatch {
+    background-color: #683f17;
+  }
+  .eia-dark-brown-50.swatch {
+    background-color: #84511d;
+  }
+  .eia-dark-brown-25.swatch {
+    background-color: #a16224;
+  }
+  .eia-brown {
+    background-color: #bd732a;
+  }
+  .eia-light-brown-25.swatch {
+    background-color: #c7884a;
+  }
+  .eia-light-brown-50.swatch {
+    background-color: #d19d6a;
+  }
+  .eia-light-brown-75.swatch {
+    background-color: #dbb28a;
+  }
+  .eia-light-brown.swatch {
+    background-color: #e5c7aa;
+  }
+  .eia-dark-black.swatch {
+    background-color: #000000;
+  }
+  .eia-dark-black-75.swatch {
+    background-color: #000000;
+  }
+  .eia-dark-black-50.swatch {
+    background-color: #000000;
+  }
+  .eia-dark-black-25.swatch {
+    background-color: #000000;
+  }
+  .eia-black {
+    background-color: black;
+  }
+  .eia-light-black-25.swatch {
+    background-color: #262626;
+  }
+  .eia-light-black-50.swatch {
+    background-color: #4d4d4d;
+  }
+  .eia-light-black-75.swatch {
+    background-color: #737373;
+  }
+  .eia-light-black.swatch {
+    background-color: #999999;
+  }
+  .eia-dark-white.swatch {
+    background-color: #666666;
+  }
+  .eia-dark-white-75.swatch {
+    background-color: #8c8c8c;
+  }
+  .eia-dark-white-50.swatch {
+    background-color: #b3b3b3;
+  }
+  .eia-dark-white-25.swatch {
+    background-color: #d9d9d9;
+  }
+  .eia-white {
+    background-color: white;
+  }
+  .eia-light-white-25.swatch {
+    background-color: #ffffff;
+  }
+  .eia-light-white-50.swatch {
+    background-color: #ffffff;
+  }
+  .eia-light-white-75.swatch {
+    background-color: #ffffff;
+  }
+  .eia-light-white.swatch {
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 600px) {
+  .font-black {
+    color: #000;
+    white-space: nowrap;
+    font-family: "century gothic";
+    font-size: 1em;
+  }
+  .font-white {
     color: #fff;
-  }
-  ._header .nav-primary .nav-primary-item:first-child {
-    border-left: none;
-  }
-  ._header .nav-primary .nav-primary-item:last-child {
-    border-right: none;
-  }
-  ._header .nav-primary .nav-primary-item a {
-    font-family: "Times New Roman", "Times", serif;
-    font-weight: normal;
-    color: #333;
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    padding: 2px 15px 2px 12px;
-    display: block;
-  }
-  ._header .logo {
-    padding: 0;
-  }
-  .shrink {
-    height: 50px;
-  }
-  .shrink .navigation {
-    height: 50px;
-  }
-  .shrink .navigation .logo {
-    padding: 0;
-    margin: 5px 250px 5px 12px;
-  }
-  .shrink .navigation .nav-primary {
-    margin: 12px 0;
-  }
-  .shrink .navigation .nav-secondary {
-    display: none;
-  }
-  .shrink .navigation .search-panel {
-    opacity: 1;
-    top: 16px;
-    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    font-family: "century gothic";
+    font-size: 1em;
   }
 }
 

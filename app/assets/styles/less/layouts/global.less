@@ -4,7 +4,7 @@
 @media @mobile {
 	.l-body-wrapper {
 		min-height: 100%;
-		position: relative;
+		margin-bottom: -2000px; // same as footer
 	}
 	.l-outer-wrapper {
 		width: 100%;
@@ -14,7 +14,8 @@
 		flex: 0 0 100%;
 		max-width: 100%;
 		width: 100%;
-		padding: 0 0 2000px 0; // 2000px must match footer height in footer.less
+		//padding: 0 0 2000px 0; // 2000px must match footer height in footer.less
+		padding: 0; 
 		min-width: 320px;
 		background-color: #fff;
 		.l-inner-wrapper{
@@ -132,8 +133,8 @@
 
 
 @media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-	.l-outer-wrapper {
-		padding-bottom: 900px;   // 900px must match footer height in footer.less
+	.l-body-wrapper {
+		margin-bottom: -900px; // same as footer
 	}
 	.l-col {
 		-webkit-box-flex: 0;
@@ -146,8 +147,8 @@
 }
 
 @media @tablet {	// mobile panorama
-	.l-outer-wrapper {
-		padding-bottom: 900px;   // 2000px must match footer height in footer.less
+	.l-body-wrapper {
+		margin-bottom: -900px; // same as footer
 	}
 	.l-row {
 		padding: 0 1em;
@@ -158,8 +159,8 @@
 
 
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
-	.l-outer-wrapper {
-		padding-bottom: 660px;   // 2000px must match footer height in footer.less
+	.l-body-wrapper {
+		margin-bottom: -660px; // same as footer
 	}
 	.l-col {
 		-webkit-box-flex: 0;
@@ -218,7 +219,6 @@
 	.l-row {
 		.l-row {
 			padding: 0;
-//			.l-two-col,
 			.l-two-third-col,
 			.l-one-third-col {
 				&:first-child {
@@ -235,12 +235,16 @@
 	body {
 		background-color: #e8ecf2;
 	}
+	.l-body-wrapper {
+		margin-bottom: -500px; // same as footer
+	}
 	.l-outer-wrapper {
 		// normall 1025 - big landscape tablets, laptops, and desktops
 		margin: 0 auto;
 		background-color: #e2e6eb;
 		border: 0;
-		padding: 0 1px 500px 1px; // 500px must match footer height in footer.less
+		//padding: 0 1px 500px 1px; // 500px must match footer height in footer.less
+		padding: 0 1px;
 		max-width: 992px;
 		min-width: 992px;
 		width: 992px;
@@ -358,8 +362,6 @@
 	.l-row {
 		padding-left: 22px;
 		padding-right: 0;
-	}
-	.l-row {
 		&>div {
 			padding-right: 44px;
 			&.l-full-width-col {
@@ -373,6 +375,10 @@
 				padding: 0;
 				width: 100%;
 			}			
+		}
+		&:last-child {
+			display: table;
+			margin-bottom: 3em;
 		}
 		&.header {
 			padding: 0;

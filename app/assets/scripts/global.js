@@ -1,4 +1,4 @@
-const $ = require("jquery");
+//const $ = require("jquery");
 
 import HeaderMenu from './modules/header-menu';
 new HeaderMenu();
@@ -24,11 +24,18 @@ new AnalysisProjections();
 import ModuleScripts from './modules/modules';
 new ModuleScripts();
 
-//import Modal from './modules/modal';
-//new Modal();
+import Highlight from './modules/highlight-search-results';
+new Highlight();
 
 import FirefoxHack from './modules/firefox-hack';
 new FirefoxHack();
 
 import jqueryUI from './modules/jquery-ui';
 new jqueryUI();
+
+//import HighCharts from './modules/highcharts';
+//new HighCharts();
+
+//import tabs from './modules/tabs';
+//new tabs();
+

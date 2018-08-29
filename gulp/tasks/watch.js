@@ -1,9 +1,8 @@
 const gulp = require('gulp');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync').create();
-const log = require('fancy-log');
 
-
+//var watchFile = '../coal/index.php';
 
 gulp.task('watch', function() {
 	browserSync.init({
@@ -21,36 +20,26 @@ gulp.task('watch', function() {
 		gulp.start('compile-less');
 	});
 	//watch for script changes
-	watch('./app/assets/scripts/**/*.js', function() {
+	watch('./app/assets/scripts/modules/**/*.js', function() {
 		gulp.start('scriptsRefresh');
 	})
+
 	// watch for global.js changes
-	watch('./app/temp/scripts/global.js', function() {
-		gulp.start('deployScripts');
-	});
-	// watch for global.js changes
-	watch('./app/temp/styles/global.css', function() {
-		gulp.start('deployStyles');
-	});
+//	watch('./app/temp/scripts/**/*js', function() {
+//		gulp.start('deployScripts');
+//	});
+	// watch for global.css changes
+//	watch('./app/temp/styles/**/*css', function() {
+//		gulp.start('deployStyles');
+//	});
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 gulp.task('compile-less', ['styles'], function() {
-	return gulp.src('./app/temp/styles/styles.css')
+	return gulp.src('app/temp/styles/global.css')
 		.pipe(browserSync.stream());
 });
-
+*/
 gulp.task('scriptsRefresh', ['scripts'], function() {
 	browserSync.reload();
 });

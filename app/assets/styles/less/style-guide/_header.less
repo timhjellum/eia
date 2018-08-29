@@ -4,21 +4,29 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 40px;
+        height: 80px;
         background-color: @eia-darker-blue;
+        background-color: #fff;
         transition: all 0.3s ease-in-out;
         z-index: 999;
+        /*
         &.show {
             transition: all 0.3s ease-in-out;
             height: 70px;
         }
-        .logo {
-            padding: 0 8px;
+        */
+        .logo-white-background {
+            padding: 0;
+            margin: 10px 40px 10px 20px;
+            float: left;
         }
+
         h1 {
             border: none;
             display: none;
+            float: left;
         }
+        /*
         .nav-primary {
             display: none;
         }
@@ -28,6 +36,62 @@
             display: block;
             margin: 12px 65px 10px 0;
             clear: right;
+        }
+        */
+        a {
+            text-decoration: none;
+        }
+        ul {
+            font-family: arial;
+            
+            &._nav {
+                //background: darkorange;
+                list-style: none;
+                margin: 30px 0 0 0;
+                padding: 0;
+                float: left;         
+                li {
+                    color: #333;
+                    display: block;
+                    float: left;
+                    padding: 1rem;
+                    position: relative;
+                    text-decoration: none;
+                    transition-duration: 0.5s;
+                    a {
+                        color: #333;
+                    }
+                    &:hover {
+                        background: #eee;
+                        cursor: pointer;
+                        &> ul {
+                            visibility: visible;
+                            opacity: 1;
+                            display: block;
+                        }
+                    }
+                    ul {
+                        &:hover {
+                            visibility: visible;
+                            opacity: 1;
+                            display: block;
+                        }
+                        background: #fff;
+                        visibility: hidden;
+                        opacity: 0;
+                        min-width: 5rem;
+                        position: absolute;
+                        transition: all 0.5s ease;
+                        margin-top: 1rem;
+                        left: 0;
+                        display: none;
+                        li {
+                            clear: both;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -40,7 +104,8 @@
 }
 @media @laptop {
     ._header {
-        height: 94px;
+        height: 80px;
+        /*
         .nav-primary {
             display: table;
             list-style: none;
@@ -79,11 +144,13 @@
                 }
             }
         }
-        .logo {
+        */
+        .logo-white-background {
             padding: 0;
             //margin: 0 12px;
         }
     }
+    /*
     &.shrink {
         height: 50px;
         .navigation {
@@ -105,6 +172,7 @@
             }
         }
     }
+    */
 }
 
 

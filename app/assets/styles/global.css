@@ -31,6 +31,7 @@
 @import "less/modules/page-titles";
 @import "less/modules/report-header";
 @import "less/modules/accent";
+@import "less/modules/fancybox";
 
 /* start reusable containers */
 

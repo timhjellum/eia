@@ -10,28 +10,37 @@ const distStyles = '../global/styles/';//	/global and /style-guide are at the sa
 //const distScripts = './app/temp/scripts/';
 //const distStyles = './app/temp/styles/';
 
-gulp.task('deployScripts', function () {
+gulp.task('deployGlobal', ['deployHighCharts'], function () {
 	gulp.src('./app/temp/scripts/global.js')
 	.pipe(gulpUglify())
 	.pipe(gulpRename('global.min.js'))
 	.pipe(gulp.dest('../global/scripts/'))
-	log.error('gulp.dest scripts completed');
+	log('global.min.js deployed to the global scripts folder');
 });
+gulp.task('deployHighCharts', function () {
+	gulp.src('./app/temp/scripts/highcharts.js')
+	.pipe(gulpUglify())
+	.pipe(gulpRename('highcharts.min.js'))
+	.pipe(gulp.dest('../global/scripts/'))
+	log('highcharts.min.js deployed to the global scripts folder');
+});
+
 gulp.task('deployStyles', function() {
 	gulp.src('./app/temp/styles/global.css')
-//	.pipe(gulpUglifyCSS())
+	.pipe(gulpUglifyCSS())
 	.pipe(gulpRename('global.min.css'))
 	.on('error', function(errorInfo) {
 		console.log(errorInfo.toString());
 		this.emit('end');
 	})
 	.pipe(gulp.dest('../global/styles/'))
-	log.error('gulp.dest styles completed');
+	log('global.min.css deployed to the global styles folder');
 });
 
 
-
-
+gulp.task('deployScripts', ['deployGlobal'], function() {
+	log('Deploy scripts COMPLETE');
+});
 
 
 

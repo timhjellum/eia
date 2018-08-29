@@ -6,7 +6,7 @@ import Tabs from '../../../../node_modules/jquery-ui/ui/widgets/tabs.js';
 // dependencies
 import Version from '../../../../node_modules/jquery-ui/ui/version.js';
 import Widget from '../../../../node_modules/jquery-ui/ui/widget.js';
-import Position from '../../../../node_modules/jquery-ui/ui/position.js';
+//import Position from '../../../../node_modules/jquery-ui/ui/position.js';
 import FormResetMixin from '../../../../node_modules/jquery-ui/ui/form-reset-mixin.js';
 import Keycode from '../../../../node_modules/jquery-ui/ui/keycode.js';
 import Labels from '../../../../node_modules/jquery-ui/ui/labels.js';
@@ -18,44 +18,19 @@ import SafeActiveElement from '../../../../node_modules/jquery-ui/ui/safe-active
 
 class jqueryUI {
     constructor() {
-        $(".page_tabs").tabs();
-        /*
-        $(".page_tabs").localScroll({
-            target:".page_tabs",
-            duration:0,
-            hash:true
-        });
-        */
-        $('.fancybox-menu').click(function() {
-            var section = $(this).data("target");
-            var options = { active: 0 };
-            switch (section) {
-                case 'nav-sources':
-                    options.active = 0;
-                    break;
-                case 'nav-topics':
-                    options.active = 1;
-                    break;
-                case 'nav-geography':
-                    options.active = 2;
-                    break;
-                case 'nav-tools':
-                    options.active = 3;
-                    break;
-                case 'nav-learn':
-                    options.active = 4;
-                    break;
-                case 'nav-news':
-                    options.active = 5;
-                    break;
-                case 'nav-default':
-                    options.active = 0;
-            }
-            $('.section-tabs').tabs(options);
-        });
+        if ($('.page_tabs').length) {
+            this.pageTabs();
+        }
+        if ($('.accordion').length) {
+            this.accordion();
+        }
+    }
 
 
 
+
+
+    accordion() {
         $('.accordion').accordion({
             heightStyle: 'content',
             active: false,
@@ -91,9 +66,8 @@ class jqueryUI {
         // set the initial state
         $('.collapse').hide();
 
-        //if ($('.accordion')[0]) {
-        if ($('.accordion')) {                 
-            // Select all links with hashes
+//        if ($('.accordion')) {                 
+// Select all links with hashes
             $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
                 // On-page links
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -121,9 +95,9 @@ class jqueryUI {
                     }
                 }
             });
-        } else {
-            //console.log('accordion not found');
-        }
+//        } else {
+//            //console.log('accordion not found');
+//        }
         var windowHash = decodeURI(window.location.hash);
         // opens accordion when user is navigating to the data page from another page        
         if(windowHash) {
@@ -145,10 +119,7 @@ class jqueryUI {
                 });
             }
         }
-//        this.events();
-        console.log($.ui.version);
-//    }
-//    events() {
+//        console.log($.ui.version);
         $('.expand-collapse-container .expand').click(function() {
             $(this).parent().next('div').find('h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
             $(this).parent().next('div').find('.ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
@@ -163,6 +134,23 @@ class jqueryUI {
             $(this).parent('span').find('.expand').show();
             $(this).parent().next('div').find('.ui-accordion-header-icon').removeClass('collapse').addClass('expand').attr({ 'aria-selected': 'true', 'tabindex': '0' });
         });
+    }
+
+
+
+
+
+
+
+    pageTabs() {
+        $(".page_tabs").tabs();
+        /*
+        $(".page_tabs").localScroll({
+            target:".page_tabs",
+            duration:0,
+            hash:true
+        });
+        */
     }
 }
 export default jqueryUI;

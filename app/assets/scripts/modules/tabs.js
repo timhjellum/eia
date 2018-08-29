@@ -1,5 +1,40 @@
 class Tabs {
 	constructor() {
+
+        console.log('tabs checking in 1');
+        $('a.fancybox-menu').click(function() {
+            
+            var dataTargetValue = $(this).attr("data-target");
+                          
+            $('.tabs-wrapper a').each(function(i) {
+                $(this).parent().removeClass('ui-state-active');
+                if($(this).attr("href").slice(1) == dataTargetValue)
+                {
+                    $(this).parent().addClass('ui-state-active');
+                }
+            });
+
+            $('.section-tabs > div').each(function(i) {
+                $(this).removeClass('ui-state-active');
+                if($(this).attr("id") == dataTargetValue)
+                {
+                    $(this).addClass('ui-state-active');
+                }
+            });
+
+        });
+
+        $('.tabs-wrapper').find('li').find('a').click(function(e) {
+            e.preventDefault();
+            var el = $(this);
+            $('.tabs-wrapper').find('li').removeClass('ui-state-active');
+            el.parent( 'li' ).addClass('ui-state-active');
+            $('.tabs-wrapper').find('div').removeClass('ui-state-active');
+            $('div').find(el.attr('href')).addClass('ui-state-active');
+
+        });
+
+/*
         this.tabOne = $('.tabs li.one');
         this.tabTwo = $('.tabs li.two');
 		this.tabThr = $('.tabs li.thr');
@@ -10,7 +45,7 @@ class Tabs {
         this.events();
     }
 	initialState() {
-        this.tabOne.addClass('active');
+        this.tabOne.addClass('ui-state-active');
         this.contentOne.addClass('show');
         this.contentTwo.addClass('hide');
         this.contentThr.addClass('hide');
@@ -21,9 +56,9 @@ class Tabs {
         this.tabThr.click(this.eventThr.bind(this));  
     }
     eventOne() {
-        this.tabOne.addClass('active');       
-        this.tabTwo.removeClass('active');
-        this.tabThr.removeClass('active');          
+        this.tabOne.addClass('ui-state-active');       
+        this.tabTwo.removeClass('ui-state-active');
+        this.tabThr.removeClass('ui-state-active');          
 
         this.contentOne.removeClass('hide');
         this.contentOne.addClass('show');
@@ -35,9 +70,9 @@ class Tabs {
         this.contentThr.addClass('hide');
     }  
     eventTwo() {
-        this.tabOne.removeClass('active');       
-        this.tabTwo.addClass('active');
-        this.tabThr.removeClass('active');  
+        this.tabOne.removeClass('ui-state-active');       
+        this.tabTwo.addClass('ui-state-active');
+        this.tabThr.removeClass('ui-state-active');  
 
         this.contentOne.removeClass('show');
         this.contentOne.addClass('hide');
@@ -49,9 +84,9 @@ class Tabs {
         this.contentThr.addClass('hide');
     } 
     eventThr() {
-        this.tabOne.removeClass('active');      
-        this.tabTwo.removeClass('active');     
-        this.tabThr.addClass('active');  
+        this.tabOne.removeClass('ui-state-active');      
+        this.tabTwo.removeClass('ui-state-active');     
+        this.tabThr.addClass('ui-state-active');  
 
         this.contentOne.removeClass('show');
         this.contentOne.addClass('hide');
@@ -61,6 +96,8 @@ class Tabs {
 
         this.contentThr.removeClass('hide');
         this.contentThr.addClass('show');
-    } 
+    }
+    */
+    }
 }
 export default Tabs;  

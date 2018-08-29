@@ -1,7 +1,7 @@
 
 
-//import StickySideBar from './modules/style-guide/sticky-sidebar';
-//new StickySideBar();
+import StickySideBar from './modules/style-guide/sticky-sidebar';
+new StickySideBar();
 
 //import LazyLoadModule from './modules/lazyload';
 //new LazyLoadModule();

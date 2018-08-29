@@ -1,69 +1,31 @@
-//import $ from 'jquery';
-import bxslider from '../../../../node_modules/bxslider/dist/jquery.bxslider.min.js';
+
+//import bxslider from '../../../../node_modules/bxslider/dist/jquery.bxslider.min.js';
+/* the bxslider is no longer maintained and there is a bug that throws an error when users use the touchscreen. The error shows up in the console only and there's no known issues with the slider. A copy of the bxslider.js with the 'fix' and the file now resides on the global/scripts/bxslider file */
+import bxslider from './vendor/bxslider/bxslider.js';
 
 class BxSlider {
     constructor() {
-        this.bxSliderHome = $('.slider-home ul');
-        this.bxSliderMulti = $('.slider-multi ul');
+
         this.bxSliderHomeWrapper = $('.slider-home-wrapper');
         this.bxSlidermultiWrapper = $('.slider-multi-wrapper');
-        this.window = $(window);
-        this.checkSize();
-        this.events();
-        this.windowResizeEvents();
-        this.slideOrder();
-        //const $dilly = [bxSliderMulti];
-        //console.log($dilly);
-        //var bxSliderMulti = $('.slider-multi ul').bxSlider();
-        //$('#reload').click(function() { 
-        //bxSliderMulti.reloadSlider()
 
+        // run on initial page load
+        this.bxSliderHome();
+        // run on window resize
+        $(window).resize(this.bxSliderHome);
+        // run on initial page load
+        this.bxSliderMulti();
+        // run on window resize
+
+        //        $(window).resize(this.bxSliderMulti);
+        $(window).on('orientationchange resize', function() {
+            this.bxSliderMulti
+              console.log(window.orientation);
+        });
     }
 
-
-
-
-
-    windowResizeEvents() {
-
-        //this.window.resize(this.checkSize.bind(this));
-
-        window.onresize = this.checkSize.bind(this);
-        
-
-        // Returns a function, that, as long as it continues to be invoked, will not
-        // be triggered. The function will be called after it stops being called for
-        // N milliseconds. If `immediate` is passed, trigger the function on the
-        // leading edge, instead of the trailing.
-        /*
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function() {
-                var context = this,
-                    args = arguments;
-                var later = function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        };
-        var myEfficientFn = debounce(function() {
-            console.log("resized");
-        }, 250);
-        window.addEventListener('resize', myEfficientFn);
-        */
-    }
-    events() {
-        setTimeout(function() {
-            $(".slider-multi").addClass("bxslider-visible");
-            $(".slider-home").addClass("bxslider-visible");
-            //console.log("visible");
-        }, 2000);
-        this.bxSliderHome.bxSlider({
+    bxSliderHome() {
+        $('.slider-home ul').bxSlider({
             auto: true,
             minSlides: 1,
             maxSlides: 1,
@@ -74,117 +36,60 @@ class BxSlider {
             pager: true,
             pagerSelector: '.slider-home-pager',
             slideWidth: 960,
-            pause: 10000
+            pause: 10000,
+            // onLoad
+            onSliderLoad: bxSliderLoaded()
         });
-    }
-    checkSize() {
-        console.log('resized');
-
-        //var bxSliderMulti = $('.slider-multi ul').bxSlider();
-
-        //bxSliderMulti.reloadSlider()
-
-
-        var footerWidth = $('footer > div').width();
-        //console.log("footer > div: " + footerWidth);
-        if ((footerWidth >= 801) && (footerWidth <= 987)) {
-            // element width / number of slides
-            var tabletLandscapeSlideWidth = parseInt(footerWidth / 4);
-            //console.log("tablet-landscape slide width: " + tabletLandscapeSlideWidth);
-            this.bxSliderMulti.bxSlider({
-                auto: false,
-                wrapperClass: 'slider-multi-wrapper',
-                minSlides: 4,
-                maxSlides: 4,
-                moveSlides: 4,
-                nextText: '&#8250;',
-                prevText: '&#8249;',
-                infiniteLoop: true,
-                pager: true,
-                pagerSelector: '.slider-multi-pager',
-                slideWidth: tabletLandscapeSlideWidth,
-                slideMargin: 10
-            });
-        } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
-            // element width / number of slides
-            var tabletSlideWidth = parseInt((footerWidth - 60) / 3);
-            //console.log("tablet slide width: " + tabletSlideWidth);
-            this.bxSliderMulti.bxSlider({
-                auto: false,
-                wrapperClass: 'slider-multi-wrapper',
-                minSlides: 3,
-                maxSlides: 3,
-                moveSlides: 3,
-                nextText: '&#8250;',
-                prevText: '&#8249;',
-                infiniteLoop: true,
-                pager: false,
-                controls: false,
-                pagerSelector: '.slider-multi-pager',
-                slideWidth: tabletSlideWidth,
-                slideMargin: 10
-            });
-            $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-        } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
-            // element width / number of slides
-            var mobileLandscapeSlideWidth = parseInt((footerWidth - 60) / 2);
-            //console.log("mobile landscape slide width: " + mobileLandscapeSlideWidth);
-            this.bxSliderMulti.bxSlider({
-                auto: false,
-                wrapperClass: 'slider-multi-wrapper',
-                minSlides: 2,
-                maxSlides: 2,
-                moveSlides: 2,
-                nextText: '&#8250;',
-                prevText: '&#8249;',
-                infiniteLoop: true,
-                pager: false,
-                controls: false,
-                pagerSelector: '.slider-multi-pager',
-                slideWidth: mobileLandscapeSlideWidth,
-                slideMargin: 10
-            });
-            $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-        } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
-            // element width / number of slides
-            var mobileSlideWidth = parseInt(footerWidth - 40);
-            //console.log("mobile slide width: " + mobileSlideWidth);
-            this.bxSliderMulti.bxSlider({
-                auto: false,
-                startSlide: 1,
-                wrapperClass: 'slider-multi-wrapper',
-                minSlides: 1,
-                maxSlides: 1,
-                moveSlides: 1,
-                infiniteLoop: true,
-                pager: false,
-                controls: false,
-                slideWidth: mobileSlideWidth,
-                //slideWidth: footerWidth,
-                slideMargin: 10
-            });
-            $(".bx-viewport").css("overflow", "visible");
-        } else {
-            //console.log("laptop and everything larger");
-            this.bxSliderMulti.bxSlider({
-                auto: false,
-                wrapperClass: 'slider-multi-wrapper',
-                minSlides: 5,
-                maxSlides: 5,
-                moveSlides: 5,
-                nextText: '&#8250;',
-                prevText: '&#8249;',
-                infiniteLoop: true,
-                //pager: true,
-                pagerSelector: '.slider-multi-pager',
-                slideWidth: 154,
-                slideMargin: 14
-            });
+        // load the slider when it's ready
+        function bxSliderLoaded() {
+            console.log('Loaded - show slides');
+            $('.slider-home').addClass('bxslider-visible');
         }
     }
+
+    bxSliderMulti() {
+
+        if ((footerWidth >= 801) && (footerWidth <= 987)) {
+            $('.slider-multi ul').bxSlider(tabletLandscape);
+            console.log(tabletLandscape);
+        } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
+            $('.slider-multi ul').bxSlider(tablet);
+            $('.page-wrapper').css('width', + footerWidth);
+            $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+            console.log(tablet);
+        } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
+            $('.slider-multi ul').bxSlider(mobileLandscape);
+            $('.page-wrapper').css('width', + footerWidth);
+            $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+            console.log(mobileLandscape);
+        } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
+            $('.slider-multi ul').bxSlider(mobile);
+            $('.page-wrapper').css('width', + footerWidth);
+            $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+            console.log(mobile);
+        } else {
+            $('.slider-multi ul').bxSlider(laptop);
+            console.log(laptop);
+        };
+        // load the slider when it's ready
+        function bxSliderLoaded() {
+            console.log('Loaded - show slides');
+            $('.slider-multi').addClass('bxslider-visible');
+        }
+
+        console.log('footer Width: ' + footerWidth);
+        console.log('mobile / slide width: ' + mobileSlideWidth);
+        console.log('mobile landscape / slide width: ' + mobileLandscapeSlideWidth);
+        console.log('tablet / slide width: ' + tabletSlideWidth);
+        console.log('tablet-landscape / slide width: ' + tabletLandscapeSlideWidth);
+
+        
+        //$('.basic-table').css('width', + basicTable);
+    }
+
     slideOrder() {
-        // if home slider slider href contains "?", append &x=z, else, append ?x=z
-        $('.slider-home h2 a, .slider-home h3 a').attr("href", function(ind, attr) {
+        // if home slider slider href contains '?', append &x=z, else, append ?x=z
+        $('.slider-home h2 a, .slider-home h3 a').attr('href', function(ind, attr) {
 
             var slideOrder = $(this).parents('li').attr('class');
             var hash_position = attr.indexOf('#');

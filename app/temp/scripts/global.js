@@ -78,19 +78,21 @@
 
 	var _modules2 = _interopRequireDefault(_modules);
 
-	var _firefoxHack = __webpack_require__(13);
+	var _highlightSearchResults = __webpack_require__(13);
+
+	var _highlightSearchResults2 = _interopRequireDefault(_highlightSearchResults);
+
+	var _firefoxHack = __webpack_require__(14);
 
 	var _firefoxHack2 = _interopRequireDefault(_firefoxHack);
 
-	var _jqueryUi = __webpack_require__(14);
+	var _jqueryUi = __webpack_require__(15);
 
 	var _jqueryUi2 = _interopRequireDefault(_jqueryUi);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var $ = __webpack_require__(3);
-
-	new _headerMenu2.default();
+	new _headerMenu2.default(); //const $ = require("jquery");
 
 	new _headerSearch2.default();
 
@@ -106,12 +108,17 @@
 
 	new _modules2.default();
 
-	//import Modal from './modules/modal';
-	//new Modal();
+	new _highlightSearchResults2.default();
 
 	new _firefoxHack2.default();
 
 	new _jqueryUi2.default();
+
+	//import HighCharts from './modules/highcharts';
+	//new HighCharts();
+
+	//import tabs from './modules/tabs';
+	//new tabs();
 
 /***/ }),
 /* 1 */
@@ -151,9 +158,54 @@
 	        this.window = $(window);
 	        //this.events();
 	        this.openMenu();
+	        this.headerTabs = $('.section-tabs');
+	        this.checkForBaseAndCorrectTabHrefs();
+	        this.headerTabs.tabs();
 	    }
 
 	    _createClass(HeaderMenu, [{
+	        key: 'setActiveTab',
+	        value: function setActiveTab(section) {
+	            var options = { active: 0 };
+	            switch (section) {
+	                case 'nav-sources':
+	                    options.active = 0;
+	                    break;
+	                case 'nav-topics':
+	                    options.active = 1;
+	                    break;
+	                case 'nav-geography':
+	                    options.active = 2;
+	                    break;
+	                case 'nav-tools':
+	                    options.active = 3;
+	                    break;
+	                case 'nav-learn':
+	                    options.active = 4;
+	                    break;
+	                case 'nav-news':
+	                    options.active = 5;
+	                    break;
+	                case 'nav-default':
+	                    options.active = 0;
+	            }
+	            this.headerTabs.tabs("option", "active", options.active);
+	        }
+	    }, {
+	        key: 'checkForBaseAndCorrectTabHrefs',
+	        value: function checkForBaseAndCorrectTabHrefs() {
+	            var base = $('base');
+	            if (base.length > 0) {
+	                var baseHref = base.attr('href');
+	                $.each($('ul:first a', this.headerTabs), function (index, anchor) {
+	                    if (!$(anchor).data('orig-href')) {
+	                        $(anchor).data('orig-href', $(anchor).attr('href'));
+	                    }
+	                    $(anchor).attr('href', window.location.pathname + $(anchor).data('orig-href'));
+	                });
+	            }
+	        }
+	    }, {
 	        key: 'lightBox',
 	        value: function lightBox() {
 	            // this.closeButton.prepend('<i class="ico-menu close">Close</i>');
@@ -193,6 +245,8 @@
 	            var viewPortWidth = window.innerWidth;
 	            var viewPortHeight = window.innerHeight;
 	            var fbWidth = 980;
+	            var self = this;
+
 	            //	console.log(fbWidth);
 	            $('.fancybox-menu').fancybox({
 	                scrolling: 'visible',
@@ -224,6 +278,7 @@
 	                },
 	                beforeShow: function beforeShow() {
 	                    $('.section-tabs').parent().parent().parent().parent().addClass('global-nav');
+	                    self.setActiveTab($(this.element).data('target'));
 	                },
 	                onUpdate: function onUpdate() {
 	                    if (window.innerWidth <= fbWidth) {
@@ -12467,158 +12522,143 @@
 	        // run on window resize
 	        $(window).resize(this.bxSliderHome);
 
-	        var mySettings = {
-	            auto: false,
-	            wrapperClass: 'slider-multi-wrapper',
-	            nextText: '&#8250;',
-	            prevText: '&#8249;',
-	            infiniteLoop: true,
-	            pager: true,
-	            pagerSelector: '.slider-multi-pager',
-	            slideWidth: 154,
-	            slideMargin: 14,
-	            onSliderLoad: MultiSliderLoaded()
-	        };
-	        var slider = $('.slider-multi ul').bxSlider(mySettings);
-	        $(window).on('orientationchange resize', function () {
-	            //$(window).resize(function() {
-
-	            var footerWidth = $('footer').width();
-	            var mobileSlideWidth = parseInt(footerWidth - 40);
-	            var mobileLandscapeSlideWidth = parseInt(footerWidth / 2);
-	            var tabletSlideWidth = parseInt(footerWidth / 3);
-	            var tabletLandscapeSlideWidth = parseInt(footerWidth / 4);
-	            var basicTable = parseInt(footerWidth - 12);
-
-	            if (footerWidth > 989) {
+	        var sliderExists = document.querySelector('.slider-multi');
+	        if (sliderExists !== null) {
+	            // on load, trigger the resize event
+	            // load the slider when it's ready
+	            var _MultiSliderLoaded = function _MultiSliderLoaded() {
+	                $('.slider-multi').addClass('bxslider-visible');
 	                setTimeout(function () {
-	                    $('.bx-controls').addClass('show').removeClass('hide');
-	                    console.log('footer : ' + footerWidth);
-	                }, 1000);
-	            } else if (footerWidth <= 989) {
-	                setTimeout(function () {
-	                    $('.bx-controls').removeClass('show').addClass('hide');
-	                    console.log('footer : ' + footerWidth);
+	                    $('.slider-multi-pager').addClass('bxslider-visible');
 	                }, 1000);
 	            };
 
-	            if (footerWidth >= 801 && footerWidth <= 987) {
-	                //mySettings.auto = false;
-	                mySettings.wrapperClass = 'slider-multi-wrapper';
-	                mySettings.minSlides = 4;
-	                mySettings.maxSlides = 4;
-	                mySettings.moveSlides = 4;
-	                mySettings.nextText = '&#8250;';
-	                mySettings.prevText = '&#8249;';
-	                mySettings.infiniteLoop = true;
-	                //mySettings.pager = true;
-	                mySettings.pagerSelector = '.slider-multi-pager';
-	                mySettings.slideWidth = tabletLandscapeSlideWidth;
-	                mySettings.slideMargin = 10;
-	                mySettings.onSliderLoad = MultiSliderLoaded();
-	                setTimeout(function () {
-	                    slider.destroySlider();
-	                    slider.reloadSlider(mySettings);
-	                }, 100);
-	                console.log('tabletLandscape - footer width: ' + footerWidth);
-	            } else if (footerWidth >= 600 && footerWidth <= 800) {
-	                //mySettings.auto = false;
-	                mySettings.wrapperClass = 'slider-multi-wrapper';
-	                mySettings.minSlides = 3;
-	                mySettings.maxSlides = 3;
-	                mySettings.moveSlides = 3;
-	                //mySettings.nextText = '&#8250;';
-	                //mySettings.prevText = '&#8249;';
-	                mySettings.infiniteLoop = true;
-	                mySettings.pager = false;
-	                mySettings.controls = false;
-	                //mySettings.pagerSelector = '';
-	                mySettings.slideWidth = tabletSlideWidth;
-	                mySettings.slideMargin = 10;
-	                mySettings.onSliderLoad = MultiSliderLoaded();
-	                setTimeout(function () {
-	                    slider.destroySlider();
-	                    slider.reloadSlider(mySettings);
-	                }, 100);
-	                $('.page-wrapper').css('width', +footerWidth);
-	                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-	                console.log('tablet - footer width: ' + footerWidth);
-	            } else if (footerWidth >= 450 && footerWidth <= 599) {
-	                //mySettings.auto = false;
-	                mySettings.wrapperClass = 'slider-multi-wrapper';
-	                mySettings.minSlides = 2;
-	                mySettings.maxSlides = 2;
-	                mySettings.moveSlides = 2;
-	                //mySettings.nextText = '&#8250;';
-	                //mySettings.prevText = '&#8249;';
-	                mySettings.infiniteLoop = true;
-	                mySettings.pager = false;
-	                mySettings.controls = false;
-	                //mySettings.pagerSelector = '';
-	                mySettings.slideWidth = mobileLandscapeSlideWidth;
-	                mySettings.slideMargin = 10;
-	                mySettings.onSliderLoad = MultiSliderLoaded();
-	                setTimeout(function () {
-	                    slider.destroySlider();
-	                    slider.reloadSlider(mySettings);
-	                }, 100);
-	                $('.page-wrapper').css('width', +footerWidth);
-	                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-	                console.log('mobileLandscape - footer width: ' + footerWidth);
-	            } else if (footerWidth >= 320 && footerWidth <= 449) {
-	                //mySettings.auto = false;
-	                mySettings.wrapperClass = 'slider-multi-wrapper';
-	                mySettings.minSlides = 1;
-	                mySettings.maxSlides = 1;
-	                mySettings.moveSlides = 1;
-	                //mySettings.nextText = '&#8250;';
-	                //mySettings.prevText = '&#8249;';
-	                mySettings.infiniteLoop = true;
-	                mySettings.pager = false;
-	                mySettings.controls = false;
-	                //mySettings.pagerSelector = '';
-	                mySettings.slideWidth = mobileSlideWidth;
-	                mySettings.slideMargin = 10;
-	                mySettings.onSliderLoad = MultiSliderLoaded();
-	                setTimeout(function () {
-	                    slider.destroySlider();
-	                    slider.reloadSlider(mySettings);
-	                }, 100);
-	                $('.page-wrapper').css('width', +footerWidth);
-	                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-	                console.log('mobile - footer width: ' + footerWidth);
-	            } else {
-	                //mySettings.auto = false;
-	                mySettings.wrapperClass = 'slider-multi-wrapper';
-	                mySettings.minSlides = 5;
-	                mySettings.maxSlides = 5;
-	                mySettings.moveSlides = 5;
-	                mySettings.nextText = '&#8250;';
-	                mySettings.prevText = '&#8249;';
-	                mySettings.infiniteLoop = true;
-	                //mySettings.pager = true;
-	                mySettings.pagerSelector = '.slider-multi-pager';
-	                mySettings.slideWidth = 154;
-	                mySettings.slideMargin = 14;
-	                mySettings.onSliderLoad = MultiSliderLoaded();
-	                setTimeout(function () {
-	                    slider.destroySlider();
-	                    slider.reloadSlider(mySettings);
-	                }, 100);
-	                console.log('laptop - footer width: ' + footerWidth);
+	            var mySettings = {
+	                auto: false,
+	                wrapperClass: 'slider-multi-wrapper',
+	                nextText: '&#8250;',
+	                prevText: '&#8249;',
+	                infiniteLoop: true,
+	                pager: true,
+	                pagerSelector: '.slider-multi-pager',
+	                slideWidth: 154,
+	                slideMargin: 14,
+	                onSliderLoad: _MultiSliderLoaded()
 	            };
-	        }).trigger('resize'); // on load, trigger the resize event
+	            var slider = $('.slider-multi ul').bxSlider(mySettings);
+	            $(window).on('orientationchange resize', function () {
+	                //$(window).resize(function() {
 
-	        // load the slider when it's ready
-	        function MultiSliderLoaded() {
-	            $('.slider-multi').addClass('bxslider-visible');
-	            setTimeout(function () {
-	                $('.slider-multi-pager').addClass('bxslider-visible');
-	            }, 1000);
+	                var footerWidth = $('footer').width();
+	                var mobileSlideWidth = parseInt(footerWidth - 40);
+	                var mobileLandscapeSlideWidth = parseInt(footerWidth / 2);
+	                var tabletSlideWidth = parseInt(footerWidth / 3);
+	                var tabletLandscapeSlideWidth = parseInt(footerWidth / 4);
+	                var basicTable = parseInt(footerWidth - 12);
+
+	                if (footerWidth > 989) {
+	                    setTimeout(function () {
+	                        $('.bx-controls').addClass('show').removeClass('hide');
+	                        //console.log('footer : ' + footerWidth);
+	                    }, 1000);
+	                } else if (footerWidth <= 989) {
+	                    setTimeout(function () {
+	                        $('.bx-controls').removeClass('show').addClass('hide');
+	                        //console.log('footer : ' + footerWidth);
+	                    }, 1000);
+	                };
+
+	                if (footerWidth >= 801 && footerWidth <= 987) {
+	                    mySettings.wrapperClass = 'slider-multi-wrapper';
+	                    mySettings.minSlides = 4;
+	                    mySettings.maxSlides = 4;
+	                    mySettings.moveSlides = 4;
+	                    mySettings.nextText = '&#8250;';
+	                    mySettings.prevText = '&#8249;';
+	                    mySettings.infiniteLoop = true;
+	                    mySettings.pagerSelector = '.slider-multi-pager';
+	                    mySettings.slideWidth = tabletLandscapeSlideWidth;
+	                    mySettings.slideMargin = 10;
+	                    mySettings.onSliderLoad = _MultiSliderLoaded();
+	                    setTimeout(function () {
+	                        slider.destroySlider();
+	                        slider.reloadSlider(mySettings);
+	                    }, 100);
+	                    //console.log('tabletLandscape - footer width: ' + footerWidth);
+	                } else if (footerWidth >= 600 && footerWidth <= 800) {
+	                    mySettings.wrapperClass = 'slider-multi-wrapper';
+	                    mySettings.minSlides = 3;
+	                    mySettings.maxSlides = 3;
+	                    mySettings.moveSlides = 3;
+	                    mySettings.infiniteLoop = true;
+	                    mySettings.pager = false;
+	                    mySettings.controls = false;
+	                    mySettings.slideWidth = tabletSlideWidth;
+	                    mySettings.slideMargin = 10;
+	                    mySettings.onSliderLoad = _MultiSliderLoaded();
+	                    setTimeout(function () {
+	                        slider.destroySlider();
+	                        slider.reloadSlider(mySettings);
+	                    }, 100);
+	                    $('.page-wrapper').css('width', +footerWidth);
+	                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+	                    //console.log('tablet - footer width: ' + footerWidth);
+	                } else if (footerWidth >= 450 && footerWidth <= 599) {
+	                    mySettings.wrapperClass = 'slider-multi-wrapper';
+	                    mySettings.minSlides = 2;
+	                    mySettings.maxSlides = 2;
+	                    mySettings.moveSlides = 2;
+	                    mySettings.infiniteLoop = true;
+	                    mySettings.pager = false;
+	                    mySettings.controls = false;
+	                    mySettings.slideWidth = mobileLandscapeSlideWidth;
+	                    mySettings.slideMargin = 10;
+	                    mySettings.onSliderLoad = _MultiSliderLoaded();
+	                    setTimeout(function () {
+	                        slider.destroySlider();
+	                        slider.reloadSlider(mySettings);
+	                    }, 100);
+	                    $('.page-wrapper').css('width', +footerWidth);
+	                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+	                    //console.log('mobileLandscape - footer width: ' + footerWidth);
+	                } else if (footerWidth >= 320 && footerWidth <= 449) {
+	                    mySettings.wrapperClass = 'slider-multi-wrapper';
+	                    mySettings.minSlides = 1;
+	                    mySettings.maxSlides = 1;
+	                    mySettings.moveSlides = 1;
+	                    mySettings.infiniteLoop = true;
+	                    mySettings.pager = false;
+	                    mySettings.controls = false;
+	                    mySettings.slideWidth = mobileSlideWidth;
+	                    mySettings.slideMargin = 10;
+	                    mySettings.onSliderLoad = _MultiSliderLoaded();
+	                    setTimeout(function () {
+	                        slider.destroySlider();
+	                        slider.reloadSlider(mySettings);
+	                    }, 100);
+	                    $('.page-wrapper').css('width', +footerWidth);
+	                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+	                    //console.log('mobile - footer width: ' + footerWidth);
+	                } else {
+	                    mySettings.wrapperClass = 'slider-multi-wrapper';
+	                    mySettings.minSlides = 5;
+	                    mySettings.maxSlides = 5;
+	                    mySettings.moveSlides = 5;
+	                    mySettings.nextText = '&#8250;';
+	                    mySettings.prevText = '&#8249;';
+	                    mySettings.infiniteLoop = true;
+	                    mySettings.pagerSelector = '.slider-multi-pager';
+	                    mySettings.slideWidth = 154;
+	                    mySettings.slideMargin = 14;
+	                    mySettings.onSliderLoad = _MultiSliderLoaded();
+	                    setTimeout(function () {
+	                        slider.destroySlider();
+	                        slider.reloadSlider(mySettings);
+	                    }, 100);
+	                    //console.log('laptop - footer width: ' + footerWidth);
+	                };
+	            }).trigger('resize');
 	        }
-
-	        //this.bxSliderHome();
-	        console.log('show');
 	    }
 
 	    /*
@@ -14659,6 +14699,84 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	var Highlight = function Highlight() {
+	    _classCallCheck(this, Highlight);
+
+	    var dataPage = document.querySelector('.data');
+	    if (dataPage !== null) {
+
+	        var referrer = document.referrer;
+	        var query;
+	        //referrer = document.location.href;  //REMOVE AFTER TESTING
+	        if (referrer) {
+	            var posQ = referrer.indexOf('query=');
+	            if (posQ > -1) {
+	                posEnd = referrer.indexOf('&', posQ);
+	                if (posEnd > -1) {
+	                    query = referrer.substring(posQ + 6, posEnd);
+	                } else {
+	                    query = referrer.substring(posQ + 6);
+	                }
+	                var aryKeywords = query.split('+');
+	                for (var i = 0; i < aryKeywords.length; i++) {
+	                    //can't get this to work!  var patt = new  RegExp('(\b' + aryKeywords[i] + ')(?!([^<]+)?>)','ig');
+	                    var patt = new RegExp('(\\b' + aryKeywords[i] + '\\w*)(?!([^<]+)?>)', 'ig');
+	                    ///var patt = new  RegExp('(\\w*' + aryKeywords[i] + '\\w*)(?!([^<]+)?>)','ig');
+	                    var pageHTML = $('div.pagecontent').find('td').each(function () {
+	                        if (patt.test(this.innerHTML)) {
+	                            var spannedContent = this.innerHTML.replace(patt, '<span class="highlight keyword' + i + '">$1</span>');
+	                            this.innerHTML = spannedContent;
+	                        }
+	                    });
+	                }
+	                if (document.location.href.toLowerCase().indexOf('/data.cfm') > 0 || document.location.href.toLowerCase().indexOf('totalenergy/data/') > 0) {
+	                    // open the tab containing the most highlighted keywords
+	                    var maxAppearances = 0;
+	                    var aryCountObj = [];
+	                    $('table.contable tbody').each(function () {
+	                        var countObj = {
+	                            tbody: this,
+	                            appearances: 0,
+	                            count: 0
+	                        };
+	                        for (var i = 0; i < aryKeywords.length; i++) {
+	                            var found = $(this).find('span.highlight.keyword' + i).length;
+	                            countObj.count = +found;
+	                            if (found > 0) countObj.appearances++;
+	                        }
+	                        if (maxAppearances < countObj.appearances) maxAppearances = countObj.appearances;
+	                        aryCountObj.push(countObj);
+	                    });
+	                    for (var i = 0; i < aryCountObj.length; i++) {
+	                        //open section with most
+	                        if (aryCountObj[i].appearances == maxAppearances) {
+	                            $(aryCountObj[i].tbody).prev('thead').last().click();
+	                        }
+	                    }
+	                }
+	                $('.highlight').click(function () {
+	                    $('.highlight').removeClass('highlight').addClass('highlight_off');
+	                });
+	            }
+	        }
+	    } // dataPage
+	};
+
+	exports.default = Highlight;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 	var FirefoxHack = function FirefoxHack() {
 	    _classCallCheck(this, FirefoxHack);
 
@@ -14682,7 +14800,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14691,31 +14809,29 @@
 	    value: true
 	});
 
-	var _accordion = __webpack_require__(15);
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _accordion = __webpack_require__(16);
 
 	var _accordion2 = _interopRequireDefault(_accordion);
 
-	var _tabs = __webpack_require__(20);
+	var _tabs = __webpack_require__(21);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
-	var _version = __webpack_require__(16);
+	var _version = __webpack_require__(17);
 
 	var _version2 = _interopRequireDefault(_version);
 
-	var _widget = __webpack_require__(19);
+	var _widget = __webpack_require__(20);
 
 	var _widget2 = _interopRequireDefault(_widget);
-
-	var _position = __webpack_require__(23);
-
-	var _position2 = _interopRequireDefault(_position);
 
 	var _formResetMixin = __webpack_require__(24);
 
 	var _formResetMixin2 = _interopRequireDefault(_formResetMixin);
 
-	var _keycode = __webpack_require__(17);
+	var _keycode = __webpack_require__(18);
 
 	var _keycode2 = _interopRequireDefault(_keycode);
 
@@ -14723,7 +14839,7 @@
 
 	var _labels2 = _interopRequireDefault(_labels);
 
-	var _uniqueId = __webpack_require__(18);
+	var _uniqueId = __webpack_require__(19);
 
 	var _uniqueId2 = _interopRequireDefault(_uniqueId);
 
@@ -14735,11 +14851,11 @@
 
 	var _effect2 = _interopRequireDefault(_effect);
 
-	var _escapeSelector = __webpack_require__(21);
+	var _escapeSelector = __webpack_require__(22);
 
 	var _escapeSelector2 = _interopRequireDefault(_escapeSelector);
 
-	var _safeActiveElement = __webpack_require__(22);
+	var _safeActiveElement = __webpack_require__(23);
 
 	var _safeActiveElement2 = _interopRequireDefault(_safeActiveElement);
 
@@ -14753,158 +14869,148 @@
 	//import Datepicker from '../../../../node_modules/jquery-ui/ui/widgets/datepicker.js';
 	// dependencies
 
-	var jqueryUI = function jqueryUI() {
-	    _classCallCheck(this, jqueryUI);
+	//import Position from '../../../../node_modules/jquery-ui/ui/position.js';
 
-	    $(".page_tabs").tabs();
-	    /*
-	    $(".page_tabs").localScroll({
-	        target:".page_tabs",
-	        duration:0,
-	        hash:true
-	    });
-	    */
-	    $('.fancybox-menu').click(function () {
-	        var section = $(this).data("target");
-	        var options = { active: 0 };
-	        switch (section) {
-	            case 'nav-sources':
-	                options.active = 0;
-	                break;
-	            case 'nav-topics':
-	                options.active = 1;
-	                break;
-	            case 'nav-geography':
-	                options.active = 2;
-	                break;
-	            case 'nav-tools':
-	                options.active = 3;
-	                break;
-	            case 'nav-learn':
-	                options.active = 4;
-	                break;
-	            case 'nav-news':
-	                options.active = 5;
-	                break;
-	            case 'nav-default':
-	                options.active = 0;
+	var jqueryUI = function () {
+	    function jqueryUI() {
+	        _classCallCheck(this, jqueryUI);
+
+	        if ($('.page_tabs').length) {
+	            this.pageTabs();
 	        }
-	        $('.section-tabs').tabs(options);
-	    });
-
-	    $('.accordion').accordion({
-	        heightStyle: 'content',
-	        active: false,
-	        collapsible: true,
-	        header: 'h3',
-	        icons: {
-	            'header': 'ico expand',
-	            'activeHeader': 'ico collapse'
-	        },
-	        activate: function activate(event, ui) {
-	            if (!$.isEmptyObject(ui.newHeader.offset())) {
-	                $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top - 50 }, 'slow');
-	            }
+	        if ($('.accordion').length) {
+	            this.accordion();
 	        }
-	    });
+	    }
 
-	    $('.accordion.all-open').accordion({
-	        heightStyle: 'content',
-	        active: true,
-	        collapsible: true,
-	        header: 'h3',
-	        icons: false
-	    });
+	    _createClass(jqueryUI, [{
+	        key: 'accordion',
+	        value: function accordion() {
+	            $('.accordion').accordion({
+	                heightStyle: 'content',
+	                active: false,
+	                collapsible: true,
+	                header: 'h3',
+	                icons: {
+	                    'header': 'ico expand',
+	                    'activeHeader': 'ico collapse'
+	                },
+	                activate: function activate(event, ui) {
+	                    if (!$.isEmptyObject(ui.newHeader.offset())) {
+	                        $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top - 50 }, 'slow');
+	                    }
+	                }
+	            });
 
-	    $('.accordion.all-open h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
-	    $('.accordion.all-open .ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+	            $('.accordion.all-open').accordion({
+	                heightStyle: 'content',
+	                active: true,
+	                collapsible: true,
+	                header: 'h3',
+	                icons: false
+	            });
 
-	    $('.accordion.first-open').accordion({
-	        heightStyle: 'content',
-	        collapsible: true
-	    });
-	    // set the initial state
-	    $('.collapse').hide();
+	            $('.accordion.all-open h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
+	            $('.accordion.all-open .ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
 
-	    //if ($('.accordion')[0]) {
-	    if ($('.accordion')) {
-	        // Select all links with hashes
-	        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
-	            // On-page links
-	            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-	                // Figure out element to scroll to
-	                var target = $(this.hash);
-	                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-	                // Does a scroll target exist?
+	            $('.accordion.first-open').accordion({
+	                heightStyle: 'content',
+	                collapsible: true
+	            });
+	            // set the initial state
+	            $('.collapse').hide();
+
+	            //        if ($('.accordion')) {                 
+	            // Select all links with hashes
+	            $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
+	                // On-page links
+	                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	                    // Figure out element to scroll to
+	                    var target = $(this.hash);
+	                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	                    // Does a scroll target exist?
+	                    if (target.length) {
+	                        // Only prevent default if animation is actually gonna happen
+	                        event.preventDefault();
+	                        $('html, body').animate({
+	                            scrollTop: target.offset().top - 60 }, 1000, function () {
+	                            // Callback after animation
+	                            // Must change focus!
+	                            var $target = $(target);
+	                            $target.closest('h3').next('div').css('display', 'block');
+	                            $target.focus();
+	                            if ($target.is(":focus")) {
+	                                // Checking if the target was focused
+	                                return false;
+	                            } else {
+	                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+	                                $target.focus(); // Set focus again
+	                            }
+	                        });
+	                    }
+	                }
+	            });
+	            //        } else {
+	            //            //console.log('accordion not found');
+	            //        }
+	            var windowHash = decodeURI(window.location.hash);
+	            // opens accordion when user is navigating to the data page from another page        
+	            if (windowHash) {
+	                console.log(windowHash);
+	                var target = $(windowHash);
+	                target = target.length ? target : $('[name=' + windowHash.substr(1) + ']');
 	                if (target.length) {
-	                    // Only prevent default if animation is actually gonna happen
-	                    event.preventDefault();
 	                    $('html, body').animate({
 	                        scrollTop: target.offset().top - 60 }, 1000, function () {
-	                        // Callback after animation
-	                        // Must change focus!
 	                        var $target = $(target);
 	                        $target.closest('h3').next('div').css('display', 'block');
 	                        $target.focus();
 	                        if ($target.is(":focus")) {
-	                            // Checking if the target was focused
 	                            return false;
 	                        } else {
-	                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-	                            $target.focus(); // Set focus again
+	                            $target.attr('tabindex', '-1');
+	                            $target.focus();
 	                        }
 	                    });
 	                }
 	            }
-	        });
-	    } else {
-	        //console.log('accordion not found');
-	    }
-	    var windowHash = decodeURI(window.location.hash);
-	    // opens accordion when user is navigating to the data page from another page        
-	    if (windowHash) {
-	        console.log(windowHash);
-	        var target = $(windowHash);
-	        target = target.length ? target : $('[name=' + windowHash.substr(1) + ']');
-	        if (target.length) {
-	            $('html, body').animate({
-	                scrollTop: target.offset().top - 60 }, 1000, function () {
-	                var $target = $(target);
-	                $target.closest('h3').next('div').css('display', 'block');
-	                $target.focus();
-	                if ($target.is(":focus")) {
-	                    return false;
-	                } else {
-	                    $target.attr('tabindex', '-1');
-	                    $target.focus();
-	                }
+	            //        console.log($.ui.version);
+	            $('.expand-collapse-container .expand').click(function () {
+	                $(this).parent().next('div').find('h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
+	                $(this).parent().next('div').find('.ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+	                $(this).hide();
+	                $(this).parent('span').find('.collapse').show();
+	                $(this).parent().next('div').find('.ui-accordion-header-icon').removeClass('expand').addClass('collapse').attr({ 'aria-selected': 'true', 'tabindex': '0' });
+	            });
+	            $('.expand-collapse-container .collapse').click(function () {
+	                $(this).parent().next('div').find('h3').removeClass('ui-accordion-header-active').addClass('ui-accordion-header-collapsed').attr({ 'aria-selected': 'false', 'tabindex': '-1' });
+	                $(this).parent().next('div').find('.ui-accordion-content').removeClass('ui-accordion-content-active').attr({ 'aria-expanded': 'false', 'aria-hidden': 'true' }).hide();
+	                $(this).hide();
+	                $(this).parent('span').find('.expand').show();
+	                $(this).parent().next('div').find('.ui-accordion-header-icon').removeClass('collapse').addClass('expand').attr({ 'aria-selected': 'true', 'tabindex': '0' });
 	            });
 	        }
-	    }
-	    //        this.events();
-	    console.log($.ui.version);
-	    //    }
-	    //    events() {
-	    $('.expand-collapse-container .expand').click(function () {
-	        $(this).parent().next('div').find('h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
-	        $(this).parent().next('div').find('.ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
-	        $(this).hide();
-	        $(this).parent('span').find('.collapse').show();
-	        $(this).parent().next('div').find('.ui-accordion-header-icon').removeClass('expand').addClass('collapse').attr({ 'aria-selected': 'true', 'tabindex': '0' });
-	    });
-	    $('.expand-collapse-container .collapse').click(function () {
-	        $(this).parent().next('div').find('h3').removeClass('ui-accordion-header-active').addClass('ui-accordion-header-collapsed').attr({ 'aria-selected': 'false', 'tabindex': '-1' });
-	        $(this).parent().next('div').find('.ui-accordion-content').removeClass('ui-accordion-content-active').attr({ 'aria-expanded': 'false', 'aria-hidden': 'true' }).hide();
-	        $(this).hide();
-	        $(this).parent('span').find('.expand').show();
-	        $(this).parent().next('div').find('.ui-accordion-header-icon').removeClass('collapse').addClass('expand').attr({ 'aria-selected': 'true', 'tabindex': '0' });
-	    });
-	};
+	    }, {
+	        key: 'pageTabs',
+	        value: function pageTabs() {
+	            $(".page_tabs").tabs();
+	            /*
+	            $(".page_tabs").localScroll({
+	                target:".page_tabs",
+	                duration:0,
+	                hash:true
+	            });
+	            */
+	        }
+	    }]);
+
+	    return jqueryUI;
+	}();
 
 	exports.default = jqueryUI;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14933,10 +15039,10 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(3),
-				__webpack_require__(16),
 				__webpack_require__(17),
 				__webpack_require__(18),
-				__webpack_require__(19)
+				__webpack_require__(19),
+				__webpack_require__(20)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -15523,7 +15629,7 @@
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -15546,7 +15652,7 @@
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15567,7 +15673,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15597,7 +15703,7 @@
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15618,7 +15724,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15652,7 +15758,7 @@
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15674,7 +15780,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -16391,7 +16497,7 @@
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16418,12 +16524,12 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(3),
-				__webpack_require__(21),
-				__webpack_require__(17),
 				__webpack_require__(22),
 				__webpack_require__(18),
-				__webpack_require__(16),
-				__webpack_require__(19)
+				__webpack_require__(23),
+				__webpack_require__(19),
+				__webpack_require__(17),
+				__webpack_require__(20)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -17321,14 +17427,14 @@
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17348,14 +17454,14 @@
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17394,510 +17500,6 @@
 
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * jQuery UI Position 1.12.1
-	 * http://jqueryui.com
-	 *
-	 * Copyright jQuery Foundation and other contributors
-	 * Released under the MIT license.
-	 * http://jquery.org/license
-	 *
-	 * http://api.jqueryui.com/position/
-	 */
-
-	//>>label: Position
-	//>>group: Core
-	//>>description: Positions elements relative to other elements.
-	//>>docs: http://api.jqueryui.com/position/
-	//>>demos: http://jqueryui.com/position/
-
-	( function( factory ) {
-		if ( true ) {
-
-			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-
-			// Browser globals
-			factory( jQuery );
-		}
-	}( function( $ ) {
-	( function() {
-	var cachedScrollbarWidth,
-		max = Math.max,
-		abs = Math.abs,
-		rhorizontal = /left|center|right/,
-		rvertical = /top|center|bottom/,
-		roffset = /[\+\-]\d+(\.[\d]+)?%?/,
-		rposition = /^\w+/,
-		rpercent = /%$/,
-		_position = $.fn.position;
-
-	function getOffsets( offsets, width, height ) {
-		return [
-			parseFloat( offsets[ 0 ] ) * ( rpercent.test( offsets[ 0 ] ) ? width / 100 : 1 ),
-			parseFloat( offsets[ 1 ] ) * ( rpercent.test( offsets[ 1 ] ) ? height / 100 : 1 )
-		];
-	}
-
-	function parseCss( element, property ) {
-		return parseInt( $.css( element, property ), 10 ) || 0;
-	}
-
-	function getDimensions( elem ) {
-		var raw = elem[ 0 ];
-		if ( raw.nodeType === 9 ) {
-			return {
-				width: elem.width(),
-				height: elem.height(),
-				offset: { top: 0, left: 0 }
-			};
-		}
-		if ( $.isWindow( raw ) ) {
-			return {
-				width: elem.width(),
-				height: elem.height(),
-				offset: { top: elem.scrollTop(), left: elem.scrollLeft() }
-			};
-		}
-		if ( raw.preventDefault ) {
-			return {
-				width: 0,
-				height: 0,
-				offset: { top: raw.pageY, left: raw.pageX }
-			};
-		}
-		return {
-			width: elem.outerWidth(),
-			height: elem.outerHeight(),
-			offset: elem.offset()
-		};
-	}
-
-	$.position = {
-		scrollbarWidth: function() {
-			if ( cachedScrollbarWidth !== undefined ) {
-				return cachedScrollbarWidth;
-			}
-			var w1, w2,
-				div = $( "<div " +
-					"style='display:block;position:absolute;width:50px;height:50px;overflow:hidden;'>" +
-					"<div style='height:100px;width:auto;'></div></div>" ),
-				innerDiv = div.children()[ 0 ];
-
-			$( "body" ).append( div );
-			w1 = innerDiv.offsetWidth;
-			div.css( "overflow", "scroll" );
-
-			w2 = innerDiv.offsetWidth;
-
-			if ( w1 === w2 ) {
-				w2 = div[ 0 ].clientWidth;
-			}
-
-			div.remove();
-
-			return ( cachedScrollbarWidth = w1 - w2 );
-		},
-		getScrollInfo: function( within ) {
-			var overflowX = within.isWindow || within.isDocument ? "" :
-					within.element.css( "overflow-x" ),
-				overflowY = within.isWindow || within.isDocument ? "" :
-					within.element.css( "overflow-y" ),
-				hasOverflowX = overflowX === "scroll" ||
-					( overflowX === "auto" && within.width < within.element[ 0 ].scrollWidth ),
-				hasOverflowY = overflowY === "scroll" ||
-					( overflowY === "auto" && within.height < within.element[ 0 ].scrollHeight );
-			return {
-				width: hasOverflowY ? $.position.scrollbarWidth() : 0,
-				height: hasOverflowX ? $.position.scrollbarWidth() : 0
-			};
-		},
-		getWithinInfo: function( element ) {
-			var withinElement = $( element || window ),
-				isWindow = $.isWindow( withinElement[ 0 ] ),
-				isDocument = !!withinElement[ 0 ] && withinElement[ 0 ].nodeType === 9,
-				hasOffset = !isWindow && !isDocument;
-			return {
-				element: withinElement,
-				isWindow: isWindow,
-				isDocument: isDocument,
-				offset: hasOffset ? $( element ).offset() : { left: 0, top: 0 },
-				scrollLeft: withinElement.scrollLeft(),
-				scrollTop: withinElement.scrollTop(),
-				width: withinElement.outerWidth(),
-				height: withinElement.outerHeight()
-			};
-		}
-	};
-
-	$.fn.position = function( options ) {
-		if ( !options || !options.of ) {
-			return _position.apply( this, arguments );
-		}
-
-		// Make a copy, we don't want to modify arguments
-		options = $.extend( {}, options );
-
-		var atOffset, targetWidth, targetHeight, targetOffset, basePosition, dimensions,
-			target = $( options.of ),
-			within = $.position.getWithinInfo( options.within ),
-			scrollInfo = $.position.getScrollInfo( within ),
-			collision = ( options.collision || "flip" ).split( " " ),
-			offsets = {};
-
-		dimensions = getDimensions( target );
-		if ( target[ 0 ].preventDefault ) {
-
-			// Force left top to allow flipping
-			options.at = "left top";
-		}
-		targetWidth = dimensions.width;
-		targetHeight = dimensions.height;
-		targetOffset = dimensions.offset;
-
-		// Clone to reuse original targetOffset later
-		basePosition = $.extend( {}, targetOffset );
-
-		// Force my and at to have valid horizontal and vertical positions
-		// if a value is missing or invalid, it will be converted to center
-		$.each( [ "my", "at" ], function() {
-			var pos = ( options[ this ] || "" ).split( " " ),
-				horizontalOffset,
-				verticalOffset;
-
-			if ( pos.length === 1 ) {
-				pos = rhorizontal.test( pos[ 0 ] ) ?
-					pos.concat( [ "center" ] ) :
-					rvertical.test( pos[ 0 ] ) ?
-						[ "center" ].concat( pos ) :
-						[ "center", "center" ];
-			}
-			pos[ 0 ] = rhorizontal.test( pos[ 0 ] ) ? pos[ 0 ] : "center";
-			pos[ 1 ] = rvertical.test( pos[ 1 ] ) ? pos[ 1 ] : "center";
-
-			// Calculate offsets
-			horizontalOffset = roffset.exec( pos[ 0 ] );
-			verticalOffset = roffset.exec( pos[ 1 ] );
-			offsets[ this ] = [
-				horizontalOffset ? horizontalOffset[ 0 ] : 0,
-				verticalOffset ? verticalOffset[ 0 ] : 0
-			];
-
-			// Reduce to just the positions without the offsets
-			options[ this ] = [
-				rposition.exec( pos[ 0 ] )[ 0 ],
-				rposition.exec( pos[ 1 ] )[ 0 ]
-			];
-		} );
-
-		// Normalize collision option
-		if ( collision.length === 1 ) {
-			collision[ 1 ] = collision[ 0 ];
-		}
-
-		if ( options.at[ 0 ] === "right" ) {
-			basePosition.left += targetWidth;
-		} else if ( options.at[ 0 ] === "center" ) {
-			basePosition.left += targetWidth / 2;
-		}
-
-		if ( options.at[ 1 ] === "bottom" ) {
-			basePosition.top += targetHeight;
-		} else if ( options.at[ 1 ] === "center" ) {
-			basePosition.top += targetHeight / 2;
-		}
-
-		atOffset = getOffsets( offsets.at, targetWidth, targetHeight );
-		basePosition.left += atOffset[ 0 ];
-		basePosition.top += atOffset[ 1 ];
-
-		return this.each( function() {
-			var collisionPosition, using,
-				elem = $( this ),
-				elemWidth = elem.outerWidth(),
-				elemHeight = elem.outerHeight(),
-				marginLeft = parseCss( this, "marginLeft" ),
-				marginTop = parseCss( this, "marginTop" ),
-				collisionWidth = elemWidth + marginLeft + parseCss( this, "marginRight" ) +
-					scrollInfo.width,
-				collisionHeight = elemHeight + marginTop + parseCss( this, "marginBottom" ) +
-					scrollInfo.height,
-				position = $.extend( {}, basePosition ),
-				myOffset = getOffsets( offsets.my, elem.outerWidth(), elem.outerHeight() );
-
-			if ( options.my[ 0 ] === "right" ) {
-				position.left -= elemWidth;
-			} else if ( options.my[ 0 ] === "center" ) {
-				position.left -= elemWidth / 2;
-			}
-
-			if ( options.my[ 1 ] === "bottom" ) {
-				position.top -= elemHeight;
-			} else if ( options.my[ 1 ] === "center" ) {
-				position.top -= elemHeight / 2;
-			}
-
-			position.left += myOffset[ 0 ];
-			position.top += myOffset[ 1 ];
-
-			collisionPosition = {
-				marginLeft: marginLeft,
-				marginTop: marginTop
-			};
-
-			$.each( [ "left", "top" ], function( i, dir ) {
-				if ( $.ui.position[ collision[ i ] ] ) {
-					$.ui.position[ collision[ i ] ][ dir ]( position, {
-						targetWidth: targetWidth,
-						targetHeight: targetHeight,
-						elemWidth: elemWidth,
-						elemHeight: elemHeight,
-						collisionPosition: collisionPosition,
-						collisionWidth: collisionWidth,
-						collisionHeight: collisionHeight,
-						offset: [ atOffset[ 0 ] + myOffset[ 0 ], atOffset [ 1 ] + myOffset[ 1 ] ],
-						my: options.my,
-						at: options.at,
-						within: within,
-						elem: elem
-					} );
-				}
-			} );
-
-			if ( options.using ) {
-
-				// Adds feedback as second argument to using callback, if present
-				using = function( props ) {
-					var left = targetOffset.left - position.left,
-						right = left + targetWidth - elemWidth,
-						top = targetOffset.top - position.top,
-						bottom = top + targetHeight - elemHeight,
-						feedback = {
-							target: {
-								element: target,
-								left: targetOffset.left,
-								top: targetOffset.top,
-								width: targetWidth,
-								height: targetHeight
-							},
-							element: {
-								element: elem,
-								left: position.left,
-								top: position.top,
-								width: elemWidth,
-								height: elemHeight
-							},
-							horizontal: right < 0 ? "left" : left > 0 ? "right" : "center",
-							vertical: bottom < 0 ? "top" : top > 0 ? "bottom" : "middle"
-						};
-					if ( targetWidth < elemWidth && abs( left + right ) < targetWidth ) {
-						feedback.horizontal = "center";
-					}
-					if ( targetHeight < elemHeight && abs( top + bottom ) < targetHeight ) {
-						feedback.vertical = "middle";
-					}
-					if ( max( abs( left ), abs( right ) ) > max( abs( top ), abs( bottom ) ) ) {
-						feedback.important = "horizontal";
-					} else {
-						feedback.important = "vertical";
-					}
-					options.using.call( this, props, feedback );
-				};
-			}
-
-			elem.offset( $.extend( position, { using: using } ) );
-		} );
-	};
-
-	$.ui.position = {
-		fit: {
-			left: function( position, data ) {
-				var within = data.within,
-					withinOffset = within.isWindow ? within.scrollLeft : within.offset.left,
-					outerWidth = within.width,
-					collisionPosLeft = position.left - data.collisionPosition.marginLeft,
-					overLeft = withinOffset - collisionPosLeft,
-					overRight = collisionPosLeft + data.collisionWidth - outerWidth - withinOffset,
-					newOverRight;
-
-				// Element is wider than within
-				if ( data.collisionWidth > outerWidth ) {
-
-					// Element is initially over the left side of within
-					if ( overLeft > 0 && overRight <= 0 ) {
-						newOverRight = position.left + overLeft + data.collisionWidth - outerWidth -
-							withinOffset;
-						position.left += overLeft - newOverRight;
-
-					// Element is initially over right side of within
-					} else if ( overRight > 0 && overLeft <= 0 ) {
-						position.left = withinOffset;
-
-					// Element is initially over both left and right sides of within
-					} else {
-						if ( overLeft > overRight ) {
-							position.left = withinOffset + outerWidth - data.collisionWidth;
-						} else {
-							position.left = withinOffset;
-						}
-					}
-
-				// Too far left -> align with left edge
-				} else if ( overLeft > 0 ) {
-					position.left += overLeft;
-
-				// Too far right -> align with right edge
-				} else if ( overRight > 0 ) {
-					position.left -= overRight;
-
-				// Adjust based on position and margin
-				} else {
-					position.left = max( position.left - collisionPosLeft, position.left );
-				}
-			},
-			top: function( position, data ) {
-				var within = data.within,
-					withinOffset = within.isWindow ? within.scrollTop : within.offset.top,
-					outerHeight = data.within.height,
-					collisionPosTop = position.top - data.collisionPosition.marginTop,
-					overTop = withinOffset - collisionPosTop,
-					overBottom = collisionPosTop + data.collisionHeight - outerHeight - withinOffset,
-					newOverBottom;
-
-				// Element is taller than within
-				if ( data.collisionHeight > outerHeight ) {
-
-					// Element is initially over the top of within
-					if ( overTop > 0 && overBottom <= 0 ) {
-						newOverBottom = position.top + overTop + data.collisionHeight - outerHeight -
-							withinOffset;
-						position.top += overTop - newOverBottom;
-
-					// Element is initially over bottom of within
-					} else if ( overBottom > 0 && overTop <= 0 ) {
-						position.top = withinOffset;
-
-					// Element is initially over both top and bottom of within
-					} else {
-						if ( overTop > overBottom ) {
-							position.top = withinOffset + outerHeight - data.collisionHeight;
-						} else {
-							position.top = withinOffset;
-						}
-					}
-
-				// Too far up -> align with top
-				} else if ( overTop > 0 ) {
-					position.top += overTop;
-
-				// Too far down -> align with bottom edge
-				} else if ( overBottom > 0 ) {
-					position.top -= overBottom;
-
-				// Adjust based on position and margin
-				} else {
-					position.top = max( position.top - collisionPosTop, position.top );
-				}
-			}
-		},
-		flip: {
-			left: function( position, data ) {
-				var within = data.within,
-					withinOffset = within.offset.left + within.scrollLeft,
-					outerWidth = within.width,
-					offsetLeft = within.isWindow ? within.scrollLeft : within.offset.left,
-					collisionPosLeft = position.left - data.collisionPosition.marginLeft,
-					overLeft = collisionPosLeft - offsetLeft,
-					overRight = collisionPosLeft + data.collisionWidth - outerWidth - offsetLeft,
-					myOffset = data.my[ 0 ] === "left" ?
-						-data.elemWidth :
-						data.my[ 0 ] === "right" ?
-							data.elemWidth :
-							0,
-					atOffset = data.at[ 0 ] === "left" ?
-						data.targetWidth :
-						data.at[ 0 ] === "right" ?
-							-data.targetWidth :
-							0,
-					offset = -2 * data.offset[ 0 ],
-					newOverRight,
-					newOverLeft;
-
-				if ( overLeft < 0 ) {
-					newOverRight = position.left + myOffset + atOffset + offset + data.collisionWidth -
-						outerWidth - withinOffset;
-					if ( newOverRight < 0 || newOverRight < abs( overLeft ) ) {
-						position.left += myOffset + atOffset + offset;
-					}
-				} else if ( overRight > 0 ) {
-					newOverLeft = position.left - data.collisionPosition.marginLeft + myOffset +
-						atOffset + offset - offsetLeft;
-					if ( newOverLeft > 0 || abs( newOverLeft ) < overRight ) {
-						position.left += myOffset + atOffset + offset;
-					}
-				}
-			},
-			top: function( position, data ) {
-				var within = data.within,
-					withinOffset = within.offset.top + within.scrollTop,
-					outerHeight = within.height,
-					offsetTop = within.isWindow ? within.scrollTop : within.offset.top,
-					collisionPosTop = position.top - data.collisionPosition.marginTop,
-					overTop = collisionPosTop - offsetTop,
-					overBottom = collisionPosTop + data.collisionHeight - outerHeight - offsetTop,
-					top = data.my[ 1 ] === "top",
-					myOffset = top ?
-						-data.elemHeight :
-						data.my[ 1 ] === "bottom" ?
-							data.elemHeight :
-							0,
-					atOffset = data.at[ 1 ] === "top" ?
-						data.targetHeight :
-						data.at[ 1 ] === "bottom" ?
-							-data.targetHeight :
-							0,
-					offset = -2 * data.offset[ 1 ],
-					newOverTop,
-					newOverBottom;
-				if ( overTop < 0 ) {
-					newOverBottom = position.top + myOffset + atOffset + offset + data.collisionHeight -
-						outerHeight - withinOffset;
-					if ( newOverBottom < 0 || newOverBottom < abs( overTop ) ) {
-						position.top += myOffset + atOffset + offset;
-					}
-				} else if ( overBottom > 0 ) {
-					newOverTop = position.top - data.collisionPosition.marginTop + myOffset + atOffset +
-						offset - offsetTop;
-					if ( newOverTop > 0 || abs( newOverTop ) < overBottom ) {
-						position.top += myOffset + atOffset + offset;
-					}
-				}
-			}
-		},
-		flipfit: {
-			left: function() {
-				$.ui.position.flip.left.apply( this, arguments );
-				$.ui.position.fit.left.apply( this, arguments );
-			},
-			top: function() {
-				$.ui.position.flip.top.apply( this, arguments );
-				$.ui.position.fit.top.apply( this, arguments );
-			}
-		}
-	};
-
-	} )();
-
-	return $.ui.position;
-
-	} ) );
-
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17922,7 +17524,7 @@
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(3),
 				__webpack_require__(25),
-				__webpack_require__(16)
+				__webpack_require__(17)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -17988,7 +17590,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18028,7 +17630,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16), __webpack_require__(21) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17), __webpack_require__(22) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18126,7 +17728,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals

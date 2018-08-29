@@ -9,172 +9,155 @@ class BxSlider {
 
 
 
+
         // run on initial page load
         this.bxSliderHome();
         // run on window resize
         $(window).resize(this.bxSliderHome);
 
 
-        var mySettings = {
-            auto: false,
-            wrapperClass: 'slider-multi-wrapper',
-            nextText: '&#8250;',
-            prevText: '&#8249;',
-            infiniteLoop: true,
-            pager: true,
-            pagerSelector: '.slider-multi-pager',
-            slideWidth: 154,
-            slideMargin: 14,
-            onSliderLoad: MultiSliderLoaded(),
-        }
-        var slider = $('.slider-multi ul').bxSlider(mySettings);
-        $(window).on('orientationchange resize', function() {
-        //$(window).resize(function() {
+        const sliderExists = document.querySelector('.slider-multi');
+        if (sliderExists !== null) {
 
-            const footerWidth                 = $('footer').width();
-            const mobileSlideWidth            = parseInt(footerWidth - 40);
-            const mobileLandscapeSlideWidth   = parseInt(footerWidth/2);
-            const tabletSlideWidth            = parseInt(footerWidth/3);
-            const tabletLandscapeSlideWidth   = parseInt(footerWidth/4);
-            const basicTable                  = parseInt(footerWidth - 12);
-        
-        
-        
-            if (footerWidth > 989) {
-                setTimeout(function(){
-                    $('.bx-controls').addClass('show').removeClass('hide');
-                    console.log('footer : ' + footerWidth);
-                }, 1000)
-    
-    
-            } else if (footerWidth <= 989) {
-                setTimeout(function(){
-                    $('.bx-controls').removeClass('show').addClass('hide');
-                    console.log('footer : ' + footerWidth);
-                }, 1000)
-            };
+
+            var mySettings = {
+                auto: false,
+                wrapperClass: 'slider-multi-wrapper',
+                nextText: '&#8250;',
+                prevText: '&#8249;',
+                infiniteLoop: true,
+                pager: true,
+                pagerSelector: '.slider-multi-pager',
+                slideWidth: 154,
+                slideMargin: 14,
+                onSliderLoad: MultiSliderLoaded(),
+            }
+            var slider = $('.slider-multi ul').bxSlider(mySettings);
+            $(window).on('orientationchange resize', function() {
+            //$(window).resize(function() {
+
+                const footerWidth                 = $('footer').width();
+                const mobileSlideWidth            = parseInt(footerWidth - 40);
+                const mobileLandscapeSlideWidth   = parseInt(footerWidth/2);
+                const tabletSlideWidth            = parseInt(footerWidth/3);
+                const tabletLandscapeSlideWidth   = parseInt(footerWidth/4);
+                const basicTable                  = parseInt(footerWidth - 12);
             
-            if ((footerWidth >= 801) && (footerWidth <= 987)) {
-                //mySettings.auto = false;
-                mySettings.wrapperClass = 'slider-multi-wrapper';
-                mySettings.minSlides = 4;
-                mySettings.maxSlides = 4;
-                mySettings.moveSlides = 4;
-                mySettings.nextText = '&#8250;';
-                mySettings.prevText = '&#8249;';
-                mySettings.infiniteLoop = true;
-                //mySettings.pager = true;
-                mySettings.pagerSelector = '.slider-multi-pager';
-                mySettings.slideWidth = tabletLandscapeSlideWidth;
-                mySettings.slideMargin = 10;
-                mySettings.onSliderLoad = MultiSliderLoaded();
-                setTimeout(function(){
-                    slider.destroySlider();
-                    slider.reloadSlider(mySettings);  
-                }, 100)
-                console.log('tabletLandscape - footer width: ' + footerWidth);
-            } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
-                //mySettings.auto = false;
-                mySettings.wrapperClass = 'slider-multi-wrapper';
-                mySettings.minSlides = 3;
-                mySettings.maxSlides = 3;
-                mySettings.moveSlides = 3;
-                //mySettings.nextText = '&#8250;';
-                //mySettings.prevText = '&#8249;';
-                mySettings.infiniteLoop = true;
-                mySettings.pager = false;
-                mySettings.controls = false;
-                //mySettings.pagerSelector = '';
-                mySettings.slideWidth = tabletSlideWidth;
-                mySettings.slideMargin = 10;
-                mySettings.onSliderLoad = MultiSliderLoaded();
-                setTimeout(function(){
-                    slider.destroySlider();
-                    slider.reloadSlider(mySettings);  
-                }, 100)
-                $('.page-wrapper').css('width', + footerWidth);
-                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                console.log('tablet - footer width: ' + footerWidth);
-            } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
-                //mySettings.auto = false;
-                mySettings.wrapperClass = 'slider-multi-wrapper';
-                mySettings.minSlides = 2;
-                mySettings.maxSlides = 2;
-                mySettings.moveSlides = 2;
-                //mySettings.nextText = '&#8250;';
-                //mySettings.prevText = '&#8249;';
-                mySettings.infiniteLoop = true;
-                mySettings.pager = false;
-                mySettings.controls = false;
-                //mySettings.pagerSelector = '';
-                mySettings.slideWidth = mobileLandscapeSlideWidth;
-                mySettings.slideMargin = 10;
-                mySettings.onSliderLoad = MultiSliderLoaded();
-                setTimeout(function(){
-                    slider.destroySlider();
-                    slider.reloadSlider(mySettings);  
-                }, 100)
-                $('.page-wrapper').css('width', + footerWidth);
-                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                console.log('mobileLandscape - footer width: ' + footerWidth);
-            } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
-                //mySettings.auto = false;
-                mySettings.wrapperClass = 'slider-multi-wrapper';
-                mySettings.minSlides = 1;
-                mySettings.maxSlides = 1;
-                mySettings.moveSlides = 1;
-                //mySettings.nextText = '&#8250;';
-                //mySettings.prevText = '&#8249;';
-                mySettings.infiniteLoop = true;
-                mySettings.pager = false;
-                mySettings.controls = false;
-                //mySettings.pagerSelector = '';
-                mySettings.slideWidth = mobileSlideWidth;
-                mySettings.slideMargin = 10;
-                mySettings.onSliderLoad = MultiSliderLoaded();
-                setTimeout(function(){
-                    slider.destroySlider();
-                    slider.reloadSlider(mySettings);  
-                }, 100)
-                $('.page-wrapper').css('width', + footerWidth);
-                $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                console.log('mobile - footer width: ' + footerWidth);
-            } else {
-                //mySettings.auto = false;
-                mySettings.wrapperClass = 'slider-multi-wrapper';
-                mySettings.minSlides = 5;
-                mySettings.maxSlides = 5;
-                mySettings.moveSlides = 5;
-                mySettings.nextText = '&#8250;';
-                mySettings.prevText = '&#8249;';
-                mySettings.infiniteLoop = true;
-                //mySettings.pager = true;
-                mySettings.pagerSelector = '.slider-multi-pager';
-                mySettings.slideWidth = 154;
-                mySettings.slideMargin = 14;
-                mySettings.onSliderLoad = MultiSliderLoaded();
-                setTimeout(function(){
-                    slider.destroySlider();
-                    slider.reloadSlider(mySettings);  
-                }, 100)
-                console.log('laptop - footer width: ' + footerWidth);
-            };
-        }).trigger('resize');// on load, trigger the resize event
-
-        // load the slider when it's ready
-        function MultiSliderLoaded() {
-            $('.slider-multi').addClass('bxslider-visible');
-            setTimeout(function(){
-                $('.slider-multi-pager').addClass('bxslider-visible');  
-            }, 1000)
             
+            
+                if (footerWidth > 989) {
+                    setTimeout(function(){
+                        $('.bx-controls').addClass('show').removeClass('hide');
+                        //console.log('footer : ' + footerWidth);
+                    }, 1000)
+        
+        
+                } else if (footerWidth <= 989) {
+                    setTimeout(function(){
+                        $('.bx-controls').removeClass('show').addClass('hide');
+                        //console.log('footer : ' + footerWidth);
+                    }, 1000)
+                };
+                
+                if ((footerWidth >= 801) && (footerWidth <= 987)) {
+                    mySettings.wrapperClass = 'slider-multi-wrapper';
+                    mySettings.minSlides = 4;
+                    mySettings.maxSlides = 4;
+                    mySettings.moveSlides = 4;
+                    mySettings.nextText = '&#8250;';
+                    mySettings.prevText = '&#8249;';
+                    mySettings.infiniteLoop = true;
+                    mySettings.pagerSelector = '.slider-multi-pager';
+                    mySettings.slideWidth = tabletLandscapeSlideWidth;
+                    mySettings.slideMargin = 10;
+                    mySettings.onSliderLoad = MultiSliderLoaded();
+                    setTimeout(function(){
+                        slider.destroySlider();
+                        slider.reloadSlider(mySettings);  
+                    }, 100)
+                    //console.log('tabletLandscape - footer width: ' + footerWidth);
+                } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
+                    mySettings.wrapperClass = 'slider-multi-wrapper';
+                    mySettings.minSlides = 3;
+                    mySettings.maxSlides = 3;
+                    mySettings.moveSlides = 3;
+                    mySettings.infiniteLoop = true;
+                    mySettings.pager = false;
+                    mySettings.controls = false;
+                    mySettings.slideWidth = tabletSlideWidth;
+                    mySettings.slideMargin = 10;
+                    mySettings.onSliderLoad = MultiSliderLoaded();
+                    setTimeout(function(){
+                        slider.destroySlider();
+                        slider.reloadSlider(mySettings);  
+                    }, 100)
+                    $('.page-wrapper').css('width', + footerWidth);
+                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+                    //console.log('tablet - footer width: ' + footerWidth);
+                } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
+                    mySettings.wrapperClass = 'slider-multi-wrapper';
+                    mySettings.minSlides = 2;
+                    mySettings.maxSlides = 2;
+                    mySettings.moveSlides = 2;
+                    mySettings.infiniteLoop = true;
+                    mySettings.pager = false;
+                    mySettings.controls = false;
+                    mySettings.slideWidth = mobileLandscapeSlideWidth;
+                    mySettings.slideMargin = 10;
+                    mySettings.onSliderLoad = MultiSliderLoaded();
+                    setTimeout(function(){
+                        slider.destroySlider();
+                        slider.reloadSlider(mySettings);  
+                    }, 100)
+                    $('.page-wrapper').css('width', + footerWidth);
+                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+                    //console.log('mobileLandscape - footer width: ' + footerWidth);
+                } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
+                    mySettings.wrapperClass = 'slider-multi-wrapper';
+                    mySettings.minSlides = 1;
+                    mySettings.maxSlides = 1;
+                    mySettings.moveSlides = 1;
+                    mySettings.infiniteLoop = true;
+                    mySettings.pager = false;
+                    mySettings.controls = false;
+                    mySettings.slideWidth = mobileSlideWidth;
+                    mySettings.slideMargin = 10;
+                    mySettings.onSliderLoad = MultiSliderLoaded();
+                    setTimeout(function(){
+                        slider.destroySlider();
+                        slider.reloadSlider(mySettings);  
+                    }, 100)
+                    $('.page-wrapper').css('width', + footerWidth);
+                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
+                    //console.log('mobile - footer width: ' + footerWidth);
+                } else {
+                    mySettings.wrapperClass = 'slider-multi-wrapper';
+                    mySettings.minSlides = 5;
+                    mySettings.maxSlides = 5;
+                    mySettings.moveSlides = 5;
+                    mySettings.nextText = '&#8250;';
+                    mySettings.prevText = '&#8249;';
+                    mySettings.infiniteLoop = true;
+                    mySettings.pagerSelector = '.slider-multi-pager';
+                    mySettings.slideWidth = 154;
+                    mySettings.slideMargin = 14;
+                    mySettings.onSliderLoad = MultiSliderLoaded();
+                    setTimeout(function(){
+                        slider.destroySlider();
+                        slider.reloadSlider(mySettings);  
+                    }, 100)
+                    //console.log('laptop - footer width: ' + footerWidth);
+                };
+            }).trigger('resize');// on load, trigger the resize event
+            // load the slider when it's ready
+            function MultiSliderLoaded() {
+                $('.slider-multi').addClass('bxslider-visible');
+                setTimeout(function(){
+                    $('.slider-multi-pager').addClass('bxslider-visible');  
+                }, 1000)
+            }
         }
-
-
-        //this.bxSliderHome();
-        console.log('show');
     }
-
 
     /*
     MultiSliderLoaded() {

@@ -8,18 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>EIA Style Guide</title>
-    <!-- color favicon -->
-    <!--
-	<link rel="apple-touch-icon" sizes="180x180" href="/style-guide/src/img/color/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/style-guide/src/img/color/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/style-guide/src/img/color/favicon-16x16.png">
-	<link rel="manifest" href="/style-guide/src/color/img/site.webmanifest">
-	<link rel="mask-icon" href="/style-guide/src/img/color/safari-pinned-tab.svg" color="#003c57">
-	<link rel="shortcut icon" href="/style-guide/src/img/color/favicon.ico">
-	<meta name="msapplication-TileColor" content="#003c57">
-	<meta name="msapplication-config" content="/style-guide/src/img/color/browserconfig.xml">
-	<meta name="theme-color" content="#003c57">
-	-->
+
     <!-- b&w favicon -->
 
     <link href="/style-guide/src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
@@ -31,47 +20,35 @@
     <meta name="theme-color" content="#292929">
 
     <!-- start style guide required vendor styles -->
-    <link href="../src/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../src/css/themify-icons.css" rel="stylesheet">
-    <link href="../src/css/highlight/tomorrow.css" rel="stylesheet" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,300" rel="stylesheet" />
+
+    <!-- end style guide required vendor styles -->
+
+    <!-- start style guide vendor styles -->
+
+
     <!-- start style guide required styles -->
 
     <!-- start page specific styles -->
-    <link href="../src/css/eia-style-guide.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../temp/styles/styles.css">
+    <!-- end page specific styless -->
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../temp/styles/global.css">
+    <!-- start page specific styles -->
+    <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
     <!-- end page specific styless -->
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="sidebar" data-background-color="white" data-active-color="danger">
-            <div class="sidebar-wrapper">
-                <div class="logo-styleguide">
+    <div class="_header">
+    </div>
 
-                </div>
-                <div id="nav"></div>
-
-            </div>
-        </div>
-
-        <div class="main-panel">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">States</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                    </div>
-                </div>
-            </nav>
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row-style-guide">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="header-style-guide">
-                                    <h1>Links List</h1>
+    <div class="_container clearfix">
+        <div class="_content">
+            <div class="_content-inner">
+                <h1 class="_h1">Links List</h1>
+                
+                                <ul class="dilly-dilly">
+                                    <li class="dilly-dilly">
                                     <a name="links-list"></a>
                                     <p>
                                         Script feature that allows the state of the list item to be hidden if there's no content. The key to initiate the script is to add the class of <code>hide-mt</code> to the content container.
@@ -85,7 +62,7 @@
                                     <section class="style-guide">
                                         <a name=""></a>
                                         <div class="row-style-guide">
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
                                             </p>
                                             <div class="l-row">
@@ -129,7 +106,7 @@ $SixTitle = "Row Number Six";
 &lt;/div&gt;</code></pre>
 
                                             </div>
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 The list item will be hidden:
                                             </p>
                                             <div class="l-row">
@@ -148,7 +125,7 @@ $SixTitle = "Row Number Six";
                                             </div>
 
 
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
                                             </p>
                                             <div class="l-row">
@@ -180,7 +157,7 @@ $SixTitle = "Row Number Six";
 
 
 
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
                                             </p>
                                             <div class="l-row">
@@ -232,7 +209,7 @@ $SixImageName = ""; // .png is not needed
 &lt;/div&gt;</code></pre>
 
                                             </div>
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 The list item will be hidden:
                                             </p>
                                             <div class="l-row">
@@ -265,7 +242,7 @@ $SixImageName = ""; // .png is not needed
                                             </div>
 
 
-                                            <p class="style-guide">
+                                            <p class="_p">
                                                 Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
                                             </p>
 
@@ -273,22 +250,22 @@ $SixImageName = ""; // .png is not needed
                                                 <div>
                                                     <h1>Interactive Visualizations, Data, &amp; Multimedia</h1>
                                                     <ul class="visualizations">
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/petroleum-map.png" alt="U.S. Petroleum Infrastructure Map"></span></a>
+                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/petroleum-map.png" alt="U.S. Petroleum Infrastructure Map"></span></a>
                                                             <h3><a href="/some-link/" title="U.S. Petroleum Infrastructure Map">U.S. Petroleum Infrastructure Map</a></h3>
                                                         </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/fossil-fuel-map.png" alt="U.S. Fossil Fuel Resource Map"></span></a>
+                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/fossil-fuel-map.png" alt="U.S. Fossil Fuel Resource Map"></span></a>
                                                             <h3><a href="/some-link/" title="U.S. Fossil Fuel Resource Map">U.S. Fossil Fuel Resource Map</a></h3>
                                                         </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/crude-oil-import-data.png" alt="U.S. Crude Import Tracking Tool"></span></a>
+                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/crude-oil-import-data.png" alt="U.S. Crude Import Tracking Tool"></span></a>
                                                             <h3><a href="/some-link/" title="U.S. Crude Import Tracking Tool">U.S. Crude Import Tracking Tool</a></h3>
                                                         </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/steo.png" alt="STEO Data Browser"></span></a>
+                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/steo.png" alt="STEO Data Browser"></span></a>
                                                             <h3><a href="/some-link/" title="STEO Data Browser">STEO Data Browser</a></h3>
                                                         </li>
-                                                        <li class="l-col"><a href="/radio"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/radio.png" alt="Radio Spot"></span></a>
+                                                        <li class="l-col"><a href="/radio"><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/radio.png" alt="Radio Spot"></span></a>
                                                             <h3><a href="/radio" title="Radio Spot">Radio Spot</a></h3>
                                                         </li>
-                                                        <li class="l-col hide"><a href=""><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/.png" alt=""></span></a>
+                                                        <li class="l-col hide"><a href=""><span class="circle"><img src="https://www.eia.gov/css_rehab/archive/global/images/issue-trends/interactive/.png" alt=""></span></a>
                                                             <h3>
                                                                 <a href="" title=""></a>
                                                             </h3>

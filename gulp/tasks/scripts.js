@@ -2,7 +2,6 @@ var gulp = require('gulp'),
 webpack = require('webpack');
 
 gulp.task('scripts', ['modernizr'], function(callback) {
-//gulp.task('scripts', function(callback) {
   webpack(require('../../webpack.config.js'), function(err, stats) {
     if (err) {
       console.log(err.toString());
@@ -13,7 +12,6 @@ gulp.task('scripts', ['modernizr'], function(callback) {
   });
 });
 
-const distScripts = '../global/scripts/'; //  /global and /style-guide are at the same level so
-//const distScripts = './app/temp/scripts/';
+
 
 

@@ -21,16 +21,22 @@
 					.left;
 					margin: 0;
 					width: 100%;
+					padding: 0 12px 1em 12px; // added - need to run by Miroslava
 					&>div {
 						&>a {
 							display: block;
 							width: 100%;
+							border: 4px solid #fff; // added - need to run by Miroslava
+							outline: 1px solid #dadada; // added - need to run by Miroslava
 							img {
 								width: 100%;
 								background-size: cover;
 							}
 						}
-					}		
+					}
+					ul {
+						float: none;
+					}
 				}
 			}
 		}
@@ -43,9 +49,9 @@
 			&.features {
 				padding: 22px;
 				&>div {
-					margin-bottom: 16px;
+					margin: 0 0 16px 0;
 					&>div {
-						//max-width: 270px;
+						margin-right: 20px;
 						-webkit-box-flex: 0;
 						-webkit-flex: 0 0 33.333333%;
 						-ms-flex: 0 0 33.333333%;
@@ -58,6 +64,9 @@
 							outline: 1px solid #dadada;
 						}
 					}
+//					ul {
+//						float: none;
+//					}
 				}
 			}
 		}
