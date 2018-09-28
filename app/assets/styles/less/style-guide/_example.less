@@ -1,0 +1,33 @@
+@media @mobile {
+	._example { display: none; }
+	pre { display: none; }
+}
+@media @laptop {
+	._example {
+		display: block;
+		background-color: #fff;
+		margin: 1em 0 1em 0;
+		._p {
+			margin: 0 0 0 10px !important;
+			//font-size: 11px !important;
+			color: #999 !important;
+		}
+	}
+	pre {
+		display: block;
+		border: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: none !important;
+		width: 990px;
+		clear: both;
+		overflow: auto;
+		word-wrap: normal;
+		white-space: pre;
+		code {
+			white-space: pre;
+			overflow-x: auto;
+			width: 992px;
+		}		
+	}
+}

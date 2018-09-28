@@ -1,0 +1,79 @@
+@media @mobile {
+    ._legend {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        li {    
+            .align-left;
+            margin-right: 6px;
+            .left;
+            font-size: .875rem;
+            div {
+                &._page {
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    background-color: yellowgreen;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: rgb(51, 51, 51);
+                    border-image: initial;
+                    margin: 5px 4px 0px 0px;
+                }
+                &._row {
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    background-color: greenyellow;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: rgb(51, 51, 51);
+                    border-image: initial;
+                    margin: 5px 4px 0px 0px;
+                }
+                &._col {
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    background-color: rgba(255, 69, 0, 0.65);
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: rgb(51, 51, 51);
+                    border-image: initial;
+                    margin: 5px 4px 0px 0px;
+                }
+            }
+        }
+    }
+    span {
+        &._page {
+            background-color: yellowgreen;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            padding: 0px 5px;
+        }
+    }
+    span {
+        &._row {
+            background-color: greenyellow;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            padding: 0px 5px;
+        }
+    }
+    span {
+        &._col {
+            background-color: rgba(255, 69, 0, 0.65);
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            padding: 0px 5px;
+        }
+    }
+}
+@media @laptop {
+    ._legend {
+		display: block;
+	}
+}
