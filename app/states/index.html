@@ -19,25 +19,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
-
-    <!-- end style guide required vendor styles -->
-
-    <!-- start style guide vendor styles -->
-
-
-    <!-- start style guide required styles -->
-
-    <!-- start page specific styles -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+    
+    <!-- build:css assets/styles/styles.min.css -->
     <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- end page specific styless -->
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
     <link rel="stylesheet" href="../temp/styles/global.css">
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
-    <!-- end page specific styless -->
+    <!-- endbuild -->
 </head>
-
 <body>
     <div class="_header">
     </div>
@@ -45,26 +38,24 @@
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
                 <h1 class="_h1">States</h1>
-                    <!-- start style guide -->
-                    <!-- start style guide -->
-                    <!-- start style guide -->
-                    <ul class="dilly-dilly">
-                        <li class="dilly-dilly">
-                        <!-- start style guide -->
-                        <!-- start style guide -->
-                        <!-- start style guide --></a>
-                  
-                                    <li class="dilly-dilly">
-                                        <h1 class="style-guide">State Rules</h1>
 
-                                        <p class="_p">A state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state.</p>
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly">
+                        <h3 class="_h3">State Rules</h3>
 
-                                        <p class="_p">States are generally applied to the same element as a layout rule or applied to the same element as a base module class.</p>
+                        <p class="_p">A state is something that augments and overrides all other styles. For example, an accordion section
+                            may be in a collapsed or expanded state. A message may be in a success or error state.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">State applied to an element</p>
-                                            <pre><code class="html">&lt;div id="header" class="is-collapsed"&gt;
+                        <p class="_p">States are generally applied to the same element as a layout rule or applied to the same element
+                            as a base module class.</p>
+
+                        <div class="_example">
+                            <p class="_example-caption _p">State applied to an element</p>
+                            <pre><code class="html">&lt;div id="header" class="is-collapsed"&gt;
     &lt;form&gt;
         &lt;div class="msg is-error"&gt;
             There is an error!
@@ -74,50 +65,61 @@
     &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
-                                        </div>
+                        </div>
 
-                                        <p class="_p">The header element just has an ID. As such we can assume that any styles, if there are any, on this element are for layout purposes and that the <code>is-collapsed</code> represents a collapsed state. One might
-                                            presume that without this state rule, the default is an expanded state.</p>
+                        <p class="_p">The header element just has an ID. As such we can assume that any styles, if there are any, on this
+                            element are for layout purposes and that the <code>is-collapsed</code> represents a collapsed
+                            state. One might presume that without this state rule, the default is an expanded state.</p>
 
-                                        <p class="_p">The <code>msg</code> module is simple enough and has an error state applied to it. One could imagine a success state could be applied to the message, alternatively.</p>
+                        <p class="_p">The <code>msg</code> module is simple enough and has an error state applied to it. One could imagine
+                            a success state could be applied to the message, alternatively.</p>
 
-                                        <p class="_p">Finally, the field label has a hidden state applied to hide it from sight but still keep it for screen readers. In this case, we are actually applying the state to a base element and not overriding a layout or module.</p>
+                        <p class="_p">Finally, the field label has a hidden state applied to hide it from sight but still keep it for screen
+                            readers. In this case, we are actually applying the state to a base element and not overriding
+                            a layout or module.</p>
 
-                                        <h3 class="_h3" Isnʼt it just a module?</h3>
+                        <h3 class="_h3" Isnʼt it just a module?</h3>
 
-                                            <p class="_p">There is plenty of similarity between a sub-module style and a state style. They both modify the existing look of an element. However, they differ in two key ways:</p>
-                                            <ol>
-                                                <li>State styles can apply to layout and/or module styles; and</li>
-                                                <li>State styles indicate a JavaScript dependency.</li>
-                                            </ol>
+                            <p class="_p">There is plenty of similarity between a sub-module style and a state style. They both modify
+                                the existing look of an element. However, they differ in two key ways:</p>
+                            <ol>
+                                <li>State styles can apply to layout and/or module styles; and</li>
+                                <li>State styles indicate a JavaScript dependency.</li>
+                            </ol>
 
-                                            <p class="_p">It is this second point that is the most important distinction. Sub-module styles are applied to an element at render time and then are never changed again. State styles, however, are applied to elements to
-                                                indicate a change in state while the page is still running on the client machine.</p>
+                            <p class="_p">It is this second point that is the most important distinction. Sub-module styles are applied
+                                to an element at render time and then are never changed again. State styles, however, are
+                                applied to elements to indicate a change in state while the page is still running on the
+                                client machine.</p>
 
-                                            <p class="_p">For example, clicking on a tab will activate that tab. Therefore, an <code>is-active</code> or <code>is-tab-active</code> class is appropriate. Clicking on a dialog close button will hide the dialog. Therefore,
-                                                an <code>is-hidden</code> class is appropriate.</p>
+                            <p class="_p">For example, clicking on a tab will activate that tab. Therefore, an <code>is-active</code> or
+                                <code>is-tab-active</code> class is appropriate. Clicking on a dialog close button will hide
+                                the dialog. Therefore, an <code>is-hidden</code> class is appropriate.</p>
 
-                                            <h2 id="tips">Using !important</h2>
+                            <h2 id="tips">Using !important</h2>
 
-                                            <p class="_p">States should be made to stand alone and are usually built of a single class selector.</p>
+                            <p class="_p">States should be made to stand alone and are usually built of a single class selector.</p>
 
-                                            <p class="_p">Since the state will likely need to override the style of a more complex rule set, the use of <code>!important</code> is allowed and, dare I say, recommended. (I used to say that <code>!important</code> was
-                                                never needed but on complex systems, it is often a necessity.) You won’t normally have two states applied to the same module or two states that tend to affect the same set of styles, so specificity conflicts
-                                                from using <code>!important</code> should be few and far between.</p>
+                            <p class="_p">Since the state will likely need to override the style of a more complex rule set, the use of
+                                <code>!important</code> is allowed and, dare I say, recommended. (I used to say that <code>!important</code>                                was never needed but on complex systems, it is often a necessity.) You won’t normally have
+                                two states applied to the same module or two states that tend to affect the same set of styles,
+                                so specificity conflicts from using <code>!important</code> should be few and far between.</p>
 
-                                            <p class="_p">With that said, be cautious. Leave <code>!important</code> off until you actually and truly need it (and you will see why in this next example). Remember, the use of <code>!important</code> should be avoided
-                                                for all other rule types. Only states should have it.</p>
+                            <p class="_p">With that said, be cautious. Leave <code>!important</code> off until you actually and truly need
+                                it (and you will see why in this next example). Remember, the use of <code>!important</code>                                should be avoided for all other rule types. Only states should have it.</p>
 
 
-                                            <h2 id="combining">Combining State Rules with Modules</h2>
-                                            <p class="_p">Inevitably, a state rule will not be able to rely on inheritance to apply its style in the right place. Sometimes a state is very specific to a particular module where styling is very unique.</p>
+                            <h2 id="combining">Combining State Rules with Modules</h2>
+                            <p class="_p">Inevitably, a state rule will not be able to rely on inheritance to apply its style in the right
+                                place. Sometimes a state is very specific to a particular module where styling is very unique.</p>
 
-                                            <p class="_p">In a case where a state rule is made for a specific module, the state class name should include the module name in it. The state rule should also reside with the module rules and not with the rest of the global
-                                                state rules.</p>
+                            <p class="_p">In a case where a state rule is made for a specific module, the state class name should include
+                                the module name in it. The state rule should also reside with the module rules and not with
+                                the rest of the global state rules.</p>
 
-                                            <div class="example">
-                                                <p class="example-caption style-guide">State rules for modules</p>
-                                                <pre><code class="css">.tab {
+                            <div class="_example">
+                                <p class="_example-caption _p">State rules for modules</p>
+                                <pre><code class="css">.tab {
     background-color: purple;
     color: white;
 }
@@ -126,62 +128,39 @@
     background-color: white;
     color: black;
 }</code></pre>
-                                            </div>
+                            </div>
 
-                                            <p class="_p">If you are doing just-in-time loading of your CSS, generic states should be considered part of the base and global styles and loaded on initial page load. The styles for a particular module wonʼt need to be
-                                                loaded until that particular module is loaded.</p>
-
-
-
-
-                                    </li>
-                                </div>
-                                <div class="content">
-                                    <!-- start style guide -->
-                                    <!-- start style guide -->
-                                    <!-- start style guide -->
-                                    <h1 class="style-guide">Autocomplete</h1>
-
-                                    <form>
-                                        <input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
-                                        <button type="submit" id="goBtn" class="search-submit">
-                                            <i class="ico search-submit">Search</i>
-                                        </button>
-                                    </form>
+                            <p class="_p">If you are doing just-in-time loading of your CSS, generic states should be considered part of
+                                the base and global styles and loaded on initial page load. The styles for a particular module
+                                wonʼt need to be loaded until that particular module is loaded.</p>
 
 
 
 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="_right-sidebar">
-                        <div class="_right-sidebar-inner">
-                            <ul class="dilly-dilly">
-                                <li class="active"><a href="#one">Lorem ipsum dolor sit amet</a></li>
-                                <li><a href="#two">In congue nunc vitae magna</a></li>
-                                <li><a href="#thr">Curabitur rhoncus, arcu</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="_footer"></div>
-            </body>
-            <!-- build:js assets/scripts/script.min.js -->
-            <script src="../temp/scripts/scripts.js"></script>
-            <!-- endbuild -->
-            <!-- build:js assets/scripts/highlight.js -->
-            <script src="../src/js/highlight.js"></script>
-            <!-- endbuild -->
-            <!-- build:js assets/scripts/_header.js -->
-            <script src="../src/js/_header.js"></script>
-            <!-- endbuild -->
-            <!-- build:js assets/scripts/_footer.js -->
-            <script src="../src/js/_footer.js"></script>
-            <!-- endbuild -->
-            <script>
-                hljs.initHighlightingOnLoad();
-            </script>
-            </html>
+
+
+                        <!-- end section -->
+                        <!-- end section -->
+                        <!-- end section -->
+                    </li>
+                </ul>
+                <!-- end style guide -->
+                <!-- end style guide -->
+                <!-- end style guide -->
+            </div>
+        </div>
+    </div>
+    <div class="_footer"></div>
+</body>
+<!-- build:js assets/scripts/script.min.js -->
+<script src="../temp/scripts/scripts.js"></script>
+<!-- build:js assets/scripts/global.js.min.js -->
+<script src="../temp/scripts/global.js"></script>
+<!-- endbuild -->
+<!-- build:js assets/scripts/highlight.min.js -->
+<script src="../src/js/highlight.js"></script>
+<!-- endbuild -->
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</html>

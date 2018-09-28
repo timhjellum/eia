@@ -5,12 +5,12 @@ class SocialSticker {
         function position() {
             $('#sticker.positionable').position({
                 of: $('.l-inner-wrapper'),
-                my: "left top",
-                at: "right top"
-            });
+                my: 'left top',
+                at: 'right top'
+            }
+        );
             $('#sticker').offset({top:$(window).scrollTop() + $('header').height()+2});
         }
-        
         $('#sticker').hover(function(event) {
             },function(event){
         });
@@ -28,7 +28,6 @@ class SocialSticker {
         } 
         window.onload = load;
     }
-
     hover(target) {
         let $hoverTarget = $(target);
         let rolloverClass = 'hover';

@@ -21,26 +21,30 @@
 
 <body>
     <div class="_header">
-        <h1>Site Title</h1>
     </div>
 
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
+                <h1 class="_h1">Layout Rules</h1>
+                
+                                <ul class="dilly-dilly">
+                                    <li class="dilly-dilly">
+                                        <h3 class="_h3">Header 1</h3>
 
 
-                <article>
-                    <h1 class="style-guide">Layout Rules</h1>
 
-                    <!--p class="style-guide">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation
+                    <h1 class="style-guide"></h1>
+
+                    <!--p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation
                         item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles. </p
                     -->
 
-                    <p class="style-guide">EIA has defined all ayout styles with the prefix <code>l-</code> and use class selectors (not id's).</p>
+                    <p class="_p">EIA has defined all ayout styles with the prefix <code>l-</code> and use class selectors (not id's).</p>
 
 
-                    <div class="example">
-                        <p class="example-caption style-guide">Layout declarations in LESS format</p>
+                    <div class="_example">
+                        <p class="_example-caption _p">Layout declarations in LESS format</p>
                         <pre><code class="CSS">.l-col {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 33.333333%;
@@ -68,12 +72,12 @@
 
 
 
-                    <p class="style-guide">Generally, a Layout style only has a single selector: a single class name. However, there are times when a Layout needs to respond to different factors. For example, when we want to reorder the elements on a page as the layout redraws
+                    <p class="_p">Generally, a Layout style only has a single selector: a single class name. However, there are times when a Layout needs to respond to different factors. For example, when we want to reorder the elements on a page as the layout redraws
                         due to changes in screen resolution. This layout preference would still be declared as a Layout style and used in combination with other Layout styles. </p>
 
 
-                    <div class="example">
-                        <p class="example-caption style-guide">For example the compination of two styles: <code><div class="l-3-col l-second"></div></code> has corresponding Layout styles.</p>
+                    <div class="_example">
+                        <p class="_example-caption _p">For example the compination of two styles: <code><div class="l-3-col l-second"></div></code> has corresponding Layout styles.</p>
                         <pre><code class="html">.l-3-col {
     &.l-reorder {
         .l-first {
@@ -92,19 +96,17 @@
 
 
                     <!--
-    <p class="style-guide">Layout rules divide the page into sections. Layouts hold one or more modules together.</p>
-    <p class="style-guide">These layouts were created from examining hundreds of eia.gov pages. The new layouts simply take the existing fixed pixel width layouts and makes them percentages. So far we have identified x top-level layouts. These include:</p>
-    <p class="style-guide">After inventory of the site it was determined that there was little or no difference in the main-col and side-col widths.</p>
+    <p class="_p">Layout rules divide the page into sections. Layouts hold one or more modules together.</p>
+    <p class="_p">These layouts were created from examining hundreds of eia.gov pages. The new layouts simply take the existing fixed pixel width layouts and makes them percentages. So far we have identified x top-level layouts. These include:</p>
+    <p class="_p">After inventory of the site it was determined that there was little or no difference in the main-col and side-col widths.</p>
 -->
-                </article>
-
-                <ul class="dilly">
-                    <li class="style-guide">
+                </li>
+                <li class="dilly-dilly">
                         <a name="header-row"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Full-Width Header Layout (22px + 100% + 22px)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 22px + 100% + 22px -->
                                 <div class="l-row header">
@@ -123,7 +125,7 @@
 
 
 
-                        <div class="example">
+                        <div class="_example">
                             <pre>
 <code class="html">&lt;!-- 22px + 100% + 22px --&gt;
 &lt;div class="l-row header"&gt;
@@ -137,12 +139,12 @@
 
 
 
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="row"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Full-Width Layout (100%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <div class="l-row">
                                     <div class="full-width">
@@ -155,7 +157,7 @@
                             </div>
                         </div>
 
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 100% --&gt;
 &lt;div class="l-row"&gt;
     &lt;div class="full-width"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -170,12 +172,12 @@
 
 
 
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="side+main+side"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Left &amp; Right Column Layout (25% / 50% / 25%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <div class="l-row l-3-col-reorder">
                                     <div class="l-narrow-col l-reorder-center">
@@ -201,7 +203,7 @@
                         </div>
 
 
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 25% / 50% / 25% --&gt; 
 &lt;div class="l-row"&gt;
     &lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -236,12 +238,12 @@
 
 
 
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="LeftColumnLayout"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Left-Column Layout (25% / 75%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 25% / 77% -->
                                 <div class="l-row l-left-column">
@@ -270,7 +272,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 4 Column 25% / 75% --&gt; 
 &lt;div class="l-row"&gt;
     &lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -278,12 +280,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="main+side"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Right Column (75% / 25%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <!--
                         <div class="module-container">
                         <img src="img/l-wide-right-column.png" class="style-guide-image-center" />
@@ -308,7 +310,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 75% / 25% --&gt; 
 &lt;div class="l-row"&gt;
     &lt;div class="l-main-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -316,12 +318,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="main+wide-side"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Wide-Right-Column Layout (41.666% / 58.333%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 41.666% / 58.333% -->
                                 <div class="l-row">
@@ -340,7 +342,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 41.666% / 58.333% --&gt;
 &lt;div class="l-row"&gt;
     &lt;div class="l-split-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -348,12 +350,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="wide-side+main-col"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Wide-Left-Column Layout (58.333% / 41.666%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 58.333% / 41.666% -->
                                 <div class="l-row">
@@ -372,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 58.333% / 41.666% --&gt;
     &lt;div class="l-row"&gt;
     &lt;div class="l-split-wide-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -380,12 +382,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="one-third+two-thirds"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">One-Third-Column-Left Layout (33.333% / 66.666%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 33.333% / 66.666% -->
                                 <div class="l-row">
@@ -404,7 +406,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 33.333% / 66.666% --&gt;
 &lt;div class="l-row"&gt;
     &lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -412,12 +414,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="two-thirds+one-third"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">One-Third-Column-Right Layout (66.666% / 33.333%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 66.666% / 33.333% -->
                                 <div class="l-row">
@@ -436,7 +438,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 66.666% / 33.333% --&gt;
 &lt;div class="l-row"&gt;
     &lt;div class="l-two-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -444,12 +446,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="two-even-columns"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Split Column Layout (50/50)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <!-- 50% / 50% -->
                                 <div class="l-row">
@@ -468,7 +470,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 50% / 50% --&gt;       
 &lt;div class="l-row"&gt;
     &lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -476,12 +478,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="three-even-columns"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Three Column Layout (33% / 33% / 33%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <div class="l-row">
                                     <div class="l-one-third-col">
@@ -505,7 +507,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;div class="l-row"&gt;
 &lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
     &lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -513,12 +515,12 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="four-even-columns"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Four Column Layout (25% / 25% / 25% / 25%)</h3>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <div class="l-row">
                                     <div class="l-narrow-col">
@@ -548,7 +550,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;!-- 4 Column 25% / 25% / 25% / 25% --&gt; 
 &lt;div class="l-row"&gt;
     &lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
@@ -558,7 +560,7 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="style-guide">
+                    <li class="dilly-dilly">
                         <a name="ColumnOrdering"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Column Ordering
@@ -571,7 +573,7 @@
                                         <span class="padding-margin-color"></span> Padding or margin.</li>
                                 </ul>
                         </div>
-                        <div class="module-wrapper">
+                        <div class="_module-wrapper">
                             <div class="module-container">
                                 <div class="l-row l-3-col-reorder">
                                     <div class="l-narrow-col l-reorder-center">
@@ -586,7 +588,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="example">
+                        <div class="_example">
                             <pre><code class="html">&lt;div class="l-row l-3-col-reorder"&gt;
 &lt;div class="l-narrow-col l-reorder-center"&gt;Desktop &amp; laptop view, this container will be first. Mobile view and this should be second.&lt;/div&gt;
     &lt;div class="l-two-col l-reorder-first"&gt;Desktop &amp; laptop view, this container will be second. Mobile view and this should be first.&lt;/div&gt;
@@ -620,19 +622,12 @@
 
 <div class="_footer"></div>
 </body>
-<!-- build:js assets/scripts/script.min.js -->
+
 <script src="../temp/scripts/scripts.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/highlight.js -->
+<script src="../temp/scripts/global.js"></script>
 <script src="../src/js/highlight.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/_header.js -->
-<script src="../src/js/_header.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/_footer.js -->
-<script src="../src/js/_footer.js"></script>
-<!-- endbuild -->
+
 <script>
-hljs.initHighlightingOnLoad();
+    hljs.initHighlightingOnLoad();
 </script>
 </html>

@@ -3,14 +3,13 @@ const path = require('path');
 
 
 const dist = './app/temp/scripts/';
-//const dist = '//REPLICATOR/website/adaptive/global/scripts';
+//const dist = '//REPLICATOR/website/css_rehab/archive/global/scripts';
 
 
 module.exports = {
     entry: {
-        global:     "./app/assets/scripts/global.js",
-        scripts:    "./app/assets/scripts/scripts.js",
-        //highcharts: "./app/assets/scripts/highcharts.js",
+        global: "./app/assets/scripts/global.js",
+        scripts: "./app/assets/scripts/scripts.js"
     },
     output: {
         path: path.resolve(__dirname, dist),

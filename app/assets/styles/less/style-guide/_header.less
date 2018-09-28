@@ -1,5 +1,6 @@
 @media @mobile {
-	._header {
+	._nav { display: none; }
+    ._header {
         position: fixed;
         top: 0;
         left: 0;
@@ -20,12 +21,6 @@
             margin: 10px 40px 10px 20px;
             float: left;
         }
-
-        h1 {
-            border: none;
-            display: none;
-            float: left;
-        }
         /*
         .nav-primary {
             display: none;
@@ -43,7 +38,6 @@
         }
         ul {
             font-family: arial;
-            
             &._nav {
                 //background: darkorange;
                 list-style: none;
@@ -76,7 +70,7 @@
                             opacity: 1;
                             display: block;
                         }
-                        background: #fff;
+                        background: #eee;
                         visibility: hidden;
                         opacity: 0;
                         min-width: 5rem;
@@ -88,6 +82,7 @@
                         li {
                             clear: both;
                             width: 100%;
+                            white-space: nowrap;
                         }
                     }
                 }
@@ -103,8 +98,11 @@
     }
 }
 @media @laptop {
+    ._nav { display: block; }
     ._header {
         height: 80px;
+
+        
         /*
         .nav-primary {
             display: table;

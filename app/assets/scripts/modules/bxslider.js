@@ -3,12 +3,10 @@
 /* the bxslider is no longer maintained and there is a bug that throws an error when users use the touchscreen. The error shows up in the console only and there's no known issues with the slider. A copy of the bxslider.js with the 'fix' and the file now resides on the global/scripts/bxslider file */
 import bxslider from './vendor/bxslider/bxslider.js';
 
+
 class BxSlider {
     constructor() {
         this.arrowControls = $('.bx-controls');
-
-
-
 
         // run on initial page load
         this.bxSliderHome();
@@ -34,28 +32,26 @@ class BxSlider {
             }
             var slider = $('.slider-multi ul').bxSlider(mySettings);
             $(window).on('orientationchange resize', function() {
-            //$(window).resize(function() {
 
                 const footerWidth                 = $('footer').width();
-                const mobileSlideWidth            = parseInt(footerWidth - 40);
-                const mobileLandscapeSlideWidth   = parseInt(footerWidth/2);
-                const tabletSlideWidth            = parseInt(footerWidth/3);
-                const tabletLandscapeSlideWidth   = parseInt(footerWidth/4);
-                const basicTable                  = parseInt(footerWidth - 12);
-            
-            
+                const mobileSlideWidth            = parseInt(footerWidth - 40); // for left/right peeking
+                //const mobileSlideWidth            = parseInt(footerWidth);
+                const mobileLandscapeSlideWidth   = parseInt((footerWidth - 40) / 2);
+                const tabletSlideWidth            = parseInt((footerWidth - 40) / 3);
+                const tabletLandscapeSlideWidth   = parseInt((footerWidth - 40) / 3);
+                const basicTable                  = parseInt(footerWidth - 12);          
             
                 if (footerWidth > 989) {
                     setTimeout(function(){
                         $('.bx-controls').addClass('show').removeClass('hide');
-                        //console.log('footer : ' + footerWidth);
+console.log('footer : ' + footerWidth);
                     }, 1000)
         
         
                 } else if (footerWidth <= 989) {
                     setTimeout(function(){
                         $('.bx-controls').removeClass('show').addClass('hide');
-                        //console.log('footer : ' + footerWidth);
+console.log('footer : ' + footerWidth);
                     }, 1000)
                 };
                 
@@ -69,13 +65,15 @@ class BxSlider {
                     mySettings.infiniteLoop = true;
                     mySettings.pagerSelector = '.slider-multi-pager';
                     mySettings.slideWidth = tabletLandscapeSlideWidth;
-                    mySettings.slideMargin = 10;
+                    mySettings.slideMargin = 0; // was 10
                     mySettings.onSliderLoad = MultiSliderLoaded();
                     setTimeout(function(){
                         slider.destroySlider();
                         slider.reloadSlider(mySettings);  
                     }, 100)
-                    //console.log('tabletLandscape - footer width: ' + footerWidth);
+                    $('.slider-multi').css('width', + footerWidth);
+                    $('.slider-multi-wrapper').css('width', + footerWidth);
+console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
                 } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 3;
@@ -85,15 +83,16 @@ class BxSlider {
                     mySettings.pager = false;
                     mySettings.controls = false;
                     mySettings.slideWidth = tabletSlideWidth;
-                    mySettings.slideMargin = 10;
+                    mySettings.slideMargin = 0; // was 10
                     mySettings.onSliderLoad = MultiSliderLoaded();
                     setTimeout(function(){
                         slider.destroySlider();
                         slider.reloadSlider(mySettings);  
                     }, 100)
-                    $('.page-wrapper').css('width', + footerWidth);
-                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                    //console.log('tablet - footer width: ' + footerWidth);
+                    $('.slider-multi').css('width', + footerWidth);
+                    $('.slider-multi-wrapper').css('width', + footerWidth);
+                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
                 } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 2;
@@ -103,15 +102,17 @@ class BxSlider {
                     mySettings.pager = false;
                     mySettings.controls = false;
                     mySettings.slideWidth = mobileLandscapeSlideWidth;
-                    mySettings.slideMargin = 10;
+                    mySettings.slideMargin = 0; // was 10
                     mySettings.onSliderLoad = MultiSliderLoaded();
                     setTimeout(function(){
                         slider.destroySlider();
                         slider.reloadSlider(mySettings);  
                     }, 100)
-                    $('.page-wrapper').css('width', + footerWidth);
-                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                    //console.log('mobileLandscape - footer width: ' + footerWidth);
+                    
+                    $('.slider-multi').css('width', + footerWidth);
+                    $('.slider-multi-wrapper').css('width', + footerWidth);
+                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
                 } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 1;
@@ -121,15 +122,16 @@ class BxSlider {
                     mySettings.pager = false;
                     mySettings.controls = false;
                     mySettings.slideWidth = mobileSlideWidth;
-                    mySettings.slideMargin = 10;
+                    mySettings.slideMargin = 0; // was 10
                     mySettings.onSliderLoad = MultiSliderLoaded();
                     setTimeout(function(){
                         slider.destroySlider();
                         slider.reloadSlider(mySettings);  
                     }, 100)
-                    $('.page-wrapper').css('width', + footerWidth);
-                    $(".bx-viewport").css("overflow", "visible"); // required for peeking left and right slides
-                    //console.log('mobile - footer width: ' + footerWidth);
+                    $('.slider-multi').css('width', + footerWidth);
+                    $('.slider-multi-wrapper').css('width', + footerWidth);
+                    $('.bx-viewport').css('overflow', 'visible'); // required for peeking left and right slides
+console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
                 } else {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 5;
@@ -146,7 +148,9 @@ class BxSlider {
                         slider.destroySlider();
                         slider.reloadSlider(mySettings);  
                     }, 100)
-                    //console.log('laptop - footer width: ' + footerWidth);
+                    $('.slider-multi').css('width','912');
+                    console.log("912");
+console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + footerWidth);
                 };
             }).trigger('resize');// on load, trigger the resize event
             // load the slider when it's ready
@@ -159,9 +163,10 @@ class BxSlider {
         }
     }
 
+
     /*
     MultiSliderLoaded() {
-        //console.log('Loaded - show slides');
+        console.log('Loaded - show slides');
         $('.slider-multi').addClass('bxslider-visible');
         $('.slider-home').addClass('bxslider-visible');
     }

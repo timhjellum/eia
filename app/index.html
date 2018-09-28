@@ -19,64 +19,45 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
 
-    <!-- end style guide required vendor styles -->
-
-    <!-- start style guide vendor styles -->
-
-
-    <!-- start style guide required styles -->
-
-    <!-- start page specific styles -->
-    <link rel="stylesheet" href="./temp/styles/styles.css">
-    <!-- end page specific styless -->
-    <!-- start page specific styles -->
-    <link rel="stylesheet" href="./temp/styles/global.css">
-    <!-- start page specific styles -->
-    <link rel="stylesheet" href="./src/css/highlight/tomorrow.css" />
-    <!-- end page specific styless -->
+    <!-- build:css assets/styles/styles.min.css -->
+    <link rel="stylesheet" href="temp/styles/styles.css" />
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
+    <link rel="stylesheet" href="temp/styles/global.css" />
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
+    <link rel="stylesheet" href="src/css/highlight/tomorrow.css" />
+    <!-- endbuild -->
 </head>
 
 <body>
-    <div class="_header">
-    </div>
+    <div class="_header"></div>
 
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
                 <h1 class="_h1">Categorizing CSS Rules</h1>
-						<p class="_p">Every project needs some organization. Throwing every new style you create onto the end of a single file would make finding things more difficult and would be very confusing for anybody else working on the project.
-							Of course, you likely have some organization in place already. Hopefully, what you read among these pages will highlight what works with your existing process and, if I’m lucky, you will see new ways in which
-							you can improve your process.</p>
+                <!--
+					<p class="_p">Every project needs some organization. Throwing every new style you create onto the end of a single file would make finding things more difficult and would be very confusing for anybody else working on the project. Of course, you likely have some organization in place already. Hopefully, what you read among these pages will highlight what works with your existing process and, if I’m lucky, you will see new ways in which you can improve your process.</p>
+					<p class="_p">How do you decide whether to use ID selectors, or class selectors, or any number of selectors that are at your disposal? How do you decide which elements should get the styling magic you wish to bestow upon it? How do you make it easy to understand how your site and your styles are organized?</p>
+					<p class="_p">At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.</p>
+					-->
+                <p class="_p">This style-guide is divided into five sections:</p>
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./base/">Base</a></h3>
+                        <p class="_p"><strong>Base rules</strong> are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style
+                            says that wherever this element is on the page, it should look like <em>this</em>.</p>
 
-						<p class="_p">How do you decide whether to use ID selectors, or class selectors, or any number of selectors that are at your disposal? How do you decide which elements should get the styling magic you wish to bestow upon it?
-							How do you make it easy to understand how your site and your styles are organized? </p>
-
-						<p class="_p">At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.</p>
-
-						<p class="_p">There are five types of categories:</p>
-						<ul class="_ul">
-							<li><a href="./base/">Base</a></li>
-							<li><a href="./layout/">Layout</a></li>
-							<li><a href="./modules/">Modules</a></li>
-							<li><a href="./states/">State</a></li>
-							<li><a href="./theme/">Theme</a></li>
-						</ul>
-						<p class="_p">We often find ourselves mixing styles across each of these categories. If we are more aware of what we are trying to style, we can avoid the complexity that comes from intertwining these rules.</p>
-
-						<p class="_p">Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and <em>why</em> are
-							we going to code them that way?</p>
-
-						<p class="_p">Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience.
-							These are all wins. Exceptions to the rule can be advantageous but they should be justified.</p>
-
-						<p class="_p"><strong>Base rules</strong> are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially,
-							a base style says that wherever this element is on the page, it should look like <em>this</em>.</p>
-
-						<div class="example">
-							<p class="exm-caption">Examples of Base Styles</p>
-							<pre><code class="css">html {
+                        <div class="_example">
+                            <p class="exm-caption">Examples of Base Styles</p>
+                            <pre>
+<code class="css">html {
 line-height: 1.15; 
 	-ms-text-size-adjust: 100%; 
 	-webkit-text-size-adjust: 100%; 
@@ -95,69 +76,161 @@ line-height: 1.15;
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}</code></pre>
-						</div>
+}</code>
+</pre>
+                        </div>
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./layouts/">Layouts</a></h3>
+                        <p class="_p"><strong>Layout rules</strong> divide the page into sections and apply the correct spacing (borders, margins and padding) and responsiveness (mobile, mobile-landscape, tablet, tablet-landscape, laptop, desktop and desktop-large). Layouts also define how page elements and modules render based on the users' screen resolution.</p>
+                        <div class="_module-wrapper">
+                            <div class="_module-container">
+                                <!-- start -->
+                                <!-- start -->
 
-						<p class="_p"><strong>Layout rules</strong> divide the page into sections. Layouts hold one or more modules together.
-							</p><p class="_p">Layout class names always have a <code>l-</code>.</p>
+                                    <div class="l-row">
+                                        <div class="l-full-width-col">
+                                            <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        </div>
+                                    </div>
 
-							<p class="_p"><strong>Modules</strong> are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.</p>
+                                    <div class="l-row">
+                                        <div class="l-two-col">
+                                                <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        </div>
+                                        <div class="l-two-col">
+                                                <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        </div>
+                                    </div>
 
-							<p class="_p"><strong>State rules</strong> are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or
-								layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.</p>
+                                <!-- end -->
+                                <!-- end -->
+                            </div>
+                        </div>
+                        <ul class="_legend">
+                            <li><div class="_page"></div> page margin</li>
+                            <li><div class="_row"></div> row margin</li>
+                            <li><div class="_col"></div> column margin</li>
+                            <li><div class="_module"></div> module margin</li>
+                        </ul>
+                        <!-- p class="_p">Layout class names always have a <code>l-</code>.</p -->
 
-							<p class="_p">Finally, <strong>Theme rules</strong> are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.</p>
 
-							<h3 class="_h3">Naming Rules</h3>
 
-							<p class="_p">By separating rules into the five categories, naming convention is beneficial for immediately understanding which category a particular style belongs to and its role within the overall scope of the page. On
-								large projects, it is more likely to have styles broken up across multiple files. In these cases, naming convention also makes it easier to find which file a style belongs to.</p>
+                        <div class="_example">
+                            <p class="exm-caption">Examples of Layout Styles</p>
+                            <pre>
+<code class="css">.l-col {
+	width: 16.666667%;
+}
+.l-narrow-col {
+	width: 25%;
+}
+.l-one-third-col {
+	width: 33.333333%;
+}
+.l-split-narrow-col {
+	width: 41.666%;
+}
+.l-middle-col {
+	width: 50%;
+}
+.l-split-wide-col {
+}
+.l-two-third-col {
+	width: 66.666667%;
+}
+.l-main-col {
+	width: 75%;
+}
+.l-full-width-col {
+	padding: 0;
+	width: 100%;
+}
+.l-row {
+	padding-left: 22px;
+	padding-right: 0;
+}</code>
+</pre>
+                        </div>
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./modules/">Modules</a></h3>
+                        <p class="_p"><strong>Modules</strong> are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.</p>
+                        <p class="_p">Modules are going to be the bulk of any project. As a result, having every module start with a prefix like <code>.module-</code> would be needlessly verbose. Modules just use the name of the module itself. </p>
+                        <div class="_example">
+                            <p class="exm-caption">Examples of Layout Styles</p>
+                            <pre>
+<code class="css">.basic-table {
+	/* adds global styles for basic-table content */
+}
+.content-container {
+	/* adds global styles for content containers */
+}
+.accordion {
+	/* adds an accordion to the page (see states for options) */
+	/* scroll-to anchors capable */
+}
+.fancybox-type-iframe { 
+	/* adds a responsive modal for iframe content */
+	/* scroll-to anchors capable */
+}
+.scroll-to-inline { 
+	/* adds a responsive modal for inline content */
+	/* scroll-to anchors capable */
+}
+.tabs {
+	/* adds responsive tabs */
+	/* scroll-to anchors capable */
+}
+</code>
+</pre>
+                        </div>
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./states/">States</a></h3>
+                        <p class="_p"><strong>State rules</strong> are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens
+                            that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.</p>
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./themes/">Themes</a></h3>
+                        <p class="_p"><strong>Theme rules</strong> are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.</p>
 
-							For State rules, I like <code>is-</code> as in <code>is-hidden</code> or <code>is-collapsed</code>. This helps describe things in a very readable way.<p></p>
-
-						<p class="_p">Modules are going to be the bulk of any project. As a result, having every module start with a prefix like <code>.module-</code> would be needlessly verbose. Modules just use the name of the module itself. </p>
-
-						<div class="example">
-							<p class="exm-caption">Example classes</p>
-							<pre><code class="css">/* coming soon */
-</code></pre>
-						</div>
-
-						<p class="_p">Related elements within a module use the base name as a prefix. On this site, code examples use <code>.exm</code> and the captions use <code>.exm-caption</code>. I can instantly look at the caption class and understand
-							that it is related to the code examples and where I can find the styles for that.</p>
-
-						<p class="_p">Modules that are a variation on another module should also use the base module name as a prefix. Sub-classing is covered in more detail in the Module Rules chapter.</p>
-
-						<p class="_p">This naming convention will be used throughout these pages. Like most other things that I have outlined here, don’t feel like you have to stick to these guidelines rigidly. Have a convention, document it, and stick to it.</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!--
-			div class="_left-sidebar">
-			<div class="_left-sidebar-inner">
-hi
-			</div>
-		</div
-		-->
-		<div class="_right-sidebar">
-			<div class="_right-sidebar-inner">
-				<ul class="dilly-dilly">
-					<li class="active"><a href="#one">Lorem ipsum dolor sit amet</a></li>
-					<li><a href="#two">In congue nunc vitae magna</a></li>
-					<li><a href="#thr">Curabitur rhoncus, arcu</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="footer"></div>
+                        <!--
+				<p class="_p">We often find ourselves mixing styles across each of these categories. If we are more aware of what we are trying to style, we can avoid the complexity that comes from intertwining these rules.</p>
+				<p class="_p">Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and <em>why</em> are we going to code them that way?</p>
+				<p class="_p">Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience. These are all wins. Exceptions to the rule can be advantageous but they should be justified.</p>
+				<h3 class="_h2">Naming Rules</h3>
+				<p class="_p"></p>By separating rules into the five categories, naming convention is beneficial for immediately understanding which category a particular style belongs to and its role within the overall scope of the page. On large projects, it is more likely to have styles broken up across multiple files. In these cases, naming convention also makes it easier to find which file a style belongs to.</p>
+				<p class="_p">For State rules, I like <code>is-</code> as in <code>is-hidden</code> or <code>is-collapsed</code>. This helps describe things in a very readable way.</p>
+				<p class="_p">Related elements within a module use the base name as a prefix. On this site, code examples use <code>.exm</code> and the captions use <code>.exm-caption</code>. I can instantly look at the caption class and understand that it is related to the code examples and where I can find the styles for that.</p>
+				<p class="_p">Modules that are a variation on another module should also use the base module name as a prefix. Sub-classing is covered in more detail in the Module Rules chapter.</p>
+				<p class="_p">This naming convention will be used throughout these pages. Like most other things that I have outlined here, don’t feel like you have to stick to these guidelines rigidly. Have a convention, document it, and stick
+				to it.</p>
+				-->
+                        <!-- end section -->
+                        <!-- end section -->
+                        <!-- end section -->
+                    </li>
+                </ul>
+                <!-- end style guide -->
+                <!-- end style guide -->
+                <!-- end style guide -->
+            </div>
+        </div>
+    </div>
+    <div class="_footer"></div>
 </body>
-
-<script src="./temp/scripts/scripts.js"></script>
-<script src="./temp/scripts/global.js"></script>
-<script src="./src/js/highlight.js"></script>
-
+<!-- build:js assets/scripts/script.min.js -->
+<script src="temp/scripts/scripts.js"></script>
+<!-- build:js assets/scripts/global.js.min.js -->
+<script src="temp/scripts/global.js"></script>
+<!-- endbuild -->
+<!-- build:js assets/scripts/highlight.min.js -->
+<script src="src/js/highlight.js"></script>
+<!-- endbuild -->
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+
 </html>

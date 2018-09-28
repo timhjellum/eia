@@ -19,25 +19,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
-
-    <!-- end style guide required vendor styles -->
-
-    <!-- start style guide vendor styles -->
-
-
-    <!-- start style guide required styles -->
-
-    <!-- start page specific styles -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+    
+    <!-- build:css assets/styles/styles.min.css -->
     <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- end page specific styless -->
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
     <link rel="stylesheet" href="../temp/styles/global.css">
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
-    <!-- end page specific styless -->
+    <!-- endbuild -->
 </head>
-
 <body>
     <div class="_header">
     </div>
@@ -45,14 +38,10 @@
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
-                <h1 class="_h1">Autocomplete</h1>
-                
-                                <ul class="dilly-dilly">
-                                    <li class="dilly-dilly">
-                                    <!-- start style guide -->
-                                    <!-- start style guide -->
-                                    <!-- start style guide -->
-                                    
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
+                                    <h1 class="style-guide">Autocomplete</h1>
 
                                     <form>
                                         <input class="fancy-search-box" type="text" maxlength="256" placeholder="Search survey forms by name or #" onfocus="this.placeholder=''" onblur="this.placeholder='Search survey forms by name or #'" id="survey">
@@ -96,26 +85,14 @@
     </div>
     </div>
     </div>
-    <div id="footer"></div>
+    <div class="_footer"></div>
 </body>
-<!-- start page specific scripts -->
-<script src='../../global/scripts/global.min.js'></script>
-<!-- end page specific scripts -->
 
-<!-- start style guide required vendor scripts -->
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<!-- end style guide required vendor scripts -->
-
-<!-- start style guide custom scripts -->
-<script src="../src/js/style-guide-side-nav.js"></script>
-<script src="../src/js/style-guide-header.js"></script>
-<script src="../src/js/style-guide-footer.js"></script>
+<script src="../temp/scripts/scripts.js"></script>
+<script src="../temp/scripts/global.js"></script>
 <script src="../src/js/highlight.js"></script>
+
 <script>
     hljs.initHighlightingOnLoad();
 </script>
-<!-- start style guide required scripts -->
-
 </html>

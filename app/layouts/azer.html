@@ -30,17 +30,17 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
+    	<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
     <link href="../src/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../src/css/themify-icons.css" rel="stylesheet">
     <link href="../src/css/highlight/tomorrow.css" rel="stylesheet" />
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,300" rel="stylesheet" />
-    <!-- start style guide required styles -->
+    
 
-    <!-- start page specific styles -->
+    <!-- build:css assets/styles/styles.min.css -->
     <link href="../src/css/eia-style-guide.css" rel="stylesheet" />
-    <!-- end page specific styless -->
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -67,7 +67,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="header-style-guide">
-                                    <article>
+                                    <li class="dilly-dilly">
                                         <h1 class="style-guide">Layout Rules</h1>
 
                                         <p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login
@@ -78,8 +78,8 @@
                                             that are common across all components of the page and use class selectors where appropriate.</p>
 
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Layout declarations</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Layout declarations</p>
                                             <pre><code class="html">#header, #article, #footer {
 	width: 960px;
 	margin: auto;
@@ -100,8 +100,8 @@
                                             user preference. This layout preference would still be declared as a Layout style and used in combination with other Layout styles. </p>
 
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Use of a higher level Layout style affecting other Layout styles.</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Use of a higher level Layout style affecting other Layout styles.</p>
                                             <pre><code class="html">#article {
 	float: left;
 }
@@ -123,8 +123,8 @@
                                         <p class="_p">In the Layout example, the .l-flipped class is applied on a higher level element such as the body element and allows the article and sidebar content to be swapped, moving the sidebar from the right to the left and
                                             vice versa for the article.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Using two Layout styles together to switch from fluid to fixed layout.</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Using two Layout styles together to switch from fluid to fixed layout.</p>
                                             <pre><code class="html">#article {
 	width: 80%;
 	float: left;
@@ -157,20 +157,20 @@
 
                                         <h4>Layout Examples</h4>
                                         <p class="_p">Theory is one thing but application is another. Let’s take a look at an actual web site and consider what is part of the layout and what is a module.</p>
-                                        <div class="example">
+                                        <div class="_example">
                                             <img src="/img/lyt-cnn0.png" alt="Using CNN.com as an example.">
                                         </div>
 
                                         <p class="_p">In taking a look at the CNN web site, there are a number of patterns that occur in plenty of web sites. For example, there is a header, a navigation bar, a content area and a footer (not seen in the screenshot).</p>
 
-                                        <div class="example">
+                                        <div class="_example">
                                             <img src="/img/lyt-cnn1.png" alt="Breaking the page down into header, main navigation, and three main content areas.">
                                         </div>
 
                                         <p class="_p">At the time of this writing, the web site follows very closely to this break down and provides ID attributes for these major sections.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Our CSS structure might look something like this:</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Our CSS structure might look something like this:</p>
                                             <pre><code class="css">#header { … }
 #primarynav { … }
 #maincontent { … }
@@ -184,15 +184,15 @@
 
                                         <p class="_p">That was straightforward and I’m sure you are thinking, “Really? You’re showing me how to do this?!” Let’s take a look at another part of the page.</p>
 
-                                        <div class="example">
+                                        <div class="_example">
                                             <img src="/img/lyt-cnn-ft0.png" alt="The featured section of the home page of CNN.com">
                                         </div>
 
                                         <p class="_p">Taking a look at the Featured section, we see a grid of news items. CNN’s current markup is a container <code>div</code> with a series of child <code>div</code>s. I would have likely gone with an unordered list,
                                             so let’s do that instead.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Example HTML code for the Featured section layout</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Example HTML code for the Featured section layout</p>
                                             <pre><code class="html">&lt;div&gt;
 &lt;h2&gt;Featured&lt;/h2&gt;
 &lt;ul&gt;
@@ -205,8 +205,8 @@
                                         </div>
                                         <p class="_p">Without considering the SMACSS approach to this, we might be inclined to add an ID of <code>featured</code> to the surrounding DIV and then style up the contents from there.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">A possible approach to styling the list of featured items</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">A possible approach to styling the list of featured items</p>
                                             <pre><code class="css">div#featured ul { 
 	margin: 0;
 	padding: 0;
@@ -238,8 +238,8 @@ div#featured li {
                                         <p class="_p">From a layout perspective, all we care about is how each item relates to each other. We don’t care, necessarily, about the design of the modules themselves nor do we want to have to worry about the context that
                                             this layout sits within.</p>
 
-                                        <div class="example">
-                                            <p class="example-caption style-guide">Grid Module applied to OL or UL.</p>
+                                        <div class="_example">
+                                            <p class="_example-caption _p">Grid Module applied to OL or UL.</p>
                                             <pre><code class="css">.l-grid {
 	margin: 0;
 	padding: 0;
@@ -284,7 +284,7 @@ div#featured li {
                                         <p class="_p">After inventory of the site it was determined that there was little or no difference in the main-col and side-col widths.
                                         </p>
                                         <!--  . Every instance of these templates has been replaced with a singular class called main-template.</p -->
-                                    </article>
+                                    </li>
 
                                     <ol class="style-guide">
                                         <li><a href="#header-row">Full-Width-Header Layout</a> |-15px-|---100%---|-15px-|</li>
@@ -340,7 +340,7 @@ div#featured li {
                                             </ul>
 
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 22px + 100% + 22px -->
                                                 <div class="l-row header">
@@ -363,7 +363,7 @@ div#featured li {
 	&lt;div class="full-width"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -382,7 +382,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <div class="l-row">
                                                     <div class="full-width">
@@ -403,7 +403,7 @@ div#featured li {
 	&lt;div class="full-width"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -425,7 +425,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <div class="l-row l-3-col-reorder">
                                                     <div class="l-narrow-col l-reorder-center">
@@ -461,7 +461,7 @@ div#featured li {
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -502,7 +502,7 @@ div#featured li {
                                             </ul>
 
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 25% / 77% -->
                                                 <div class="l-row l-left-column">
@@ -541,7 +541,7 @@ div#featured li {
 	&lt;div class="l-main-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -558,7 +558,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <!--
 		<div class="module-container">
 		<img src="img/l-wide-right-column.png" class="style-guide-image-center" />
@@ -593,7 +593,7 @@ div#featured li {
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -614,7 +614,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 41.666% / 58.333% -->
                                                 <div class="l-row">
@@ -643,7 +643,7 @@ div#featured li {
 	&lt;div class="l-split-wide-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
                                     <section class="style-guide">
@@ -659,7 +659,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 58.333% / 41.666% -->
                                                 <div class="l-row">
@@ -688,7 +688,7 @@ div#featured li {
 	&lt;div class="l-split-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -709,7 +709,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 33.333% / 66.666% -->
                                                 <div class="l-row">
@@ -738,7 +738,7 @@ div#featured li {
 	&lt;div class="l-two-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
                                     <section class="style-guide">
@@ -754,7 +754,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 66.666% / 33.333% -->
                                                 <div class="l-row">
@@ -783,7 +783,7 @@ div#featured li {
 	&lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -811,7 +811,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <!-- 50% / 50% -->
                                                 <div class="l-row">
@@ -840,7 +840,7 @@ div#featured li {
 	&lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -882,7 +882,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <div class="l-row">
                                                     <div class="l-one-third-col">
@@ -916,7 +916,7 @@ div#featured li {
 	&lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -933,7 +933,7 @@ div#featured li {
                                                     <span class="padding-margin-color"></span> Padding or margin.</li>
                                             </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <div class="l-row">
                                                     <div class="l-narrow-col">
@@ -975,7 +975,7 @@ div#featured li {
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                         </div>
-                                    </section>
+                                    
 
 
 
@@ -995,7 +995,7 @@ div#featured li {
                                                         <span class="padding-margin-color"></span> Padding or margin.</li>
                                                 </ul>
                                         </div>
-                                        <div class="module-wrapper">
+                                        <div class="_module-wrapper">
                                             <div class="module-container">
                                                 <div class="l-row l-3-col-reorder">
                                                     <div class="l-narrow-col l-reorder-center">
@@ -1023,7 +1023,7 @@ div#featured li {
 &lt;/div&gt;</code>
 </pre>
                                             </div>
-                                    </section>
+                                    
 
 
 
@@ -1074,7 +1074,7 @@ div#featured li {
 			<li><span class="inner-container-color"></span>  22 pixel margin in desktop / laptop view.</li>
 		<li><span class="padding-margin-color"></span>  Padding or margin.</li>
 	</ul>
-	<div class="module-wrapper">
+	<div class="_module-wrapper">
 					<img src="img/l-right-column.png" class="style-guide-image-center" />
 				</div>
 
@@ -1140,7 +1140,7 @@ div#featured li {
 			<li><span class="inner-container-color"></span>  22 pixel margin in desktop / laptop view.</li>
 		<li><span class="padding-margin-color"></span>  Padding or margin.</li>
 	</ul>
-	<div class="module-wrapper">
+	<div class="_module-wrapper">
 			<div class="module-container">
 <img src="" class="style-guide-image-center" />
 			</div>
@@ -1201,7 +1201,7 @@ coming soon
 			<li><span class="inner-container-color"></span>  22 pixel margin in desktop / laptop view.</li>
 		<li><span class="padding-margin-color"></span>  Padding or margin.</li>
 	</ul>
-	<div class="module-wrapper">
+	<div class="_module-wrapper">
 					<img src="img/l-right-column.png" class="style-guide-image-center" />
 				</div>
 
@@ -1274,7 +1274,7 @@ coming soon
 			<li><span class="inner-container-color"></span>  22 pixel margin in desktop / laptop view.</li>
 		<li><span class="padding-margin-color"></span>  Padding or margin.</li>
 	</ul>
-	<div class="module-wrapper">
+	<div class="_module-wrapper">
 					<img src="img/l-right-column.png" class="style-guide-image-center" />
 				</div>
 
@@ -1374,10 +1374,10 @@ pre>
 <script src="../src/js/highlight.js"></script>
 <!-- endbuild -->
 <!-- build:js assets/scripts/_header.js -->
-<script src="../src/js/_header.js"></script>
+
 <!-- endbuild -->
 <!-- build:js assets/scripts/_footer.js -->
-<script src="../src/js/_footer.js"></script>
+
 <!-- endbuild -->
 <script>
 hljs.initHighlightingOnLoad();

@@ -47,7 +47,7 @@
 
 	'use strict';
 
-	var _highcharts = __webpack_require__(29);
+	var _highcharts = __webpack_require__(30);
 
 	var _highcharts2 = _interopRequireDefault(_highcharts);
 
@@ -9878,7 +9878,7 @@
 
 /***/ }),
 
-/***/ 29:
+/***/ 30:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9887,19 +9887,19 @@
 	    value: true
 	});
 
-	var _highchartsSrc = __webpack_require__(30);
+	var _highchartsSrc = __webpack_require__(31);
 
 	var _highchartsSrc2 = _interopRequireDefault(_highchartsSrc);
 
-	var _highchartsMoreSrc = __webpack_require__(31);
+	var _highchartsMoreSrc = __webpack_require__(32);
 
 	var _highchartsMoreSrc2 = _interopRequireDefault(_highchartsMoreSrc);
 
-	var _exportingSrc = __webpack_require__(32);
+	var _exportingSrc = __webpack_require__(33);
 
 	var _exportingSrc2 = _interopRequireDefault(_exportingSrc);
 
-	var _noDataToDisplaySrc = __webpack_require__(33);
+	var _noDataToDisplaySrc = __webpack_require__(34);
 
 	var _noDataToDisplaySrc2 = _interopRequireDefault(_noDataToDisplaySrc);
 
@@ -9917,7 +9917,7 @@
 
 /***/ }),
 
-/***/ 30:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {'use strict';
@@ -26653,7 +26653,7 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -28995,7 +28995,7 @@
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -29646,7 +29646,7 @@
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, exports) {
 
 	'use strict';

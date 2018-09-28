@@ -11,8 +11,6 @@ class ModuleScripts {
         //        this.moduleVisualizations.each((index, element) => {
         //            $(element).closest('li').addClass("hide"); 
         //        })
-
-
         $('a').each(function() {
             var a = new RegExp('/' + window.location.host + '/');
             //if (!a.test(this.href) && ($(this).find('img').length === 0) && ($(this).attr('href'))) {

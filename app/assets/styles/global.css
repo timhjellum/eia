@@ -62,6 +62,8 @@
 @import "less/theme/basic-table";
 @import "less/theme/overview";
 @import "less/theme/data";
+@import "less/theme/natural-gas";
+
 /* home */
 @import "less/theme/homepage/modules";
 @import "less/theme/homepage/data-highlights";

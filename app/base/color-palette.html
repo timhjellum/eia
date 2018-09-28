@@ -11,41 +11,35 @@
 
     <!-- b&w favicon -->
 
-    <link href="../src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="../src/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="../src/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="../src/img/site.webmanifest" rel="manifest">
-    <link href="../src/img/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+    <link href="/style-guide/src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/style-guide/src/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/style-guide/src/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/style-guide/src/img/site.webmanifest" rel="manifest">
+    <link href="/style-guide/src/img/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
-
-    <!-- end style guide required vendor styles -->
-
-    <!-- start style guide vendor styles -->
-
-
-    <!-- start style guide required styles -->
-
-    <!-- start page specific styles -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald|Open+Sans" rel="stylesheet">
+    
+    <!-- build:css assets/styles/styles.min.css -->
     <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- end page specific styless -->
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
     <link rel="stylesheet" href="../temp/styles/global.css">
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
-    <!-- end page specific styless -->
+    <!-- endbuild -->
 </head>
-
 <body>
-    <div class="_header">
-    </div>
-
+    <div class="_header"></div>
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
-                <h2 class="_h2">Color Palette</h2>
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <h1 class="_h1">Color Palette</h1>
 
                 <ul class="dilly-dilly">
                     <li class="dilly-dilly">
@@ -745,41 +739,28 @@
                                 <li></li>
                             </ul>
                         </div>
-
-                        <!-- end color pallate section -->
-                        <!-- end  style guide -->
-                        <!-- end  style guide -->
-                        <!-- end  style guide -->
+                        <!-- end section -->
+                        <!-- end section -->
+                        <!-- end section -->
                     </li>
                 </ul>
+                <!-- end style guide -->
+                <!-- end style guide -->
+                <!-- end style guide -->
             </div>
         </div>
-        <div class="_right-sidebar">
-            <div class="_right-sidebar-inner">
-                <ul class="dilly-dilly">
-                    <li class="active blues"><a href="#one">Blues</a></li>
-                    <li class="greens"><a href="#two">Greens</a></li>
-                    <li class="reds"><a href="#thr">Red</a></li>
-                    <li class="yellows"><a href="#fou">Yellows</a></li>
-                    <li class="purples"><a href="#fiv">Purples</a></li>
-                    <li class="browns"><a href="#six">Browns</a></li>
-                    <li class="whites"><a href="#sev">Whites</a></li>
-                    <li class="blacks"><a href="#eig">Blacks</a></li>
-                    <li class="shades-of-white"><a href="#nin">Shades of White</a></li>
-                    <li class="shades-of-black"><a href="#ten">Shades of black</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="footer"></div>
+    </div>
+    <div class="_footer"></div>
 </body>
-
+<!-- build:js assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
+<!-- build:js assets/scripts/global.js.min.js -->
 <script src="../temp/scripts/global.js"></script>
+<!-- endbuild -->
+<!-- build:js assets/scripts/highlight.min.js -->
 <script src="../src/js/highlight.js"></script>
-
+<!-- endbuild -->
 <script>
     hljs.initHighlightingOnLoad();
-    console.log("hola");
 </script>
 </html>

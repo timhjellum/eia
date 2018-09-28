@@ -5,9 +5,6 @@ class Highlight {
         const dataPage = document.querySelector('.data');
         if (dataPage !== null) {
 
-
-
-
             var referrer = document.referrer;
             var query;
             //referrer = document.location.href;  //REMOVE AFTER TESTING

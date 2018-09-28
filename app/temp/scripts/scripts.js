@@ -47,26 +47,23 @@
 
 	'use strict';
 
-	var _stickySidebar = __webpack_require__(34);
+	var _scrollNav = __webpack_require__(32);
 
-	var _stickySidebar2 = _interopRequireDefault(_stickySidebar);
+	var _scrollNav2 = _interopRequireDefault(_scrollNav);
 
-	var _header = __webpack_require__(36);
+	var _header = __webpack_require__(34);
 
 	var _header2 = _interopRequireDefault(_header);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	new _stickySidebar2.default();
-
-	//import LazyLoadModule from './modules/lazyload';
-	//new LazyLoadModule();
+	new _scrollNav2.default();
 
 	new _header2.default();
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -9887,919 +9884,69 @@
 
 /***/ }),
 
-/***/ 34:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	    value: true
 	});
 
-	__webpack_require__(35);
+	var _scrollnav = __webpack_require__(33);
+
+	var _scrollnav2 = _interopRequireDefault(_scrollnav);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var StickySidebar = function StickySidebar() {
-		_classCallCheck(this, StickySidebar);
+	var scrollNav = function scrollNav() {
+	    _classCallCheck(this, scrollNav);
 
-		$('._right-sidebar').stickySidebar({
-			topSpacing: 120,
-			bottomSpacing: 20,
-			containerSelector: '._container',
-			innerWrapperSelector: '._right-sidebar-inner'
-		});
-		/*
-	 var sidebar = new StickySidebar('._right-sidebar', {
-	 	topSpacing: 20,
-	 	bottomSpacing: 20,
-	 	containerSelector: '._container',
-	 	innerWrapperSelector: '._right-sidebar-inner'
-	 });
-	 */
-		var scrollTop = $(window).scrollTop();
+	    console.log("_scroll-nav");
 
-		$.fn.scrollFunction = function () {
-			return this.each(function () {
-
-				var elementOffset = $(this).offset();
-				var elementOffsetTop = elementOffset.top;
-				var pPosition = scrollTop - elementOffsetTop;
-
-				// if p doesn't have class active, run this code
-				if (!$($(this)).hasClass("active")) {
-					if (pPosition > -26) {
-						$(".dilly li").removeClass("active");
-						$(this).addClass("active");
-						var activeElement = $(this).index();
-
-						$(".dilly-dilly li").removeClass("active");
-						$(".dilly-dilly li:eq(" + activeElement + ")").addClass("active");
-					};
-				}
-				if ($($(this)).hasClass("active")) {
-					if (pPosition < -26) {
-						$(this).removeClass("active");
-						var inactiveElement = $(this).index();
-						console.log(inactiveElement);
-						$(".dilly-dilly li:eq(" + inactiveElement + ")").removeClass("active");
-					};
-				}
-			});
-		};
-		$(window).scroll(function () {
-			scrollTop = $(window).scrollTop();
-			$("._content ul.dilly li").scrollFunction();
-		});
-
-		// Select all links with hashes
-		$('a[href*="#"]')
-		// Remove links that don't actually link to anything
-		.not('[href="#"]').not('[href="#0"]').click(function (event) {
-			// On-page links
-			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-				// Figure out element to scroll to
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-				// Does a scroll target exist?
-				if (target.length) {
-					// Only prevent default if animation is actually gonna happen
-					event.preventDefault();
-					$('html, body').animate({
-						scrollTop: target.offset().top - 21
-					}, 1000, function () {
-						// Callback after animation
-						// Must change focus!
-						var $target = $(target);
-						$target.focus();
-						if ($target.is(":focus")) {
-							// Checking if the target was focused
-							return false;
-						} else {
-							$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-							$target.focus(); // Set focus again
-						};
-					});
-				}
-			}
-		});
+	    $('._container').scrollNav({
+	        sections: '._h3',
+	        subSections: false,
+	        sectionElem: 'section',
+	        className: '_right-sidebar',
+	        showHeadline: false,
+	        headlineText: 'Scroll To',
+	        showTopLink: false,
+	        topLinkText: 'Top',
+	        fixedMargin: 80,
+	        scrollOffset: 20,
+	        animated: true,
+	        speed: 500,
+	        insertTarget: this.selector,
+	        insertLocation: 'insertBefore',
+	        activeClass: 'active',
+	        arrowKeys: false,
+	        scrollToHash: true,
+	        onInit: null,
+	        onRender: null,
+	        onDestroy: null
+	    });
 	};
 
-	exports.default = StickySidebar;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+	exports.default = scrollNav;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 
-/***/ 35:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_$, __webpack_provided_window_dot_jQuery) {(function (global, factory) {
-		 true ? factory() :
-		typeof define === 'function' && define.amd ? define(factory) :
-		(factory());
-	}(this, (function () { 'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * Sticky Sidebar JavaScript Plugin.
-	 * @version 3.3.1
-	 * @author Ahmed Bouhuolia <a.bouhuolia@gmail.com>
-	 * @license The MIT License (MIT)
-	 */
-	var StickySidebar = function () {
-
-	  // ---------------------------------
-	  // # Define Constants
-	  // ---------------------------------
-	  //
-	  var EVENT_KEY = '.stickySidebar';
-	  var DEFAULTS = {
-
-	    /**
-	     * Additional top spacing of the element when it becomes sticky.
-	     * @type {Numeric|Function}
-	     */
-	    topSpacing: 0,
-
-	    /**
-	     * Additional bottom spacing of the element when it becomes sticky.
-	     * @type {Numeric|Function}
-	     */
-	    bottomSpacing: 0,
-
-	    /**
-	     * Container sidebar selector to know what the beginning and end of sticky element.
-	     * @type {String|False}
-	     */
-	    containerSelector: false,
-
-	    /**
-	     * Inner wrapper selector.
-	     * @type {String}
-	     */
-	    innerWrapperSelector: '.inner-wrapper-sticky',
-
-	    /**
-	     * The name of CSS class to apply to elements when they have become stuck.
-	     * @type {String|False}
-	     */
-	    stickyClass: 'is-affixed',
-
-	    /**
-	     * Detect when sidebar and its container change height so re-calculate their dimensions.
-	     * @type {Boolean}
-	     */
-	    resizeSensor: true,
-
-	    /**
-	     * The sidebar returns to its normal position if its width below this value.
-	     * @type {Numeric}
-	     */
-	    minWidth: false
-	  };
-
-	  // ---------------------------------
-	  // # Class Definition
-	  // ---------------------------------
-	  //
-	  /**
-	   * Sticky Sidebar Class.
-	   * @public
-	   */
-
-	  var StickySidebar = function () {
-
-	    /**
-	     * Sticky Sidebar Constructor.
-	     * @constructor
-	     * @param {HTMLElement|String} sidebar - The sidebar element or sidebar selector.
-	     * @param {Object} options - The options of sticky sidebar.
-	     */
-	    function StickySidebar(sidebar) {
-	      var _this = this;
-
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	      _classCallCheck(this, StickySidebar);
-
-	      this.options = StickySidebar.extend(DEFAULTS, options);
-
-	      // Sidebar element query if there's no one, throw error.
-	      this.sidebar = 'string' === typeof sidebar ? document.querySelector(sidebar) : sidebar;
-	      if ('undefined' === typeof this.sidebar) throw new Error("There is no specific sidebar element.");
-
-	      this.sidebarInner = false;
-	      this.container = this.sidebar.parentElement;
-
-	      // Current Affix Type of sidebar element.
-	      this.affixedType = 'STATIC';
-	      this.direction = 'down';
-	      this.support = {
-	        transform: false,
-	        transform3d: false
-	      };
-
-	      this._initialized = false;
-	      this._reStyle = false;
-	      this._breakpoint = false;
-	      this._resizeListeners = [];
-
-	      // Dimensions of sidebar, container and screen viewport.
-	      this.dimensions = {
-	        translateY: 0,
-	        topSpacing: 0,
-	        lastTopSpacing: 0,
-	        bottomSpacing: 0,
-	        lastBottomSpacing: 0,
-	        sidebarHeight: 0,
-	        sidebarWidth: 0,
-	        containerTop: 0,
-	        containerHeight: 0,
-	        viewportHeight: 0,
-	        viewportTop: 0,
-	        lastViewportTop: 0
-	      };
-
-	      // Bind event handlers for referencability.
-	      ['handleEvent'].forEach(function (method) {
-	        _this[method] = _this[method].bind(_this);
-	      });
-
-	      // Initialize sticky sidebar for first time.
-	      this.initialize();
-	    }
-
-	    /**
-	     * Initializes the sticky sidebar by adding inner wrapper, define its container, 
-	     * min-width breakpoint, calculating dimensions, adding helper classes and inline style.
-	     * @private
-	     */
-
-
-	    _createClass(StickySidebar, [{
-	      key: 'initialize',
-	      value: function initialize() {
-	        var _this2 = this;
-
-	        this._setSupportFeatures();
-
-	        // Get sticky sidebar inner wrapper, if not found, will create one.
-	        if (this.options.innerWrapperSelector) {
-	          this.sidebarInner = this.sidebar.querySelector(this.options.innerWrapperSelector);
-
-	          if (null === this.sidebarInner) this.sidebarInner = false;
-	        }
-
-	        if (!this.sidebarInner) {
-	          var wrapper = document.createElement('div');
-	          wrapper.setAttribute('class', 'inner-wrapper-sticky');
-	          this.sidebar.appendChild(wrapper);
-
-	          while (this.sidebar.firstChild != wrapper) {
-	            wrapper.appendChild(this.sidebar.firstChild);
-	          }this.sidebarInner = this.sidebar.querySelector('.inner-wrapper-sticky');
-	        }
-
-	        // Container wrapper of the sidebar.
-	        if (this.options.containerSelector) {
-	          var containers = document.querySelectorAll(this.options.containerSelector);
-	          containers = Array.prototype.slice.call(containers);
-
-	          containers.forEach(function (container, item) {
-	            if (!container.contains(_this2.sidebar)) return;
-	            _this2.container = container;
-	          });
-
-	          if (!containers.length) throw new Error("The container does not contains on the sidebar.");
-	        }
-
-	        // If top/bottom spacing is not function parse value to integer.
-	        if ('function' !== typeof this.options.topSpacing) this.options.topSpacing = parseInt(this.options.topSpacing) || 0;
-
-	        if ('function' !== typeof this.options.bottomSpacing) this.options.bottomSpacing = parseInt(this.options.bottomSpacing) || 0;
-
-	        // Breakdown sticky sidebar if screen width below `options.minWidth`.
-	        this._widthBreakpoint();
-
-	        // Calculate dimensions of sidebar, container and viewport.
-	        this.calcDimensions();
-
-	        // Affix sidebar in proper position.
-	        this.stickyPosition();
-
-	        // Bind all events.
-	        this.bindEvents();
-
-	        // Inform other properties the sticky sidebar is initialized.
-	        this._initialized = true;
-	      }
-
-	      /**
-	       * Bind all events of sticky sidebar plugin.
-	       * @protected
-	       */
-
-	    }, {
-	      key: 'bindEvents',
-	      value: function bindEvents() {
-	        window.addEventListener('resize', this, { passive: true, capture: false });
-	        window.addEventListener('scroll', this, { passive: true, capture: false });
-
-	        this.sidebar.addEventListener('update' + EVENT_KEY, this);
-
-	        if (this.options.resizeSensor && 'undefined' !== typeof ResizeSensor) {
-	          new ResizeSensor(this.sidebarInner, this.handleEvent);
-	          new ResizeSensor(this.container, this.handleEvent);
-	        }
-	      }
-
-	      /**
-	       * Handles all events of the plugin.
-	       * @param {Object} event - Event object passed from listener.
-	       */
-
-	    }, {
-	      key: 'handleEvent',
-	      value: function handleEvent(event) {
-	        this.updateSticky(event);
-	      }
-
-	      /**
-	       * Calculates dimensions of sidebar, container and screen viewpoint
-	       * @public
-	       */
-
-	    }, {
-	      key: 'calcDimensions',
-	      value: function calcDimensions() {
-	        if (this._breakpoint) return;
-	        var dims = this.dimensions;
-
-	        // Container of sticky sidebar dimensions.
-	        dims.containerTop = StickySidebar.offsetRelative(this.container).top;
-	        dims.containerHeight = this.container.clientHeight;
-	        dims.containerBottom = dims.containerTop + dims.containerHeight;
-
-	        // Sidebar dimensions.
-	        dims.sidebarHeight = this.sidebarInner.offsetHeight;
-	        dims.sidebarWidth = this.sidebar.offsetWidth;
-
-	        // Screen viewport dimensions.
-	        dims.viewportHeight = window.innerHeight;
-
-	        this._calcDimensionsWithScroll();
-	      }
-
-	      /**
-	       * Some dimensions values need to be up-to-date when scrolling the page.
-	       * @private
-	       */
-
-	    }, {
-	      key: '_calcDimensionsWithScroll',
-	      value: function _calcDimensionsWithScroll() {
-	        var dims = this.dimensions;
-
-	        dims.sidebarLeft = StickySidebar.offsetRelative(this.sidebar).left;
-
-	        dims.viewportTop = document.documentElement.scrollTop || document.body.scrollTop;
-	        dims.viewportBottom = dims.viewportTop + dims.viewportHeight;
-	        dims.viewportLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-
-	        dims.topSpacing = this.options.topSpacing;
-	        dims.bottomSpacing = this.options.bottomSpacing;
-
-	        if ('function' === typeof dims.topSpacing) dims.topSpacing = parseInt(dims.topSpacing(this.sidebar)) || 0;
-
-	        if ('function' === typeof dims.bottomSpacing) dims.bottomSpacing = parseInt(dims.bottomSpacing(this.sidebar)) || 0;
-
-	        if ('VIEWPORT-TOP' === this.affixedType) {
-	          // Adjust translate Y in the case decrease top spacing value.
-	          if (dims.topSpacing < dims.lastTopSpacing) {
-	            dims.translateY += dims.lastTopSpacing - dims.topSpacing;
-	            this._reStyle = true;
-	          }
-	        } else if ('VIEWPORT-BOTTOM' === this.affixedType) {
-	          // Adjust translate Y in the case decrease bottom spacing value.
-	          if (dims.bottomSpacing < dims.lastBottomSpacing) {
-	            dims.translateY += dims.lastBottomSpacing - dims.bottomSpacing;
-	            this._reStyle = true;
-	          }
-	        }
-
-	        dims.lastTopSpacing = dims.topSpacing;
-	        dims.lastBottomSpacing = dims.bottomSpacing;
-	      }
-
-	      /**
-	       * Determine whether the sidebar is bigger than viewport.
-	       * @public
-	       * @return {Boolean}
-	       */
-
-	    }, {
-	      key: 'isSidebarFitsViewport',
-	      value: function isSidebarFitsViewport() {
-	        return this.dimensions.sidebarHeight < this.dimensions.viewportHeight;
-	      }
-
-	      /**
-	       * Observe browser scrolling direction top and down.
-	       */
-
-	    }, {
-	      key: 'observeScrollDir',
-	      value: function observeScrollDir() {
-	        var dims = this.dimensions;
-	        if (dims.lastViewportTop === dims.viewportTop) return;
-
-	        var furthest = 'down' === this.direction ? Math.min : Math.max;
-
-	        // If the browser is scrolling not in the same direction.
-	        if (dims.viewportTop === furthest(dims.viewportTop, dims.lastViewportTop)) this.direction = 'down' === this.direction ? 'up' : 'down';
-	      }
-
-	      /**
-	       * Gets affix type of sidebar according to current scrollTop and scrollLeft.
-	       * Holds all logical affix of the sidebar when scrolling up and down and when sidebar 
-	       * is bigger than viewport and vice versa.
-	       * @public
-	       * @return {String|False} - Proper affix type.
-	       */
-
-	    }, {
-	      key: 'getAffixType',
-	      value: function getAffixType() {
-	        var dims = this.dimensions,
-	            affixType = false;
-
-	        this._calcDimensionsWithScroll();
-
-	        var sidebarBottom = dims.sidebarHeight + dims.containerTop;
-	        var colliderTop = dims.viewportTop + dims.topSpacing;
-	        var colliderBottom = dims.viewportBottom - dims.bottomSpacing;
-
-	        // When browser is scrolling top.
-	        if ('up' === this.direction) {
-	          if (colliderTop <= dims.containerTop) {
-	            dims.translateY = 0;
-	            affixType = 'STATIC';
-	          } else if (colliderTop <= dims.translateY + dims.containerTop) {
-	            dims.translateY = colliderTop - dims.containerTop;
-	            affixType = 'VIEWPORT-TOP';
-	          } else if (!this.isSidebarFitsViewport() && dims.containerTop <= colliderTop) {
-	            affixType = 'VIEWPORT-UNBOTTOM';
-	          }
-	          // When browser is scrolling up.
-	        } else {
-	          // When sidebar element is not bigger than screen viewport.
-	          if (this.isSidebarFitsViewport()) {
-
-	            if (dims.sidebarHeight + colliderTop >= dims.containerBottom) {
-	              dims.translateY = dims.containerBottom - sidebarBottom;
-	              affixType = 'CONTAINER-BOTTOM';
-	            } else if (colliderTop >= dims.containerTop) {
-	              dims.translateY = colliderTop - dims.containerTop;
-	              affixType = 'VIEWPORT-TOP';
-	            }
-	            // When sidebar element is bigger than screen viewport.
-	          } else {
-
-	            if (dims.containerBottom <= colliderBottom) {
-	              dims.translateY = dims.containerBottom - sidebarBottom;
-	              affixType = 'CONTAINER-BOTTOM';
-	            } else if (sidebarBottom + dims.translateY <= colliderBottom) {
-	              dims.translateY = colliderBottom - sidebarBottom;
-	              affixType = 'VIEWPORT-BOTTOM';
-	            } else if (dims.containerTop + dims.translateY <= colliderTop) {
-	              affixType = 'VIEWPORT-UNBOTTOM';
-	            }
-	          }
-	        }
-
-	        // Make sure the translate Y is not bigger than container height.
-	        dims.translateY = Math.max(0, dims.translateY);
-	        dims.translateY = Math.min(dims.containerHeight, dims.translateY);
-
-	        dims.lastViewportTop = dims.viewportTop;
-	        return affixType;
-	      }
-
-	      /**
-	       * Gets inline style of sticky sidebar wrapper and inner wrapper according 
-	       * to its affix type.
-	       * @private
-	       * @param {String} affixType - Affix type of sticky sidebar.
-	       * @return {Object}
-	       */
-
-	    }, {
-	      key: '_getStyle',
-	      value: function _getStyle(affixType) {
-	        if ('undefined' === typeof affixType) return;
-
-	        var style = { inner: {}, outer: {} };
-	        var dims = this.dimensions;
-
-	        switch (affixType) {
-	          case 'VIEWPORT-TOP':
-	            style.inner = { position: 'fixed', top: dims.topSpacing,
-	              left: dims.sidebarLeft - dims.viewportLeft, width: dims.sidebarWidth };
-	            break;
-	          case 'VIEWPORT-BOTTOM':
-	            style.inner = { position: 'fixed', top: 'auto', left: dims.sidebarLeft,
-	              bottom: dims.bottomSpacing, width: dims.sidebarWidth };
-	            break;
-	          case 'CONTAINER-BOTTOM':
-	          case 'VIEWPORT-UNBOTTOM':
-	            var translate = this._getTranslate(0, dims.translateY + 'px');
-
-	            if (translate) style.inner = { transform: translate };else style.inner = { position: 'absolute', top: dims.translateY, width: dims.sidebarWidth };
-	            break;
-	        }
-
-	        switch (affixType) {
-	          case 'VIEWPORT-TOP':
-	          case 'VIEWPORT-BOTTOM':
-	          case 'VIEWPORT-UNBOTTOM':
-	          case 'CONTAINER-BOTTOM':
-	            style.outer = { height: dims.sidebarHeight, position: 'relative' };
-	            break;
-	        }
-
-	        style.outer = StickySidebar.extend({ height: '', position: '' }, style.outer);
-	        style.inner = StickySidebar.extend({ position: 'relative', top: '', left: '',
-	          bottom: '', width: '', transform: this._getTranslate() }, style.inner);
-
-	        return style;
-	      }
-
-	      /**
-	       * Cause the sidebar to be sticky according to affix type by adding inline
-	       * style, adding helper class and trigger events.
-	       * @function
-	       * @protected
-	       * @param {string} force - Update sticky sidebar position by force.
-	       */
-
-	    }, {
-	      key: 'stickyPosition',
-	      value: function stickyPosition(force) {
-	        if (this._breakpoint) return;
-
-	        force = this._reStyle || force || false;
-
-	        var affixType = this.getAffixType();
-	        var style = this._getStyle(affixType);
-
-	        if ((this.affixedType != affixType || force) && affixType) {
-	          var affixEvent = 'affix.' + affixType.toLowerCase().replace('viewport-', '') + EVENT_KEY;
-	          StickySidebar.eventTrigger(this.sidebar, affixEvent);
-
-	          if ('STATIC' === affixType) StickySidebar.removeClass(this.sidebar, this.options.stickyClass);else StickySidebar.addClass(this.sidebar, this.options.stickyClass);
-
-	          for (var key in style.outer) {
-	            this.sidebar.style[key] = style.outer[key];
-	          }
-
-	          for (var _key in style.inner) {
-	            var _unit2 = 'number' === typeof style.inner[_key] ? 'px' : '';
-	            this.sidebarInner.style[_key] = style.inner[_key] + _unit2;
-	          }
-
-	          var affixedEvent = 'affixed.' + affixType.toLowerCase().replace('viewport-', '') + EVENT_KEY;
-	          StickySidebar.eventTrigger(this.sidebar, affixedEvent);
-	        } else {
-	          if (this._initialized) this.sidebarInner.style.left = style.inner.left;
-	        }
-
-	        this.affixedType = affixType;
-	      }
-
-	      /**
-	       * Breakdown sticky sidebar when window width is below `options.minWidth` value.
-	       * @protected
-	       */
-
-	    }, {
-	      key: '_widthBreakpoint',
-	      value: function _widthBreakpoint() {
-
-	        if (window.innerWidth <= this.options.minWidth) {
-	          this._breakpoint = true;
-	          this.affixedType = 'STATIC';
-
-	          this.sidebar.removeAttribute('style');
-	          StickySidebar.removeClass(this.sidebar, this.options.stickyClass);
-	          this.sidebarInner.removeAttribute('style');
-	        } else {
-	          this._breakpoint = false;
-	        }
-	      }
-
-	      /**
-	       * Switches between functions stack for each event type, if there's no 
-	       * event, it will re-initialize sticky sidebar.
-	       * @public
-	       */
-
-	    }, {
-	      key: 'updateSticky',
-	      value: function updateSticky() {
-	        var _this3 = this;
-
-	        var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-	        if (this._running) return;
-	        this._running = true;
-
-	        (function (eventType) {
-
-	          requestAnimationFrame(function () {
-	            switch (eventType) {
-	              // When browser is scrolling and re-calculate just dimensions
-	              // within scroll. 
-	              case 'scroll':
-	                _this3._calcDimensionsWithScroll();
-	                _this3.observeScrollDir();
-	                _this3.stickyPosition();
-	                break;
-
-	              // When browser is resizing or there's no event, observe width
-	              // breakpoint and re-calculate dimensions.
-	              case 'resize':
-	              default:
-	                _this3._widthBreakpoint();
-	                _this3.calcDimensions();
-	                _this3.stickyPosition(true);
-	                break;
-	            }
-	            _this3._running = false;
-	          });
-	        })(event.type);
-	      }
-
-	      /**
-	       * Set browser support features to the public property.
-	       * @private
-	       */
-
-	    }, {
-	      key: '_setSupportFeatures',
-	      value: function _setSupportFeatures() {
-	        var support = this.support;
-
-	        support.transform = StickySidebar.supportTransform();
-	        support.transform3d = StickySidebar.supportTransform(true);
-	      }
-
-	      /**
-	       * Get translate value, if the browser supports transfrom3d, it will adopt it.
-	       * and the same with translate. if browser doesn't support both return false.
-	       * @param {Number} y - Value of Y-axis.
-	       * @param {Number} x - Value of X-axis.
-	       * @param {Number} z - Value of Z-axis.
-	       * @return {String|False}
-	       */
-
-	    }, {
-	      key: '_getTranslate',
-	      value: function _getTranslate() {
-	        var y = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-	        var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	        var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-
-	        if (this.support.transform3d) return 'translate3d(' + y + ', ' + x + ', ' + z + ')';else if (this.support.translate) return 'translate(' + y + ', ' + x + ')';else return false;
-	      }
-
-	      /**
-	       * Destroy sticky sidebar plugin.
-	       * @public
-	       */
-
-	    }, {
-	      key: 'destroy',
-	      value: function destroy() {
-	        window.removeEventListener('resize', this, { caption: false });
-	        window.removeEventListener('scroll', this, { caption: false });
-
-	        this.sidebar.classList.remove(this.options.stickyClass);
-	        this.sidebar.style.minHeight = '';
-
-	        this.sidebar.removeEventListener('update' + EVENT_KEY, this);
-
-	        var styleReset = { inner: {}, outer: {} };
-
-	        styleReset.inner = { position: '', top: '', left: '', bottom: '', width: '', transform: '' };
-	        styleReset.outer = { height: '', position: '' };
-
-	        for (var key in styleReset.outer) {
-	          this.sidebar.style[key] = styleReset.outer[key];
-	        }for (var _key2 in styleReset.inner) {
-	          this.sidebarInner.style[_key2] = styleReset.inner[_key2];
-	        }if (this.options.resizeSensor && 'undefined' !== typeof ResizeSensor) {
-	          ResizeSensor.detach(this.sidebarInner, this.handleEvent);
-	          ResizeSensor.detach(this.container, this.handleEvent);
-	        }
-	      }
-
-	      /**
-	       * Determine if the browser supports CSS transform feature.
-	       * @function
-	       * @static
-	       * @param {Boolean} transform3d - Detect transform with translate3d.
-	       * @return {String}
-	       */
-
-	    }], [{
-	      key: 'supportTransform',
-	      value: function supportTransform(transform3d) {
-	        var result = false,
-	            property = transform3d ? 'perspective' : 'transform',
-	            upper = property.charAt(0).toUpperCase() + property.slice(1),
-	            prefixes = ['Webkit', 'Moz', 'O', 'ms'],
-	            support = document.createElement('support'),
-	            style = support.style;
-
-	        (property + ' ' + prefixes.join(upper + ' ') + upper).split(' ').forEach(function (property, i) {
-	          if (style[property] !== undefined) {
-	            result = property;
-	            return false;
-	          }
-	        });
-	        return result;
-	      }
-
-	      /**
-	       * Trigger custom event.
-	       * @static
-	       * @param {DOMObject} element - Target element on the DOM.
-	       * @param {String} eventName - Event name.
-	       * @param {Object} data - 
-	       */
-
-	    }, {
-	      key: 'eventTrigger',
-	      value: function eventTrigger(element, eventName, data) {
-	        try {
-	          var event = new CustomEvent(eventName, { detail: data });
-	        } catch (e) {
-	          var event = document.createEvent('CustomEvent');
-	          event.initCustomEvent(eventName, true, true, data);
-	        }
-	        element.dispatchEvent(event);
-	      }
-
-	      /**
-	       * Extend options object with defaults.
-	       * @function
-	       * @static
-	       */
-
-	    }, {
-	      key: 'extend',
-	      value: function extend(defaults, options) {
-	        var results = {};
-	        for (var key in defaults) {
-	          if ('undefined' !== typeof options[key]) results[key] = options[key];else results[key] = defaults[key];
-	        }
-	        return results;
-	      }
-
-	      /**
-	       * Get current coordinates left and top of specific element.
-	       * @static
-	       */
-
-	    }, {
-	      key: 'offsetRelative',
-	      value: function offsetRelative(element) {
-	        var result = { left: 0, top: 0 };
-
-	        do {
-	          var offsetTop = element.offsetTop;
-	          var offsetLeft = element.offsetLeft;
-
-	          if (!isNaN(offsetTop)) result.top += offsetTop;
-
-	          if (!isNaN(offsetLeft)) result.left += offsetLeft;
-
-	          element = 'BODY' === element.tagName ? element.parentElement : element.offsetParent;
-	        } while (element);
-	        return result;
-	      }
-
-	      /**
-	       * Add specific class name to specific element.
-	       * @static 
-	       * @param {ObjectDOM} element 
-	       * @param {String} className 
-	       */
-
-	    }, {
-	      key: 'addClass',
-	      value: function addClass(element, className) {
-	        if (!StickySidebar.hasClass(element, className)) {
-	          if (element.classList) element.classList.add(className);else element.className += ' ' + className;
-	        }
-	      }
-
-	      /**
-	       * Remove specific class name to specific element
-	       * @static
-	       * @param {ObjectDOM} element 
-	       * @param {String} className 
-	       */
-
-	    }, {
-	      key: 'removeClass',
-	      value: function removeClass(element, className) {
-	        if (StickySidebar.hasClass(element, className)) {
-	          if (element.classList) element.classList.remove(className);else element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-	        }
-	      }
-
-	      /**
-	       * Determine weather the element has specific class name.
-	       * @static
-	       * @param {ObjectDOM} element 
-	       * @param {String} className 
-	       */
-
-	    }, {
-	      key: 'hasClass',
-	      value: function hasClass(element, className) {
-	        if (element.classList) return element.classList.contains(className);else return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
-	      }
-	    }]);
-
-	    return StickySidebar;
-	  }();
-
-	  return StickySidebar;
-	}();
-
-	// Global
-	// -------------------------
-	window.StickySidebar = StickySidebar;
-
-	(function () {
-	  if ('undefined' === typeof window) return;
-
-	  var plugin = __webpack_provided_window_dot_$ || __webpack_provided_window_dot_jQuery || window.Zepto;
-	  var DATA_NAMESPACE = 'stickySidebar';
-
-	  // Make sure the site has jquery or zepto plugin.
-	  if (plugin) {
-	    /**
-	     * Sticky Sidebar Plugin Defintion.
-	     * @param {Object|String} - config
-	     */
-	    var _jQueryPlugin = function (config) {
-	      return this.each(function () {
-	        var $this = plugin(this),
-	            data = plugin(this).data(DATA_NAMESPACE);
-
-	        if (!data) {
-	          data = new StickySidebar(this, typeof config == 'object' && config);
-	          $this.data(DATA_NAMESPACE, data);
-	        }
-
-	        if ('string' === typeof config) {
-	          if (data[config] === undefined && ['destroy', 'updateSticky'].indexOf(config) === -1) throw new Error('No method named "' + config + '"');
-
-	          data[config]();
-	        }
-	      });
-	    };
-
-	    plugin.fn.stickySidebar = _jQueryPlugin;
-	    plugin.fn.stickySidebar.Constructor = StickySidebar;
-
-	    var old = plugin.fn.stickySidebar;
-
-	    /**
-	     * Sticky Sidebar No Conflict.
-	     */
-	    plugin.fn.stickySidebar.noConflict = function () {
-	      plugin.fn.stickySidebar = old;
-	      return this;
-	    };
-	  }
-	})();
-
-	})));
-
-	//# sourceMappingURL=jquery.sticky-sidebar.js.map
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! scrollNav - v2.7.3 - 2018-03-19
+	* http://scrollnav.com
+	* Copyright (c) 2018 James Wilson; Licensed MIT */
+	!function(a){var b=function(b,c,e,f){if(a(b).length>0){var g=a(b).offset().top;c=f?c:0,a("."+d.settings.className+"__focused-section").removeClass(d.settings.className+"__focused-section"),a(b).addClass(d.settings.className+"__focused-section"),a("html:not(:animated),body:not(:animated)").animate({scrollTop:g-e},c)}},c=function(){return window.location.hash},d={classes:{loading:"sn-loading",failed:"sn-failed",success:"sn-active"},defaults:{sections:"h2",subSections:!1,sectionElem:"section",className:"scroll-nav",showHeadline:!0,headlineText:"Scroll To",showTopLink:!0,topLinkText:"Top",fixedMargin:40,scrollOffset:40,animated:!0,speed:500,insertLocation:"insertBefore",arrowKeys:!1,scrollToHash:!0,onInit:null,onRender:null,onDestroy:null,onResetPos:null},_set_body_class:function(b){var c=a("body");"loading"===b?c.addClass(d.classes.loading):"success"===b?c.removeClass(d.classes.loading).addClass(d.classes.success):c.removeClass(d.classes.loading).addClass(d.classes.failed)},_find_sections:function(b){var c=d.settings.sections,e=[];if(d.settings.showTopLink){var f=b.children().first();f.is(c)||e.push(f.nextUntil(c).addBack())}b.find(c).each(function(){e.push(a(this).nextUntil(c).addBack())}),d.sections={raw:e}},_setup_sections:function(b){var c=[];a(b).each(function(b){var e=[],f=a(this),g="scrollNav-"+(b+1),h=function(){return 0===b},i=function(){return!f.eq(0).is(d.settings.sections)},j=d.settings.showTopLink&&h()&&i()?d.settings.topLinkText:f.filter(d.settings.sections).text();if(f.wrapAll("<"+d.settings.sectionElem+' id="'+g+'" class="'+d.settings.className+'__section" />'),d.settings.subSections){var k=f.filter(d.settings.subSections);k.length>0&&k.each(function(b){var c=g+"-"+(b+1),h=a(this).text();f.filter(a(this).nextUntil(k).addBack()).wrapAll('<div id="'+c+'" class="'+d.settings.className+'__sub-section" />'),e.push({id:c,text:h})})}c.push({id:g,text:j,sub_sections:e})}),d.sections.data=c},_tear_down_sections:function(b){a(b).each(function(){var b=this.sub_sections;a("#"+this.id).children().unwrap(),b.length>0&&a(b).each(function(){a("#"+this.id).children().unwrap()})})},_setup_nav:function(b){var c=a("<span />",{class:d.settings.className+"__heading",text:d.settings.headlineText}),e=a("<div />",{class:d.settings.className+"__wrapper"}),f=a("<nav />",{class:d.settings.className,role:"navigation"}),g=a("<ol />",{class:d.settings.className+"__list"});a.each(b,function(b){var c,e=0===b?a("<li />",{class:d.settings.className+"__item "+d.settings.className+"__item--active active"}):a("<li />",{class:d.settings.className+"__item"}),f=a("<a />",{href:"#"+this.id,class:d.settings.className+"__link",text:this.text});this.sub_sections.length>0&&(e.addClass("is-parent-item"),c=a("<ol />",{class:d.settings.className+"__sub-list"}),a.each(this.sub_sections,function(){var b=a("<li />",{class:d.settings.className+"__sub-item"}),e=a("<a />",{href:"#"+this.id,class:d.settings.className+"__sub-link",text:this.text});c.append(b.append(e))})),g.append(e.append(f).append(c))}),d.settings.showHeadline?f.append(e.append(c).append(g)):f.append(e.append(g)),d.nav=f},_insert_nav:function(){var a=d.settings.insertLocation,b=d.settings.insertTarget;d.nav[a](b)},_setup_pos:function(){var b=d.nav,c=a(window).height(),e=b.offset().top,f=function(b){var c=a("#"+b.id),d=c.height();b.top_offset=c.offset().top,b.bottom_offset=b.top_offset+d};a.each(d.sections.data,function(){f(this),a.each(this.sub_sections,function(){f(this)})}),d.dims={vp_height:c,nav_offset:e}},_check_pos:function(){var b=d.nav,c=a(window).scrollTop(),e=c+d.settings.scrollOffset,f=c+d.dims.vp_height-d.settings.scrollOffset,g=[],h=[];c>d.dims.nav_offset-d.settings.fixedMargin?b.addClass("fixed"):b.removeClass("fixed");var i=function(a){return a.top_offset>=e&&a.top_offset<=f||a.bottom_offset>e&&a.bottom_offset<f||a.top_offset<e&&a.bottom_offset>f};a.each(d.sections.data,function(){i(this)&&g.push(this),a.each(this.sub_sections,function(){i(this)&&h.push(this)})}),b.find("."+d.settings.className+"__item").removeClass(d.settings.className+"__item--active").removeClass("active").removeClass("in-view"),b.find("."+d.settings.className+"__sub-item").removeClass(d.settings.className+"__sub-item--active").removeClass("active").removeClass("in-view"),a.each(g,function(a){0===a?b.find('a[href="#'+this.id+'"]').parents("."+d.settings.className+"__item").addClass(d.settings.className+"__item--active").addClass("active").addClass("in-view"):b.find('a[href="#'+this.id+'"]').parents("."+d.settings.className+"__item").addClass("in-view")}),d.sections.active=g,a.each(h,function(a){0===a?b.find('a[href="#'+this.id+'"]').parents("."+d.settings.className+"__sub-item").addClass(d.settings.className+"__sub-item--active").addClass("active").addClass("in-view"):b.find('a[href="#'+this.id+'"]').parents("."+d.settings.className+"__sub-item").addClass("in-view")})},_init_scroll_listener:function(){a(window).on("scroll.scrollNav",function(){d._check_pos()})},_rm_scroll_listeners:function(){a(window).off("scroll.scrollNav")},_init_resize_listener:function(){a(window).on("resize.scrollNav",function(){d._setup_pos(),d._check_pos()})},_rm_resize_listener:function(){a(window).off("resize.scrollNav")},_init_click_listener:function(){a("."+d.settings.className).find("a").on("click.scrollNav",function(c){c.preventDefault();var e=a(this).attr("href"),f=d.settings.speed,g=d.settings.scrollOffset,h=d.settings.animated;b(e,f,g,h)})},_rm_click_listener:function(){a("."+d.settings.className).find("a").off("click.scrollNav")},_init_keyboard_listener:function(c){d.settings.arrowKeys&&a(document).on("keydown.scrollNav",function(a){if(40===a.keyCode||38===a.keyCode){var e=function(a){var b=0,e=c.length;for(b;b<e;b++)if(c[b].id===d.sections.active[0].id){var f=40===a?b+1:b-1,g=void 0===c[f]?void 0:c[f].id;return g}},f=e(a.keyCode);if(void 0!==f){a.preventDefault();var g="#"+f,h=d.settings.speed,i=d.settings.scrollOffset,j=d.settings.animated;b(g,h,i,j)}}})},_rm_keyboard_listener:function(){a(document).off("keydown.scrollNav")},init:function(e){return this.each(function(){var f=a(this);d.settings=a.extend({},d.defaults,e),d.settings.insertTarget=d.settings.insertTarget?a(d.settings.insertTarget):f,f.length>0?(d.settings.onInit&&d.settings.onInit.call(this),d._set_body_class("loading"),d._find_sections(f),f.find(d.settings.sections).length>0?(d._setup_sections(d.sections.raw),d._setup_nav(d.sections.data),d.settings.insertTarget.length>0?(d._insert_nav(),d._setup_pos(),d._check_pos(),d._init_scroll_listener(),d._init_resize_listener(),d._init_click_listener(),d._init_keyboard_listener(d.sections.data),d._set_body_class("success"),d.settings.scrollToHash&&b(c()),d.settings.onRender&&d.settings.onRender.call(this)):(console.log('Build failed, scrollNav could not find "'+d.settings.insertTarget+'"'),d._set_body_class("failed"))):(console.log('Build failed, scrollNav could not find any "'+d.settings.sections+'s" inside of "'+f.selector+'"'),d._set_body_class("failed"))):(console.log('Build failed, scrollNav could not find "'+f.selector+'"'),d._set_body_class("failed"))})},destroy:function(){return this.each(function(){d._rm_scroll_listeners(),d._rm_resize_listener(),d._rm_click_listener(),d._rm_keyboard_listener(),a("body").removeClass("sn-loading sn-active sn-failed"),a("."+d.settings.className).remove(),d._tear_down_sections(d.sections.data),d.settings.onDestroy&&d.settings.onDestroy.call(this),d.settings=[],d.sections=void 0})},resetPos:function(){d._setup_pos(),d._check_pos(),d.settings.onResetPos&&d.settings.onResetPos.call(this)}};a.fn.scrollNav=function(){var b,c=arguments[0];if(d[c])c=d[c],b=Array.prototype.slice.call(arguments,1);else{if("object"!=typeof c&&c)return a.error("Method "+c+" does not exist in the scrollNav plugin"),this;c=d.init,b=arguments}return c.apply(this,b)}}(jQuery);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 
-/***/ 36:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($, jQuery) {'use strict';
@@ -10808,13 +9955,32 @@
 	    value: true
 	});
 
+	var _headsup = __webpack_require__(35);
+
+	var _headsup2 = _interopRequireDefault(_headsup);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	//var $ = require("jquery");
 	var Header = function Header() {
 	    _classCallCheck(this, Header);
 
-	    $("._header").html('<a class="logo-white-background" href="/">' + '<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>' + '</a>' + '<ul class="_nav">' + '   <li class="_nav-primary-item">' + '       <a>Base</a>' + '       <ul class=""_nav-dropdown">' + '           <li><a href="../app/base/color-palette.html">Color Palette</a></li>' + '           <li><a href="../app/base/icons.html">Icons</a></li>' + '       </ul>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a>Layouts</a>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a>Modules</a>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a>States</a>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a>Themes</a>' + '   </li>' + '</ul>');
+	    (0, _headsup2.default)({
+	        selector: '._header',
+	        duration: 0.3,
+	        easing: 'ease',
+	        delay: 0,
+	        debounce: false
+	    });
+
+	    $("._header").html('<a class="logo-white-background" href="/">' + '<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>' + '</a>' + '<ul class="_nav">' + '   <li class="_nav-primary-item">' + '       <a href="../base">Base</a>' + '       <ul class="_nav-dropdown">' + '           <li><a href="../base/color-palette.html">Color Palette</a></li>' + '           <li><a href="../base/icons.html">Icons</a></li>' + '           <li><a href="../base/typography.html">base/typography.html</a></li>' + '       </ul>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a href="../layouts/">Layouts</a>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a href="../modules/">Modules</a>' + '       <ul class=""_nav-dropdown">' + '           <li><a href="../modules/accordion.html">Accordions</a></li>' + '           <li><a href="../modules/content-containers-home.html">Content Containers (home)</a></li>' + '           <li><a href="../modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' + '           <li><a href="../modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' + '           <li><a href="../modules/fancybox.html">Modals (FancyBox)</a></li>' + '           <li><a href="../modules/lists.html">Lists</a></li>' + '           <li>Messaging</li>' + '           <li><a href="../modules/page-titles.html">Page Titles</a></li>' + '           <li><a href="../modules/table-list-formatting.html">Tables</a></li>' + '           <li><a href="../modules/tabs.html">Tabs</a></li>' + '       </ul>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a href="../states/">States</a>' + '       <ul class=""_nav-dropdown">' + '           <li><a href="empty-list-items.html">Empty List Items</a></li>' + '           <li>sticky-table-headers.html</li>' + '       </ul>' + '   </li>' + '   <li class="_nav-primary-item">' + '       <a href="../themes/">Themes</a>' +
+	    //            '       <ul class=""_nav-dropdown">' +
+	    //            '           <li><a href=""></a></li>' +
+	    //            '       </ul>' +
+	    '   </li>' + '   <li class="_nav-primary-item">' + '       <a href="../components/">Components</a>' + '       <ul class=""_nav-dropdown">' + '           <li>Sliders</li>' + '           <li><a href="../modules/sub-navigation.html">Navigation</a></li>' + '       </ul>' + '   </li>' + '</ul>' + '<div class="_resolution _mobile">Mobile</div>' + '<div class="_resolution _mobile-landscape">Mobile Landscape</div>' + '<div class="_resolution _tablet">Tablet</div>' + '<div class="_resolution _tablet-landscape">Tablet Landscape</div>' + '<div class="_resolution _laptop">Laptop +</div>');
+
+	    $("._footer").html('<a class="logo-white-background" href="/">' + '<h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>' + '</a>' + '<ul>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../base/>Base</a></strong></li>' + '           <li><a href="../base/color-palette.html">Color Palette</a></li>' + '           <li><a href="../base/icons.html">Icons</a></li>' + '           <li><a href="../base/typography.html">base/typography.html</a></li>' + '       </ul>' + '   </li>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../layouts/>Layouts</a></strong></li>' + '       </ul>' + '   </li>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../modules/">Modules</a></strong></li>' + '           <li><a href="../modules/accordion.html">Accordions</a></li>' + '           <li><a href="../modules/content-containers-home.html">Content Containers (home)</a></li>' + '           <li><a href="../modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' + '           <li><a href="../modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' + '           <li><a href="../modules/fancybox.html">Modals (FancyBox)</a></li>' + '           <li><a href="../modules/lists.html">Lists</a></li>' + '           <li>Messaging</li>' + '           <li><a href="../modules/page-titles.html">Page Titles</a></li>' + '           <li><a href="../modules/table-list-formatting.html">Tables</a></li>' + '           <li><a href="../modules/tabs.html">Tabs</a></li>' + '       </ul>' + '   </li>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../states/">States</a></strong></li>' + '           <li><a href="empty-list-items.html">Empty List Items</a></li>' + '           <li>sticky-table-headers.html</li>' + '       </ul>' + '   </li>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../themes/">Themes</a></strong></li>' + '       </ul>' + '   </li>' + '   <li>' + '       <ul>' + '           <li><strong><a href="../components/">Components</a></strong></li>' + '           <li>Sliders</li>' + '           <li><a href="../modules/sub-navigation.html">Navigation</a></li>' + '       </ul>' + '   </li>' + '</ul>');
 
 	    //if ($('.navbar-brand:contains(Base)').length > 0) {
 	    //    $('#nav-2').prop('checked', true);
@@ -10844,8 +10010,7 @@
 	        };
 	    })(jQuery);
 	    /*
-	    
-	    */
+	     */
 
 	    $(function () {
 	        //$('.swatch-wrapper').each(function() { 
@@ -10996,7 +10161,101 @@
 	<li><a href="../states/scroll-to.html">Scroll To</a></li>
 
 	*/
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+	(function (global, factory) {
+	   true ? module.exports = factory() :
+	  typeof define === 'function' && define.amd ? define(factory) :
+	  (global.headsup = factory());
+	}(this, (function () { 'use strict';
+
+	  var headsup = (function () {
+	    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+	        _ref$selector = _ref.selector,
+	        selector = _ref$selector === undefined ? 'header' : _ref$selector,
+	        _ref$duration = _ref.duration,
+	        duration = _ref$duration === undefined ? 0.3 : _ref$duration,
+	        _ref$easing = _ref.easing,
+	        easing = _ref$easing === undefined ? 'ease' : _ref$easing,
+	        _ref$delay = _ref.delay,
+	        delay = _ref$delay === undefined ? 0 : _ref$delay,
+	        _ref$debounce = _ref.debounce,
+	        debounce = _ref$debounce === undefined ? false : _ref$debounce;
+
+	    var show = true; // initial boolean value
+	    var prev = window.pageYOffset; // initial window position
+
+	    var header = document.querySelector(selector);
+	    var styles = getComputedStyle(header);
+
+	    var headerHeight = function headerHeight() {
+	      // computes total height of the element
+	      var widthAndPadding = header.getBoundingClientRect().height;
+	      var marginTop = parseFloat(styles['margin-top']);
+	      var marginBot = parseFloat(styles['margin-bottom']);
+
+	      return widthAndPadding + marginTop + marginBot;
+	    };
+
+	    var fixedShow = function fixedShow() {
+	      // shows the element
+	      header.style.top = '0';
+
+	      show = true;
+	    };
+
+	    var fixedHide = function fixedHide() {
+	      // hides the element
+	      header.style.top = '-' + headerHeight() + 'px';
+
+	      show = false;
+	    };
+
+	    var onScrollFunction = function onScrollFunction(_) {
+	      // performs logic on each scroll event
+	      var current = window.pageYOffset;
+
+	      current > prev && current >= headerHeight() / 2 ? show ? fixedHide() : null : show ? null : fixedShow();
+
+	      prev = current;
+	    };
+
+	    var debounceFunc = function debounceFunc(wait) {
+	      // debouncing function
+	      if (!wait) return onScrollFunction;
+
+	      var timeout = null;
+	      return function () {
+	        if (!timeout) {
+	          timeout = setTimeout(function () {
+	            onScrollFunction();
+	            timeout = null;
+	          }, wait);
+	        }
+	      };
+	    };
+
+	    document // adjust body margin to make space for header
+	    .body.style['margin-top'] = headerHeight() + 'px';
+
+	    Object.assign(header.style, { // assign fixed position and transition to header
+	      position: 'fixed',
+	      top: '0',
+	      transition: 'top ' + duration + 's ' + easing + ' ' + delay + 's'
+	    });
+
+	    window.addEventListener('scroll', debounceFunc(debounce));
+	  });
+
+	  return headsup;
+
+	})));
+
 
 /***/ })
 

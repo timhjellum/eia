@@ -1,10 +1,72 @@
 // | 15 | l-row, left 22; l-two-col:first-of-type, left 0 |-----------| l-two-col:first-of-type, right 22 | l-two-col, left 22 |-----------|l-row, right 22| 15| 
 //instead of first-child, it should be first-of-type. That way if there's a header or something in the row, it won't mess with the order
+/*
+
+@eia-blue: #0096d7;
+@eia-green: #5d9732;
+@eia-purple: #513C7A;
+
+.controls-icon(@icon-width: 15px, @icon-height: 18px) {
+    content: ' ';
+    height: @icon-height;
+	width: @icon-width;
+    display: inline-block;
+	position: relative;
+	top: 2px;
+}
+
+
+
+.l-body-wrapper .l-outer-wrapper .l-inner-wrapper {
+	padding-bottom: 22px;
+	color: #333333;
+}
+
+@media (min-width: 956px){
+	.l-row>div {
+		padding-left: 22px;
+
+		&:first-of-type {
+			padding-left: 0px;
+		}
+	}
+
+	.l-two-col:first-of-type {
+		padding-left: 0;
+		padding-right: 22px;
+	}
+	.l-two-col:nth-of-type(2){
+		padding-left: 22px;
+		padding-right: 0;
+	}
+}
+@media (min-width: 801px) {
+	.l-two-col {
+		padding-left: 22px;
+		padding-right:0;
+	}
+	.l-two-col:first-of-type {
+		padding-left: 0;
+		padding-right: 22px;
+	}
+	.l-two-col:nth-of-type(2) {
+		padding-left: 22px;
+		padding-right: 0;
+	}
+	.title-banner.bg-page-title .pub-title {
+		padding-bottom: 22px;
+	}
+}
+---end temporary global overrides ----*/
+
+
+
+
 
 @media @mobile {
 	.l-body-wrapper {
 		min-height: 100%;
-		margin-bottom: -2000px; // same as footer
+		//margin-bottom: -500px; // same as footer
 	}
 	.l-outer-wrapper {
 		width: 100%;
@@ -34,29 +96,18 @@
 				}
 			}
 		}
-		/*		
-		&.l-responsive {
-			width: 100%;
-			-webkit-box-flex: 0;
-			-webkit-flex: 0 0 100%;
-			-ms-flex: 0 0 100%;
-			flex: 0 0 100%;
-			max-width: 100%;
-			width: 100%;
-		}
-		*/
 	}
 	.container {
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.container-fluid {
-		position: relative;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+//	.container-fluid {
+//		position: relative;
+//		width: 100%;
+//		margin-left: auto;
+//		margin-right: auto;
+//	}
 	.l-col,
 	.l-full-width-col,
 	.l-main-col,
@@ -71,17 +122,24 @@
 		min-height: 1px;
 		margin: 0;
 		.left;
-	}
-	.l-row {
-		padding: 0 12px;
-		overflow: hidden;
-		//		display: table; <--- cannot be a table
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 100%;
 		-ms-flex: 0 0 100%;
 		flex: 0 0 100%;
 		max-width: 100%;
 		width: 100%;
+	}
+	.l-row {
+		//		overflow: hidden;; <--- cannot be hidden
+		//		display: table; <--- cannot be a table
+		padding: 0 12px;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%;
+
 		clear: both;
 		.l-col,
 		.l-full-width-col,
@@ -108,34 +166,25 @@
 			.l-two-col,
 			.l-two-third-col { 
 				border-top: none;
-				
 			}
 		}
 	}
-	.container,
-	.l-col,
-	.l-narrow-col,
-	.l-one-third-col,
-	.l-two-col,
-	.l-split-narrow-col,
-	.l-split-wide-col,
-	.l-two-third-col,
-	.l-main-col,
-	.l-full-width-col {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 100%;
-		-ms-flex: 0 0 100%;
-		flex: 0 0 100%;
-		max-width: 100%;
-		width: 100%;
+	.l-full-width-page {
+		.l-row {
+			.l-two-col {
+				&:first-child {
+					padding: 0 12px 0 12px;
+				}
+				&:last-child {
+					padding: 0 12px 0 12px;
+				}
+			}
+		}
 	}
 }
 
 
 @media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-	.l-body-wrapper {
-		margin-bottom: -900px; // same as footer
-	}
 	.l-col {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 50%;
@@ -147,9 +196,6 @@
 }
 
 @media @tablet {	// mobile panorama
-	.l-body-wrapper {
-		margin-bottom: -900px; // same as footer
-	}
 	.l-row {
 		padding: 0 1em;
 	}
@@ -159,9 +205,6 @@
 
 
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
-	.l-body-wrapper {
-		margin-bottom: -660px; // same as footer
-	}
 	.l-col {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 33.333333%;
@@ -219,6 +262,7 @@
 	.l-row {
 		.l-row {
 			padding: 0;
+//			.l-two-col,
 			.l-two-third-col,
 			.l-one-third-col {
 				&:first-child {
@@ -230,14 +274,31 @@
 			}
 		}
 	}
+
+	
+
+
+	.l-full-width-page {
+		.l-row {
+			.l-two-col {
+				&:first-child {
+					padding: 0 33px 0 0;
+
+				}
+				&:last-child {
+					padding: 0 22px 0 11px;
+				}
+			}
+		}
+	}
 }
 @media @laptop {
 	body {
 		background-color: #e8ecf2;
 	}
-	.l-body-wrapper {
-		margin-bottom: -500px; // same as footer
-	}
+	//.l-body-wrapper {
+		//margin-bottom: -500px; // same as footer
+	//}
 	.l-outer-wrapper {
 		// normall 1025 - big landscape tablets, laptops, and desktops
 		margin: 0 auto;
@@ -307,6 +368,7 @@
 		-ms-flex: 0 0 25%;
 		flex: 0 0 25%;
 		max-width: 25%;
+		width: 25%;
 	}
 	.l-one-third-col {
 		-webkit-box-flex: 0;
@@ -323,6 +385,7 @@
 		-ms-flex: 0 0 41.666%;
 		flex: 0 0 41.666%;
 		max-width: 41.666%;
+		width: 41.666%;
 	}
 	.l-middle-col {
 		-webkit-box-flex: 0;
@@ -331,7 +394,6 @@
 		flex: 0 0 50%;
 		max-width: 50%;
 		width: 50%;
-
 	}
 	.l-split-wide-col {
 		-webkit-box-flex: 0;
@@ -339,6 +401,7 @@
 		-ms-flex: 0 0 58.333%;
 		flex: 0 0 58.333%;
 		max-width: 58.333%;
+		width: 58.333%;
 	}
 	.l-two-third-col {
 		-webkit-box-flex: 0;
@@ -354,6 +417,7 @@
 		-ms-flex: 0 0 75%;
 		flex: 0 0 75%;
 		max-width: 75%;
+		width: 75%;
 	}
 	.l-full-width-col {
 		padding: 0;
@@ -362,23 +426,21 @@
 	.l-row {
 		padding-left: 22px;
 		padding-right: 0;
+	}
+	.l-row {
 		&>div {
 			padding-right: 44px;
-			&.l-full-width-col {
-				padding-right: 22px;
-			}
 			&:last-of-type {
 				padding-right: 0;
+			}
+			&.l-full-width-col {
+				padding-right: 22px;
 			}
 			// if nested, remove all padding, margins and make 100%
 			.l-row {
 				padding: 0;
 				width: 100%;
 			}			
-		}
-		&:last-child {
-			display: table;
-			margin-bottom: 3em;
 		}
 		&.header {
 			padding: 0;
@@ -388,5 +450,95 @@
 				width: 100%;
 			}
 		}
+
+		&.l-3-col {
+			.l-narrow-col { // 234px
+				padding-right: 0;
+				&:last-child { // 234px
+					padding-right: 0;
+				}
+			}
+			.l-two-col { // 381
+				padding-right: 44px;
+				padding-left: 44px;
+			}
+		}
+		&.l-narrow-left-col {
+			&>div {
+				padding-right: 44px;
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-narrow-right-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-left-col {
+			&>div {
+				padding-right: 44px;
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-right-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-wide-left-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-wide-right-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-3-equal-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		&.l-4-col {
+			&>div {
+				padding: 0 44px 0 0; // overide
+				&:last-of-type {
+					padding: 0;
+				}
+			}
+		}
+		// two even columns
+		.l-two-col {
+			&:first-child {
+				padding: 0 22px 0 0;
+			}
+			&:last-child {
+				padding: 0 0 0 22px;
+			}
+		}
+
+
+
+
 	}
 }

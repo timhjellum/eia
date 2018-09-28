@@ -1,10 +1,5 @@
-
-
-import StickySideBar from './modules/style-guide/sticky-sidebar';
-new StickySideBar();
-
-//import LazyLoadModule from './modules/lazyload';
-//new LazyLoadModule();
+import scrollNav from './modules/style-guide/_scroll-nav.js';
+new scrollNav();
 
 import Header from './modules/style-guide/_header.js';
 new Header();

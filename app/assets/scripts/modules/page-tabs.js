@@ -6,7 +6,7 @@ class PageTabs {
             duration:0,
             hash:true
         });
-        console.log("tabs are found");
+        //console.log("tabs are found");
     } 
 }
 export default PageTabs; 

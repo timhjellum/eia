@@ -20,14 +20,17 @@
 				&>div {
 					.left;
 					margin: 0;
+					-webkit-box-flex: 0;
+					-webkit-flex: 0 0 100%;
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
 					width: 100%;
-					padding: 0 12px 1em 12px; // added - need to run by Miroslava
+					clear: both;
 					&>div {
 						&>a {
 							display: block;
 							width: 100%;
-							border: 4px solid #fff; // added - need to run by Miroslava
-							outline: 1px solid #dadada; // added - need to run by Miroslava
 							img {
 								width: 100%;
 								background-size: cover;
@@ -35,8 +38,8 @@
 						}
 					}
 					ul {
-						float: none;
-					}
+						padding: .5em 0 1em 0;
+					}	
 				}
 			}
 		}
@@ -49,9 +52,9 @@
 			&.features {
 				padding: 22px;
 				&>div {
-					margin: 0 0 16px 0;
+					margin-bottom: 16px;
 					&>div {
-						margin-right: 20px;
+						//max-width: 270px;
 						-webkit-box-flex: 0;
 						-webkit-flex: 0 0 33.333333%;
 						-ms-flex: 0 0 33.333333%;
@@ -64,9 +67,15 @@
 							outline: 1px solid #dadada;
 						}
 					}
-//					ul {
-//						float: none;
-//					}
+					ul {
+						-webkit-box-flex: 0;
+						-webkit-flex: 0 0 66.666666%;
+						-ms-flex: 0 0 66.666666%;
+						flex: 0 0 66.666666%;
+						max-width: 66.666666%;
+						width: 66.666666%;
+						.left;
+					}
 				}
 			}
 		}
@@ -95,6 +104,11 @@
 	}
 }
 */
+
+// -------------------------
+// | image | image | image |
+//
+
 @media @tablet {
 	.homepage {
         .secondary {
@@ -109,6 +123,7 @@
 					flex: 0 0 33.333333%;
 					max-width: 33.333333%;
 					width: 33.333333%;
+					clear: none;
 					&>div {
 						-webkit-box-flex: 0;
 						-webkit-flex: 0 0 100%;

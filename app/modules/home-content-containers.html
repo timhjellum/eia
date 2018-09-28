@@ -19,25 +19,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#292929">
 
-    <!-- start style guide required vendor styles -->
-
-    <!-- end style guide required vendor styles -->
-
-    <!-- start style guide vendor styles -->
-
-
-    <!-- start style guide required styles -->
-
-    <!-- start page specific styles -->
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+    
+    <!-- build:css assets/styles/styles.min.css -->
     <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- end page specific styless -->
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
     <link rel="stylesheet" href="../temp/styles/global.css">
-    <!-- start page specific styles -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
-    <!-- end page specific styless -->
+    <!-- endbuild -->
 </head>
-
 <body>
     <div class="_header">
     </div>
@@ -45,6 +38,9 @@
     <div class="_container clearfix">
         <div class="_content">
             <div class="_content-inner">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
                 <h1 class="_h1">Custom Content Containers</h1>
                 <p class="_p">Unlike layouts that have a designation within the class name to indicate it's a layout element, Modules do
                     not and instead have symantec names to indicate what the module is.</p>
@@ -88,8 +84,8 @@
                     <li class="dilly-dilly">
                         <!--
                         <a name=""></a>
-                        <div class="module-wrapper">
-                            <div class="outer-container">
+                        <div class="_module-wrapper">
+                            <div class="_module-container">
                                 <div class="l-row header">
                                     <div class="slider-home-top"></div>
                                     <div class="slider-home">
@@ -573,18 +569,11 @@
 
     <div class="_footer"></div>
 </body>
-<!-- build:js assets/scripts/script.min.js -->
+
 <script src="../temp/scripts/scripts.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/highlight.js -->
+<script src="../temp/scripts/global.js"></script>
 <script src="../src/js/highlight.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/_header.js -->
-<script src="../src/js/_header.js"></script>
-<!-- endbuild -->
-<!-- build:js assets/scripts/_footer.js -->
-<script src="../src/js/_footer.js"></script>
-<!-- endbuild -->
+
 <script>
     hljs.initHighlightingOnLoad();
 </script>

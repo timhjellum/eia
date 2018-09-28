@@ -1,7 +1,8 @@
-//const $ = require("jquery");
+//import Footer from './modules/footer';
+//new Footer();
 
-import HeaderMenu from './modules/header-menu';
-new HeaderMenu();
+import FancyBox from './modules/fancybox';
+new FancyBox();
 
 import HeaderSearch from './modules/header-search';
 new HeaderSearch();
@@ -33,9 +34,6 @@ new FirefoxHack();
 import jqueryUI from './modules/jquery-ui';
 new jqueryUI();
 
-//import HighCharts from './modules/highcharts';
-//new HighCharts();
-
-//import tabs from './modules/tabs';
-//new tabs();
+import StickyTableHeaders from './modules/sticky-table-headers';
+new StickyTableHeaders();
 
