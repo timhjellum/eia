@@ -50,53 +50,59 @@
 
 	var _fancybox2 = _interopRequireDefault(_fancybox);
 
-	var _headerSearch = __webpack_require__(5);
+	var _headerMenu = __webpack_require__(5);
+
+	var _headerMenu2 = _interopRequireDefault(_headerMenu);
+
+	var _headerSearch = __webpack_require__(6);
 
 	var _headerSearch2 = _interopRequireDefault(_headerSearch);
 
-	var _headerShrinkExpand = __webpack_require__(6);
+	var _headerShrinkExpand = __webpack_require__(7);
 
 	var _headerShrinkExpand2 = _interopRequireDefault(_headerShrinkExpand);
 
-	var _socialSticker = __webpack_require__(7);
+	var _socialSticker = __webpack_require__(8);
 
 	var _socialSticker2 = _interopRequireDefault(_socialSticker);
 
-	var _bookshelfSearch = __webpack_require__(8);
+	var _bookshelfSearch = __webpack_require__(9);
 
 	var _bookshelfSearch2 = _interopRequireDefault(_bookshelfSearch);
 
-	var _bxslider = __webpack_require__(9);
+	var _bxslider = __webpack_require__(10);
 
 	var _bxslider2 = _interopRequireDefault(_bxslider);
 
-	var _analysisProjections = __webpack_require__(11);
+	var _analysisProjections = __webpack_require__(12);
 
 	var _analysisProjections2 = _interopRequireDefault(_analysisProjections);
 
-	var _modules = __webpack_require__(12);
+	var _modules = __webpack_require__(13);
 
 	var _modules2 = _interopRequireDefault(_modules);
 
-	var _highlightSearchResults = __webpack_require__(13);
+	var _highlightSearchResults = __webpack_require__(14);
 
 	var _highlightSearchResults2 = _interopRequireDefault(_highlightSearchResults);
 
-	var _firefoxHack = __webpack_require__(14);
+	var _firefoxHack = __webpack_require__(15);
 
 	var _firefoxHack2 = _interopRequireDefault(_firefoxHack);
 
-	var _jqueryUi = __webpack_require__(15);
+	var _jqueryUi = __webpack_require__(16);
 
 	var _jqueryUi2 = _interopRequireDefault(_jqueryUi);
 
-	var _stickyTableHeaders = __webpack_require__(30);
+	var _stickyTableHeaders = __webpack_require__(31);
 
 	var _stickyTableHeaders2 = _interopRequireDefault(_stickyTableHeaders);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _fancybox2.default();
+
+	new _headerMenu2.default();
 
 	new _headerSearch2.default();
 
@@ -149,60 +155,10 @@
 	        _classCallCheck(this, FancyBox);
 
 	        this.fancyBoxMenu();
-	        this.headerTabs = $('.section-tabs');
-	        this.checkForBaseAndCorrectTabHrefs();
-	        this.headerTabs.tabs();
 	        this.fancyBoxLightBox();
-	        //thisfancyBoxInline();
-
-	        //this.fancyBoxYouTube();
-	        //this.resizeEvent();
 	    }
 
 	    _createClass(FancyBox, [{
-	        key: 'setActiveTab',
-	        value: function setActiveTab(section) {
-	            var options = { active: 0 };
-	            switch (section) {
-	                case 'nav-sources':
-	                    options.active = 0;
-	                    break;
-	                case 'nav-topics':
-	                    options.active = 1;
-	                    break;
-	                case 'nav-geography':
-	                    options.active = 2;
-	                    break;
-	                case 'nav-tools':
-	                    options.active = 3;
-	                    break;
-	                case 'nav-learn':
-	                    options.active = 4;
-	                    break;
-	                case 'nav-news':
-	                    options.active = 5;
-	                    break;
-	                case 'nav-default':
-	                    options.active = 0;
-	            }
-	            this.headerTabs.tabs("option", "active", options.active);
-	        }
-	    }, {
-	        key: 'checkForBaseAndCorrectTabHrefs',
-	        value: function checkForBaseAndCorrectTabHrefs() {
-	            var base = $('base');
-	            if (base.length > 0) {
-	                var baseHref = base.attr('href');
-	                $.each($('ul:first a', this.headerTabs), function (index, anchor) {
-	                    if (!$(anchor).data('orig-href')) {
-	                        $(anchor).data('orig-href', $(anchor).attr('href'));
-	                    }
-	                    //$(anchor).attr('href', window.location.pathname + $(anchor).data('orig-href'));
-	                    $(anchor).attr('href', window.location.pathname + window.location.search + $(anchor).data('orig-href'));
-	                });
-	            }
-	        }
-	    }, {
 	        key: 'fancyBoxLightBox',
 	        value: function fancyBoxLightBox() {
 	            // this.closeButton.prepend('<i class="ico-menu close">Close</i>');
@@ -236,63 +192,6 @@
 	            var viewPortHeight = window.innerHeight;
 
 	            var fancyBoxWidth = 980;
-	            //var self = this;
-
-
-	            $('.fancybox-menu').fancybox({
-	                scrolling: 'visible',
-	                //scrolling: 'no',  
-	                type: 'inline',
-	                width: fancyBoxWidth,
-	                autoSize: false, // required for width
-	                margin: [40, 0, 20, 0],
-	                height: 'auto',
-	                padding: 0,
-	                fitToView: false,
-	                topRatio: 0,
-	                autoDimension: false,
-	                tpl: {
-	                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
-	                },
-	                beforeLoad: function beforeLoad() {
-	                    viewPortWidth = window.innerWidth;
-	                    if (viewPortWidth <= fancyBoxWidth) {
-	                        this.width = viewPortWidth;
-	                        //    this.autoResize = true;
-	                        this.fitToView = true;
-	                        //	console.log(viewPortHeight + ' ' + this.height);
-	                    } else {
-	                        this.width = fancyBoxWidth;
-	                        //    this.autoResize = false;
-	                        this.fitToView = false;
-	                        //	console.log(viewPortHeight + ' ' + this.height);
-	                    };
-	                },
-	                beforeShow: function beforeShow() {
-	                    $('.section-tabs').parent().parent().parent().parent().addClass('global-nav');
-	                    var navSourcesHeight = $('.section-tabs').height();
-	                    console.log('section-tabs: ' + navSourcesHeight);
-	                },
-	                onUpdate: function onUpdate() {
-	                    if (window.innerWidth <= fancyBoxWidth) {
-	                        this.margin = [0, 0, 0, 0];
-	                        this.fitToView = true;
-	                    } else {
-	                        this.margin = [40, 0, 20, 0];
-	                        this.width = fancyBoxWidth;
-	                        this.fitToView = false;
-	                    };
-	                    $.fancybox.reposition();
-	                    $('.section-tabs .ui-tabs-anchor').click(function () {
-	                        $.fancybox.update();
-	                    });
-	                },
-	                helpers: {
-	                    overlay: {
-	                        locked: true // try changing to true and scrolling around the page
-	                    }
-	                }
-	            });
 
 	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 	            /* $$$$$                      iframe                     $$$$$ */
@@ -12275,6 +12174,149 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _jqueryFancybox = __webpack_require__(3);
+
+	var _jqueryFancybox2 = _interopRequireDefault(_jqueryFancybox);
+
+	var _jqueryFancyboxPack = __webpack_require__(4);
+
+	var _jqueryFancyboxPack2 = _interopRequireDefault(_jqueryFancyboxPack);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var HeaderMenu = function () {
+	    function HeaderMenu() {
+	        _classCallCheck(this, HeaderMenu);
+
+	        this.initMenu();
+	        this.headerTabs = $('.section-tabs');
+	        this.checkForBaseAndCorrectTabHrefs();
+	        this.headerTabs.tabs();
+	    }
+
+	    _createClass(HeaderMenu, [{
+	        key: 'setActiveTab',
+	        value: function setActiveTab(section) {
+	            var options = { active: 0 };
+	            switch (section) {
+	                case 'nav-sources':
+	                    options.active = 0;
+	                    break;
+	                case 'nav-topics':
+	                    options.active = 1;
+	                    break;
+	                case 'nav-geography':
+	                    options.active = 2;
+	                    break;
+	                case 'nav-tools':
+	                    options.active = 3;
+	                    break;
+	                case 'nav-learn':
+	                    options.active = 4;
+	                    break;
+	                case 'nav-news':
+	                    options.active = 5;
+	                    break;
+	                case 'nav-default':
+	                    options.active = 0;
+	            }
+	            this.headerTabs.tabs("option", "active", options.active);
+	        }
+	    }, {
+	        key: 'checkForBaseAndCorrectTabHrefs',
+	        value: function checkForBaseAndCorrectTabHrefs() {
+	            var base = $('base');
+	            if (base.length > 0) {
+	                var baseHref = base.attr('href');
+	                $.each($('ul:first a', this.headerTabs), function (index, anchor) {
+	                    if (!$(anchor).data('orig-href')) {
+	                        $(anchor).data('orig-href', $(anchor).attr('href'));
+	                    }
+	                    $(anchor).attr('href', window.location.pathname + $(anchor).data('orig-href'));
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'initMenu',
+	        value: function initMenu() {
+	            var viewPortWidth = window.innerWidth;
+	            var viewPortHeight = window.innerHeight;
+	            var fancyBoxWidth = 980;
+	            var self = this;
+
+	            //    console.log(fbWidth);
+	            $('.fancybox-menu').fancybox({
+	                scrolling: 'visible',
+	                type: 'inline',
+	                width: fancyBoxWidth,
+	                autoSize: false, // required for width
+	                margin: [40, 0, 20, 0],
+	                height: 'auto',
+	                padding: 0,
+	                fitToView: false,
+	                topRatio: 0,
+	                autoDimension: false,
+	                tpl: {
+	                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                },
+	                beforeLoad: function beforeLoad() {
+	                    self.checkForBaseAndCorrectTabHrefs();
+	                    viewPortWidth = window.innerWidth;
+	                    if (viewPortWidth <= fancyBoxWidth) {
+	                        this.width = viewPortWidth;
+	                        this.fitToView = true;
+	                    } else {
+	                        this.width = fancyBoxWidth;
+	                        this.fitToView = false;
+	                    };
+	                },
+	                beforeShow: function beforeShow() {
+	                    $('.section-tabs').parents('.fancybox-wrap').addClass('global-nav');
+	                    self.setActiveTab($(this.element).data('target'));
+	                },
+	                onUpdate: function onUpdate() {
+	                    if (window.innerWidth <= fancyBoxWidth) {
+	                        this.margin = [0, 0, 0, 0];
+	                        this.fitToView = true;
+	                    } else {
+	                        this.margin = [40, 0, 20, 0];
+	                        this.width = fancyBoxWidth;
+	                        this.fitToView = false;
+	                    };
+	                    $.fancybox.reposition();
+	                    $('.section-tabs .ui-tabs-anchor').click(function () {
+	                        $.fancybox.update();
+	                    });
+	                },
+	                helpers: {
+	                    overlay: {
+	                        locked: true // try changing to true and scrolling around the page
+	                    }
+	                }
+	            });
+	        }
+	    }]);
+
+	    return HeaderMenu;
+	}();
+
+	exports.default = HeaderMenu;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var HeaderSearch = function () {
@@ -12309,7 +12351,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -12357,7 +12399,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -12420,7 +12462,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -12530,7 +12572,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -12544,7 +12586,7 @@
 	/* the bxslider is no longer maintained and there is a bug that throws an error when users use the touchscreen. The error shows up in the console only and there's no known issues with the slider. A copy of the bxslider.js with the 'fix' and the file now resides on the global/scripts/bxslider file */
 
 
-	var _bxslider = __webpack_require__(10);
+	var _bxslider = __webpack_require__(11);
 
 	var _bxslider2 = _interopRequireDefault(_bxslider);
 
@@ -12779,7 +12821,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {'use strict';
@@ -14568,7 +14610,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14607,7 +14649,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14740,7 +14782,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14818,7 +14860,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14852,7 +14894,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14863,55 +14905,55 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _accordion = __webpack_require__(16);
+	var _accordion = __webpack_require__(17);
 
 	var _accordion2 = _interopRequireDefault(_accordion);
 
-	var _tabs = __webpack_require__(21);
+	var _tabs = __webpack_require__(22);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
-	var _version = __webpack_require__(17);
+	var _version = __webpack_require__(18);
 
 	var _version2 = _interopRequireDefault(_version);
 
-	var _widget = __webpack_require__(20);
+	var _widget = __webpack_require__(21);
 
 	var _widget2 = _interopRequireDefault(_widget);
 
-	var _position = __webpack_require__(24);
+	var _position = __webpack_require__(25);
 
 	var _position2 = _interopRequireDefault(_position);
 
-	var _formResetMixin = __webpack_require__(25);
+	var _formResetMixin = __webpack_require__(26);
 
 	var _formResetMixin2 = _interopRequireDefault(_formResetMixin);
 
-	var _keycode = __webpack_require__(18);
+	var _keycode = __webpack_require__(19);
 
 	var _keycode2 = _interopRequireDefault(_keycode);
 
-	var _labels = __webpack_require__(27);
+	var _labels = __webpack_require__(28);
 
 	var _labels2 = _interopRequireDefault(_labels);
 
-	var _uniqueId = __webpack_require__(19);
+	var _uniqueId = __webpack_require__(20);
 
 	var _uniqueId2 = _interopRequireDefault(_uniqueId);
 
-	var _core = __webpack_require__(28);
+	var _core = __webpack_require__(29);
 
 	var _core2 = _interopRequireDefault(_core);
 
-	var _effect = __webpack_require__(29);
+	var _effect = __webpack_require__(30);
 
 	var _effect2 = _interopRequireDefault(_effect);
 
-	var _escapeSelector = __webpack_require__(22);
+	var _escapeSelector = __webpack_require__(23);
 
 	var _escapeSelector2 = _interopRequireDefault(_escapeSelector);
 
-	var _safeActiveElement = __webpack_require__(23);
+	var _safeActiveElement = __webpack_require__(24);
 
 	var _safeActiveElement2 = _interopRequireDefault(_safeActiveElement);
 
@@ -14930,8 +14972,6 @@
 	        _classCallCheck(this, jqueryUI);
 
 	        this.accordion = $('.accordion');
-	        this.oldPageTabs = $('.page_tabs');
-	        this.fancyBoxMenuTabs();
 
 	        if (this.accordion !== null) {
 	            this.accordionModule();
@@ -14942,38 +14982,6 @@
 	    }
 
 	    _createClass(jqueryUI, [{
-	        key: 'fancyBoxMenuTabs',
-	        value: function fancyBoxMenuTabs() {
-	            // this sets the initial state of the navigational tabs
-	            $('.fancybox-menu').click(function () {
-	                var target = $(this).data("target");
-	                var options = { active: 0 };
-	                switch (target) {
-	                    case 'nav-sources':
-	                        options.active = 0;
-	                        break;
-	                    case 'nav-topics':
-	                        options.active = 1;
-	                        break;
-	                    case 'nav-geography':
-	                        options.active = 2;
-	                        break;
-	                    case 'nav-tools':
-	                        options.active = 3;
-	                        break;
-	                    case 'nav-learn':
-	                        options.active = 4;
-	                        break;
-	                    case 'nav-news':
-	                        options.active = 5;
-	                        break;
-	                    case 'nav-default':
-	                        options.active = 0;
-	                }
-	                $('.section-tabs').tabs(options);
-	            });
-	        }
-	    }, {
 	        key: 'oldPageTabsModule',
 	        value: function oldPageTabsModule() {
 	            $('.page_tabs').tabs();
@@ -15094,7 +15102,7 @@
 	exports.default = jqueryUI;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15123,10 +15131,10 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(17),
 				__webpack_require__(18),
 				__webpack_require__(19),
-				__webpack_require__(20)
+				__webpack_require__(20),
+				__webpack_require__(21)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -15713,7 +15721,7 @@
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -15736,7 +15744,7 @@
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15757,7 +15765,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15787,7 +15795,7 @@
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15808,7 +15816,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15842,7 +15850,7 @@
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15864,7 +15872,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -16581,7 +16589,7 @@
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16608,12 +16616,12 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(22),
-				__webpack_require__(18),
 				__webpack_require__(23),
 				__webpack_require__(19),
-				__webpack_require__(17),
-				__webpack_require__(20)
+				__webpack_require__(24),
+				__webpack_require__(20),
+				__webpack_require__(18),
+				__webpack_require__(21)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -17511,14 +17519,14 @@
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17538,14 +17546,14 @@
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17584,7 +17592,7 @@
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -17608,7 +17616,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18088,7 +18096,7 @@
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18111,8 +18119,8 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(26),
-				__webpack_require__(17)
+				__webpack_require__(27),
+				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -18171,14 +18179,14 @@
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18197,7 +18205,7 @@
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18218,7 +18226,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17), __webpack_require__(22) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18), __webpack_require__(23) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18265,7 +18273,7 @@
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// This file is deprecated in 1.12.0 to be removed in 1.13
@@ -18292,7 +18300,7 @@
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18316,7 +18324,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(17) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -19933,7 +19941,7 @@
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -19944,7 +19952,7 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	__webpack_require__(31);
+	__webpack_require__(32);
 
 	var StickyTableHeaders = function StickyTableHeaders() {
 	    _classCallCheck(this, StickyTableHeaders);
@@ -19969,7 +19977,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! Copyright (c) Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders

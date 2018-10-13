@@ -9,7 +9,7 @@ class Header {
             easing: 'ease',
             delay: 0,
             debounce: false
-          })
+        })
 
 
         $("._header").html('<a class="logo-white-background" href="/">' +
@@ -277,8 +277,9 @@ class Header {
 
 
 
-
-
+        var dallyOne = $('.dally-fou-one span._module-bg._col-fou-one-one').width();
+        console.log(dallyOne);
+        $('.ding').append(dallyOne);
 
 
 

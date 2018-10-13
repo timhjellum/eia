@@ -5,7 +5,7 @@ const gulpRename = require('gulp-rename');
 const gulpUglifyCSS = require('gulp-uglifycss');
 
 const archiveFolder = 'A:/global/styles/'
-//const adaptiveFolder = 'W:/global/styles/'
+    //const adaptiveFolder = 'W:/global/styles/'
 const tempStyles = './app/temp/styles/'
 
 
@@ -22,7 +22,7 @@ gulp.task('global', ['style-guide'], () =>
     .pipe(gulpStrip())
     .pipe(gulpUglifyCSS())
     .pipe(gulpRename('global.min.css'))
-    .pipe(gulp.dest(archiveFolder))
+    .pipe(gulp.dest(tempStyles))
 );
 gulp.task('styles', ['global'], () =>
     gulp.src('./app/assets/styles/global.css')

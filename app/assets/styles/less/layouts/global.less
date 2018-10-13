@@ -182,24 +182,26 @@
 }
 */
 	}
-	.l-two-third-col {
-		width: 66.666667%;
-		&:first-child {
-			padding: 0 22px 0 0;
-		}		
-		&:last-child {
-			padding: 0 0 0 22px;
-		}
-	}
-	.l-one-third-col {
-		width: 33.333333%;
-		&:first-child {
-			padding: 0 22px 0 0;
-		}		
-		&:last-child {
-			padding: 0 0 0 22px;
-		}
-	}
+												/*
+												.l-two-third-col {
+													width: 66.666667%;
+													&:first-child {
+														padding: 0 22px 0 0;
+													}		
+													&:last-child {
+														padding: 0 0 0 22px;
+													}
+												}
+												.l-one-third-col {
+													width: 33.333333%;
+													&:first-child {
+														padding: 0 22px 0 0;
+													}		
+													&:last-child {
+														padding: 0 0 0 22px;
+													}
+												}
+												*/
 	.l-row {
 		.l-row {
 			padding: 0;
@@ -311,31 +313,46 @@
 		padding-left: 22px;
 		padding-right: 0;
 		&>div {
-			padding-right: 44px;
-			&:last-of-type {
-				padding-right: 0;
-			}
+			/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+			/* ***** ***** ***** *****             ***** ***** ***** ***** */
+			/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 			&.l-full-width-col {
-				padding-right: 22px;
-			}
-			// if nested, remove all padding, margins and make 100%
-			&.l-row {
+				padding: 0 22px 0 0;
+				/*
 				padding: 0;
-				width: 100%;
-			}			
+				border-right: 44px solid rgba(255,69,0,.65);
+				*/
+
+				/*
+				&:last-of-type {
+					padding-right: 0;
+					border-right: 0;
+				}
+				*/
+			}
 		}
 		&.header {
 			padding: 0;
 			width: 100%;
-			.l-full-width-col {
-				padding: 0;
-				width: 100%;
+			border-right: 0;
+			&>div {
+		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+		/* ***** ***** ***** *****             ***** ***** ***** ***** */
+		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+				&.l-full-width-col {
+					padding: 0;
+					/*
+					padding: 0;
+					width: 100%;
+					border-right: 0;
+					*/
+				}
 			}
 		}
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		&.l-3-col {
+		&.l-three-col {
 			&>div {
 				&.l-narrow-col {
 					padding: 0 22px 0 0;
@@ -346,7 +363,7 @@
 				&.l-two-col {
 					padding: 0 22px;
 				}
-				/* for testing purposes
+				/* start for testing purposes
 				.l-narrow-col {
 					padding: 0;
 					border-right: 22px solid rgba(255,69,0,.65);
@@ -361,7 +378,7 @@
 					border-right: 22px solid rgba(255,69,0,.65);
 					border-left: 22px solid rgba(255,69,0,.65);
 				}
-				*/
+				end testing purposes */
 			}
 		}
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -383,7 +400,7 @@
 				}
 			}
 		}
-		/* for testing purposes
+		/* start for testing purposes
 		&.l-narrow-left-col {
 			&>div {
 				padding: 0 0 0 0;
@@ -404,7 +421,7 @@
 				}
 			}
 		}
-		*/
+		end testing purposes */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -424,7 +441,7 @@
 				}
 			}
 		}
-		/* for testing purposes
+		/* start for testing purposes
 		&.l-left-col {
 			&>div {
 				padding: 0 0 0 0;
@@ -445,7 +462,7 @@
 				}
 			}
 		}
-		*/
+				end testing purposes */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -465,7 +482,7 @@
 				}
 			}
 		}
-		/* for testing purposes
+		/* start for testing purposes
 		&.l-wide-left-col {
 			&>div {
 				padding: 0 0 0 0;
@@ -486,40 +503,48 @@
 				}
 			}
 		}
-		*/
+				end testing purposes */
+		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+		/* ***** ***** ***** *****             ***** ***** ***** ***** */
+		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		&.l-three-equal-col {
 			&>div {
-				padding: 0 11px 0 11px;
-				&:first-of-type {
-					padding: 0 33px 0 0;
+				&.l-one-third-col {
+					padding: 0 11px 0 11px;
+					&:first-child {
+						padding: 0 33px 0 0;
+					}
+					&:last-child {
+						padding: 0 0 0 33px;
+					}
 				}
-				&:last-of-type {
-					padding: 0 0 0 33px;
-				}
-				/* for testing purposes
-				padding: 0 0 0 0;
-				border-left: 11px solid rgba(255,69,0,.65);
-				border-right: 11px solid rgba(255,69,0,.65);
-				&:first-of-type {
+				/* start for testing purposes
+				&.l-one-third-col {
 					padding: 0;
-					border-left: none;
-					border-right: 33px solid rgba(255,69,0,.65);
+					border-left: 11px solid rgba(255,69,0,.65);
+					border-right: 11px solid rgba(255,69,0,.65);
+					&:first-child {
+						padding: 0;
+						border-left: none;
+						border-right: 33px solid rgba(255,69,0,.65);
+					}
+					&:last-child {
+						padding: 0;
+						border-right: none;
+						border-left: 33px solid rgba(255,69,0,.65);
+					}
 				}
-				&:last-of-type {
-					padding: 0;
-					border-right: none;
-					border-left: 33px solid rgba(255,69,0,.65);
-				}
-				*/
+				end testing purposes */
 			}
 		}
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		&.l-four-equal-col {
+		&.l-four-even-col {
 			&>div {
 				&:nth-child(1) {
 					padding: 0 33px 0 0;
@@ -533,7 +558,7 @@
 				&:nth-child(4) {
 					padding: 0 0 0 33px;	
 				}
-				/* for testing purposes
+				/* start for testing purposes
 				&:nth-child(1) {
 					border-left: none;
 					border-right: 33px solid rgba(255,69,0,.65);
@@ -550,13 +575,13 @@
 					border-left: 33px solid rgba(255,69,0,.65);
 					border-right: none;	
 				}
-				*/
+				end testing purposes */
 			}
 		}
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** *****             ***** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		.l-two-equal-col {
+		.l-two-even-col {
 			&>div {
 				&.l-two-col {
 					&:first-child {
@@ -565,7 +590,7 @@
 					&:last-child {
 						padding: 0 0 0 22px;
 					}
-					/* for testing purposes
+					/* start for testing purposes
 					&:first-child {
 						padding: 0;
 						border-right: 22px solid rgba(255,69,0,.65);
@@ -575,7 +600,7 @@
 						//border-right: 22px solid rgba(255,69,0,.65);
 						border-left: 22px solid rgba(255,69,0,.65);
 					}
-					*/
+				end testing purposes */
 				}
 			}
 		}
@@ -593,14 +618,14 @@
 				/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 				/* ***** ***** ***** *****             ***** ***** ***** ***** */
 				/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-				&.l-two-equal-col {
+				&.l-two-even-col {
 					&>div {
 						&.l-two-col {
 							padding: 0 33px 0 0;
 							&:last-child {
 								padding: 0 22px 0 11px;
 							}
-							/*
+							/* start for testing purposes
 							padding: 0;
 							border-right: 33px solid rgba(255,69,0,.65);
 							&:last-child {
@@ -609,7 +634,7 @@
 								border-right: 22px solid rgba(255,69,0,.65);
 								border-left: 11px solid rgba(255,69,0,.65);
 							}
-							*/
+				end testing purposes */
 						}
 					}
 				}
@@ -624,7 +649,7 @@
 						&:last-child {
 							padding: 0 22px 0 11px;
 						}
-						/*
+						/* start for testing purposes
 						&:first-child {
 							//padding: 0 22px 0 0;
 							padding: 0 0 0 0;
@@ -636,7 +661,7 @@
 							border-right: 22px solid rgba(255,69,0,.65);
 							border-left: 11px solid rgba(255,69,0,.65);
 						}
-						*/
+				end testing purposes */
 					}
 				}
 			}
@@ -651,7 +676,7 @@
 					&:last-child {
 						padding: 0 22px 0 0;
 					}
-					/*
+					/* start for testing purposes
 					&:first-child {
 						//padding: 0 22px 0 0;
 						padding: 0 0 0 0;
@@ -663,7 +688,7 @@
 						border-right: 22px solid rgba(255,69,0,.65);
 						border-left: none;
 					}
-					*/
+				end testing purposes */
 				}
 			}
 		}

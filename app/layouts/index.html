@@ -30,6 +30,16 @@
     <!-- build:css assets/styles/tomorrow.min.css -->
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
     <!-- endbuild -->
+
+
+
+
+
+    <style>
+        ._mod span {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,13 +70,13 @@
                 <div class="_example">
                     <p class="_p">Layout declarations</p>
                     <pre><code class="html">#header, #article, #footer {
-	width: 960px;
+	960px;
 	margin: auto;
 }
 
 #article {
 	border: solid #CCC;
-	border-width: 1px 0 0;
+	border-1px 0 0;
 }
 </code></pre>
                 </div>
@@ -109,21 +119,21 @@
                 <div class="_example">
                     <p class="_p">Using two Layout styles together to switch from fluid to fixed layout.</p>
                     <pre><code class="html">#article {
-	width: 80%;
+	80%;
 	float: left;
 }
 
 #sidebar {
-	width: 20%;
+	20%;
 	float: right;
 }
 
 .l-fixed #article {
-	width: 600px;
+	600px;
 }
 
 .l-fixed #sidebar {
-	width: 200px;
+	200px;
 }
 </code></pre>
                 </div>
@@ -308,18 +318,27 @@ div#featured li {
         <div class="_footer_"></div>
     </div>
 </div>
- --> 
+ -->
                 <h2 class="_h2">Rows</h2>
                 <ul class="dilly-dilly">
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-row-one-one">
                         <h3 class="_h3">Row (Default)</h3>
-<ul class="dally">
-    <li class="_page">15px</li>
-    <li class="_row">22px</li>
-    <li class="_mod _start">912px (100%)</li>
-    <li class="_col _end">22px</li>
-    <li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_row-one-one-one"></span><span>px</span> or 100%</li>
+                            <li class="_col _end">22px</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- start -->
@@ -327,7 +346,9 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row">
                                     <div class="l-full-width-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _row-one-one-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -341,7 +362,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -352,13 +375,22 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-row-one-two">
                         <h3 class="_h3">Header Row</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_mod _start _end">960px (100%)</li>
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_mod _start"><span class="_row-one-two-one"></span><span>px</span> or 100%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- start -->
@@ -366,7 +398,9 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row header">
                                     <div class="l-full-width-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _row-one-two-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -385,13 +419,35 @@ div#featured li {
                         </div>
                     </li>
                 </ul>
-
-
-
-                <h2 class="_h2">Columns</h2>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <h2 class="_h2">Single Column</h2>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
                 <ul class="dilly-dilly">
-                    <li class="dilly-dilly">
-                        <h3 class="_h3">single column, full-width</h3>
+                    <li class="dilly-dilly dally-one-one">
+                        <h3 class="_h3">One Column</h3>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-one-one-one"></span><span>px</span> or 25%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- start -->
@@ -399,7 +455,9 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row">
                                     <div class="l-full-width-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-one-one-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -417,55 +475,35 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
-                        <h3 class="_h3">3 Column, narrow left and right</h3>
+                </ul>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <h2 class="_h2">Two Columns</h2>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly dally-two-one">
+                        <h3 class="_h3">Two Column, narrow-left</h3>
                         <ul class="dally">
                             <li class="_page">15px</li>
                             <li class="_row">22px</li>
-                            <li class="_mod _start _end">(25%) &#188;</li>
-                            <li class="_col _start">44px</li>
-                            <li class="_mod _mid">(50%) &#189;</li>
+                            <li class="_mod _start"><span class="_col-two-one-one"></span><span>px</span> or 25%</li>
                             <li class="_col _end">44px</li>
-                            <li class="_mod _start _end">(25%) &#188;</li>
-                            <li class="_page">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-3-col l-reorder">
-                                    <div class="l-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
-                                    </div>
-                                    <div class="l-two-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit..</span></div>
-                                    </div>
-                                    <div class="l-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                        <div class="_example">
-                            <!-- h3 class="_h3">Placeholder</h3 -->
-                            <!-- p class="_p">Placeholder</p> -->
-                            <p class="_caption">HTML</p>
-                            <pre><code class="html">&lt;!-- 25% | 50% | 25% --&gt; 
-&lt;div class="l-row l-3-col"&gt;
-	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </li>
-                    <li class="dilly-dilly">
-                        <h3 class="_h3">Two-column, narrow-left</h3>
-                        <ul class="dally">
-                            <li class="_page">15px</li>
-                            <li class="_row">22px</li>
-                            <li class="_mod _start">(25%) &#188;</li>
-                            <li class="_col _end">44px</li>
-                            <li class="_mod _start _end">(75%) &#190;</li>
+                            <li class="_mod _start _end"><span class="_col-two-two"></span><span>px</span> or 75%</li>
                             <li class="_page">15px</li>
                         </ul>
                         <div class="_module-wrapper">
@@ -473,10 +511,14 @@ div#featured li {
                                 <!-- 25% | 77% -->
                                 <div class="l-row l-narrow-left-col">
                                     <div class="l-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-one-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam.</span></div>
                                     </div>
                                     <div class="l-main-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-one-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -490,7 +532,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -503,19 +547,25 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-two">
                         <h3 class="_h3">Two-column, narrow-right</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(75%) &#190;</li>
-<li class="_col _end">44px</li>  
-
-<li class="_mod _start _end">(25%) &#188;</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-two-one"></span><span>px</span> or 75%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-two-two-two"></span><span>px</span> or 25%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 75% | 25% -->
@@ -524,10 +574,14 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row l-narrow-right-col">
                                     <div class="l-main-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-two-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-two-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -541,7 +595,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -554,19 +610,25 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-thr">
                         <h3 class="_h3">Two-column, wide-right</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(41.666%)</li>
-<li class="_col _end">44px</li>
-
-<li class="_mod _start _end">(58.333%)</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-thr-one"></span><span>px</span> or 41.666%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-two-thr-two"></span><span>px</span> or 58.333%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 41.666% | 58.333% -->
@@ -575,10 +637,14 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row l-wide-left-col">
                                     <div class="l-split-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-thr-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
                                     </div>
                                     <div class="l-split-wide-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-thr-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -592,7 +658,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -605,19 +673,25 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-fou">
                         <h3 class="_h3">Wide-Left-Column Layout</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(58.333%)</li>
-<li class="_col _end">44px</li>
-
-<li class="_mod _start _end">(41.666%)</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-fou-one"></span><span>px</span> or 58.333%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-two-fou-two"></span><span>px</span> or 41.666%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 58.333% | 41.666% -->
@@ -626,10 +700,14 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row l-wide-right-col">
                                     <div class="l-split-wide-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-fou-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-split-narrow-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-fou-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -643,7 +721,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -656,19 +736,25 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-fiv">
                         <h3 class="_h3">Two-column, one-third-left</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(33.333%)</li>
-<li class="_col _end">44px</li>
-
-<li class="_mod _start _end">(66.666%)</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-fiv-one"></span><span>px</span> or 33.333%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-two-fiv-two"></span><span>px</span> or 66.666%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 33.333% | 66.666% -->
@@ -677,10 +763,14 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row l-left-col">
                                     <div class="l-one-third-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-fiv-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus.</span></div>
                                     </div>
                                     <div class="l-two-third-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-fiv-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -694,7 +784,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -707,19 +799,25 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-six">
                         <h3 class="_h3">2 column, one-third-right</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(66.666%)</li>
-<li class="_col _end">44px</li>
-
-<li class="_mod _start _end">(33.333%)</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-six-one"></span><span>px</span> or 66.666%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-two-six-two"></span><span>px</span> or 33.333%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 66.666% | 33.333% -->
@@ -728,10 +826,14 @@ div#featured li {
                                 <!-- start -->
                                 <div class="l-row l-right-col">
                                     <div class="l-two-third-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-six-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-one-third-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-six-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -745,7 +847,9 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
@@ -758,32 +862,42 @@ div#featured li {
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-two-sev">
                         <h3 class="_h3">Two-even-columns</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(50%) &#189;</li>
-<li class="_col _end">22px</li>
-
-<li class="_col _start">22px</li>
-<li class="_mod _end">(50%) &#189;</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-sev-one"></span><span>px</span> or 50%</li>
+                            <li class="_col _end">22px</li>
+                            <li class="_col _start">22px</li>
+                            <li class="_mod _end"><span class="_col-two-sev-two"></span><span>px</span> or 50%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- 50% | 50% -->
                                 <!-- start -->
                                 <!-- start -->
                                 <!-- start -->
-                                <div class="l-row l-two-equal-col">
+                                <div class="l-row l-two-even-col">
                                     <div class="l-two-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-sev-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-two-col">
-                                        <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-two-sev-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -797,51 +911,132 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
                             <!-- p class="_p">Placeholder</p> -->
                             <p class="_caption">HTML</p>
                             <pre><code class="html">&lt;!-- 50% | 50% --&gt;       
-&lt;div class="l-row l-two-equal-col"&gt;
+&lt;div class="l-row l-two-even-col"&gt;
 	&lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 	&lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                </ul>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <h2 class="_h2">3 Columns</h2>
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly dally-thr-one">
+                        <h3 class="_h3">3 Column, narrow left and right</h3>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start _end"><span class="_col-thr-one-one"></span><span>px</span> or 25%</li>
+                            <li class="_col _start">44px</li>
+                            <li class="_mod _mid"><span class="_col-thr-one-two"></span><span>px</span> or 50%</li>
+                            <li class="_col _end">44px</li>
+                            <li class="_mod _start _end"><span class="_col-thr-one-thr"></span><span>px</span> or 25%</li>
+                            <li class="_page">15px</li>
+                        </ul>
+                        <div class="_module-wrapper">
+                            <div class="_module-container">
+                                <div class="l-row l-three-col l-reorder">
+                                    <div class="l-narrow-col">
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-one-one">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
+                                    </div>
+                                    <div class="l-two-col">
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-one-two">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit..</span></div>
+                                    </div>
+                                    <div class="l-narrow-col">
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-one-thr">
+                                            Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus.</span></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="_example">
+                            <!-- h3 class="_h3">Placeholder</h3 -->
+                            <!-- p class="_p">Placeholder</p> -->
+                            <p class="_caption">HTML</p>
+                            <pre><code class="html">&lt;!-- 25% | 50% | 25% --&gt; 
+&lt;div class="l-row l-three-col"&gt;
+    &lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
+    &lt;div class="l-two-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
+    &lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </li>
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-thr-two">
                         <h3 class="_h3">Three-even-columns</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(33.333%)</li>
-<li class="_col _end">11px</li>
-
-<li class="_col _start">33px</li>
-<li class="_mod _mid">(33.333%)</li>
-<li class="_col _end">33px</li>
-
-<li class="_col _start">11px</li>
-<li class="_mod _end">(33.333%)</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-thr-two-one"></span><span>px</span> or 33.333%</li>
+                            <li class="_col _end">11px</li>
+                            <li class="_col _start">33px</li>
+                            <li class="_mod _mid"><span class="_col-thr-two-two"></span><span>px</span> or 33.333%</li>
+                            <li class="_col _end">33px</li>
+                            <li class="_col _start">11px</li>
+                            <li class="_mod _end"><span class="_col-thr-two-thr"></span><span>px</span> or 33.333%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- start -->
                                 <!-- start -->
                                 <!-- start -->
-                                <div class="l-row l-three-equal-col">
+                                <div class="l-row l-three-even-col">
                                     <div class="l-one-third-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-two-one">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-one-third-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-two-two">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-one-third-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-thr-two-thr">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -855,58 +1050,72 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
                             <!-- p class="_p">Placeholder</p> -->
                             <p class="_caption">HTML</p>
-                            <pre><code class="html">&lt;div class="l-row l-three-equal-col"&gt;
+                            <pre><code class="html">&lt;div class="l-row l-three-even-col"&gt;
 	&lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 	&lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 	&lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly dally-fou-one">
                         <h3 class="_h3">Four-even-columns</h3>
-<ul class="dally">
-<li class="_page">15px</li>
-<li class="_row">22px</li>
-
-<li class="_mod _start">(25%) &#188;</li>
-<li class="_col _end">33px</li>
-
-<li class="_col _start">11px</li>
-<li class="_mod _mid">(25%) &#188;</li>
-<li class="_col _end">22px</li>
-
-<li class="_col _start">22px</li>
-<li class="_mod _mid">(25%) &#188;</li>
-<li class="_col _end">11px</li>
-
-<li class="_col _start">33px</li>
-<li class="_mod _end">(25%) &#188;</li>
-
-<li class="_page">15px</li>
-</ul>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-fou-one-one"></span><span>px</span> or 25%</li>
+                            <li class="_col _end">33px</li>
+                            <li class="_col _start">11px</li>
+                            <li class="_mod _mid"><span class="_col-fou-one-two"></span><span>px</span> or 25%</li>
+                            <li class="_col _end">22px</li>
+                            <li class="_col _start">22px</li>
+                            <li class="_mod _mid"><span class="_col-fou-one-thr"></span><span>px</span> or 25%</li>
+                            <li class="_col _end">11px</li>
+                            <li class="_col _start">33px</li>
+                            <li class="_mod _end"><span class="_col-fou-one-fou"></span><span>px</span> or 25%</li>
+                            <li class="_page">15px</li>
+                        </ul>
                         <div class="_module-wrapper">
                             <div class="_module-container">
                                 <!-- start -->
                                 <!-- start -->
                                 <!-- start -->
-                                <div class="l-row l-four-equal-col">
+                                <div class="l-row l-four-even-col">
                                     <div class="l-narrow-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-fou-one-one">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-narrow-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-fou-one-two">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-narrow-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-fou-one-thr">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                     <div class="l-narrow-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        <div class="secondary">
+                                            <span class="_module-bg _col-fou-one-fou">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                     </div>
                                 </div>
                                 <!-- end -->
@@ -920,14 +1129,16 @@ div#featured li {
                             <li>
                                 <div class="_row"></div> row margin</li>
                             <li>
-                                <div class="_col"></div> column margin</li><li><div class="_module"></div> module margin</li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
                         <div class="_example">
                             <!-- h3 class="_h3">Placeholder</h3 -->
                             <!-- p class="_p">Placeholder</p> -->
                             <p class="_caption">HTML</p>
                             <pre><code class="html">&lt;!-- 4 Column 25% | 25% | 25% | 25% --&gt; 
-&lt;div class="l-row l-four-equal-col"&gt;
+&lt;div class="l-row l-four-even-col"&gt;
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 	&lt;div class="l-narrow-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
@@ -936,51 +1147,26 @@ div#featured li {
                         </div>
                     </li>
                 </ul>
+
+
+
+
+
+
+
+
+
+
+
                 <h2 class="_h2">Full Page Rows and Columns</h2>
                 <ul class="dilly-dilly">
                     <li class="dilly-dilly">
-                        <h3 class="_h3">Full-width</h3>
-                        <p>The fullpage row is similar to the <code>class="l-row l-header</code> but can be applied to the entire
-                            section. An example might include a 'dashboard' page with multiple rows and columns.</p>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- start -->
-                                <!-- start -->
-                                <!-- start -->
-                                <div class="l-full-width-page">
-                                    <div class="l-row">
-                                        <div class="l-full-width-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end -->
-                                <!-- end -->
-                                <!-- end -->
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li><div class="_page"></div> page margin</li>
-                            <li><div class="_row"></div> row margin</li>
-                            <li><div class="_col"></div> column margin</li>
-                            <li><div class="_module"></div> module margin</li>
-                        </ul>
-                        <!--
-                        <div class="_example">
-                            <p class="_caption">HTML</p>
-                            <pre><code class="html"></code></pre>
-                        </div>
-                    -->
-                    </li>
-                    <li class="dilly-dilly">
-                        <h3 class="_h3">Two Even Columns (/&#189;)</h3>
+                        <h3 class="_h3">One Column</h3>
+                        <p>The fullpage row is similar to the <code>class="l-row l-header</code> but can be applied to the entire section. An example might include a 'dashboard' page with multiple rows and columns.</p>
                         <ul class="dally">
                             <li class="_page">15px</li>
                             <li class="_row">22px</li>
-                            <li class="_mod _start">(50%) &#189; &#64;</li>
-                            <li class="_col _end">33px</li>
-                            <li class="_col _start">11px</li>
-                            <li class="_mod _mid">(50%) &#189; &#64;</li>
+                            <li class="_mod _start"><span class="_col-one-one"></span><span>px</span> or 100%</li>
                             <li class="_col _end">22px</li>
                             <li class="_page">15px</li>
                         </ul>
@@ -990,12 +1176,11 @@ div#featured li {
                                 <!-- start -->
                                 <!-- start -->
                                 <div class="l-full-width-page">
-                                    <div class="l-row l-two-equal-col">
-                                        <div class="l-two-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
-                                        </div>
-                                        <div class="l-two-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                    <div class="l-row">
+                                        <div class="l-full-width-col">
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-one-one">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1005,11 +1190,26 @@ div#featured li {
                             </div>
                         </div>
                         <ul class="_legend">
-                            <li><div class="_page"></div> page margin</li>
-                            <li><div class="_row"></div> row margin</li>
-                            <li><div class="_col"></div> column margin</li>
-                            <li><div class="_module"></div> module margin</li>
+                            <li>
+                                <div class="_page"></div> page margin</li>
+                            <li>
+                                <div class="_row"></div> row margin</li>
+                            <li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
+
+
+
+
+
+
+
+
+
+
+
                         <!--
                         <div class="_example">
                             <p class="_caption">HTML</p>
@@ -1017,14 +1217,96 @@ div#featured li {
                         </div>
                     -->
                     </li>
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <li class="dilly-dilly">
+                        <h3 class="_h3">Two Columns</h3>
+                        <ul class="dally">
+                            <li class="_page">15px</li>
+                            <li class="_row">22px</li>
+                            <li class="_mod _start"><span class="_col-two-one"></span><span>px</span> or 50%</li>
+                            <li class="_col _end">33px</li>
+                            <li class="_col _start">11px</li>
+                            <li class="_mod _mid"><span class="_col-two-one"></span><span>px</span> or 50%</li>
+                            <li class="_col _end">22px</li>
+                            <li class="_page">15px</li>
+                        </ul>
+                        <div class="_module-wrapper">
+                            <div class="_module-container">
+                                <!-- start -->
+                                <!-- start -->
+                                <!-- start -->
+                                <div class="l-full-width-page">
+                                    <div class="l-row l-two-even-col">
+                                        <div class="l-two-col">
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-two">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        </div>
+                                        <div class="l-two-col">
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-two">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end -->
+                                <!-- end -->
+                                <!-- end -->
+                            </div>
+                        </div>
+                        <ul class="_legend">
+                            <li>
+                                <div class="_page"></div> page margin</li>
+                            <li>
+                                <div class="_row"></div> row margin</li>
+                            <li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+                        <!--
+                        <div class="_example">
+                            <p class="_caption">HTML</p>
+                            <pre><code class="html"></code></pre>
+                        </div>
+                    -->
+                    </li>
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
                     <li class="dilly-dilly">
                         <h3 class="_h3">2 column, one-third-right</h3>
                         <ul class="dally">
                             <li class="_page">15px</li>
                             <li class="_row">22px</li>
-                            <li class="_mod _start">(66.666%) &#8532; &#64; 580px</li>
+                            <li class="_mod _start"><span class="_col-two-one"></span><span>px</span> or 66.666% &#8532; &#64; 580px</li>
                             <li class="_col _end">44px</li>
-                            <li class="_mod _start">(33.333%) &#8531; &#64; 290px</li>
+                            <li class="_mod _start"><span class="_col-two-one"></span><span>px</span> or 33.333% &#8531; &#64; 290px</li>
                             <li class="_col _end">22px</li>
                             <li class="_page">15px</li>
                         </ul>
@@ -1037,10 +1319,14 @@ div#featured li {
                                 <div class="l-full-width-page">
                                     <div class="l-row l-right-col">
                                         <div class="l-two-third-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-two">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-one-third-col">
-                                            <div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-two">
+                                                Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit.</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1050,23 +1336,38 @@ div#featured li {
                             </div>
                         </div>
                         <ul class="_legend">
-                            <li><div class="_page"></div> page margin</li>
-                            <li><div class="_row"></div> row margin</li>
-                            <li><div class="_col"></div> column margin</li>
-                            <li><div class="_module"></div> module margin</li>
+                            <li>
+                                <div class="_page"></div> page margin</li>
+                            <li>
+                                <div class="_row"></div> row margin</li>
+                            <li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
-                            <div class="_example">
-                                <!-- h3 class="_h3">Placeholder</h3 -->
-                                <!-- p class="_p">Placeholder</p> -->
-                                <p class="_caption">HTML</p>
-<pre><code class="html">&lt;!-- 66.666% | 33.333% --&gt;
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="_example">
+                            <!-- h3 class="_h3">Placeholder</h3 -->
+                            <!-- p class="_p">Placeholder</p> -->
+                            <p class="_caption">HTML</p>
+                            <pre><code class="html">&lt;!-- 66.666% | 33.333% --&gt;
 &lt;div class="l-row l-right-col"&gt;
     &lt;div class="l-two-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
     &lt;div class="l-one-third-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                            </div>
-                        </li>
-    
+                        </div>
+                    </li>
+
 
 
 
@@ -1100,21 +1401,37 @@ div#featured li {
 
 
                     <!--
-                    <li class="dilly-dilly">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <li class="dilly-dilly">
                         <h3 class="_h3">Fullpage Row & Columns</h3>
                         <div class="_module-wrapper">
                             <div class="_module-container">
 
                                 <div class="l-full-width-page">
-                                    <div class="l-row l-three-equal-col">
+                                    <div class="l-row l-three-even-col">
                                         <div class="l-one-third-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+<div class="secondary">
+    <span class="_module-bg _col-thr">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-one-third-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+<div class="secondary">
+    <span class="_module-bg _col-thr">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-one-third-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+<div class="secondary">
+    <span class="_module-bg _col-thr">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1134,24 +1451,33 @@ div#featured li {
                         </div>
 
                     </li>
+
                     <li class="dilly-dilly">
                         <h3 class="_h3">Fullpage Row & Columns</h3>
                         <div class="_module-wrapper">
                             <div class="_module-container">
 
                                 <div class="l-full-width-page">
-                                    <div class="l-row l-four-equal-col">
+                                    <div class="l-row l-four-even-col">
                                         <div class="l-narrow-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-fou">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-narrow-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-fou">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-narrow-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-fou">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                         <div class="l-narrow-col">
-<div class="secondary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+                                            <div class="secondary">
+                                                <span class="_module-bg _col-fou">
+    Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1159,10 +1485,14 @@ div#featured li {
                             </div>
                         </div>
                         <ul class="_legend">
-                            <li><div class="_page"></div> page margin</li>
-                            <li><div class="_row"></div> row margin</li>
-                            <li><div class="_col"></div> column margin</li>
-                            <li><div class="_module"></div> module margin</li>
+                            <li>
+                                <div class="_page"></div> page margin</li>
+                            <li>
+                                <div class="_row"></div> row margin</li>
+                            <li>
+                                <div class="_col"></div> column margin</li>
+                            <li>
+                                <div class="_module"></div> module margin</li>
                         </ul>
 
                         <div class="_example">
@@ -1171,8 +1501,19 @@ div#featured li {
                         </div>
 
                     </li>
-                -->
+                    -->
                 </ul>
+
+
+
+
+
+
+
+
+
+
+
 
                 <!-- end style guide -->
                 <!-- end style guide -->
@@ -1185,14 +1526,79 @@ div#featured li {
 <!-- build:js assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
 <!-- build:js assets/scripts/global.js.min.js -->
-<script src="../temp/scripts/global.js"></script>
+<!-- script src="../temp/scripts/global.js"></script -->
 <!-- endbuild -->
 <!-- build:js assets/scripts/highlight.min.js -->
 <script src="../src/js/highlight.js"></script>
 <!-- endbuild -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>
     hljs.initHighlightingOnLoad();
 
+    var rowOneOneOne = $('.dally-row-one-one span._module-bg._row-one-one-one').width();
+    var rowOneTwoOne = $('.dally-row-one-two span._module-bg._row-one-two-one').width();
+    $('li._mod span._row-one-one-one').append(rowOneOneOne);
+    $('li._mod span._row-one-two-one').append(rowOneTwoOne);
+
+    var colOneOneOne = $('.dally-one-one span._module-bg._col-one-one-one').width();
+    $('li._mod span._col-one-one-one').append(colOneOneOne);
+
+    var colTwoOneOne = $('.dally-two-one span._module-bg._col-two-one-one').width();
+    var colTwoOneTwo = $('.dally-two-one span._module-bg._col-two-one-two').width();
+    var colTwoTwoOne = $('.dally-two-two span._module-bg._col-two-two-one').width();
+    var colTwoTwoTwo = $('.dally-two-two span._module-bg._col-two-two-two').width();
+    var colTwoThrOne = $('.dally-two-thr span._module-bg._col-two-thr-one').width();
+    var colTwoThrTwo = $('.dally-two-thr span._module-bg._col-two-thr-two').width();
+    var colTwoFouOne = $('.dally-two-fou span._module-bg._col-two-fou-one').width();
+    var colTwoFouTwo = $('.dally-two-fou span._module-bg._col-two-fou-two').width();
+    var colTwoFivOne = $('.dally-two-fiv span._module-bg._col-two-fiv-one').width();
+    var colTwoFivTwo = $('.dally-two-fiv span._module-bg._col-two-fiv-two').width();
+    var colTwoSixOne = $('.dally-two-six span._module-bg._col-two-six-one').width();
+    var colTwoSixTwo = $('.dally-two-six span._module-bg._col-two-six-two').width();
+    var colTwoSevOne = $('.dally-two-sev span._module-bg._col-two-sev-one').width();
+    var colTwoSevTwo = $('.dally-two-sev span._module-bg._col-two-sev-two').width();
+    $('li._mod span._col-two-one-one').append(colTwoOneOne);
+    $('li._mod span._col-two-one-two').append(colTwoOneTwo);
+    $('li._mod span._col-two-two-one').append(colTwoTwoOne);
+    $('li._mod span._col-two-two-two').append(colTwoTwoTwo);
+    $('li._mod span._col-two-thr-one').append(colTwoThrOne);
+    $('li._mod span._col-two-thr-two').append(colTwoThrTwo);
+    $('li._mod span._col-two-fou-one').append(colTwoFouOne);
+    $('li._mod span._col-two-fou-two').append(colTwoFouTwo);
+    $('li._mod span._col-two-fiv-one').append(colTwoFivOne);
+    $('li._mod span._col-two-fiv-two').append(colTwoFivTwo);
+    $('li._mod span._col-two-six-one').append(colTwoSixOne);
+    $('li._mod span._col-two-six-two').append(colTwoSixTwo);
+    $('li._mod span._col-two-sev-one').append(colTwoSevOne);
+    $('li._mod span._col-two-sev-two').append(colTwoSevTwo);
+
+    var colThrOneOne = $('.dally-thr-one span._module-bg._col-thr-one-one').width();
+    var colThrOneTwo = $('.dally-thr-one span._module-bg._col-thr-one-two').width();
+    var colThrOneThr = $('.dally-thr-one span._module-bg._col-thr-one-thr').width();
+    var colThrTwoOne = $('.dally-thr-two span._module-bg._col-thr-two-one').width();
+    var colThrTwoTwo = $('.dally-thr-two span._module-bg._col-thr-two-two').width();
+    var colThrTwoThr = $('.dally-thr-two span._module-bg._col-thr-two-thr').width();
+    var colThrThrOne = $('.dally-thr-thr span._module-bg._col-thr-thr-one').width();
+    var colThrThrTwo = $('.dally-thr-thr span._module-bg._col-thr-thr-two').width();
+    var colThrThrThr = $('.dally-thr-thr span._module-bg._col-thr-thr-thr').width();
+    $('li._mod span._col-thr-one-one').append(colThrOneOne);
+    $('li._mod span._col-thr-one-two').append(colThrOneTwo);
+    $('li._mod span._col-thr-one-thr').append(colThrOneThr);
+    $('li._mod span._col-thr-two-one').append(colThrTwoOne);
+    $('li._mod span._col-thr-two-two').append(colThrTwoTwo);
+    $('li._mod span._col-thr-two-thr').append(colThrTwoThr);
+    $('li._mod span._col-thr-thr-one').append(colThrThrOne);
+    $('li._mod span._col-thr-thr-two').append(colThrThrTwo);
+    $('li._mod span._col-thr-thr-thr').append(colThrThrThr);
+
+    var colFouOneOne = $('.dally-fou-one span._module-bg._col-fou-one-one').width();
+    var colFouOneTwo = $('.dally-fou-one span._module-bg._col-fou-one-two').width();
+    var colFouOneThr = $('.dally-fou-one span._module-bg._col-fou-one-thr').width();
+    var colFouOneFou = $('.dally-fou-one span._module-bg._col-fou-one-fou').width();
+    $('li._mod span._col-fou-one-one').append(colFouOneOne);
+    $('li._mod span._col-fou-one-two').append(colFouOneTwo);
+    $('li._mod span._col-fou-one-thr').append(colFouOneThr);
+    $('li._mod span._col-fou-one-fou').append(colFouOneFou);
 </script>
 
 </html>

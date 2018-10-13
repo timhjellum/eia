@@ -27,25 +27,25 @@
         <div class="_content">
             <div class="_content-inner">
                 <h1 class="_h1">Layout Rules</h1>
-                
-                                <ul class="dilly-dilly">
-                                    <li class="dilly-dilly">
-                                        <h3 class="_h3">Header 1</h3>
+
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly">
+                        <h3 class="_h3">Header 1</h3>
 
 
 
-                    <h1 class="style-guide"></h1>
+                        <h1 class="style-guide"></h1>
 
-                    <!--p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation
+                        <!--p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation
                         item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles. </p
                     -->
 
-                    <p class="_p">EIA has defined all ayout styles with the prefix <code>l-</code> and use class selectors (not id's).</p>
+                        <p class="_p">EIA has defined all ayout styles with the prefix <code>l-</code> and use class selectors (not id's).</p>
 
 
-                    <div class="_example">
-                        <p class="_example-caption _p">Layout declarations in LESS format</p>
-                        <pre><code class="CSS">.l-col {
+                        <div class="_example">
+                            <p class="_example-caption _p">Layout declarations in LESS format</p>
+                            <pre><code class="CSS">.l-col {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 33.333333%;
     -ms-flex: 0 0 33.333333%;
@@ -68,17 +68,17 @@
     }
 }
 </code></pre>
-                    </div>
+                        </div>
 
 
 
-                    <p class="_p">Generally, a Layout style only has a single selector: a single class name. However, there are times when a Layout needs to respond to different factors. For example, when we want to reorder the elements on a page as the layout redraws
-                        due to changes in screen resolution. This layout preference would still be declared as a Layout style and used in combination with other Layout styles. </p>
+                        <p class="_p">Generally, a Layout style only has a single selector: a single class name. However, there are times when a Layout needs to respond to different factors. For example, when we want to reorder the elements on a page as the layout
+                            redraws due to changes in screen resolution. This layout preference would still be declared as a Layout style and used in combination with other Layout styles. </p>
 
 
-                    <div class="_example">
-                        <p class="_example-caption _p">For example the compination of two styles: <code><div class="l-3-col l-second"></div></code> has corresponding Layout styles.</p>
-                        <pre><code class="html">.l-3-col {
+                        <div class="_example">
+                            <p class="_example-caption _p">For example the compination of two styles: <code><div class="l-three-col l-second"></div></code> has corresponding Layout styles.</p>
+                            <pre><code class="html">.l-three-col {
     &.l-reorder {
         .l-first {
             margin-bottom: 22px;
@@ -92,16 +92,16 @@
     }
 }
 </code></pre>
-                    </div>
+                        </div>
 
 
-                    <!--
+                        <!--
     <p class="_p">Layout rules divide the page into sections. Layouts hold one or more modules together.</p>
     <p class="_p">These layouts were created from examining hundreds of eia.gov pages. The new layouts simply take the existing fixed pixel width layouts and makes them percentages. So far we have identified x top-level layouts. These include:</p>
     <p class="_p">After inventory of the site it was determined that there was little or no difference in the main-col and side-col widths.</p>
 -->
-                </li>
-                <li class="dilly-dilly">
+                    </li>
+                    <li class="dilly-dilly">
                         <a name="header-row"></a>
                         <div class="row-style-guide">
                             <h3 class="_h3">Full-Width Header Layout (22px + 100% + 22px)</h3>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="_module-wrapper">
                             <div class="module-container">
-                                <div class="l-row l-3-col-reorder">
+                                <div class="l-row l-three-col-reorder">
                                     <div class="l-narrow-col l-reorder-center">
                                         <span class="style-guide">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis
                                                 diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus
@@ -575,7 +575,7 @@
                         </div>
                         <div class="_module-wrapper">
                             <div class="module-container">
-                                <div class="l-row l-3-col-reorder">
+                                <div class="l-row l-three-col-reorder">
                                     <div class="l-narrow-col l-reorder-center">
                                         <span class="style-guide">Desktop &amp; laptop view, this container will be first. Mobile view and this should be second.</span>
                                     </div>
@@ -589,7 +589,7 @@
                             </div>
                         </div>
                         <div class="_example">
-                            <pre><code class="html">&lt;div class="l-row l-3-col-reorder"&gt;
+                            <pre><code class="html">&lt;div class="l-row l-three-col-reorder"&gt;
 &lt;div class="l-narrow-col l-reorder-center"&gt;Desktop &amp; laptop view, this container will be first. Mobile view and this should be second.&lt;/div&gt;
     &lt;div class="l-two-col l-reorder-first"&gt;Desktop &amp; laptop view, this container will be second. Mobile view and this should be first.&lt;/div&gt;
     &lt;div class="l-narrow-col l-reorder-last"&gt;Desktop &amp; laptop view, this container will be third. Mobile view and this should be last.&lt;/div&gt;
@@ -599,7 +599,7 @@
                 </ul>
             </div>
         </div>
-         <div class="_right-sidebar">
+        <div class="_right-sidebar">
             <div class="_right-sidebar-inner">
                 <ul class="dilly-dilly">
                     <li><a href="#header-row">Full-Width-Header Layout</a></li>
@@ -620,7 +620,7 @@
     </div>
 
 
-<div class="_footer"></div>
+    <div class="_footer"></div>
 </body>
 
 <script src="../temp/scripts/scripts.js"></script>
@@ -630,4 +630,5 @@
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+
 </html>
