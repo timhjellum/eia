@@ -39,7 +39,8 @@ class BxSlider {
                 const mobileLandscapeSlideWidth   = parseInt((footerWidth - 40) / 2);
                 const tabletSlideWidth            = parseInt((footerWidth - 40) / 3);
                 const tabletLandscapeSlideWidth   = parseInt((footerWidth - 40) / 3);
-                const basicTable                  = parseInt(footerWidth - 12);          
+                //const basicTable                  = parseInt(footerWidth - 12);
+                //const stickyTable                  = parseInt(footerWidth - 16);         
             
                 if (footerWidth > 989) {
                     setTimeout(function(){
@@ -73,6 +74,7 @@ console.log('footer : ' + footerWidth);
                     }, 100)
                     $('.slider-multi').css('width', + footerWidth);
                     $('.slider-multi-wrapper').css('width', + footerWidth);
+                    $('.sticky').css('width', + (footerWidth - 12));
 console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
                 } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -92,6 +94,7 @@ console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slide
                     $('.slider-multi').css('width', + footerWidth);
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+                    $('.sticky').css('width', + (footerWidth - 12));
 console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
                 } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -112,6 +115,7 @@ console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi widt
                     $('.slider-multi').css('width', + footerWidth);
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+                    $('.sticky').css('width', + (footerWidth - 12));
 console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
                 } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -131,6 +135,7 @@ console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-m
                     $('.slider-multi').css('width', + footerWidth);
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $('.bx-viewport').css('overflow', 'visible'); // required for peeking left and right slides
+                    $('.sticky').css('width', + (footerWidth - 16));
 console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
                 } else {
                     mySettings.wrapperClass = 'slider-multi-wrapper';

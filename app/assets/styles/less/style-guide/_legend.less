@@ -44,36 +44,84 @@
                     border-image: initial;
                     margin: 5px 4px 0px 0px;
                 }
+                &._module {
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    background-color: blue;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: rgb(51, 51, 51);
+                    border-image: initial;
+                    margin: 5px 4px 0px 0px;
+                }
             }
         }
     }
-    span {
-        &._page {
-            background-color: yellowgreen;
-            display: inline-block;
+    .dally {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        li {
+            font-size: .875rem;
+            float: left;
             color: rgb(0, 0, 0);
-            padding: 0px 5px;
-        }
-    }
-    span {
-        &._row {
-            background-color: greenyellow;
-            display: inline-block;
-            color: rgb(0, 0, 0);
-            padding: 0px 5px;
-        }
-    }
-    span {
-        &._col {
-            background-color: rgba(255, 69, 0, 0.65);
-            display: inline-block;
-            color: rgb(0, 0, 0);
-            padding: 0px 5px;
+            padding: 2px 5px;
+            &._page { //15px
+                background-color: yellowgreen;
+                margin: 1px 0;
+            }
+            &._row { //22px
+                background-color: greenyellow;
+                margin: 1px 0;
+            }
+            &._mod { //912px (100%)
+                background-color: #eee;
+            }
+            &._col { //22px
+                background-color: rgba(255, 69, 0, 0.65);
+            }
+            &._start {
+                border-top: 1px solid #000;
+                //border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                margin-left: 5px;
+            }
+            &._mid {
+                border-top: 1px solid #000;
+                //border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                //border-left: 1px solid #000;
+            }
+            &._end {
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                //border-left: 1px solid #000;
+                margin-right: 5px;
+            }
         }
     }
 }
 @media @laptop {
     ._legend {
 		display: block;
-	}
+    }
+    
+    .step {
+        border-radius: 50%;
+   
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+        
+        background: #fff;
+        border: 2px solid #666;
+        color: #666;
+        text-align: center;
+        
+        font: 32px Arial, sans-serif;
+    }
 }

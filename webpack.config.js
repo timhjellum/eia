@@ -3,7 +3,7 @@ const path = require('path');
 
 
 const dist = './app/temp/scripts/';
-//const dist = '//REPLICATOR/website/css_rehab/archive/global/scripts';
+//const dist = '//REPLICATOR/website/adaptive/global/scripts';
 
 
 module.exports = {

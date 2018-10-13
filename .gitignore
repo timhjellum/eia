@@ -12,6 +12,7 @@
 node_modules/
 tph/
 .tmp/
+.idea/
 
 # OS or Editor folders
 .DS_Store

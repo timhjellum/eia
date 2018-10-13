@@ -19,8 +19,6 @@ import SafeActiveElement from '../../../../node_modules/jquery-ui/ui/safe-active
 class jqueryUI {
     constructor() {
         this.accordion = $('.accordion');
-        this.oldPageTabs = $('.page_tabs');
-        this.fancyBoxMenuTabs();
 
         if (this.accordion !== null) {
             this.accordionModule();
@@ -29,35 +27,7 @@ class jqueryUI {
             this.oldPageTabsModule();
         }
     }
-    fancyBoxMenuTabs() { // this sets the initial state of the navigational tabs
-        $('.fancybox-menu').click(function () {
-            var target = $(this).data("target");
-            var options = { active: 0 };
-            switch (target) {
-                case 'nav-sources':
-                    options.active = 0;
-                    break;
-                case 'nav-topics':
-                    options.active = 1;
-                    break;
-                case 'nav-geography':
-                    options.active = 2;
-                    break;
-                case 'nav-tools':
-                    options.active = 3;
-                    break;
-                case 'nav-learn':
-                    options.active = 4;
-                    break;
-                case 'nav-news':
-                    options.active = 5;
-                    break;
-                case 'nav-default':
-                    options.active = 0;
-            }
-            $('.section-tabs').tabs(options);
-        });
-    }
+
     oldPageTabsModule() {
         $('.page_tabs').tabs();
         /*

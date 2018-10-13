@@ -438,8 +438,8 @@
 	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16"><g style="isolation:isolate"><g id="icon-l-range"><g id="l-range-path"><polygon points="10.8 1.4 1.6 1.4 1.6 14.6 10.8 14.6 18.4 8 10.8 1.4" fill="@{fill-color}"/><rect x="5.6" y="4.5" width="1" height="7" opacity="0.2" style="mix-blend-mode:darken"/><rect x="4.6" y="4.5" width="1" height="7" fill="#ffffff" opacity="0.4" style="mix-blend-mode:lighten"/><rect x="8.7" y="5.4" width="1" height="1.94" opacity="0.2" style="mix-blend-mode:darken"/><rect x="7.7" y="5.4" width="1" height="1.94" fill="#ffffff" opacity="0.4" style="mix-blend-mode:lighten"/><rect x="8.7" y="8.4" width="1" height="1.94" opacity="0.2" style="mix-blend-mode:darken"/><rect x="7.7" y="8.4" width="1" height="1.94" fill="#ffffff" opacity="0.4" style="mix-blend-mode:lighten"/></g></g></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }
-.icon-line-chart(@fill-color: shade(white, 30.2%)) {
-    @icon-filter-svg: ~'<svg id="icon-line-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 27"><g id="line-chart-path"><path id="Path_2451" data-name="Path 2451" d="M29.2,25H1.8V2" fill="none" stroke="@{fill-color}" stroke-miterlimit="10" stroke-width="2"/><path id="Path_2452" data-name="Path 2452" d="M26.3,4.3l-7,13.6L11,12,4.2,22.2" fill="none" stroke="@{fill-color}" stroke-miterlimit="10" stroke-width="4"/></g></svg>';
+.icon-line-chart(@fill-color: shade(white, 30.2%), @fill-opacity: 0.8) {
+    @icon-filter-svg: ~'<svg id="icon-line-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 27"><g id="line-chart-path"><path id="Path_2451" data-name="Path 2451" d="M29.2,25H1.8V2" fill="none" stroke="@{fill-color}" opacity="@{fill-opacity}" stroke-miterlimit="10" stroke-width="2"/><path id="Path_2452" data-name="Path 2452" d="M26.3,4.3l-7,13.6L11,12,4.2,22.2" fill="none" stroke="@{fill-color}" opacity="@{fill-opacity}" stroke-miterlimit="10" stroke-width="4"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }
 .icon-map(@fill-color: shade(white, 30.2%)) {
@@ -474,8 +474,8 @@
     @icon-filter-svg: ~'<svg id="icon-reset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><g id="reset-path"><path d="M34.5,18A16.5,16.5,0,1,1,18,1.5,16.5,16.5,0,0,1,34.5,18Z" fill="@{fill-color}" opacity="@{fill-opacity}"/><path d="M18.1,24.5a6.4,6.4,0,1,1,4-11.4l-3.2,2.8,8.4,1.2V8.6l-2.9,2.6a9.4,9.4,0,1,0,2.5,10.1l-3-.4A6.4,6.4,0,0,1,18.1,24.5Z" fill="#ffffff"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }
-.icon-reset-animation(@fill-color: shade(white, 30.2%)) {
-	@icon-filter-svg: ~'<svg id="icon-replay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M7,10.7A3.7,3.7,0,1,1,9.3,4.2L7.5,5.7l4.8,0.7V1.6L10.6,3.1a5.4,5.4,0,1,0,1.5,5.8l-1.7-.3A3.7,3.7,0,0,1,7,10.7Z" fill="@{fill-color}"/></svg>';
+.icon-reset-animation(@fill-color: shade(white, 30.2%), @fill-opacity: 0.8) {
+	@icon-filter-svg: ~'<svg id="icon-replay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M7,10.7A3.7,3.7,0,1,1,9.3,4.2L7.5,5.7l4.8,0.7V1.6L10.6,3.1a5.4,5.4,0,1,0,1.5,5.8l-1.7-.3A3.7,3.7,0,0,1,7,10.7Z" fill="@{fill-color}" opacity="@{fill-opacity}"/></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
 }
 .icon-scroll-h() {
@@ -501,6 +501,14 @@
 .icon-sort-down(@fill-color: @eia-blue) {
     @icon-filter-svg: ~'<svg id="icon-sort" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><g id="group-47-2" data-name="group-47"><path id="path-2" data-name="path" d="M12.8,5.9L7,0.1,1.2,5.9H12.8Z" fill="@{fill-color}"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url no-repeat center center;
+}
+.icon-select-arrow-blue(@fill-color: @eia-blue) {
+    @icon-filter-svg: ~'<svg id="icon-sort" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><g id="group-47"><path id="path" d="M1.2,10.1L7,15.9l5.8-5.8H1.2Z" fill="@{fill-color}"/></g></svg>';
+	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url;
+}
+.icon-select-arrow-green(@fill-color: @eia-green) {
+    @icon-filter-svg: ~'<svg id="icon-sort" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><g id="group-47"><path id="path" d="M1.2,10.1L7,15.9l5.8-5.8H1.2Z" fill="@{fill-color}"/></g></svg>';
+	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url;
 }
 .icon-sort-up(@fill-color: @eia-blue) {
     @icon-filter-svg: ~'<svg id="icon-sort" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><g id="group-47"><path id="path" d="M1.2,10.1L7,15.9l5.8-5.8H1.2Z" fill="@{fill-color}"/></g></svg>';

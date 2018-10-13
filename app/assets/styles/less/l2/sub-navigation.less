@@ -1,15 +1,21 @@
 
 @media @mobile {
 	.l-full-width-page {
+		width: 100%;
+		&.dashboard-container {
+			hr {
+				display: none;
+			}
+		}
 		.page-nav {
 			width: 100%;
-			margin: 0 0 1.45em 0;
+			margin: 20px 0 1.45em 0;
 			display: inline-block;
 			border-bottom: 1px solid @eia-blue;
 			ul {
 				&.left-nav {
 					list-style: none;
-					margin-left: 22px;
+					margin: 2px 0 0 22px;
 					li {
 						float: left;
 						background-color: white;
@@ -340,8 +346,7 @@
 				&:after {
 					content: "\00a0\203A";
 				}
-			}				
-
+			}
 		}
 	}
 }

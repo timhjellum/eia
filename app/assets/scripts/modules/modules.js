@@ -1,5 +1,22 @@
 class ModuleScripts {
     constructor() {
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //this.moduleVisualizations = $(".visualizations h3 a:empty");
         //this.moduleLinkList = $(".link-list a:empty");
         //this.hideDescriptionIfEmpty = $(".slider-home h3 a:empty");
@@ -120,6 +137,11 @@ if(window.location.href.indexOf("eia.gov")!=-1) {
             var featureOrder = $(this).parents('div').attr('class');
             return /\?/.test(attr) ? attr + '&src=home-' + featureOrder : attr + '?src=home-' + featureOrder;
         });
+
+
+
+
+
     }
 }
 export default ModuleScripts;

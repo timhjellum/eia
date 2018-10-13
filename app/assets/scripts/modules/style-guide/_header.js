@@ -17,11 +17,16 @@ class Header {
             '</a>' +
             '<ul class="_nav">' +
             '   <li class="_nav-primary-item">' +
-            '       <a href="../base">Base</a>' +
+            '       <a href="../base/">Base</a>' +
             '       <ul class="_nav-dropdown">' +
             '           <li><a href="../base/color-palette.html">Color Palette</a></li>' +
+            '           <li><a href="../base/forms.html">Forms</a></li>' +
             '           <li><a href="../base/icons.html">Icons</a></li>' +
-            '           <li><a href="../base/typography.html">base/typography.html</a></li>' +
+            '           <li><a href="../base/lists.html">Lists</a></li>' +
+            '           <li><a href="../base/size-conversions.html">Size Conversions</li>' +
+            '           <li><a href="../base/symbols.html">Symbols</a></li>' +
+            '           <li><a href="../base/tables.html">Tables</a></li>' +
+            '           <li><a href="../base/typography.html">Typography</a></li>' +
             '       </ul>' +
             '   </li>' +
             '   <li class="_nav-primary-item">' +
@@ -121,22 +126,6 @@ class Header {
             '       </ul>' +
             '   </li>' +
             '</ul>');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //if ($('.navbar-brand:contains(Base)').length > 0) {

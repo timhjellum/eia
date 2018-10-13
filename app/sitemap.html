@@ -65,19 +65,19 @@
         <tr>
             <td>15-JAN-18</td>
             <td><a href="https://www.eia.gov">Home</a></td>
-            <td><a href="https://www.eia.gov/css_rehab/archive/index.php">Home</a></td>
+            <td><a href="https://www.eia.gov/adaptive/index.php">Home</a></td>
             <td></td>
         </tr>
         <tr>
             <td>29-JAN-18</td>
             <td><a href="https://www.eia.gov/petroleum/">Petroleum &amp; Other Liquids</a></td>
-            <td><a href="https://www.eia.gov/css_rehab/archive/petroleum/">Petroleum &amp; Other Liquids</a></td>
+            <td><a href="https://www.eia.gov/adaptive/petroleum/">Petroleum &amp; Other Liquids</a></td>
             <td></td>
         </tr>
         <tr>
             <td>29-JAN-18</td>
             <td><a href="https://www.eia.gov/petroleum/data.php">Petroleum &amp; Other Liquids - Data</a></td>
-            <td><a href="https://www.eia.gov/css_rehab/archive/petroleum/data.php">Petroleum &amp; Other Liquids - Data</a></td>
+            <td><a href="https://www.eia.gov/adaptive/petroleum/data.php">Petroleum &amp; Other Liquids - Data</a></td>
             <td></td>
         </tr>
         <tr>

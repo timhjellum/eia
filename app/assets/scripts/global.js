@@ -1,8 +1,8 @@
-//import Footer from './modules/footer';
-//new Footer();
-
 import FancyBox from './modules/fancybox';
 new FancyBox();
+
+import HeaderMenu from './modules/header-menu';
+new HeaderMenu();
 
 import HeaderSearch from './modules/header-search';
 new HeaderSearch();
@@ -36,4 +36,3 @@ new jqueryUI();
 
 import StickyTableHeaders from './modules/sticky-table-headers';
 new StickyTableHeaders();
-

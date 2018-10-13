@@ -1,16 +1,12 @@
 @media @mobile {
 
+	// Hide the overflow in IE.
+	svg:not(:root) {
+		overflow: hidden;
+	}
 
-
-
-
-
-
-
-
-
-
-    a {
+	/*
+	a {
 		&.logo {
 			text-indent: -9999px;
 			font-size: 0;			
@@ -38,9 +34,8 @@
 				.icon-eia-logomark(full, "@eia-dark-grey");
 			}
 		}
-
 	}
-
+	*/
 
 	.plus-yellow {
 		.font;
@@ -54,6 +49,8 @@
 		color: @eia-greyish-blue;
 		font-size: 12px;
 	}
+
+
 	/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
 	.down-arrow {			
 		text-indent: -9999px;
@@ -108,6 +105,70 @@
 			margin: 6px 0 0 4px;
 		}
 	}
+
+
+
+
+
+
+
+
+
+  ////////////////////////////////////////////////////////////////
+ //  button icons                                              //
+////////////////////////////////////////////////////////////////
+
+
+button {
+	&.ico {
+		border: none;
+		margin: 0;
+		background-color: transparent;
+		&.reset-animation {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 0.8);
+			}
+			&:hover {
+				&:before {
+					.icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 1);
+				}
+			}
+		}
+		&.line-chart {
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 0.8);
+			}
+			&:hover {
+				&:before {
+					.icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 1);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	.ico-menu {
@@ -609,7 +670,7 @@
 		}
 		&.grid-key {
 			&:before {
-				.controls-icon(20px, 20px);
+				.controls-icon();
 				.icon-grid-key();
 			}
 			&:hover {
@@ -631,12 +692,12 @@
 		}
 		&.key {
 			&:before {
-				.controls-icon(20px, 20px);
+				.controls-icon();
 				.icon-key();
 			}
 			&:hover {
 				&:before {
-					.icon-key;
+					.icon-key();
 				}
 			}
 		}
@@ -1051,30 +1112,7 @@
 		}
 
 
-		&.pdf {
-			&:before {
-				.icon-file-type(pdf);
-				.controls-icon(15px, 16px);
-				display: inline-block;
-				margin-bottom: -3px;
-			}
-		}
-		&.xls {
-			&:before {
-				.icon-file-type(xls);
-				.controls-icon(15px, 16px);
-				display: inline-block;
-				margin-bottom: -3px;
-			}
-		}
-		&.csv {
-			&:before {
-				.icon-file-type(csv);
-				.controls-icon(15px, 16px);
-				display: inline-block;
-				margin-bottom: -3px;
-			}
-		}
+
 		&.printer {
 			&:before {
 				.controls-icon(20px, 20px);
@@ -1256,20 +1294,7 @@
 
 
 
-	/*
-	.??? {
-		i {
-			&.ico {
-				.left;
-				width: 24px;
-				height: 24px;
-				text-indent: -9999px;
-				//top: -8px;
-				margin-right: 12px;
-			}
-		}
-	}
-	*/
+
 
 	/*-Search Icon Mobile--------------------------*/
 	.search {	
@@ -1312,7 +1337,46 @@
 	}
 }
 
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** *****    logos    ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
+// eia logo
+// eia logo mobile (shrink)
+// eia logo laptop
+// eia logo white bg
+
+@media @mobile {
+	a {
+		&.logo {
+			text-indent: -9999px;
+			font-size: 0;			
+			.left;
+			transition: all 0.3s ease-in-out;
+
+			&:before {
+				.controls-icon(44px, 35px);
+				.icon-eia-logomark();
+				transition: all 0.3s ease-in-out;
+			}
+			&.show {
+				&:before {
+					.controls-icon(75px, 60px);
+					.icon-eia-logomark();
+					transition: all 0.3s ease-in-out;					
+				}
+			}
+		}
+		&.logo-white-background {
+			text-indent: -9999px;
+			font-size: 0;	
+			&:before {
+				.controls-icon(75px, 60px);
+				.icon-eia-logomark(full, "@eia-dark-grey");
+			}
+		}
+	}
+}
 @media @laptop {
 	a {
 		&.logo {
@@ -1336,60 +1400,72 @@
 	}
 }
 
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** *****    social   ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
+// footer
+// -- facebook
+// -- twitter
+// -- youtube
+// -- flickr
+// -- linkedin
+// -- email
+// -- rss 
+// menu
+// -- facebook
+// -- twitter
+// -- youtube
+// -- flickr
+// -- linkedin
+// -- email
+// -- rss 
+// social sticker
+// -- facebook
+// -- twitter
 
-
-
-//////////////////////////////////////////////////////////////////
-//  social                                                     //
-////////////////////////////////////////////////////////////////
 @media @mobile {
 
-
-
-
-
-	
+	.facebook {
+		&:before {
+			.icon-facebook();
+		}
+	}
+	.twitter {
+		&:before {
+			.icon-twitter();
+		}
+	}
+	.youtube {
+		&:before {
+			.icon-you-tube();
+		}
+	}
+	.flickr {
+		&:before {
+			.icon-flickr();
+		}
+	}
+	.linkedin {
+		&:before {
+			.icon-linked-in();
+		}
+	}
+	.email {
+		&:before {
+			.icon-email();
+		}
+	}
+	.rss {
+		&:before {
+			.icon-rss();
+		}
+	}
 	&.ico-footer {
 		margin: 0 4px -8px 0;
 		padding: 0 0 5px 0;
 		display: inline-block;
 		font-size: 0;
-		&.facebook {
-			&:before {
-				.icon-facebook();
-			}
-		}
-		&.twitter {
-			&:before {
-				.icon-twitter();
-			}
-		}
-		&.youtube {
-			&:before {
-				.icon-you-tube();
-			}
-		}
-		&.flickr {
-			&:before {
-				.icon-flickr();
-			}
-		}
-		&.linkedin {
-			&:before {
-				.icon-linked-in();
-			}
-		}
-		&.email {
-			&:before {
-				.icon-email();
-			}
-		}
-		&.rss {
-			&:before {
-				.icon-rss();
-			}
-		}
 		&.facebook,
 		&.twitter,
 		&.youtube,
@@ -1406,42 +1482,6 @@
 		.left;
 		padding: 0;
 		text-indent: -9999px;
-		&.facebook {
-			padding: 0;
-			&:before {
-				.icon-facebook();
-			}
-		}
-		&.twitter {
-			&:before {
-				.icon-twitter();
-			}
-		}
-		&.youtube {
-			&:before {
-				.icon-you-tube();
-			}
-		}
-		&.flickr {
-			&:before {
-				.icon-flickr();
-			}
-		}
-		&.linkedin {
-			&:before {
-				.icon-linked-in();
-			}
-		}
-		&.email {
-			&:before {
-				.icon-email();
-			}
-		}
-		&.rss {
-			&:before {
-				.icon-rss();
-			}
-		}
 		&.facebook,
 		&.twitter,
 		&.youtube,
@@ -1451,7 +1491,30 @@
 		&.rss {
 			&:before {
 				.controls-icon(40px, 40px);
-
+			}
+		}
+	}
+}
+@media @laptop {
+	&.ico-sticker {
+		display: inline-block;
+		background-color: @eia-blue;
+		&.facebook {
+			&:before {
+				//.icon-facebook();
+				.controls-icon(39px, 42px);
+				top: -3px;
+				right: 2px;
+				position: relative;
+				display: block;
+			}
+		}
+		&.twitter {
+			&:before {
+				//.icon-twitter();
+				.controls-icon(39px, 42px);
+				position: relative;
+				display: block;
 			}
 		}
 	}
@@ -1460,8 +1523,187 @@
 
 
 
-@media @desktop {
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** **** document icons *** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+// PDF
+// XLS
+// JSON
+// CSV
+
+@media @mobile {
+	.ico {
+		margin-left: 4px;
+		font-size: 0;
+		line-height: 0;
+		span {
+			.normal;
+			margin-left: 4px;
+			font-size: 0.750rem; // 12 pixels
+		}
+		&.pdf {
+			&:before {
+				.icon-file-type(pdf);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.xls {
+			&:before {
+				.icon-file-type(xls);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.json {
+			&:before {
+				.icon-file-type(xls);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.csv {
+			&:before {
+				.icon-file-type(csv);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+	}
+	td, th {
+		.ico {
+			margin-left: 0;
+			font-size: 0;
+			line-height: 0;
+			span {
+				.normal;
+				margin-left: 4px;
+				font-size: 0.750rem; // 12 pixels
+				// this hides the textual labels of the icons on tables. Must get approved by Miroslava
+				//position: absolute;
+				//left: -10000px;
+				//top: auto;
+				//width: 1px;
+				//height: 1px;
+				//overflow: hidden;
+			}
+			&.key {
+				margin: 0;
+				width: 20px;
+				span {// this hides the textual labels of the icons on tables.
+					position: absolute;
+					left: -10000px;
+					top: auto;
+					width: 1px;
+					height: 1px;
+					overflow: hidden;
+				}
+				&:before {
+					.controls-icon(20px, 15px);
+					.icon-key(@fill-color: @eia-blue, @fill-opacity: 0.8);
+				}
+				&:hover {
+					&:before {
+						.icon-key(@fill-color: @eia-blue, @fill-opacity: 1);
+					}
+				}
+			}
+		}
+	}
+}
+/*
+@media @laptop {
+	td, th {
+		.ico {
+			span {
+				.normal;
+				position: static;
+				width: 15px; // actual
+				height: 16px; //actual
+			}
+		}
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media @mobile-landscape { 
+	margin: inherit;
+}
+@media @tablet {	
+	margin: inherit;
+}
+@media @tablet-landscape { 
+	margin: inherit;
+}
+
+@media @laptop {
+//@media @desktop {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 
@@ -1492,88 +1734,9 @@
 
 
 
-	&.ico-sticker {
-		display: inline-block;
-		background-color: @eia-blue;
-		&.facebook {
-			&:before {
-				.icon-facebook();
-				.controls-icon(39px, 42px);
-				top: -3px;
-				right: 2px;
-				position: relative;
-				display: block;
-			}
-		}
-		&.twitter {
-			&:before {
-				.icon-twitter();
-				.controls-icon(39px, 42px);
-				position: relative;
-				display: block;
-			}
-		}
-	}
+
 }
 
 
 
-//////////////////////////////////////////////////////////////////
-//  accordion                                                  //
-////////////////////////////////////////////////////////////////
 
-/*
-
-
-&.plus-eiablue {
-	.bold;
-	color: @eia-blue;
-}
-
-&.expand-all {
-	color: red;
-	.font;
-	text-indent: 0;
-}
-&.collapse-all{
-		color: BLUE;
-		.font;
-		text-indent: 0;
-}
-.ico {
-	&.expand-collapse {
-		position: relative;
-		width: 10px;
-		height: 10px;
-		margin-right: 6px;
-
-		&:before,
-		&:after{
-			content: "";
-			position: absolute;
-			background-color: @eia-dark-grey;
-			transition: transform 0.25s ease-out;
-		}
-		&.expand {
-			&:before{
-				top: 0;
-				left: 50%;
-				width: 4px;
-				height: 100%;
-				margin-left: -2px;
-			}
-		}
-		&:after{
-			top: 50%;
-			left: 0;
-			width: 100%;
-			height: 4px;
-			margin-top: -2px;
-		}
-		
-		&:hover{
-			cursor: pointer;
-		}
-	}
-}
-*/

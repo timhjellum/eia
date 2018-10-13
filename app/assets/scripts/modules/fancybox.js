@@ -4,55 +4,9 @@ import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancy
 class FancyBox {
     constructor() {
         this.fancyBoxMenu();
-        this.headerTabs = $('.section-tabs');
-        this.checkForBaseAndCorrectTabHrefs();
-        this.headerTabs.tabs();
         this.fancyBoxLightBox();
-        //thisfancyBoxInline();
-
-        //this.fancyBoxYouTube();
-        //this.resizeEvent();
     }
 
-    setActiveTab(section) {
-      var options = { active: 0 };
-      switch (section) {
-        case 'nav-sources':
-          options.active = 0;
-          break;
-        case 'nav-topics':
-          options.active = 1;
-          break;
-        case 'nav-geography':
-          options.active = 2;
-          break;
-        case 'nav-tools':
-          options.active = 3;
-          break;
-        case 'nav-learn':
-          options.active = 4;
-          break;
-        case 'nav-news':
-          options.active = 5;
-          break;
-        case 'nav-default':
-          options.active = 0;
-        }
-        this.headerTabs.tabs("option", "active", options.active);
-    }
-    checkForBaseAndCorrectTabHrefs() {
-        var base = $('base');
-        if(base.length > 0) {
-            var baseHref = base.attr('href');
-            $.each($('ul:first a', this.headerTabs), function(index, anchor) {
-                if(!$(anchor).data('orig-href')) {
-                  $(anchor).data('orig-href', $(anchor).attr('href'));
-                }
-                //$(anchor).attr('href', window.location.pathname + $(anchor).data('orig-href'));
-                $(anchor).attr('href', window.location.pathname + window.location.search + $(anchor).data('orig-href'));
-            });
-        }
-    }
     fancyBoxLightBox() {
         // this.closeButton.prepend('<i class="ico-menu close">Close</i>');
         // console.log("fancybox lightbox");
@@ -83,63 +37,6 @@ class FancyBox {
         var viewPortHeight = window.innerHeight;
         
         var fancyBoxWidth = 980;
-        //var self = this;
-        
-        
-        $('.fancybox-menu').fancybox({
-            scrolling: 'visible',
-            //scrolling: 'no',  
-            type: 'inline',
-            width: fancyBoxWidth,
-            autoSize: false, // required for width
-            margin: [40, 0, 20, 0],
-            height: 'auto',
-            padding: 0,
-            fitToView: false,
-            topRatio: 0,
-            autoDimension: false,
-            tpl: {
-                closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
-            },
-            beforeLoad: function beforeLoad() {
-                viewPortWidth = window.innerWidth;
-                if (viewPortWidth <= fancyBoxWidth) {
-                    this.width = viewPortWidth;
-                    //    this.autoResize = true;
-                    this.fitToView = true;
-                    //	console.log(viewPortHeight + ' ' + this.height);
-                } else {
-                    this.width = fancyBoxWidth;
-                    //    this.autoResize = false;
-                    this.fitToView = false;
-                    //	console.log(viewPortHeight + ' ' + this.height);
-                };
-            },
-            beforeShow: function beforeShow() {
-                $('.section-tabs').parent().parent().parent().parent().addClass('global-nav');
-                var navSourcesHeight = $('.section-tabs').height();
-                console.log('section-tabs: ' + navSourcesHeight);
-            },
-            onUpdate: function onUpdate() {
-                if (window.innerWidth <= fancyBoxWidth) {
-                    this.margin = [0, 0, 0, 0];
-                    this.fitToView = true;
-                } else {
-                    this.margin = [40, 0, 20, 0];
-                    this.width = fancyBoxWidth;
-                    this.fitToView = false;
-                };
-                $.fancybox.reposition();
-                $('.section-tabs .ui-tabs-anchor').click(function () {
-                    $.fancybox.update();
-                });
-            },
-            helpers: {
-                overlay: {
-                    locked: true // try changing to true and scrolling around the page
-                }
-            }
-        });
 
         /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
         /* $$$$$                      iframe                     $$$$$ */

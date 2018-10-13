@@ -96,8 +96,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	new _fancybox2.default(); //import Footer from './modules/footer';
-	//new Footer();
+	new _fancybox2.default();
 
 	new _headerSearch2.default();
 
@@ -12596,7 +12595,8 @@
 	                var mobileLandscapeSlideWidth = parseInt((footerWidth - 40) / 2);
 	                var tabletSlideWidth = parseInt((footerWidth - 40) / 3);
 	                var tabletLandscapeSlideWidth = parseInt((footerWidth - 40) / 3);
-	                var basicTable = parseInt(footerWidth - 12);
+	                //const basicTable                  = parseInt(footerWidth - 12);
+	                //const stickyTable                  = parseInt(footerWidth - 16);         
 
 	                if (footerWidth > 989) {
 	                    setTimeout(function () {
@@ -12628,6 +12628,7 @@
 	                    }, 100);
 	                    $('.slider-multi').css('width', +footerWidth);
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
+	                    $('.sticky').css('width', +(footerWidth - 12));
 	                    console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
 	                } else if (footerWidth >= 600 && footerWidth <= 800) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -12647,6 +12648,7 @@
 	                    $('.slider-multi').css('width', +footerWidth);
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+	                    $('.sticky').css('width', +(footerWidth - 12));
 	                    console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
 	                } else if (footerWidth >= 450 && footerWidth <= 599) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -12667,6 +12669,7 @@
 	                    $('.slider-multi').css('width', +footerWidth);
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
+	                    $('.sticky').css('width', +(footerWidth - 12));
 	                    console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
 	                } else if (footerWidth >= 320 && footerWidth <= 449) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -12686,6 +12689,7 @@
 	                    $('.slider-multi').css('width', +footerWidth);
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $('.bx-viewport').css('overflow', 'visible'); // required for peeking left and right slides
+	                    $('.sticky').css('width', +(footerWidth - 16));
 	                    console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
 	                } else {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
@@ -19945,8 +19949,20 @@
 	var StickyTableHeaders = function StickyTableHeaders() {
 	    _classCallCheck(this, StickyTableHeaders);
 
-	    $('.sticky').stickyTableHeaders();
-	    console.log("Sticky Table Headers");
+	    $('.sticky').stickyTableHeaders({ fixedOffset: $('header') });
+
+	    //const stickyExists = document.querySelector('.sticky');
+	    //if (stickyExists !== null) {
+	    console.log("Resize Sticky Table Headers");
+	    $(window).on('orientationchange resize', function () {
+	        var footerWidth = $('footer').width();
+	        if (footerWidth > 450 && footerWidth <= 989) {
+	            $('.basic-table').css('width', +(footerWidth - 26));
+	        } else if (footerWidth >= 320 && footerWidth <= 449) {
+	            $('.basic-table').css('width', +(footerWidth - 32));
+	        }
+	    }).trigger('resize');
+	    //}
 	};
 
 	exports.default = StickyTableHeaders;

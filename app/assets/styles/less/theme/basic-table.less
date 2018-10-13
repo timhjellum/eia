@@ -1,101 +1,120 @@
 @media @mobile {
     .basic-table {
         margin-bottom: 3em;
-        //overflow: auto;
-        //overflow-x: scroll;
+        overflow-y: hidden;
+        overflow-x: auto;
 		.secondary {
 			margin-bottom: 0;
         }
-	}
-    .basic-table table, table.basic_table {
-        white-space: nowrap;
-        caption {
-            span {
-                &.units {
-                    float: none;
-                    display: inline;
-                    font-weight: normal;
-                    .italic;
-                    font-size: 0.813rem; // 13 pixels
-                }
+        table {
+            &.sticky {
+                overflow-y: hidden;
+                overflow-x: auto;
             }
-        }
-        thead {
-            tr {
-                th {
-                    text-align: right;
-                    padding: 6px 10px 5px 10px;
-                    background-color: white;
-                    &:first-child {
-                        text-align: left;
-                    }
-                    em {
-                        .bold;
+            thead {
+                tr {
+                    th {
+                        white-space: nowrap;
                     }
                 }
             }
-        }
-        tbody {
-            border-top: 3px solid @eia-blue;
-            tr {
-                td {
-                    text-align: right;
-                    border-bottom: 1px dashed #d8d8d8;
-                    white-space: normal !important;
-                    &:first-child {
-                        text-align: left;
-                    }
-                }
-                &:first-child {
+            tbody {
+                tr {
                     td {
-                        &.divider {
-                            border-top-color: #fff;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            caption {
+                span {
+                    &.units {
+                        float: none;
+                        display: inline;
+                        font-weight: normal;
+                        .italic;
+                        font-size: 0.813rem; // 13 pixels
+                    }
+                }
+            }
+            thead {
+                tr {
+                    th {
+                        .align-right;
+                        padding: 6px 10px 5px 10px;
+                        background-color: white; // required for sticky table header
+                        &:first-child {
+                            .align-left;
+                            padding: 6px 10px 5px 5px;
+                        }
+                        em {
+                            .bold;
                         }
                     }
                 }
-                &:last-child {
+            }
+            tbody {
+                border-top: 3px solid @eia-blue;
+                tr {
                     td {
-                        border-bottom: none;
+                        .align-right;
+                        border-bottom: 1px dashed #d8d8d8;
+                        white-space: normal !important;
+                        &:first-child {
+                            .align-left;
+                            padding: 6px 10px 5px 5px;
+                        }
+                    }
+                    &:first-child {
+                        td {
+                            &.divider {
+                                border-top-color: #fff;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    } 
+                }
+            }
+            tfoot {
+                tr {
+                    td {
+                        padding: 12px 10px 10px 10px;
+                        font-size: 0.688rem;
+                        text-align: right;
+                        a {
+                            font-size: 0.688rem; 
+                        }
+                        &:first-child {
+                            text-align: left;
+                        }
+                    }
+                    &:first-child {
+                        td {
+                            border-top: 2px solid @eia-blue;
+                            //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+                        }
+                    }
+                    &.total {                   
+                        td {
+                            border-top: 2px solid #d8d8d8;
+                            border-bottom: 1px solid @eia-blue;
+                            margin-bottom: -2px;
+                            &.divider {
+                                border-top-color: #fff;
+                            }
+                        }
+                    }
+                    &.foot-note {
+                        td {
+                            border-top: 1px solid @eia-blue;
+                            border-bottom: #fff;
+                        }
                     }
                 } 
             }
-        }
-        tfoot {
-            tr {
-                td {
-                    padding: 12px 10px 10px 10px;
-                    font-size: 0.688rem;
-                    text-align: right;
-                    a {
-                        font-size: 0.688rem; 
-                    }
-                    &:first-child {
-                        text-align: left;
-                    }
-                }
-                &:last-child {
-                    td {
-                        border-top: 2px solid @eia-blue;
-                        border-bottom: 1px solid @eia-blue;
-                    }
-                }
-                &.total {                   
-                    td {
-                        border-top: 2px solid #d8d8d8;
-                        border-bottom: 1px solid @eia-blue;
-                        margin-bottom: -2px;
-                        &.divider {
-                            border-top-color: #fff;
-                        }
-                    }
-                }
-                &.foot-note {
-                    td {
-                        border-top: 1px solid @eia-blue;
-                        border-bottom: #fff;
-                    }
-                }
-            } 
         }
     }
 }
@@ -131,6 +150,14 @@
 		.secondary {
 			margin-bottom: 0;
         }
+        /*
+        table {
+            &.sticky {
+                overflow: hidden;
+                overflow-x: scroll;
+            }
+        }
+        */
 	}
 }
 
