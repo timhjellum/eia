@@ -7366,7 +7366,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
         padding-left: 22px;
         padding-right: 22px;
     }
-    .l-four-even-col .l-narrow-col {
+    .l-four-col-even .l-narrow-col {
         padding: 0;
     }
 }
@@ -7376,17 +7376,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
         width: 50%;
         float: left;
     }
-    .l-four-even-col .l-narrow-col:nth-child(1) {
+    .l-four-col-even .l-narrow-col:nth-child(1) {
         padding-right: 22px;
     }
-    .l-four-even-col .l-narrow-col:nth-child(2) {
+    .l-four-col-even .l-narrow-col:nth-child(2) {
         padding: 0;
     }
-    .l-four-even-col .l-narrow-col:nth-child(3) {
+    .l-four-col-even .l-narrow-col:nth-child(3) {
         padding-right: 22px;
         clear: left;
     }
-    .l-four-even-col .l-narrow-col:nth-child(4) {
+    .l-four-col-even .l-narrow-col:nth-child(4) {
         padding: 0;
     }
     .l-col:nth-child(1) {
@@ -7433,7 +7433,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
         float: left;
     }
     /*
-	.l-left-column .l-narrow-col .l-narrow-col {
+	.l-two-col-leftumn .l-narrow-col .l-narrow-col {
 			-webkit-box-flex: 0;
 			-webkit-flex: 0 0 100%;
 			-ms-flex: 0 0 100%;
@@ -7463,7 +7463,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     // -----------------
     // | 1 | 2 | 3 | 4 |
     // -----------------
-    .l-four-even-col {
+    .l-four-col-even {
         .l-narrow-col {
             &:nth-child(1) {
                 padding-right: 22px;
@@ -7489,17 +7489,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 @media (min-width: 801px) {
-    .l-four-even-col .l-narrow-col:nth-child(1) {
+    .l-four-col-even .l-narrow-col:nth-child(1) {
         padding-right: 22px;
     }
-    .l-four-even-col .l-narrow-col:nth-child(2) {
+    .l-four-col-even .l-narrow-col:nth-child(2) {
         padding-right: 22px;
     }
-    .l-four-even-col .l-narrow-col:nth-child(3) {
+    .l-four-col-even .l-narrow-col:nth-child(3) {
         padding-right: 22px;
         clear: none;
     }
-    .l-four-even-col .l-narrow-col:nth-child(4) {
+    .l-four-col-even .l-narrow-col:nth-child(4) {
         padding: 0;
     }
     .l-col:nth-child(1) {
@@ -11587,7 +11587,7 @@ font-size: 1.500rem; // 24 pixels
     .homepage .l-row>div {
         padding-right: 22px;
     }
-    .homepage .l-row.l-four-even-col .l-narrow-col .primary ul {
+    .homepage .l-row.l-four-col-even .l-narrow-col .primary ul {
         margin-left: 22px;
     }
     .homepage .l-row.l-three-col .l-narrow-col .primary ul {

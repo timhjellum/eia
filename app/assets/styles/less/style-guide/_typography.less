@@ -1,26 +1,172 @@
 
 @media @mobile {
-
-._h2,
-._h4,
-._h5,
-._h6 {
-		display: none;
+    ._h1,
+    ._h2,
+    ._h3,
+    ._h4,
+    ._h5,
+    ._h6 {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+    h1 {
+        &._h1 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0 0 15px 0;
+            padding:    0;
+            font-size: 3.2em;
+            width: 100%;
+            clear: both;
+            color: @eia-green;
+            a {
+                color: @eia-green;
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 15%);
+                }            
+            }
+        }
+    }
+    h2 {
+        &._h2 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 30px 0 15px;
+            font-size: 2.6em;
+            width: 100%;
+            clear: both;
+            color: tint(@eia-green, 15%);
+            a {
+                color: tint(@eia-green, 15%);
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 30%);
+                }            
+            }
+        }
+    }
+    h3 {
+        &._h3 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 30px 0 15px;
+            font-size: 1.825rem;
+            line-height: 1.4;
+            margin: 20px 0 10px;
+            width: 100%;
+            clear: both;
+            color: tint(@eia-green, 30%);
+            a {
+                color: tint(@eia-green, 30%);
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 45%);
+                }            
+            }
+        }
+    }
+    h4 {
+        &._h4 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 30px 0 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 1.2em;
+            width: 100%;
+            clear: both;
+            color: tint(@eia-green, 45%);
+            a {
+                color: tint(@eia-green, 45%);
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 60%);
+                }            
+            }
+        }
+    }
+    h5 {
+        &._h5 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            font-weight: 400;
+            line-height: 1.4em;
+            margin-bottom: 15px;
+            width: 100%;
+            color: tint(@eia-green, 60%);
+            a {
+                color: tint(@eia-green, 60%);
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 80%);
+                }            
+            }
+        }
+    }
+    h6 {
+        &._h6 {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 100%;
+            clear: both;
+            color: tint(@eia-green, 80%);
+            a {
+                color: tint(@eia-green, 80%);
+                text-decoration: underline;
+                &:hover {
+                    color: tint(@eia-green, 90%);
+                }            
+            }
+        }
     }
     p {
         &._p {
-            display: none;
+            display: table;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Cardo', serif, sans-serif;
+            font-size: 1rem;
+            line-height: 1.4em;
+            width: 100%;
+            clear: both;
+            padding: 0 0 1em 0 !important;
+            ._caption {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 !important;
+                font-size: 11px !important;
+                color: #999 !important;
+            }
+        }
+        code {
+            background-color: silver;
+            color: red;
         }
     }
 }
 @media @laptop {
-._h1,
-._h2,
-._h3,
-._h4,
-._h5,
-._h6 {
-		display: table;
+    ._h1,
+    ._h2,
+    ._h3,
+    ._h4,
+    ._h5,
+    ._h6 {
+        text-align: left;
 	}
 	pre {
 		code {
@@ -79,163 +225,5 @@
         color: #333 !important;
         width: 100%;
         background-color: white !important;
-    }
-
-    h1 {
-        &._h1 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin: 0 0 15px 0;
-        padding:    0;
-        font-size: 3.2em;
-        width: 100%;
-        clear: both;
-        color: @eia-green;
-        a {
-            color: @eia-green;
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 15%);
-            }            
-        }
-    }
-}
-    h2 {
-        &._h2 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin: 30px 0 15px;
-        font-size: 2.6em;
-        width: 100%;
-        clear: both;
-        color: tint(@eia-green, 15%);
-        a {
-            color: tint(@eia-green, 15%);
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 30%);
-            }            
-        }
-    }
-}
-    h3 {
-        &._h3 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin: 30px 0 15px;
-        font-size: 1.825rem;
-        line-height: 1.4;
-        margin: 20px 0 10px;
-        width: 100%;
-        clear: both;
-        color: tint(@eia-green, 30%);
-        a {
-            color: tint(@eia-green, 30%);
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 45%);
-            }            
-        }
-    }
-}
-    h4 {
-        &._h4 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin: 30px 0 15px;
-        font-size: 1.5em;
-        font-weight: 600;
-        line-height: 1.2em;
-        width: 100%;
-        clear: both;
-        color: tint(@eia-green, 45%);
-        a {
-            color: tint(@eia-green, 45%);
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 60%);
-            }            
-        }
-    }
-}
-    h5 {
-        &._h5 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.25em;
-        font-weight: 400;
-        line-height: 1.4em;
-        margin-bottom: 15px;
-        width: 100%;
-        color: tint(@eia-green, 60%);
-        a {
-            color: tint(@eia-green, 60%);
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 80%);
-            }            
-        }
-    }
-}
-    h6 {
-        &._h6 {
-        -webkit-font-smoothing: antialiased;
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        font-weight: 600;
-        text-transform: uppercase;
-        width: 100%;
-        clear: both;
-        color: tint(@eia-green, 80%);
-        a {
-            color: tint(@eia-green, 80%);
-            text-decoration: underline;
-            &:hover {
-                color: tint(@eia-green, 90%);
-            }            
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-    p {
-        &._p {
-            display: table;
-            -webkit-font-smoothing: antialiased;
-            font-family: 'Cardo', serif, sans-serif;
-            font-size: 1rem;
-            line-height: 1.4em;
-            width: 100%;
-            clear: both;
-            padding: 0 0 1em 0 !important;
-            ._caption {
-                width: 100% !important;
-                text-align: center !important;
-                margin: 0 !important;
-                font-size: 11px !important;
-                color: #999 !important;
-            }
-        }
-        code {
-            background-color: silver;
-            color: red;
-        }
     }
 }
