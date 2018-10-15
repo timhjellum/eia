@@ -2,7 +2,7 @@
 	._example { display: none; }
 //	pre { display: none; }
 	pre {
-		display: block;
+		display: none;
 		border: none !important;
 		margin: 0 !important;
 		padding: 0 !important;
@@ -18,7 +18,10 @@
 			overflow: hidden !important;
 			//width: 992px;
 			width: 100%;
-		}		
+		}
+		&._toggle-code {
+			display: block;
+		}
 	}
 
 	._source-symbol {
