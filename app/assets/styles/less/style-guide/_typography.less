@@ -12,6 +12,25 @@
     }
     ._ul {
         margin: 1em 2em;
+        &._inline {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                &:after {
+                    content: ", ";
+//                    color: #333;
+                }
+                &:last-child:after {
+                    content: "";
+                }
+            }
+        }
     }
     h1 {
         &._h1 {

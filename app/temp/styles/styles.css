@@ -470,6 +470,24 @@ html * {
   ._ul {
     margin: 1em 2em;
   }
+  ._ul._inline {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ._ul._inline li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ._ul._inline li:after {
+    content: ", ";
+  }
+  ._ul._inline li:last-child:after {
+    content: "";
+  }
   h1._h1 {
     -webkit-font-smoothing: antialiased;
     font-family: 'Oswald', sans-serif;
@@ -898,6 +916,8 @@ html * {
     display: table;
     background: url(../../src/img/bg.png) center;
     padding: 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
     width: 992px;
   }
   .dilly-dilly ._module-wrapper ._module-container {
