@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,6 +44,37 @@
 
 <body>
     <div class="_header">
+        <a class="logo-white-background" href="https://www.eia.gov/css_rehab/archive/style-guide/app/">
+            <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+        </a>
+        <ul class="_nav">
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                <ul class="_base _nav-dropdown"></ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                <ul class="_modules _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                <ul class="_states _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                <ul class="_themes _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/components/">Components</a>
+                <ul class="_components _nav-dropdown">
+                </ul>
+            </li>
+        </ul>
+        <div class="_resolution _mobile">Mobile</div>
+        <div class="_resolution _mobile-landscape">Mobile Landscape</div>
+        <div class="_resolution _tablet">Tablet</div>
+        <div class="_resolution _tablet-landscape">Tablet Landscape</div>
+        <div class="_resolution _laptop">Laptop +</div>
     </div>
 
     <div class="_container clearfix">
@@ -53,18 +84,14 @@
                 <!-- start style guide -->
                 <!-- start style guide -->
                 <h1 class="_h1">Layout Rules</h1>
-                <!--
+
                 <h3 class="_h3">Introduction</h3>
 
-                <p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between
-                    layouts dictating the major and minor components of a page. The minor components—such as a callout, or
-                    login form, or a navigation item—sit within the scope of major components such as a header or footer.
-                    I refer to the minor components as Modules and will dive into those in the next section. The major components
-                    are referred to as Layout styles. </p>
+                <p class="_p">CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation
+                    item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles. </p>
 
-                <p class="_p">Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as
-                    header and footer are traditionally styled using ID selectors but take the time to think about the elements
-                    that are common across all components of the page and use class selectors where appropriate.</p>
+                <p class="_p">Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across
+                    all components of the page and use class selectors where appropriate.</p>
 
 
                 <div class="_example">
@@ -81,15 +108,11 @@
 </code></pre>
                 </div>
 
-                <p class="_p">Some sites may have a need for a more generalized layout framework (for example, <a href="http://960.gs/">960.gs</a>).
-                    These minor Layout styles will use class names instead of IDs so that the styles can be used multiple
-                    times on the page.</p>
+                <p class="_p">Some sites may have a need for a more generalized layout framework (for example, <a href="http://960.gs/">960.gs</a>). These minor Layout styles will use class names instead of IDs so that the styles can be used multiple times on the page.</p>
 
 
-                <p class="_p">Generally, a Layout style only has a single selector: a single ID or class name. However, there are times
-                    when a Layout needs to respond to different factors. For example, you may have different layouts based
-                    on user preference. This layout preference would still be declared as a Layout style and used in combination
-                    with other Layout styles. </p>
+                <p class="_p">Generally, a Layout style only has a single selector: a single ID or class name. However, there are times when a Layout needs to respond to different factors. For example, you may have different layouts based on user preference. This layout
+                    preference would still be declared as a Layout style and used in combination with other Layout styles. </p>
 
 
                 <div class="_example">
@@ -112,9 +135,7 @@
 </code></pre>
                 </div>
 
-                <p class="_p">In the Layout example, the .l-flipped class is applied on a higher level element such as the body element
-                    and allows the article and sidebar content to be swapped, moving the sidebar from the right to the left
-                    and vice versa for the article.</p>
+                <p class="_p">In the Layout example, the .l-flipped class is applied on a higher level element such as the body element and allows the article and sidebar content to be swapped, moving the sidebar from the right to the left and vice versa for the article.</p>
 
                 <div class="_example">
                     <p class="_p">Using two Layout styles together to switch from fluid to fixed layout.</p>
@@ -138,38 +159,29 @@
 </code></pre>
                 </div>
 
-                <p class="_p">In this last example, the <code>.l-fixed</code> class modifies the design to change the layout from fluid
-                    (using percentages) to fixed (using pixels).</p>
+                <p class="_p">In this last example, the <code>.l-fixed</code> class modifies the design to change the layout from fluid (using percentages) to fixed (using pixels).</p>
 
-                <p class="_p">One other thing to note in the Layout example is the naming convention that I have used. The declarations
-                    that use ID selectors are named accurately and with no particular namespacing. The class-based selectors,
-                    however, <em>do</em> use an <code>l-</code> prefix. This helps easily identify the purpose of these styles
-                    and separate them from Modules or States. Layout styles are the only primary category type to use ID
-                    selectors, if you choose to use them at all. If you wish to namespace your ID selectors, you can, but
-                    it is not as necessary to do so.</p>
+                <p class="_p">One other thing to note in the Layout example is the naming convention that I have used. The declarations that use ID selectors are named accurately and with no particular namespacing. The class-based selectors, however, <em>do</em> use
+                    an <code>l-</code> prefix. This helps easily identify the purpose of these styles and separate them from Modules or States. Layout styles are the only primary category type to use ID selectors, if you choose to use them at all. If
+                    you wish to namespace your ID selectors, you can, but it is not as necessary to do so.</p>
 
                 <h4>Using ID selectors</h4>
-                <p class="_p">To be clear, using ID attributes in your HTML can be a good thing and in some cases, absolutely necessary.
-                    For example, they provide efficient hooks for JavaScript. For CSS, however, ID selectors aren’t necessary
-                    as the performance difference between ID and class selectors is nearly non-existent and can make styling
-                    more complicated due to increasing specificity.</p>
+                <p class="_p">To be clear, using ID attributes in your HTML can be a good thing and in some cases, absolutely necessary. For example, they provide efficient hooks for JavaScript. For CSS, however, ID selectors aren’t necessary as the performance difference
+                    between ID and class selectors is nearly non-existent and can make styling more complicated due to increasing specificity.</p>
 
                 <h4>Layout Examples</h4>
-                <p class="_p">Theory is one thing but application is another. Let’s take a look at an actual web site and consider what
-                    is part of the layout and what is a module.</p>
+                <p class="_p">Theory is one thing but application is another. Let’s take a look at an actual web site and consider what is part of the layout and what is a module.</p>
                 <div class="_example">
                     <img src="/img/lyt-cnn0.png" alt="Using CNN.com as an example.">
                 </div>
 
-                <p class="_p">In taking a look at the CNN web site, there are a number of patterns that occur in plenty of web sites. For
-                    example, there is a header, a navigation bar, a content area and a footer (not seen in the screenshot).</p>
+                <p class="_p">In taking a look at the CNN web site, there are a number of patterns that occur in plenty of web sites. For example, there is a header, a navigation bar, a content area and a footer (not seen in the screenshot).</p>
 
                 <div class="_example">
                     <img src="/img/lyt-cnn1.png" alt="Breaking the page down into header, main navigation, and three main content areas.">
                 </div>
 
-                <p class="_p">At the time of this writing, the web site follows very closely to this break down and provides ID attributes
-                    for these major sections.</p>
+                <p class="_p">At the time of this writing, the web site follows very closely to this break down and provides ID attributes for these major sections.</p>
 
                 <div class="_example">
                     <p class="_p">Our CSS structure might look something like this:</p>
@@ -184,15 +196,13 @@
 </code></pre>
                 </div>
 
-                <p class="_p">That was straightforward and I’m sure you are thinking, “Really? You’re showing me how to do this?!” Let’s
-                    take a look at another part of the page.</p>
+                <p class="_p">That was straightforward and I’m sure you are thinking, “Really? You’re showing me how to do this?!” Let’s take a look at another part of the page.</p>
 
                 <div class="_example">
                     <img src="/img/lyt-cnn-ft0.png" alt="The featured section of the home page of CNN.com">
                 </div>
 
-                <p class="_p">Taking a look at the Featured section, we see a grid of news items. CNN’s current markup is a container <code>div</code>                    with a series of child <code>div</code>s. I would have likely gone with an unordered list, so let’s do
-                    that instead.</p>
+                <p class="_p">Taking a look at the Featured section, we see a grid of news items. CNN’s current markup is a container <code>div</code> with a series of child <code>div</code>s. I would have likely gone with an unordered list, so let’s do that instead.</p>
 
                 <div class="_example">
                     <p class="_p">Example HTML code for the Featured section layout</p>
@@ -206,7 +216,7 @@
 &lt;/div&gt;
 </code></pre>
                 </div>
-                <p class="_p">Without considering the SMACSS approach to this, we might be inclined to add an ID of <code>featured</code>                    to the surrounding DIV and then style up the contents from there.</p>
+                <p class="_p">Without considering the SMACSS approach to this, we might be inclined to add an ID of <code>featured</code> to the surrounding DIV and then style up the contents from there.</p>
 
                 <div class="_example">
                     <p class="_p">A possible approach to styling the list of featured items</p>
@@ -231,19 +241,14 @@ div#featured li {
                     <li>List items have a height of 100 pixels</li>
                 </ol>
 
-                <p class="_p">These may be reasonable assumptions to make. This is a prime example of where a small site can get away with
-                    this structure: it is unlikely to change and it is unlikely to become more complex than it already is.
-                    <em>Maybe.</em> Larger sites with a higher rate of change just have a higher chance of refactoring a
-                    component within the page and needing to readdress the styling that goes with it.</p>
+                <p class="_p">These may be reasonable assumptions to make. This is a prime example of where a small site can get away with this structure: it is unlikely to change and it is unlikely to become more complex than it already is.
+                    <em>Maybe.</em> Larger sites with a higher rate of change just have a higher chance of refactoring a component within the page and needing to readdress the styling that goes with it.</p>
 
-                <p class="_p">Looking back at the code example, there are definitely some optimizations that could be made. The ID selector
-                    didn’t need to be qualified with a tag selector, too, and since the list is a direct descendant of the
+                <p class="_p">Looking back at the code example, there are definitely some optimizations that could be made. The ID selector didn’t need to be qualified with a tag selector, too, and since the list is a direct descendant of the
                     <code>div</code>, the child selector (&gt;) could’ve been used.</p>
                 <p class="_p">Let’s take a look at how this could be readdressed to give us some more flexibility.</p>
 
-                <p class="_p">From a layout perspective, all we care about is how each item relates to each other. We don’t care, necessarily,
-                    about the design of the modules themselves nor do we want to have to worry about the context that this
-                    layout sits within.</p>
+                <p class="_p">From a layout perspective, all we care about is how each item relates to each other. We don’t care, necessarily, about the design of the modules themselves nor do we want to have to worry about the context that this layout sits within.</p>
 
                 <div class="_example">
                     <p class="_p">Grid Module applied to OL or UL.</p>
@@ -264,14 +269,12 @@ div#featured li {
 </code></pre>
                 </div>
 
-                <p class="_p">What problems were solved with this approach and what problems did we introduce? (Very rarely does <em>any</em>                    solution solve 100% of the problem.)</p>
+                <p class="_p">What problems were solved with this approach and what problems did we introduce? (Very rarely does <em>any</em> solution solve 100% of the problem.)</p>
                 <ol>
                     <li>The grid layout can now be applied to any container to create a float-style layout</li>
-                    <li>We have decreased the <em>depth of applicability</em> by 1 (See the chapter on Depth of Applicability
-                        for more on that)</li>
+                    <li>We have decreased the <em>depth of applicability</em> by 1 (See the chapter on Depth of Applicability for more on that)</li>
                     <li>We have reduced the specificity of the selectors</li>
-                    <li>The height requirement has been removed. A particular row will grow to the height of the tallest item
-                        in that row.</li>
+                    <li>The height requirement has been removed. A particular row will grow to the height of the tallest item in that row.</li>
                 </ol>
 
                 <p class="_p">On the flip-side, how did we make things worse?</p>
@@ -281,32 +284,23 @@ div#featured li {
                     <li>The CSS has increased in size and in complexity.</li>
                 </ol>
 
-                <p class="_p">The increase in size can’t be disputed but it is nominal. Now that we have this reusable module, we can apply
-                    it throughout the site without code duplication. The increase in complexity is also nominal. We did have
-                    to work around outdated browsers and thrown in hacks that may be frowned upon by some. However, the selectors
-                    are less complex which allow us to extend this layout while still minimizing the impact of specificity.</p>
+                <p class="_p">The increase in size can’t be disputed but it is nominal. Now that we have this reusable module, we can apply it throughout the site without code duplication. The increase in complexity is also nominal. We did have to work around outdated
+                    browsers and thrown in hacks that may be frowned upon by some. However, the selectors are less complex which allow us to extend this layout while still minimizing the impact of specificity.</p>
 
                 <p class="_p">Layout rules divide the page into sections. Layouts hold one or more modules together.</p>
 
-                <p class="_p">These layouts were created from examining hundreds of eia.gov pages. The new layouts simply take the existing
-                    fixed pixel width layouts and makes them percentages. So far we have identified x top-level layouts.
-                    These include:</p>
+                <p class="_p">These layouts were created from examining hundreds of eia.gov pages. The new layouts simply take the existing fixed pixel width layouts and makes them percentages. So far we have identified x top-level layouts. These include:</p>
 
 
-                <p class="_p">After inventory of the site it was determined that there was little or no difference in the main-col and
-                    side-col widths.
+                <p class="_p">After inventory of the site it was determined that there was little or no difference in the main-col and side-col widths.
                 </p>
-                <p class="_p">The problem is that these get really really close to an existing layout, but might be off by a few pixels.
-                    No biggie, we have a solution for this.</p>
-<p class="_p">The most common Desktop and Laptop resolutions display a centered and 980 pixel fixed-width layout. The margin
-                    is 15px and is simulated with the following color:
-                    <span class="outer-container-color"></span>. Some content, usually page-headers and sliders, use this
-                    layout. To denote this the Double Class Selector of
-                    <code>.row .header</code> is used. the Desktop and Laptop resolution width is [990 pixels - 4 pixels
-                    (inner and outer styles)] - 30 pixels = 956 pixels.</p>
+                <p class="_p">The problem is that these get really really close to an existing layout, but might be off by a few pixels. No biggie, we have a solution for this.</p>
+                <p class="_p">The most common Desktop and Laptop resolutions display a centered and 980 pixel fixed-width layout. The margin is 15px and is simulated with the following color:
+                    <span class="outer-container-color"></span>. Some content, usually page-headers and sliders, use this layout. To denote this the Double Class Selector of
+                    <code>.row .header</code> is used. the Desktop and Laptop resolution width is [990 pixels - 4 pixels (inner and outer styles)] - 30 pixels = 956 pixels.</p>
                 <p class="_p">All else has a 22 pixel simulated with the following color:
                     <span class="inner-container-color"></span>.</p>
-                -->
+
 
                 <!-- div class="step">1</div
 
@@ -3177,23 +3171,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semp
                         </div>
                     </li>
                 </ul>
-
-
-
-
-
-
-
-
-
-
                 <!-- end style guide -->
                 <!-- end style guide -->
                 <!-- end style guide -->
             </div>
         </div>
     </div>
-    <div class="_footer"></div>
+    <div class="_footer">
+        <ul class="_nav-footer">
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                <ul class="_base _nav-dropdown"></ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                <ul class="_modules _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                <ul class="_states _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                <ul class="_themes _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/components/">Components</a>
+                <ul class="_components _nav-dropdown">
+                </ul>
+            </li>
+        </ul>
+    </div>
 </body>
 <!-- build:js assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
@@ -3204,183 +3212,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semp
 <!-- build:js assets/scripts/highlight.min.js -->
 <script src="../src/js/highlight.js"></script>
 <!-- endbuild -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>
-    hljs.initHighlightingOnLoad();
 
-    var rowOneOneOne = $('ul.l-default-page .dally-row-one-one span._module-bg._row-one-one-one').width();
-    var rowOneTwoOne = $('ul.l-default-page .dally-row-one-two span._module-bg._row-one-two-one').width();
-    $('ul.l-default-page li._mod span._row-one-one-one').append(rowOneOneOne);
-    $('ul.l-default-page li._mod span._row-one-two-one').append(rowOneTwoOne);
-
-    var colOneOneOne = $('ul.l-default-page .dally-one-one span._module-bg._col-one-one-one').width();
-    $('ul.l-default-page li._mod span._col-one-one-one').append(colOneOneOne);
-
-    var colTwoOneOne = $('ul.l-default-page .dally-two-one span._module-bg._col-two-one-one').width();
-    var colTwoOneTwo = $('ul.l-default-page .dally-two-one span._module-bg._col-two-one-two').width();
-    var colTwoTwoOne = $('ul.l-default-page .dally-two-two span._module-bg._col-two-two-one').width();
-    var colTwoTwoTwo = $('ul.l-default-page .dally-two-two span._module-bg._col-two-two-two').width();
-    var colTwoThrOne = $('ul.l-default-page .dally-two-thr span._module-bg._col-two-thr-one').width();
-    var colTwoThrTwo = $('ul.l-default-page .dally-two-thr span._module-bg._col-two-thr-two').width();
-    var colTwoFouOne = $('ul.l-default-page .dally-two-fou span._module-bg._col-two-fou-one').width();
-    var colTwoFouTwo = $('ul.l-default-page .dally-two-fou span._module-bg._col-two-fou-two').width();
-    var colTwoFivOne = $('ul.l-default-page .dally-two-fiv span._module-bg._col-two-fiv-one').width();
-    var colTwoFivTwo = $('ul.l-default-page .dally-two-fiv span._module-bg._col-two-fiv-two').width();
-    var colTwoSixOne = $('ul.l-default-page .dally-two-six span._module-bg._col-two-six-one').width();
-    var colTwoSixTwo = $('ul.l-default-page .dally-two-six span._module-bg._col-two-six-two').width();
-    var colTwoSevOne = $('ul.l-default-page .dally-two-sev span._module-bg._col-two-sev-one').width();
-    var colTwoSevTwo = $('ul.l-default-page .dally-two-sev span._module-bg._col-two-sev-two').width();
-    $('ul.l-default-page li._mod span._col-two-one-one').append(colTwoOneOne);
-    $('ul.l-default-page li._mod span._col-two-one-two').append(colTwoOneTwo);
-    $('ul.l-default-page li._mod span._col-two-two-one').append(colTwoTwoOne);
-    $('ul.l-default-page li._mod span._col-two-two-two').append(colTwoTwoTwo);
-    $('ul.l-default-page li._mod span._col-two-thr-one').append(colTwoThrOne);
-    $('ul.l-default-page li._mod span._col-two-thr-two').append(colTwoThrTwo);
-    $('ul.l-default-page li._mod span._col-two-fou-one').append(colTwoFouOne);
-    $('ul.l-default-page li._mod span._col-two-fou-two').append(colTwoFouTwo);
-    $('ul.l-default-page li._mod span._col-two-fiv-one').append(colTwoFivOne);
-    $('ul.l-default-page li._mod span._col-two-fiv-two').append(colTwoFivTwo);
-    $('ul.l-default-page li._mod span._col-two-six-one').append(colTwoSixOne);
-    $('ul.l-default-page li._mod span._col-two-six-two').append(colTwoSixTwo);
-    $('ul.l-default-page li._mod span._col-two-sev-one').append(colTwoSevOne);
-    $('ul.l-default-page li._mod span._col-two-sev-two').append(colTwoSevTwo);
-
-    var colThrOneOne = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-one').width();
-    var colThrOneTwo = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-two').width();
-    var colThrOneThr = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-thr').width();
-    var colThrTwoOne = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-one').width();
-    var colThrTwoTwo = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-two').width();
-    var colThrTwoThr = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-thr').width();
-    var colThrThrOne = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-one').width();
-    var colThrThrTwo = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-two').width();
-    var colThrThrThr = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-thr').width();
-    $('ul.l-default-page li._mod span._col-thr-one-one').append(colThrOneOne);
-    $('ul.l-default-page li._mod span._col-thr-one-two').append(colThrOneTwo);
-    $('ul.l-default-page li._mod span._col-thr-one-thr').append(colThrOneThr);
-    $('ul.l-default-page li._mod span._col-thr-two-one').append(colThrTwoOne);
-    $('ul.l-default-page li._mod span._col-thr-two-two').append(colThrTwoTwo);
-    $('ul.l-default-page li._mod span._col-thr-two-thr').append(colThrTwoThr);
-    $('ul.l-default-page li._mod span._col-thr-thr-one').append(colThrThrOne);
-    $('ul.l-default-page li._mod span._col-thr-thr-two').append(colThrThrTwo);
-    $('ul.l-default-page li._mod span._col-thr-thr-thr').append(colThrThrThr);
-
-    var colFouOneOne = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-one').width();
-    var colFouOneTwo = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-two').width();
-    var colFouOneThr = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-thr').width();
-    var colFouOneFou = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-fou').width();
-    $('ul.l-default-page li._mod span._col-fou-one-one').append(colFouOneOne);
-    $('ul.l-default-page li._mod span._col-fou-one-two').append(colFouOneTwo);
-    $('ul.l-default-page li._mod span._col-fou-one-thr').append(colFouOneThr);
-    $('ul.l-default-page li._mod span._col-fou-one-fou').append(colFouOneFou);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var pageRowOneOneOne = $('ul.l-full-width-page .dally-row-one-one span._module-bg._row-one-one-one').width();
-    var pageRowOneTwoOne = $('ul.l-full-width-page .dally-row-one-two span._module-bg._row-one-two-one').width();
-    $('ul.l-full-width-page li._mod span._row-one-one-one').append(pageRowOneOneOne);
-    $('ul.l-full-width-page li._mod span._row-one-two-one').append(pageRowOneTwoOne);
-
-    var pageColOneOneOne = $('ul.l-full-width-page .dally-one-one span._module-bg._col-one-one-one').width();
-    $('ul.l-full-width-page li._mod span._col-one-one-one').append(pageColOneOneOne);
-
-    var pageColTwoOneOne = $('ul.l-full-width-page .dally-two-one span._module-bg._col-two-one-one').width();
-    var pageColTwoOneTwo = $('ul.l-full-width-page .dally-two-one span._module-bg._col-two-one-two').width();
-    var pageColTwoTwoOne = $('ul.l-full-width-page .dally-two-two span._module-bg._col-two-two-one').width();
-    var pageColTwoTwoTwo = $('ul.l-full-width-page .dally-two-two span._module-bg._col-two-two-two').width();
-    var pageColTwoThrOne = $('ul.l-full-width-page .dally-two-thr span._module-bg._col-two-thr-one').width();
-    var pageColTwoThrTwo = $('ul.l-full-width-page .dally-two-thr span._module-bg._col-two-thr-two').width();
-    var pageColTwoFouOne = $('ul.l-full-width-page .dally-two-fou span._module-bg._col-two-fou-one').width();
-    var pageColTwoFouTwo = $('ul.l-full-width-page .dally-two-fou span._module-bg._col-two-fou-two').width();
-    var pageColTwoFivOne = $('ul.l-full-width-page .dally-two-fiv span._module-bg._col-two-fiv-one').width();
-    var pageColTwoFivTwo = $('ul.l-full-width-page .dally-two-fiv span._module-bg._col-two-fiv-two').width();
-    var pageColTwoSixOne = $('ul.l-full-width-page .dally-two-six span._module-bg._col-two-six-one').width();
-    var pageColTwoSixTwo = $('ul.l-full-width-page .dally-two-six span._module-bg._col-two-six-two').width();
-    var pageColTwoSevOne = $('ul.l-full-width-page .dally-two-sev span._module-bg._col-two-sev-one').width();
-    var pageColTwoSevTwo = $('ul.l-full-width-page .dally-two-sev span._module-bg._col-two-sev-two').width();
-    $('ul.l-full-width-page li._mod span._col-two-one-one').append(pageColTwoOneOne);
-    $('ul.l-full-width-page li._mod span._col-two-one-two').append(pageColTwoOneTwo);
-    $('ul.l-full-width-page li._mod span._col-two-two-one').append(pageColTwoTwoOne);
-    $('ul.l-full-width-page li._mod span._col-two-two-two').append(pageColTwoTwoTwo);
-    $('ul.l-full-width-page li._mod span._col-two-thr-one').append(pageColTwoThrOne);
-    $('ul.l-full-width-page li._mod span._col-two-thr-two').append(pageColTwoThrTwo);
-    $('ul.l-full-width-page li._mod span._col-two-fou-one').append(pageColTwoFouOne);
-    $('ul.l-full-width-page li._mod span._col-two-fou-two').append(pageColTwoFouTwo);
-    $('ul.l-full-width-page li._mod span._col-two-fiv-one').append(pageColTwoFivOne);
-    $('ul.l-full-width-page li._mod span._col-two-fiv-two').append(pageColTwoFivTwo);
-    $('ul.l-full-width-page li._mod span._col-two-six-one').append(pageColTwoSixOne);
-    $('ul.l-full-width-page li._mod span._col-two-six-two').append(pageColTwoSixTwo);
-    $('ul.l-full-width-page li._mod span._col-two-sev-one').append(pageColTwoSevOne);
-    $('ul.l-full-width-page li._mod span._col-two-sev-two').append(pageColTwoSevTwo);
-
-    var pageColThrOneOne = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-one').width();
-    var pageColThrOneTwo = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-two').width();
-    var pageColThrOneThr = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-thr').width();
-    var pageColThrTwoOne = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-one').width();
-    var pageColThrTwoTwo = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-two').width();
-    var pageColThrTwoThr = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-thr').width();
-    var pageColThrThrOne = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-one').width();
-    var pageColThrThrTwo = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-two').width();
-    var pageColThrThrThr = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-thr').width();
-    $('ul.l-full-width-page li._mod span._col-thr-one-one').append(pageColThrOneOne);
-    $('ul.l-full-width-page li._mod span._col-thr-one-two').append(pageColThrOneTwo);
-    $('ul.l-full-width-page li._mod span._col-thr-one-thr').append(pageColThrOneThr);
-    $('ul.l-full-width-page li._mod span._col-thr-two-one').append(pageColThrTwoOne);
-    $('ul.l-full-width-page li._mod span._col-thr-two-two').append(pageColThrTwoTwo);
-    $('ul.l-full-width-page li._mod span._col-thr-two-thr').append(pageColThrTwoThr);
-    $('ul.l-full-width-page li._mod span._col-thr-thr-one').append(pageColThrThrOne);
-    $('ul.l-full-width-page li._mod span._col-thr-thr-two').append(pageColThrThrTwo);
-    $('ul.l-full-width-page li._mod span._col-thr-thr-thr').append(pageColThrThrThr);
-
-    var pageColFouOneOne = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-one').width();
-    var pageColFouOneTwo = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-two').width();
-    var pageColFouOneThr = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-thr').width();
-    var pageColFouOneFou = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-fou').width();
-    $('ul.l-full-width-page li._mod span._col-fou-one-one').append(pageColFouOneOne);
-    $('ul.l-full-width-page li._mod span._col-fou-one-two').append(pageColFouOneTwo);
-    $('ul.l-full-width-page li._mod span._col-fou-one-thr').append(pageColFouOneThr);
-    $('ul.l-full-width-page li._mod span._col-fou-one-fou').append(pageColFouOneFou);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $('p._caption').click(function() {
-        $(this).next('pre').toggleClass('_toggle-code');
-    });
-</script>
 
 </html>

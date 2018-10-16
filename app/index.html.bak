@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EIA Style Guide</title>
+
+    <!-- b&w favicon -->
+
+    <link href="../src/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../src/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../src/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../src/img/site.webmanifest" rel="manifest">
+    <link href="../src/img/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#292929">
+
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+
+    <!-- build:css assets/styles/styles.min.css -->
+    <link rel="stylesheet" href="temp/styles/styles.css" />
+    <!-- endbuild -->
+    <!-- build:css assets/styles/global.min.css -->
+    <link rel="stylesheet" href="temp/styles/global.css" />
+    <!-- endbuild -->
+    <!-- build:css assets/styles/tomorrow.min.css -->
+    <link rel="stylesheet" href="src/css/highlight/tomorrow.css" />
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="_header">
+<a class="logo-white-background" href="/">
+    <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+</a>
+<ul class="_nav">
+    <li class="_nav-primary-item"><a href="../base/">Base</a>
+        <ul class="_base _nav-dropdown"></ul>
+    </li>
+    <li class="_nav-primary-item"><a href="../layouts/">Layouts</a>
+    </li>
+    <li class="_nav-primary-item"><a href="../modules/">Modules</a>
+        <ul class="_modules _nav-dropdown">
+        </ul>
+    </li>
+    <li class="_nav-primary-item"><a href="../states/">States</a>
+        <ul class="_states _nav-dropdown">
+        </ul>
+    </li>
+    <li class="_nav-primary-item"><a href="../themes/">Themes</a>
+        <ul class="_themes _nav-dropdown">
+        </ul>
+    </li>
+    <li class="_nav-primary-item"><a href="../components/">Components</a>
+        <ul class="_components _nav-dropdown">
+        </ul>
+    </li>
+</ul>
+<div class="_resolution _mobile">Mobile</div>
+<div class="_resolution _mobile-landscape">Mobile Landscape</div>
+<div class="_resolution _tablet">Tablet</div>
+<div class="_resolution _tablet-landscape">Tablet Landscape</div>
+<div class="_resolution _laptop">Laptop +</div>
+</div>
+
+    <div class="_container clearfix">
+        <div class="_content">
+            <div class="_content-inner">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <h1 class="_h1">Categorizing CSS Rules</h1>
+                <!--
+					<p class="_p">Every project needs some organization. Throwing every new style you create onto the end of a single file would make finding things more difficult and would be very confusing for anybody else working on the project. Of course, you likely have some organization in place already. Hopefully, what you read among these pages will highlight what works with your existing process and, if I’m lucky, you will see new ways in which you can improve your process.</p>
+					<p class="_p">How do you decide whether to use ID selectors, or class selectors, or any number of selectors that are at your disposal? How do you decide which elements should get the styling magic you wish to bestow upon it? How do you make it easy to understand how your site and your styles are organized?</p>
+					<p class="_p">At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.</p>
+					-->
+                <p class="_p">This style-guide is divided into five sections:</p>
+                <ul class="dilly-dilly">
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./base/">Base</a></h3>
+                        <p class="_p"><strong>Base rules</strong> are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style
+                            says that wherever this element is on the page, it should look like <em>this</em>.</p>
+                        <ul class="_ul">
+                            <li>
+                                <a href="./base/typography.html"></a>Typography</li>
+                            <li><a href="./base/forms.html">Forms</a></li>
+                            <li><a href="./base/icons.html">Icons</a></li>
+                            <li><a href="./base/lists.html">Lists</a></li>
+                            <li><a href="./base/tables.html">Tables</a></li>
+                        </ul>
+
+                        <!--
+<div class="_example">
+<p class="exm-caption">Examples of Base Styles</p>
+<pre>
+<code class="css">html {
+line-height: 1.15; 
+-ms-text-size-adjust: 100%; 
+-webkit-text-size-adjust: 100%; 
+margin: 0;
+padding: 0;
+width: 100%;
+font-size: 16px; 
+box-sizing: border-box;
+}
+* {
+box-sizing: border-box;
+}
+.print {
+display: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}</code>
+</pre>
+</div>
+-->
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./layouts/">Layouts</a></h3>
+                        <p class="_p"><strong>Layout rules</strong> divide the page into sections and apply the correct spacing (borders, margins and padding) and responsiveness (mobile, mobile-landscape, tablet, tablet-landscape, laptop, desktop and desktop-large).
+                            Layouts also define how page elements and modules render based on the users' screen resolution.</p>
+                        <!--
+<div class="_module-wrapper">
+<div class="_module-container">
+<div class="l-row">
+<div class="l-full-width-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+</div>
+<div class="l-row">
+<div class="l-two-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+<div class="l-two-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+</div>
+</div>
+</div>
+</pre>
+</div>
+-->
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./modules/">Modules</a></h3>
+                        <p class="_p"><strong>Modules</strong> are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.</p>
+                        <p class="_p">Modules are going to be the bulk of any project. As a result, having every module start with a prefix like <code>.module-</code> would be needlessly verbose. Modules just use the name of the module itself. </p>
+
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./states/">States</a></h3>
+                        <p class="_p"><strong>State rules</strong> are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens
+                            that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.</p>
+                    </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./themes/">Themes</a></h3>
+                        <p class="_p"><strong>Theme rules</strong> are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.</p>
+
+                        <!--
+				<p class="_p">We often find ourselves mixing styles across each of these categories. If we are more aware of what we are trying to style, we can avoid the complexity that comes from intertwining these rules.</p>
+				<p class="_p">Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and <em>why</em> are we going to code them that way?</p>
+				<p class="_p">Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience. These are all wins. Exceptions to the rule can be advantageous but they should be justified.</p>
+				<h3 class="_h2">Naming Rules</h3>
+				<p class="_p"></p>By separating rules into the five categories, naming convention is beneficial for immediately understanding which category a particular style belongs to and its role within the overall scope of the page. On large projects, it is more likely to have styles broken up across multiple files. In these cases, naming convention also makes it easier to find which file a style belongs to.</p>
+				<p class="_p">For State rules, I like <code>is-</code> as in <code>is-hidden</code> or <code>is-collapsed</code>. This helps describe things in a very readable way.</p>
+				<p class="_p">Related elements within a module use the base name as a prefix. On this site, code examples use <code>.exm</code> and the captions use <code>.exm-caption</code>. I can instantly look at the caption class and understand that it is related to the code examples and where I can find the styles for that.</p>
+				<p class="_p">Modules that are a variation on another module should also use the base module name as a prefix. Sub-classing is covered in more detail in the Module Rules chapter.</p>
+				<p class="_p">This naming convention will be used throughout these pages. Like most other things that I have outlined here, don’t feel like you have to stick to these guidelines rigidly. Have a convention, document it, and stick
+				to it.</p>
+				-->
+                        <!-- end section -->
+                        <!-- end section -->
+                        <!-- end section -->
+                    </li>
+                </ul>
+                <!-- end style guide -->
+                <!-- end style guide -->
+                <!-- end style guide -->
+            </div>
+        </div>
+    </div>
+    <div class="_footer"></div>
+</body>
+<!-- build:js assets/scripts/script.min.js -->
+<script src="temp/scripts/scripts.js"></script>
+<!-- build:js assets/scripts/global.js.min.js -->
+<script src="temp/scripts/global.js"></script>
+<!-- endbuild -->
+<!-- build:js assets/scripts/highlight.min.js -->
+<script src="src/js/highlight.js"></script>
+<!-- endbuild -->
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+</html>

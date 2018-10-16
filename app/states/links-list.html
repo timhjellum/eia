@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#292929">
 
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-    
+
     <!-- build:css assets/styles/styles.min.css -->
     <link rel="stylesheet" href="../temp/styles/styles.css">
     <!-- endbuild -->
@@ -31,8 +31,40 @@
     <link rel="stylesheet" href="../src/css/highlight/tomorrow.css" />
     <!-- endbuild -->
 </head>
+
 <body>
     <div class="_header">
+        <a class="logo-white-background" href="https://www.eia.gov/css_rehab/archive/style-guide/app/">
+            <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+        </a>
+        <ul class="_nav">
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                <ul class="_base _nav-dropdown"></ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                <ul class="_modules _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                <ul class="_states _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                <ul class="_themes _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/components/">Components</a>
+                <ul class="_components _nav-dropdown">
+                </ul>
+            </li>
+        </ul>
+        <div class="_resolution _mobile">Mobile</div>
+        <div class="_resolution _mobile-landscape">Mobile Landscape</div>
+        <div class="_resolution _tablet">Tablet</div>
+        <div class="_resolution _tablet-landscape">Tablet Landscape</div>
+        <div class="_resolution _laptop">Laptop +</div>
     </div>
 
     <div class="_container clearfix">
@@ -42,11 +74,11 @@
                 <!-- start style guide -->
                 <!-- start style guide -->
 
-                                            <p class="_p">
-                                                Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
-                                            </p>
+                <p class="_p">
+                    Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
+                </p>
 
-                                                <pre>
+                <pre>
 <code class="php">&lt;?php
 /* edit the link URL and Title below */
 
@@ -86,11 +118,11 @@ $SixTitle = "Row Number Six";
 &lt;/div&gt;</code></pre>
 
 
-                                            <p class="_p">
-                                                The list item will be hidden:
-                                            </p>
+                <p class="_p">
+                    The list item will be hidden:
+                </p>
 
-                                                <pre>
+                <pre>
 <code class="html">&lt;div class="standard-container hide-mt"&gt;
     &lt;ul&gt;
         &lt;li class="head"&gt;&lt;h2&gt;Survey Forms, Changes &amp;amp; Announcements&lt;/h2&gt;&lt;/li&gt;
@@ -105,22 +137,20 @@ $SixTitle = "Row Number Six";
 
 
 
-                                            <p class="_p">
-                                                Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
-                                            </p>
+                <p class="_p">
+                    Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
+                </p>
 
-                                                <div class="secondary hide-mt" style="padding: 12px 20px;">
-                                                    <ul>
-                                                        <li class="head">
-                                                            <h2>Survey Forms, Changes &amp; Announcements</h2>
-                                                        </li>
-                                                        <li><a href="/" title="Row Number One">Row Number One</a></li>
-                                                        <li><a href="/" title="Row Number Two">Row Number Two</a></li>
-                                                        <li><a href="/" title="Row Number Three">Row Number Three</a></li>
-                                                        <li><a href="/" title="Row Number Six">Row Number Six</a></li>
-                                                    </ul>
-    
-
+                <div class="secondary hide-mt" style="padding: 12px 20px;">
+                    <ul>
+                        <li class="head">
+                            <h2>Survey Forms, Changes &amp; Announcements</h2>
+                        </li>
+                        <li><a href="/" title="Row Number One">Row Number One</a></li>
+                        <li><a href="/" title="Row Number Two">Row Number Two</a></li>
+                        <li><a href="/" title="Row Number Three">Row Number Three</a></li>
+                        <li><a href="/" title="Row Number Six">Row Number Six</a></li>
+                    </ul>
 
 
 
@@ -137,11 +167,13 @@ $SixTitle = "Row Number Six";
 
 
 
-                                            <p class="_p">
-                                                Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
-                                            </p>
 
-                                                <pre>
+
+                    <p class="_p">
+                        Some editible include files contain editible variables which write the values to corresponding HTML elements. Notice the fourth and fifth variables have been left blank.
+                    </p>
+
+                    <pre>
 <code class="php">/* edit the link URL, Label and Date below */
 /* leave fields blank if unused - a script will hide unused list items*/
 
@@ -189,11 +221,11 @@ $SixImageName = ""; // .png is not needed
 &lt;/div&gt;</code></pre>
 
 
-                                            <p class="_p">
-                                                The list item will be hidden:
-                                            </p>
+                    <p class="_p">
+                        The list item will be hidden:
+                    </p>
 
-                                                <pre>
+                    <pre>
 <code class="html">&lt;div class="l-row"&gt;
     &lt;div&gt;
         &lt;h1&gt;Interactive Visualizations, Data, &amp;amp; Multimedia&lt;/h1&gt;
@@ -222,49 +254,73 @@ $SixImageName = ""; // .png is not needed
 
 
 
-                                            <p class="_p">
-                                                Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
-                                            </p>
+                    <p class="_p">
+                        Here's how the link list would display on the page with the fourth and fifth list items hidden from the user.
+                    </p>
 
 
 
-                                                    <h2>Interactive Visualizations, Data, &amp; Multimedia</h1>
-                                                    <ul class="visualizations">
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/petroleum-map.png" alt="U.S. Petroleum Infrastructure Map"></span></a>
-                                                            <h3><a href="/some-link/" title="U.S. Petroleum Infrastructure Map">U.S. Petroleum Infrastructure Map</a></h3>
-                                                        </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/fossil-fuel-map.png" alt="U.S. Fossil Fuel Resource Map"></span></a>
-                                                            <h3><a href="/some-link/" title="U.S. Fossil Fuel Resource Map">U.S. Fossil Fuel Resource Map</a></h3>
-                                                        </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/crude-oil-import-data.png" alt="U.S. Crude Import Tracking Tool"></span></a>
-                                                            <h3><a href="/some-link/" title="U.S. Crude Import Tracking Tool">U.S. Crude Import Tracking Tool</a></h3>
-                                                        </li>
-                                                        <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/steo.png" alt="STEO Data Browser"></span></a>
-                                                            <h3><a href="/some-link/" title="STEO Data Browser">STEO Data Browser</a></h3>
-                                                        </li>
-                                                        <li class="l-col"><a href="/radio"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/radio.png" alt="Radio Spot"></span></a>
-                                                            <h3><a href="/radio" title="Radio Spot">Radio Spot</a></h3>
-                                                        </li>
-                                                        <li class="l-col hide"><a href=""><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/.png" alt=""></span></a>
-                                                            <h3>
-                                                                <a href="" title=""></a>
-                                                            </h3>
-                                                        </li>
-                                                    </ul>
-    
+                    <h2>Interactive Visualizations, Data, &amp; Multimedia</h1>
+                        <ul class="visualizations">
+                            <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/petroleum-map.png" alt="U.S. Petroleum Infrastructure Map"></span></a>
+                                <h3><a href="/some-link/" title="U.S. Petroleum Infrastructure Map">U.S. Petroleum Infrastructure Map</a></h3>
+                            </li>
+                            <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/fossil-fuel-map.png" alt="U.S. Fossil Fuel Resource Map"></span></a>
+                                <h3><a href="/some-link/" title="U.S. Fossil Fuel Resource Map">U.S. Fossil Fuel Resource Map</a></h3>
+                            </li>
+                            <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/crude-oil-import-data.png" alt="U.S. Crude Import Tracking Tool"></span></a>
+                                <h3><a href="/some-link/" title="U.S. Crude Import Tracking Tool">U.S. Crude Import Tracking Tool</a></h3>
+                            </li>
+                            <li class="l-col"><a href="/some-link/"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/steo.png" alt="STEO Data Browser"></span></a>
+                                <h3><a href="/some-link/" title="STEO Data Browser">STEO Data Browser</a></h3>
+                            </li>
+                            <li class="l-col"><a href="/radio"><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/radio.png" alt="Radio Spot"></span></a>
+                                <h3><a href="/radio" title="Radio Spot">Radio Spot</a></h3>
+                            </li>
+                            <li class="l-col hide"><a href=""><span class="circle"><img src="https://www.eia.gov/adaptive/global/images/issue-trends/interactive/.png" alt=""></span></a>
+                                <h3>
+                                    <a href="" title=""></a>
+                                </h3>
+                            </li>
+                        </ul>
+
 
                         <!-- end section -->
                         <!-- end section -->
                         <!-- end section -->
-                    </li>
-                </ul>
-                <!-- end style guide -->
-                <!-- end style guide -->
-                <!-- end style guide -->
+                        </li>
+                        </ul>
+                        <!-- end style guide -->
+                        <!-- end style guide -->
+                        <!-- end style guide -->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="_footer"></div>
+        <div class="_footer">
+            <ul class="_nav-footer">
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                    <ul class="_base _nav-dropdown"></ul>
+                </li>
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+                </li>
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                    <ul class="_modules _nav-dropdown">
+                    </ul>
+                </li>
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                    <ul class="_states _nav-dropdown">
+                    </ul>
+                </li>
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                    <ul class="_themes _nav-dropdown">
+                    </ul>
+                </li>
+                <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/components/">Components</a>
+                    <ul class="_components _nav-dropdown">
+                    </ul>
+                </li>
+            </ul>
+        </div>
 </body>
 <!-- build:js assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
@@ -277,4 +333,5 @@ $SixImageName = ""; // .png is not needed
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+
 </html>

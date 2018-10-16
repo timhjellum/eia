@@ -467,6 +467,9 @@ html * {
     width: 100%;
     text-align: center;
   }
+  ._ul {
+    margin: 1em 2em;
+  }
   h1._h1 {
     -webkit-font-smoothing: antialiased;
     font-family: 'Oswald', sans-serif;
@@ -476,7 +479,6 @@ html * {
     padding: 0;
     font-size: 3.2em;
     width: 100%;
-    clear: both;
     color: #5d9732;
   }
   h1._h1 a {
@@ -494,7 +496,6 @@ html * {
     margin: 30px 0 15px;
     font-size: 2.6em;
     width: 100%;
-    clear: both;
     color: #75a751;
   }
   h2._h2 a {
@@ -514,7 +515,6 @@ html * {
     line-height: 1.4;
     margin: 20px 0 10px;
     width: 100%;
-    clear: both;
     color: #8eb670;
   }
   h3._h3 a {
@@ -534,7 +534,6 @@ html * {
     font-weight: 600;
     line-height: 1.2em;
     width: 100%;
-    clear: both;
     color: #a6c68e;
   }
   h4._h4 a {
@@ -569,7 +568,6 @@ html * {
     font-weight: 600;
     text-transform: uppercase;
     width: 100%;
-    clear: both;
     color: #dfead6;
   }
   h6._h6 a {
@@ -586,7 +584,6 @@ html * {
     font-size: 1rem;
     line-height: 1.4em;
     width: 100%;
-    clear: both;
     padding: 0 0 1em 0 !important;
   }
   p._caption {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,7 +33,39 @@
 </head>
 
 <body>
-    <div class="_header"></div>
+    <div class="_header">
+        <a class="logo-white-background" href="https://www.eia.gov/css_rehab/archive/style-guide/app/">
+            <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
+        </a>
+        <ul class="_nav">
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                <ul class="_base _nav-dropdown"></ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                <ul class="_modules _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                <ul class="_states _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                <ul class="_themes _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-primary-item">
+                <ul class="_components _nav-dropdown">
+                </ul>
+            </li>
+        </ul>
+        <div class="_resolution _mobile">Mobile</div>
+        <div class="_resolution _mobile-landscape">Mobile Landscape</div>
+        <div class="_resolution _tablet">Tablet</div>
+        <div class="_resolution _tablet-landscape">Tablet Landscape</div>
+        <div class="_resolution _laptop">Laptop +</div>
+    </div>
 
     <div class="_container clearfix">
         <div class="_content">
@@ -54,148 +86,79 @@
                         <p class="_p"><strong>Base rules</strong> are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style
                             says that wherever this element is on the page, it should look like <em>this</em>.</p>
 
-                        <div class="_example">
-                            <p class="exm-caption">Examples of Base Styles</p>
-                            <pre>
+                        <ul class="_base _ul"></ul>
+
+
+                        <!--
+<div class="_example">
+<p class="exm-caption">Examples of Base Styles</p>
+<pre>
 <code class="css">html {
 line-height: 1.15; 
-	-ms-text-size-adjust: 100%; 
-	-webkit-text-size-adjust: 100%; 
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	font-size: 16px; 
-	box-sizing: border-box;
+-ms-text-size-adjust: 100%; 
+-webkit-text-size-adjust: 100%; 
+margin: 0;
+padding: 0;
+width: 100%;
+font-size: 16px; 
+box-sizing: border-box;
 }
 * {
-	box-sizing: border-box;
+box-sizing: border-box;
 }
 .print {
-	display: none;
+display: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }</code>
 </pre>
-                        </div>
+</div>
+-->
                     </li>
                     <li class="dilly-dilly">
                         <h3 class="_h3"><a href="./layouts/">Layouts</a></h3>
-                        <p class="_p"><strong>Layout rules</strong> divide the page into sections and apply the correct spacing (borders, margins and padding) and responsiveness (mobile, mobile-landscape, tablet, tablet-landscape, laptop, desktop and desktop-large). Layouts also define how page elements and modules render based on the users' screen resolution.</p>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- start -->
-                                <!-- start -->
-
-                                    <div class="l-row">
-                                        <div class="l-full-width-col">
-                                            <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="l-row">
-                                        <div class="l-two-col">
-                                                <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
-                                        </div>
-                                        <div class="l-two-col">
-                                                <div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
-                                        </div>
-                                    </div>
-
-                                <!-- end -->
-                                <!-- end -->
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li><div class="_page"></div> page margin</li>
-                            <li><div class="_row"></div> row margin</li>
-                            <li><div class="_col"></div> column margin</li>
-                            <li><div class="_module"></div> module margin</li>
-                        </ul>
-                        <!-- p class="_p">Layout class names always have a <code>l-</code>.</p -->
-
-
-
-                        <div class="_example">
-                            <p class="exm-caption">Examples of Layout Styles</p>
-                            <pre>
-<code class="css">.l-col {
-	width: 16.666667%;
-}
-.l-narrow-col {
-	width: 25%;
-}
-.l-one-third-col {
-	width: 33.333333%;
-}
-.l-split-narrow-col {
-	width: 41.666%;
-}
-.l-middle-col {
-	width: 50%;
-}
-.l-split-wide-col {
-}
-.l-two-third-col {
-	width: 66.666667%;
-}
-.l-main-col {
-	width: 75%;
-}
-.l-full-width-col {
-	padding: 0;
-	width: 100%;
-}
-.l-row {
-	padding-left: 22px;
-	padding-right: 0;
-}</code>
+                        <p class="_p"><strong>Layout rules</strong> divide the page into sections and apply the correct spacing (borders, margins and padding) and responsiveness (mobile, mobile-landscape, tablet, tablet-landscape, laptop, desktop and desktop-large).
+                            Layouts also define how page elements and modules render based on the users' screen resolution.</p>
+                        <!--
+<div class="_module-wrapper">
+<div class="_module-container">
+<div class="l-row">
+<div class="l-full-width-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+</div>
+<div class="l-row">
+<div class="l-two-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+<div class="l-two-col">
+<div class="primary"><span class="_module-bg">Sed id imperdiet quam, tempor euismod lorem. Mauris bibendum, diam sed venenatis sodales, ligula dolor iaculis diam, vitae viverra diam odio at risus. Vestibulum imperdiet pharetra elit, placerat pharetra justo cursus ut. Suspendisse eget suscipit purus. Donec felis leo, venenatis non nunc sit amet, rutrum ullamcorper dui. Integer vehicula eleifend aliquet. Vestibulum congue congue ipsum ut suscipit.</span></div>
+</div>
+</div>
+</div>
+</div>
 </pre>
-                        </div>
+</div>
+-->
                     </li>
                     <li class="dilly-dilly">
                         <h3 class="_h3"><a href="./modules/">Modules</a></h3>
                         <p class="_p"><strong>Modules</strong> are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.</p>
                         <p class="_p">Modules are going to be the bulk of any project. As a result, having every module start with a prefix like <code>.module-</code> would be needlessly verbose. Modules just use the name of the module itself. </p>
-                        <div class="_example">
-                            <p class="exm-caption">Examples of Layout Styles</p>
-                            <pre>
-<code class="css">.basic-table {
-	/* adds global styles for basic-table content */
-}
-.content-container {
-	/* adds global styles for content containers */
-}
-.accordion {
-	/* adds an accordion to the page (see states for options) */
-	/* scroll-to anchors capable */
-}
-.fancybox-type-iframe { 
-	/* adds a responsive modal for iframe content */
-	/* scroll-to anchors capable */
-}
-.scroll-to-inline { 
-	/* adds a responsive modal for inline content */
-	/* scroll-to anchors capable */
-}
-.tabs {
-	/* adds responsive tabs */
-	/* scroll-to anchors capable */
-}
-</code>
-</pre>
-                        </div>
+                        <ul class="_modules _ul"></ul>
                     </li>
                     <li class="dilly-dilly">
                         <h3 class="_h3"><a href="./states/">States</a></h3>
                         <p class="_p"><strong>State rules</strong> are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens
                             that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.</p>
+                        <ul class="_states _ul"></ul>
                     </li>
                     <li class="dilly-dilly">
                         <h3 class="_h3"><a href="./themes/">Themes</a></h3>
                         <p class="_p"><strong>Theme rules</strong> are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.</p>
-
+                        <ul class="_themes _ul"></ul>
                         <!--
 				<p class="_p">We often find ourselves mixing styles across each of these categories. If we are more aware of what we are trying to style, we can avoid the complexity that comes from intertwining these rules.</p>
 				<p class="_p">Each category has certain guidelines that apply to it. This somewhat succinct separation allows us to ask ourselves questions during the development process. How are we going to code things and <em>why</em> are we going to code them that way?</p>
@@ -208,10 +171,13 @@ table {
 				<p class="_p">This naming convention will be used throughout these pages. Like most other things that I have outlined here, don’t feel like you have to stick to these guidelines rigidly. Have a convention, document it, and stick
 				to it.</p>
 				-->
-                        <!-- end section -->
-                        <!-- end section -->
-                        <!-- end section -->
                     </li>
+                    <li class="dilly-dilly">
+                        <h3 class="_h3"><a href="./themes/">Components</a></h3>
+                        <ul class="_components _ul"></ul>
+                    </li>
+
+
                 </ul>
                 <!-- end style guide -->
                 <!-- end style guide -->
@@ -219,7 +185,31 @@ table {
             </div>
         </div>
     </div>
-    <div class="_footer"></div>
+    <div class="_footer">
+        <ul class="_nav-footer">
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/base/">Base</a>
+                <ul class="_base _nav-dropdown"></ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/layouts/">Layouts</a>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/modules/">Modules</a>
+                <ul class="_modules _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/states/">States</a>
+                <ul class="_states _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/themes/">Themes</a>
+                <ul class="_themes _nav-dropdown">
+                </ul>
+            </li>
+            <li class="_nav-footer-item"><a href="https://www.eia.gov/css_rehab/archive/style-guide/app/components/">Components</a>
+                <ul class="_components _nav-dropdown">
+                </ul>
+            </li>
+        </ul>
+    </div>
 </body>
 <!-- build:js assets/scripts/script.min.js -->
 <script src="temp/scripts/scripts.js"></script>
