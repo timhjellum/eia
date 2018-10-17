@@ -1,13 +1,19 @@
 @media @mobile {
-	._example { display: none; }
-//	pre { display: none; }
+	._example { display: none;
+		&._toggle {
+			pre {
+				display: none;
+				&._toggle-code {
+					display: block;
+				}
+			}
+		}
+	}
 	pre {
-		display: none;
 		border: none !important;
 		margin: 0 !important;
 		padding: 0 !important;
 		background: none !important;
-		//width: 990px;
 		clear: both;
 		overflow: hidden !important;
 		word-wrap: normal;
@@ -19,15 +25,10 @@
 			//width: 992px;
 			width: 100%;
 		}
-		&._toggle-code {
-			display: block;
-		}
 	}
-
 	._source-symbol {
 		width: 250px;
 		padding: .5em 10px;
-//		height: 200px;
 		background-color: white;
 		float: left;
 		margin: 0 .5em .5em 0;
@@ -52,9 +53,6 @@
 			}
 		}
 	}
-
-
-
 }
 @media @laptop {
 	._example {

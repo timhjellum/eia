@@ -11,7 +11,8 @@
         text-align: center;
     }
     ._ul {
-        margin: 1em 2em;
+        margin: 0 2em 2em 2em;
+        /*
         &._inline {
             display: inline;
             list-style: none;
@@ -31,6 +32,7 @@
                 }
             }
         }
+        */
     }
     h1 {
         &._h1 {
@@ -188,8 +190,14 @@
         }
         
         code {
-            background-color: silver;
-            color: red;
+            display:  inline;
+            background-color: #eee;
+            color: #333333;
+            padding: 0 5px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #666;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     }
 }

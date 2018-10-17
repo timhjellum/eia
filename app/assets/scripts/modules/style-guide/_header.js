@@ -189,6 +189,157 @@ class Header {
             $(".eia-light-white-75").html($(".eia-light-white-75").css("backgroundColor"));
             $(".eia-light-white").html($(".eia-light-white").css("backgroundColor"));
         });
+
+
+        var rowOneOneOne = $('ul.l-default-page .dally-row-one-one span._module-bg._row-one-one-one').width();
+        var rowOneTwoOne = $('ul.l-default-page .dally-row-one-two span._module-bg._row-one-two-one').width();
+        $('ul.l-default-page li._mod span._row-one-one-one').append(rowOneOneOne);
+        $('ul.l-default-page li._mod span._row-one-two-one').append(rowOneTwoOne);
+
+        var colOneOneOne = $('ul.l-default-page .dally-one-one span._module-bg._col-one-one-one').width();
+        $('ul.l-default-page li._mod span._col-one-one-one').append(colOneOneOne);
+
+        var colTwoOneOne = $('ul.l-default-page .dally-two-one span._module-bg._col-two-one-one').width();
+        var colTwoOneTwo = $('ul.l-default-page .dally-two-one span._module-bg._col-two-one-two').width();
+        var colTwoTwoOne = $('ul.l-default-page .dally-two-two span._module-bg._col-two-two-one').width();
+        var colTwoTwoTwo = $('ul.l-default-page .dally-two-two span._module-bg._col-two-two-two').width();
+        var colTwoThrOne = $('ul.l-default-page .dally-two-thr span._module-bg._col-two-thr-one').width();
+        var colTwoThrTwo = $('ul.l-default-page .dally-two-thr span._module-bg._col-two-thr-two').width();
+        var colTwoFouOne = $('ul.l-default-page .dally-two-fou span._module-bg._col-two-fou-one').width();
+        var colTwoFouTwo = $('ul.l-default-page .dally-two-fou span._module-bg._col-two-fou-two').width();
+        var colTwoFivOne = $('ul.l-default-page .dally-two-fiv span._module-bg._col-two-fiv-one').width();
+        var colTwoFivTwo = $('ul.l-default-page .dally-two-fiv span._module-bg._col-two-fiv-two').width();
+        var colTwoSixOne = $('ul.l-default-page .dally-two-six span._module-bg._col-two-six-one').width();
+        var colTwoSixTwo = $('ul.l-default-page .dally-two-six span._module-bg._col-two-six-two').width();
+        var colTwoSevOne = $('ul.l-default-page .dally-two-sev span._module-bg._col-two-sev-one').width();
+        var colTwoSevTwo = $('ul.l-default-page .dally-two-sev span._module-bg._col-two-sev-two').width();
+        $('ul.l-default-page li._mod span._col-two-one-one').append(colTwoOneOne);
+        $('ul.l-default-page li._mod span._col-two-one-two').append(colTwoOneTwo);
+        $('ul.l-default-page li._mod span._col-two-two-one').append(colTwoTwoOne);
+        $('ul.l-default-page li._mod span._col-two-two-two').append(colTwoTwoTwo);
+        $('ul.l-default-page li._mod span._col-two-thr-one').append(colTwoThrOne);
+        $('ul.l-default-page li._mod span._col-two-thr-two').append(colTwoThrTwo);
+        $('ul.l-default-page li._mod span._col-two-fou-one').append(colTwoFouOne);
+        $('ul.l-default-page li._mod span._col-two-fou-two').append(colTwoFouTwo);
+        $('ul.l-default-page li._mod span._col-two-fiv-one').append(colTwoFivOne);
+        $('ul.l-default-page li._mod span._col-two-fiv-two').append(colTwoFivTwo);
+        $('ul.l-default-page li._mod span._col-two-six-one').append(colTwoSixOne);
+        $('ul.l-default-page li._mod span._col-two-six-two').append(colTwoSixTwo);
+        $('ul.l-default-page li._mod span._col-two-sev-one').append(colTwoSevOne);
+        $('ul.l-default-page li._mod span._col-two-sev-two').append(colTwoSevTwo);
+
+        var colThrOneOne = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-one').width();
+        var colThrOneTwo = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-two').width();
+        var colThrOneThr = $('ul.l-default-page .dally-thr-one span._module-bg._col-thr-one-thr').width();
+        var colThrTwoOne = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-one').width();
+        var colThrTwoTwo = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-two').width();
+        var colThrTwoThr = $('ul.l-default-page .dally-thr-two span._module-bg._col-thr-two-thr').width();
+        var colThrThrOne = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-one').width();
+        var colThrThrTwo = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-two').width();
+        var colThrThrThr = $('ul.l-default-page .dally-thr-thr span._module-bg._col-thr-thr-thr').width();
+        $('ul.l-default-page li._mod span._col-thr-one-one').append(colThrOneOne);
+        $('ul.l-default-page li._mod span._col-thr-one-two').append(colThrOneTwo);
+        $('ul.l-default-page li._mod span._col-thr-one-thr').append(colThrOneThr);
+        $('ul.l-default-page li._mod span._col-thr-two-one').append(colThrTwoOne);
+        $('ul.l-default-page li._mod span._col-thr-two-two').append(colThrTwoTwo);
+        $('ul.l-default-page li._mod span._col-thr-two-thr').append(colThrTwoThr);
+        $('ul.l-default-page li._mod span._col-thr-thr-one').append(colThrThrOne);
+        $('ul.l-default-page li._mod span._col-thr-thr-two').append(colThrThrTwo);
+        $('ul.l-default-page li._mod span._col-thr-thr-thr').append(colThrThrThr);
+
+        var colFouOneOne = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-one').width();
+        var colFouOneTwo = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-two').width();
+        var colFouOneThr = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-thr').width();
+        var colFouOneFou = $('ul.l-default-page .dally-fou-one span._module-bg._col-fou-one-fou').width();
+        $('ul.l-default-page li._mod span._col-fou-one-one').append(colFouOneOne);
+        $('ul.l-default-page li._mod span._col-fou-one-two').append(colFouOneTwo);
+        $('ul.l-default-page li._mod span._col-fou-one-thr').append(colFouOneThr);
+        $('ul.l-default-page li._mod span._col-fou-one-fou').append(colFouOneFou);
+
+        var pageColSixOneOne = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-one').width();
+        var pageColSixOneTwo = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-two').width();
+        var pageColSixOneThr = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-thr').width();
+        var pageColSixOneFou = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-fou').width();
+        var pageColSixOneFiv = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-fiv').width();
+        var pageColSixOneSix = $('ul.l-default-page .dally-six-one span._module-bg._col-six-one-six').width();
+        $('ul.l-default-page li._mod span._col-six-one-one').append(pageColSixOneOne);
+        $('ul.l-default-page li._mod span._col-six-one-two').append(pageColSixOneTwo);
+        $('ul.l-default-page li._mod span._col-six-one-thr').append(pageColSixOneThr);
+        $('ul.l-default-page li._mod span._col-six-one-fou').append(pageColSixOneFou);
+        $('ul.l-default-page li._mod span._col-six-one-fiv').append(pageColSixOneFiv);
+        $('ul.l-default-page li._mod span._col-six-one-six').append(pageColSixOneSix);
+
+
+
+        var pageRowOneOneOne = $('ul.l-full-width-page .dally-row-one-one span._module-bg._row-one-one-one').width();
+        var pageRowOneTwoOne = $('ul.l-full-width-page .dally-row-one-two span._module-bg._row-one-two-one').width();
+        $('ul.l-full-width-page li._mod span._row-one-one-one').append(pageRowOneOneOne);
+        $('ul.l-full-width-page li._mod span._row-one-two-one').append(pageRowOneTwoOne);
+
+        var pageColOneOneOne = $('ul.l-full-width-page .dally-one-one span._module-bg._col-one-one-one').width();
+        $('ul.l-full-width-page li._mod span._col-one-one-one').append(pageColOneOneOne);
+
+        var pageColTwoOneOne = $('ul.l-full-width-page .dally-two-one span._module-bg._col-two-one-one').width();
+        var pageColTwoOneTwo = $('ul.l-full-width-page .dally-two-one span._module-bg._col-two-one-two').width();
+        var pageColTwoTwoOne = $('ul.l-full-width-page .dally-two-two span._module-bg._col-two-two-one').width();
+        var pageColTwoTwoTwo = $('ul.l-full-width-page .dally-two-two span._module-bg._col-two-two-two').width();
+        var pageColTwoThrOne = $('ul.l-full-width-page .dally-two-thr span._module-bg._col-two-thr-one').width();
+        var pageColTwoThrTwo = $('ul.l-full-width-page .dally-two-thr span._module-bg._col-two-thr-two').width();
+        var pageColTwoFouOne = $('ul.l-full-width-page .dally-two-fou span._module-bg._col-two-fou-one').width();
+        var pageColTwoFouTwo = $('ul.l-full-width-page .dally-two-fou span._module-bg._col-two-fou-two').width();
+        var pageColTwoFivOne = $('ul.l-full-width-page .dally-two-fiv span._module-bg._col-two-fiv-one').width();
+        var pageColTwoFivTwo = $('ul.l-full-width-page .dally-two-fiv span._module-bg._col-two-fiv-two').width();
+        var pageColTwoSixOne = $('ul.l-full-width-page .dally-two-six span._module-bg._col-two-six-one').width();
+        var pageColTwoSixTwo = $('ul.l-full-width-page .dally-two-six span._module-bg._col-two-six-two').width();
+        var pageColTwoSevOne = $('ul.l-full-width-page .dally-two-sev span._module-bg._col-two-sev-one').width();
+        var pageColTwoSevTwo = $('ul.l-full-width-page .dally-two-sev span._module-bg._col-two-sev-two').width();
+        $('ul.l-full-width-page li._mod span._col-two-one-one').append(pageColTwoOneOne);
+        $('ul.l-full-width-page li._mod span._col-two-one-two').append(pageColTwoOneTwo);
+        $('ul.l-full-width-page li._mod span._col-two-two-one').append(pageColTwoTwoOne);
+        $('ul.l-full-width-page li._mod span._col-two-two-two').append(pageColTwoTwoTwo);
+        $('ul.l-full-width-page li._mod span._col-two-thr-one').append(pageColTwoThrOne);
+        $('ul.l-full-width-page li._mod span._col-two-thr-two').append(pageColTwoThrTwo);
+        $('ul.l-full-width-page li._mod span._col-two-fou-one').append(pageColTwoFouOne);
+        $('ul.l-full-width-page li._mod span._col-two-fou-two').append(pageColTwoFouTwo);
+        $('ul.l-full-width-page li._mod span._col-two-fiv-one').append(pageColTwoFivOne);
+        $('ul.l-full-width-page li._mod span._col-two-fiv-two').append(pageColTwoFivTwo);
+        $('ul.l-full-width-page li._mod span._col-two-six-one').append(pageColTwoSixOne);
+        $('ul.l-full-width-page li._mod span._col-two-six-two').append(pageColTwoSixTwo);
+        $('ul.l-full-width-page li._mod span._col-two-sev-one').append(pageColTwoSevOne);
+        $('ul.l-full-width-page li._mod span._col-two-sev-two').append(pageColTwoSevTwo);
+
+        var pageColThrOneOne = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-one').width();
+        var pageColThrOneTwo = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-two').width();
+        var pageColThrOneThr = $('ul.l-full-width-page .dally-thr-one span._module-bg._col-thr-one-thr').width();
+        var pageColThrTwoOne = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-one').width();
+        var pageColThrTwoTwo = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-two').width();
+        var pageColThrTwoThr = $('ul.l-full-width-page .dally-thr-two span._module-bg._col-thr-two-thr').width();
+        var pageColThrThrOne = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-one').width();
+        var pageColThrThrTwo = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-two').width();
+        var pageColThrThrThr = $('ul.l-full-width-page .dally-thr-thr span._module-bg._col-thr-thr-thr').width();
+        $('ul.l-full-width-page li._mod span._col-thr-one-one').append(pageColThrOneOne);
+        $('ul.l-full-width-page li._mod span._col-thr-one-two').append(pageColThrOneTwo);
+        $('ul.l-full-width-page li._mod span._col-thr-one-thr').append(pageColThrOneThr);
+        $('ul.l-full-width-page li._mod span._col-thr-two-one').append(pageColThrTwoOne);
+        $('ul.l-full-width-page li._mod span._col-thr-two-two').append(pageColThrTwoTwo);
+        $('ul.l-full-width-page li._mod span._col-thr-two-thr').append(pageColThrTwoThr);
+        $('ul.l-full-width-page li._mod span._col-thr-thr-one').append(pageColThrThrOne);
+        $('ul.l-full-width-page li._mod span._col-thr-thr-two').append(pageColThrThrTwo);
+        $('ul.l-full-width-page li._mod span._col-thr-thr-thr').append(pageColThrThrThr);
+
+        var pageColFouOneOne = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-one').width();
+        var pageColFouOneTwo = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-two').width();
+        var pageColFouOneThr = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-thr').width();
+        var pageColFouOneFou = $('ul.l-full-width-page .dally-fou-one span._module-bg._col-fou-one-fou').width();
+        $('ul.l-full-width-page li._mod span._col-fou-one-one').append(pageColFouOneOne);
+        $('ul.l-full-width-page li._mod span._col-fou-one-two').append(pageColFouOneTwo);
+        $('ul.l-full-width-page li._mod span._col-fou-one-thr').append(pageColFouOneThr);
+        $('ul.l-full-width-page li._mod span._col-fou-one-fou').append(pageColFouOneFou);
+
+
+        $('p._caption').click(function() {
+            $(this).next('pre').toggleClass('_toggle-code');
+        });
     }
 }
 export default Header;
