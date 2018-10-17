@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 //const distScripts = '../global/scripts/';//  /global and /style-guide are at the same level so
 //const distStyles = '../global/styles/';//	/global and /style-guide are at the same level so
-const tempStyles = './app/temp/scripts/';
+const tempFolder = './app/temp/scripts/';
 //const distStyles = './app/temp/styles/';
 
 
@@ -15,5 +15,5 @@ gulp.task('modernizr', function() {
                 "setClasses"
             ]
         }))
-        .pipe(gulp.dest('tempStyles'))
+        .pipe(gulp.dest('tempFolder'))
 });

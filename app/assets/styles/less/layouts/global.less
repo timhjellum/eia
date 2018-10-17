@@ -89,6 +89,21 @@
 		.left;
 		width: 100%;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	.l-row {
 		//		overflow: hidden;; <--- cannot be hidden
 		//		display: table; <--- cannot be a table
@@ -122,6 +137,16 @@
 				border-top: none;
 			}
 		}
+
+
+
+
+
+
+
+
+
+
 	}
 	/*
 	.l-full-width-page {
@@ -157,48 +182,53 @@
 
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
 	.l-body-wrapper {
-//		min-height: 100%;
 		margin-bottom: -660px;
 	}
 	.l-col {
 		width: 33.333%;
 	}
-//	.l-one-third-col,
-//	.l-split-narrow-col,
-//	.l-split-wide-col,
-	.l-two-col {
-		width: 50%;
-/*
-.left;
-&:first-child {
-	padding: 0 22px 0 0;
-}		
-&:last-child {
-	padding: 0 0 0 22px;
-}
-*/
-	}
-												/*
-												.l-two-third-col {
-													width: 66.666667%;
-													&:first-child {
-														padding: 0 22px 0 0;
-													}		
-													&:last-child {
-														padding: 0 0 0 22px;
-													}
-												}
-												.l-one-third-col {
-													width: 33.333333%;
-													&:first-child {
-														padding: 0 22px 0 0;
-													}		
-													&:last-child {
-														padding: 0 0 0 22px;
-													}
-												}
-												*/
 	.l-row {
+
+		&.l-six-col-even {
+			.l-col { 
+				width: 30%;
+			}
+		}
+		//	.l-one-third-col,
+		//	.l-split-narrow-col,
+		//	.l-split-wide-col,
+		.l-two-col {
+			width: 50%;
+			/*
+			.left;
+			&:first-child {
+				padding: 0 22px 0 0;
+			}		
+			&:last-child {
+				padding: 0 0 0 22px;
+			}
+			*/
+		}
+		/*
+		.l-two-third-col {
+			width: 66.666667%;
+			&:first-child {
+				padding: 0 22px 0 0;
+			}		
+			&:last-child {
+				padding: 0 0 0 22px;
+			}
+		}
+		.l-one-third-col {
+			width: 33.333333%;
+			&:first-child {
+				padding: 0 22px 0 0;
+			}		
+			&:last-child {
+				padding: 0 0 0 22px;
+			}
+		}
+		*/
 		.l-row {
 			padding: 0;
 			/*
@@ -276,9 +306,12 @@
 		margin-right: auto;
 		width: 100%;
 	}
-	.l-col {
-		width: 16.666667%;
+	.l-col { // flex width - space so 16.666 - ??
+		width: 16.666%;
 	}
+
+
+
 	.l-narrow-col {
 		width: 25%;
 	}
@@ -351,34 +384,14 @@
 		/*      | |  \ \/\/ / (_) | | (_| (_) | |_| |_| | |\/| | .` \__ \    */
 		/*      |_|   \_/\_/ \___/   \___\___/|____\___/|_|  |_|_|\_|___/    */
 
-		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		/* ***** ***** ***** ** Two Column (Even) ** ***** ***** ***** */
-		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		&.l-two-even-col {
-			&>div {
-				&:first-child {
-					padding: 0 22px 0 0;
-				}
-				&:last-child {
-					padding: 0 0 0 22px;
-					border-right: none;
-				}
-/* start for testing purposes
-				&:first-child {
-					padding: 0;
-					border-right: 22px solid rgba(255,69,0,.65);
-				}
-				&:last-child {
-					padding: 0;
-					border-right: none;
-					border-left: 22px solid rgba(255,69,0,.65);
-				}
-end for testing purposes */
-			}
-		}
+		//&.l-two-col-even {
+		//	see responsive.less
+		//}
+
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** ** Two Column (Left) ** ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+		/*
 		&.l-two-col-left-narrow,
 		&.l-two-col-left,
 		&.l-two-col-left-wide {
@@ -389,26 +402,16 @@ end for testing purposes */
 				&:last-child {
 					padding: 0 0 0 33px;
 				}
-/* start for testing purposes
-				&:first-child {
-					padding: 0;
-					border-left: none;
-					border-right: 11px solid rgba(255,69,0,.65);
-				}
-				&:last-child {
-					padding: 0;
-					border-right: none;
-					border-left: 33px solid rgba(255,69,0,.65);
-				}
-end for testing purposes */
 			}
 		}
+		*/
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 		/* ***** ***** ***** ** Two Column (Right) * ***** ***** ***** */
 		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		&.l-right-col-narrow,
-		&.l-right-col,
-		&.l-right-col-wide {
+		/*
+		&.l-two-col-right-narrow,
+		&.l-two-col-right,
+		&.l-two-col-right-wide {
 			&>div {
 				&:first-child {
 					padding: 0 33px 0 0;
@@ -416,118 +419,19 @@ end for testing purposes */
 				&:last-child {
 					padding: 0 0 0 11px;
 				}
-/* start for testing purposes
-				&:first-child {
-					padding: 0;
-					border-left: none;
-					border-right: 33px solid rgba(255,69,0,.65);
-				}
-				&:last-child {
-					padding: 0;
-					border-right: none;
-					border-left: 11px solid rgba(255,69,0,.65);
-				}
-end for testing purposes */
 			}
 		}
+		*/
 
 		/*      _____ _  _ ___ ___ ___    ___ ___  _   _   _ __  __ _  _ ___     */ 
 		/*     |_   _| || | _ \ __| __|  / __/ _ \| | | | | |  \/  | \| / __|    */
 		/*       | | | __ |   / _|| _|  | (_| (_) | |_| |_| | |\/| | .` \__ \    */
 		/*       |_| |_||_|_|_\___|___|  \___\___/|____\___/|_|  |_|_|\_|___/    */
 
-		&.l-three-col-even {
-			&>div {
-				padding: 0 11px;
-				&:first-child {
-					padding: 0 33px 0 0;
-				}
-				&:last-child {
-					padding: 0 0 0 33px;
-				}
-/* start for testing purposes
-				border-left: 11px solid rgba(255,69,0,.65);
-				border-right: 11px solid rgba(255,69,0,.65);
-				&:first-child {
-					padding: 0;
-					border-left: none;
-					border-right: 33px solid rgba(255,69,0,.65);
-				}
-				&:last-child {
-					padding: 0;
-					border-right: none;
-					border-left: 33px solid rgba(255,69,0,.65);
-				}
-end for testing purposes */
-			}
-		}
-		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		/* ***** ***** ***** *****             ***** ***** ***** ***** */
-		/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-		&.l-three-col {
-			&>div {
-				padding: 0 22px;
-				&:first-child {
-					padding-left: 0;
-				}
-				&:last-child {
-					padding-right: 0;
-				}
-/* start for testing purposes
-				padding: 0;
-				border-right: 22px solid rgba(255,69,0,.65);
-				border-left: 22px solid rgba(255,69,0,.65);
-				&:first-child {
-					border-left: none;
-				}
-				&:last-child {
-					border-right: none;
-				}
-end for testing purposes */
-			}
-		}
+
 		/*       ___ ___  _   _ ___    ___ ___  _   _   _ __  __ _  _ ___      */ 
 		/*      | __/ _ \| | | | _ \  / __/ _ \| | | | | |  \/  | \| / __|     */ 
 		/*      | _| (_) | |_| |   / | (_| (_) | |_| |_| | |\/| | .` \__ \     */ 
 		/*      |_| \___/ \___/|_|_\  \___\___/|____\___/|_|  |_|_|\_|___/     */ 
-		&.l-four-col-even {
-			&>div {
-				&:nth-child(1) {
-					padding: 0 33px 0 0;
-				}
-				&:nth-child(2) {
-					padding: 0 22px 0 11px;
-				}
-				&:nth-child(3) {
-					padding: 0 11px 0 22px;
-				}
-				&:nth-child(4) {
-					padding: 0 0 0 33px;
-				}
-/* start for testing purposes
-				&:nth-child(1) {
-					padding: 0;
-					border-left: none;
-					border-right: 33px solid rgba(255,69,0,.65);
-				}
-				&:nth-child(2) {
-					padding: 0;
-					border-left: 11px solid rgba(255,69,0,.65);
-					border-right: 22px solid rgba(255,69,0,.65);
-				}
-				&:nth-child(3) {
-					padding: 0;
-					border-left: 22px solid rgba(255,69,0,.65);
-					border-right: 11px solid rgba(255,69,0,.65);
-				}
-				&:nth-child(4) {
-					padding: 0;
-					border-left: 33px solid rgba(255,69,0,.65);
-					border-right: none;	
-				}
-end for testing purposes */
-			}
-		}
-
 	}
 }

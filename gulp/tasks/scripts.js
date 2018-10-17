@@ -4,9 +4,9 @@ var gulp = require('gulp'),
 const gulpRename = require('gulp-rename');
 const gulpUglify = require('gulp-uglify');
 
-const archiveFolder = 'A:/global/scripts/';
-//const adaptiveFolder = 'W:/global/scripts/';
-//const tempFolder = './app/temp/scripts/';
+//const tempFolder = 'A:/global/scripts/';
+const adaptiveFolder = 'W:/global/scripts/';
+const tempFolder = './app/temp/scripts/';
 
 gulp.task('webpack', ['modernizr'], function(callback) {
     webpack(require('../../webpack.config.js'), function(err, stats) {
@@ -25,5 +25,5 @@ gulp.task('scripts', ['webpack'], () =>
     gulp.src('./app/temp/scripts/global.js')
     .pipe(gulpUglify())
     .pipe(gulpRename('global.min.js'))
-    .pipe(gulp.dest(archiveFolder))
+    .pipe(gulp.dest(tempFolder))
 )
