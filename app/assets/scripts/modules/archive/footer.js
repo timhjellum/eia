@@ -1,10 +1,6 @@
 class Footer {
     constructor() {
 
-
-
-
-
         $(window).on("load resize", function(e) {
             const footerWidth = $('footer').width();
             const pushHeight = ($('footer').height());

@@ -44,7 +44,7 @@ class Header {
             '<li><a href="../theme/primary-col-modules"></a>Primary Modules</li>' +
             '<li><a href="../theme/secondary-col-modules"></a>Secondary Modules</li>');
 
-        $("._components").html('<li><a href="../examples/index.html"></a>Page Template</li>');
+        $("._examples").html('<li><a href="../examples/index.html"></a>Page Template</li>');
 //            '<li><a href="../modules/sub-navigation.html"></a>Header</li>' +
 //            '<li><a href="../modules/sub-navigation.html"></a>Home Slider</li>' +
 //            '<li><a href="../modules/sub-navigation.html"></a>L2 Sliders</li>' +

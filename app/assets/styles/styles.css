@@ -12,3 +12,5 @@
 @import "less/style-guide/_resolution";
 @import "less/style-guide/_example";
 @import "less/style-guide/_legend";
+
+@import "less/style-guide/tomorrow.css";

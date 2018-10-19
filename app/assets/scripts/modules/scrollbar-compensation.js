@@ -3,7 +3,7 @@ var compensate = require('scrollbar-compensate');
 class ScrollbarCompensation {
 	constructor() {
 
-       //document.addEventListener('DOMContentLoaded', function() {
+        //document.addEventListener('DOMContentLoaded', function() {
        //  compensate(['.fancybox-overlay']);
        //  console.log("hi");
        //});
