@@ -7,4 +7,5 @@ new StickyTableHeaders();
 import Header from './modules/style-guide/_header.js';
 new Header();
 
-import './modules/style-guide/highlight.js';
+import HighlightModule from './modules/style-guide/highlight.js';
+new HighlightModule();

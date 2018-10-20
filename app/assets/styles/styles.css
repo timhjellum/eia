@@ -1,4 +1,5 @@
-﻿@import "less/base/vars";
+﻿@import "less/style-guide/tomorrow";
+@import "less/base/vars";
 @import "less/base/mixins";
 @import "less/style-guide/_color-palette";
 @import "less/style-guide/_layout";
@@ -7,10 +8,7 @@
 @import "less/style-guide/_icons";
 @import "less/style-guide/_header";
 @import "less/style-guide/_footer";
-
 @import "less/style-guide/_page-titles";
 @import "less/style-guide/_resolution";
 @import "less/style-guide/_example";
 @import "less/style-guide/_legend";
-
-@import "less/style-guide/tomorrow.css";

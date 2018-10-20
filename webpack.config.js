@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const path = require('path');
+//const path = require('path');
 
 
 //const dist = './app/temp/scripts/';
@@ -12,7 +12,9 @@ module.exports = {
         scripts: "./app/assets/scripts/scripts.js"
     },
     output: {
-        path: path.resolve(__dirname, './app/temp/scripts/'),
+        //        path: path.resolve(__dirname, './app/temp/scripts/'),
+        //        filename: "[name].js"
+        path: "./app/temp/scripts",
         filename: "[name].js"
     },
     module: {

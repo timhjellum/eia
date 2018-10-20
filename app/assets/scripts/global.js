@@ -31,8 +31,8 @@ new Highlight();
 import FirefoxHack from './modules/firefox-hack';
 new FirefoxHack();
 
-//import jqueryUI from './modules/jquery-ui';
-//new jqueryUI();
+import jqueryUI from './modules/jquery-ui';
+new jqueryUI();
 
 import StickyTableHeaders from './modules/sticky-table-headers';
 new StickyTableHeaders();
