@@ -11,44 +11,44 @@ class Header {
             debounce: false
         })
 
-        $("._base").html('<li><a href="../base/color-palette.html">Color Palette</a></li>' +
-            '<li><a href="../base/forms.html">Forms</a></li>' +
-            '<li><a href="../base/icons.html">Icons</a></li>' +
-            '<li><a href="../base/lists.html">Lists</a></li>' +
-            '<li><a href="../base/size-conversions.html">Size Conversions</li>' +
-            '<li><a href="../base/symbols.html">Symbols</a></li>' +
-            '<li><a href="../base/tables.html">Tables</a></li>' +
-            '<li><a href="../base/typography.html"></a>Typography</li>');
+        $("._base").html('<li><a href="/base/color-palette.html">Color Palette</a></li>' +
+            '<li><a href="/base/forms.html">Forms</a></li>' +
+            '<li><a href="/base/icons.html">Icons</a></li>' +
+            '<li><a href="/base/lists.html">Lists</a></li>' +
+            '<li><a href="/base/size-conversions.html">Size Conversions</li>' +
+            '<li><a href="/base/symbols.html">Symbols</a></li>' +
+            '<li><a href="/base/tables.html">Tables</a></li>' +
+            '<li><a href="/base/typography.html"></a>Typography</li>');
 
         $("._layouts").html('');
 
-        $("._modules").html('<li><a href="../modules/accordion.html">Accordions</a></li>' +
-            '<li><a href="../modules/content-containers-home.html">Content Containers (home)</a></li>' +
-            '<li><a href="../modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' +
-            '<li><a href="../modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' +
-            '<li><a href="../modules/fancybox.html">Modals (FancyBox)</a></li>' +
-            '<li><a href="../modules/lists.html">Lists</a></li>' +
-            '<li><a href="../modules/page-titles.html"></a>Messaging</li>' +
-            '<li><a href="../modules/page-titles.html">Page Titles</a></li>' +
-            '<li><a href="../modules/table-list-formatting.html">Tables</a></li>' +
-            '<li><a href="../modules/tabs.html"></a>Tabs</li>');
+        $("._modules").html('<li><a href="/modules/accordion.html">Accordions</a></li>' +
+            '<li><a href="/modules/content-containers-home.html">Content Containers (home)</a></li>' +
+            '<li><a href="/modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' +
+            '<li><a href="/modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' +
+            '<li><a href="/modules/fancybox.html">Modals (FancyBox)</a></li>' +
+            '<li><a href="/modules/lists.html">Lists</a></li>' +
+            '<li><a href="/modules/page-titles.html"></a>Messaging</li>' +
+            '<li><a href="/modules/page-titles.html">Page Titles</a></li>' +
+            '<li><a href="/modules/table-list-formatting.html">Tables</a></li>' +
+            '<li><a href="/modules/tabs.html"></a>Tabs</li>');
 
         $("._states").html('<li><a href="empty-list-items.html"></a>Empty List Items</li>' +
             '<li>sticky-table-headers.html</li>');
 
-        $("._themes").html('<li><a href="../theme/accordion"></a>Accordion</li>' +
-            '<li><a href="../theme/basic-table"></a>Basic Tables</li>' +
-            '<li><a href="../theme/data"></a>Date Tables</li>' +
-            '<li><a href="../theme/natural-gas"></a>Natural Gas</li>' +
-            '<li><a href="../theme/overview"></a>Overview</li>' +
-            '<li><a href="../theme/primary-col-modules"></a>Primary Modules</li>' +
-            '<li><a href="../theme/secondary-col-modules"></a>Secondary Modules</li>');
+        $("._themes").html('<li><a href="/theme/accordion"></a>Accordion</li>' +
+            '<li><a href="/theme/basic-table"></a>Basic Tables</li>' +
+            '<li><a href="/theme/data"></a>Date Tables</li>' +
+            '<li><a href="/theme/natural-gas"></a>Natural Gas</li>' +
+            '<li><a href="/theme/overview"></a>Overview</li>' +
+            '<li><a href="/theme/primary-col-modules"></a>Primary Modules</li>' +
+            '<li><a href="/theme/secondary-col-modules"></a>Secondary Modules</li>');
 
-        $("._examples").html('<li><a href="../examples/index.html"></a>Page Template</li>');
-//            '<li><a href="../modules/sub-navigation.html"></a>Header</li>' +
-//            '<li><a href="../modules/sub-navigation.html"></a>Home Slider</li>' +
-//            '<li><a href="../modules/sub-navigation.html"></a>L2 Sliders</li>' +
-//            '<li><a href="../modules/sub-navigation.html"></a>Sub-navigation</li>
+        $("._examples").html('<li><a href="/examples/index.html"></a>Page Template</li>');
+//            '<li><a href="/modules/sub-navigation.html"></a>Header</li>' +
+//            '<li><a href="/modules/sub-navigation.html"></a>Home Slider</li>' +
+//            '<li><a href="/modules/sub-navigation.html"></a>L2 Sliders</li>' +
+//            '<li><a href="/modules/sub-navigation.html"></a>Sub-navigation</li>
 
 
 

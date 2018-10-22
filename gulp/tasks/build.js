@@ -1,5 +1,7 @@
 const gulp = require('gulp');
 const gulpCleanCSS = require('gulp-clean-css');
+const gulpLess = require('gulp-less');
+const gulpStrip = require('gulp-strip-css-comments');
 const gulpImagemin = require('gulp-imagemin');
 const del = require('del');
 const gulpUsemin = require('gulp-usemin');
@@ -54,12 +56,34 @@ gulp.task('useminTrigger', ['deleteDistFolder'], function() {
     gulp.start('usemin');
 });
 
+gulp.task('compile-production-css', () =>
+    gulp.src('./app/assets/styles/styles.css')
+    .pipe(gulpLess())
+    .pipe(gulpStrip())
+	.pipe(gulpCleanCSS({debug: true}, function(details) {
+	  console.log(details.name + ': ' + details.stats.originalSize);
+	  console.log(details.name + ': ' + details.stats.minifiedSize);
+	}))
+    .pipe(gulp.dest('./app/temp/styles/'))
+);
+gulp.task('compile-production-global', ['compile-production-css'], () =>
+    gulp.src('./app/assets/styles/global.css')
+    .pipe(gulpLess())
+    .pipe(gulpStrip())
+	.pipe(gulpCleanCSS({debug: true}, function(details) {
+        console.log(details.name + ': ' + details.stats.originalSize);
+        console.log(details.name + ': ' + details.stats.minifiedSize);
+      }))
+    .pipe(gulp.dest('./app/temp/styles/'))
+);
+
+gulp.task('usemin', ['compile-production-css', 'webpack'], function() {
 
 
-//gulp.task('usemin', ['styles', 'webpack'], function() {
 
-gulp.task('usemin', function() {
-    return gulp.src("./app/index.html")
+
+//gulp.task('usemin', function() {
+    return gulp.src(['./app/index.html','./app/**/*.html'],  {base: './app/'}) 
         .pipe(gulpUsemin({
             css: [gulpRev],
             js: [gulpRev],
