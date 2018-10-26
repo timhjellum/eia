@@ -5,6 +5,7 @@ class FancyBox {
     constructor() {
         this.fancyBoxMenu();
         this.fancyBoxLightBox();
+        this.fancyBoxInlineContent();
     }
 
     fancyBoxLightBox() {
@@ -95,12 +96,144 @@ class FancyBox {
                 },
                 */
             });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             console.log("clicked");
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             console.log(target);
             event.preventDefault();
         });
+    }
+
+
+    fancyBoxScrollToIframe() {
+
+        var fancyBoxWidth = 980;
+
+
+        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+        /* $$$$$                 scroll to iframe                $$$$$ */
+        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+
+        $('.scroll-to-iframe').click(function(event) {
+            var target = $(this).attr("href");
+            console.log(target);  
+            $.fancybox({
+                href: target,
+                scrolling: 'yes',
+                type: 'iframe',
+                width: fancyBoxWidth,
+                autoSize: false, // required for width
+                margin: [0, 0, 0, 0],
+                height: 'auto',
+                padding: 0,
+                fitToView: false,
+                topRatio: 0,
+                autoDimension: false,
+                overlayShow: false,
+                tpl: {
+                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+                },
+                iframe: {
+                    preload: false
+                }
+            });
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            event.preventDefault();
+
+            var iFrameHeight = $('.fancybox-inner').height();
+            //console.log(iFrameHeight);
+            $('iframe').css('height', iFrameHeight);
+        });
+
+
+
+
+
+
     }   
 
+
+
+
+
+
+
+    fancyBoxInlineContent() {
+            var viewPortWidth = window.innerWidth;
+            var viewPortHeight = window.innerHeight;
+            
+            var fancyBoxWidth = 980;
+    
+            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+            /* $$$$$                      iframe                     $$$$$ */
+            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+            $('.inline-content').click(function() {
+//                var targetID = (this.id);
+//                alert(targetID);
+
+                console.log("clicked"); 
+                $.fancybox({
+                    scrolling: 'no',  
+                    type: 'inline',
+//                    content: targetID,
+                    width: fancyBoxWidth,
+                    autoSize: false, // required for width
+                    margin: [40, 0, 20, 0],
+                    height: 'auto',
+                    padding: 0,
+                    fitToView: false,
+                    topRatio: 0,
+                    autoDimension: false,
+                    overlayShow: false,
+                    tpl: {
+                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+                    },
+                    beforeLoad: function() {
+                        viewPortWidth = window.innerWidth;
+                        if (viewPortWidth <= fancyBoxWidth) {
+                            this.width = viewPortWidth;
+                            //    this.autoResize = true;
+                            this.fitToView = true;
+                            //    console.log(viewPortHeight + ' ' + this.height);
+                        } else {
+                            this.width = fancyBoxWidth;
+                            //    this.autoResize = false;
+                            this.fitToView = false;
+                            //    console.log(viewPortHeight + ' ' + this.height);
+                        };
+                    },
+                    /*
+                    afterLoad: function(){
+                        $.extend(this,{
+                            content: this.element.data(target)
+                        })
+                    }
+                    */
+                });
+                event.preventDefault();
+            });
+        }
 }
 export default FancyBox;

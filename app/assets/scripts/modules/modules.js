@@ -118,6 +118,14 @@ if(window.location.href.indexOf("eia.gov")!=-1) {
                 //console.log('hiding "secondary.hide-mt" empty element');
             }
         });
+		
+		
+	    $('.primary.hide-mt a').each(function() {
+            if ($(this).attr('href').length <= 0) {
+                $(this).parent().remove();
+                //console.log('hiding "primary.hide-mt" empty element');
+            }
+        });
 
         //        $('.hide-mt a').each(function() {
         //            if ($(this).text().trim().length <= 0) {

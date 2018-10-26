@@ -1,7 +1,7 @@
 
 @media @mobile {
 	.homepage {
-        display: table;
+        //display: table;
         margin-bottom: 3em;
         .secondary {
             ul {
@@ -64,7 +64,9 @@
                         margin: 14px 0 2px 0;
                         h2  {
                             .header-font;
-                            font-size: 1.125rem * 1.20%; 
+                            font-size: 1.125rem * 1.20%;
+                            text-transform: none;
+                            border-bottom: none;
                         }
                     }
                     &.date {
@@ -79,19 +81,10 @@
         }
         .l-main-col {
             .secondary {
-//                border: none;
                 ul {
                     .left;
                     margin: 0;
                     padding: 0;
-/*
-                    -webkit-box-flex: 0;
-                    -webkit-flex: 0 0 66.666667%;
-                    -ms-flex: 0 0 66.666667%;
-                    flex: 0 0 66.666667%;
-                    max-width: 66.666667%;
-                    width: 66.666667%;
-                    */
                     li {
                         padding: 0 0 0 22px;
                         &.head {

@@ -7,25 +7,6 @@ html {
 	width: 100%;
 	height: 100%;
 	font-size: 16px;
-	//line-height: 150%;
-	box-sizing: border-box;
-	* {
-		box-sizing: border-box;
-	}
-}
-body {
-	background-color: white;
-	width: 100%;
-	height: 100%;
-}
-
-/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-/* ***** ***** ***** **** global reset ***** ***** ***** ***** */
-/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-
-body, div, li, h2, h3, h4, h5, h6, i, label, legend, input, select, p, blockquote, th, td {
-	padding: 0;
-	margin: 0;
 	.font;
 	color: @eia-dark-grey;
 	a {
@@ -42,13 +23,73 @@ body, div, li, h2, h3, h4, h5, h6, i, label, legend, input, select, p, blockquot
 			color:@eia-blue;
 		}
 	}
+	box-sizing: border-box;
+	* {
+		box-sizing: border-box;
+	}
 }
-h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+body {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+}
 
-ul, ol, form, fieldset, table, embed, object {
+
+.dashboard-container {
+	.page-nav {
+		.left-nav {
+			a,
+			&:link,
+			&:active,
+			&:visited,
+			&:hover {
+				font-size: 12px !important;
+			}
+		}
+	}
+}
+
+
+
+
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** **** global reset ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+body, 
+div, 
+li, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+i, 
+label, 
+legend, 
+input, 
+select, 
+p, 
+blockquote, 
+th, 
+td, 
+ul, 
+ol, 
+form, 
+fieldset, 
+table, 
+embed, 
+object {
 	padding: 0;
 	margin: 0;
 }
+h1 { font-size: 1.625rem; } // finalized
+h2 { font-size: 0.75rem; } // finalized
+h3 { font-size: 0.75rem; } // not finalized
+h4 { font-size: 0.75rem; } // not finalized
+h5 { font-size: 0.75rem; } // not finalized
+h6 { font-size: 0.75rem; } // not finalized
 
 .no-wrap {
 	.no-wrap;
@@ -57,11 +98,25 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-fieldset, img, abbr {
+fieldset, 
+img, 
+abbr {
 	border: 0;
 	display: block;
 }
-address, caption, cite, code, dfn, h1, h2, h3, h4, h5, h6, th, var {
+address, 
+caption, 
+cite, 
+code, 
+dfn, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+th, 
+var {
 	font-weight: normal;
 	font-style: normal;
 }
@@ -75,15 +130,6 @@ i {
     display: none;
 }
 
-/*
-h1, h2, h3, h4, h5, h6 {
-	font-size: 1.0em;
-}
-
-q:before, q:after {
-	content: '';
-}
-*/
 strong {
 	font-weight: 700;
 }
@@ -111,8 +157,10 @@ hr {
 	overflow: visible; /* 2 */
 //}
 //hr {
-	background: shade(white, 17%);
-	color: shade(white, 17%);
+	background: shade(white, 
+	17%);
+	color: shade(white, 
+	17%);
 	clear: both;
 	float: none;
 	width: 100%;
@@ -303,7 +351,8 @@ span {
 		display: block;
 		.header-font;
 		font-size: 1.625rem; // 26px pixels
-		border-bottom: solid 1px shade(white, 17%); //#dadada;
+		border-bottom: solid 1px shade(white, 
+		17%); //#dadada;
 		padding: 0 0 6px 0; // 1em 0 6px;
 		margin: 0 0 .5em 0; //0 0 22px 0;
 //		clear: both;
@@ -315,27 +364,19 @@ span {
 //		}
 //	}
 }
-@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-
-}
-@media @tablet {  // mobile panorama
-
-}
-@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
-
-}
-@media @laptop { // big landscape tablets, laptops, and desktops
+@media @mobile-landscape {}
+@media @tablet { }
+@media @tablet-landscape {}
+@media @laptop { 
 	p {
-		font-size: 0.750rem; // 12 pixels
+		font-size: 0.750rem; 
 	}
 	h1 {
 		padding: 1em 0 6px;
 		margin: 0 0 22px 0;
 	}
 }
-@media @desktop { // desktops
-
-}
+@media @desktop {}
 
 
 
@@ -346,23 +387,6 @@ span {
 // this forces break
 // <span class="line">Data Tools, Apps,</span> <span class="line">and Maps</span>
 // Line will break after the Apps,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .pipe {
@@ -379,12 +403,10 @@ a {
 		&.inline {
 			white-space: nowrap;
 			margin-right: 5px;
-			i {
-				&.ico {
-					margin-left: 0;
-					span {
-						display: none;
-					}
+			.ico {
+				margin-left: 0;
+				span {
+					display: none;
 				}
 			}
 		}
@@ -456,7 +478,8 @@ margin: 1em 40px;
 */
 
 pre {
-font-family: monospace, monospace; /* 1 */
+font-family: monospace, 
+monospace; /* 1 */
 font-size: 1em; /* 2 */
 }
 
@@ -475,7 +498,11 @@ background-color: transparent; /* 1 */
 
 /**
 * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
-* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+* 2. Add the correct text decoration in Chrome, 
+Edge, 
+IE, 
+Opera, 
+and Safari.
 */
 
 abbr[title] {
@@ -491,7 +518,9 @@ text-decoration: underline dotted; /* 2 */
 
 
 /**
-* Add the correct font weight in Chrome, Edge, and Safari.
+* Add the correct font weight in Chrome, 
+Edge, 
+and Safari.
 */
 
 
@@ -504,7 +533,8 @@ text-decoration: underline dotted; /* 2 */
 code,
 kbd,
 samp {
-font-family: monospace, monospace; /* 1 */
+font-family: monospace, 
+monospace; /* 1 */
 font-size: 1em; /* 2 */
 }
 
@@ -598,7 +628,6 @@ progress {
 * Add the correct display in IE 9-.
 * 1. Add the correct display in Edge, IE, and Firefox.
 */
-
 details, /* 1 */
 menu {
 	display: block;

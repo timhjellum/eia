@@ -13,14 +13,14 @@ new ShrinkExpand();
 import SocialSticker from './modules/social-sticker';
 new SocialSticker();
 
-//import BookshelfSearch from './modules/bookshelf-search';
-//new BookshelfSearch();
+import BookshelfSearch from './modules/bookshelf-search';
+new BookshelfSearch();
 
 import BxSlider from './modules/bxslider';
 new BxSlider();
 
-//import AnalysisProjections from './modules/analysis-projections';
-//new AnalysisProjections();
+import AnalysisProjections from './modules/analysis-projections';
+new AnalysisProjections();
 
 import ModuleScripts from './modules/modules';
 new ModuleScripts();

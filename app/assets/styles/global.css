@@ -21,6 +21,7 @@
 @import "less/layouts/global";
 @import "less/layouts/reordering";
 @import "less/layouts/responsive";
+@import "less/layouts/sticky-footer";
 
 /* modules */
 

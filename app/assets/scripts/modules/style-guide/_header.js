@@ -44,12 +44,12 @@ class Header {
             '<li><a href="/theme/primary-col-modules"></a>Primary Modules</li>' +
             '<li><a href="/theme/secondary-col-modules"></a>Secondary Modules</li>');
 
-        $("._examples").html('<li><a href="/examples/index.html"></a>Page Template</li>');
-//            '<li><a href="/modules/sub-navigation.html"></a>Header</li>' +
-//            '<li><a href="/modules/sub-navigation.html"></a>Home Slider</li>' +
-//            '<li><a href="/modules/sub-navigation.html"></a>L2 Sliders</li>' +
-//            '<li><a href="/modules/sub-navigation.html"></a>Sub-navigation</li>
-
+        $("._examples").html('<li><a href="/examples/index.html"></a>Page Template</li>' +
+            '<li><a href="/examples/index.html"></a>Header</li>' +
+            '<li><a href="/examples/sub-navigation.html">Sub-navigation</a></li>' +
+            '<li><a href="/examples/header.html">Header</a></li>' +
+            '<li><a href="/examples/slider-home.html">Slider Home</a></li>' +
+            '<li><a href="/examples/slider-multi.html">Slider Multi</a></li>');
 
 
         //if ($('.navbar-brand:contains(Base)').length > 0) {

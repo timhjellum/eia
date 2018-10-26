@@ -9,10 +9,16 @@
 	//	._span { display: none; }
 	.dilly-dilly {
 		.l-row {
-			padding: 0;
-			display: table; // test only
-			border-right: 12px solid yellowgreen;
-			border-left: 12px solid yellowgreen;
+//			padding: 0;
+//			display: table; // test only
+			//border-right: 12px solid yellowgreen;
+			//border-left: 12px solid yellowgreen;
+			.l-row {
+				padding: 0;
+	//			display: table; // test only
+//				border-right: none;
+//				border-left: none;
+			}
 			/*
 			&>div {
 				padding-right: 0;
@@ -35,6 +41,18 @@
 					padding: 0;
 					border: 0;
 					width: 100%;
+					.l-row {
+						padding: 0;
+			//			display: table; // test only
+						border-right: none;
+						border-left: none;
+					}
+				}
+				.l-row {
+					padding: 0;
+		//			display: table; // test only
+					border-right: none;
+					border-left: none;
 				}
 			}
 			/*
@@ -298,8 +316,8 @@
 @media @tablet {	// mobile panorama
 	.dilly-dilly {
 		.l-row {
-			border-right: 16px solid yellowgreen;
-			border-left: 16px solid yellowgreen;
+//			border-right: 16px solid yellowgreen;
+//			border-left: 16px solid yellowgreen;
 			.l-full-width-col,
 			.l-narrow-col,
 			.l-two-col,
@@ -331,8 +349,8 @@
 	.dilly-dilly {
 		._module-wrapper {
 			display: table;
-			background: greenyellow url(../../src/img/bg.png) center;
-			padding: 0;
+//			background: greenyellow url(../../src/img/bg.png) center;
+//			padding: 0;
 			border: 1px solid #333;
 			width: 992px;
 			._module-container {
@@ -350,9 +368,9 @@
 
 
 		.l-row {
-			padding: 0;
-			border-left: 22px solid greenyellow;
-			border-right: none;
+//			padding: 0;
+//			border-left: 22px solid greenyellow;
+//			border-right: none;
 			&>div {
 			/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 			/* ***** ***** ***** *****             ***** ***** ***** ***** */

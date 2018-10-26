@@ -1,3 +1,4 @@
+/*
 @media @tablet {
 	.homepage {
 		.l-row {
@@ -6,6 +7,7 @@
 					padding-right: 0;
 					padding-left: 0;
 				}
+
 			}
 			&.l-three-col {
 				.l-narrow-col {
@@ -16,11 +18,14 @@
 						padding-left: 0;
 					}
 				}
+
 				.l-two-col {
 					padding-right: 0;
 					padding-left: 0;
 				}
+
 			}
+
 			&.l-four-col-even {
 				&>div {
 					padding: 0 0 0 0;
@@ -42,75 +47,57 @@
 					}
 				}
 			}
+
 		}
 	}
 }
-@media @laptop {
+*/
+@media @tablet-landscape {
 	.homepage {
 		.l-row {
-			padding-right: 0;
-			padding-left: 0;
 			&.l-three-col {
-				.l-two-col {
-					padding-right: 22px;
-					padding-left: 22px;
-					//padding-right: 0;
-					//padding-left: 0;
-					//border-right: 22px solid rgba(255,69,0,.65);
-					//border-left: 22px solid rgba(255,69,0,.65);
-				}
-				.l-narrow-col {
-					.primary { 
-						ul {
-							margin-left: 22px;
+				&>div {
+					&.l-narrow-col { 
+						.primary { 
+							ul {
+								margin-left: 22px;
+							}
 						}
 					}
 				}
 			}
-			&.l-two-col-right-narrow {
-				.l-main-col {
-					padding-right: 22px;
-					//padding: 0;
-					//border-right: 22px solid rgba(255,69,0,.65);
-				}
-				.l-narrow-col {
-					padding: 0;
-				}
-			}
-			/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-			/* ***** ***** ***** *****             ***** ***** ***** ***** */
-			/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 			&.l-four-col-even {
-				.l-narrow-col {
-					.primary { 
-						ul {
-							margin-left: 22px;
+				&>div {
+					&.l-narrow-col {
+						/*
+						.primary { 
+							ul {
+								margin-left: 22px;
+							}
 						}
-					}
-					&:nth-child(1) {
-						padding-right: 22px;
-						//padding-right: 0;
-						//border-left: none;
-						//border-right: 22px solid rgba(255,69,0,.65);
-					}
-					&:nth-child(2) {
-						padding-right: 22px;
-						//padding-right: 0;
-						//border-left: none;
-						//border-right: 22px solid rgba(255,69,0,.65);
-					}
-					&:nth-child(3) {
-						padding-right: 22px;
-						//padding-right: 0;
-						//border-left: none;
-						//border-right: 22px solid rgba(255,69,0,.65);
-					}
-					&:nth-child(4) {
-						border-left: none; // required
-						//border-right: none;
+						*/
+						&:nth-child(1) {
+							ul {
+								margin: 0 0 0 22px;
+							}
+						}
+						&:nth-child(2) {
+							ul {
+								margin: 0;
+							}
+						}
+						&:nth-child(3) {
+							ul {
+								margin: 0 22px 0 0;
+							}
+						}
+						&:nth-child(4) {
+							border-left: none; // required
+						}
 					}
 				}
 			}
 		}
 	}
 }
+

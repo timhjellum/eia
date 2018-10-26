@@ -66,27 +66,35 @@
 
 	var _socialSticker2 = _interopRequireDefault(_socialSticker);
 
-	var _bxslider = __webpack_require__(9);
+	var _bookshelfSearch = __webpack_require__(9);
+
+	var _bookshelfSearch2 = _interopRequireDefault(_bookshelfSearch);
+
+	var _bxslider = __webpack_require__(10);
 
 	var _bxslider2 = _interopRequireDefault(_bxslider);
 
-	var _modules = __webpack_require__(11);
+	var _analysisProjections = __webpack_require__(12);
+
+	var _analysisProjections2 = _interopRequireDefault(_analysisProjections);
+
+	var _modules = __webpack_require__(13);
 
 	var _modules2 = _interopRequireDefault(_modules);
 
-	var _highlightSearchResults = __webpack_require__(12);
+	var _highlightSearchResults = __webpack_require__(14);
 
 	var _highlightSearchResults2 = _interopRequireDefault(_highlightSearchResults);
 
-	var _firefoxHack = __webpack_require__(13);
+	var _firefoxHack = __webpack_require__(15);
 
 	var _firefoxHack2 = _interopRequireDefault(_firefoxHack);
 
-	var _jqueryUi = __webpack_require__(14);
+	var _jqueryUi = __webpack_require__(16);
 
 	var _jqueryUi2 = _interopRequireDefault(_jqueryUi);
 
-	var _stickyTableHeaders = __webpack_require__(29);
+	var _stickyTableHeaders = __webpack_require__(31);
 
 	var _stickyTableHeaders2 = _interopRequireDefault(_stickyTableHeaders);
 
@@ -102,13 +110,11 @@
 
 	new _socialSticker2.default();
 
-	//import BookshelfSearch from './modules/bookshelf-search';
-	//new BookshelfSearch();
+	new _bookshelfSearch2.default();
 
 	new _bxslider2.default();
 
-	//import AnalysisProjections from './modules/analysis-projections';
-	//new AnalysisProjections();
+	new _analysisProjections2.default();
 
 	new _modules2.default();
 
@@ -150,6 +156,7 @@
 
 	        this.fancyBoxMenu();
 	        this.fancyBoxLightBox();
+	        this.fancyBoxInlineContent();
 	    }
 
 	    _createClass(FancyBox, [{
@@ -245,9 +252,108 @@
 	                    },
 	                    */
 	                });
+
 	                console.log("clicked");
 	                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 	                console.log(target);
+	                event.preventDefault();
+	            });
+	        }
+	    }, {
+	        key: 'fancyBoxScrollToIframe',
+	        value: function fancyBoxScrollToIframe() {
+
+	            var fancyBoxWidth = 980;
+
+	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	            /* $$$$$                 scroll to iframe                $$$$$ */
+	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+
+	            $('.scroll-to-iframe').click(function (event) {
+	                var target = $(this).attr("href");
+	                console.log(target);
+	                $.fancybox({
+	                    href: target,
+	                    scrolling: 'yes',
+	                    type: 'iframe',
+	                    width: fancyBoxWidth,
+	                    autoSize: false, // required for width
+	                    margin: [0, 0, 0, 0],
+	                    height: 'auto',
+	                    padding: 0,
+	                    fitToView: false,
+	                    topRatio: 0,
+	                    autoDimension: false,
+	                    overlayShow: false,
+	                    tpl: {
+	                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                    },
+	                    iframe: {
+	                        preload: false
+	                    }
+	                });
+	                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	                event.preventDefault();
+
+	                var iFrameHeight = $('.fancybox-inner').height();
+	                //console.log(iFrameHeight);
+	                $('iframe').css('height', iFrameHeight);
+	            });
+	        }
+	    }, {
+	        key: 'fancyBoxInlineContent',
+	        value: function fancyBoxInlineContent() {
+	            var viewPortWidth = window.innerWidth;
+	            var viewPortHeight = window.innerHeight;
+
+	            var fancyBoxWidth = 980;
+
+	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	            /* $$$$$                      iframe                     $$$$$ */
+	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	            $('.inline-content').click(function () {
+	                //                var targetID = (this.id);
+	                //                alert(targetID);
+
+	                console.log("clicked");
+	                $.fancybox({
+	                    scrolling: 'no',
+	                    type: 'inline',
+	                    //                    content: targetID,
+	                    width: fancyBoxWidth,
+	                    autoSize: false, // required for width
+	                    margin: [40, 0, 20, 0],
+	                    height: 'auto',
+	                    padding: 0,
+	                    fitToView: false,
+	                    topRatio: 0,
+	                    autoDimension: false,
+	                    overlayShow: false,
+	                    tpl: {
+	                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                    },
+	                    beforeLoad: function beforeLoad() {
+	                        viewPortWidth = window.innerWidth;
+	                        if (viewPortWidth <= fancyBoxWidth) {
+	                            this.width = viewPortWidth;
+	                            //    this.autoResize = true;
+	                            this.fitToView = true;
+	                            //    console.log(viewPortHeight + ' ' + this.height);
+	                        } else {
+	                            this.width = fancyBoxWidth;
+	                            //    this.autoResize = false;
+	                            this.fitToView = false;
+	                            //    console.log(viewPortHeight + ' ' + this.height);
+	                        };
+	                    }
+	                    /*
+	                    afterLoad: function(){
+	                        $.extend(this,{
+	                            content: this.element.data(target)
+	                        })
+	                    }
+	                    */
+	                });
 	                event.preventDefault();
 	            });
 	        }
@@ -12459,6 +12565,116 @@
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var BookshelfSearch = function () {
+	    function BookshelfSearch() {
+	        _classCallCheck(this, BookshelfSearch);
+
+	        var self = this;
+	        this.tags = [];
+	        this.container = $("#header-tag-search");
+	        this.selectedTagId = "";
+	        this.selectedTagText = "";
+
+	        this.resetControl();
+
+	        $("input", this.container).on('keyup', function (e) {
+	            self.handleSearchInput(e);
+	        }).on('blur', function (e) {
+	            self.resetControl();
+	        });
+	        $("#header-tags-search .bookshelftags", this.container).on('mousedown', 'div', function (e) {
+	            self.searchElementSelectedHandler(e);
+	            e.preventDefault();
+	        });
+
+	        $('#header-bookshelf-search-form', this.container).on('submit', function (e) {
+	            self.submitSearch();
+	            e.preventDefault();
+	        });
+	        this.getAllTags();
+	    }
+
+	    _createClass(BookshelfSearch, [{
+	        key: "handleSearchInput",
+	        value: function handleSearchInput(e) {
+	            var srchStr = $("input", this.container).val().toLowerCase();
+
+	            $('#header-tags-search .bookshelftags', this.container).empty();
+
+	            for (var t = 0; t < this.tags.length; t++) {
+	                var initCap = this.tags[t].label.substring(0, 1);
+	                var remDsc = this.tags[t].label.substring(1, this.tags[t].label.length);
+	                var fullDsc = this.tags[t].label.toLowerCase();
+	                var srchTag = this.tags[t].identifier;
+
+	                if (fullDsc.search(srchStr) == 0) {
+	                    $('#header-tags-search .bookshelftags', this.container).append("<div name=\"tag-input\" value=" + this.tags[t].identifier + " data-selectable class=\"option\"><span class=\"highlight\">" + initCap + "</span>" + remDsc + "</div>");
+	                }
+	            }
+	            $("#header-tags-search").show();
+	        }
+	    }, {
+	        key: "searchElementSelectedHandler",
+	        value: function searchElementSelectedHandler(e) {
+	            this.selectedTagId = $(e.currentTarget).attr('value');
+	            this.selectedTagText = $(e.currentTarget).text();
+	            $("input", this.container).val($(e.currentTarget).text());
+	            this.hideControl();
+	        }
+	    }, {
+	        key: "getAllTags",
+	        value: function getAllTags() {
+	            var self = this;
+	            $.ajax({
+	                "url": "/global/includes/bookshelf/index.php",
+	                "dataType": "json",
+	                "type": "GET"
+	            }).fail(function (jqXHR, textStatus, errorThrown) {
+	                console.log('failed to retrieve tags');
+	                self.container.hide();
+	            }).done(function (data, textStatus, jqHXR) {
+	                self.tags = data.tags;
+	            });
+	        }
+	    }, {
+	        key: "hideControl",
+	        value: function hideControl() {
+	            $("#header-tags-search", this.container).hide();
+	        }
+	    }, {
+	        key: "resetControl",
+	        value: function resetControl() {
+	            this.hideControl();
+	            $("input", this.container).val(this.selectedTagText);
+	        }
+	    }, {
+	        key: "submitSearch",
+	        value: function submitSearch() {
+	            $.fancybox.close();
+	            window.location = "/reports/#/" + this.selectedTagId;
+	        }
+	    }]);
+
+	    return BookshelfSearch;
+	}();
+
+	exports.default = BookshelfSearch;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -12470,7 +12686,7 @@
 	/* the bxslider is no longer maintained and there is a bug that throws an error when users use the touchscreen. The error shows up in the console only and there's no known issues with the slider. A copy of the bxslider.js with the 'fix' and the file now resides on the global/scripts/bxslider file */
 
 
-	var _bxslider = __webpack_require__(10);
+	var _bxslider = __webpack_require__(11);
 
 	var _bxslider2 = _interopRequireDefault(_bxslider);
 
@@ -12705,7 +12921,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {'use strict';
@@ -14494,7 +14710,46 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 11 */
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var AnalysisProjections = function AnalysisProjections() {
+	    _classCallCheck(this, AnalysisProjections);
+
+	    $("#overviewSideNavOptions").on('click', '#ov_ap, #ov_hl', changeOVSideNav);
+	    $('[data_value="HL"]').hide();
+	    $('a.show-more-tags').on('click', function showMoreTags(event) {
+	        event.preventDefault();
+
+	        $(this).parents('.tag-list').toggleClass('show-more', true);
+	        return false;
+	    });
+	    function changeOVSideNav(evt) {
+	        $('#overviewSideNavOptions > label').removeClass('active');
+	        if ($(this).attr('name') == "ov_ap") {
+	            $('[data_value="AP"]').show();
+	            $('[data_value="HL"]').hide();
+	        } else {
+	            $('[data_value="HL"]').show();
+	            $('[data_value="AP"]').hide();
+	        }
+	        $(this).addClass('active');
+	    }
+	};
+
+	exports.default = AnalysisProjections;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14599,6 +14854,13 @@
 	                }
 	            });
 
+	            $('.primary.hide-mt a').each(function () {
+	                if ($(this).attr('href').length <= 0) {
+	                    $(this).parent().remove();
+	                    //console.log('hiding "primary.hide-mt" empty element');
+	                }
+	            });
+
 	            //        $('.hide-mt a').each(function() {
 	            //            if ($(this).text().trim().length <= 0) {
 	            //                $(this).closest('li').remove();
@@ -14627,7 +14889,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14705,7 +14967,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -14739,7 +15001,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14750,55 +15012,55 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _accordion = __webpack_require__(15);
+	var _accordion = __webpack_require__(17);
 
 	var _accordion2 = _interopRequireDefault(_accordion);
 
-	var _tabs = __webpack_require__(20);
+	var _tabs = __webpack_require__(22);
 
 	var _tabs2 = _interopRequireDefault(_tabs);
 
-	var _version = __webpack_require__(16);
+	var _version = __webpack_require__(18);
 
 	var _version2 = _interopRequireDefault(_version);
 
-	var _widget = __webpack_require__(19);
+	var _widget = __webpack_require__(21);
 
 	var _widget2 = _interopRequireDefault(_widget);
 
-	var _position = __webpack_require__(23);
+	var _position = __webpack_require__(25);
 
 	var _position2 = _interopRequireDefault(_position);
 
-	var _formResetMixin = __webpack_require__(24);
+	var _formResetMixin = __webpack_require__(26);
 
 	var _formResetMixin2 = _interopRequireDefault(_formResetMixin);
 
-	var _keycode = __webpack_require__(17);
+	var _keycode = __webpack_require__(19);
 
 	var _keycode2 = _interopRequireDefault(_keycode);
 
-	var _labels = __webpack_require__(26);
+	var _labels = __webpack_require__(28);
 
 	var _labels2 = _interopRequireDefault(_labels);
 
-	var _uniqueId = __webpack_require__(18);
+	var _uniqueId = __webpack_require__(20);
 
 	var _uniqueId2 = _interopRequireDefault(_uniqueId);
 
-	var _core = __webpack_require__(27);
+	var _core = __webpack_require__(29);
 
 	var _core2 = _interopRequireDefault(_core);
 
-	var _effect = __webpack_require__(28);
+	var _effect = __webpack_require__(30);
 
 	var _effect2 = _interopRequireDefault(_effect);
 
-	var _escapeSelector = __webpack_require__(21);
+	var _escapeSelector = __webpack_require__(23);
 
 	var _escapeSelector2 = _interopRequireDefault(_escapeSelector);
 
-	var _safeActiveElement = __webpack_require__(22);
+	var _safeActiveElement = __webpack_require__(24);
 
 	var _safeActiveElement2 = _interopRequireDefault(_safeActiveElement);
 
@@ -14947,7 +15209,7 @@
 	exports.default = jqueryUI;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14976,10 +15238,10 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(16),
-				__webpack_require__(17),
 				__webpack_require__(18),
-				__webpack_require__(19)
+				__webpack_require__(19),
+				__webpack_require__(20),
+				__webpack_require__(21)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -15566,7 +15828,7 @@
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -15589,7 +15851,7 @@
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15610,7 +15872,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15640,7 +15902,7 @@
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15661,7 +15923,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -15695,7 +15957,7 @@
 
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15717,7 +15979,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -16434,7 +16696,7 @@
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16461,12 +16723,12 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(21),
-				__webpack_require__(17),
-				__webpack_require__(22),
+				__webpack_require__(23),
+				__webpack_require__(19),
+				__webpack_require__(24),
+				__webpack_require__(20),
 				__webpack_require__(18),
-				__webpack_require__(16),
-				__webpack_require__(19)
+				__webpack_require__(21)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -17364,14 +17626,14 @@
 
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17391,14 +17653,14 @@
 
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17437,7 +17699,7 @@
 
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -17461,7 +17723,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -17941,7 +18203,7 @@
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -17964,8 +18226,8 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(2),
-				__webpack_require__(25),
-				__webpack_require__(16)
+				__webpack_require__(27),
+				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -18024,14 +18286,14 @@
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18050,7 +18312,7 @@
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18071,7 +18333,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16), __webpack_require__(21) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18), __webpack_require__(23) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -18118,7 +18380,7 @@
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// This file is deprecated in 1.12.0 to be removed in 1.13
@@ -18145,7 +18407,7 @@
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -18169,7 +18431,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(16) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(18) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -19786,7 +20048,7 @@
 
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -19797,7 +20059,7 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	__webpack_require__(30);
+	__webpack_require__(32);
 
 	var StickyTableHeaders = function StickyTableHeaders() {
 	    _classCallCheck(this, StickyTableHeaders);
@@ -19806,11 +20068,11 @@
 
 	    //const stickyExists = document.querySelector('.sticky');
 	    //if (stickyExists !== null) {
-	    console.log("Resize Sticky Table Headers");
+	    // console.log("Resize Sticky Table Headers");
 	    $(window).on('orientationchange resize', function () {
 	        var footerWidth = $('footer').width();
-	        if (footerWidth > 450 && footerWidth <= 989) {
-	            $('.basic-table').css('width', +(footerWidth - 26));
+	        if (footerWidth > 450 && footerWidth <= 956) {
+	            $('.basic-table.sticky').css('width', +(footerWidth - 26));
 	        } else if (footerWidth >= 320 && footerWidth <= 449) {
 	            $('.basic-table').css('width', +(footerWidth - 32));
 	        }
@@ -19822,7 +20084,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! Copyright (c) Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
