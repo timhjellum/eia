@@ -6,7 +6,7 @@ const path = require('path');
 const del = require('del');
 const removeCode = require('gulp-remove-code');
 
-const server = '//WWWDEV/website/css_rehab/archive/';
+const server = '//WWWDEV/website/adaptive/';
 
 const analysis      		= 'analysis/includes';
 const coal          		= 'coa/includes';

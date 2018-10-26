@@ -1,13 +1,12 @@
 var gulp = require('gulp'),
     webpack = require('webpack');
-//const webpack = require('webpack');
 
 const gulpRename = require('gulp-rename');
 const gulpUglify = require('gulp-uglify');
 
-//const tempFolder = 'A:/global/scripts/';
-//const adaptiveFolder = 'W:/global/scripts/';
-const tempFolder = './app/temp/scripts/';
+const archiveGlobalScriptsFolder = 'A:/global/scripts/'; // A:\css_rehab\archive\global
+const adaptiveGlobalScriptsFolder = 'W:/global/scripts/'; // W:\adaptive\global
+const tempScriptsFolder = './app/temp/scripts/';
 
 gulp.task('webpack', ['modernizr'], function(callback) {
     webpack(require('../../webpack.config.js'), function(err, stats) {
@@ -20,11 +19,9 @@ gulp.task('webpack', ['modernizr'], function(callback) {
     });
 });
 
-
-
 gulp.task('scripts', ['webpack'], () =>
     gulp.src('./app/temp/scripts/global.js')
     .pipe(gulpUglify())
     .pipe(gulpRename('global.min.js'))
-    .pipe(gulp.dest(tempFolder))
+    .pipe(gulp.dest(archiveGlobalScriptsFolder))
 )

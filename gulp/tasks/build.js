@@ -78,10 +78,6 @@ gulp.task('compile-production-global', ['compile-production-css'], () =>
 );
 
 gulp.task('usemin', ['compile-production-css', 'webpack'], function() {
-
-
-
-
 //gulp.task('usemin', function() {
     return gulp.src(['./app/index.html','./app/**/*.html'],  {base: './app/'}) 
         .pipe(gulpUsemin({
@@ -95,4 +91,4 @@ gulp.task('usemin', ['compile-production-css', 'webpack'], function() {
         .pipe(gulp.dest("./docs"));
 });
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']); // 'optimizeImages',
