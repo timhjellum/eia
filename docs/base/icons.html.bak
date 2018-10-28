@@ -86,8 +86,8 @@
                 <h1 class="_h1">Icons</h1>
 
 
-                <ul class="dilly-dilly">
-                    <li class="dilly-dilly">
+                <ul class="style-guide">
+                    <li class="style-guide">
                         <h3 class="_h3">Logos</h3>
                         <div style="float: left; padding: 20px;">
                             <span class="ico logo"><span>EIA</span></span>
@@ -99,7 +99,7 @@
                             <span class="ico logo-white-background"><span>EIA</span></span>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
 
                         <h3 class="_h3">General Icons</h3>
 
@@ -448,7 +448,7 @@
                         </div>
 
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Analysis Projections Icons</h3>
 
                         <div class="source-icon">
@@ -501,7 +501,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <a name="file-types"></a>
                         <h3 class="_h3">File/Source Types</h3>
 
@@ -546,7 +546,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Informative Icons</h3>
                         <div class="source-icon">
                             <span class="ico printer"><span>PRINT</span></span>
@@ -570,7 +570,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">External Link</h3>
                         <p>
                             Using CSS rules in the <code>base.less</code> file. The rules will add an external link icon to all links that have a <code>http://</code>, <code>https://</code,> and <code>.com</code> in the URL except if eia.gov is in the
@@ -586,7 +586,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Navigational Icons</h3>
                         <div class="source-icon">
                             <span class="ico-menu ico-nav analysis-projections">Analysis &amp; Projections</span>
@@ -841,7 +841,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Header Icons</h3>
                         <span class="ico energy-kids"><span>energy-kids</span></span>
                         <div class="source-icon">
@@ -866,7 +866,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Social (Stay Connected...)</h3>
                         <div class="source-icon">
                             <span class="ico facebook">Facebook</span>
@@ -918,7 +918,7 @@
 &lt;/span&gt;</code></pre>
                         </div>
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Social Icons in the Navigation</h3>
 
                         <div class="source-icon">
@@ -978,7 +978,7 @@
                         </div>
 
                     </li>
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Social Icons in the Footer</h3>
                         <div class="source-icon">
                             <span class="ico ico-footer facebook"><span>Facebook</span></span>
@@ -1038,7 +1038,7 @@
 
                     </li>
                     <!--
-                        li class="dilly-dilly">
+                        li class="style-guide">
                         <h3 class="_h3">Miscellanious Icons, In Progress...</h3>
 
                         <div class="source-icon">
@@ -1073,7 +1073,7 @@
                         </div>
                     </li -->
 
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Forms</h3>
                         <p class="_p">See the <a href="./base.html">Base</a> &rsaquo; <a href="./forms">Forms</a> section for further implementation.</p>
                         <!-- start form -->
@@ -1114,7 +1114,7 @@
                         <!-- end section -->
                     </li>
 
-                    <li class="dilly-dilly">
+                    <li class="style-guide">
                         <h3 class="_h3">Buttons</h3>
                         <p class="_p">See the <a href="./base.html">Base</a> &rsaquo; <a href="./forms">Forms</a> section for further implementation.</p>
 

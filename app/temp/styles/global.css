@@ -5944,7 +5944,6 @@ legend {
     padding-right: 22px;
   }
 }
-
 @media (min-width: 1px) {
   .l-inner-wrapper {
     min-height: calc(-1900vh);

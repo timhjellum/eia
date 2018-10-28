@@ -33,8 +33,8 @@ class StickySidebar {
 						$(this).addClass("active");
 						var activeElement = $(this).index();
 
-						$(".dilly-dilly li").removeClass("active");
-						$(".dilly-dilly li:eq(" + activeElement + ")").addClass("active");
+						$(".style-guide li").removeClass("active");
+						$(".style-guide li:eq(" + activeElement + ")").addClass("active");
 					};
 				}
 				if ($($(this)).hasClass("active")) {
@@ -42,7 +42,7 @@ class StickySidebar {
 						$(this).removeClass("active");
 						var inactiveElement = $(this).index();
 						console.log(inactiveElement);
-						$(".dilly-dilly li:eq(" + inactiveElement + ")").removeClass("active");
+						$(".style-guide li:eq(" + inactiveElement + ")").removeClass("active");
 					};
 				}
 			});

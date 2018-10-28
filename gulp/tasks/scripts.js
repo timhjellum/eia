@@ -23,5 +23,5 @@ gulp.task('scripts', ['webpack'], () =>
     gulp.src('./app/temp/scripts/global.js')
     .pipe(gulpUglify())
     .pipe(gulpRename('global.min.js'))
-    .pipe(gulp.dest(archiveGlobalScriptsFolder))
+    .pipe(gulp.dest(tempScriptsFolder))
 )
