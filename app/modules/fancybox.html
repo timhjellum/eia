@@ -27,28 +27,28 @@
 </head>
 <body>
     <div class="_header">
-        <a class="logo-white-background" href="../index.html">
+        <a class="logo-white-background" href="https://wwwdev.eia.gov/style-guide/index.html">
             <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>
         </a>
         <ul class="_nav">
-            <li class="_nav-primary-item"><a href="../base/index.html">Base</a>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/base/index.html">Base</a>
                 <ul class="_base _nav-dropdown"></ul>
             </li>
-            <li class="_nav-primary-item"><a href="../layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>
             </li>
-            <li class="_nav-primary-item"><a href="../modules/index.html">Modules</a>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/modules/index.html">Modules</a>
                 <ul class="_modules _nav-dropdown">
                 </ul>
             </li>
-            <li class="_nav-primary-item"><a href="../states/index.html">States</a>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/states/index.html">States</a>
                 <ul class="_states _nav-dropdown">
                 </ul>
             </li>
-            <li class="_nav-primary-item"><a href="../themes/index.html">Themes</a>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/themes/index.html">Themes</a>
                 <ul class="_themes _nav-dropdown">
                 </ul>
             </li>
-            <li class="_nav-primary-item"><a href="../examples/index.html">Examples</a>
+            <li class="_nav-primary-item"><a href="https://wwwdev.eia.gov/style-guide/examples/index.html">Examples</a>
                 <ul class="_examples _nav-dropdown">
                 </ul>
             </li>
@@ -69,44 +69,38 @@
                 <h1 class="_h1">Modal</h1>
 
 				<ul class="style-guide l-default-page">
-                    <li class="style-guide dally-row-one-one">
+                    <li class="style-guide">
                         <h3 class="_h3">Scroll-to iFrame</h3>
-						 <a href="iframe.html#heading-fiv" class="scroll-to-iframe">Open Scroll-to iFrame</a>
-                        <div class="_example _toggle">
-                            <p class="_caption">HTML</p>
-<pre><code class="html">&lt;a href="iframe.html#heading-fiv"&gt;Open Scroll-to iFrame&lt;/a&gt;</code></pre>
-                        </div>
-                    </li>
-
-                    <li class="style-guide dally-row-one-one">
-                        <h3 class="_h3">Inline Content</h3>
-                        <a id="dillyID" href="javascript:;" class="inline-content">
-                            Open external page
-                        </a>
-
-                        <a href="#dallyID" class="inline-content">dallyID</a>
-                        <div style="display: none">
-                            <div id="dallyID">Some content here</div>
-                        </div>
-
-
-
-                        <div class="_example _toggle">
-                            <p class="_caption">HTML</p>
-<pre><code class="html"></code></pre>
-                        </div>
-
-
-
-<div id="dillyID" style="display: none;">
-    Hello World!
+						 <a href="iframe.html#heading-five" class="scroll-to-iframe">Open Scroll-to iFrame Header Five</a>
+<div class="_example _toggle">
+<h4 class="_h4">iFrame Scroll-to Content Example</h4>
+<p class="_p"><strong>Use when:</strong> iFrame content has page anchors.</p>
+<p class="_p">On screen resolutions from 340 - @990 or less, the modal opens 100% - 40px (to allow for the scrollbar. On screen resolutions 990px or greater (laptop +) the modal opens to 950px (990px - 40px). The height of the iframe is pass from the height of the viewport to allow for the correct positioning of the anchor.</p>
+<p class="_caption">HTML</p>
+<pre>
+<code class="html">
+&lt;a href="iframe.html#heading-five" class="scroll-to-iframe"&gt;Open Scroll-to iFrame Header Five&lt;/a&gt;
+</code></pre>
 </div>
-
-
-
-
-
-
+                    </li>
+                    <li class="style-guide">
+                        <h3 class="_h3">Inline Content</h3>
+                        <a data-width="660" data-height="700" href="#inlineContentID" class="inline-content">Open Inline Content</a>
+                        <div id="inlineContentID" style="display: none"><img src="https://www.eia.gov/homepage/images/energy-kids/kids-tablet-halloween.png"></div>
+<div class="_example _toggle">
+<h4 class="_h4">Basic Inline Content Example</h4>
+<p class="_p">Basic example has minimal responsiveness.</p>
+<p class="_caption">HTML</p>
+<pre>
+<code class="html">
+&lt;a href="#inlineContentID" class="inline-content"&gt;Open Inline Content&lt;/a&gt;
+&lt;!-- HREF and ID value must be the same (note the hash #) --&gt;
+&lt;div id="inlineContentID" style="display: none"&gt;
+    &lt;!-- your inline content here --&gt;
+    &lt;img src="https://www.eia.gov/homepage/images/energy-kids/kids-tablet-halloween.png"&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
                     </li>
 
 
@@ -166,7 +160,7 @@
                         <p class="_p">using the same image as the thumb (scaled) the responsive photo modal defaults to a maximum size of 980px and scales down in tablet/mobile view.</p>
                         <div class="_container">
 
-                            <!--
+    
                                 <iframe id="player" type="text/html" width="640" height="390"
                                 src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
                                 frameborder="0"></iframe>
@@ -190,7 +184,7 @@
                         <a id="single_image" href="http://farm2.staticflickr.com/1514/23919332220_60b7867d60_m.jpg">image</a>
 
 
-                        <!--
+          
                                     <div style="width: 200px; float: left; margin: 0 1em 1em 0" class="image">
                                         <a class="image" href="http://farm2.staticflickr.com/1514/23919332220_60b7867d60_b.jpg" title="the forest at dawn (Luca-Anconetani)">
                                             <img src="http://farm2.staticflickr.com/1514/23919332220_60b7867d60_m.jpg" alt="" />
@@ -226,32 +220,32 @@
                 </div>
             </div>
         </div>
-        <div class="_footer">
-            <ul class="_nav-footer">
-                <li class="_nav-footer-item"><a href="../base/index.html">Base</a>
+        <footer class="_footer"><div>
+            <ul class="_nav-footer l-row l-six-col-even">
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/base/index.html">Base</a>
                     <ul class="_base _nav-dropdown"></ul>
                 </li>
-                <li class="_nav-footer-item"><a href="../layouts/index.html">Layouts</a>
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>
                 </li>
-                <li class="_nav-footer-item"><a href="../modules/index.html">Modules</a>
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/modules/index.html">Modules</a>
                     <ul class="_modules _nav-dropdown">
                     </ul>
                 </li>
-                <li class="_nav-footer-item"><a href="../states/index.html">States</a>
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/states/index.html">States</a>
                     <ul class="_states _nav-dropdown">
                     </ul>
                 </li>
-                <li class="_nav-footer-item"><a href="../themes/index.html">Themes</a>
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/themes/index.html">Themes</a>
                     <ul class="_themes _nav-dropdown">
                     </ul>
                 </li>
-                <li class="_nav-footer-item"><a href="../examples/index.html">Examples</a>
+                <li class="_nav-footer-item l-narrow-col"><a href="https://wwwdev.eia.gov/style-guide/examples/index.html">Examples</a>
                     <ul class="_examples _nav-dropdown">
                     </ul>
                 </li>
             </ul>
         </div>
-</body>
+</footer></body>
 <!-- build:js ../assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
 <!-- endbuild -->

@@ -1,7 +1,9 @@
 @media @mobile {
-    /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-    /* ***** ***** ***** *****             ***** ***** ***** ***** */
-    /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+
+
+
+
     .fancybox-margin {
         margin-right: 0 !important;
     }
@@ -46,6 +48,19 @@
         outline: 0 !important;
     }
     .fancybox-wrap {
+        .close-menu {
+            position: absolute;
+            cursor: pointer;
+            z-index: 8040;
+            top: 5px;
+            right: 5px;
+        }
+        &.fancybox-type-iframe {
+            .close-menu {
+                top: 0px;
+                right: 0px;
+            }
+        }
         outline: 0;
         :active,
         :hover,

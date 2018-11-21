@@ -1,10 +1,8 @@
 
 @media @mobile {
-//	.dilly {
-//		border: 3px solid red;
-//	}
 	.accordion {
-		background-color: white;
+		width: 100%;
+		clear: both;
 		margin-bottom: 2em;
 		h3 {
 			.header-font;
@@ -44,6 +42,15 @@
 		.ui-accordion-header-icon,
 		.ui-icon {
 			background-image: none;
+		}
+		&.first-open {
+			h3 {
+				&:first-of-type {
+					span {
+						display: block !important;
+					}
+				}
+			}
 		}
 	}
     .accordion-content {
@@ -118,18 +125,6 @@
 						margin-top: 0;
 					}
 				}
-				//&:first-child {
-				//	.bold;
-				//}
-				//&.list-item {
-				//	&>ul {
-				//		&>li {
-				//			&:first-child {
-				//				.bold;
-				//			}
-				//		}
-				//	}
-				//}
 			}
 			&.highlight {
 				.font;
@@ -151,41 +146,32 @@
 			}	
 		}
 	}
-	.include {
-		color: firebrick !important;
-		a {
-			color: firebrick !important;
-			text-decoration: dotted;
-		}
-	}
 	.expand-collapse-container {
 		.font;
 		font-size: 0.750rem; // * 1.20%; // 
 		color: @eia-blue;
-		display: block;
-		width: 100%;
+		display: inline-block;
 		height: 12px;
-		margin-top: 12px;
+		margin-top: 7px; //margin-top: 12px;
 		text-transform: uppercase;
-		i {
-			&.ico {
-				.right;
-				cursor: pointer;
-				&.expand {
-					&:before {
-						.controls-icon(12px, 12px);
-						.icon-remove();
-						transform: rotate(45deg);
-						display: inline-block;
-						margin: -4px 3px 0 0;
-					}
+		.right;
+		.ico {
+			.right;
+			cursor: pointer;
+			&.expand {
+				&:before {
+					.controls-icon(12px, 12px);
+					.icon-remove();
+					transform: rotate(45deg);
+					display: inline-block;
+					margin: -4px 3px 0 0;
 				}
-				&.collapse {
-					&:before {
-						.controls-icon(12px, 12px);
-						display: inline-block;
-						margin: -4px 3px 0 0;
-					}
+			}
+			&.collapse {
+				&:before {
+					.controls-icon(12px, 12px);
+					display: inline-block;
+					margin: -4px 3px 0 0;
 				}
 			}
 		}

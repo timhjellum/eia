@@ -1,33 +1,43 @@
 @media @mobile {
-    ul {
-        &.visualizations {
+
+
+    div {
+        &.circle {
+            width:100px;
+            height:100px;
+            margin: 0 auto 20px auto;
+            display: block;
+            img {
+                border-radius: 50%;
+                border: 3px solid #d8d8d8;;
+                margin-left: -3px;
+            } 
+        }
+    }
+    .visualizations {
+        margin: 0 0 .5em; // margin-bottom: 2em;
+        width: 100%;
+        &>div {
+            margin-bottom: 1.5em;
+        }
+        h1 {
+            display: block;
+            border-bottom: 1px solid shade(white, 16.8%);
+            padding: 1em 0 6px 0;
+            clear: both;
+            line-height: 1;
+            margin-bottom: 13px;
+            font-weight: normal;
+            .header-font;
+            font-size: 26px;
+            color: @eia-dark-grey;
+            width: 100%;
+        }
+        ul {
             text-align: center;
             list-style: none;
             padding: 0;
-            margin: 0 0 3em;
-            width: 100%;
-            display: table;
-            .l-col {
-                min-height: 200px;
-                padding: 1em 0 1.5em 0;
-                -webkit-box-flex: 0;
-                -webkit-flex: 0 0 50.000%;
-                -ms-flex: 0 0 50.000%;
-                flex: 0 0 50.000%;
-                max-width: 50.000%;
-                width: 50.000%;
-                display: table-cell;
-                &:nth-child(1),
-                &:nth-child(3),
-                &:nth-child(5) {
-                    clear: left;
-                }
-                &:nth-child(2),
-                &:nth-child(4),
-                &:nth-child(6) {
-                    clear: right;
-                }
-            }
+            margin: 0;
             li {
                 a {
                     .font;
@@ -42,11 +52,8 @@
                     }
                 }
                 h3 {
-                    //margin-top: 12px;
                     .font;
                     .bold;
-                    //display: block;
-                    display: inline;
                     font-size: 0.813rem; // 13 pixels
                     line-height: 1.4em;
                     color: @eia-blue;
@@ -56,63 +63,45 @@
                     }
                 }
             }
-        }   
-    }
-    div {
-        &.circle {
-            width:100px;
-            height:100px;
-            margin: 0 auto 20px auto;
-            display: block;
-            img {
-                border-radius: 50%;
-                border: 3px solid #d8d8d8;;
-                margin-left: -3px;
-            } 
         }
-    }                
-}
-@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-    ul {
-        &.visualizations {
-            .l-col {
-                padding: 20px 0;
-                -webkit-box-flex: 0;
-                -webkit-flex: 0 0 33.333333%;
-                -ms-flex: 0 0 33.333333%;
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%;
-                width: 33.333333%;
-                &:nth-child(3) {
-                    clear: right;     
+        &.l-row {
+            &.l-six-col-even {
+                .l-col { 
+                    width: 48%;
                 }
-                &:nth-child(1),
-                &:nth-child(2),
-                &:nth-child(4),
-                &:nth-child(5),
-                &:nth-child(6) {
-                    clear: none;
+            }
+        }
+    }
+}
+@media @mobile-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+    .visualizations {
+        &.l-row {
+            &.l-six-col-even {
+                .l-col { 
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+    .visualizations {
+        margin-bottom: .5em;
+        &>div {
+            margin-bottom: 1.5em;
+        }
+        &.l-row {
+            &.l-six-col-even {
+                .l-col { 
+                    width: 14.666%;
                 }
             }
         }
     }
 }
 @media @laptop {
-    ul {
-        &.visualizations {
-            margin: 0 0 1em;
-            .l-col {
-                -webkit-box-flex: 0;
-                -webkit-flex: 0 0 16.666667%;
-                -ms-flex: 0 0 16.666667%;
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%;
-                width: 16.666667%;
-                padding: 0 1.2em 1.2em 1.2em;
-                &:first-child {
-                    padding-left: 0;
-                }
-            }
-        }  
+    margin-bottom: 2em;
+    &>div {
+        margin-bottom: 0;
     }
 }

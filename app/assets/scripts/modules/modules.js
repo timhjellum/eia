@@ -96,7 +96,7 @@ if(window.location.href.indexOf("eia.gov")!=-1) {
         });
         $('.visualizations a').each(function() {
             if ($(this).text().trim().length <= 0) {
-                $(this).parent().remove();
+                $(this).parent().parent().remove();
                 //console.log('removing empty element');
             }
         });

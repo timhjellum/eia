@@ -1,130 +1,254 @@
 @media @mobile {
-    .basic-table {
-        margin-bottom: 3em;
-        overflow-y: hidden;
-        overflow-x: auto;
-		.secondary {
-			margin-bottom: 0;
+    div {
+        &.basic-table {
+            overflow-y: hidden;
+            overflow-x: auto;
+//            margin-bottom: 2em; // margin-bottom: 3em;
         }
         table {
-            &.sticky {
-                overflow-y: hidden;
-                overflow-x: auto;
-            }
-            thead {
-                tr {
-                    th {
-                        white-space: nowrap;
-                    }
+            &.basic_table,
+            &.basic-table {
+                /*
+                &.sticky {
+                    overflow-y: hidden;
+                    overflow-x: auto;
                 }
-            }
-            tbody {
-                tr {
-                    td {
-                        white-space: nowrap;
-                    }
+                */
+                border-bottom: 2px solid @eia-blue;
+                //margin: 1em 0 0 0;
+                margin: 0;
+                &:last-of-type {
+                    border-bottom: none;
                 }
-            }
-            caption {
-                span {
-                    &.units {
-                        float: none;
-                        display: inline;
-                        font-weight: normal;
-                        .italic;
-                        font-size: 0.813rem; // 13 pixels
-                    }
-                }
-            }
-            thead {
-                tr {
-                    th {
-                        .align-right;
-                        padding: 6px 10px 5px 10px;
-                        background-color: white; // required for sticky table header
-                        &:first-child {
-                            .align-left;
-                            padding: 6px 10px 5px 5px;
-                        }
-                        em {
-                            .bold;
+                caption {
+                    span {
+                        &.units {
+                            float: none;
+                            display: inline;
+                            font-weight: normal;
+                            .italic;
+                            font-size: 0.813rem; // 13 pixels
                         }
                     }
                 }
-            }
-            tbody {
-                border-top: 3px solid @eia-blue;
-                tr {
-                    td {
-                        .align-right;
-                        border-bottom: 1px dashed #d8d8d8;
-                        white-space: normal !important;
-                        &:first-child {
-                            .align-left;
-                            padding: 6px 10px 5px 5px;
-                        }
-                    }
-                    &:first-child {
-                        td {
-                            &.divider {
-                                border-top-color: #fff;
+                thead {
+                    tr {
+                        th {
+                            .align-right;
+                            padding: 6px 10px 5px 10px;
+                            background-color: white; // required for sticky table header
+                            white-space: nowrap;
+                            &:first-child {
+                                .align-left;
+                                //padding: 6px 10px 5px 10px;
+                            }
+    /* cannot add the border here
+    &:last-child {
+    th {
+    border-bottom: 3px solid @eia-blue;
+    }
+    }
+    */
+                            em {
+                                .bold;
+                            }
+
+                            ////////////////////////////////////////////////////////////////
+                            //  petroleum new_navigation icons                                              //
+                            ////////////////////////////////////////////////////////////////
+                            button {
+                                &.ico {
+                                    float: left;
+                                    padding: 1px 5px 1px 0;
+                                    border: none;
+                                    margin: 0;
+                                    background-color: transparent;
+                                    &.reset-animation {
+                                        &:before {
+                                            .controls-icon(20px, 20px);
+                                            .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 0.8);
+                                        }
+                                        &:hover {
+                                            &:before {
+                                                .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            a {
+                                &.ico {
+                                    float: left;
+                                    padding: 1px 0 1px 5px;
+                                    border: none;
+                                    margin: 0;
+                                    background-color: transparent;
+                                    &.line-chart {
+                                        &:before {
+                                            .controls-icon(20px, 20px);
+                                            .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 0.8);
+                                        }
+                                        &:hover {
+                                            &:before {
+                                                .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 1);
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                    &:last-child {
-                        td {
-                            border-bottom: none;
+                }
+                tbody {
+                    //border-top: 3px solid @eia-blue;
+                    tr {
+                        &:first-child {
+                            td {
+                                border-top: 3px solid @eia-blue;
+                                //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+                            }
                         }
+                        &:last-child {
+                            td {
+                                border-bottom: none;
+                            }
+                        }
+                        td {
+                            padding: 6px 10px 5px 10px;
+                            .align-right;
+                            border-bottom: 1px dashed #d8d8d8;
+                            white-space: normal;
+                            &:first-child {
+                                .align-left;
+                            }
+                            span {
+                                &.number {
+                                    float: left;
+                                    width: 20px;
+                                    text-align: right;
+                                    font-weight: bold;
+                                    margin-right: 10px;
+                                }
+                            }
+                            a {
+                                .ico {
+                                    margin-left: 0;
+                                    font-size: 0;
+                                    line-height: 0;
+                                    span {
+                                        .normal;
+                                        margin-left: 4px;
+                                        font-size: 0.750rem; // 12 pixels
+                                        // this hides the textual labels of the icons on tables. Must get approved by Miroslava
+                                        //position: absolute;
+                                        //left: -10000px;
+                                        //top: auto;
+                                        //width: 1px;
+                                        //height: 1px;
+                                        //overflow: hidden;
+                                    }
+                                    &.key {
+                                        margin: 0;
+                                        width: 20px;
+                                        height: 20px;
+                                        span {// this hides the textual labels of the icons on tables.
+                                            position: absolute;
+                                            left: -10000px;
+                                            top: auto;
+                                            width: 1px;
+                                            height: 1px;
+                                            overflow: hidden;
+                                        }
+                                        &:before {
+                                            .controls-icon(20px, 15px);
+                                            .icon-key(@fill-color: @eia-blue, @fill-opacity: 0.8);
+                                        }
+                                        &:hover {
+                                            &:before {
+                                                .icon-key(@fill-color: @eia-blue, @fill-opacity: 1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        /*
+                        &:first-child {
+                            td {
+                                &.divider {
+                                    border-top-color: #fff;
+                                }
+                            }
+                        }
+                        */
+    
+                    }
+                }
+                tfoot {
+                    tr {
+                        td {
+                            padding: 12px 10px 10px 10px;
+                            //padding: 6px 10px 5px 5px;
+                            //padding: 12px 10px 10px 5px;
+                            font-size: 0.688rem;
+                            text-align: right;
+                            a {
+                                font-size: 0.688rem; 
+                            }
+                            &:first-child {
+                                text-align: left;
+                            }
+                        }
+                        &:first-child {
+                            td {
+                                border-top: 2px solid @eia-blue;
+                                //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+                            }
+                        }
+                        /*
+                        &.total {                   
+                            td {
+                                border-top: 2px solid #d8d8d8;
+                                border-bottom: 1px solid @eia-blue;
+                                margin-bottom: -2px;
+                                &.divider {
+                                    border-top-color: #fff;
+                                }
+                            }
+                        }
+                        &.foot-note {
+                            td {
+                                border-top: 1px solid @eia-blue;
+                                border-bottom: #fff;
+                            }
+                        }
+                        */
                     } 
                 }
-            }
-            tfoot {
-                tr {
-                    td {
-                        padding: 12px 10px 10px 10px;
-                        font-size: 0.688rem;
-                        text-align: right;
-                        a {
-                            font-size: 0.688rem; 
-                        }
-                        &:first-child {
-                            text-align: left;
-                        }
-                    }
-                    &:first-child {
-                        td {
-                            border-top: 2px solid @eia-blue;
-                            //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
-                        }
-                    }
-                    &.total {                   
-                        td {
-                            border-top: 2px solid #d8d8d8;
-                            border-bottom: 1px solid @eia-blue;
-                            margin-bottom: -2px;
-                            &.divider {
-                                border-top-color: #fff;
+                &.numbered {
+                    tbody {
+                        tr {
+                            td {
+                                &:nth-child(1) {
+                                    font-weight: bold;
+                                    //padding: 6px 10px 5px 5px;
+                                    text-align: right;
+                                }
+                                &:nth-child(2) {
+                                    text-align: left;
+                                }
                             }
                         }
                     }
-                    &.foot-note {
-                        td {
-                            border-top: 1px solid @eia-blue;
-                            border-bottom: #fff;
-                        }
-                    }
-                } 
+                }
             }
         }
     }
 }
 @media @tablet { 
-    .basic-table {
-        margin-bottom: 2em;
-		.secondary {
-			margin-bottom: 0;
-        }
-        table {
+    table {
+        &.basic_table,
+        &.basic-table {
             caption {
                 font-size: .9375rem; //15px    
                 p {
@@ -146,10 +270,6 @@
 }
 @media @laptop {
     .basic-table {
-        margin-bottom: 2em;
-		.secondary {
-			margin-bottom: 0;
-        }
         /*
         table {
             &.sticky {

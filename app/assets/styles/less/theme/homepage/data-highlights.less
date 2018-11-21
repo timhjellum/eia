@@ -6,7 +6,7 @@
             //border: 1px solid #e3e5e6;
             //padding: 4px;
             .accent {
-                //background-color: #dff2fb;
+                background-color: #dff2fb;
                 padding: .938em .813em;
                 h2 {
                     padding: 0 0 0.625em 0;
@@ -50,19 +50,16 @@
         }
     }
 }
-
-
-
 @media @tablet {
 	.homepage {
         .data-highlights  {
-		    margin-bottom: 2em;
+            margin-bottom: 2em;
+            .accent {
+                background-color: transparent;
+            }
 	    }
     }
 }
-
-
-
 @media @laptop {
 	.homepage {
         .data-highlights  {
@@ -70,7 +67,7 @@
             border: 1px solid #e3e5e6;
             padding: 4px;
             .accent {
-                background-color: #dff2fb;
+				background-color: @eia-blue-module-background;
                 padding: .938em .813em;
                 h2 {
                     padding: 0 0 5px 0;

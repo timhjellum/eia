@@ -1,14 +1,241 @@
-@media @mobile {
-	a {
-        &.tourBox {
+@media @mobile  {
+    .dashboard-container {
+        h1 {
+            padding: 0;
+            margin: 1em 0 .5em;
+            color: @eia-dark-grey;
+            border: none;
+            .font;
+            .bold;
+            .header-font;
+            font-size: 1.625rem;
+            width: 100%;
+        }
+        .eia-heatmap-title, 
+        h2 {
+            padding: 0;
+            margin: 0;
+            color: @eia-dark-grey;
+            border: none;
+            .font;
+            .bold;
+            font-size: 1rem; // 16 pixels 
+        }
+    }
+
+
+
+
+	a  {
+        &.tourBox  {
             display: none;
         }
-	}
-}
-@media @laptop {
-	a {
-        &.tourBox {
-            display: block;
+    }
+    .dashboard-container {
+        .l-row {
+            .l-full-width-col {
+                .page-nav {
+                    .right-nav {
+                        a {
+                            padding-bottom: 0px !important;
+                        }
+                    }
+                }
+            }
+            .l-two-col {
+                .page-nav {
+                    .left-nav {
+                        a,
+                        &:link,
+                        &:active,
+                        &:visited,
+                        &:hover {
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+            }
         }
-	}
+    }
+
+
+//    let's make the map toggle something like container-toggle
+//    then we can let it share the page nav styles and we can overwrite the font size just there
+/*
+    .commentary .activeCommentary {
+        border-bottom: none !important;
+        cursor: pointer;
+    }
+    .commentary .commentaryTitle {
+        border-bottom: 0;
+        color: #0096d7;
+    }
+    .commentary h1 {
+        padding-top: 6px;
+    }
+    .commentary section ul {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        color: #333;
+        font-size: 12px;
+        line-height: 1.125rem;
+        padding-left: 40px;
+        margin-bottom: 1em;
+    }
+    */
+    .commentary {
+        article {
+            margin-top: .6em; // 9px;
+            padding-top: 1.2em; // 9px;
+            border-top: 4px solid #5d9732;
+            &:last-of-type {
+                margin-bottom: 3em;
+            }
+            &:first-child {
+                border-top: none;
+                padding-top: 0;
+                margin-top: 0;
+            }
+            .accordion-header {
+                border-bottom: 1px solid #a6a6a6;
+                h1 {
+                    .font;
+                    .bold;
+                    font-size: 1.125rem; // 13.5pt;
+                    line-height: 1;
+                    border: none;
+                    margin: 0;
+                    padding: 6px 0;
+                    color: @eia-dark-grey;
+                    width: 100%;
+                    clear: both;
+                    &.commentaryTitle {
+                        cursor: pointer;
+                    }
+                }
+                .date {
+                    .font;
+                    .bold;
+                    font-size: 0.875rem; // was 10.5pt;
+                    color: #a6a6a6;
+                }
+                &.activeCommentary {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    h1 {
+                        color: @eia-blue;
+                    }
+                }
+                &:first-child {
+                    border-top: none;
+                    padding-top: 0;
+                    margin-top: 0;
+                }
+            }
+            //        }
+            //        h1{
+            //            padding-top:6px;
+            //            color: @eia-dark-grey;
+            //        }
+            /*
+            ::ng-deep section ul {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                color: #333;
+                font-size: 12px;
+                line-height: 1.125rem;
+                padding-left: 40px;
+                margin-bottom: 1em;
+            }
+            .secondary {
+                border-top: solid 3px @eia-blue;
+                padding-top: 6px;
+                &:first-child {
+                    margin-top: 8px;
+                }
+            }
+            */
+            section {
+                border-bottom: none !important;
+                padding: 0;
+                margin: 0 0 2em 0;
+                clear: both;
+                padding-bottom: .625em; // 10px;
+                text-align: justify;
+                text-justify: auto;
+                display: table;
+                h4 {
+                    .header-font;
+                    //font-size: 19pt;
+                    font-size: 1.375rem;
+                    font-weight: 400;
+                    margin-bottom: 4px;
+                    display: block;
+                    width: 100%;
+                    clear: both;
+                }
+                h3 {
+                    .font;
+                    font-size: 1.125rem; // 13.5pt;
+                    font-size: .9375rem;
+                    padding: 0 0 12px 0;
+                    color: @eia-dark-grey;
+                    width: 100%;
+                    clear: both;
+                }
+                p {
+                    .font;
+                    font-size: 0.875rem; // was 10.5pt;
+                    line-height: 1.75em;
+                    margin-top: 14px 0 2px 0;
+                    clear: both;
+                    &.source {
+                        font-size: 0.7rem;
+                        color: #666666;
+                    }
+                }
+                /*
+                ul {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                color: #333;
+                font-size: 12px;
+                line-height: 1.125;
+                padding-left: 40px;
+                margin-bottom: 1em;
+                }
+                */
+                ul {
+                    margin: 0 1em 1em 0;
+                    padding-left: 1.5em;
+                    font-size: 0.875;
+                    .font;
+                    font-weight: 400;
+                    line-height: 1.75em;
+                    width: 100%;
+                    clear: both;
+                    li {
+                        margin: 0 0 10px 0;
+                        line-height: 1.75;
+                    }
+                }
+                img {
+                    display: inline-block;
+                    margin: 0 auto 0 auto;
+                    width: 100%;
+                    max-width: 500px;
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@media @tablet {
+    article {
+        img {
+            width: 500px;
+        }
+    }
 }

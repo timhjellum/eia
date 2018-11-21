@@ -13,6 +13,7 @@
 			display: inline-block;
 			border-bottom: 1px solid @eia-blue;
 			ul {
+				list-style: none;
 				&.left-nav {
 					list-style: none;
 					margin: 2px 0 0 22px;
@@ -68,6 +69,7 @@
 			margin: 12px;
 			.left;
 			ul {
+				list-style: none;
 				&.left-nav {
 					list-style: none;
 					margin: 0;
@@ -125,7 +127,6 @@
 		}
 	}
 }
-
 @media @mobile-landscape {
 	.sub-navigation {
 		.left {
@@ -133,7 +134,7 @@
 				&.left-nav {
 					&>li {
 						&>a {
-							font-size: 0.938rem; 
+							font-size: 0.938rem; // this is the correct size. The mobile size is smaller to fit in the mobile resolution
 						}
 					}
 				}
@@ -141,7 +142,8 @@
 		}
 	}
 }
-@media @tablet-landscape {
+//@media @tablet-landscape {
+@media @laptop {
 	.sub-navigation {
 		height: 30px;
 		background: shade(white, 10.2%);
@@ -169,8 +171,9 @@
 							color: @eia-blue;
 							text-decoration: none;
 							.ico {
-								display: block;
-								float: right;
+								display: inline-block;
+								//display: block;
+								//float: right;
 								&.sort-up {
 									&:before {
 										.controls-icon(12px, 10px);
@@ -201,22 +204,38 @@
 							border-right: 1px solid fade(@eia-black, 45%);
 							border-left: 1px solid fade(@eia-black, 45%);
 							border-bottom: none;
-							a {
+							&>a {
 								color: @eia-darker-blue;
 								border-bottom: none;
 								.ico {
-									display: block;
-									float: right;
+									display: inline-block;
+									//display: block;
+									//float: right;
 									&.sort-up {
 										&:before {
 											.icon-d-arrow(@fill-color: @eia-darker-blue);
 										}
 									}
 								}
+								&:hover {
+									background: @eia-blue;
+									a {
+										color: @eia-dark-blue;
+										text-decoration: underline;
+										border-bottom: none;
+										.ico {
+											&.sort-up {
+												&:before {
+													.icon-d-arrow(@fill-color:@eia-darker-blue);
+												}
+											}
+										}
+									}	
+								}
 							}
 							&:hover {
 								background: @eia-blue;
-								a {
+								&>a {
 									color: @eia-dark-blue;
 									text-decoration: underline;
 									border-bottom: none;
@@ -267,6 +286,7 @@
 							box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 							padding: 6px 16px 12px 16px;
 							ul {
+								padding: 0;
 								list-style: none;
 								li {
 									a {

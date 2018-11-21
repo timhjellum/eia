@@ -31,7 +31,7 @@
 @import "less/modules/page-tabs";
 @import "less/modules/page-titles";
 @import "less/modules/report-header";
-@import "less/modules/accent";
+@import "less/modules/weeklies";
 @import "less/modules/fancybox";
 
 /* start reusable containers */
@@ -74,3 +74,4 @@
 @import "less/theme/homepage/layout";
 
 /* @import "../../../node_modules/jquery-ui/themes/base/tabs.css"; */
+

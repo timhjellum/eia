@@ -2,7 +2,6 @@ import headsUp from 'headsup.js';
 
 class Header {
     constructor() {
-
         headsUp({
             selector: '._header',
             duration: 0.3,
@@ -11,45 +10,48 @@ class Header {
             debounce: false
         })
 
-        $("._base").html('<li><a href="../base/color-palette.html">Color Palette</a></li>' +
-            '<li><a href="../base/forms.html">Forms</a></li>' +
-            '<li><a href="../base/icons.html">Icons</a></li>' +
-            '<li><a href="../base/lists.html">Lists</a></li>' +
-            '<li><a href="../base/size-conversions.html">Size Conversions</li>' +
-            '<li><a href="../base/symbols.html">Symbols</a></li>' +
-            '<li><a href="../base/tables.html">Tables</a></li>' +
-            '<li><a href="../base/typography.html"></a>Typography</li>');
 
-        $("._layouts").html('<li><a href="../layouts/nested-layouts.html">Nested Layouts</a></li>');
 
-        $("._modules").html('<li><a href="../modules/accordion.html">Accordions</a></li>' +
-            '<li><a href="../modules/content-containers-home.html">Content Containers (home)</a></li>' +
-            '<li><a href="../modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' +
-            '<li><a href="../modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' +
-            '<li><a href="../modules/fancybox.html">Modals (FancyBox)</a></li>' +
-            '<li><a href="../modules/lists.html">Lists</a></li>' +
-            '<li><a href="../modules/page-titles.html"></a>Messaging</li>' +
-            '<li><a href="../modules/page-titles.html">Page Titles</a></li>' +
-            '<li><a href="../modules/table-list-formatting.html">Tables</a></li>' +
-            '<li><a href="../modules/tabs.html"></a>Tabs</li>');
+        $("._base").html('<li><a href="https://wwwdev.eia.gov/style-guide/base/color-palette.html">Color Palette</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/forms.html">Forms</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/icons.html">Icons</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/lists.html">Lists</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/size-conversions.html">Size Conversions</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/symbols.html">Symbols</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/tables.html">Tables</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/base/typography.html"></a>Typography</li>');
+
+        $("._layouts").html('<li><a href="https://wwwdev.eia.gov/style-guide/layouts/nested-layouts.html">Nested Layouts</a></li>');
+
+        $("._modules").html('<li><a href="https://wwwdev.eia.gov/style-guide/modules/accordion.html">Accordions</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-home.html">Content Containers (home)</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/fancybox.html">Modals (FancyBox)</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/lists.html">Lists</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/page-titles.html"></a>Messaging</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/page-titles.html">Page Titles</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/list-formatting.html">Lists Formatting</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/table-formatting.html">Table Formatting</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/modules/tabs.html"></a>Tabs</li>');
 
         $("._states").html('<li><a href="empty-list-items.html"></a>Empty List Items</li>' +
             '<li>sticky-table-headers.html</li>');
 
-        $("._themes").html('<li><a href="../theme/accordion"></a>Accordion</li>' +
-            '<li><a href="../theme/basic-table"></a>Basic Tables</li>' +
-            '<li><a href="../theme/data"></a>Date Tables</li>' +
-            '<li><a href="../theme/natural-gas"></a>Natural Gas</li>' +
-            '<li><a href="../theme/overview"></a>Overview</li>' +
-            '<li><a href="../theme/primary-col-modules"></a>Primary Modules</li>' +
-            '<li><a href="../theme/secondary-col-modules"></a>Secondary Modules</li>');
+        $("._themes").html('<li><a href="https://wwwdev.eia.gov/style-guide/theme/accordion"></a>Accordion</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/basic-table"></a>Basic Tables</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/data"></a>Date Tables</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/natural-gas"></a>Natural Gas</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/overview"></a>Overview</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/primary-col-modules"></a>Primary Modules</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/theme/secondary-col-modules"></a>Secondary Modules</li>');
 
-        $("._examples").html('<li><a href="../examples/index.html"></a>Page Template</li>' +
-            '<li><a href="../examples/index.html"></a>Header</li>' +
-            '<li><a href="../examples/sub-navigation.html">Sub-navigation</a></li>' +
-            '<li><a href="../examples/header.html">Header</a></li>' +
-            '<li><a href="../examples/slider-home.html">Slider Home</a></li>' +
-            '<li><a href="../examples/slider-multi.html">Slider Multi</a></li>');
+        $("._examples").html('<li><a href="https://wwwdev.eia.gov/style-guide/examples/index.html"></a>Page Template</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/examples/index.html"></a>Header</li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/examples/sub-navigation.html">Sub-navigation</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/examples/header.html">Header</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/examples/slider-home.html">Slider Home</a></li>' +
+            '<li><a href="https://wwwdev.eia.gov/style-guide/examples/slider-multi.html">Slider Multi</a></li>');
 
 
         //if ($('.navbar-brand:contains(Base)').length > 0) {

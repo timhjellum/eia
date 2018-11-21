@@ -34,5 +34,5 @@ new FirefoxHack();
 import jqueryUI from './modules/jquery-ui';
 new jqueryUI();
 
-import StickyTableHeaders from './modules/sticky-table-headers';
-new StickyTableHeaders();
+//require('backstopjs');
+

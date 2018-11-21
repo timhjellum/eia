@@ -55,6 +55,7 @@ class jqueryUI {
                 }
             }
         });
+
         $('.accordion.all-open').accordion({
             heightStyle: 'content',
             active: true,
@@ -64,10 +65,25 @@ class jqueryUI {
         });
         $('.accordion.all-open h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
         $('.accordion.all-open .ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+        
         $('.accordion.first-open').accordion({
             heightStyle: 'content',
-            collapsible: true
+            collapsible: true,
+            header: 'h3',
+            icons: {
+                'header': 'ico expand',
+                'activeHeader': 'ico collapse'
+            },
+            activate: function (event, ui) {
+                if (!$.isEmptyObject(ui.newHeader.offset())) {
+                    $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top - 50 }, 'slow');
+                }
+            }
         });
+        $('.accordion.first-open > h3:first-of-type').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
+        $('.accordion.first-open > div:first-of-type').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+        $('.accordion.first-open > h3:first-of-type span').addClass('collapse').removeClass('expand').css('display','block');
+        
         // set the initial state
         $('.collapse').hide();
         $('.l-inner-wrapper a[href*="#"]').not('.l-inner-wrapper [href="#"]').not('.l-inner-wrapper [href="#0"]').click(function (event) {

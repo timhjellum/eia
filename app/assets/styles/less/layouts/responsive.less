@@ -1,5 +1,12 @@
 @media @mobile {
     .l-row {
+        .l-row {
+            margin: 0;
+            padding: 0;
+            .l-full-width-col {
+                padding: 0;
+            }
+        }
         // fallback
         .l-col,
         .l-narrow-col,
@@ -35,10 +42,6 @@
 			justify-content: space-between;
 			display: inline-flex;
             flex-flow: row wrap;
-            h1,
-            h2,
-            h3,
-            h4,
             .l-two-col,
             .l-one-third-col,
             .l-main-col,
@@ -48,39 +51,6 @@
             .l-two-third-col,
             .l-full-width-col {
                 width: 100%;
-                /*
-                .l-row {
-                    &.l-two-col-even,
-                    &.l-two-col-left,
-                    &.l-two-col-right,
-                    &.l-three-col-even,
-                    &.l-four-col-even {
-                        -ms-box-orient: horizontal;
-                        display: -webkit-box;
-                        display: -moz-box;
-                        display: -ms-flexbox;
-                        display: -moz-flex;
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-flex-flow: row wrap;
-                        justify-content: space-between;
-                        display: inline-flex;
-                        flex-flow: row wrap;
-                        width: 100%;
-                        .l-col,
-                        .l-narrow-col,
-                        .l-two-col,
-                        .l-one-third-col,
-                        .l-main-col,
-                        .l-split-wide-col,
-                        .l-split-narrow-col,
-                        .l-one-third-col,
-                        .l-two-third-col { 
-                            width: 100%;
-                        }
-                    }
-                }
-                */
             }
         }
     }
@@ -90,61 +60,44 @@
     .l-row {
         &.l-six-col-even,
         &.l-four-col-even {
-//           div {
-                .l-col,
-                .l-narrow-col { 
-                    width: 48%;
-                }
-//            }
+            .l-col,
+            .l-narrow-col { 
+                width: 48%;
+            }
         }
         &.l-three-col {
-//           div {
-                .l-narrow-col { 
-                    width: 48%;
-                }
-                .l-two-col { 
-                    width: 100%;
-                }
-//            }
-        }
-        &.l-three-col-even {
-//           div {
-                .l-one-third-col {
-                    width: 100%;
-                }
-//          }
+            .l-narrow-col { 
+                width: 48%;
+            }
+            .l-two-col { 
+                width: 100%;
+            }
         }
     }
 }
-@media @tablet {
-
-}
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
     .l-row {
-//        &.l-two-col-even,
         &.l-four-col-even,
         &.l-six-col-even {
-//            div {
-                .l-col { 
-                    width: 32%;
-                }
-                .l-narrow-col, { 
-                    width: 48%;
-                }
-//                &.l-two-col { 
-//                    width: 48%;
-//                }
-//    }
+            .l-col { 
+                width: 32%;
+            }
+            .l-narrow-col, { 
+                width: 48%;
+            }
         }
         &.l-three-col {
-//            div {
-                .l-narrow-col { 
-                    width: 23% !important;
-                }
-                .l-two-col { 
-                    width: 48% !important;
-                }
-//            }
+            .l-narrow-col { 
+                width: 23%;
+            }
+            .l-two-col { 
+                width: 48%;
+            }
+        }
+        &.l-three-col-even {
+            .l-one-third-col { // 33.333%
+                width: 31.333%;
+            }
         }
     }
 }
@@ -182,7 +135,7 @@
         &.l-two-col-right,
         &.l-two-col-right-wide,
         &.l-two-col-even,
-        &.l-three-col-even,
+//        &.l-three-col-even,
         &.l-four-col-even,
         &.l-six-col-even,
         &.l-three-col {
@@ -210,47 +163,52 @@
             .l-two-third-col { // 66.666% 
                 width: 64.666%;
             }
-            // handle the nested layouts 
-            .l-two-col,
-            .l-one-third-col,
-            .l-main-col,
-            .l-split-wide-col,
-            .l-split-narrow-col,
-            .l-one-third-col,
-            .l-two-third-col,
-            .l-full-width-col { 
-                .l-row {
-                    &.l-two-col-even,
-                    &.l-two-col-left,
-                    &.l-two-col-right,
-                    &.l-three-col-even,
-                    &.l-four-col-even {
-                        .l-narrow-col { 
-                            width: 23%;
-                        }
-                        .l-two-col { 
-                            width: 48%; 
-                        }
-                        .l-one-third-col { 
-                            width: 31.333%;
-                        }
-                        .l-two-third-col { 
-                            width: 64.666%;
-                        }
+            // nested layouts
+            // nested layouts
+            // nested layouts
+            .l-row {
+                &.l-two-col-even,
+                &.l-three-col-even,
+                &.l-four-col-even,
+                &.l-six-col-even {
+                    padding-right: 0;
+                }
+            //}
+            //.l-two-col,
+            //.l-one-third-col,
+            //.l-main-col,
+            //.l-split-wide-col,
+            //.l-split-narrow-col,
+            //.l-one-third-col,
+            //.l-two-third-col,
+            //.l-full-width-col { 
+            //.l-row {
+                &.l-two-col-even,
+                &.l-two-col-left,
+                &.l-two-col-right,
+                &.l-three-col-even,
+                &.l-four-col-even {
+                    .l-narrow-col { 
+                        width: 23%;
+                    }
+                    .l-two-col { 
+                        width: 48%; 
+                    }
+                    .l-one-third-col { 
+                        width: 31.333%;
+                    }
+                    .l-two-third-col { 
+                        width: 64.666%;
                     }
                 }
             }
+        //}
         }
-    }
-    .l-full-width-page {
-        .l-row {
-            &.l-two-col-even {
-                .l-two-col {
-                    &:last-of-type {
-                        padding-right: 22px;
-                    }
-                }
-            }
+        &.l-two-col-even,
+        &.l-three-col-even,
+        &.l-four-col-even,
+        &.l-six-col-even {
+            padding-right: 22px;
         }
     }
 }

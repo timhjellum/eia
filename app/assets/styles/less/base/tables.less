@@ -1,55 +1,215 @@
 @media @mobile {
     table {
         width: 100%;
-        //border-collapse: collapse; // eliminate all cellspacing
-        //border-spacing: 0;
+        border-collapse: collapse; // eliminate all cellspacing
+        border-spacing: 0;
         color: @eia-dark-grey;
         a {
-            color: @eia-blue;
-            font-size: 0.750rem; // 12 pixels
+            color:@eia-blue;
             text-decoration: none;
-            &:hover {
+            &:link,
+            &:active,
+            &:visited {
+                color:@eia-blue;
+                text-decoration: none;
+            }
+            &:hover{
                 text-decoration: underline;
+                color:@eia-blue;
             }
         }
         &.highlight-col-1 {
-            //th:nth-child(1),
             td:nth-child(1) {
                 background-color: #f7f7f7;
             }
         }
         &.highlight-col-2 {
-            //th:nth-child(2),
             td:nth-child(2) {
                 background-color: #f7f7f7;
             }
         }
         &.highlight-col-3 {
-            //th:nth-child(3),
             td:nth-child(3) {
                 background-color: #f7f7f7;
             }
         }
         &.highlight-col-4 {
-            //th:nth-child(4),
             td:nth-child(4) {
                 background-color: #f7f7f7;
             }
         }
         &.highlight-col-5 {
-            //th:nth-child(5),
             td:nth-child(5) {
                 background-color: #f7f7f7;
             }
         }
         &.highlight-col-6 {
-            //th:nth-child(6),
             td:nth-child(6) {
                 background-color: #f7f7f7;
             }
         }
+        &.highlight-col-7 {
+            td:nth-child(7) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-8 {
+            td:nth-child(8) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-9 {
+            td:nth-child(9) {
+                background-color: #f7f7f7;
+            }
+        }
+        &.highlight-col-10 {
+            td:nth-child(10) {
+                background-color: #f7f7f7;
+            }
+        }
+
+        &.align-left-col-1 {
+            td:nth-child(1) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-2 {
+            td:nth-child(2) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-3 {
+            td:nth-child(3) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-4 {
+            td:nth-child(4) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-5 {
+            td:nth-child(5) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-6 {
+            td:nth-child(6) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-7 {
+            td:nth-child(7) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-8 {
+            td:nth-child(8) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-9 {
+            td:nth-child(9) {
+                text-align: left;
+            }
+        }
+        &.align-left-col-10 {
+            td:nth-child(10) {
+                text-align: left;
+            }
+        }
+
+        &.hide-1 {
+            th:nth-child(1),
+            td:nth-child(1) {
+                display: none
+            }
+        }
+        &.hide-col-2 {
+            th:nth-child(2),
+            td:nth-child(2) {
+                display: none
+            }
+        }
+        &.hide-col-3 {
+            th:nth-child(3),
+            td:nth-child(3) {
+                display: none
+            }
+        }
+        &.hide-col-4 {
+            th:nth-child(4),
+            td:nth-child(4) {
+                display: none
+            }
+        }
+        &.hide-col-5 {
+            th:nth-child(5),
+            td:nth-child(5) {
+                display: none
+            }
+        }
+        &.hide-col-6 {
+            th:nth-child(6),
+            td:nth-child(6) {
+                display: none
+            }
+        }
+        &.hide-col-7 {
+            th:nth-child(7),
+            td:nth-child(7) {
+                display: none
+            }
+        }
+        &.hide-col-8 {
+            th:nth-child(8),
+            td:nth-child(8) {
+                display: none
+            }
+        }
+        &.hide-col-9 {
+            th:nth-child(9),
+            td:nth-child(9) {
+                display: none
+            }
+        }
+        &.hide-col-10 {
+            th:nth-child(10),
+            td:nth-child(10) {
+                display: none
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         caption {
-            font-size: .938rem; //15px / 11pt;
+            font-size: .938rem; 
             .align-left;
             caption-side: top;
             color: @eia-dark-grey;
@@ -57,7 +217,7 @@
             .bold;
             a {
                 color: @eia-blue;
-                font-size: 0.750rem; // 12 pixels
+                font-size: 0.750rem; 
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
@@ -92,10 +252,7 @@
                     }
                 }
                 th {
-                    font-size: .750rem; // 12px;
-                    vertical-align: bottom;
-                    .align-left;                     
-                    padding: 6px 0 5px 0;
+                    font-size: .750rem;
                     color: @eia-dark-grey;
                     .font;
                     .bold;
@@ -122,12 +279,9 @@
         tbody {
             tr {
                 td {
-                    font-size: .750rem; // 12px;
+                    font-size: .750rem;
                     color: @eia-dark-grey;
                     .font;
-                    vertical-align: top;
-                    .align-left;
-                    padding: 6px 10px 5px 10px;
                     h4 {
                         margin: 0;
                         padding: 0;
@@ -144,11 +298,10 @@
                     }
         
                 }
+                /*
                 &.past-holiday{
                     td {
                         border-bottom:1px solid #d8d8d8;;
-                        //vertical-align:bottom;
-                        //text-align:right;
                         color:fade(@eia-black, 40%);
                     }
                 }
@@ -157,6 +310,7 @@
                         .semi-bold;
                     }
                 }
+                */
                 &.indented {
                     td {
                         &:first-child {
@@ -172,16 +326,73 @@
         tfoot {
             tr {
                 td {
-                    font-size: .750rem; // 12px;
+                    font-size: .750rem;
                     color: @eia-dark-grey;
                     .font;
-                    vertical-align: top;
-                    .align-left;                     
-                    padding: 6px 10px 5px 10px; 
                 }
             }    
         }
     }
+    // this applies the styles to all new tables (just incase there's old ones thst we don't want to mess up
+    .l-row {
+        table {
+            thead {
+                tr {
+                    th {
+                        vertical-align: bottom;
+                        .align-left;                     
+                        padding: 6px 10px 5px 10px;
+                    }
+                    /*
+                    &:last-child {
+                        th {
+                            border-bottom: 3px solid #d8d8d8;
+                        }
+                    }
+                    */
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        vertical-align: top;
+                        padding: 6px 10px 5px 10px;
+                        border-bottom: 1px dashed #d8d8d8;
+                    }
+                    /*
+                    &:last-child {
+                        td {
+                            border-bottom: 1px solid #d8d8d8;
+                        }
+                    }
+                    */
+                    &:first-child {
+                        td {
+                            border-top: 3px solid @eia-blue;
+                            //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    } 
+                }   
+            }
+            tfoot {
+                tr {
+                    td {
+                        vertical-align: top;                    
+                        padding: 6px 10px 5px 10px; 
+                    }
+                    &:first-child {
+                        td {
+                            border-top: 1px solid #d8d8d8;
+                        }
+                    }
+                }    
+            }
+        }
+    }
 }
-
 

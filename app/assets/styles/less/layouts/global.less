@@ -11,20 +11,6 @@
 			width: 100%;
 			padding: 39px 0 0;
 			margin: 0;
-			/*
-			&>.l-row { // <-- breaks flex
-				&:last-child {
-					display: table;
-				}
-			}
-			.l-full-width-page {
-				&>.l-row {
-					&:last-child {
-						display: table;
-					}
-				}
-			}
-			*/
 			.push {
 				height: 50px;
 				clear: both;
@@ -93,9 +79,11 @@
 	}
 }
 @media @tablet {	// mobile panorama
+	/*
 	.l-row {
 		padding: 0 1em;
 	}
+	*/
 }
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
 	.l-col {
@@ -104,18 +92,6 @@
 	.l-row {
 		.l-row {
 			padding: 0;
-			/*
-			.l-two-col,
-			.l-two-third-col,
-			.l-one-third-col {
-				&:first-child {
-					padding: 0 11px 0 0;
-				}		
-				&:last-child {
-					padding: 0 0 0 11px;
-				}
-			}
-			*/
 		}
 	}
 }
@@ -143,66 +119,12 @@
 			}			
 		}
 	}
-	// this is a col reset to keep all the mobile spacing from interfering with the laptop <
-	.l-row.header > div,
-	.l-row.header > h1,
-	.l-row.header > h2,
-	.l-row.header > h3,
-	.l-row.header > h4,
-	.l-row.header > h5,
-	.l-row.header > h6,
-	.l-row.header > p,
-	.l-row.header > ul,
-	.l-row.header > ol,
-	.l-col,
-	.l-narrow-col,
-	.l-one-third-col,
-	.l-middle-col,
-	.l-split-narrow-col,
-	.l-split-wide-col,
-	.l-two-third-col,
-	.l-main-col,
-	.l-full-width-col {
-		padding-left: 0;
-		padding-right: 0;
-	}
 	.container {
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
 	}
-	/*
-	.l-col { // flex width - space so 16.666 - ??
-		width: 16.666%;
-	}
-	.l-narrow-col {
-		width: 25%;
-	}
-	.l-one-third-col {
-		width: 33.333333%;
-	}
-	.l-split-narrow-col {
-		width: 41.666%;
-	}
-	.l-middle-col,
-	.l-two-col {
-		width: 50%;
-	}
-	.l-split-wide-col {
-		width: 58.333%;
-	}
-	.l-two-third-col {
-		width: 66.666667%;
-	}
-	.l-main-col {
-		width: 75%;
-	}
-	.l-full-width-col {
-		padding: 0;
-		width: 100%;
-	}
-	*/
 	.l-row {
 		padding-left: 22px;
 		padding-right: 0;

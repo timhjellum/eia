@@ -1,20 +1,19 @@
 @media @mobile {
     .report-header {
-		border-bottom: solid 1px #ededee; // check
 		display: table;
 		width: 100%;
-        border-left: 22px solid white;
+        padding: 0 0 6px 0;
 		border-bottom: solid 1px #ededee; // check
-//        background-color: white;
-        padding-bottom: 6px;
-        //min-height: 123px;
-        margin-bottom: 1.5em;
+        margin: 0 0 1.5em;
+        .report-header-inner {
+            margin: 0 0 6px 0;
+            padding: 0 1em 0 1em;
+        }
 		h2 {
 			.header-font;
             font-size: 26px;
             margin: 0;
             padding: 0;
-        //    padding-top: 40px;
         }
         .publish-metadata {
             .font;
@@ -60,50 +59,26 @@
                 }
             }
         }
-        /*
-        .gradient {
-            min-height: 123px;
-            .gradient(@stops:rgba(255,255,255,1) 0,rgba(255,255,255,1) 20%,rgba(227,227,227,1) 100%,#eeeeee 100%;);
-        }
-        */
-
-
-
-
-        
         .report-selector-container {
-            font-size: 0.813rem; // 13 pixels
-            .font;
-            .bold;
             margin: 0;
             padding: 6px 0 12px 0;
-            color: #626262; // check
-            //fieldset {
-            //    padding-top: 6px;
-            //}
-        }
-
-
-
-        /*
-        form {
-            margin: 8px 0;
-            select {
-                width: 100px;
-            }
-            .button {
-                position: absolute;
-                margin-left: 6px;
+            legend {
                 span {
-                    position: absolute;
-                    left: -10000px;
-                    top: auto;
-                    width: 1px;
-                    height: 1px;
-                    overflow: hidden;
+                    display: none;
                 }
-            }					
+            }
+            select {
+                width: 180px;
+            }
+
         }
-        */
+    }
+}
+
+@media @tablet-landscape {
+    .report-header {
+        .report-header-inner {
+            padding: 0 22px 0 22px;
+        }
     }
 }

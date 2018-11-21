@@ -1,6 +1,5 @@
 @media @mobile {
 
-    // move to lists
     .formats {
         .italic;
         a {
@@ -18,13 +17,14 @@
     .source {
         .italic;
     }
-
     .primary-alt,
     .primary,
     .secondary-alt,
     .secondary,
     .accordion-content {
         ul {
+//padding: 0; // overide base
+//margin: 0; // overide base
             list-style: none;
             &.list-seperator {
                 //margin-top: 1.5em;
@@ -46,7 +46,8 @@
                     }
                     &>ul {
                         list-style: none;
-                        margin: 0;
+                        padding: 0; // overide base
+                        margin: 0; 
                         &.sub-list,
                         &.list-spacer {
                             list-style: none;
@@ -71,9 +72,18 @@
                     list-style: none;
                 }
                 a {
-                    color: @eia-blue;
-                    font-size: .875rem; // * 1.20%; 
+                    color:@eia-blue;
                     text-decoration: none;
+                    &:link,
+                    &:active,
+                    &:visited {
+                        color:@eia-blue;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                        color:@eia-blue;
+                    }
                     span {
                         &.date {
                             margin-right:  12px;
@@ -106,7 +116,6 @@
                         }
                     }
                     &:hover {
-                        text-decoration: underline;
                         .ico {
                             text-decoration: underline;
                         }
@@ -123,6 +132,8 @@
                 &.list-item {
                     list-style: none;
                     &>ul {
+                        padding: 0; // overide base
+                        margin: 0; // overide base
                         display: block;
                         &>li {
                             list-style-type: none;
@@ -177,24 +188,9 @@
                         display: table;
                     }
                 }
-
-                /*
-                &.interactive {
-                    position: relative;
-                    list-style: none;
-                    margin-left: 0;
-                    &:before {
-                        .icon-file-type(interactive);
-                        .controls-icon(15px, 16px);
-                        position: absolute;
-                    }
-                    a {
-                        padding-left: 20px;
-                        display: table;
-                    }
-                }
-                */
                 ul {
+                    padding: 0; // overide base
+                    margin: 0; // overide base
                     li {
                         margin: 3px 0 0 17px;
                         list-style-type: disc;

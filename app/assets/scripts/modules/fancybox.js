@@ -5,7 +5,10 @@ class FancyBox {
     constructor() {
         this.fancyBoxMenu();
         this.fancyBoxLightBox();
-        this.fancyBoxInlineContent();
+        this.fancyBoxScrollToIframe();
+        //this.fancyBoxInlineContent();
+        this.fancyBoxInlineTrigger = $('.inline-content-trigger');
+        this.events();
     }
 
     fancyBoxLightBox() {
@@ -32,6 +35,15 @@ class FancyBox {
                 $("#login_error").hide();
             }
         });
+
+        $("button.lightbox").fancybox({
+            autoResize: false, // To sidestep issue with Highcharts in Fancybox 2 disappearing when the browser is resized -SNW
+            transitionIn: 'elastic',
+            transitionOut: 'elastic',
+            speedIn: 600,
+            speedOut: 200,
+            //'overlayShow': false
+        });
     }
     fancyBoxMenu() {
         var viewPortWidth = window.innerWidth;
@@ -43,7 +55,7 @@ class FancyBox {
         /* $$$$$                      iframe                     $$$$$ */
         /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
         $('.iframe').click(function(event) {
-            console.log("clicked");
+
             var target = $(this).attr("href");   
             $.fancybox({
                 href: target,
@@ -79,7 +91,7 @@ class FancyBox {
                 onComplete: function() {
                     $('.fancybox-iframe').load(function() { // wait for frame to load and then gets it's height
                         //$('.fancybox-inner').height($(this).contents().find('body').height()+30);
-                        console.log($('.fancybox-iframe body').height());
+                        //console.log($('.fancybox-iframe body').height());
                     });
                 },
                 /*
@@ -97,53 +109,37 @@ class FancyBox {
                 */
             });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            console.log("clicked");
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            console.log(target);
+            //console.log(target);
             event.preventDefault();
         });
     }
 
 
     fancyBoxScrollToIframe() {
+        /*
+        $('scroll-to-iframe').fancybox({
+            type: 'inline',
+            tpl: {
+                closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+            },
+        });
+        */
 
-        var fancyBoxWidth = 980;
+        
 
-
-        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-        /* $$$$$                 scroll to iframe                $$$$$ */
-        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+        const iFrameWidth = ($('footer').width() - 60);
+        //var fancyBoxWidth = 980;
+        //console.log(iFrameWidth);
 
         $('.scroll-to-iframe').click(function(event) {
             var target = $(this).attr("href");
-            console.log(target);  
+            //console.log(target);  
             $.fancybox({
                 href: target,
                 scrolling: 'yes',
                 type: 'iframe',
-                width: fancyBoxWidth,
+                width: iFrameWidth,
                 autoSize: false, // required for width
                 margin: [0, 0, 0, 0],
                 height: 'auto',
@@ -166,12 +162,6 @@ class FancyBox {
             //console.log(iFrameHeight);
             $('iframe').css('height', iFrameHeight);
         });
-
-
-
-
-
-
     }   
 
 
@@ -179,61 +169,60 @@ class FancyBox {
 
 
 
-
-    fancyBoxInlineContent() {
-            var viewPortWidth = window.innerWidth;
-            var viewPortHeight = window.innerHeight;
-            
-            var fancyBoxWidth = 980;
     
-            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-            /* $$$$$                      iframe                     $$$$$ */
-            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-            $('.inline-content').click(function() {
-//                var targetID = (this.id);
-//                alert(targetID);
+    fancyBoxInlineContent() {   
+        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+        /* $$$$$                      inline                     $$$$$ */
+        /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+        //console.log("v2.2");
 
-                console.log("clicked"); 
-                $.fancybox({
-                    scrolling: 'no',  
-                    type: 'inline',
-//                    content: targetID,
-                    width: fancyBoxWidth,
-                    autoSize: false, // required for width
-                    margin: [40, 0, 20, 0],
-                    height: 'auto',
-                    padding: 0,
-                    fitToView: false,
-                    topRatio: 0,
-                    autoDimension: false,
-                    overlayShow: false,
-                    tpl: {
-                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
-                    },
-                    beforeLoad: function() {
-                        viewPortWidth = window.innerWidth;
-                        if (viewPortWidth <= fancyBoxWidth) {
-                            this.width = viewPortWidth;
-                            //    this.autoResize = true;
-                            this.fitToView = true;
-                            //    console.log(viewPortHeight + ' ' + this.height);
-                        } else {
-                            this.width = fancyBoxWidth;
-                            //    this.autoResize = false;
-                            this.fitToView = false;
-                            //    console.log(viewPortHeight + ' ' + this.height);
-                        };
-                    },
-                    /*
-                    afterLoad: function(){
-                        $.extend(this,{
-                            content: this.element.data(target)
-                        })
-                    }
-                    */
-                });
-                event.preventDefault();
+
+        //this.header.toggleClass('show');
+        //this.logo.toggleClass('show');
+        //this.searchPanel.toggleClass('show');
+
+        /*
+        $('.inline-content').on('click', function(e) {
+            e.preventDefault(); 
+            var $this = $(this); 
+            var elementWidth = $this.attr("data-width");
+            var elementHeight = $this.attr("data-height");
+            console.log('element width is :' + elementWidth + ', element height is :' + elementHeight);
+            $.fancybox({
+                width: elementWidth,
+                height: elementHeight,
+                autoDimensions: false,
+                autoSize: false,
+                tpl: {
+                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><span class="ico-menu close-menu">Close</span></a>'
+                },
             });
+        });
+        */
+    }
+
+    events() {
+        //this.fancyBoxInlineTrigger.click(this.fancyBoxInlineContent());
+        $('.inline-content-trigger').on('click', function(event) {
+            var $this = $(this); 
+            var elementWidth = $this.attr("data-width");
+            var elementHeight = $this.attr("data-height");
+            //console.log('element width is :' + elementWidth + ', element height is :' + elementHeight);
+            event.preventDefault(); 
+        });  
+        /*
+        if(typeof $.fancybox == 'function') {
+        console.log("FancyBox is loaded");
+        } else {
+        console.log("No FB");
         }
+        */
+       $('.inline-content').fancybox({
+            type: 'inline',
+            tpl: {
+                closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+            },
+        });
+    }
 }
 export default FancyBox;

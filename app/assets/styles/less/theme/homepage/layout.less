@@ -1,61 +1,70 @@
-/*
+
 @media @tablet {
 	.homepage {
-		.l-row {
+	    .l-row {
+
+/*   _______    		 ___________
+/*  |c|  a  |   		|_____a_____|
+/*  |d|_____|   to		|_____b_____|
+/*  |e|  b  |   	    | c | d | e |
+/*  |_|_____|   		|___|___|___|
+
+/*  1) this takes the l-three-col-even and retains the columns on the hp from tablet + */
+/*  2) this takes the nested modules inside the l-narrow-col makes them act like a three-column-even on the hp from tablet + */
+
+			&.l-two-col-left-narrow,
 			&.l-two-col-right-narrow {
+
+				.l-main-col {
+					.l-row {
+						&.l-three-col-even {
+							padding-left: 0;
+							.l-one-third-col { 
+								width: 32%;
+							}
+						}
+					}
+
+				}
 				.l-narrow-col {
-					padding-right: 0;
-					padding-left: 0;
+					width: 100%;
+					-ms-box-orient: horizontal;
+					display: -webkit-box;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: -moz-flex;
+					display: -webkit-flex;
+					display: flex;
+					-webkit-flex-flow: row wrap;
+					justify-content: space-between;
+					display: inline-flex;
+					flex-flow: row wrap;
+					&>div {
+						width: 32%;
+						position: relative;
+						min-height: 1px;
+						//margin: 0;
+						float: left;
+					}
 				}
+
 
 			}
-			&.l-three-col {
-				.l-narrow-col {
-					padding-right: 0;
-					padding-left: 0;
-					&:last-child {
-						padding-right: 0;
-						padding-left: 0;
-					}
-				}
-
-				.l-two-col {
-					padding-right: 0;
-					padding-left: 0;
-				}
-
-			}
-
-			&.l-four-col-even {
-				&>div {
-					padding: 0 0 0 0;
-					&:nth-child(1) {
-						padding-right: 0;
-						padding-left: 0;
-					}
-					&:nth-child(2) {
-						padding-right: 0;
-						padding-left: 0;
-					}
-					&:nth-child(3) {
-						padding-right: 0;
-						padding-left: 0;
-					}
-					&:nth-child(4) {
-						padding-right: 0;
-						padding-left: 0;
-					}
-				}
-			}
-
 		}
-	}
+    }
 }
-*/
+//@mobile: 				320px	-	479
+//@mobile-landscape: 	480px	-	599
+//@tablet: 				600px	-	800
+//@tablet-landscape: 	801px	-	955
+//@laptop: 				956px		<
+
 @media @tablet-landscape {
 	.homepage {
 		.l-row {
+			//padding-left: 0;
 			&.l-three-col {
+				padding-left: 0;
 				&>div {
 					&.l-narrow-col { 
 						.primary { 
@@ -66,21 +75,15 @@
 					}
 				}
 			}
-			&.l-four-col-even {
+			&.l-three-col-even {
 				&>div {
-					&.l-narrow-col {
-						/*
-						.primary { 
-							ul {
-								margin-left: 22px;
-							}
-						}
-						*/
+					&.l-one-third-col {
 						&:nth-child(1) {
 							ul {
 								margin: 0 0 0 22px;
 							}
 						}
+						/*
 						&:nth-child(2) {
 							ul {
 								margin: 0;
@@ -91,9 +94,7 @@
 								margin: 0 22px 0 0;
 							}
 						}
-						&:nth-child(4) {
-							border-left: none; // required
-						}
+						*/
 					}
 				}
 			}
@@ -101,3 +102,32 @@
 	}
 }
 
+@media @laptop {
+	.homepage {
+		.l-row {
+			&.l-two-col-right-narrow {
+				padding-left: 0;
+				.l-main-col {
+					.l-row {
+						&.l-three-col-even {
+							padding-left: 0;
+							.l-one-third-col { 
+								width: 32%;
+							}
+						}
+					}
+
+				}
+				.l-narrow-col {
+					width: 23%;
+					display: table-cell; // this disables flex
+					&>div {
+						width: 100%;
+					}
+				}
+
+
+			}
+		}
+	}
+}

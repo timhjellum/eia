@@ -45,14 +45,14 @@ class BxSlider {
                 if (footerWidth > 989) {
                     setTimeout(function(){
                         $('.bx-controls').addClass('show').removeClass('hide');
-console.log('footer : ' + footerWidth);
+//console.log('footer : ' + footerWidth);
                     }, 1000)
         
         
                 } else if (footerWidth <= 989) {
                     setTimeout(function(){
                         $('.bx-controls').removeClass('show').addClass('hide');
-console.log('footer : ' + footerWidth);
+//console.log('footer : ' + footerWidth);
                     }, 1000)
                 };
                 
@@ -75,7 +75,7 @@ console.log('footer : ' + footerWidth);
                     $('.slider-multi').css('width', + footerWidth);
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $('.sticky').css('width', + (footerWidth - 12));
-console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
+//console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
                 } else if ((footerWidth >= 600) && (footerWidth <= 800)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 3;
@@ -95,7 +95,7 @@ console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slide
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
                     $('.sticky').css('width', + (footerWidth - 12));
-console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
+//console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
                 } else if ((footerWidth >= 450) && (footerWidth <= 599)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 2;
@@ -116,7 +116,7 @@ console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi widt
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
                     $('.sticky').css('width', + (footerWidth - 12));
-console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
+//console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
                 } else if ((footerWidth >= 320) && (footerWidth <= 449)) {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 1;
@@ -136,7 +136,7 @@ console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-m
                     $('.slider-multi-wrapper').css('width', + footerWidth);
                     $('.bx-viewport').css('overflow', 'visible'); // required for peeking left and right slides
                     $('.sticky').css('width', + (footerWidth - 16));
-console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
+//console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
                 } else {
                     mySettings.wrapperClass = 'slider-multi-wrapper';
                     mySettings.minSlides = 5;
@@ -154,8 +154,8 @@ console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi widt
                         slider.reloadSlider(mySettings);  
                     }, 100)
                     $('.slider-multi').css('width','912');
-                    console.log("912");
-console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + footerWidth);
+                    //console.log("912");
+//console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + footerWidth);
                 };
             }).trigger('resize');// on load, trigger the resize event
             // load the slider when it's ready
@@ -171,7 +171,7 @@ console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi widt
 
     /*
     MultiSliderLoaded() {
-        console.log('Loaded - show slides');
+        //console.log('Loaded - show slides');
         $('.slider-multi').addClass('bxslider-visible');
         $('.slider-home').addClass('bxslider-visible');
     }

@@ -94,10 +94,6 @@
 
 	var _jqueryUi2 = _interopRequireDefault(_jqueryUi);
 
-	var _stickyTableHeaders = __webpack_require__(31);
-
-	var _stickyTableHeaders2 = _interopRequireDefault(_stickyTableHeaders);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _fancybox2.default();
@@ -124,7 +120,7 @@
 
 	new _jqueryUi2.default();
 
-	new _stickyTableHeaders2.default();
+	//require('backstopjs');
 
 /***/ }),
 /* 1 */
@@ -156,7 +152,10 @@
 
 	        this.fancyBoxMenu();
 	        this.fancyBoxLightBox();
-	        this.fancyBoxInlineContent();
+	        this.fancyBoxScrollToIframe();
+	        //this.fancyBoxInlineContent();
+	        this.fancyBoxInlineTrigger = $('.inline-content-trigger');
+	        this.events();
 	    }
 
 	    _createClass(FancyBox, [{
@@ -185,6 +184,15 @@
 	                    $("#login_error").hide();
 	                }
 	            });
+
+	            $("button.lightbox").fancybox({
+	                autoResize: false, // To sidestep issue with Highcharts in Fancybox 2 disappearing when the browser is resized -SNW
+	                transitionIn: 'elastic',
+	                transitionOut: 'elastic',
+	                speedIn: 600,
+	                speedOut: 200
+	                //'overlayShow': false
+	            });
 	        }
 	    }, {
 	        key: 'fancyBoxMenu',
@@ -198,7 +206,7 @@
 	            /* $$$$$                      iframe                     $$$$$ */
 	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 	            $('.iframe').click(function (event) {
-	                console.log("clicked");
+
 	                var target = $(this).attr("href");
 	                $.fancybox({
 	                    href: target,
@@ -232,10 +240,9 @@
 	                        };
 	                    },
 	                    onComplete: function onComplete() {
-	                        $('.fancybox-iframe').load(function () {
-	                            // wait for frame to load and then gets it's height
+	                        $('.fancybox-iframe').load(function () {// wait for frame to load and then gets it's height
 	                            //$('.fancybox-inner').height($(this).contents().find('body').height()+30);
-	                            console.log($('.fancybox-iframe body').height());
+	                            //console.log($('.fancybox-iframe body').height());
 	                        });
 	                    }
 	                    /*
@@ -253,30 +260,35 @@
 	                    */
 	                });
 
-	                console.log("clicked");
 	                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-	                console.log(target);
+	                //console.log(target);
 	                event.preventDefault();
 	            });
 	        }
 	    }, {
 	        key: 'fancyBoxScrollToIframe',
 	        value: function fancyBoxScrollToIframe() {
+	            /*
+	            $('scroll-to-iframe').fancybox({
+	                type: 'inline',
+	                tpl: {
+	                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                },
+	            });
+	            */
 
-	            var fancyBoxWidth = 980;
-
-	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-	            /* $$$$$                 scroll to iframe                $$$$$ */
-	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	            var iFrameWidth = $('footer').width() - 60;
+	            //var fancyBoxWidth = 980;
+	            //console.log(iFrameWidth);
 
 	            $('.scroll-to-iframe').click(function (event) {
 	                var target = $(this).attr("href");
-	                console.log(target);
+	                //console.log(target);  
 	                $.fancybox({
 	                    href: target,
 	                    scrolling: 'yes',
 	                    type: 'iframe',
-	                    width: fancyBoxWidth,
+	                    width: iFrameWidth,
 	                    autoSize: false, // required for width
 	                    margin: [0, 0, 0, 0],
 	                    height: 'auto',
@@ -303,58 +315,58 @@
 	    }, {
 	        key: 'fancyBoxInlineContent',
 	        value: function fancyBoxInlineContent() {
-	            var viewPortWidth = window.innerWidth;
-	            var viewPortHeight = window.innerHeight;
-
-	            var fancyBoxWidth = 980;
-
 	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-	            /* $$$$$                      iframe                     $$$$$ */
+	            /* $$$$$                      inline                     $$$$$ */
 	            /* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-	            $('.inline-content').click(function () {
-	                //                var targetID = (this.id);
-	                //                alert(targetID);
+	            //console.log("v2.2");
 
-	                console.log("clicked");
+
+	            //this.header.toggleClass('show');
+	            //this.logo.toggleClass('show');
+	            //this.searchPanel.toggleClass('show');
+
+	            /*
+	            $('.inline-content').on('click', function(e) {
+	                e.preventDefault(); 
+	                var $this = $(this); 
+	                var elementWidth = $this.attr("data-width");
+	                var elementHeight = $this.attr("data-height");
+	                console.log('element width is :' + elementWidth + ', element height is :' + elementHeight);
 	                $.fancybox({
-	                    scrolling: 'no',
-	                    type: 'inline',
-	                    //                    content: targetID,
-	                    width: fancyBoxWidth,
-	                    autoSize: false, // required for width
-	                    margin: [40, 0, 20, 0],
-	                    height: 'auto',
-	                    padding: 0,
-	                    fitToView: false,
-	                    topRatio: 0,
-	                    autoDimension: false,
-	                    overlayShow: false,
+	                    width: elementWidth,
+	                    height: elementHeight,
+	                    autoDimensions: false,
+	                    autoSize: false,
 	                    tpl: {
-	                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                        closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><span class="ico-menu close-menu">Close</span></a>'
 	                    },
-	                    beforeLoad: function beforeLoad() {
-	                        viewPortWidth = window.innerWidth;
-	                        if (viewPortWidth <= fancyBoxWidth) {
-	                            this.width = viewPortWidth;
-	                            //    this.autoResize = true;
-	                            this.fitToView = true;
-	                            //    console.log(viewPortHeight + ' ' + this.height);
-	                        } else {
-	                            this.width = fancyBoxWidth;
-	                            //    this.autoResize = false;
-	                            this.fitToView = false;
-	                            //    console.log(viewPortHeight + ' ' + this.height);
-	                        };
-	                    }
-	                    /*
-	                    afterLoad: function(){
-	                        $.extend(this,{
-	                            content: this.element.data(target)
-	                        })
-	                    }
-	                    */
 	                });
+	            });
+	            */
+	        }
+	    }, {
+	        key: 'events',
+	        value: function events() {
+	            //this.fancyBoxInlineTrigger.click(this.fancyBoxInlineContent());
+	            $('.inline-content-trigger').on('click', function (event) {
+	                var $this = $(this);
+	                var elementWidth = $this.attr("data-width");
+	                var elementHeight = $this.attr("data-height");
+	                //console.log('element width is :' + elementWidth + ', element height is :' + elementHeight);
 	                event.preventDefault();
+	            });
+	            /*
+	            if(typeof $.fancybox == 'function') {
+	            console.log("FancyBox is loaded");
+	            } else {
+	            console.log("No FB");
+	            }
+	            */
+	            $('.inline-content').fancybox({
+	                type: 'inline',
+	                tpl: {
+	                    closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico-menu close-menu">Close</i></a>'
+	                }
 	            });
 	        }
 	    }]);
@@ -12743,12 +12755,12 @@
 	                if (footerWidth > 989) {
 	                    setTimeout(function () {
 	                        $('.bx-controls').addClass('show').removeClass('hide');
-	                        console.log('footer : ' + footerWidth);
+	                        //console.log('footer : ' + footerWidth);
 	                    }, 1000);
 	                } else if (footerWidth <= 989) {
 	                    setTimeout(function () {
 	                        $('.bx-controls').removeClass('show').addClass('hide');
-	                        console.log('footer : ' + footerWidth);
+	                        //console.log('footer : ' + footerWidth);
 	                    }, 1000);
 	                };
 
@@ -12771,7 +12783,7 @@
 	                    $('.slider-multi').css('width', +footerWidth);
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $('.sticky').css('width', +(footerWidth - 12));
-	                    console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
+	                    //console.log('Tablet & Landscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletLandscapeSlideWidth);
 	                } else if (footerWidth >= 600 && footerWidth <= 800) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
 	                    mySettings.minSlides = 3;
@@ -12791,7 +12803,7 @@
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
 	                    $('.sticky').css('width', +(footerWidth - 12));
-	                    console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
+	                    //console.log('tablet - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + tabletSlideWidth);
 	                } else if (footerWidth >= 450 && footerWidth <= 599) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
 	                    mySettings.minSlides = 2;
@@ -12812,7 +12824,7 @@
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $(".bx-viewport").css('overflow', 'visible'); // required for peeking left and right slides
 	                    $('.sticky').css('width', +(footerWidth - 12));
-	                    console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
+	                    //console.log('mobileLandscape - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileLandscapeSlideWidth);
 	                } else if (footerWidth >= 320 && footerWidth <= 449) {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
 	                    mySettings.minSlides = 1;
@@ -12832,7 +12844,7 @@
 	                    $('.slider-multi-wrapper').css('width', +footerWidth);
 	                    $('.bx-viewport').css('overflow', 'visible'); // required for peeking left and right slides
 	                    $('.sticky').css('width', +(footerWidth - 16));
-	                    console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
+	                    //console.log('mobile - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + mobileSlideWidth);
 	                } else {
 	                    mySettings.wrapperClass = 'slider-multi-wrapper';
 	                    mySettings.minSlides = 5;
@@ -12850,8 +12862,8 @@
 	                        slider.reloadSlider(mySettings);
 	                    }, 100);
 	                    $('.slider-multi').css('width', '912');
-	                    console.log("912");
-	                    console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + footerWidth);
+	                    //console.log("912");
+	                    //console.log('laptop - footer width: ' + footerWidth + ', ' + '.slider-multi width: ' + footerWidth + ', ' + '.slider-multi-wrapper width: ' + footerWidth);
 	                };
 	            }).trigger('resize');
 	        }
@@ -12859,7 +12871,7 @@
 
 	    /*
 	    MultiSliderLoaded() {
-	        console.log('Loaded - show slides');
+	        //console.log('Loaded - show slides');
 	        $('.slider-multi').addClass('bxslider-visible');
 	        $('.slider-home').addClass('bxslider-visible');
 	    }
@@ -14831,7 +14843,7 @@
 	            });
 	            $('.visualizations a').each(function () {
 	                if ($(this).text().trim().length <= 0) {
-	                    $(this).parent().remove();
+	                    $(this).parent().parent().remove();
 	                    //console.log('removing empty element');
 	                }
 	            });
@@ -15118,6 +15130,7 @@
 	                    }
 	                }
 	            });
+
 	            $('.accordion.all-open').accordion({
 	                heightStyle: 'content',
 	                active: true,
@@ -15127,10 +15140,25 @@
 	            });
 	            $('.accordion.all-open h3').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
 	            $('.accordion.all-open .ui-accordion-content').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+
 	            $('.accordion.first-open').accordion({
 	                heightStyle: 'content',
-	                collapsible: true
+	                collapsible: true,
+	                header: 'h3',
+	                icons: {
+	                    'header': 'ico expand',
+	                    'activeHeader': 'ico collapse'
+	                },
+	                activate: function activate(event, ui) {
+	                    if (!$.isEmptyObject(ui.newHeader.offset())) {
+	                        $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top - 50 }, 'slow');
+	                    }
+	                }
 	            });
+	            $('.accordion.first-open > h3:first-of-type').removeClass('ui-accordion-header-collapsed').addClass('ui-accordion-header-active').attr({ 'aria-selected': 'true', 'tabindex': '0' });
+	            $('.accordion.first-open > div:first-of-type').addClass('ui-accordion-content-active').attr({ 'aria-expanded': 'true', 'aria-hidden': 'false' }).show();
+	            $('.accordion.first-open > h3:first-of-type span').addClass('collapse').removeClass('expand').css('display', 'block');
+
 	            // set the initial state
 	            $('.collapse').hide();
 	            $('.l-inner-wrapper a[href*="#"]').not('.l-inner-wrapper [href="#"]').not('.l-inner-wrapper [href="#0"]').click(function (event) {
@@ -20046,374 +20074,6 @@
 
 	} ) );
 
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	__webpack_require__(32);
-
-	var StickyTableHeaders = function StickyTableHeaders() {
-	    _classCallCheck(this, StickyTableHeaders);
-
-	    $('.sticky').stickyTableHeaders({ fixedOffset: $('header') });
-
-	    //const stickyExists = document.querySelector('.sticky');
-	    //if (stickyExists !== null) {
-	    // console.log("Resize Sticky Table Headers");
-	    $(window).on('orientationchange resize', function () {
-	        var footerWidth = $('footer').width();
-	        if (footerWidth > 450 && footerWidth <= 956) {
-	            $('.basic-table.sticky').css('width', +(footerWidth - 26));
-	        } else if (footerWidth >= 320 && footerWidth <= 449) {
-	            $('.basic-table').css('width', +(footerWidth - 32));
-	        }
-	    }).trigger('resize');
-	    //}
-	};
-
-	exports.default = StickyTableHeaders;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! Copyright (c) Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
-		MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */
-
-	;(function ($, window, undefined) {
-		'use strict';
-
-		var name = 'stickyTableHeaders',
-			id = 0,
-			defaults = {
-				fixedOffset: 0,
-				leftOffset: 0,
-				marginTop: 0,
-				objDocument: document,
-				objHead: 'head',
-				objWindow: window,
-				scrollableArea: window,
-				cacheHeaderHeight: false,
-				zIndex: 3
-			};
-
-		function Plugin (el, options) {
-			// To avoid scope issues, use 'base' instead of 'this'
-			// to reference this class from internal events and functions.
-			var base = this;
-
-			// Access to jQuery and DOM versions of element
-			base.$el = $(el);
-			base.el = el;
-			base.id = id++;
-
-			// Listen for destroyed, call teardown
-			base.$el.bind('destroyed',
-				$.proxy(base.teardown, base));
-
-			// Cache DOM refs for performance reasons
-			base.$clonedHeader = null;
-			base.$originalHeader = null;
-
-			// Cache header height for performance reasons
-			base.cachedHeaderHeight = null;
-
-			// Keep track of state
-			base.isSticky = false;
-			base.hasBeenSticky = false;
-			base.leftOffset = null;
-			base.topOffset = null;
-
-			base.init = function () {
-				base.setOptions(options);
-
-				base.$el.each(function () {
-					var $this = $(this);
-
-					// remove padding on <table> to fix issue #7
-					$this.css('padding', 0);
-
-					base.$originalHeader = $('thead:first', this);
-					base.$clonedHeader = base.$originalHeader.clone();
-					$this.trigger('clonedHeader.' + name, [base.$clonedHeader]);
-
-					base.$clonedHeader.addClass('tableFloatingHeader');
-					base.$clonedHeader.css({display: 'none', opacity: 0.0});
-
-					base.$originalHeader.addClass('tableFloatingHeaderOriginal');
-
-					base.$originalHeader.after(base.$clonedHeader);
-
-					base.$printStyle = $('<style type="text/css" media="print">' +
-						'.tableFloatingHeader{display:none !important;}' +
-						'.tableFloatingHeaderOriginal{position:static !important;}' +
-						'</style>');
-					base.$head.append(base.$printStyle);
-				});
-				
-				base.$clonedHeader.find("input, select").attr("disabled", true);
-
-				base.updateWidth();
-				base.toggleHeaders();
-				base.bind();
-			};
-
-			base.destroy = function (){
-				base.$el.unbind('destroyed', base.teardown);
-				base.teardown();
-			};
-
-			base.teardown = function(){
-				if (base.isSticky) {
-					base.$originalHeader.css('position', 'static');
-				}
-				$.removeData(base.el, 'plugin_' + name);
-				base.unbind();
-
-				base.$clonedHeader.remove();
-				base.$originalHeader.removeClass('tableFloatingHeaderOriginal');
-				base.$originalHeader.css('visibility', 'visible');
-				base.$printStyle.remove();
-
-				base.el = null;
-				base.$el = null;
-			};
-
-			base.bind = function(){
-				base.$scrollableArea.on('scroll.' + name, base.toggleHeaders);
-				if (!base.isWindowScrolling) {
-					base.$window.on('scroll.' + name + base.id, base.setPositionValues);
-					base.$window.on('resize.' + name + base.id, base.toggleHeaders);
-				}
-				base.$scrollableArea.on('resize.' + name, base.toggleHeaders);
-				base.$scrollableArea.on('resize.' + name, base.updateWidth);
-			};
-
-			base.unbind = function(){
-				// unbind window events by specifying handle so we don't remove too much
-				base.$scrollableArea.off('.' + name, base.toggleHeaders);
-				if (!base.isWindowScrolling) {
-					base.$window.off('.' + name + base.id, base.setPositionValues);
-					base.$window.off('.' + name + base.id, base.toggleHeaders);
-				}
-				base.$scrollableArea.off('.' + name, base.updateWidth);
-			};
-
-			// We debounce the functions bound to the scroll and resize events
-			base.debounce = function (fn, delay) {
-				var timer = null;
-				return function () {
-					var context = this, args = arguments;
-					clearTimeout(timer);
-					timer = setTimeout(function () {
-						fn.apply(context, args);
-					}, delay);
-				};
-			};
-
-			base.toggleHeaders = base.debounce(function () {
-				if (base.$el) {
-					base.$el.each(function () {
-						var $this = $(this),
-							newLeft,
-							newTopOffset = base.isWindowScrolling ? (
-										isNaN(base.options.fixedOffset) ?
-										base.options.fixedOffset.outerHeight() :
-										base.options.fixedOffset
-									) :
-									base.$scrollableArea.offset().top + (!isNaN(base.options.fixedOffset) ? base.options.fixedOffset : 0),
-							offset = $this.offset(),
-
-							scrollTop = base.$scrollableArea.scrollTop() + newTopOffset,
-							scrollLeft = base.$scrollableArea.scrollLeft(),
-
-							headerHeight,
-
-							scrolledPastTop = base.isWindowScrolling ?
-									scrollTop > offset.top :
-									newTopOffset > offset.top,
-							notScrolledPastBottom;
-
-						if (scrolledPastTop) {
-							headerHeight = base.options.cacheHeaderHeight ? base.cachedHeaderHeight : base.$clonedHeader.height();
-							notScrolledPastBottom = (base.isWindowScrolling ? scrollTop : 0) <
-								(offset.top + $this.height() - headerHeight - (base.isWindowScrolling ? 0 : newTopOffset));
-						}
-
-						if (scrolledPastTop && notScrolledPastBottom) {
-							newLeft = offset.left - scrollLeft + base.options.leftOffset;
-							base.$originalHeader.css({
-								'position': 'fixed',
-								'margin-top': base.options.marginTop,
-	                                                        'top': 0,
-								'left': newLeft,
-								'z-index': base.options.zIndex
-							});
-							base.leftOffset = newLeft;
-							base.topOffset = newTopOffset;
-							base.$clonedHeader.css('display', '');
-							if (!base.isSticky) {
-								base.isSticky = true;
-								// make sure the width is correct: the user might have resized the browser while in static mode
-								base.updateWidth();
-								$this.trigger('enabledStickiness.' + name);
-							}
-							base.setPositionValues();
-						} else if (base.isSticky) {
-							base.$originalHeader.css('position', 'static');
-							base.$clonedHeader.css('display', 'none');
-							base.isSticky = false;
-							base.resetWidth($('td,th', base.$clonedHeader), $('td,th', base.$originalHeader));
-							$this.trigger('disabledStickiness.' + name);
-						}
-					});
-				}
-			}, 0);
-
-			base.setPositionValues = base.debounce(function () {
-				var winScrollTop = base.$window.scrollTop(),
-					winScrollLeft = base.$window.scrollLeft();
-				if (!base.isSticky ||
-						winScrollTop < 0 || winScrollTop + base.$window.height() > base.$document.height() ||
-						winScrollLeft < 0 || winScrollLeft + base.$window.width() > base.$document.width()) {
-					return;
-				}
-				base.$originalHeader.css({
-					'top': base.topOffset - (base.isWindowScrolling ? 0 : winScrollTop),
-					'left': base.leftOffset - (base.isWindowScrolling ? 0 : winScrollLeft)
-				});
-			}, 0);
-
-			base.updateWidth = base.debounce(function () {
-				if (!base.isSticky) {
-					return;
-				}
-				// Copy cell widths from clone
-				if (!base.$originalHeaderCells) {
-					base.$originalHeaderCells = $('th,td', base.$originalHeader);
-				}
-				if (!base.$clonedHeaderCells) {
-					base.$clonedHeaderCells = $('th,td', base.$clonedHeader);
-				}
-				var cellWidths = base.getWidth(base.$clonedHeaderCells);
-				base.setWidth(cellWidths, base.$clonedHeaderCells, base.$originalHeaderCells);
-
-				// Copy row width from whole table
-				base.$originalHeader.css('width', base.$clonedHeader.width());
-
-				// If we're caching the height, we need to update the cached value when the width changes
-				if (base.options.cacheHeaderHeight) {
-					base.cachedHeaderHeight = base.$clonedHeader.height();
-				}
-			}, 0);
-
-			base.getWidth = function ($clonedHeaders) {
-				var widths = [];
-				$clonedHeaders.each(function (index) {
-					var width, $this = $(this);
-
-					if ($this.css('box-sizing') === 'border-box') {
-						var boundingClientRect = $this[0].getBoundingClientRect();
-						if(boundingClientRect.width) {
-							width = boundingClientRect.width; // #39: border-box bug
-						} else {
-							width = boundingClientRect.right - boundingClientRect.left; // ie8 bug: getBoundingClientRect() does not have a width property
-						}
-					} else {
-						var $origTh = $('th', base.$originalHeader);
-						if ($origTh.css('border-collapse') === 'collapse') {
-							if (window.getComputedStyle) {
-								width = parseFloat(window.getComputedStyle(this, null).width);
-							} else {
-								// ie8 only
-								var leftPadding = parseFloat($this.css('padding-left'));
-								var rightPadding = parseFloat($this.css('padding-right'));
-								// Needs more investigation - this is assuming constant border around this cell and it's neighbours.
-								var border = parseFloat($this.css('border-width'));
-								width = $this.outerWidth() - leftPadding - rightPadding - border;
-							}
-						} else {
-							width = $this.width();
-						}
-					}
-
-					widths[index] = width;
-				});
-				return widths;
-			};
-
-			base.setWidth = function (widths, $clonedHeaders, $origHeaders) {
-				$clonedHeaders.each(function (index) {
-					var width = widths[index];
-					$origHeaders.eq(index).css({
-						'min-width': width,
-						'max-width': width
-					});
-				});
-			};
-
-			base.resetWidth = function ($clonedHeaders, $origHeaders) {
-				$clonedHeaders.each(function (index) {
-					var $this = $(this);
-					$origHeaders.eq(index).css({
-						'min-width': $this.css('min-width'),
-						'max-width': $this.css('max-width')
-					});
-				});
-			};
-
-			base.setOptions = function (options) {
-				base.options = $.extend({}, defaults, options);
-				base.$window = $(base.options.objWindow);
-				base.$head = $(base.options.objHead);
-				base.$document = $(base.options.objDocument);
-				base.$scrollableArea = $(base.options.scrollableArea);
-				base.isWindowScrolling = base.$scrollableArea[0] === base.$window[0];
-			};
-
-			base.updateOptions = function (options) {
-				base.setOptions(options);
-				// scrollableArea might have changed
-				base.unbind();
-				base.bind();
-				base.updateWidth();
-				base.toggleHeaders();
-			};
-
-			// Run initializer
-			base.init();
-		}
-
-		// A plugin wrapper around the constructor,
-		// preventing against multiple instantiations
-		$.fn[name] = function ( options ) {
-			return this.each(function () {
-				var instance = $.data(this, 'plugin_' + name);
-				if (instance) {
-					if (typeof options === 'string') {
-						instance[options].apply(instance);
-					} else {
-						instance.updateOptions(options);
-					}
-				} else if(options !== 'destroy') {
-					$.data(this, 'plugin_' + name, new Plugin( this, options ));
-				}
-			});
-		};
-
-	})(jQuery, window);
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ })
 /******/ ]);

@@ -1,22 +1,24 @@
-
+//457 table
+//415 main
+//840 laptop
 
 @media @mobile { // could be 320px - smartphones, portrait iPhone, portrait 480x320 phones (Android)
 	.slider-multi-header {
-		//padding: 0;
-padding: 0 12px 10px 12px;
-		margin: 1em 0 0 0;
+		padding: 0;
+		margin: 1em 12px 10px 12px;
 		width: 100%;
 		display: table;
+
 		.left {
 			.left;
 			margin: 0;
 			h2 {
-//font-size: 1.625rem; // 26px;
 				font-size: 23px; // 23px
 				.header-font;
 				line-height: 1; 
 				padding: 0;
-				//margin: 0 0 10px 12px;	
+        		text-transform: normal;
+				border-bottom: none;	
 margin: 0;			
 			}			
 		}
@@ -77,11 +79,7 @@ overflow: hidden;
 				padding: 0;
 				li {
 					background: #f2f2f2;
-//padding: 7px 0 10px 0;
 					padding: 7px 5px 10px 5px;
-//padding-right: 5px;
-//margin: 0 5px 0 20px; // required for left and right slide peek
-//margin: 0 5px;
 					h3 {
 						margin: .5em 0 0 0;
 						padding: 0 5%;
@@ -123,21 +121,15 @@ overflow: hidden;
 
 @media @mobile-landscape { 
 	.slider-multi-header {
-//padding: 0;
-padding: 0 12px 10px 12px;
+		padding: 0 12px 10px 12px;
 		.left {
 			h2 {
-font-size: 1.625rem; // 26px;
-//margin: 0 0 10px 12px;	
+font-size: 1.625rem; // 26px;	
 margin: 0;			
 			}			
 		}
 		.right {
 			.right;
-//margin: 0 0 0 0;
-//position: absolute;
-//bottom: 0;
-//right: 0;
 			a {
 				&.see-all {
 					font-size: 12px; // 12 pixels
@@ -170,7 +162,7 @@ margin: 7px 0 0 0;
 	.slider-multi-header {
 		//padding-left: 1em;
 		//padding-right: 1em;
-		padding: 0 0 .25em 0;
+		padding: 0 12px .25em 12px;
 	}
 	.slider-multi {
 //		width: 100%;
@@ -286,9 +278,9 @@ margin: 7px 0 0 0;
 }
 @media @laptop { // normall 1025 - big landscape tablets, laptops, and desktops
 	.slider-multi-header {
-		margin: 0 22px 0 22px;
+		margin: 0 22px;
+		padding: 0;
 		width: 912px;
-		//background-color: blue;
 		.left {
 			.left;
 			margin: 0 0 0 0;
