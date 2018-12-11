@@ -6,6 +6,7 @@
         "gulp": "node node_modules/gulp/bin/gulp.js"
     },
     "dependencies": {
+        "backstopjs": "^3.8.5",
         "compile-less": "0.0.1",
         "fancybox": "^3.0.1",
         "highcharts": "^6.2.0",
