@@ -1,0 +1,492 @@
+{
+    "id": "backstop_default",
+    "viewports": [{
+            "label": "Mobile",
+            "width": 320,
+            "height": 568
+        },
+        {
+            "label": "Mobile Landscape",
+            "width": 481,
+            "height": 568
+        },
+        {
+            "label": "Tablet",
+            "width": 601,
+            "height": 801
+        },
+        {
+            "label": "Tablet Landscape",
+            "width": 801,
+            "height": 1200
+        },
+        {
+            "label": "Laptop",
+            "width": 1200,
+            "height": 1200
+        }
+    ],
+    "onBeforeScript": "chromy/onBefore.js",
+    "onReadyScript": "chromy/onReady.js",
+    "scenarios": [{
+            "label": "Analysis Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/analysis/index.php",
+            "referenceUrl": "https://www.eia.gov/analysis/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Analysis Data",
+            "url": "https://www.eia.gov/css_rehab/archive/analysis/projection-data.php",
+            "referenceUrl": "https://www.eia.gov/analysis/projection-data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "hoverSelectors": [".dropdown-data active", ".dropdown-analysis-projections"],
+            "selectors": [
+                ".sub-navigation",
+                ".accordion",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 1000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Coal Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/coal/index.php",
+            "referenceUrl": "https://www.eia.gov/coal/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Coal Data",
+            "url": "https://www.eia.gov/css_rehab/archive/coal/data.php",
+            "referenceUrl": "https://www.eia.gov/coal/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Consumption Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/consumption/index.php",
+            "referenceUrl": "https://www.eia.gov/consumption/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Consumption Data",
+            "url": "https://www.eia.gov/css_rehab/archive/consumption/data.php",
+            "referenceUrl": "https://www.eia.gov/consumption/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Electricity Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/electricity/index.php",
+            "referenceUrl": "https://www.eia.gov/electricity/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Electricity Data",
+            "url": "https://www.eia.gov/css_rehab/archive/electricity/data.php",
+            "referenceUrl": "https://www.eia.gov/electricity/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Environment Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/environment/index.php",
+            "referenceUrl": "https://www.eia.gov/environment/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Environment Data",
+            "url": "https://www.eia.gov/css_rehab/archive/environment/data.php",
+            "referenceUrl": "https://www.eia.gov/environment/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Finance Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/finance/index.php",
+            "referenceUrl": "https://www.eia.gov/finance/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Finance Data",
+            "url": "https://www.eia.gov/css_rehab/archive/finance/data.php",
+            "referenceUrl": "https://www.eia.gov/finance/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Natural Gas Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/naturalgas/index.php",
+            "referenceUrl": "https://www.eia.gov/naturalgas/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Natural Gas Data",
+            "url": "https://www.eia.gov/css_rehab/archive/naturalgas/data.php",
+            "referenceUrl": "https://www.eia.gov/naturalgas/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Nuclear Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/nuclear/index.php",
+            "referenceUrl": "https://www.eia.gov/nuclear/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".slider-multi-header",
+                ".title-banner",
+                ".slider-multi",
+                ".primary-alt",
+                ".updated-data-series",
+                ".analysis-projections",
+                ".upcoming-releases",
+                ".visualizations",
+                ".energy-education"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Nuclear Data",
+            "url": "https://www.eia.gov/css_rehab/archive/nuclear/data.php",
+            "referenceUrl": "https://www.eia.gov/nuclear/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Petroleum Data",
+            "url": "https://www.eia.gov/css_rehab/archive/petroleum/data.php",
+            "referenceUrl": "https://www.eia.gov/petroleum/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Petroleum Data",
+            "url": "https://www.eia.gov/css_rehab/archive/petroleum/data.php",
+            "referenceUrl": "https://www.eia.gov/petroleum/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Renewable Data",
+            "url": "https://www.eia.gov/css_rehab/archive/renewable/data.php",
+            "referenceUrl": "https://www.eia.gov/renewable/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Renewable Data",
+            "url": "https://www.eia.gov/css_rehab/archive/renewable/data.php",
+            "referenceUrl": "https://www.eia.gov/renewable/data.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Total Energy Overview",
+            "url": "https://www.eia.gov/css_rehab/archive/totalenergy/index.php",
+            "referenceUrl": "https://www.eia.gov/totalenergy/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Total Energy Monthyl Data",
+            "url": "https://www.eia.gov/css_rehab/archive/totalenergy/data/monthly/index.php",
+            "referenceUrl": "https://www.eia.gov/totalenergy/data/monthly/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        },
+        {
+            "label": "Total Energy Annual Data",
+            "url": "https://www.eia.gov/css_rehab/archive/totalenergy/data/annual/index.php",
+            "referenceUrl": "https://www.eia.gov/totalenergy/data/annual/index.php",
+            "hideSelectors": [],
+            "removeSelectors": [],
+            "selectors": [
+                ".title-banner",
+                ".sub-navigation",
+                ".accordion",
+                ".accent",
+                ".l-narrow-col"
+            ],
+            "readyEvent": null,
+            "delay": 2000,
+            "onReadyScript": null,
+            "onBeforeScript": null
+        }
+
+
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": ["browser"],
+    "engine": "chrome",
+    "engineFlags": [],
+    "asyncCaptureLimit": 5,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

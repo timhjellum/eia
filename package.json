@@ -26,8 +26,6 @@
         "gulp": "^3.9.1",
         "gulp-clean": "^0.4.0",
         "gulp-clean-css": "^3.10.0",
-        "gulp-css-url-adjuster": "^0.2.3",
-        "gulp-css-url-assets-rewrite": "^1.0.0",
         "gulp-htmlmin": "^4.0.0",
         "gulp-imagemin": "^4.1.0",
         "gulp-less": "^3.5.0",
