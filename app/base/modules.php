@@ -45,7 +45,7 @@ margin: 20px 0 !important;
 <!-- 75% / 25% -->
 <div class="l-row l-two-col-right-narrow">
 
-<div class="l-main-col">
+<div class="l-col">
 <h3 class="_h3">Headers - Primary</h3>
 <div class="primary">
 <h1>H1 - The five boxing wizards jump quickly</h1>
@@ -716,7 +716,7 @@ eget, congue id urna. Nunc vitae euismod tellus.
 </div>
 
 </div>
-<div class="l-narrow-col">
+<div class="l-col">
 <h3 class="_h3">Headers - Secondary</h3>
 <div class="secondary">
 <h1>H1 - The five boxing wizards jump quickly</h1>
@@ -1380,7 +1380,7 @@ eget, congue id urna. Nunc vitae euismod tellus.
 <div class="overview">
 <!-- 75% / 25% -->
 <div class="l-row l-two-col-right-narrow">
-<div class="l-main-col">
+<div class="l-col">
 <h3 class="_h3">Headers - Primary</h3>
 <div class="primary">
 <h1>H1 - The five boxing wizards jump quickly</h1>
@@ -2034,7 +2034,7 @@ eget, congue id urna. Nunc vitae euismod tellus.
 </p>
 </div>
 </div>
-<div class="l-narrow-col">
+<div class="l-col">
 <h3 class="_h3">Headers - Secondary</h3>
 <div class="secondary">
 <h1>H1 - The five boxing wizards jump quickly</h1>

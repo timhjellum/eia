@@ -1,3 +1,46 @@
+.d {
+    &:before {
+        .icon-single(@fill-color: @eia-blue, @letter: D);
+        .controls-icon(35px, 35px);
+    }
+}
+.a {
+    &:before {
+        .icon-single(@fill-color: @eia-green, @letter: A);
+        .controls-icon(35px, 35px);
+    }
+}
+.p {
+    &:before {
+        .icon-single(@fill-color: @eia-brown, @letter: P);
+        .controls-icon(35px, 35px);
+    }
+}
+.da {
+    &:before {
+        .icon-dual(@fill-color-top: @eia-blue, @fill-color-bottom: @eia-green, @letter-top: D, @letter-bottom: A);
+        .controls-icon(35px, 35px);
+        
+    }
+}
+.ap {
+    &:before {
+        .icon-dual(@fill-color-top: @eia-green, @fill-color-bottom: @eia-brown, @letter-top: A, @letter-bottom: P);
+        .controls-icon(35px, 35px);
+    }
+}
+.dp {
+    &:before {
+        .icon-dual(@fill-color-top: @eia-blue, @fill-color-bottom: @eia-brown, @letter-top: D, @letter-bottom: P);
+        .controls-icon(35px, 35px);
+    }
+}
+.dap {
+    &:before {
+        .icon-triple();
+        .controls-icon(35px, 35px);
+    }
+}
 @media @mobile {
     .overview {
         #overviewSideNavOptions {

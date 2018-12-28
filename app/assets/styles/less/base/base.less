@@ -162,35 +162,44 @@ hr {
 /* ***** ***** ***** *****   anchors   ***** ***** ***** ***** */
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
+.external-link {
+	&:before {
+		.controls-icon(12px, 12px);
+		display: inline-block;
+	}
+}
 
-a[name]{vertical-align:top} 
-a.external-link::after,
-a[href*=".com"]::after,
-a[href^="http:"]::after,
-a[href^="https:"]::after {
-	content: '';
-    background: url(/global/images/icons/external_link.png) no-repeat scroll right center transparent;
+a[name]{vertical-align:top}
+
+
+a.external-link,
+a[href*=".com"],
+a[href^="http:"],
+a[href^="https:"] {
+	&:after {
+	.icon-external-link;
+	.controls-icon(10px, 10px);
 	margin: 0 0 0 2px;
 	display: inline-block;
-	width: 10px;
-	height: 10px;
+	}
+
+	//content: '';
+    //background: url(/global/images/icons/external_link.png) no-repeat scroll right center transparent;
+	//width: 10px;
+	//height: 10px;
 }
-a[href*="eia.gov"]::after,
-.global-nav a[href*=".com"]::after,
-.global-nav a[href^="http:"]::after,
-.global-nav a[href^="https:"]::after {
-	content: none;
-	background: none;
-}
-.social a::after,
-.social a[href^="https:"]::after {  
-	content: none;
-	background: none;
-}
-.bx-viewport a::after,
-.bx-viewport a[href^="https:"]::after {  
-	content: none;
-	background: none;
+a[href*="eia.gov"],
+.global-nav a[href*=".com"],
+.global-nav a[href^="http:"],
+.global-nav a[href^="https:"],
+.social a,
+.social a[href^="https:"],
+.bx-viewport a,
+.bx-viewport a[href^="https:"] {
+	&:after {
+		content: none;
+		background: none;
+	}
 }
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -529,6 +538,7 @@ height: 0;
 
 img {
 border-style: none;
+max-width: 100%;
 }
 
 

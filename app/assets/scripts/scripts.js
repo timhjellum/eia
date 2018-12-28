@@ -9,3 +9,7 @@ new Header();
 
 import HighlightModule from './modules/style-guide/highlight.js';
 new HighlightModule();
+
+import clipBoard from './modules/style-guide/clipboard.js';
+new clipBoard();
+

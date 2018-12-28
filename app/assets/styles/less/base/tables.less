@@ -5,14 +5,15 @@
         border-spacing: 0;
         color: @eia-dark-grey;
         a {
-            color:@eia-blue;
+            color: @eia-blue;
             text-decoration: none;
-            &:link,
-            &:active,
-            &:visited {
-                color:@eia-blue;
-                text-decoration: none;
-            }
+            display: inline-block;
+            //&:link,
+            //&:active,
+            //&:visited {
+            //    color: @eia-blue;
+            //    text-decoration: none;
+            //}
             &:hover{
                 text-decoration: underline;
                 color:@eia-blue;
@@ -68,53 +69,63 @@
                 background-color: #f7f7f7;
             }
         }
-
+        
         &.align-left-col-1 {
+th:nth-child(1),
             td:nth-child(1) {
                 text-align: left;
             }
         }
         &.align-left-col-2 {
+th:nth-child(2),
             td:nth-child(2) {
                 text-align: left;
             }
         }
         &.align-left-col-3 {
+th:nth-child(3),
             td:nth-child(3) {
                 text-align: left;
             }
         }
         &.align-left-col-4 {
+th:nth-child(4),
             td:nth-child(4) {
                 text-align: left;
             }
         }
         &.align-left-col-5 {
+th:nth-child(5),
             td:nth-child(5) {
                 text-align: left;
             }
         }
         &.align-left-col-6 {
+th:nth-child(6),
             td:nth-child(6) {
                 text-align: left;
             }
         }
         &.align-left-col-7 {
+th:nth-child(7),
             td:nth-child(7) {
                 text-align: left;
             }
         }
         &.align-left-col-8 {
+th:nth-child(8),
             td:nth-child(8) {
                 text-align: left;
             }
         }
         &.align-left-col-9 {
+th:nth-child(9),
             td:nth-child(9) {
                 text-align: left;
             }
         }
         &.align-left-col-10 {
+th:nth-child(10),
             td:nth-child(10) {
                 text-align: left;
             }

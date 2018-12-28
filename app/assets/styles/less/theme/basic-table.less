@@ -3,7 +3,6 @@
         &.basic-table {
             overflow-y: hidden;
             overflow-x: auto;
-//            margin-bottom: 2em; // margin-bottom: 3em;
         }
         table {
             &.basic_table,
@@ -15,12 +14,12 @@
                 }
                 */
                 border-bottom: 2px solid @eia-blue;
-                //margin: 1em 0 0 0;
                 margin: 0;
                 &:last-of-type {
                     border-bottom: none;
                 }
                 caption {
+                    font-size: .9375rem; //15px 
                     span {
                         &.units {
                             float: none;
@@ -40,15 +39,14 @@
                             white-space: nowrap;
                             &:first-child {
                                 .align-left;
-                                //padding: 6px 10px 5px 10px;
                             }
-    /* cannot add the border here
-    &:last-child {
-    th {
-    border-bottom: 3px solid @eia-blue;
-    }
-    }
-    */
+                            /* cannot add the border here
+                            &:last-child {
+                                th {
+                                border-bottom: 3px solid @eia-blue;
+                                }
+                            }
+                            */
                             em {
                                 .bold;
                             }
@@ -100,12 +98,10 @@
                     }
                 }
                 tbody {
-                    //border-top: 3px solid @eia-blue;
                     tr {
                         &:first-child {
                             td {
                                 border-top: 3px solid @eia-blue;
-                                //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
                             }
                         }
                         &:last-child {
@@ -172,24 +168,12 @@
                                 }
                             }
                         }
-                        /*
-                        &:first-child {
-                            td {
-                                &.divider {
-                                    border-top-color: #fff;
-                                }
-                            }
-                        }
-                        */
-    
                     }
                 }
                 tfoot {
                     tr {
                         td {
                             padding: 12px 10px 10px 10px;
-                            //padding: 6px 10px 5px 5px;
-                            //padding: 12px 10px 10px 5px;
                             font-size: 0.688rem;
                             text-align: right;
                             a {
@@ -231,7 +215,6 @@
                             td {
                                 &:nth-child(1) {
                                     font-weight: bold;
-                                    //padding: 6px 10px 5px 5px;
                                     text-align: right;
                                 }
                                 &:nth-child(2) {
@@ -245,40 +228,3 @@
         }
     }
 }
-@media @tablet { 
-    table {
-        &.basic_table,
-        &.basic-table {
-            caption {
-                font-size: .9375rem; //15px    
-                p {
-                    font-size: 12px;
-                }
-            }
-            tfoot {
-                tr {
-                    td {
-                        font-size: 0.688rem; // 11 pixels
-                        a {
-                            font-size: 0.688rem; // 11 pixels
-                        }
-                    }
-                } 
-            }
-        }
-	}
-}
-@media @laptop {
-    .basic-table {
-        /*
-        table {
-            &.sticky {
-                overflow: hidden;
-                overflow-x: scroll;
-            }
-        }
-        */
-	}
-}
-
-

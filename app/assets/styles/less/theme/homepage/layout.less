@@ -10,23 +10,26 @@
 /*  |_|_____|   		|___|___|___|
 
 /*  1) this takes the l-three-col-even and retains the columns on the hp from tablet + */
-/*  2) this takes the nested modules inside the l-narrow-col makes them act like a three-column-even on the hp from tablet + */
+/*  2) this takes the nested modules inside the l-col makes them act like a three-column-even on the hp from tablet + */
 
-			&.l-two-col-left-narrow,
+			//&.l-two-col-left-narrow,
 			&.l-two-col-right-narrow {
 
 				.l-main-col {
 					.l-row {
 						&.l-three-col-even {
 							padding-left: 0;
-							.l-one-third-col { 
+							/*
+							.l-col { 
 								width: 32%;
 							}
+							*/
 						}
 					}
 
 				}
-				.l-narrow-col {
+				/*
+				.l-col {
 					width: 100%;
 					-ms-box-orient: horizontal;
 					display: -webkit-box;
@@ -47,8 +50,7 @@
 						float: left;
 					}
 				}
-
-
+				*/
 			}
 		}
     }
@@ -66,7 +68,7 @@
 			&.l-three-col {
 				padding-left: 0;
 				&>div {
-					&.l-narrow-col { 
+					&.l-col { 
 						.primary { 
 							ul {
 								margin-left: 22px;
@@ -77,7 +79,7 @@
 			}
 			&.l-three-col-even {
 				&>div {
-					&.l-one-third-col {
+					&.l-col {
 						&:nth-child(1) {
 							ul {
 								margin: 0 0 0 22px;
@@ -111,22 +113,32 @@
 					.l-row {
 						&.l-three-col-even {
 							padding-left: 0;
-							.l-one-third-col { 
-								width: 32%;
-							}
+							//.l-col { 
+							//	width: 32%;
+							//}
 						}
 					}
 
 				}
-				.l-narrow-col {
+				&>.l-col {
+					//width: 73%;
+					&:last-child {
+					   //width: 23%;
+					   display: table-cell; // this disables flex
+					   &>div {
+						   width: 100%;
+					   }
+					}
+				}
+				/*
+				.l-col {
 					width: 23%;
 					display: table-cell; // this disables flex
 					&>div {
 						width: 100%;
 					}
 				}
-
-
+				*/
 			}
 		}
 	}

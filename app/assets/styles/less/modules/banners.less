@@ -22,3 +22,260 @@
         }
     }
 }
+
+
+
+
+
+@media @mobile {
+    .beta-banner {
+        background-color: red;
+        padding: 10px 16px 10px 16px !important;
+        margin: 0;
+        display: table;
+        p {
+            .font;
+            color: #333;
+            color: @eia-white;
+            font-size: 18px;
+            margin-bottom: 6px;
+            line-height: 1.3em;
+            a {
+                color: @eia-white;
+                text-decoration: underline;
+            }
+        }
+    }
+    #secondary {
+
+    }
+
+
+    /*
+    header {
+        .logo-beta {
+            background: url(https://www.eia.gov/global/images/logos/beta_logo.png) no-repeat top left;
+            padding: 0 12px;
+            width: 321px;
+            height: 91px;
+            display: block;
+            float: left;
+            transition: all .3s ease-in-out;
+        }
+        &.shrink {
+            .logo-beta {
+                height: 50px;
+                width: 176px;
+                padding: 0;
+                margin: 0 145px 0 12px;
+                background-size: 100% 100%;
+                transition: all 0.3s ease-in-out;
+                height: 50px;
+                width: 176px;
+                background-size: 100% 100%;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    */
+    .feedback-link-show {
+        width: 130px;
+        height: 28px;
+        text-indent: -99999px;
+        background: url(/global/images/btns/give_feedback_btn_off.png) no-repeat;
+        margin: 1px 0 0 0;
+        cursor: pointer;
+        &:hover {
+            background: url(/global/images/btns/give_feedback_btn.png) no-repeat;
+        }
+    }
+    //#secondary {
+    .beta-feedback-form {
+        color: @eia-white;
+        background-color: shade(@eia-blue, 60%);
+        margin-top: 1px;
+        padding: 10px 12px;
+
+        p {
+            color: @eia-white;
+        }
+        li {
+            line-height: 1.4;
+        }
+        a {
+            .font;
+            font-size: 13px;
+            color:@eia-blue;
+            text-decoration: none;
+            .policy {
+                &:link,
+                &:active,
+                &:visited {
+                    color:@eia-blue;
+                    text-decoration: none;
+                }
+                &:hover{
+                    text-decoration: underline;
+                    color:@eia-blue;
+                }
+            }
+        }
+
+        h2 {
+            .header-font;
+            color: tint(@eia-yellow, 15%);
+            margin-bottom: 6px;
+           
+            font-weight: normal;
+            font-size: 26px;
+        }
+        P {
+            margin: 0 0 1em 0;
+        }
+        .button-container,
+        .form-container {
+            width: 100%;
+            clear: both;
+            margin: 0.5em 0 0 0;
+            label {
+                .bold;
+                margin: 0.5em 0 0 0;
+                width: 100%;
+                clear: both;
+                font-size: 12.8px;
+                span {
+                    .normal;
+                }
+            }
+            select, input[type=text], textarea {
+                margin: 0.5em 0 0 0;
+                width: 300px;
+            }
+            .submit-btn {
+                background: red url(/global/images/btns/submit.png) no-repeat center left;
+                cursor: pointer;
+                width: 56px;
+                height: 20px;
+                border: none;
+                text-indent: -99999px;
+                &:hover {
+                    background: url(/global/images/btns/submit_over.png) no-repeat center left;
+                }
+            }
+        }
+
+    }
+
+
+
+    .feedback-link-hide {
+        width: 130;
+        height: 28px;
+        text-indent: -99999px;
+        background: url(/global/images/btns/hide_feedback_btn_off.png) no-repeat;
+        margin: 1px 0 0 0;
+        cursor: pointer;
+        &:hover {
+            background: url(/global/images/btns/hide_feedback_btn.png) no-repeat;
+        }
+    }
+    #feedcomments {
+        display: block;
+        overflow: auto;
+        padding-right: 4px;
+        width: 520px;
+        height: 300px;
+        blockquote {
+            color: @eia-green;
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 2px;
+        }
+        p {
+            margin-bottom: 2px;
+            padding-bottom: 0;
+        }
+    }
+    .fbcomment {
+        display: block;
+        padding: 8px;
+        margin-bottom: 6px;
+        //background-color: shade(@eia-blue, 45%);
+    }
+
+    
+
+
+
+
+
+    .expand-collapse-content,
+    .show-hide-content { /* sets initial state */
+        display: none;
+    }
+    .toggle {
+        &.show-hide  {
+            .active-text {
+                display: none;
+            }
+            &.active  {
+                .active-text {
+                    display: block;
+                }
+                .inactive-text {
+                    display: none;
+                }
+            }
+        }
+        &.expand-collapse {
+            .active-text {
+                display: none;
+            }
+            &.active {
+                .active-text {
+                    display: block;
+                }
+                .inactive-text {
+                    display: none;
+                }
+            }
+        }
+        &.expand-collapse-above {
+            .active-text {
+                display: none;
+            }
+            &.active {
+                .active-text {
+                    display: block;
+                }
+                .inactive-text {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media @mobile-landscape {
+    
+}
+@media @tablet {
+
+}
+@media @tablet-landscape { 
+    
+}
+
+@media @laptop {
+    .beta-feedback-form {
+        padding: 10px 35px;
+        .l-col {
+            &>div {
+                padding-left: 35px;
+                &:last-child {
+                    border-left: 1px solid #666;
+                }
+            }
+        } 
+    }
+}
+

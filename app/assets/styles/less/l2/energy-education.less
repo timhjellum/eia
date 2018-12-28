@@ -168,6 +168,7 @@
                             .align-left;
                             display: inline-block;
                             text-decoration: none;
+                            z-index: 999;
                             &:hover {
                                 text-decoration: underline;
                             } 
@@ -195,6 +196,7 @@
                         color: @eia-dark-grey;
                         display: inline-block;
                         text-decoration: none;
+                        z-index: 999;
                         &:hover {
                             text-decoration: underline;
                         } 
@@ -229,25 +231,32 @@
             &.l-three-col-even {
                 &>div {
                     margin-bottom: 0;
-                    &.l-one-third-col { // 33.333%
+                    &.l-col { // 33.333%
                         width: 31.333%;
                         ul {
                             margin: 0 0 0 80px;
                         }
                     }
                 }
-                .l-one-third-col {
-                    &:nth-child(3) {
-                        position: relative;
+                .l-col {
+                    &:nth-child(2) {
                         &:before {
-                            border-left: 1px solid shade(white, 17%);
                             border-right: 1px solid shade(white, 17%);
                             content: "";
                             position: absolute;
                             top: 0;
                             bottom: 10px;
-                            left: -16px;
                             right: -16px;
+                        }
+                    }
+                    &:nth-child(4) {
+                        &:before {
+                            border-left: 1px solid shade(white, 17%);
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 10px;
+                            left: -16px;
                         }
                     }
                 }

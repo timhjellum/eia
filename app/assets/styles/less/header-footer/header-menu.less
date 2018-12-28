@@ -1,3 +1,81 @@
+&.ico-nav {
+    width: auto;
+    &.analysis-projections-icon {
+        &:before {
+            background-position: 60% 70%;
+        }
+    }
+    &.environment-icon {
+        &:before {
+            background-position-y: 45%;
+        }
+    }
+    &.coal-icon {
+        &:before {
+            background-position-y: 45%;
+        }
+    }
+    &.eia-glossary-icon {
+        &:before {
+            background-position-y: 45%;
+            background-position-x: 67%;
+        }
+    }
+
+    &.maps-icon {
+        &:before {
+            background-size: 100% 100%;
+        }
+    }
+    &.international-icon {
+        &:before {
+            background-size: 100% 100%;
+        }
+    }
+}
+/*-Close Icon --------------------------*/
+.fancybox-close {
+	&:before {
+		.controls-icon(40px, 40px);
+	}
+}
+i {
+    &.close-menu {
+        display: none;
+        /*
+        &:before {
+            .controls-icon(40px, 40px);
+            .icon-cancel();
+        }
+        &:hover {
+            &:before {
+                .icon-cancel();
+            }
+        }
+        */
+    }
+}
+.ico-menu {
+    display: inline-block;
+    font-size:	0;
+    font-size: 0;
+    line-height: 0;
+	.left;
+	padding: 0;
+	text-indent: -9999px;
+	&.facebook,
+	&.twitter,
+	&.youtube,
+	&.flickr,
+	&.linkedin,
+	&.email,
+	&.rss {
+		&:before {
+			.controls-icon(40px, 40px);
+		}
+	}
+}
+
 @media @mobile {
     .global-nav {
         position: absolute;
@@ -181,12 +259,14 @@
                     .energy-explained-list {
                         &.left {
                             .left;
-                            margin: 8px 0 0 60px;
+                            margin: 8px 0 0 0;
+                            //margin: 8px 0 0 60px;
                             clear: both;
                         }
                         &.right {
                             .left;
-                            margin: 0 0 8px 60px;
+                            //margin: 0 0 8px 60px;
+                            margin: 0 0 8px 0;
                         }
                     }
                 }
@@ -196,13 +276,15 @@
                     .faq-list {
                         &.left {
                             .left;
-                            margin: 8px 0 0 60px;
+                            //margin: 8px 0 0 60px;
+                            margin: 8px 0 0 0;
                             clear: both;
                         }
                         &.right {
                             .left;
-                            margin: 0 0 8px 60px;
-                            margin-left: 60px;
+                            //margin: 0 0 8px 60px;
+                            margin: 0 0 8px 0;
+                            //margin-left: 60px;
                         }
                     }
                 }
@@ -358,13 +440,25 @@
                     }  
                     button {
                         &.search-submit {
+                            text-indent: -9999px;
+                            font-size: 0;	
                             background-color: transparent;
                             border: none;
-                            width: 19px;
-                            height: 19px;
+                            //width: 19px;
+                            //height: 19px;
                             position: absolute;
-                            top: 8px;
+                            //top: 2px;
+                        //}
+                        //&.search-submit {
+                            top: 2px;
                             right: -30px;
+                            cursor: pointer;
+                            &:before {
+                                .controls-icon(19px, 19px);
+                            }
+                        }
+                        i {
+                            display: none;
                         }
                     }
                 }
@@ -400,303 +494,7 @@
             }
         } 
     }
-	.ico-menu {
-		display: inline-block;
-		font-size:	0;
-		font-size: 0;
-		line-height: 0;
-
-
-        /*-search submit --------------------------
-		&.search-submit {
-            top: -6px;
-            left: -8px;
-            cursor: pointer;
-            &:before {
-                .controls-icon(19px, 19px);
-                .search-submit();
-            }
-            &:hover {
-                &:before {
-                    .search-submit();
-                }
-            }
-		}
-		/*-Close Icon --------------------------
-		&.close-menu {
-			&:before {
-				.controls-icon(40px, 40px);
-				.icon-cancel();
-			}
-			&:hover {
-				&:before {
-					.icon-cancel();
-				}
-			}
-        }
-        */
-		&.ico-nav {
-            width: auto;
-			&.analysis-projections {
-				&:before {
-					.icon-analysis-projections();
-					.nav-bar-icon();
-					background-position: 60% 70%;
-				}
-			}
-			&.markets-finance {
-				&:before {
-					.icon-markets-finance();
-					.nav-bar-icon();
-				}
-			}
-			&.environment {
-				&:before {
-					.icon-environment();
-					.nav-bar-icon();
-					background-position-y: 45%;
-				}
-			}
-
-			/*-Sources & Uses Icons --------------*/
-			&.petroleum {
-				&:before {
-					.icon-petroleum();
-					.nav-bar-icon();
-				}
-			}
-			&.natural-gas {
-				&:before {
-					.icon-natural-gas();
-					.nav-bar-icon();
-				}
-			}
-			&.electricity {
-				&:before {
-					.icon-electricity();
-					.nav-bar-icon();
-				}
-			}
-			&.consumption {
-				&:before {
-					.icon-consumption();
-					.nav-bar-icon();
-				}
-			}
-			&.coal {
-				&:before {
-					.icon-coal();
-					.nav-bar-icon();
-					background-position-y: 45%;
-				}
-			}
-			&.nuclear {
-				&:before {
-					.icon-nuclear();
-					.nav-bar-icon();
-				}
-			}
-			&.renewable {
-				&:before {
-					.icon-renewable();
-					.nav-bar-icon();
-				}
-			}
-			&.total-energy {
-				&:before {
-					.icon-total-energy();
-					.nav-bar-icon();
-				}
-			}
-
-			/*-News Icons -------------------------------*/
-			&.featured-reports {
-				&:before {
-					.icon-featured-reports();
-					.nav-bar-icon();
-				}
-			}
-			&.press-room {
-				&:before {
-					.icon-press-room();
-					.nav-bar-icon();
-				}
-			}
-			&.whats-new {
-				&:before {
-					.icon-whats-new();
-					.nav-bar-icon();
-				}
-			}
-			&.upcoming {
-				&:before {
-					.icon-upcoming();
-					.nav-bar-icon();
-				}
-			}
-
-			/*-Tools Icons ----------------------------*/
-			&.eia-glossary {
-				&:before {
-					.icon-glossary();
-					.nav-bar-icon();
-					background-position-y: 45%;
-					background-position-x: 67%;
-				}
-			}
-			&.data-tools-model {
-				&:before {
-					.icon-data-tools-model();
-					.nav-bar-icon();
-				}
-			}
-			&.open-data {
-				&:before {
-					.icon-open-data();
-					.nav-bar-icon();
-				}
-			}
-			&.beta {
-				&:before {
-					.icon-beta();
-					.nav-bar-icon();
-				}
-			}
-			&.follow-us {
-				&:before {
-					.icon-follow-us();
-					.nav-bar-icon();
-				}
-			}
-			&.reports {
-				&:before {
-					.icon-reports();
-					.nav-bar-icon();
-				}
-			}
-			&.survey-forms {
-				&:before {
-					.icon-survey-forms();
-					.nav-bar-icon();
-				}
-			}
-			&.email-complex {
-				&:before {
-					.icon-email-complex();
-					.nav-bar-icon();
-				}
-			}
-			&.rss-complex {
-				&:before {
-					.icon-rss-complex();
-					.nav-bar-icon();
-				}
-			}
-
-			/*-Learn About Energy Icons -----------------*/
-			&.today-in-energy {
-				&:before {
-					.icon-today-in-energy();
-					.nav-bar-icon();
-				}
-			}
-			&.energy-explained {
-				&:before {
-					.icon-energy-explained();
-					.nav-bar-icon();
-				}
-			}
-			&.energy-in-brief {
-				&:before {
-					.icon-energy-in-brief();
-					.nav-bar-icon();
-				}
-			}
-			&.faq {
-				&:before {
-					.icon-faq();
-					.nav-bar-icon();
-				}
-			}
-			&.teachers {
-				&:before {
-					.icon-teachers();
-					.nav-bar-icon();
-				}
-			}
-
-			/*-Geography Icons ------------------------*/
-			&.states {
-				&:before {
-					.icon-states();
-					.nav-bar-icon();
-				}
-			}
-			&.maps {
-				&:before {
-					.icon-maps();
-					.nav-bar-icon();
-					background-size: 100% 100%;
-				}
-			}
-			&.international {
-				&:before {
-					.icon-international();
-					.nav-bar-icon();
-					background-size: 100% 100%;
-				}
-			}
-			/*-A-Z Icon --------------------------*/
-			&.a-z-index {
-				&:before {
-					.icon-a-z-index();
-					.nav-bar-icon();
-				}
-			}
-
-			/*-search submit -------------------------- */
-			&.search-submit {
-
-				top: -6px;
-				left: -8px;
-				cursor: pointer;
-				&:before {
-					.controls-icon(19px, 19px);
-					.search-submit();
-				}
-				&:hover {
-					&:before {
-						.search-submit();
-					}
-				}
-            }
-		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
 
 @media @tablet {
     .global-nav {
@@ -708,7 +506,8 @@
                         &.left {
                             .left;
                             width: 42%;
-                            margin: 8px 0 8px 60px;
+                            margin: 8px 0;
+                            //margin: 8px 0 8px 60px;
                             clear: none;
                         }
                         &.right {
@@ -724,13 +523,13 @@
                         &.left {
                             .left;
                             width: 42%;
-                            margin-left: 60px;
+                            //margin-left: 60px;
                             clear: none;
                         }
                         &.right {
                             .right;
                             width: 42%;
-                            margin-left: 0;
+                            //margin-left: 0;
                             clear: none;
                         }
                     }

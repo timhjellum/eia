@@ -1,8 +1,10 @@
-const $ = require("jquery");
+//const $ = require("jquery");
 // widgets
+
 import Accordion from '../../../../node_modules/jquery-ui/ui/widgets/accordion.js';
 import Tabs from '../../../../node_modules/jquery-ui/ui/widgets/tabs.js';
-//import Datepicker from '../../../../node_modules/jquery-ui/ui/widgets/datepicker.js';
+/*
+import Datepicker from '../../../../node_modules/jquery-ui/ui/widgets/datepicker.js';
 // dependencies
 import Version from '../../../../node_modules/jquery-ui/ui/version.js';
 import Widget from '../../../../node_modules/jquery-ui/ui/widget.js';
@@ -15,11 +17,10 @@ import Core from '../../../../node_modules/jquery-ui/ui/core.js';
 import Effect from '../../../../node_modules/jquery-ui/ui/effect.js';
 import EscapeSelector from '../../../../node_modules/jquery-ui/ui/escape-selector';
 import SafeActiveElement from '../../../../node_modules/jquery-ui/ui/safe-active-element';
-
+*/
 class jqueryUI {
     constructor() {
         this.accordion = $('.accordion');
-
         if (this.accordion !== null) {
             this.accordionModule();
         };
@@ -55,7 +56,6 @@ class jqueryUI {
                 }
             }
         });
-
         $('.accordion.all-open').accordion({
             heightStyle: 'content',
             active: true,
@@ -115,7 +115,6 @@ class jqueryUI {
                 }
             }
         });
-
 
         var windowHash = decodeURI(window.location.hash);
         // opens accordion when user is navigating to the data page from another page        

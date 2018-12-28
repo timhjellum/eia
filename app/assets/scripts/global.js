@@ -1,3 +1,4 @@
+
 import FancyBox from './modules/fancybox';
 new FancyBox();
 
@@ -34,5 +35,8 @@ new FirefoxHack();
 import jqueryUI from './modules/jquery-ui';
 new jqueryUI();
 
-//require('backstopjs');
+import StickyTableHeaders from './modules/sticky-table-headers';
+new StickyTableHeaders();
+
+
 

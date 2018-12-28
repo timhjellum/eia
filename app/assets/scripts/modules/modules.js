@@ -3,20 +3,40 @@ class ModuleScripts {
         
         
         
-        
-        
-        
+        $('.toggle.expand-collapse').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).next('.expand-collapse-content').slideToggle("slow", function() {
+                console.log("clicked");
+            });
+        });
+        $('.toggle.expand-collapse-content-above').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).prev('.expand-collapse-content').slideToggle("slow", function() {
+                console.log("clicked");
+            });
+        });
+        $('.toggle.show-hide').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            //$(this).next('.show-hide-content').fadeToggle("slow", function() {
+            $('.show-hide-content').toggle();
+        });
+
+        /*
+        $('.toggle.show-hide-two-element').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $('.show-hide-two-element-content').fadeToggle("fast", function() {
+                console.log("clicked");
+            });
+        });
+        */
 
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+    
         //this.moduleVisualizations = $(".visualizations h3 a:empty");
         //this.moduleLinkList = $(".link-list a:empty");
         //this.hideDescriptionIfEmpty = $(".slider-home h3 a:empty");

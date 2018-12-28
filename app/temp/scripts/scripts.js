@@ -46,21 +46,25 @@
 
 	'use strict';
 
-	var _scrollNav = __webpack_require__(31);
+	var _scrollNav = __webpack_require__(27);
 
 	var _scrollNav2 = _interopRequireDefault(_scrollNav);
 
-	var _stickyTableHeaders = __webpack_require__(33);
+	var _stickyTableHeaders = __webpack_require__(25);
 
 	var _stickyTableHeaders2 = _interopRequireDefault(_stickyTableHeaders);
 
-	var _header = __webpack_require__(34);
+	var _header = __webpack_require__(29);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _highlight = __webpack_require__(36);
+	var _highlight = __webpack_require__(30);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
+
+	var _clipboard = __webpack_require__(218);
+
+	var _clipboard2 = _interopRequireDefault(_clipboard);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -71,6 +75,8 @@
 	new _header2.default();
 
 	new _highlight2.default();
+
+	new _clipboard2.default();
 
 /***/ }),
 /* 1 */,
@@ -9916,13 +9922,7 @@
 /* 22 */,
 /* 23 */,
 /* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9931,7 +9931,375 @@
 	    value: true
 	});
 
-	var _scrollnav = __webpack_require__(32);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	__webpack_require__(26);
+
+	var StickyTableHeaders = function StickyTableHeaders() {
+	    _classCallCheck(this, StickyTableHeaders);
+
+	    $('.sticky').stickyTableHeaders({ fixedOffset: $('header') });
+
+	    //const stickyExists = document.querySelector('.sticky');
+	    //if (stickyExists !== null) {
+	    // console.log("Resize Sticky Table Headers");
+	    $(window).on('orientationchange resize', function () {
+	        var footerWidth = $('footer').width();
+	        if (footerWidth > 450 && footerWidth <= 956) {
+	            $('.basic-table.sticky').css('width', +(footerWidth - 26));
+	        } else if (footerWidth >= 320 && footerWidth <= 449) {
+	            $('.basic-table').css('width', +(footerWidth - 32));
+	        }
+	    }).trigger('resize');
+	    //}
+	};
+
+	exports.default = StickyTableHeaders;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! Copyright (c) Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
+		MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */
+
+	;(function ($, window, undefined) {
+		'use strict';
+
+		var name = 'stickyTableHeaders',
+			id = 0,
+			defaults = {
+				fixedOffset: 0,
+				leftOffset: 0,
+				marginTop: 0,
+				objDocument: document,
+				objHead: 'head',
+				objWindow: window,
+				scrollableArea: window,
+				cacheHeaderHeight: false,
+				zIndex: 3
+			};
+
+		function Plugin (el, options) {
+			// To avoid scope issues, use 'base' instead of 'this'
+			// to reference this class from internal events and functions.
+			var base = this;
+
+			// Access to jQuery and DOM versions of element
+			base.$el = $(el);
+			base.el = el;
+			base.id = id++;
+
+			// Listen for destroyed, call teardown
+			base.$el.bind('destroyed',
+				$.proxy(base.teardown, base));
+
+			// Cache DOM refs for performance reasons
+			base.$clonedHeader = null;
+			base.$originalHeader = null;
+
+			// Cache header height for performance reasons
+			base.cachedHeaderHeight = null;
+
+			// Keep track of state
+			base.isSticky = false;
+			base.hasBeenSticky = false;
+			base.leftOffset = null;
+			base.topOffset = null;
+
+			base.init = function () {
+				base.setOptions(options);
+
+				base.$el.each(function () {
+					var $this = $(this);
+
+					// remove padding on <table> to fix issue #7
+					$this.css('padding', 0);
+
+					base.$originalHeader = $('thead:first', this);
+					base.$clonedHeader = base.$originalHeader.clone();
+					$this.trigger('clonedHeader.' + name, [base.$clonedHeader]);
+
+					base.$clonedHeader.addClass('tableFloatingHeader');
+					base.$clonedHeader.css({display: 'none', opacity: 0.0});
+
+					base.$originalHeader.addClass('tableFloatingHeaderOriginal');
+
+					base.$originalHeader.after(base.$clonedHeader);
+
+					base.$printStyle = $('<style type="text/css" media="print">' +
+						'.tableFloatingHeader{display:none !important;}' +
+						'.tableFloatingHeaderOriginal{position:static !important;}' +
+						'</style>');
+					base.$head.append(base.$printStyle);
+				});
+				
+				base.$clonedHeader.find("input, select").attr("disabled", true);
+
+				base.updateWidth();
+				base.toggleHeaders();
+				base.bind();
+			};
+
+			base.destroy = function (){
+				base.$el.unbind('destroyed', base.teardown);
+				base.teardown();
+			};
+
+			base.teardown = function(){
+				if (base.isSticky) {
+					base.$originalHeader.css('position', 'static');
+				}
+				$.removeData(base.el, 'plugin_' + name);
+				base.unbind();
+
+				base.$clonedHeader.remove();
+				base.$originalHeader.removeClass('tableFloatingHeaderOriginal');
+				base.$originalHeader.css('visibility', 'visible');
+				base.$printStyle.remove();
+
+				base.el = null;
+				base.$el = null;
+			};
+
+			base.bind = function(){
+				base.$scrollableArea.on('scroll.' + name, base.toggleHeaders);
+				if (!base.isWindowScrolling) {
+					base.$window.on('scroll.' + name + base.id, base.setPositionValues);
+					base.$window.on('resize.' + name + base.id, base.toggleHeaders);
+				}
+				base.$scrollableArea.on('resize.' + name, base.toggleHeaders);
+				base.$scrollableArea.on('resize.' + name, base.updateWidth);
+			};
+
+			base.unbind = function(){
+				// unbind window events by specifying handle so we don't remove too much
+				base.$scrollableArea.off('.' + name, base.toggleHeaders);
+				if (!base.isWindowScrolling) {
+					base.$window.off('.' + name + base.id, base.setPositionValues);
+					base.$window.off('.' + name + base.id, base.toggleHeaders);
+				}
+				base.$scrollableArea.off('.' + name, base.updateWidth);
+			};
+
+			// We debounce the functions bound to the scroll and resize events
+			base.debounce = function (fn, delay) {
+				var timer = null;
+				return function () {
+					var context = this, args = arguments;
+					clearTimeout(timer);
+					timer = setTimeout(function () {
+						fn.apply(context, args);
+					}, delay);
+				};
+			};
+
+			base.toggleHeaders = base.debounce(function () {
+				if (base.$el) {
+					base.$el.each(function () {
+						var $this = $(this),
+							newLeft,
+							newTopOffset = base.isWindowScrolling ? (
+										isNaN(base.options.fixedOffset) ?
+										base.options.fixedOffset.outerHeight() :
+										base.options.fixedOffset
+									) :
+									base.$scrollableArea.offset().top + (!isNaN(base.options.fixedOffset) ? base.options.fixedOffset : 0),
+							offset = $this.offset(),
+
+							scrollTop = base.$scrollableArea.scrollTop() + newTopOffset,
+							scrollLeft = base.$scrollableArea.scrollLeft(),
+
+							headerHeight,
+
+							scrolledPastTop = base.isWindowScrolling ?
+									scrollTop > offset.top :
+									newTopOffset > offset.top,
+							notScrolledPastBottom;
+
+						if (scrolledPastTop) {
+							headerHeight = base.options.cacheHeaderHeight ? base.cachedHeaderHeight : base.$clonedHeader.height();
+							notScrolledPastBottom = (base.isWindowScrolling ? scrollTop : 0) <
+								(offset.top + $this.height() - headerHeight - (base.isWindowScrolling ? 0 : newTopOffset));
+						}
+
+						if (scrolledPastTop && notScrolledPastBottom) {
+							newLeft = offset.left - scrollLeft + base.options.leftOffset;
+							base.$originalHeader.css({
+								'position': 'fixed',
+								'margin-top': base.options.marginTop,
+	                                                        'top': 0,
+								'left': newLeft,
+								'z-index': base.options.zIndex
+							});
+							base.leftOffset = newLeft;
+							base.topOffset = newTopOffset;
+							base.$clonedHeader.css('display', '');
+							if (!base.isSticky) {
+								base.isSticky = true;
+								// make sure the width is correct: the user might have resized the browser while in static mode
+								base.updateWidth();
+								$this.trigger('enabledStickiness.' + name);
+							}
+							base.setPositionValues();
+						} else if (base.isSticky) {
+							base.$originalHeader.css('position', 'static');
+							base.$clonedHeader.css('display', 'none');
+							base.isSticky = false;
+							base.resetWidth($('td,th', base.$clonedHeader), $('td,th', base.$originalHeader));
+							$this.trigger('disabledStickiness.' + name);
+						}
+					});
+				}
+			}, 0);
+
+			base.setPositionValues = base.debounce(function () {
+				var winScrollTop = base.$window.scrollTop(),
+					winScrollLeft = base.$window.scrollLeft();
+				if (!base.isSticky ||
+						winScrollTop < 0 || winScrollTop + base.$window.height() > base.$document.height() ||
+						winScrollLeft < 0 || winScrollLeft + base.$window.width() > base.$document.width()) {
+					return;
+				}
+				base.$originalHeader.css({
+					'top': base.topOffset - (base.isWindowScrolling ? 0 : winScrollTop),
+					'left': base.leftOffset - (base.isWindowScrolling ? 0 : winScrollLeft)
+				});
+			}, 0);
+
+			base.updateWidth = base.debounce(function () {
+				if (!base.isSticky) {
+					return;
+				}
+				// Copy cell widths from clone
+				if (!base.$originalHeaderCells) {
+					base.$originalHeaderCells = $('th,td', base.$originalHeader);
+				}
+				if (!base.$clonedHeaderCells) {
+					base.$clonedHeaderCells = $('th,td', base.$clonedHeader);
+				}
+				var cellWidths = base.getWidth(base.$clonedHeaderCells);
+				base.setWidth(cellWidths, base.$clonedHeaderCells, base.$originalHeaderCells);
+
+				// Copy row width from whole table
+				base.$originalHeader.css('width', base.$clonedHeader.width());
+
+				// If we're caching the height, we need to update the cached value when the width changes
+				if (base.options.cacheHeaderHeight) {
+					base.cachedHeaderHeight = base.$clonedHeader.height();
+				}
+			}, 0);
+
+			base.getWidth = function ($clonedHeaders) {
+				var widths = [];
+				$clonedHeaders.each(function (index) {
+					var width, $this = $(this);
+
+					if ($this.css('box-sizing') === 'border-box') {
+						var boundingClientRect = $this[0].getBoundingClientRect();
+						if(boundingClientRect.width) {
+							width = boundingClientRect.width; // #39: border-box bug
+						} else {
+							width = boundingClientRect.right - boundingClientRect.left; // ie8 bug: getBoundingClientRect() does not have a width property
+						}
+					} else {
+						var $origTh = $('th', base.$originalHeader);
+						if ($origTh.css('border-collapse') === 'collapse') {
+							if (window.getComputedStyle) {
+								width = parseFloat(window.getComputedStyle(this, null).width);
+							} else {
+								// ie8 only
+								var leftPadding = parseFloat($this.css('padding-left'));
+								var rightPadding = parseFloat($this.css('padding-right'));
+								// Needs more investigation - this is assuming constant border around this cell and it's neighbours.
+								var border = parseFloat($this.css('border-width'));
+								width = $this.outerWidth() - leftPadding - rightPadding - border;
+							}
+						} else {
+							width = $this.width();
+						}
+					}
+
+					widths[index] = width;
+				});
+				return widths;
+			};
+
+			base.setWidth = function (widths, $clonedHeaders, $origHeaders) {
+				$clonedHeaders.each(function (index) {
+					var width = widths[index];
+					$origHeaders.eq(index).css({
+						'min-width': width,
+						'max-width': width
+					});
+				});
+			};
+
+			base.resetWidth = function ($clonedHeaders, $origHeaders) {
+				$clonedHeaders.each(function (index) {
+					var $this = $(this);
+					$origHeaders.eq(index).css({
+						'min-width': $this.css('min-width'),
+						'max-width': $this.css('max-width')
+					});
+				});
+			};
+
+			base.setOptions = function (options) {
+				base.options = $.extend({}, defaults, options);
+				base.$window = $(base.options.objWindow);
+				base.$head = $(base.options.objHead);
+				base.$document = $(base.options.objDocument);
+				base.$scrollableArea = $(base.options.scrollableArea);
+				base.isWindowScrolling = base.$scrollableArea[0] === base.$window[0];
+			};
+
+			base.updateOptions = function (options) {
+				base.setOptions(options);
+				// scrollableArea might have changed
+				base.unbind();
+				base.bind();
+				base.updateWidth();
+				base.toggleHeaders();
+			};
+
+			// Run initializer
+			base.init();
+		}
+
+		// A plugin wrapper around the constructor,
+		// preventing against multiple instantiations
+		$.fn[name] = function ( options ) {
+			return this.each(function () {
+				var instance = $.data(this, 'plugin_' + name);
+				if (instance) {
+					if (typeof options === 'string') {
+						instance[options].apply(instance);
+					} else {
+						instance.updateOptions(options);
+					}
+				} else if(options !== 'destroy') {
+					$.data(this, 'plugin_' + name, new Plugin( this, options ));
+				}
+			});
+		};
+
+	})(jQuery, window);
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _scrollnav = __webpack_require__(28);
 
 	var _scrollnav2 = _interopRequireDefault(_scrollnav);
 
@@ -9942,8 +10310,7 @@
 	var scrollNav = function scrollNav() {
 	    _classCallCheck(this, scrollNav);
 
-	    console.log("_scroll-nav");
-
+	    //console.log("_scroll-nav");
 	    $('._container').scrollNav({
 	        sections: '._h3',
 	        subSections: false,
@@ -9972,7 +10339,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 32 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {/*! scrollNav - v2.7.3 - 2018-03-19
@@ -9982,13 +10349,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-/***/ }),
-/* 34 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($, jQuery) {'use strict';
@@ -9997,36 +10358,47 @@
 	    value: true
 	});
 
-	var _headsup = __webpack_require__(35);
-
-	var _headsup2 = _interopRequireDefault(_headsup);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	//import headsUp from 'headsup.js';
 
 	var Header = function Header() {
 	    _classCallCheck(this, Header);
 
-	    (0, _headsup2.default)({
+	    /*
+	    headsUp({
 	        selector: '._header',
 	        duration: 0.3,
 	        easing: 'ease',
 	        delay: 0,
 	        debounce: false
 	    });
+	    */
 
-	    $("._base").html('<li><a href="https://wwwdev.eia.gov/style-guide/base/color-palette.html">Color Palette</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/forms.html">Forms</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/icons.html">Icons</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/lists.html">Lists</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/size-conversions.html">Size Conversions</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/symbols.html">Symbols</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/tables.html">Tables</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/base/typography.html"></a>Typography</li>');
+	    $("._nested-layouts ._module-container > .l-row > .l-col").html('<div class="l-row header l-full-width-col">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-full-width-col">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-even">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-left-narrow">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-right-narrow">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-left">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-right">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-right-wide">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-two-col-left-wide">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-three-col-even">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-three-col">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-four-col-even">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-five-col-even">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>' + '' + '' + '' + '' + '<div class="l-row l-six-col-even">' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '   <div class="l-col">' + '        <!-- start filler text -->' + '        <div class="primary-fixed">' + '           <span class="_module-bg">' + '            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.' + '           </span>' + '       </div>' + '       <!-- end filler text  -->' + '   </div>' + '</div>');
 
-	    $("._layouts").html('<li><a href="https://wwwdev.eia.gov/style-guide/layouts/nested-layouts.html">Nested Layouts</a></li>');
+	    $(".add-header").html('<div class="l-body-wrapper  l-full-page">' + '   <header>' + '       <nav class="navigation">' + '           <a class="logo" href="/">' + '               <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>' + '           </a>' + '        <ul class="_nav">' + '            <li class="_nav-primary-item"><a href="file:///B:/app/base/index.html">Base</a>' + '                <ul class="_base _nav-dropdown"></ul>' + '            </li>' + '            <li class="_nav-primary-item"><a href="file:///B:/app/layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>' + '            </li>' + '            <li class="_nav-primary-item"><a href="file:///B:/app/modules/index.html">Modules</a>' + '                <ul class="_modules _nav-dropdown">' + '                </ul>' + '            </li>' + '            <li class="_nav-primary-item"><a href="file:///B:/app/states/index.html">States</a>' + '                <ul class="_states _nav-dropdown">' + '                </ul>' + '            </li>' + '           <li class="_nav-primary-item"><a href="file:///B:/app/themes/index.html">Themes</a>' + '                <ul class="_themes _nav-dropdown">' + '                </ul>' + '            </li>' + '            <li class="_nav-primary-item"><a href="file:///B:/app/examples/index.html">Examples</a>' + '                <ul class="_examples _nav-dropdown">' + '                </ul>' + '            </li>' + '        </ul>' + '        <div class="_resolution _mobile">Mobile</div>' + '        <div class="_resolution _mobile-landscape">Mobile Landscape</div>' + '        <div class="_resolution _tablet">Tablet</div>' + '        <div class="_resolution _tablet-landscape">Tablet Landscape</div>' + '        <div class="_resolution _laptop">Laptop +</div>' + '       </nav>' + '   </header>' + '   <div class="l-outer-wrapper">' + '       <div class="l-inner-wrapper">');
 
-	    $("._modules").html('<li><a href="https://wwwdev.eia.gov/style-guide/modules/accordion.html">Accordions</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-home.html">Content Containers (home)</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/fancybox.html">Modals (FancyBox)</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/lists.html">Lists</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/page-titles.html"></a>Messaging</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/page-titles.html">Page Titles</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/list-formatting.html">Lists Formatting</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/table-formatting.html">Table Formatting</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/modules/tabs.html"></a>Tabs</li>');
+	    $(".add-footer").html('<footer class="clearfix footer">' + '   <div class="l-row  l-two-col-right address-bar">' + '       <div class="l-col">' + '           <ul class="above-address-links">' + '               <li><a href="/about/">About EIA</a><span class="right-arrow-head"></span></li>' + '               <li><a href="/beta/api/">Open Data</a><span class="right-arrow-head"></span></li>' + '               <li><a href="/pressroom/">Press Room</a><span class="right-arrow-head"></span></li>' + '               <li><a href="/about/careers/">Careers</a><span class="right-arrow-head"></span></li>' + '               <li><a href="/about/contact/">Contact Us</a><span class="right-arrow-head"></span></li>' + '           </ul>' + '       </div>' + '       <div class="l-col">' + '           <div class="address stacked">U.S. Energy Information Administration<br>1000 Independence Ave., SW <br>Washington, DC 20585</div>' + '           <div class="address un-stacked">U.S. Energy Information Administration, 1000 Independence Ave., SW, Washington, DC 20585</div>' + '       </div>' + '   </div>' + '   <div class="l-row l-six-col-even footer-links">' + '       <ul class="l-col">' + '           <li>Sources &amp; Uses</li>' + '           <li><a href="/petroleum/">Petroleum</a></li>' + '           <li><a href="/coal/">Coal</a></li>' + '           <li><a href="/naturalgas/">Natural Gas</a></li>' + '           <li><a href="/renewable/">Renewable</a></li>' + '           <li><a href="/nuclear/">Nuclear</a></li>' + '           <li><a href="/electricity/">Electricity</a></li>' + '           <li><a href="/consumption/">Consumption</a></li>' + '           <li><a href="/totalenergy/">Total Energy</a></li>' + '       </ul>' + '       <ul class="l-col">' + '           <li>Topics</li>' + '           <li><a href="/analysis/">Analysis &amp; Projections</a></li>' + '           <li><a href="/environment">Environment</a></li>' + '           <li><a href="/finance/">Markets &amp; Finance</a></li>' + '           <li><a href="/todayinenergy/">Today in Energy</a></li>' + '           <li>Geography</li>' + '           <li><a href="/state/">States</a></li>' + '           <li><a href="/countries/">Countries</a></li>' + '           <li><a href="/maps/">Maps</a></li>' + '       </ul>' + '       <ul class="l-col">' + '           <li>Tools</li>' + '           <li><a href="/tools/a-z/">A-Z Index</a></li>' + '           <li><a href="/reports/"><span class="line-break">All Reports &amp;</span> <span class="line-break">Publications</span></a></li>' + '           <li><a href="/tools/"><span class="line-break">Data Tools, Apps,</span> <span class="line-break">and Maps</span></a></li>' + '           <li><a href="/survey/">EIA Survey Forms</a></li>' + '           <li><a href="/beta/">EIA Beta</a></li>' + '       </ul>' + '       <ul class="l-col">' + '           <li>Policies</li>' + '           <li><a href="/about/privacy_security_policy.cfm">Privacy/Security</a></li>' + '           <li><a href="/about/copyrights_reuse.cfm">Copyright &amp; Reuse</a></li>' + '           <li><a href="/about/accessability.cfm">Accessibility</a></li>' + '       </ul>' + '       <ul class="l-col">' + '           <li>Related Sites</li>' + '           <li><a href="https://www.energy.gov/">U.S. Department of Energy</a></li>' + '           <li><a href="https://www.usa.gov/">USA.gov</a></li>' + '       </ul>' + '       <ul class="l-col">' + '           <li>Stay Connected</li>' + '           <li><a href="http://facebook.com/eiagov/" target="_blank"><i class="ico-footer facebook"></i>Facebook</a></li>' + '           <li><a href="http://twitter.com/eiagov/" target="_blank"><i class="ico-footer twitter"></i>Twitter</a></li>' + '           <li><a href="http://youtube.com/eiagov/" target="_blank"><i class="ico-footer youtube"></i>Youtube</a></li>' + '           <li><a href="https://www.flickr.com/photos/eiagov/" target="_blank"><i class="ico-footer flickr"></i>Flickr</a></li>' + '           <li><a href="http://linkedin.com/company/u-s-energy-information-administration" target="_blank"><i class="ico-footer linkedin"></i>LinkedIn</a></li>' + '           <li><a href="/tools/emailupdates/" target="_blank"><i class="ico-footer email"></i>Email Updates</a></li>' + '           <li><a href="/tools/rssfeeds/" target="_blank"><i class="ico-footer rss"></i>RSS Feeds</a></li>' + '       </ul>' + '   </div>' + '</footer>');
+
+	    $("._base").html('<li><a href="file:///B:/app/base/color-palette.html">Color Palette</a></li>' + '<li><a href="file:///B:/app/base/forms.html">Forms</a></li>' + '<li><a href="file:///B:/app/base/icons.html">Icons</a></li>' + '<li><a href="file:///B:/app/base/lists.html">Lists</a></li>' + '<li><a href="file:///B:/app/base/size-conversions.html">Size Conversions</li>' + '<li><a href="file:///B:/app/base/symbols.html">Symbols</a></li>' + '<li><a href="file:///B:/app/base/tables.html">Tables</a></li>' + '<li><a href="file:///B:/app/base/typography.html"></a>Typography</li>');
+
+	    $("._layouts").html('<li><a href="file:///B:/app/layouts/index.html">Layouts</a></li>' + '<li><a href="file:///B:/app/layouts/nested-layouts.html">Nested Layouts</a></li>');
+
+	    $("._modules").html('<li><a href="file:///B:/app/modules/accordion.html">Accordions</a></li>' + '<li><a href="file:///B:/app/modules/content-containers-home.html">Content Containers (home)</a></li>' + '<li><a href="file:///B:/app/modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' + '<li><a href="file:///B:/app/modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' + '<li><a href="file:///B:/app/modules/fancybox.html">Modals (FancyBox)</a></li>' + '<li><a href="file:///B:/app/modules/lists.html">Lists</a></li>' + '<li><a href="file:///B:/app/modules/page-titles.html"></a>Messaging</li>' + '<li><a href="file:///B:/app/modules/page-titles.html">Page Titles</a></li>' + '<li><a href="file:///B:/app/modules/list-formatting.html">Lists Formatting</a></li>' + '<li><a href="file:///B:/app/modules/table-formatting.html">Table Formatting</a></li>' + '<li><a href="file:///B:/app/modules/tabs.html"></a>Tabs</li>');
 
 	    $("._states").html('<li><a href="empty-list-items.html"></a>Empty List Items</li>' + '<li>sticky-table-headers.html</li>');
 
-	    $("._themes").html('<li><a href="https://wwwdev.eia.gov/style-guide/theme/accordion"></a>Accordion</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/basic-table"></a>Basic Tables</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/data"></a>Date Tables</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/natural-gas"></a>Natural Gas</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/overview"></a>Overview</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/primary-col-modules"></a>Primary Modules</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/theme/secondary-col-modules"></a>Secondary Modules</li>');
+	    $("._themes").html('<li><a href="file:///B:/app/theme/accordion"></a>Accordion</li>' + '<li><a href="file:///B:/app/theme/basic-table"></a>Basic Tables</li>' + '<li><a href="file:///B:/app/theme/data"></a>Date Tables</li>' + '<li><a href="file:///B:/app/theme/natural-gas"></a>Natural Gas</li>' + '<li><a href="file:///B:/app/theme/overview"></a>Overview</li>' + '<li><a href="file:///B:/app/theme/primary-col-modules"></a>Primary Modules</li>' + '<li><a href="file:///B:/app/theme/secondary-col-modules"></a>Secondary Modules</li>');
 
-	    $("._examples").html('<li><a href="https://wwwdev.eia.gov/style-guide/examples/index.html"></a>Page Template</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/examples/index.html"></a>Header</li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/examples/sub-navigation.html">Sub-navigation</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/examples/header.html">Header</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/examples/slider-home.html">Slider Home</a></li>' + '<li><a href="https://wwwdev.eia.gov/style-guide/examples/slider-multi.html">Slider Multi</a></li>');
+	    $("._examples").html('<li><a href="file:///B:/app/examples/index.html"></a>Page Template</li>' + '<li><a href="file:///B:/app/examples/index.html"></a>Header</li>' + '<li><a href="file:///B:/app/examples/sub-navigation.html">Sub-navigation</a></li>' + '<li><a href="file:///B:/app/examples/header.html">Header</a></li>' + '<li><a href="file:///B:/app/examples/slider-home.html">Slider Home</a></li>' + '<li><a href="file:///B:/app/examples/slider-multi.html">Slider Multi</a></li>');
+
+	    $('button').click(function () {
+	        var dillyDilly = $(this).attr('id');
+	        alert(dillyDilly);
+	        var CopiedValue = $('input#' + dillyDilly).val();
+	        alert(CopiedValue);
+	    });
 
 	    //if ($('.navbar-brand:contains(Base)').length > 0) {
 	    //    $('#nav-2').prop('checked', true);
@@ -10056,7 +10428,8 @@
 	        };
 	    })(jQuery);
 	    /*
-	     */
+	    
+	    */
 
 	    $(function () {
 	        //$('.swatch-wrapper').each(function() { 
@@ -10311,100 +10684,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	(function (global, factory) {
-	   true ? module.exports = factory() :
-	  typeof define === 'function' && define.amd ? define(factory) :
-	  (global.headsup = factory());
-	}(this, (function () { 'use strict';
-
-	  var headsup = (function () {
-	    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-	        _ref$selector = _ref.selector,
-	        selector = _ref$selector === undefined ? 'header' : _ref$selector,
-	        _ref$duration = _ref.duration,
-	        duration = _ref$duration === undefined ? 0.3 : _ref$duration,
-	        _ref$easing = _ref.easing,
-	        easing = _ref$easing === undefined ? 'ease' : _ref$easing,
-	        _ref$delay = _ref.delay,
-	        delay = _ref$delay === undefined ? 0 : _ref$delay,
-	        _ref$debounce = _ref.debounce,
-	        debounce = _ref$debounce === undefined ? false : _ref$debounce;
-
-	    var show = true; // initial boolean value
-	    var prev = window.pageYOffset; // initial window position
-
-	    var header = document.querySelector(selector);
-	    var styles = getComputedStyle(header);
-
-	    var headerHeight = function headerHeight() {
-	      // computes total height of the element
-	      var widthAndPadding = header.getBoundingClientRect().height;
-	      var marginTop = parseFloat(styles['margin-top']);
-	      var marginBot = parseFloat(styles['margin-bottom']);
-
-	      return widthAndPadding + marginTop + marginBot;
-	    };
-
-	    var fixedShow = function fixedShow() {
-	      // shows the element
-	      header.style.top = '0';
-
-	      show = true;
-	    };
-
-	    var fixedHide = function fixedHide() {
-	      // hides the element
-	      header.style.top = '-' + headerHeight() + 'px';
-
-	      show = false;
-	    };
-
-	    var onScrollFunction = function onScrollFunction(_) {
-	      // performs logic on each scroll event
-	      var current = window.pageYOffset;
-
-	      current > prev && current >= headerHeight() / 2 ? show ? fixedHide() : null : show ? null : fixedShow();
-
-	      prev = current;
-	    };
-
-	    var debounceFunc = function debounceFunc(wait) {
-	      // debouncing function
-	      if (!wait) return onScrollFunction;
-
-	      var timeout = null;
-	      return function () {
-	        if (!timeout) {
-	          timeout = setTimeout(function () {
-	            onScrollFunction();
-	            timeout = null;
-	          }, wait);
-	        }
-	      };
-	    };
-
-	    document // adjust body margin to make space for header
-	    .body.style['margin-top'] = headerHeight() + 'px';
-
-	    Object.assign(header.style, { // assign fixed position and transition to header
-	      position: 'fixed',
-	      top: '0',
-	      transition: 'top ' + duration + 's ' + easing + ' ' + delay + 's'
-	    });
-
-	    window.addEventListener('scroll', debounceFunc(debounce));
-	  });
-
-	  return headsup;
-
-	})));
-
-
-/***/ }),
-/* 36 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -10413,7 +10693,7 @@
 	    value: true
 	});
 
-	var _highlight = __webpack_require__(37);
+	var _highlight = __webpack_require__(31);
 
 	var _highlight2 = _interopRequireDefault(_highlight);
 
@@ -10440,201 +10720,201 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 37 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(38);
+	var hljs = __webpack_require__(32);
 
-	hljs.registerLanguage('1c', __webpack_require__(39));
-	hljs.registerLanguage('abnf', __webpack_require__(40));
-	hljs.registerLanguage('accesslog', __webpack_require__(41));
-	hljs.registerLanguage('actionscript', __webpack_require__(42));
-	hljs.registerLanguage('ada', __webpack_require__(43));
-	hljs.registerLanguage('angelscript', __webpack_require__(44));
-	hljs.registerLanguage('apache', __webpack_require__(45));
-	hljs.registerLanguage('applescript', __webpack_require__(46));
-	hljs.registerLanguage('arcade', __webpack_require__(47));
-	hljs.registerLanguage('cpp', __webpack_require__(48));
-	hljs.registerLanguage('arduino', __webpack_require__(49));
-	hljs.registerLanguage('armasm', __webpack_require__(50));
-	hljs.registerLanguage('xml', __webpack_require__(51));
-	hljs.registerLanguage('asciidoc', __webpack_require__(52));
-	hljs.registerLanguage('aspectj', __webpack_require__(53));
-	hljs.registerLanguage('autohotkey', __webpack_require__(54));
-	hljs.registerLanguage('autoit', __webpack_require__(55));
-	hljs.registerLanguage('avrasm', __webpack_require__(56));
-	hljs.registerLanguage('awk', __webpack_require__(57));
-	hljs.registerLanguage('axapta', __webpack_require__(58));
-	hljs.registerLanguage('bash', __webpack_require__(59));
-	hljs.registerLanguage('basic', __webpack_require__(60));
-	hljs.registerLanguage('bnf', __webpack_require__(61));
-	hljs.registerLanguage('brainfuck', __webpack_require__(62));
-	hljs.registerLanguage('cal', __webpack_require__(63));
-	hljs.registerLanguage('capnproto', __webpack_require__(64));
-	hljs.registerLanguage('ceylon', __webpack_require__(65));
-	hljs.registerLanguage('clean', __webpack_require__(66));
-	hljs.registerLanguage('clojure', __webpack_require__(67));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(68));
-	hljs.registerLanguage('cmake', __webpack_require__(69));
-	hljs.registerLanguage('coffeescript', __webpack_require__(70));
-	hljs.registerLanguage('coq', __webpack_require__(71));
-	hljs.registerLanguage('cos', __webpack_require__(72));
-	hljs.registerLanguage('crmsh', __webpack_require__(73));
-	hljs.registerLanguage('crystal', __webpack_require__(74));
-	hljs.registerLanguage('cs', __webpack_require__(75));
-	hljs.registerLanguage('csp', __webpack_require__(76));
-	hljs.registerLanguage('css', __webpack_require__(77));
-	hljs.registerLanguage('d', __webpack_require__(78));
-	hljs.registerLanguage('markdown', __webpack_require__(79));
-	hljs.registerLanguage('dart', __webpack_require__(80));
-	hljs.registerLanguage('delphi', __webpack_require__(81));
-	hljs.registerLanguage('diff', __webpack_require__(82));
-	hljs.registerLanguage('django', __webpack_require__(83));
-	hljs.registerLanguage('dns', __webpack_require__(84));
-	hljs.registerLanguage('dockerfile', __webpack_require__(85));
-	hljs.registerLanguage('dos', __webpack_require__(86));
-	hljs.registerLanguage('dsconfig', __webpack_require__(87));
-	hljs.registerLanguage('dts', __webpack_require__(88));
-	hljs.registerLanguage('dust', __webpack_require__(89));
-	hljs.registerLanguage('ebnf', __webpack_require__(90));
-	hljs.registerLanguage('elixir', __webpack_require__(91));
-	hljs.registerLanguage('elm', __webpack_require__(92));
-	hljs.registerLanguage('ruby', __webpack_require__(93));
-	hljs.registerLanguage('erb', __webpack_require__(94));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(95));
-	hljs.registerLanguage('erlang', __webpack_require__(96));
-	hljs.registerLanguage('excel', __webpack_require__(97));
-	hljs.registerLanguage('fix', __webpack_require__(98));
-	hljs.registerLanguage('flix', __webpack_require__(99));
-	hljs.registerLanguage('fortran', __webpack_require__(100));
-	hljs.registerLanguage('fsharp', __webpack_require__(101));
-	hljs.registerLanguage('gams', __webpack_require__(102));
-	hljs.registerLanguage('gauss', __webpack_require__(103));
-	hljs.registerLanguage('gcode', __webpack_require__(104));
-	hljs.registerLanguage('gherkin', __webpack_require__(105));
-	hljs.registerLanguage('glsl', __webpack_require__(106));
-	hljs.registerLanguage('gml', __webpack_require__(107));
-	hljs.registerLanguage('go', __webpack_require__(108));
-	hljs.registerLanguage('golo', __webpack_require__(109));
-	hljs.registerLanguage('gradle', __webpack_require__(110));
-	hljs.registerLanguage('groovy', __webpack_require__(111));
-	hljs.registerLanguage('haml', __webpack_require__(112));
-	hljs.registerLanguage('handlebars', __webpack_require__(113));
-	hljs.registerLanguage('haskell', __webpack_require__(114));
-	hljs.registerLanguage('haxe', __webpack_require__(115));
-	hljs.registerLanguage('hsp', __webpack_require__(116));
-	hljs.registerLanguage('htmlbars', __webpack_require__(117));
-	hljs.registerLanguage('http', __webpack_require__(118));
-	hljs.registerLanguage('hy', __webpack_require__(119));
-	hljs.registerLanguage('inform7', __webpack_require__(120));
-	hljs.registerLanguage('ini', __webpack_require__(121));
-	hljs.registerLanguage('irpf90', __webpack_require__(122));
-	hljs.registerLanguage('isbl', __webpack_require__(123));
-	hljs.registerLanguage('java', __webpack_require__(124));
-	hljs.registerLanguage('javascript', __webpack_require__(125));
-	hljs.registerLanguage('jboss-cli', __webpack_require__(126));
-	hljs.registerLanguage('json', __webpack_require__(127));
-	hljs.registerLanguage('julia', __webpack_require__(128));
-	hljs.registerLanguage('julia-repl', __webpack_require__(129));
-	hljs.registerLanguage('kotlin', __webpack_require__(130));
-	hljs.registerLanguage('lasso', __webpack_require__(131));
-	hljs.registerLanguage('ldif', __webpack_require__(132));
-	hljs.registerLanguage('leaf', __webpack_require__(133));
-	hljs.registerLanguage('less', __webpack_require__(134));
-	hljs.registerLanguage('lisp', __webpack_require__(135));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(136));
-	hljs.registerLanguage('livescript', __webpack_require__(137));
-	hljs.registerLanguage('llvm', __webpack_require__(138));
-	hljs.registerLanguage('lsl', __webpack_require__(139));
-	hljs.registerLanguage('lua', __webpack_require__(140));
-	hljs.registerLanguage('makefile', __webpack_require__(141));
-	hljs.registerLanguage('mathematica', __webpack_require__(142));
-	hljs.registerLanguage('matlab', __webpack_require__(143));
-	hljs.registerLanguage('maxima', __webpack_require__(144));
-	hljs.registerLanguage('mel', __webpack_require__(145));
-	hljs.registerLanguage('mercury', __webpack_require__(146));
-	hljs.registerLanguage('mipsasm', __webpack_require__(147));
-	hljs.registerLanguage('mizar', __webpack_require__(148));
-	hljs.registerLanguage('perl', __webpack_require__(149));
-	hljs.registerLanguage('mojolicious', __webpack_require__(150));
-	hljs.registerLanguage('monkey', __webpack_require__(151));
-	hljs.registerLanguage('moonscript', __webpack_require__(152));
-	hljs.registerLanguage('n1ql', __webpack_require__(153));
-	hljs.registerLanguage('nginx', __webpack_require__(154));
-	hljs.registerLanguage('nimrod', __webpack_require__(155));
-	hljs.registerLanguage('nix', __webpack_require__(156));
-	hljs.registerLanguage('nsis', __webpack_require__(157));
-	hljs.registerLanguage('objectivec', __webpack_require__(158));
-	hljs.registerLanguage('ocaml', __webpack_require__(159));
-	hljs.registerLanguage('openscad', __webpack_require__(160));
-	hljs.registerLanguage('oxygene', __webpack_require__(161));
-	hljs.registerLanguage('parser3', __webpack_require__(162));
-	hljs.registerLanguage('pf', __webpack_require__(163));
-	hljs.registerLanguage('pgsql', __webpack_require__(164));
-	hljs.registerLanguage('php', __webpack_require__(165));
-	hljs.registerLanguage('plaintext', __webpack_require__(166));
-	hljs.registerLanguage('pony', __webpack_require__(167));
-	hljs.registerLanguage('powershell', __webpack_require__(168));
-	hljs.registerLanguage('processing', __webpack_require__(169));
-	hljs.registerLanguage('profile', __webpack_require__(170));
-	hljs.registerLanguage('prolog', __webpack_require__(171));
-	hljs.registerLanguage('properties', __webpack_require__(172));
-	hljs.registerLanguage('protobuf', __webpack_require__(173));
-	hljs.registerLanguage('puppet', __webpack_require__(174));
-	hljs.registerLanguage('purebasic', __webpack_require__(175));
-	hljs.registerLanguage('python', __webpack_require__(176));
-	hljs.registerLanguage('q', __webpack_require__(177));
-	hljs.registerLanguage('qml', __webpack_require__(178));
-	hljs.registerLanguage('r', __webpack_require__(179));
-	hljs.registerLanguage('reasonml', __webpack_require__(180));
-	hljs.registerLanguage('rib', __webpack_require__(181));
-	hljs.registerLanguage('roboconf', __webpack_require__(182));
-	hljs.registerLanguage('routeros', __webpack_require__(183));
-	hljs.registerLanguage('rsl', __webpack_require__(184));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(185));
-	hljs.registerLanguage('rust', __webpack_require__(186));
-	hljs.registerLanguage('sas', __webpack_require__(187));
-	hljs.registerLanguage('scala', __webpack_require__(188));
-	hljs.registerLanguage('scheme', __webpack_require__(189));
-	hljs.registerLanguage('scilab', __webpack_require__(190));
-	hljs.registerLanguage('scss', __webpack_require__(191));
-	hljs.registerLanguage('shell', __webpack_require__(192));
-	hljs.registerLanguage('smali', __webpack_require__(193));
-	hljs.registerLanguage('smalltalk', __webpack_require__(194));
-	hljs.registerLanguage('sml', __webpack_require__(195));
-	hljs.registerLanguage('sqf', __webpack_require__(196));
-	hljs.registerLanguage('sql', __webpack_require__(197));
-	hljs.registerLanguage('stan', __webpack_require__(198));
-	hljs.registerLanguage('stata', __webpack_require__(199));
-	hljs.registerLanguage('step21', __webpack_require__(200));
-	hljs.registerLanguage('stylus', __webpack_require__(201));
-	hljs.registerLanguage('subunit', __webpack_require__(202));
-	hljs.registerLanguage('swift', __webpack_require__(203));
-	hljs.registerLanguage('taggerscript', __webpack_require__(204));
-	hljs.registerLanguage('yaml', __webpack_require__(205));
-	hljs.registerLanguage('tap', __webpack_require__(206));
-	hljs.registerLanguage('tcl', __webpack_require__(207));
-	hljs.registerLanguage('tex', __webpack_require__(208));
-	hljs.registerLanguage('thrift', __webpack_require__(209));
-	hljs.registerLanguage('tp', __webpack_require__(210));
-	hljs.registerLanguage('twig', __webpack_require__(211));
-	hljs.registerLanguage('typescript', __webpack_require__(212));
-	hljs.registerLanguage('vala', __webpack_require__(213));
-	hljs.registerLanguage('vbnet', __webpack_require__(214));
-	hljs.registerLanguage('vbscript', __webpack_require__(215));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(216));
-	hljs.registerLanguage('verilog', __webpack_require__(217));
-	hljs.registerLanguage('vhdl', __webpack_require__(218));
-	hljs.registerLanguage('vim', __webpack_require__(219));
-	hljs.registerLanguage('x86asm', __webpack_require__(220));
-	hljs.registerLanguage('xl', __webpack_require__(221));
-	hljs.registerLanguage('xquery', __webpack_require__(222));
-	hljs.registerLanguage('zephir', __webpack_require__(223));
+	hljs.registerLanguage('1c', __webpack_require__(33));
+	hljs.registerLanguage('abnf', __webpack_require__(34));
+	hljs.registerLanguage('accesslog', __webpack_require__(35));
+	hljs.registerLanguage('actionscript', __webpack_require__(36));
+	hljs.registerLanguage('ada', __webpack_require__(37));
+	hljs.registerLanguage('angelscript', __webpack_require__(38));
+	hljs.registerLanguage('apache', __webpack_require__(39));
+	hljs.registerLanguage('applescript', __webpack_require__(40));
+	hljs.registerLanguage('arcade', __webpack_require__(41));
+	hljs.registerLanguage('cpp', __webpack_require__(42));
+	hljs.registerLanguage('arduino', __webpack_require__(43));
+	hljs.registerLanguage('armasm', __webpack_require__(44));
+	hljs.registerLanguage('xml', __webpack_require__(45));
+	hljs.registerLanguage('asciidoc', __webpack_require__(46));
+	hljs.registerLanguage('aspectj', __webpack_require__(47));
+	hljs.registerLanguage('autohotkey', __webpack_require__(48));
+	hljs.registerLanguage('autoit', __webpack_require__(49));
+	hljs.registerLanguage('avrasm', __webpack_require__(50));
+	hljs.registerLanguage('awk', __webpack_require__(51));
+	hljs.registerLanguage('axapta', __webpack_require__(52));
+	hljs.registerLanguage('bash', __webpack_require__(53));
+	hljs.registerLanguage('basic', __webpack_require__(54));
+	hljs.registerLanguage('bnf', __webpack_require__(55));
+	hljs.registerLanguage('brainfuck', __webpack_require__(56));
+	hljs.registerLanguage('cal', __webpack_require__(57));
+	hljs.registerLanguage('capnproto', __webpack_require__(58));
+	hljs.registerLanguage('ceylon', __webpack_require__(59));
+	hljs.registerLanguage('clean', __webpack_require__(60));
+	hljs.registerLanguage('clojure', __webpack_require__(61));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(62));
+	hljs.registerLanguage('cmake', __webpack_require__(63));
+	hljs.registerLanguage('coffeescript', __webpack_require__(64));
+	hljs.registerLanguage('coq', __webpack_require__(65));
+	hljs.registerLanguage('cos', __webpack_require__(66));
+	hljs.registerLanguage('crmsh', __webpack_require__(67));
+	hljs.registerLanguage('crystal', __webpack_require__(68));
+	hljs.registerLanguage('cs', __webpack_require__(69));
+	hljs.registerLanguage('csp', __webpack_require__(70));
+	hljs.registerLanguage('css', __webpack_require__(71));
+	hljs.registerLanguage('d', __webpack_require__(72));
+	hljs.registerLanguage('markdown', __webpack_require__(73));
+	hljs.registerLanguage('dart', __webpack_require__(74));
+	hljs.registerLanguage('delphi', __webpack_require__(75));
+	hljs.registerLanguage('diff', __webpack_require__(76));
+	hljs.registerLanguage('django', __webpack_require__(77));
+	hljs.registerLanguage('dns', __webpack_require__(78));
+	hljs.registerLanguage('dockerfile', __webpack_require__(79));
+	hljs.registerLanguage('dos', __webpack_require__(80));
+	hljs.registerLanguage('dsconfig', __webpack_require__(81));
+	hljs.registerLanguage('dts', __webpack_require__(82));
+	hljs.registerLanguage('dust', __webpack_require__(83));
+	hljs.registerLanguage('ebnf', __webpack_require__(84));
+	hljs.registerLanguage('elixir', __webpack_require__(85));
+	hljs.registerLanguage('elm', __webpack_require__(86));
+	hljs.registerLanguage('ruby', __webpack_require__(87));
+	hljs.registerLanguage('erb', __webpack_require__(88));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(89));
+	hljs.registerLanguage('erlang', __webpack_require__(90));
+	hljs.registerLanguage('excel', __webpack_require__(91));
+	hljs.registerLanguage('fix', __webpack_require__(92));
+	hljs.registerLanguage('flix', __webpack_require__(93));
+	hljs.registerLanguage('fortran', __webpack_require__(94));
+	hljs.registerLanguage('fsharp', __webpack_require__(95));
+	hljs.registerLanguage('gams', __webpack_require__(96));
+	hljs.registerLanguage('gauss', __webpack_require__(97));
+	hljs.registerLanguage('gcode', __webpack_require__(98));
+	hljs.registerLanguage('gherkin', __webpack_require__(99));
+	hljs.registerLanguage('glsl', __webpack_require__(100));
+	hljs.registerLanguage('gml', __webpack_require__(101));
+	hljs.registerLanguage('go', __webpack_require__(102));
+	hljs.registerLanguage('golo', __webpack_require__(103));
+	hljs.registerLanguage('gradle', __webpack_require__(104));
+	hljs.registerLanguage('groovy', __webpack_require__(105));
+	hljs.registerLanguage('haml', __webpack_require__(106));
+	hljs.registerLanguage('handlebars', __webpack_require__(107));
+	hljs.registerLanguage('haskell', __webpack_require__(108));
+	hljs.registerLanguage('haxe', __webpack_require__(109));
+	hljs.registerLanguage('hsp', __webpack_require__(110));
+	hljs.registerLanguage('htmlbars', __webpack_require__(111));
+	hljs.registerLanguage('http', __webpack_require__(112));
+	hljs.registerLanguage('hy', __webpack_require__(113));
+	hljs.registerLanguage('inform7', __webpack_require__(114));
+	hljs.registerLanguage('ini', __webpack_require__(115));
+	hljs.registerLanguage('irpf90', __webpack_require__(116));
+	hljs.registerLanguage('isbl', __webpack_require__(117));
+	hljs.registerLanguage('java', __webpack_require__(118));
+	hljs.registerLanguage('javascript', __webpack_require__(119));
+	hljs.registerLanguage('jboss-cli', __webpack_require__(120));
+	hljs.registerLanguage('json', __webpack_require__(121));
+	hljs.registerLanguage('julia', __webpack_require__(122));
+	hljs.registerLanguage('julia-repl', __webpack_require__(123));
+	hljs.registerLanguage('kotlin', __webpack_require__(124));
+	hljs.registerLanguage('lasso', __webpack_require__(125));
+	hljs.registerLanguage('ldif', __webpack_require__(126));
+	hljs.registerLanguage('leaf', __webpack_require__(127));
+	hljs.registerLanguage('less', __webpack_require__(128));
+	hljs.registerLanguage('lisp', __webpack_require__(129));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(130));
+	hljs.registerLanguage('livescript', __webpack_require__(131));
+	hljs.registerLanguage('llvm', __webpack_require__(132));
+	hljs.registerLanguage('lsl', __webpack_require__(133));
+	hljs.registerLanguage('lua', __webpack_require__(134));
+	hljs.registerLanguage('makefile', __webpack_require__(135));
+	hljs.registerLanguage('mathematica', __webpack_require__(136));
+	hljs.registerLanguage('matlab', __webpack_require__(137));
+	hljs.registerLanguage('maxima', __webpack_require__(138));
+	hljs.registerLanguage('mel', __webpack_require__(139));
+	hljs.registerLanguage('mercury', __webpack_require__(140));
+	hljs.registerLanguage('mipsasm', __webpack_require__(141));
+	hljs.registerLanguage('mizar', __webpack_require__(142));
+	hljs.registerLanguage('perl', __webpack_require__(143));
+	hljs.registerLanguage('mojolicious', __webpack_require__(144));
+	hljs.registerLanguage('monkey', __webpack_require__(145));
+	hljs.registerLanguage('moonscript', __webpack_require__(146));
+	hljs.registerLanguage('n1ql', __webpack_require__(147));
+	hljs.registerLanguage('nginx', __webpack_require__(148));
+	hljs.registerLanguage('nimrod', __webpack_require__(149));
+	hljs.registerLanguage('nix', __webpack_require__(150));
+	hljs.registerLanguage('nsis', __webpack_require__(151));
+	hljs.registerLanguage('objectivec', __webpack_require__(152));
+	hljs.registerLanguage('ocaml', __webpack_require__(153));
+	hljs.registerLanguage('openscad', __webpack_require__(154));
+	hljs.registerLanguage('oxygene', __webpack_require__(155));
+	hljs.registerLanguage('parser3', __webpack_require__(156));
+	hljs.registerLanguage('pf', __webpack_require__(157));
+	hljs.registerLanguage('pgsql', __webpack_require__(158));
+	hljs.registerLanguage('php', __webpack_require__(159));
+	hljs.registerLanguage('plaintext', __webpack_require__(160));
+	hljs.registerLanguage('pony', __webpack_require__(161));
+	hljs.registerLanguage('powershell', __webpack_require__(162));
+	hljs.registerLanguage('processing', __webpack_require__(163));
+	hljs.registerLanguage('profile', __webpack_require__(164));
+	hljs.registerLanguage('prolog', __webpack_require__(165));
+	hljs.registerLanguage('properties', __webpack_require__(166));
+	hljs.registerLanguage('protobuf', __webpack_require__(167));
+	hljs.registerLanguage('puppet', __webpack_require__(168));
+	hljs.registerLanguage('purebasic', __webpack_require__(169));
+	hljs.registerLanguage('python', __webpack_require__(170));
+	hljs.registerLanguage('q', __webpack_require__(171));
+	hljs.registerLanguage('qml', __webpack_require__(172));
+	hljs.registerLanguage('r', __webpack_require__(173));
+	hljs.registerLanguage('reasonml', __webpack_require__(174));
+	hljs.registerLanguage('rib', __webpack_require__(175));
+	hljs.registerLanguage('roboconf', __webpack_require__(176));
+	hljs.registerLanguage('routeros', __webpack_require__(177));
+	hljs.registerLanguage('rsl', __webpack_require__(178));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(179));
+	hljs.registerLanguage('rust', __webpack_require__(180));
+	hljs.registerLanguage('sas', __webpack_require__(181));
+	hljs.registerLanguage('scala', __webpack_require__(182));
+	hljs.registerLanguage('scheme', __webpack_require__(183));
+	hljs.registerLanguage('scilab', __webpack_require__(184));
+	hljs.registerLanguage('scss', __webpack_require__(185));
+	hljs.registerLanguage('shell', __webpack_require__(186));
+	hljs.registerLanguage('smali', __webpack_require__(187));
+	hljs.registerLanguage('smalltalk', __webpack_require__(188));
+	hljs.registerLanguage('sml', __webpack_require__(189));
+	hljs.registerLanguage('sqf', __webpack_require__(190));
+	hljs.registerLanguage('sql', __webpack_require__(191));
+	hljs.registerLanguage('stan', __webpack_require__(192));
+	hljs.registerLanguage('stata', __webpack_require__(193));
+	hljs.registerLanguage('step21', __webpack_require__(194));
+	hljs.registerLanguage('stylus', __webpack_require__(195));
+	hljs.registerLanguage('subunit', __webpack_require__(196));
+	hljs.registerLanguage('swift', __webpack_require__(197));
+	hljs.registerLanguage('taggerscript', __webpack_require__(198));
+	hljs.registerLanguage('yaml', __webpack_require__(199));
+	hljs.registerLanguage('tap', __webpack_require__(200));
+	hljs.registerLanguage('tcl', __webpack_require__(201));
+	hljs.registerLanguage('tex', __webpack_require__(202));
+	hljs.registerLanguage('thrift', __webpack_require__(203));
+	hljs.registerLanguage('tp', __webpack_require__(204));
+	hljs.registerLanguage('twig', __webpack_require__(205));
+	hljs.registerLanguage('typescript', __webpack_require__(206));
+	hljs.registerLanguage('vala', __webpack_require__(207));
+	hljs.registerLanguage('vbnet', __webpack_require__(208));
+	hljs.registerLanguage('vbscript', __webpack_require__(209));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(210));
+	hljs.registerLanguage('verilog', __webpack_require__(211));
+	hljs.registerLanguage('vhdl', __webpack_require__(212));
+	hljs.registerLanguage('vim', __webpack_require__(213));
+	hljs.registerLanguage('x86asm', __webpack_require__(214));
+	hljs.registerLanguage('xl', __webpack_require__(215));
+	hljs.registerLanguage('xquery', __webpack_require__(216));
+	hljs.registerLanguage('zephir', __webpack_require__(217));
 
 	module.exports = hljs;
 
 /***/ }),
-/* 38 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -11474,7 +11754,7 @@
 
 
 /***/ }),
-/* 39 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs){
@@ -11988,7 +12268,7 @@
 	};
 
 /***/ }),
-/* 40 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12063,7 +12343,7 @@
 	};
 
 /***/ }),
-/* 41 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12105,7 +12385,7 @@
 	};
 
 /***/ }),
-/* 42 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12183,7 +12463,7 @@
 	};
 
 /***/ }),
-/* 43 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	module.exports = // We try to support full Ada2012
@@ -12360,7 +12640,7 @@
 	};
 
 /***/ }),
-/* 44 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12471,7 +12751,7 @@
 	};
 
 /***/ }),
-/* 45 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12521,7 +12801,7 @@
 	};
 
 /***/ }),
-/* 46 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12611,7 +12891,7 @@
 	};
 
 /***/ }),
-/* 47 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12752,7 +13032,7 @@
 	};
 
 /***/ }),
-/* 48 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -12948,7 +13228,7 @@
 	};
 
 /***/ }),
-/* 49 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13052,7 +13332,7 @@
 	};
 
 /***/ }),
-/* 50 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13148,7 +13428,7 @@
 	};
 
 /***/ }),
-/* 51 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13260,7 +13540,7 @@
 	};
 
 /***/ }),
-/* 52 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13452,7 +13732,7 @@
 	};
 
 /***/ }),
-/* 53 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -13601,7 +13881,7 @@
 	};
 
 /***/ }),
-/* 54 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13664,7 +13944,7 @@
 	};
 
 /***/ }),
-/* 55 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13804,7 +14084,7 @@
 	};
 
 /***/ }),
-/* 56 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13870,7 +14150,7 @@
 	};
 
 /***/ }),
-/* 57 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13927,7 +14207,7 @@
 	};
 
 /***/ }),
-/* 58 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -13962,7 +14242,7 @@
 	};
 
 /***/ }),
-/* 59 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14041,7 +14321,7 @@
 	};
 
 /***/ }),
-/* 60 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14096,7 +14376,7 @@
 	};
 
 /***/ }),
-/* 61 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14129,7 +14409,7 @@
 	};
 
 /***/ }),
-/* 62 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs){
@@ -14170,7 +14450,7 @@
 	};
 
 /***/ }),
-/* 63 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14254,7 +14534,7 @@
 	};
 
 /***/ }),
-/* 64 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14307,7 +14587,7 @@
 	};
 
 /***/ }),
-/* 65 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14378,7 +14658,7 @@
 	};
 
 /***/ }),
-/* 66 */
+/* 60 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14407,7 +14687,7 @@
 	};
 
 /***/ }),
-/* 67 */
+/* 61 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14507,7 +14787,7 @@
 	};
 
 /***/ }),
-/* 68 */
+/* 62 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14526,7 +14806,7 @@
 	};
 
 /***/ }),
-/* 69 */
+/* 63 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14583,7 +14863,7 @@
 	};
 
 /***/ }),
-/* 70 */
+/* 64 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14733,7 +15013,7 @@
 	};
 
 /***/ }),
-/* 71 */
+/* 65 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -14804,7 +15084,7 @@
 	};
 
 /***/ }),
-/* 72 */
+/* 66 */
 /***/ (function(module, exports) {
 
 	module.exports = function cos (hljs) {
@@ -14932,7 +15212,7 @@
 	};
 
 /***/ }),
-/* 73 */
+/* 67 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15030,7 +15310,7 @@
 	};
 
 /***/ }),
-/* 74 */
+/* 68 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15228,7 +15508,7 @@
 	};
 
 /***/ }),
-/* 75 */
+/* 69 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15417,7 +15697,7 @@
 	};
 
 /***/ }),
-/* 76 */
+/* 70 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15443,7 +15723,7 @@
 	};
 
 /***/ }),
-/* 77 */
+/* 71 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15552,7 +15832,7 @@
 	};
 
 /***/ }),
-/* 78 */
+/* 72 */
 /***/ (function(module, exports) {
 
 	module.exports = /**
@@ -15814,7 +16094,7 @@
 	};
 
 /***/ }),
-/* 79 */
+/* 73 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -15926,7 +16206,7 @@
 	};
 
 /***/ }),
-/* 80 */
+/* 74 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -16034,7 +16314,7 @@
 	};
 
 /***/ }),
-/* 81 */
+/* 75 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16107,7 +16387,7 @@
 	};
 
 /***/ }),
-/* 82 */
+/* 76 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16151,7 +16431,7 @@
 	};
 
 /***/ }),
-/* 83 */
+/* 77 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16219,7 +16499,7 @@
 	};
 
 /***/ }),
-/* 84 */
+/* 78 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16252,7 +16532,7 @@
 	};
 
 /***/ }),
-/* 85 */
+/* 79 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16278,7 +16558,7 @@
 	};
 
 /***/ }),
-/* 86 */
+/* 80 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16334,7 +16614,7 @@
 	};
 
 /***/ }),
-/* 87 */
+/* 81 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16385,7 +16665,7 @@
 	};
 
 /***/ }),
-/* 88 */
+/* 82 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16513,7 +16793,7 @@
 	};
 
 /***/ }),
-/* 89 */
+/* 83 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16549,7 +16829,7 @@
 	};
 
 /***/ }),
-/* 90 */
+/* 84 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16586,7 +16866,7 @@
 	};
 
 /***/ }),
-/* 91 */
+/* 85 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16690,7 +16970,7 @@
 	};
 
 /***/ }),
-/* 92 */
+/* 86 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16784,7 +17064,7 @@
 	};
 
 /***/ }),
-/* 93 */
+/* 87 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16965,7 +17245,7 @@
 	};
 
 /***/ }),
-/* 94 */
+/* 88 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -16984,7 +17264,7 @@
 	};
 
 /***/ }),
-/* 95 */
+/* 89 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17034,7 +17314,7 @@
 	};
 
 /***/ }),
-/* 96 */
+/* 90 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17184,7 +17464,7 @@
 	};
 
 /***/ }),
-/* 97 */
+/* 91 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17236,7 +17516,7 @@
 	};
 
 /***/ }),
-/* 98 */
+/* 92 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17269,7 +17549,7 @@
 	};
 
 /***/ }),
-/* 99 */
+/* 93 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17318,7 +17598,7 @@
 	};
 
 /***/ }),
-/* 100 */
+/* 94 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17393,7 +17673,7 @@
 	};
 
 /***/ }),
-/* 101 */
+/* 95 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17456,7 +17736,7 @@
 	};
 
 /***/ }),
-/* 102 */
+/* 96 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17614,7 +17894,7 @@
 	};
 
 /***/ }),
-/* 103 */
+/* 97 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17842,7 +18122,7 @@
 	};
 
 /***/ }),
-/* 104 */
+/* 98 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -17913,7 +18193,7 @@
 	};
 
 /***/ }),
-/* 105 */
+/* 99 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -17954,7 +18234,7 @@
 	};
 
 /***/ }),
-/* 106 */
+/* 100 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18075,7 +18355,7 @@
 	};
 
 /***/ }),
-/* 107 */
+/* 101 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -18952,7 +19232,7 @@
 	};
 
 /***/ }),
-/* 108 */
+/* 102 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19010,7 +19290,7 @@
 	};
 
 /***/ }),
-/* 109 */
+/* 103 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19037,7 +19317,7 @@
 	};
 
 /***/ }),
-/* 110 */
+/* 104 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19076,7 +19356,7 @@
 	};
 
 /***/ }),
-/* 111 */
+/* 105 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19174,7 +19454,7 @@
 	};
 
 /***/ }),
-/* 112 */
+/* 106 */
 /***/ (function(module, exports) {
 
 	module.exports = // TODO support filter tags like :javascript, support inline HTML
@@ -19285,7 +19565,7 @@
 	};
 
 /***/ }),
-/* 113 */
+/* 107 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19323,7 +19603,7 @@
 	};
 
 /***/ }),
-/* 114 */
+/* 108 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19449,7 +19729,7 @@
 	};
 
 /***/ }),
-/* 115 */
+/* 109 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19565,7 +19845,7 @@
 	};
 
 /***/ }),
-/* 116 */
+/* 110 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19615,7 +19895,7 @@
 	};
 
 /***/ }),
-/* 117 */
+/* 111 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19690,7 +19970,7 @@
 	};
 
 /***/ }),
-/* 118 */
+/* 112 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19735,7 +20015,7 @@
 	};
 
 /***/ }),
-/* 119 */
+/* 113 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19841,7 +20121,7 @@
 	};
 
 /***/ }),
-/* 120 */
+/* 114 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19902,7 +20182,7 @@
 	};
 
 /***/ }),
-/* 121 */
+/* 115 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -19972,7 +20252,7 @@
 	};
 
 /***/ }),
-/* 122 */
+/* 116 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -20052,7 +20332,7 @@
 	};
 
 /***/ }),
-/* 123 */
+/* 117 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23229,7 +23509,7 @@
 	};
 
 /***/ }),
-/* 124 */
+/* 118 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23341,7 +23621,7 @@
 	};
 
 /***/ }),
-/* 125 */
+/* 119 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23516,7 +23796,7 @@
 	};
 
 /***/ }),
-/* 126 */
+/* 120 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -23567,7 +23847,7 @@
 	};
 
 /***/ }),
-/* 127 */
+/* 121 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23608,7 +23888,7 @@
 	};
 
 /***/ }),
-/* 128 */
+/* 122 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23774,7 +24054,7 @@
 	};
 
 /***/ }),
-/* 129 */
+/* 123 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -23802,7 +24082,7 @@
 	};
 
 /***/ }),
-/* 130 */
+/* 124 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24005,7 +24285,7 @@
 	};
 
 /***/ }),
-/* 131 */
+/* 125 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24172,7 +24452,7 @@
 	};
 
 /***/ }),
-/* 132 */
+/* 126 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24199,7 +24479,7 @@
 	};
 
 /***/ }),
-/* 133 */
+/* 127 */
 /***/ (function(module, exports) {
 
 	module.exports = function (hljs) {
@@ -24243,7 +24523,7 @@
 	};
 
 /***/ }),
-/* 134 */
+/* 128 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24387,7 +24667,7 @@
 	};
 
 /***/ }),
-/* 135 */
+/* 129 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24494,7 +24774,7 @@
 	};
 
 /***/ }),
-/* 136 */
+/* 130 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24655,7 +24935,7 @@
 	};
 
 /***/ }),
-/* 137 */
+/* 131 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24808,7 +25088,7 @@
 	};
 
 /***/ }),
-/* 138 */
+/* 132 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24901,7 +25181,7 @@
 	};
 
 /***/ }),
-/* 139 */
+/* 133 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -24988,7 +25268,7 @@
 	};
 
 /***/ }),
-/* 140 */
+/* 134 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25058,7 +25338,7 @@
 	};
 
 /***/ }),
-/* 141 */
+/* 135 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25143,7 +25423,7 @@
 	};
 
 /***/ }),
-/* 142 */
+/* 136 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25205,7 +25485,7 @@
 	};
 
 /***/ }),
-/* 143 */
+/* 137 */
 /***/ (function(module, exports) {
 
 	module.exports = /*
@@ -25305,7 +25585,7 @@
 	};
 
 /***/ }),
-/* 144 */
+/* 138 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25715,7 +25995,7 @@
 	};
 
 /***/ }),
-/* 145 */
+/* 139 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -25944,7 +26224,7 @@
 	};
 
 /***/ }),
-/* 146 */
+/* 140 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26030,7 +26310,7 @@
 	};
 
 /***/ }),
-/* 147 */
+/* 141 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26120,7 +26400,7 @@
 	};
 
 /***/ }),
-/* 148 */
+/* 142 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26143,7 +26423,7 @@
 	};
 
 /***/ }),
-/* 149 */
+/* 143 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26304,7 +26584,7 @@
 	};
 
 /***/ }),
-/* 150 */
+/* 144 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26333,7 +26613,7 @@
 	};
 
 /***/ }),
-/* 151 */
+/* 145 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26412,7 +26692,7 @@
 	};
 
 /***/ }),
-/* 152 */
+/* 146 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26528,7 +26808,7 @@
 	};
 
 /***/ }),
-/* 153 */
+/* 147 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26601,7 +26881,7 @@
 	};
 
 /***/ }),
-/* 154 */
+/* 148 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26698,7 +26978,7 @@
 	};
 
 /***/ }),
-/* 155 */
+/* 149 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26757,7 +27037,7 @@
 	};
 
 /***/ }),
-/* 156 */
+/* 150 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26810,7 +27090,7 @@
 	};
 
 /***/ }),
-/* 157 */
+/* 151 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -26920,7 +27200,7 @@
 	};
 
 /***/ }),
-/* 158 */
+/* 152 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27015,7 +27295,7 @@
 	};
 
 /***/ }),
-/* 159 */
+/* 153 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27090,7 +27370,7 @@
 	};
 
 /***/ }),
-/* 160 */
+/* 154 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27151,7 +27431,7 @@
 	};
 
 /***/ }),
-/* 161 */
+/* 155 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27225,7 +27505,7 @@
 	};
 
 /***/ }),
-/* 162 */
+/* 156 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27277,7 +27557,7 @@
 	};
 
 /***/ }),
-/* 163 */
+/* 157 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27333,7 +27613,7 @@
 	};
 
 /***/ }),
-/* 164 */
+/* 158 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27825,7 +28105,7 @@
 	};
 
 /***/ }),
-/* 165 */
+/* 159 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27956,7 +28236,7 @@
 	};
 
 /***/ }),
-/* 166 */
+/* 160 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -27966,7 +28246,7 @@
 	};
 
 /***/ }),
-/* 167 */
+/* 161 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28061,7 +28341,7 @@
 	};
 
 /***/ }),
-/* 168 */
+/* 162 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28146,7 +28426,7 @@
 	};
 
 /***/ }),
-/* 169 */
+/* 163 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28198,7 +28478,7 @@
 	};
 
 /***/ }),
-/* 170 */
+/* 164 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28232,7 +28512,7 @@
 	};
 
 /***/ }),
-/* 171 */
+/* 165 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28324,7 +28604,7 @@
 	};
 
 /***/ }),
-/* 172 */
+/* 166 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28398,7 +28678,7 @@
 	};
 
 /***/ }),
-/* 173 */
+/* 167 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28438,7 +28718,7 @@
 	};
 
 /***/ }),
-/* 174 */
+/* 168 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28557,7 +28837,7 @@
 	};
 
 /***/ }),
-/* 175 */
+/* 169 */
 /***/ (function(module, exports) {
 
 	module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
@@ -28619,7 +28899,7 @@
 	};
 
 /***/ }),
-/* 176 */
+/* 170 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28739,7 +29019,7 @@
 	};
 
 /***/ }),
-/* 177 */
+/* 171 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28766,7 +29046,7 @@
 	};
 
 /***/ }),
-/* 178 */
+/* 172 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -28939,7 +29219,7 @@
 	};
 
 /***/ }),
-/* 179 */
+/* 173 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29013,7 +29293,7 @@
 	};
 
 /***/ }),
-/* 180 */
+/* 174 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29317,7 +29597,7 @@
 	};
 
 /***/ }),
-/* 181 */
+/* 175 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29348,7 +29628,7 @@
 	};
 
 /***/ }),
-/* 182 */
+/* 176 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29419,7 +29699,7 @@
 	};
 
 /***/ }),
-/* 183 */
+/* 177 */
 /***/ (function(module, exports) {
 
 	module.exports = // Colors from RouterOS terminal:
@@ -29582,7 +29862,7 @@
 	};
 
 /***/ }),
-/* 184 */
+/* 178 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29622,7 +29902,7 @@
 	};
 
 /***/ }),
-/* 185 */
+/* 179 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29687,7 +29967,7 @@
 	};
 
 /***/ }),
-/* 186 */
+/* 180 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29799,7 +30079,7 @@
 	};
 
 /***/ }),
-/* 187 */
+/* 181 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -29929,7 +30209,7 @@
 	};
 
 /***/ }),
-/* 188 */
+/* 182 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30048,7 +30328,7 @@
 	};
 
 /***/ }),
-/* 189 */
+/* 183 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30196,7 +30476,7 @@
 	};
 
 /***/ }),
-/* 190 */
+/* 184 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30254,7 +30534,7 @@
 	};
 
 /***/ }),
-/* 191 */
+/* 185 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30356,7 +30636,7 @@
 	};
 
 /***/ }),
-/* 192 */
+/* 186 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30375,7 +30655,7 @@
 	};
 
 /***/ }),
-/* 193 */
+/* 187 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30435,7 +30715,7 @@
 	};
 
 /***/ }),
-/* 194 */
+/* 188 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30489,7 +30769,7 @@
 	};
 
 /***/ }),
-/* 195 */
+/* 189 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30559,7 +30839,7 @@
 	};
 
 /***/ }),
-/* 196 */
+/* 190 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -30968,7 +31248,7 @@
 	};
 
 /***/ }),
-/* 197 */
+/* 191 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31134,7 +31414,7 @@
 	};
 
 /***/ }),
-/* 198 */
+/* 192 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31221,7 +31501,7 @@
 	};
 
 /***/ }),
-/* 199 */
+/* 193 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31263,7 +31543,7 @@
 	};
 
 /***/ }),
-/* 200 */
+/* 194 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31314,7 +31594,7 @@
 	};
 
 /***/ }),
-/* 201 */
+/* 195 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31772,7 +32052,7 @@
 	};
 
 /***/ }),
-/* 202 */
+/* 196 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31810,7 +32090,7 @@
 	};
 
 /***/ }),
-/* 203 */
+/* 197 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31938,7 +32218,7 @@
 	};
 
 /***/ }),
-/* 204 */
+/* 198 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -31986,7 +32266,7 @@
 	};
 
 /***/ }),
-/* 205 */
+/* 199 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32082,7 +32362,7 @@
 	};
 
 /***/ }),
-/* 206 */
+/* 200 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32122,7 +32402,7 @@
 	};
 
 /***/ }),
-/* 207 */
+/* 201 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32187,7 +32467,7 @@
 	};
 
 /***/ }),
-/* 208 */
+/* 202 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32253,7 +32533,7 @@
 	};
 
 /***/ }),
-/* 209 */
+/* 203 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32292,7 +32572,7 @@
 	};
 
 /***/ }),
-/* 210 */
+/* 204 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32380,7 +32660,7 @@
 	};
 
 /***/ }),
-/* 211 */
+/* 205 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32450,7 +32730,7 @@
 	};
 
 /***/ }),
-/* 212 */
+/* 206 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32620,7 +32900,7 @@
 	};
 
 /***/ }),
-/* 213 */
+/* 207 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32674,7 +32954,7 @@
 	};
 
 /***/ }),
-/* 214 */
+/* 208 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32734,7 +33014,7 @@
 	};
 
 /***/ }),
-/* 215 */
+/* 209 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32777,7 +33057,7 @@
 	};
 
 /***/ }),
-/* 216 */
+/* 210 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32793,7 +33073,7 @@
 	};
 
 /***/ }),
-/* 217 */
+/* 211 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32896,7 +33176,7 @@
 	};
 
 /***/ }),
-/* 218 */
+/* 212 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -32961,7 +33241,7 @@
 	};
 
 /***/ }),
-/* 219 */
+/* 213 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -33075,7 +33355,7 @@
 	};
 
 /***/ }),
-/* 220 */
+/* 214 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -33215,7 +33495,7 @@
 	};
 
 /***/ }),
-/* 221 */
+/* 215 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -33292,7 +33572,7 @@
 	};
 
 /***/ }),
-/* 222 */
+/* 216 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -33367,7 +33647,7 @@
 	};
 
 /***/ }),
-/* 223 */
+/* 217 */
 /***/ (function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -33476,6 +33756,57 @@
 	    ]
 	  };
 	};
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var clipBoard = function clipBoard() {
+	    _classCallCheck(this, clipBoard);
+
+	    //console.log("cut-to-clipboard");
+
+	    var copyButton = document.querySelectorAll('._copy');
+
+	    var _loop = function _loop(i) {
+	        copyButton[i].addEventListener('click', function () {
+
+	            var allAnchors = document.querySelectorAll('._copy');
+	            var clickedAnchor = allAnchors[i];
+
+	            // optional: this reverts the copied text and class to the original states
+	            clickedAnchor.classList.add('_copied');
+	            clickedAnchor.innerHTML = 'Copied to clipboard';
+
+	            // optional: this reverts the copied text and class to the original states
+	            setTimeout(copyTimer, 5000);
+	            function copyTimer() {
+	                clickedAnchor.classList.remove('_copied');
+	                clickedAnchor.innerHTML = 'Copy to clipboard';
+	            }
+
+	            var selectParent = clickedAnchor.parentElement.children[0];
+	            //const selectParent = clickedAnchor.parentElement.children[0].value;
+	            selectParent.select();
+	            document.execCommand('copy');
+	            console.log('Copied the text: ' + selectParent.value);
+	        });
+	    };
+
+	    for (var i = 0; i < copyButton.length; i++) {
+	        _loop(i);
+	    }
+	};
+
+	exports.default = clipBoard;
 
 /***/ })
 /******/ ]);

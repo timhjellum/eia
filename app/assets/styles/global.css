@@ -19,8 +19,10 @@
 /* layouts */
 
 @import "less/layouts/global";
+@import "less/layouts/full-page";
 @import "less/layouts/reordering";
 @import "less/layouts/responsive";
+@import "less/layouts/flex";
 @import "less/layouts/sticky-footer";
 
 /* modules */
@@ -33,6 +35,7 @@
 @import "less/modules/report-header";
 @import "less/modules/weeklies";
 @import "less/modules/fancybox";
+@import "less/modules/icons";
 
 /* start reusable containers */
 
@@ -48,6 +51,7 @@
 @import "less/l2/consumption-surveys";
 @import "less/l2/sub-navigation";
 @import "less/l2/updated-data-series";
+@import "less/l2/browse-by-tag";
 
 /* sliders */
 
@@ -64,6 +68,8 @@
 @import "less/theme/overview";
 @import "less/theme/data";
 @import "less/theme/natural-gas";
+@import "less/theme/reports";
+@import "less/theme/ap";
 
 /* home */
 @import "less/theme/homepage/modules";

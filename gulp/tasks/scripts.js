@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    webpack = require('webpack');
+webpack = require('webpack');
 
 const gulpRename = require('gulp-rename');
 const gulpUglify = require('gulp-uglify');
@@ -19,9 +19,10 @@ gulp.task('webpack', ['modernizr'], function(callback) {
     });
 });
 
-gulp.task('scripts', ['webpack'], () =>
+gulp.task('scripts-global', ['webpack'], () =>
     gulp.src('./app/temp/scripts/global.js')
     .pipe(gulpUglify())
     .pipe(gulpRename('global.min.js'))
     .pipe(gulp.dest(archiveGlobalScriptsFolder))
 )
+

@@ -10,7 +10,15 @@ const tempStylesFolder = './app/temp/styles/';
 const wwwDevFolder = 'Z:/global/styles/'; // A:\css_rehab\archive\global
 
 
-gulp.task('style-guide', () =>
+gulp.task('print-nat-gas', () =>
+gulp.src('./app/assets/styles/print.css')
+.pipe(gulpLess())
+.pipe(gulpStrip())
+.pipe(gulpUglifyCSS())
+.pipe(gulpRename('print-nat-gas.min.css'))
+.pipe(gulp.dest(tempStylesFolder))
+);
+gulp.task('style-guide', ['print-nat-gas'], () =>
     gulp.src('./app/assets/styles/styles.css')
     .pipe(gulpLess())
     .pipe(gulpStrip())

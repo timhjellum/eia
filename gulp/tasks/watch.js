@@ -16,13 +16,14 @@ gulp.task('watch', function() {
 	});
 	// watch for less changes
 	watch('./app/assets/styles/less/**/*.less', function() {
-	//	gulp.start('compile-less');
 		gulp.start('styles');
 	});
 	//watch for script changes
 	watch('./app/assets/scripts/modules/*.js', function() {
-	//	gulp.start('scriptsRefresh');
-		gulp.start('scripts');
+		gulp.start('scripts-global');
+	})
+	watch('./app/assets/scripts/modules/style-guide/*.js', function() {
+		gulp.start('scripts-global');
 	})
 });
 

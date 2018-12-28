@@ -1,4 +1,23 @@
 
+
+
+span {
+    /*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+	&.ico_down,
+    &.ico_up {		
+		text-indent: -9999px;
+		font-size: 0;
+		&:before {
+			.controls-icon(12px, 14px);
+			.left;
+			margin-right: 3px;
+		}
+	}
+}
+
+
+
+
 @media @mobile {
 	.homepage {
         .data-highlights  {

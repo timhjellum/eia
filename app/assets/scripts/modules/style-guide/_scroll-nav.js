@@ -2,8 +2,7 @@ import ScrollNav from 'scrollnav';
 
 class scrollNav {
     constructor() {
-		console.log("_scroll-nav");
-
+		//console.log("_scroll-nav");
         $('._container').scrollNav({
             sections: '._h3',
             subSections: false,

@@ -22,78 +22,12 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.l-col,
-	.l-full-width-col,
-	.l-main-col,
-	.l-middle-col,
-	.l-narrow-col,
-	.l-split-narrow-col,
-	.l-split-wide-col,
-	.l-one-third-col,
-	.l-two-col,
-	.l-two-third-col {
-		position: relative;
-		min-height: 1px;
-		margin: 0;
-		.left;
-		width: 100%;
-	}
-	.l-row {
-		//		overflow: hidden;; <--- cannot be hidden
-		//		display: table; <--- cannot be a table
-		padding: 0 12px;
-		width: 100%;
-		clear: both;
-		.l-col,
-		.l-full-width-col,
-		.l-main-col,
-		.l-middle-col,
-		.l-narrow-col,
-		.l-split-narrow-col,
-		.l-split-wide-col,
-		.l-one-third-col,
-		.l-two-col,
-		.l-two-third-col { 
-			margin-top: inherit;
-		}
-		&.header {
-			padding: 0;
-			.l-col,
-			.l-full-width-col,
-			.l-main-col,
-			.l-middle-col,
-			.l-narrow-col,
-			.l-split-narrow-col,
-			.l-split-wide-col,
-			.l-one-third-col,
-			.l-two-col,
-			.l-two-third-col { 
-				border-top: none;
-			}
-		}
-	}
 }
 @media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-	.l-col {
-		width: 50%;
-	}
 }
 @media @tablet {	// mobile panorama
-	/*
-	.l-row {
-		padding: 0 1em;
-	}
-	*/
 }
 @media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
-	.l-col {
-		width: 33.333%;
-	}
-	.l-row {
-		.l-row {
-			padding: 0;
-		}
-	}
 }
 @media @laptop {
 	body {
@@ -124,24 +58,5 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
-	}
-	.l-row {
-		padding-left: 22px;
-		padding-right: 0;
-		&>div {
-			&.l-full-width-col {
-				padding: 0 22px 0 0;
-			}
-		}
-		&.header {
-			padding: 0;
-			width: 100%;
-			border-right: 0;
-			&>div {
-				&.l-full-width-col {
-					padding: 0;
-				}
-			}
-		}
 	}
 }

@@ -1,0 +1,61 @@
+@media @mobile {
+    .browse-by-tag {
+        .page-title {
+            border-bottom: 1px solid shade(white, 16.8%);
+            margin-top: 1em;
+            margin-bottom: 26px;
+            padding-bottom: 6px;
+            h1 {
+                border-bottom: none;
+                padding: 0;
+                line-height: 1;
+                margin: 0;
+                font-weight: normal;
+                .header-font;
+                font-size: 26px;
+                color: @eia-dark-grey;  
+            }
+            .sort-by {
+                .font;
+                .bold;
+                font-size: 10px;
+                color: #7e7c6f;
+                text-transform: uppercase;
+                text-align: right;
+                padding: 14px 0 0 0;
+                &>span {
+                    &:before {
+                        content: '|';
+                        margin: 0 6px 0 3px;
+                    }
+                    a {
+                        display: inline-block;
+                        color: @eia-blue;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        &:hover {
+                            text-decoration: underline;
+                        } 
+                    }
+                }
+                &>span {
+                    &:first-child {
+                        &:before {
+                            content: '';
+                            margin: 0 6px 0 3px;
+                        }						
+                    }
+                }
+            }
+        }
+    }    
+}
+@media @tablet { 
+	
+}
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+
+}
+@media @laptop {
+
+}

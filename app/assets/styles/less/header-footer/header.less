@@ -1,5 +1,29 @@
 @media @mobile {
 	header {
+        /*
+        .navigation {
+			a {
+				&.logo {
+					//text-indent: -9999px;
+					//font-size: 0;			
+					.left;
+					transition: all 0.3s ease-in-out;
+						&:before {
+						.controls-icon(44px, 35px);
+						//.icon-eia-logomark();
+						transition: all 0.3s ease-in-out;
+					}
+					&.show {
+						&:before {
+							.controls-icon(75px, 60px);
+							.icon-eia-logomark();
+							transition: all 0.3s ease-in-out;					
+						}
+					}
+				}
+			}
+        }
+        */
         position: fixed;
         top: 0;
         left: 0;
@@ -27,10 +51,67 @@
 		.navigation {
             width: 100%;
             position: relative;
-
-            .logo {
-                padding: 0 8px;
+            /*-Search Icon Mobile--------------------------*/
+            /*
+            .search {	
+                .ico-menu {
+                    &.search {
+                        &:before {
+                            .controls-icon(16px, 16px);
+                            .icon-search(@eia-blue);
+                            position: relative;
+                            top: 3px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
             }
+            */
+            /*
+            .search-menu-toggle {	
+                .ico-menu {
+                    &.search {
+                        &:before {
+                            .controls-icon(20px, 20px);
+                            .icon-search(@eia-greyish-blue);
+                            .right;
+                            margin: 10px;;
+                        }
+                    }
+                }
+            }
+            */
+			a {
+				&.logo {
+                    padding: 0 8px;		
+					.left;
+					transition: all 0.3s ease-in-out;
+						&:before {
+						.controls-icon(44px, 35px);
+						transition: all 0.3s ease-in-out;
+					}
+                    /*
+                    &.show {
+						&:before {
+							.controls-icon(75px, 60px);
+							.icon-eia-logomark();
+							transition: all 0.3s ease-in-out;					
+						}
+                    }
+                    */
+                }
+                &.logo-beta {
+                    background: url(https://www.eia.gov/global/images/logos/beta_logo.png) no-repeat top left;
+                    padding: 0 8px;		
+					.left;
+					transition: all 0.3s ease-in-out;
+                    //width: 321px;
+                    height: 35px;
+                    //display: block;
+                    //float: left;
+                    //transition: all .3s ease-in-out;
+                }
+			}
             h1 {
                 border: none;
                 display: none;
@@ -52,7 +133,7 @@
                     .right;
                     margin: 0;
                     position: relative;
-                    top: -11px;
+                    top: -14px;
                     // was -14px;
                 }
                 .toggle-bar {
@@ -69,6 +150,16 @@
                 position: absolute;
                 right: 8px;
                 height: 40px;
+                .ico-menu {
+                    &.search {
+                        &:before {
+                            .controls-icon(20px, 20px);
+                            .icon-search(@eia-greyish-blue);
+                            .right;
+                            margin: 10px;;
+                        }
+                    }
+                }
             }
             .nav-secondary {
                 display: none;
@@ -94,6 +185,18 @@
                 }
                 .search {
                     margin-left: 8px;
+                    .ico-menu {
+                        &.search {
+                            &:before {
+                                .controls-icon(16px, 16px);
+                                .icon-search(@eia-blue);
+                                position: relative;
+                                top: 3px;
+                                margin-right: 5px;
+                            }
+                            visibility: hidden;
+                        }
+                    }
                     .search-box {
                         color: @eia-greyish-blue;
                         border: 1px solid @eia-greyish-blue;
@@ -121,13 +224,25 @@
                     }
                     button {
                         &.search-submit {
+                            text-indent: -9999px;
+                            font-size: 0;
                             background-color: transparent;
                             border: none;
-                            width: 19px;
-                            height: 19px;
+                            //width: 19px;
+                            //height: 19px;
                             position: absolute;
+                            //top: 2px;
+                        //}
+                        //&.search-submit {
                             top: 2px;
-                            /* right: 0px; */
+                            right: 0;
+                            cursor: pointer;
+                            &:before {
+                                .controls-icon(19px, 19px);
+                            }
+                        }
+                        i {
+                            display: none;
                         }
                     } 
                     .accessibility {
@@ -139,8 +254,34 @@
         }
     }
 }
+
+@media @mobile-landscape {
+	header {
+		// start navigation//  
+		.navigation {
+			a {
+				&.logo {
+					&.show {
+						&:before {
+							.controls-icon(75px, 60px);
+							.icon-eia-logomark();
+							transition: all 0.3s ease-in-out;					
+						}
+                    }
+                }
+                &.logo-beta {
+                    &.show {
+                    transition: all 0.3s ease-in-out;
+                    //width: 321px;
+                    height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
 @media @laptop {
-    header {
+	header {
         height: 94px;
 		// start navigation//  
 		.navigation {
@@ -236,19 +377,56 @@
                 &.show {
                     top: 0;
                 }
+                .search {
+                    //margin-left: 8px;
+                    .ico-menu {
+                        &.search {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }         
+            a {
+                &.logo {
+                    padding: 0 0 0 13px;
+                    &:before {
+                        .controls-icon(302px, 101px);
+                        .icon-logo;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &.logo-beta {
+                    background: url(https://www.eia.gov/global/images/logos/beta_logo.png) no-repeat top left;
+                    padding: 0 0 0 13px;
+					transition: all 0.3s ease-in-out;
+                    width: 321px;
+                    height: 91px;
+                }
             }
-            .logo {
-                padding: 0 0 0 13px;
-            }            
         }
-	    //shrink 
-	    &.shrink {
+        //shrink
+        &.shrink {
             height: 50px;
             .navigation {
                 height: 50px;
-                .logo {
-                    padding: 0 0 0 13px;
-                    margin: 5px 250px 5px 0;
+                a {
+                    &.logo {
+                        padding: 0 0 0 13px;
+                        margin: 5px 250px 5px 0;
+                        &:before {
+                            .controls-icon(50px, 40px);
+                            .icon-eia-logomark;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    &.logo-beta {
+                        height: 50px;
+                        width: 176px;
+                        padding: 0;
+                        margin: 0 145px 0 12px;
+                        background-size: 100% 100%;
+                        transition: all 0.3s ease-in-out;
+                    }
                 }
                 .nav-primary {
                     margin: 12px 0;
@@ -266,6 +444,15 @@
 		// end shrink   // end navigation 
 		.print {
             display: none;
+        }
+    }
+    .l-body-wrapper {
+		&.l-full-page {
+            header {
+                .navigation {
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -193,11 +193,11 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 @desktop: ~"(min-width: 1366px)"; // big landscape tablets, laptops, and desktops
 @desktop-lg: ~"(min-width: 2300px)"; // hi-res laptops and desktops
 
-//@mobile: ~"only screen and (max-width: 768px)";
-//@tablet: ~"only screen and (min-width: 769px) and (max-width: 1025px)";
-//@desktop: ~"only screen and (min-width: 1026px) and (max-width: 1679px)";
-//@desktop-lg: ~"only screen and (min-width: 1680px)";
-//@tv: ~"only screen and (min-width: 3000px)";
+//@mobile: ~"only screen and (max-width: 479px)"; // 479 px - smartphones, portrait iPhone, portrait 480x320 phones (Android)
+//@mobile-landscape: ~"only screen and (max-width: 599px)"; // 599px smartphones, Android phones, landscape iPhone
+//@tablet: ~"only screen and (max-width: 800px)"; // 800 px mobile panorama
+//@tablet-landscape: ~"only screen and (max-width: 955px)"; // 955 px tablet, landscape iPad, lo-res laptops ands desktops
+//@laptop: ~"(max-width: 3000px)"; // normall 1025 - big landscape tablets, laptops, and desktops
 
 @baseFontSize: 16;
 @fontWeightBold: 700;
@@ -219,15 +219,3 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 @DisplayNone: hide;
 @DisplayShow: block;
 
- /*--- variables with the svg code for the inside images for each file type ---*/
- @icon-xls: ~'<rect x="30.29" y="17.94" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="17.94" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="17.94" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="24.43" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="24.43" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="24.43" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="30.92" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="30.92" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="30.92" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="37.41" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="37.41" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="37.41" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="43.9" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="43.9" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="43.9" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="50.4" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="50.4" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="50.4" width="8.31" height="3.99" fill="@{light-fill-xls}"/>';
- @light-fill-xls: tint(@fill-xls, @icon-image-tint);
- @fill-xls: @eia-green;
- 
- @icon-csv: ~'<rect x="20.32" y="31.25" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="37.74" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="44.24" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="50.73" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="24.76" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="18.27" width="28.93" height="3.99" fill="@{light-fill-csv}"/>';
- @light-fill-csv: tint(@fill-csv, @icon-image-tint);
- @fill-csv: tint(@eia-black, 46.5%);
- 
- @icon-pdf: ~'<path d="M32.79,22.86c-3-1.65-1.36,10.83,2.32,15.5,4.18,5.3,14.31,8.87,15.44,6.71,2.26-4.33-10.13-2.18-16-1.14-9.34,1.67-17.9,8.28-15.27,9.93C21.68,55.35,27.55,46,29.88,40.4,32.75,33.51,35.71,24.46,32.79,22.86Z" fill="none" stroke="@{light-fill-pdf}" stroke-miterlimit="10" stroke-width="2.44"/>';
- @light-fill-pdf: tint(@fill-pdf, @icon-image-tint);
- @fill-pdf: @eia-red;
