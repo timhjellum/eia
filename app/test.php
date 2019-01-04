@@ -26,7 +26,7 @@ h3._h3 { font-size: 12px}
 <body>
     <?php include('css_rehab/archive/global/header/includes/header.inc') ?>
         <div class="l-row homepage">
-            <div class="l-full-width-col">
+            <!-- div class="l-full-width-col" -->
                 <h1 class="_h1">Typography - Homepage</h1>
                 <h3 class="_h3">Header 1</h3>
                 <h1>The five boxing wizards jump quickly</h1>
@@ -63,7 +63,7 @@ h3._h3 { font-size: 12px}
             </div>
         </div>
         <div class="l-row overview">
-            <div class="l-full-width-col">
+            <!-- div class="l-full-width-col" -->
                 <h1 class="_h1">Typography - Overview</h1>
                 <h3 class="_h3">Header 1</h3>
                 <h1>The five boxing wizards jump quickly</h1>

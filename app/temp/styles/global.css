@@ -211,21 +211,27 @@ span.line-break {
 @media (min-width: 1px) {
   h1 {
     font-size: 1.625rem;
+    color: #333;
   }
   h2 {
     font-size: 1.125rem;
+    color: #333;
   }
   h3 {
-    font-size: 0.9375rem;
+    font-size: .9375rem;
+    color: #333;
   }
   h4 {
-    font-size: 0.9375rem;
+    font-size: .9375rem;
+    color: #333;
   }
   h5 {
-    font-size: 0.8rem;
+    font-size: .8rem;
+    color: #333;
   }
   h6 {
-    font-size: 0.8rem;
+    font-size: .8rem;
+    color: #333;
   }
   p {
     font-family: Arial, Helvetica, sans-serif;
@@ -244,6 +250,7 @@ span.line-break {
     padding: 0;
     font-size: 0.875rem;
     line-height: 1.125;
+    color: #333;
   }
 }
 .pipe {
@@ -2296,6 +2303,46 @@ legend {
   table.align-left-col-10 th:nth-child(10),
   table.align-left-col-10 td:nth-child(10) {
     text-align: left;
+  }
+  table.align-right-col-1 th:nth-child(1),
+  table.align-right-col-1 td:nth-child(1) {
+    text-align: right;
+  }
+  table.align-right-col-2 th:nth-child(2),
+  table.align-right-col-2 td:nth-child(2) {
+    text-align: right;
+  }
+  table.align-right-col-3 th:nth-child(3),
+  table.align-right-col-3 td:nth-child(3) {
+    text-align: right;
+  }
+  table.align-right-col-4 th:nth-child(4),
+  table.align-right-col-4 td:nth-child(4) {
+    text-align: right;
+  }
+  table.align-right-col-5 th:nth-child(5),
+  table.align-right-col-5 td:nth-child(5) {
+    text-align: right;
+  }
+  table.align-right-col-6 th:nth-child(6),
+  table.align-right-col-6 td:nth-child(6) {
+    text-align: right;
+  }
+  table.align-right-col-7 th:nth-child(7),
+  table.align-right-col-7 td:nth-child(7) {
+    text-align: right;
+  }
+  table.align-right-col-8 th:nth-child(8),
+  table.align-right-col-8 td:nth-child(8) {
+    text-align: right;
+  }
+  table.align-right-col-9 th:nth-child(9),
+  table.align-right-col-9 td:nth-child(9) {
+    text-align: right;
+  }
+  table.align-right-col-10 th:nth-child(10),
+  table.align-right-col-10 td:nth-child(10) {
+    text-align: right;
   }
   table.hide-1 th:nth-child(1),
   table.hide-1 td:nth-child(1) {

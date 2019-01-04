@@ -1781,14 +1781,14 @@ html * {
   }
 }
 @media (min-width: 1px) {
-  .style-guide ._module-wrapper {
-    border: 1px solid #333;
-    background-color: greenyellow;
-  }
-  .style-guide ._module-wrapper ._module-container ._module-bg {
+  .style-guide ._module-bg {
     background-color: #fff;
     display: table;
     width: 100%;
+  }
+  .style-guide ._module-wrapper {
+    border: 1px solid #333;
+    background-color: greenyellow;
   }
   .style-guide .l-row .l-col .accordion,
   .style-guide .l-row .l-full-width-col .accordion,

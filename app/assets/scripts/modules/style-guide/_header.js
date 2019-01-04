@@ -437,24 +437,24 @@ $(".add-header").html('<div class="l-body-wrapper  l-full-page">' +
 '               <h1>U.S. Energy Information Administration - EIA - Independent Statistics and Analysis</h1>' +
 '           </a>' +
 '        <ul class="_nav">' +
-'            <li class="_nav-primary-item"><a href="file:///B:/app/base/index.html">Base</a>' +
+'            <li class="_nav-primary-item"><a href="http://localhost:3000/base/index.html">Base</a>' +
 '                <ul class="_base _nav-dropdown"></ul>' +
 '            </li>' +
-'            <li class="_nav-primary-item"><a href="file:///B:/app/layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>' +
+'            <li class="_nav-primary-item"><a href="http://localhost:3000/layouts/index.html">Layouts</a><ul class="_layouts _nav-dropdown"></ul>' +
 '            </li>' +
-'            <li class="_nav-primary-item"><a href="file:///B:/app/modules/index.html">Modules</a>' +
+'            <li class="_nav-primary-item"><a href="http://localhost:3000/modules/index.html">Modules</a>' +
 '                <ul class="_modules _nav-dropdown">' +
 '                </ul>' +
 '            </li>' +
-'            <li class="_nav-primary-item"><a href="file:///B:/app/states/index.html">States</a>' +
+'            <li class="_nav-primary-item"><a href="http://localhost:3000/states/index.html">States</a>' +
 '                <ul class="_states _nav-dropdown">' +
 '                </ul>' +
 '            </li>' +
-'           <li class="_nav-primary-item"><a href="file:///B:/app/themes/index.html">Themes</a>' +
+'           <li class="_nav-primary-item"><a href="http://localhost:3000/themes/index.html">Themes</a>' +
 '                <ul class="_themes _nav-dropdown">' +
 '                </ul>' +
 '            </li>' +
-'            <li class="_nav-primary-item"><a href="file:///B:/app/examples/index.html">Examples</a>' +
+'            <li class="_nav-primary-item"><a href="http://localhost:3000/examples/index.html">Examples</a>' +
 '                <ul class="_examples _nav-dropdown">' +
 '                </ul>' +
 '            </li>' +
@@ -468,6 +468,8 @@ $(".add-header").html('<div class="l-body-wrapper  l-full-page">' +
 '   </header>' +
 '   <div class="l-outer-wrapper">' +
 '       <div class="l-inner-wrapper">');
+
+
 
 
 
@@ -554,47 +556,48 @@ $(".add-footer").html('<footer class="clearfix footer">' +
 
 
 
-$("._base").html('<li><a href="file:///B:/app/base/color-palette.html">Color Palette</a></li>' +
-    '<li><a href="file:///B:/app/base/forms.html">Forms</a></li>' +
-    '<li><a href="file:///B:/app/base/icons.html">Icons</a></li>' +
-    '<li><a href="file:///B:/app/base/lists.html">Lists</a></li>' +
-    '<li><a href="file:///B:/app/base/size-conversions.html">Size Conversions</li>' +
-    '<li><a href="file:///B:/app/base/symbols.html">Symbols</a></li>' +
-    '<li><a href="file:///B:/app/base/tables.html">Tables</a></li>' +
-    '<li><a href="file:///B:/app/base/typography.html"></a>Typography</li>');
+$("._base").html('<li><a href="http://localhost:3000/base/color-palette.html">Color Palette</a></li>' +
+    '<li><a href="http://localhost:3000/base/forms.html">Forms</a></li>' +
+    '<li><a href="http://localhost:3000/base/icons.html">Icons</a></li>' +
+    '<li><a href="http://localhost:3000/base/lists.html">Lists</a></li>' +
+    '<li><a href="http://localhost:3000/base/size-conversions.html">Size Conversions</a></li>' +
+    '<li><a href="http://localhost:3000/base/symbols.html">Symbols</a></li>' +
+    '<li><a href="http://localhost:3000/base/tables.html">Tables</a></li>' +
+    '<li><a href="http://localhost:3000/base/typography.html">Typography</a></li>');
 
-$("._layouts").html('<li><a href="file:///B:/app/layouts/index.html">Layouts</a></li>' +
-    '<li><a href="file:///B:/app/layouts/nested-layouts.html">Nested Layouts</a></li>');
+$("._layouts").html('<li><a href="http://localhost:3000/layouts/index.html">Layouts</a></li>' +
+    '<li><a href="http://localhost:3000/layouts/nested-layouts.html">Nested Layouts</a></li>');
 
-$("._modules").html('<li><a href="file:///B:/app/modules/accordion.html">Accordions</a></li>' +
-    '<li><a href="file:///B:/app/modules/content-containers-home.html">Content Containers (home)</a></li>' +
-    '<li><a href="file:///B:/app/modules/content-containers-non-reusable.html">Content Containers (non-reusable)</a></li>' +
-    '<li><a href="file:///B:/app/modules/content-containers-reusable.html">Content Containers (reusable)</a></li>' +
-    '<li><a href="file:///B:/app/modules/fancybox.html">Modals (FancyBox)</a></li>' +
-    '<li><a href="file:///B:/app/modules/lists.html">Lists</a></li>' +
-    '<li><a href="file:///B:/app/modules/page-titles.html"></a>Messaging</li>' +
-    '<li><a href="file:///B:/app/modules/page-titles.html">Page Titles</a></li>' +
-    '<li><a href="file:///B:/app/modules/list-formatting.html">Lists Formatting</a></li>' +
-    '<li><a href="file:///B:/app/modules/table-formatting.html">Table Formatting</a></li>' +
-    '<li><a href="file:///B:/app/modules/tabs.html"></a>Tabs</li>');
+$("._modules").html('<li><a href="http://localhost:3000/modules/accordion.html">Accordions</a></li>' +
+    '<li><a href="http://localhost:3000/modules/banners.html">Banners</a></li>' +
+    '<li><a href="http://localhost:3000/modules/custom-modules.html">Custom Modules</a></li>' +
+    '<li><a href="http://localhost:3000/modules/home-modules.html.html">Home Modules</a></li>' +
+//    '<li><a href="http://localhost:3000/modules/lists.html">Lists</a></li>' +
+//    '<li><a href="http://localhost:3000/modules/list-formatting.html">Lists Formatting</a></li>' +
+    '<li><a href="http://localhost:3000/modules/fancybox.html">Modals (FancyBox)</a></li>' +
+    '<li><a href="http://localhost:3000/modules/page-titles.html">Page Titles</a></li>' +
+    '<li><a href="http://localhost:3000/modules/reusable-modules.html">Reusable Modules</a></li>' +
+    '<li><a href="http://localhost:3000/modules/table-formatting.html">Tables</a></li>' +
+    '<li><a href="http://localhost:3000/modules/side-content-containers.html>Side-Column Modules</a></li>');
 
-$("._states").html('<li><a href="empty-list-items.html"></a>Empty List Items</li>' +
-    '<li>sticky-table-headers.html</li>');
+$("._states").html('<li><a href="http://localhost:3000/states/empty-list-items.html">Empty List Items</a></li>' +
+    '<li><a href="http://localhost:3000/states/sticky-table-headers.html">Sticky Table Headers</a></li>' +
+    '<li><a href="http://localhost:3000/states/toggle.html">Show/Hide Toggle</a></li>');
 
-$("._themes").html('<li><a href="file:///B:/app/theme/accordion"></a>Accordion</li>' +
-    '<li><a href="file:///B:/app/theme/basic-table"></a>Basic Tables</li>' +
-    '<li><a href="file:///B:/app/theme/data"></a>Date Tables</li>' +
-    '<li><a href="file:///B:/app/theme/natural-gas"></a>Natural Gas</li>' +
-    '<li><a href="file:///B:/app/theme/overview"></a>Overview</li>' +
-    '<li><a href="file:///B:/app/theme/primary-col-modules"></a>Primary Modules</li>' +
-    '<li><a href="file:///B:/app/theme/secondary-col-modules"></a>Secondary Modules</li>');
+//$("._themes").html('<li><a href="http://localhost:3000/theme/accordion.html">Accordion</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/basic-table.html">Basic Tables</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/data.html">Date Tables</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/natural-gas.html">Natural Gas</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/overview.html">Overview</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/primary-col-modules.html">Primary Modules</a></li>' +
+//    '<li><a href="http://localhost:3000/theme/secondary-col-modules.html">Secondary Modules</a></li>');
 
-$("._examples").html('<li><a href="file:///B:/app/examples/index.html"></a>Page Template</li>' +
-    '<li><a href="file:///B:/app/examples/index.html"></a>Header</li>' +
-    '<li><a href="file:///B:/app/examples/sub-navigation.html">Sub-navigation</a></li>' +
-    '<li><a href="file:///B:/app/examples/header.html">Header</a></li>' +
-    '<li><a href="file:///B:/app/examples/slider-home.html">Slider Home</a></li>' +
-    '<li><a href="file:///B:/app/examples/slider-multi.html">Slider Multi</a></li>');
+$("._examples").html('<li><a href="http://localhost:3000/examples/index.html"></a>Page Template</a></li>' +
+    '<li><a href="http://localhost:3000/examples/index.html">Header</a></li>' +
+    '<li><a href="http://localhost:3000/examples/sub-navigation.html">Sub-navigation</a></li>' +
+    '<li><a href="http://localhost:3000/examples/header.html">Header</a></li>' +
+    '<li><a href="http://localhost:3000/examples/slider-home.html">Slider Home</a></li>' +
+    '<li><a href="http://localhost:3000/examples/slider-multi.html">Slider Multi</a></li>');
 
 
 

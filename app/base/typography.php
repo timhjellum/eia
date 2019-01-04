@@ -42,8 +42,8 @@ $locale = 'test';
 
 
     <div class="homepage">
-        <div class="l-row">
-            <div class="l-full-width-col">
+        <div class="l-row l-full-width-col">
+            <!-- div class="l-full-width-col" -->
                 <h3 class="_h3">Headers - Primary</h3>
 
                 <h1>H1 - The five boxing wizards jump quickly</h1>

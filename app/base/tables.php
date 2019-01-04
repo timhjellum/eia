@@ -37,8 +37,8 @@ $locale = 'test';
 
     <body>
         <?php include('css_rehab/archive/global/header/includes/header.inc') ?>
-        <div class="l-row">
-            <div class="l-full-width-col">
+        <div class="l-row l-full-width-col">
+            <!-- div class="l-full-width-col" -->
                 <h1 class="_h1">Default tables (no styles)</h1>
                 <table>
                         <caption>Caption<br />

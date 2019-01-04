@@ -56,34 +56,34 @@
                             <li>Layout class names begin with a <code>l-</code>.</li>
                         </ul>
 
-                        <h5>Examples</h5>
+                        <h5 class="_h5">Examples</h5>
 
                         <div class="_example">
                             <p class="_p">Bad CSS structure might look something like this:</p>
-                            <!--pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
+                            <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
 &lt;div id="Row"&gt;&lt;/div&gt;
     &lt;div class="Row_Header"&gt;&lt;/div&gt;
 &lt;div class="row"&gt;&lt;/div&gt;
-</code></pre-->
+</code></pre>
                         </div>
                         <div class="_example">
                             <p class="_p">Good CSS structure might look something like this:</p>
-                            <!--pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
+                            <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
 &lt;div class="l-row"&gt;&lt;/div&gt;
     &lt;div class="l-row l-header"&gt;
 &lt;/div&gt;
-</code></pre-->
+</code></pre>
                         </div>
                         <h1 class="_h1">The Structure</h1>
                         <p class="_p">Layouts are brokendown into two parts, Rows and Columns.</p>
                         <p class="_p">All content should live within a row in order for it to responsively adapt to the <span class="_page _laptop">15px</span><span class="_page _tablet-landscape">16px</span><span class="_page _tablet">16px</span><span class="_page _mobile-landscape">12px</span>
                             <span class="_page _mobile">12px</span> page wrapper.</p>
-                        <p class="_p">There's only two types of row class names, <code>l-row</code> and <code>l-row header</code>. The difference it that the default row adds a <span class="_row">22px</span> space on the left and sometimes has a <span class="_col">22px</span>                            space on the right (based on the type of content). As a developer or content editor, always use the <code>l-row</code> as the other is reserved for special applications.</p>
+                        <p class="_p">There's only two types of row class names, <code>l-row</code> and <code>l-row header</code>. The difference it that the default row adds a <span class="_row">22px</span> space on the left and sometimes has a <span class="_col">22px</span> space on the right (based on the type of content). As a developer or content editor, always use the <code>l-row</code> as the other is reserved for special applications.</p>
                         <div class="_example">
                             <p class="_p">Good CSS structure might look something like this:</p>
-                            <!--pre><code class="html">&lt;!-- default row --&gt;
+                            <pre><code class="html">&lt;!-- default row --&gt;
 &lt;div class="l-row"&gt;&lt;/div&gt;
-</code></pre-->
+</code></pre>
                         </div>
                         
                     </li>
@@ -149,7 +149,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semp
 &lt;div class="l-row l-full-width-col"&gt;
     &lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
 &lt;/div&gt;</code></pre-->
-                        </div>
                     </li>
 
                     <!--  _   _                _             ____                -->

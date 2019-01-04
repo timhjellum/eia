@@ -30,7 +30,7 @@ gulp.task('global', ['style-guide'], () =>
     .pipe(gulpStrip())
     .pipe(gulpUglifyCSS())
     .pipe(gulpRename('global.min.css'))
-    .pipe(gulp.dest(archiveGlobalStylesFolder))
+    .pipe(gulp.dest(tempStylesFolder))
 );
 gulp.task('styles', ['global'], () =>
     gulp.src('./app/assets/styles/global.css')
