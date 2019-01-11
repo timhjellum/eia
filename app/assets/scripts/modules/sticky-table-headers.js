@@ -3,7 +3,6 @@ require('sticky-table-headers');
 class StickyTableHeaders {
     constructor() {
         $('.sticky').stickyTableHeaders({fixedOffset: $('header')});
-       
         //const stickyExists = document.querySelector('.sticky');
         //if (stickyExists !== null) {
         // console.log("Resize Sticky Table Headers");

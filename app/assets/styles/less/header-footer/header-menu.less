@@ -1,35 +1,38 @@
-&.ico-nav {
-    width: auto;
-    &.analysis-projections-icon {
-        &:before {
-            background-position: 60% 70%;
+.ico {
+    &.ico-nav {
+        width: auto;
+        float: left;
+        &.analysis-projections-icon {
+            &:before {
+                background-position: 60% 70%;
+            }
         }
-    }
-    &.environment-icon {
-        &:before {
-            background-position-y: 45%;
+        &.environment-icon {
+            &:before {
+                background-position-y: 45%;
+            }
         }
-    }
-    &.coal-icon {
-        &:before {
-            background-position-y: 45%;
+        &.coal-icon {
+            &:before {
+                background-position-y: 45%;
+            }
         }
-    }
-    &.eia-glossary-icon {
-        &:before {
-            background-position-y: 45%;
-            background-position-x: 67%;
+        &.eia-glossary-icon {
+            &:before {
+                background-position-y: 45%;
+                background-position-x: 67%;
+            }
         }
-    }
 
-    &.maps-icon {
-        &:before {
-            background-size: 100% 100%;
+        &.maps-icon {
+            &:before {
+                background-size: 100% 100%;
+            }
         }
-    }
-    &.international-icon {
-        &:before {
-            background-size: 100% 100%;
+        &.international-icon {
+            &:before {
+                background-size: 100% 100%;
+            }
         }
     }
 }
@@ -42,38 +45,28 @@
 i {
     &.close-menu {
         display: none;
-        /*
-        &:before {
-            .controls-icon(40px, 40px);
-            .icon-cancel();
-        }
-        &:hover {
-            &:before {
-                .icon-cancel();
-            }
-        }
-        */
     }
 }
-.ico-menu {
-    display: inline-block;
-    font-size:	0;
-    font-size: 0;
-    line-height: 0;
-	.left;
-	padding: 0;
-	text-indent: -9999px;
-	&.facebook,
-	&.twitter,
-	&.youtube,
-	&.flickr,
-	&.linkedin,
-	&.email,
-	&.rss {
-		&:before {
-			.controls-icon(40px, 40px);
-		}
-	}
+.ico {
+    &.ico-menu {
+        font-size:	0;
+        font-size: 0;
+        line-height: 0;
+        padding: 0;
+        text-indent: -9999px;
+        &.facebook,
+        &.twitter,
+        &.youtube,
+        &.flickr,
+        &.linkedin,
+        &.email,
+        &.rss {
+            display: inline-block;
+            &:before {
+                .controls-icon(40px, 40px);
+            }
+        }
+    }
 }
 
 @media @mobile {
@@ -444,12 +437,7 @@ i {
                             font-size: 0;	
                             background-color: transparent;
                             border: none;
-                            //width: 19px;
-                            //height: 19px;
                             position: absolute;
-                            //top: 2px;
-                        //}
-                        //&.search-submit {
                             top: 2px;
                             right: -30px;
                             cursor: pointer;

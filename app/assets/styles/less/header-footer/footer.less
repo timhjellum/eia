@@ -1,17 +1,19 @@
-.ico-footer {
-	margin: 0 4px -8px 0;
-	padding: 0 0 5px 0;
-	display: inline-block;
-	font-size: 0;
-	&.facebook,
-	&.twitter,
-	&.youtube,
-	&.flickr,
-	&.linkedin,
-	&.email,
-	&.rss {
-		&:before {
-			.controls-icon(16px, 16px);
+.ico {
+	&.ico-footer {
+		margin: 0 4px -8px 0;
+		padding: 0 0 5px 0;
+		display: inline-block;
+		font-size: 0;
+		&.facebook,
+		&.twitter,
+		&.youtube,
+		&.flickr,
+		&.linkedin,
+		&.email,
+		&.rss {
+			&:before {
+				.controls-icon(16px, 16px);
+			}
 		}
 	}
 }
@@ -49,12 +51,7 @@
 @media @mobile {
 	.footer {
 	//	height: 2000px;
-
-
-
-
 		.address-bar {
-			//flex-direction: row;		
 			width: 100%;
 			padding: 1em 0 2em 0;
 			.above-address-links {
@@ -238,7 +235,7 @@
 			}
 			.above-address-links {
 				font-size: 0.938rem;
-				padding: .5em 0 0 32px;
+				padding: .5em 0 0 0; // 32px;
 				margin: 0;
 				li {
 					.left;

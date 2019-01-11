@@ -6,7 +6,7 @@ $locale = 'homepage';
 <html>
 <head>
 <title><?=$pageTitle?></title>
-<?php include('css_rehab/archive/global/head/includes/head.inc') ?>
+<?php include('adaptive/global/head/includes/head.inc') ?>
 <style>
 
 h1._h1,
@@ -24,7 +24,7 @@ h3._h3 { font-size: 12px}
 </style>
 </head>
 <body>
-    <?php include('css_rehab/archive/global/header/includes/header.inc') ?>
+    <?php include('adaptive/global/header/includes/header.inc') ?>
         <div class="l-row homepage">
             <!-- div class="l-full-width-col" -->
                 <h1 class="_h1">Typography - Homepage</h1>
@@ -99,7 +99,7 @@ h3._h3 { font-size: 12px}
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacus nulla, interdum a tellus eu, sollicitudin lobortis felis. Curabitur fermentum tristique rhoncus. Maecenas aliquam, odio tincidunt aliquam malesuada, dolor tellus finibus leo, vitae pulvinar justo nulla ac neque. Integer dictum sit amet augue vitae aliquet. Donec risus dolor, accumsan at molestie sed, mollis in nunc. Nulla eu diam sed metus pretium tristique id vel lorem. Ut a sapien sit amet erat suscipit tristique in et augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent lorem ligula, maximus quis ornare at, sollicitudin eget diam. Proin tempor ac arcu in fermentum. Etiam sed ultricies mi, at laoreet neque. Integer dolor ante, placerat vel faucibus eget, congue id urna. Nunc vitae euismod tellus.</p>
             </div>
         </div>
-    <?php include('css_rehab/archive/global/footer/includes/footer.inc') ?>
+    <?php include('adaptive/global/footer/includes/footer.inc') ?>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ $locale = 'test';
 <title>
 <?=$pageTitle?>
 </title>
-<?php include('css_rehab/archive/global/head/includes/head.inc') ?>
+<?php include('adaptive/global/head/includes/head.inc') ?>
 <style>
 h1._h1,
 h3._h3 {
@@ -36,7 +36,7 @@ margin: 20px 0 !important;
 </head>
 
 <body>
-<?php include('css_rehab/archive/global/header/includes/header.inc') ?>
+<?php include('adaptive/global/header/includes/header.inc') ?>
 
 <h1 class="_h1">Homepage</h1>
 
@@ -2703,7 +2703,7 @@ eget, congue id urna. Nunc vitae euismod tellus.
 
 
 
-<?php include('css_rehab/archive/global/footer/includes/footer.inc') ?>
+<?php include('adaptive/global/footer/includes/footer.inc') ?>
 </body>
 
 </html>

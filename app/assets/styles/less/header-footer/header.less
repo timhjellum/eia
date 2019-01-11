@@ -150,13 +150,16 @@
                 position: absolute;
                 right: 8px;
                 height: 40px;
-                .ico-menu {
-                    &.search {
-                        &:before {
-                            .controls-icon(20px, 20px);
-                            .icon-search(@eia-greyish-blue);
-                            .right;
-                            margin: 10px;;
+                .ico {
+                    &.ico-menu {
+                        &.search {
+                            &:before {
+                                .controls-icon(20px, 20px);
+                                .icon-search(@eia-greyish-blue);
+                                .right;
+                                margin: 10px;
+                                display: inline-block;
+                            }
                         }
                     }
                 }
@@ -185,16 +188,19 @@
                 }
                 .search {
                     margin-left: 8px;
-                    .ico-menu {
-                        &.search {
-                            &:before {
-                                .controls-icon(16px, 16px);
-                                .icon-search(@eia-blue);
-                                position: relative;
-                                top: 3px;
-                                margin-right: 5px;
+                    .ico {
+                        &.ico-menu {
+                            &.search {
+                                &:before {
+                                    .controls-icon(16px, 16px);
+                                    .icon-search(@eia-blue);
+                                    position: relative;
+                                    top: 3px;
+                                    margin-right: 5px;
+                                    display: inline-block;
+                                }
+                                visibility: hidden;
                             }
-                            visibility: hidden;
                         }
                     }
                     .search-box {
@@ -228,14 +234,8 @@
                             font-size: 0;
                             background-color: transparent;
                             border: none;
-                            //width: 19px;
-                            //height: 19px;
                             position: absolute;
-                            //top: 2px;
-                        //}
-                        //&.search-submit {
                             top: 2px;
-                            right: 0;
                             cursor: pointer;
                             &:before {
                                 .controls-icon(19px, 19px);
@@ -379,11 +379,14 @@
                 }
                 .search {
                     //margin-left: 8px;
-                    .ico-menu {
-                        &.search {
-                            visibility: visible;
+                    .ico {
+                        &.ico-menu {
+                            &.search {
+                                visibility: visible;
+                            }
                         }
                     }
+
                 }
             }         
             a {

@@ -9,7 +9,7 @@ $locale = 'test';
         <title>
             <?=$pageTitle?>
         </title>
-        <?php include('css_rehab/archive/global/head/includes/head.inc') ?>
+        <?php include('adaptive/global/head/includes/head.inc') ?>
         <style>
             h1._h1,
             h3._h3 {
@@ -36,7 +36,7 @@ $locale = 'test';
     </head>
 
     <body>
-        <?php include('css_rehab/archive/global/header/includes/header.inc') ?>
+        <?php include('adaptive/global/header/includes/header.inc') ?>
         <div class="l-row l-full-width-col">
             <!-- div class="l-full-width-col" -->
                 <h1 class="_h1">Default tables (no styles)</h1>
@@ -150,7 +150,7 @@ $locale = 'test';
                 </div>
             </div>
         </div>
-        <?php include('css_rehab/archive/global/footer/includes/footer.inc') ?>
+        <?php include('adaptive/global/footer/includes/footer.inc') ?>
     </body>
 
     </html>

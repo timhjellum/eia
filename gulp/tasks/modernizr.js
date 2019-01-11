@@ -14,5 +14,5 @@ gulp.task('modernizr', function() {
         "setClasses"
       ]
     }))
-    .pipe(gulp.dest(tempScriptsFolder))
+    .pipe(gulp.dest(adaptiveGlobalScriptsFolder))
 });

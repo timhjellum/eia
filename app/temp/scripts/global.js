@@ -17744,7 +17744,6 @@
 	    _classCallCheck(this, StickyTableHeaders);
 
 	    $('.sticky').stickyTableHeaders({ fixedOffset: $('header') });
-
 	    //const stickyExists = document.querySelector('.sticky');
 	    //if (stickyExists !== null) {
 	    // console.log("Resize Sticky Table Headers");

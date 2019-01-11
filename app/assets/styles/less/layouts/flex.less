@@ -31,7 +31,9 @@
 			justify-content: space-between;
 			display: inline-flex;
             flex-flow: row wrap;
-            &>.l-col {
+            &>.l-col,
+            .l-one-third-col,
+            .l-two-col {
                 position: relative;
                 min-height: 1px;
                 margin: 0;
@@ -83,6 +85,9 @@
         }
         &.l-three-col-even {
             &>.l-col { 
+                width: 31.333%;
+            }
+            .l-one-third-col {
                 width: 31.333%;
             }
         }

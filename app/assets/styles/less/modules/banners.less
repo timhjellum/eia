@@ -29,19 +29,21 @@
 
 @media @mobile {
     .beta-banner {
-        background-color: red;
+        background-color: tint(@eia-red, 60%);
         padding: 10px 16px 10px 16px !important;
         margin: 0;
         display: table;
         p {
             .font;
             color: #333;
-            color: @eia-white;
+            //color: @eia-white;
+            color: #333;
             font-size: 18px;
             margin-bottom: 6px;
             line-height: 1.3em;
             a {
-                color: @eia-white;
+                //color: @eia-white;
+                color: #333;
                 text-decoration: underline;
             }
         }
@@ -101,6 +103,7 @@
         }
         li {
             line-height: 1.4;
+            color: @eia-white;
         }
         a {
             .font;
@@ -132,6 +135,9 @@
         P {
             margin: 0 0 1em 0;
         }
+
+
+        // can this go into base > forms
         .button-container,
         .form-container {
             width: 100%;
@@ -167,7 +173,7 @@
     }
 
 
-
+    /*
     .feedback-link-hide {
         width: 130;
         height: 28px;
@@ -179,6 +185,7 @@
             background: url(/global/images/btns/hide_feedback_btn.png) no-repeat;
         }
     }
+    */
     #feedcomments {
         display: block;
         overflow: auto;
@@ -203,12 +210,67 @@
         //background-color: shade(@eia-blue, 45%);
     }
 
+
+    .show-hide-feedback-form-button {
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: shade(@eia-blue, 60%);
+        display: inline-block;
+        padding: 5px 10px;
+        &.expand-collapse-content-above {
+            color: #fff;
+            font-size: 14px;
+            .arrow-down {
+                &:before {
+                    .controls-icon(14px, 14px);
+                    .icon-sort-up(@fill-color: #fff);
+                    display: inline-block;
+                    vertical-align: baseline;
+                    margin-right: 3px;
+                }
+            }
+            .arrow-up {
+                &:before {
+                    .controls-icon(14px, 14px);
+                    .icon-sort-up(@fill-color: #fff);
+                    display: inline-block;
+                    //vertical-align: bottom;
+                    margin-right: 3px;
+                    transform: rotate(180deg);
+                    vertical-align: middle;
+                }
+            }
+            &.active {
+                background-color: shade(@eia-blue, 60%);
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
-
-
-
+    
     .expand-collapse-content,
     .show-hide-content { /* sets initial state */
         display: none;
@@ -240,7 +302,7 @@
                 }
             }
         }
-        &.expand-collapse-above {
+        &.expand-collapse-content-above {
             .active-text {
                 display: none;
             }
