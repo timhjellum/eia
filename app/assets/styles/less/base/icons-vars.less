@@ -1,0 +1,34 @@
+
+
+/*--- variables with the svg code for the inside images for each file type ---*/
+@icon-xls: ~'<rect x="30.29" y="17.94" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="17.94" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="17.94" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="24.43" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="24.43" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="24.43" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="30.92" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="30.92" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="30.92" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="37.41" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="37.41" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="37.41" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="43.9" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="43.9" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="43.9" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="30.29" y="50.4" width="8.3" height="3.99" fill="@{light-fill-xls}"/><rect x="40.6" y="50.4" width="8.31" height="3.99" fill="@{light-fill-xls}"/><rect x="19.98" y="50.4" width="8.31" height="3.99" fill="@{light-fill-xls}"/>';
+@light-fill-xls: tint(@fill-xls, @icon-image-tint);
+@fill-xls: @eia-green;
+
+@icon-csv: ~'<rect x="20.32" y="31.25" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="37.74" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="44.24" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="50.73" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="24.76" width="28.93" height="3.99" fill="@{light-fill-csv}"/><rect x="20.32" y="18.27" width="28.93" height="3.99" fill="@{light-fill-csv}"/>';
+@light-fill-csv: tint(@fill-csv, @icon-image-tint);
+@fill-csv: tint(@eia-black, 46.5%);
+
+@icon-pdf: ~'<path d="M32.79,22.86c-3-1.65-1.36,10.83,2.32,15.5,4.18,5.3,14.31,8.87,15.44,6.71,2.26-4.33-10.13-2.18-16-1.14-9.34,1.67-17.9,8.28-15.27,9.93C21.68,55.35,27.55,46,29.88,40.4,32.75,33.51,35.71,24.46,32.79,22.86Z" fill="none" stroke="@{light-fill-pdf}" stroke-miterlimit="10" stroke-width="2.44"/>';
+@light-fill-pdf: tint(@fill-pdf, @icon-image-tint);
+@fill-pdf: @eia-red;
+
+@icon-json: ~'<path d="M26.2,52.1s-3.1-.6-3.1-5.7,0-9.2-4.6-9.2c4.6,0,4.6-4.1,4.6-9.2s3.1-5.6,3.1-5.6" fill="none" stroke="@{light-fill-json}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.56"/><path d="M42.8,52.1s3.1-.6,3.1-5.7,0-9.2,4.6-9.2c-4.6,0-4.6-4.1-4.6-9.2s-3.1-5.6-3.1-5.6" fill="none" stroke="@{light-fill-json}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.56"/><path d="M32,48.5a4.6,4.6,0,0,0,3.1-4.2h-.3a1.9,1.9,0,0,1-2.1-1.9,2,2,0,0,1,2.1-2.1c1.5,0,2.4,1.3,2.4,3.4a6.9,6.9,0,0,1-4.5,6.5Z" fill="@{light-fill-json}"/><path d="M32.6,32.2a2.1,2.1,0,1,1,4.1,0,2,2,0,0,1-2,2.1A2.1,2.1,0,0,1,32.6,32.2Z" fill="@{light-fill-json}"/>';
+@light-fill-json: tint(@fill-json, @icon-image-tint);
+@fill-json: shade(@eia-purple, 30%); 
+
+@icon-doc: ~'<rect x="20.3" y="31.3" width="28.9" height="3.99" fill="@{light-fill-doc}"/><rect x="20.3" y="37.7" width="28.9" height="3.99" fill="@{light-fill-doc}"/><rect x="20.3" y="44.2" width="28.9" height="3.99" fill="@{light-fill-doc}"/><rect x="20.3" y="50.7" width="28.9" height="3.99" fill="@{light-fill-doc}"/><rect x="20.3" y="24.8" width="28.9" height="3.99" fill="@{light-fill-doc}"/><rect x="20.3" y="18.3" width="28.9" height="3.99" fill="@{light-fill-doc}"/>';
+@light-fill-doc: tint(@fill-doc, @icon-image-tint);
+@fill-doc: shade(@eia-blue, 30%);
+
+@icon-html: ~'<rect x="33.4" y="30.1" width="2.9" height="24.84" transform="translate(13.7 -8.2) rotate(16.7)" fill="@{light-fill-html}"/><polygon points="43.7 33.9 41.7 36 48.3 42.4 41.7 49 43.8 51.1 52.4 42.4 52.4 42.4 43.7 33.9" fill="@{light-fill-html}"/><polygon points="25.9 33.9 27.9 36 21.4 42.4 27.9 49 25.8 51.1 17.3 42.4 17.2 42.4 25.9 33.9" fill="@{light-fill-html}"/>';
+@light-fill-html: tint(@fill-html, @icon-image-tint);
+@fill-html: shade(@eia-purple, 30%);
+
+@icon-ppt: ~'<path d="M34.6,31.3V21.4a9.9,9.9,0,1,0,9.9,9.9Z" fill="@{light-fill-ppt}"/><path d="M46.7,29.1a9.9,9.9,0,0,0-9.9-9.9v9.9Z" fill="@{light-fill-ppt}"/><rect x="20.3" y="44.2" width="28.9" height="3.99" fill="@{light-fill-ppt}"/><rect x="20.3" y="50.7" width="28.9" height="3.99" fill="@{light-fill-ppt}"/>';
+@light-fill-ppt: tint(@fill-ppt, @icon-image-tint);
+@fill-ppt: shade(@eia-orange, 30%);
+
+@icon-image: ~'<polygon points="19.3 41 29.2 28.6 47.3 52.5 39.9 36.9 42.4 33.6 51.4 45.1 51.4 54.2 19.3 54.2 19.3 41" fill="@{light-fill-image}"/><circle cx="44.7" cy="27.6" r="3.5" fill="@{light-fill-image}"/>';
+@light-fill-image: tint(@fill-image, @icon-image-tint);
+@fill-image: @eia-blue;

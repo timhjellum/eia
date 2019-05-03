@@ -1,0 +1,171 @@
+
+html {
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+}
+@media @mobile {
+	*,
+	*:before,
+	*:after{
+		box-sizing: border-box;
+	}
+	body {
+		font-family: Arial;
+		padding: 0;
+		margin: 0;
+		background-color: #fff !important;
+	}
+	.l-body-wrapper {
+		&.l-full-page {
+			.l-outer-wrapper {
+				.l-inner-wrapper {
+					padding: 30px 1em 0 1em !important;
+				}
+			}
+		}
+	}
+
+	._container {
+		width: 100%;
+		._content {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			color: darkgrey;
+			background-color: #fff;
+			._content-inner {
+				ul {
+					&.style-guide {
+						list-style: none;
+						width: 100%;
+						margin: 0;
+						padding: 0;
+						li {
+							&.style-guide {
+								margin: 0 0 30px 0;
+	//							padding: 0 2em;
+								width: 100%;
+								display: table; // required
+	//							border-top: 1px dotted #666;
+	//							border-right: 1px dotted #666;
+	//							border-bottom: 1px dotted #666;
+	//							border-left: 1px dotted #666;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.left_sidebar {
+		display: none;
+	}
+	._right-sidebar {
+		display: none;
+	}
+	footer {
+		width: 100%;
+	}
+	.clearfix {
+		&:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+}
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+
+}
+@media @tablet {
+
+}
+@media @tablet-landscape {
+
+}
+//@media @laptop {
+@media (min-width: 1020px) {
+	section {
+		width: 992px;
+	}
+	._container {
+		._content {
+			width: 992px;
+			._content-inner {
+				ul {
+					&.style-guide {
+						width: 992px;
+						li {
+							&.style-guide {
+								width: 992px;
+							}
+						}
+					}
+				}
+			}
+		}
+		._right-sidebar {
+			width: 500px;
+			padding: 0 2em;
+			margin-top: 80px;
+			float: right;
+			display: block;
+			&.fixed {
+				._right-sidebar__wrapper {
+					position: fixed;
+					top: 80px;
+					right: 20px
+				}
+			}
+			._right-sidebar__wrapper {
+				padding: 10px 5px;
+			}
+		}
+		ol {
+			&._right-sidebar__list {
+				padding-left: 0;
+				list-style: none;
+				margin-bottom: 0;
+				li {
+					&._right-sidebar__item {
+						a {
+							color: #999;
+							text-decoration: none;
+							.bold;
+							&:hover {
+								color: #333;
+								text-decoration: none;
+							}
+						}
+					}
+					&._right-sidebar__item--active {
+						&.active {
+							&.in-view {
+								a {
+									&._right-sidebar__link {
+										color: @eia-blue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		._right-sidebar__section {
+			//padding: 2em 0;
+			padding: 0;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+
+//@media @desktop {
+@media (min-width: 2000px) {
+
+}

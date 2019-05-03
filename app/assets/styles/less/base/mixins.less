@@ -1,0 +1,38 @@
+// .font is the default font
+.font(@fontFamily: @default_font; @fontWeight: normal; @fontColor: @eia-dark-grey) {
+    font-family: @fontFamily;
+    font-weight: @fontWeight;
+    color: @fontColor;
+}
+.header-font(@fontFamily: @header_font; @fontWeight: normal; @fontColor: @eia-dark-grey) {
+    font-family: @fontFamily;
+    font-weight: @fontWeight;
+    color: @fontColor;
+}
+.bold(@fontWeightBold: 700) {font-weight:@fontWeightBold;}
+.semi-bold(@fontWeightSemiBold: 600) {font-weight: @fontWeightSemiBold;}
+.normal(@fontWeightNormal: normal) {font-weight: @fontWeightNormal;}
+.italic(@fontStyleItalic: italic) {font-style: @fontStyleItalic;}
+.right(@floatRight: right) { float: @floatRight;}
+.left(@floatLeft: left) { float: @floatLeft;}
+.font-size (@baseFontSize: 16px) {font-size: @baseFontSize; }
+
+.no-wrap(@NoWrap: no-wrap) { white-space: @NoWrap; }
+.align-right(@AlignRight: right) {text-align: @AlignRight; }
+.align-left(@AlignLeft: left) {text-align: @AlignLeft; }
+.align-center(@AlignCenter: center) {text-align: @AlignCenter; }
+.align-top(@AlignTop: top) {vertical-align: @AlignTop; }
+.align-middle(@AlignMiddle: middle) {vertical-align: @AlignMiddle; }
+.align-bottom(@AlignBottom: bottom) {vertical-align:@AlignBottom; }
+
+.hide(@DisplayNone: hide) {display:@DisplayNone; }
+.show(@DisplayShow: block) {display:@DisplayShow; }
+
+.gradient (@origin: top, @fallback: @gradient-background,  @stops){
+    background-color: @fallback;
+    background: -webkit-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:    -moz-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:     -ms-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:      -o-linear-gradient(@origin, @stops) @fallback no-repeat;
+    background:         linear-gradient(@origin, @stops) @fallback no-repeat;
+}

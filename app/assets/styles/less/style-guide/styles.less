@@ -1,0 +1,34 @@
+@media screen {
+    /* variables & mixins */
+    @import "../base/base";
+    @import "../base/icons-mixins";
+    @import "../base/icons-vars";
+    @import "../base/icons";
+    @import "../base/icons-header";
+    @import "../base/icons-logos";
+    @import "../base/forms";
+    @import "../base/tables";
+    /* style guide */
+    @import "_color-palette";
+    @import "_layout";
+    @import "_typography";
+    @import "_module-containers";
+    @import "_icons";
+    @import "_header";
+    @import "_footer";
+    @import "_page-titles";
+    @import "_resolution";
+    @import "_example";
+    @import "_legend";
+    @import "_expand-collapse";
+}
+
+@media print and (color) {
+	* {
+	   -webkit-print-color-adjust: exact;
+	   print-color-adjust: exact;
+    }
+}
+@media print {
+    @import "_print";
+}

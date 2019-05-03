@@ -1,0 +1,180 @@
+@media @mobile {
+	.title-banner {
+		display: block;
+		min-height: 74px;
+		border: none;
+		width: 100%;
+		background-color: shade(white, 4.2%);
+		padding: 22px 12px 0 12px;
+		h1 {
+			.header-font;
+			.normal;
+			width: 100%;
+			font-size: 2rem !important; // 32px
+			border-bottom: none !important;
+			padding: 0 !important;
+			margin: 0;
+		}
+		a {
+			color: @eia-blue;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&.bg-commercial {
+			padding-bottom: 10px;
+		}
+
+		&.bg-page-title {
+			.pub-title {
+				.font;
+				width: 100%;
+				clear: both;
+				font-size: 0.688rem; // 11 pixels
+				margin: 0px;
+				padding: 2px 0 22px 0;
+				color: #7d7d7d;
+				span {
+					line-height: 1.8em;
+				}
+				&>span {
+					&:before {
+						content: '|';
+						margin: 0 6px 0 3px;
+					}
+					a {
+						display: inline-block;
+						color: @eia-blue;
+						text-decoration: none;
+						text-transform: uppercase;
+						&:hover {
+							text-decoration: underline;
+						} 
+					}
+					.pdf {
+						.left;
+						margin: -3px 6px 0 0;
+						span {
+							position: absolute;
+							left: -10000px;
+							top: auto;
+							width: 1px;
+							height: 1px;
+							overflow: hidden;
+						}
+					}
+				}
+				&>span {
+					&:first-child {
+						&:before {
+							content: '';
+							margin: 0 6px 0 3px;
+						}						
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet-landscape {
+
+}
+
+@media @laptop {
+	.bg_pub_states_tall {
+		background: url(/global/images/page_headers/states_tall.jpg) no-repeat right top;
+	}
+	.title-banner {
+		border-bottom: solid 1px #ededee;
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: cover;
+		background-color: white;
+		padding: 22px 22px 0 22px;
+		h1 {
+			text-transform: uppercase;
+			&.cbecs { // legacy stuff - not sure of history
+				font-size: 1.125em;
+				padding: 15px 0 0 20px;
+			}
+		}
+		&.bg-page-title {
+			background-image: url(/global/images/page_headers/default-pub-header.jpg);
+		}
+		&.bg-all-sources {
+			background-image: url(/global/images/page_headers/all-sources.jpg);
+		}
+		&.bg-analysis {
+			background-image: url(/global/images/page_headers/analysis-projections.jpg);
+		}
+		&.bg-coal {
+			background-image: url(/global/images/page_headers/coal.jpg);
+		}
+		&.bg-commercial {
+			background-image: url(/global/images/page_headers/commercial.jpg);
+			padding: 0;
+		}
+		&.bg-conference {
+			background-image: url(/global/images/page_headers/conference.jpg);
+			min-height: 106px;
+		}
+		&.bg-countries {
+			background-image: url(/global/images/page_headers/countries.jpg);
+		}
+		&.bg-electricity {
+			background-image: url(/global/images/page_headers/electricity.jpg);
+		}
+		&.bg-environment {
+			background-image: url(/global/images/page_headers/environment.jpg);
+		}
+		&.bg-enduse {
+			background-image: url(/global/images/page_headers/enduse.jpg);
+		}
+		&.bg-finance {
+			background-image: url(/global/images/page_headers/finance.jpg);
+		}
+		&.bg-industrial {
+			background-image: url(/global/images/page_headers/industrial.jpg);
+		}
+		&.bg-maps {
+			background-image: url(/global/images/page_headers/maps.jpg);
+		}
+		&.bg-natural-gas {
+			background-image: url(/global/images/page_headers/natural-gas.jpg);
+		}
+		&.bg-nuclear {
+			background-image: url(/global/images/page_headers/nuclear.jpg);
+		}
+		&.bg-petroleum {
+			background-image: url(/global/images/page_headers/petroleum.jpg);
+		}
+		&.bg-press {
+			background-image: url(/global/images/page_headers/press.jpg);
+		}
+		&.bg-regions {
+			background-image: url(/global/images/page_headers/regions.jpg);
+		}
+		&.bg-renewable {
+			background-image: url(/global/images/page_headers/renewable.jpg);
+		}
+		&.bg-residential {
+			background-image: url(/global/images/page_headers/residential.jpg);
+		}
+		&.bg-recs {
+			background-image: url(/global/images/page_headers/recs.jpg);
+		}
+		&.bg-states {
+			background-image: url(/global/images/page_headers/states.jpg);
+		}
+		&.bg-transportation {
+			background-image: url(/global/images/page_headers/transportation.jpg);
+		}
+		&.bg-tie {
+			background-image: url(/global/images/page_headers/today-in-energy.jpg);
+		}
+		&.bg-models {
+			background-image: url(/global/images/page_headers/models.jpg);
+		}
+	}
+}

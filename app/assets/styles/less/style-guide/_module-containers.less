@@ -1,0 +1,110 @@
+@media @mobile {
+	.style-guide {
+		._module-bg {
+			background-color: #fff;
+			display: table;
+			width: 100%;
+		}
+		._module-wrapper {
+			border: 1px solid #333;
+			background-color: greenyellow;
+			//._module-container {
+
+			//}
+		}
+		.l-row {
+			.l-col,
+			.l-full-width-col,
+			.l-col,
+			.l-two-col,
+			.l-main-col,
+			.l-split-narrow-col,
+			.l-split-wide-col,
+			.l-col,
+			.l-two-third-col {
+				.accordion,
+				.primary-alt,
+				.primary,
+				.secondary-alt,
+				.secondary {
+					margin-bottom: 0;
+					border-bottom: 3em solid #a32020;
+//					height: 125px;
+//					overflow: hidden;
+				}
+				.primary-fixed {
+					margin-bottom: 0;
+					border-bottom: 3em solid #a32020;
+					height: 125px;
+					overflow: hidden;
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 15px; // * 1.20%; 
+					line-height: 1.125; // 18 pixels
+					color: #000;
+				}
+			}
+			.basic-table {
+				table {
+					background-color: #fff;
+					caption {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+/*
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+	.style-guide {
+
+	}
+}
+*/
+@media @tablet {	// mobile panorama
+	.style-guide {
+		.l-row {
+			.l-full-width-col,
+			.l-col,
+			.l-two-col,
+			.l-main-col,
+			.l-split-narrow-col,
+			.l-split-wide-col,
+			.l-col,
+			.l-two-third-col {
+				.accordion,
+				.primary-alt,
+				.primary,
+				.secondary-alt,
+				.secondary {
+					margin-bottom: 0;
+					border-bottom: 2em solid #a32020;
+				}
+				.primary-fixed {
+					margin-bottom: 0;
+					border-bottom: 2em solid #a32020;
+					height: 125px;
+				}
+			}
+		}
+	}
+}
+@media @laptop {
+	.style-guide {
+		._module-wrapper {
+			display: table;
+			background: url(../../src/images/bg.png) center;
+			border-top: 1px solid #333;
+			border-right: none;
+			border-bottom: 1px solid #333;
+			border-left: none;
+			width: 992px;
+			._module-container {
+				display: table;
+				width: 960px;
+				margin-left: 16px; // 15 + 1px border
+				margin-right: 16px; // 15 + 1px border
+			}
+		}
+	}
+}

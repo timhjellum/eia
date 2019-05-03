@@ -1,0 +1,64 @@
+@media @mobile {
+	._resolution {
+		background-color: #ff8c8c;
+		color: black;
+		padding: 3px;
+		display: table;
+		position: fixed;
+		right: 0;
+		font-size: 12px;
+		font-weight: bold;
+		&._mobile {display: block;}
+		&._mobile-landscape {display: none;}
+		&._tablet {display: none;}
+		&._tablet-landscape {display: none;}
+		&._laptop {display: none;}
+	}
+}
+@media @mobile-landscape {
+	._resolution {
+		background-color: #ea4b4b;
+		&._mobile {display: none;}
+		&._mobile-landscape {display: block;}
+		&._tablet {display: none;}
+		&._tablet-landscape {display: none;}
+		&._laptop {display: none;}
+	}
+}
+@media @tablet {
+	._resolution {
+		background-color: #c32424;
+		&._mobile {display: none;}
+		&._mobile-landscape {display: none;}
+		&._tablet {display: block;}
+		&._tablet-landscape {display: none;}
+		&._laptop {display: none;}
+	}
+}
+@media @tablet-landscape {
+	._resolution {
+		background-color: #a70f0f;
+		color: white;
+		&._mobile {display: none;}
+		&._mobile-landscape {display: none;}
+		&._tablet {display: none;}
+		&._tablet-landscape {display: block;}
+		&._laptop {display: none;}
+	}
+}
+@media @laptop {
+	._resolution {
+		background-color: #630000;
+		&._mobile {display: none;}
+		&._mobile-landscape {display: none;}
+		&._tablet {display: none;}
+		&._tablet-landscape {display: none;}
+		&._laptop {display: block;}
+	}
+}
+
+
+
+
+
+

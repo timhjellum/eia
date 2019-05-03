@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EIA Style Guide</title>
+<!-- build:ico ../assets/images/favicon.ico -->
+    <link rel="icon" href="../src/images/favicon.ico">
+    <!-- endbuild -->
+    <!-- build:png ../assets/images/apple-touch-icon.png -->
+    <link href="../src/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <!-- endbuild -->
+    <!-- build:png ../assets/images/favicon-32x32.png -->
+    <link href="../src/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <!-- endbuild -->
+    <!-- build:png ../assets/images/favicon-16x16.png -->
+    <link href="../src/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <!-- endbuild -->
+    <!-- build:webmanifest ../assets/images/site.webmanifest -->
+    <link href="../src/images/site.webmanifest" rel="manifest">
+    <!-- endbuild -->
+    <!-- build:svg ../assets/images/safari-pinned-tab.svg -->
+    <link href="../src/images/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+    <!-- endbuild -->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#292929">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+    <!-- build:css ../assets/styles/styles.min.css -->
+    <link rel="stylesheet" href="../temp/styles/styles.css">
+    <!-- endbuild -->
+    <!-- build:css ../assets/styles/global.min.css -->
+    <link rel="stylesheet" href="../temp/styles/global.css" media="screen">
+    <!-- endbuild -->
+
+<!-- build:js ../assets/scripts/jquery.min.js -->
+<script src="../assets/scripts/modules/vendor/jquery/jquery.v3.3.1.min.js"></script>
+<!-- endbuild -->
+    <!-- build:js ../assets/scripts/jquery-ui.min.js -->
+    <script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="l-body-wrapper l-full-page">
+        <span class="add-header"></span>
+        <div class="l-outer-wrapper">
+            <div class="l-inner-wrapper">
+                <!-- start style guide wrapper -->
+                <!-- start style guide wrapper -->
+                <!-- start style guide wrapper -->
+                <div class="_container">
+                    <div class="_content">
+                        <div class="_content-inner">
+                            <!-- end style guide wrapper -->
+                            <!-- end style guide wrapper -->
+                            <!-- end style guide wrapper -->
+                            <h1 class="_h1">Modules</h1>
+                <h3 class="_h3">Module Rules</h3>
+
+                <p class="_p">As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside
+                    Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different
+                    parts of the layout without breaking.</p>
+
+
+
+
+
+                <p class="_p">When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to
+                    target those elements. </p>
+
+                <div class="_example">
+                    <p class="_example-caption _p">Module example</p>
+                    <pre><code class="css">.module &gt; h2 {
+	padding: 5px;
+}
+
+.module span {
+	padding: 5px;
+}</code></pre>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <ul class="style-guide">
+                    <li class="style-guide">
+                        <h3 class="_h3">Avoid element selectors</h3>
+
+                        <p class="_p">Use child or descendant selectors with element selectors if the element selectors will and can be predictable. Using <code>.module span</code> is great if a span will predictably be used and styled the same way every time while
+                            within that module.</p>
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Styling with generic element</p>
+                            <pre><code class="html">&lt;div class="fld"&gt;
+	&lt;span&gt;Folder Name&lt;/span&gt;
+&lt;/div&gt;
+
+/* The Folder Module */
+.fld &gt; span {
+	padding-left: 20px;
+	background: url(icon.png);
+}
+</code></pre>
+                        </div>
+
+                        <p class="_p">The problem is that as a project grows in complexity, the more likely that you will need to expand a component’s functionality and the more limited you will be in having used such a generic element within your rule.</p>
+
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Styling with generic element</p>
+                            <pre><code class="html">&lt;div class="fld"&gt;
+	&lt;span&gt;Folder Name&lt;/span&gt; 
+	&lt;span&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+
+                        <p class="_p">Now we are in a pickle. We don’t want the icon to appear on both elements within our folder module. Which leads me to my next point:</p>
+
+                        <p class="_p"><em>Only include a selector that includes semantics.</em> A span or div holds none. A heading has some. A class defined on an element has plenty.</p>
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Styling with generic element</p>
+                            <pre><code class="html">&lt;div class="fld"&gt;
+	&lt;span class="fld-name"&gt;Folder Name&lt;/span&gt; 
+	&lt;span class="fld-items"&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+
+                        <p class="_p">By adding the classes to the elements, we have increased the semantics of what those elements mean and removed any ambiguity when it comes to styling them.</p>
+
+                        <p class="_p">If you do wish to use an element selector, it should be within one level of a class selector. In other words, you should be in a situation to use child selectors. Alternatively, you should be extremely confident that the element
+                            in question will not be confused with another element. The more semantically generic the HTML element (like a span or div), the more likely it will create a conflict down the road. Elements with greater semantics like headings
+                            are more likely to appear by themselves within a container and you are more likely able to use an element selector successfully.</p>
+
+
+                        <h3 class="_h3">New Contexts</h3>
+                        <p class="_p">Using the module approach also allows us to better understand where context changes are likely to occur. The need for a new positioning context, for example, is likely to happen at either the layout level or at the root of a module.</p>
+
+                        <h3 class="_h3">Subclassing Modules</h3>
+
+                        <p class="_p">When we have the same module in different sections, the first instinct is to use a parent element to style that module differently.</p>
+
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Subclassing</p>
+                            <pre><code class="css">.pod { 
+	width: 100%; 
+}
+.pod input[type=text] { 
+	width: 50%; 
+}
+#sidebar .pod input[type=text] { 
+	width: 100%; 
+}
+</code></pre>
+                        </div>
+
+                        <p class="_p">The problem with this approach is that you can run into specificity issues that require adding even more selectors to battle against it or to quickly fall back to using <code>!important</code>.</p>
+
+                        <p class="_p">Expanding on our example pod, we have an input with two different widths. Throughout the site, the input has a label beside it and therefore the field should only be half the width. In the sidebar, however, the field would be too
+                            small so we increase it to 100% and have the label on top. All looks well and good. Now, we need to add a new component to our page. It uses most of the same styling as a <code>.pod</code> and so we re-use that class. However,
+                            this pod is special and has a constrained width no matter where it is on the site. It is a little different, though, and needs a width of 180px.</p>
+
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Battling against specificity</p>
+                            <pre><code class="css">.pod { 
+	width: 100%; 
+} 
+.pod input[type=text] { 
+	width: 50%; 
+}
+#sidebar .pod input[type=text] { 
+	width: 100%; 
+}
+
+.pod-callout { 
+	width: 200px; 
+}
+#sidebar .pod-callout input[type=text],
+.pod-callout input[type=text] { 
+	width: 180px; 
+}
+</code></pre>
+                        </div>
+
+                        <p class="_p">We are doubling up on our selectors to be able to override the specificity of <code>#sidebar</code>.</p>
+
+                        <p class="_p">What we should do instead is recognize that the constrained layout in the sidebar is a subclass of the pod and style it accordingly.</p>
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Battling against specificity</p>
+                            <pre><code class="css">.pod { 
+	width: 100%; 
+} 
+.pod input[type=text] { 
+	width: 50%; 
+}
+.pod-constrained input[type=text] { 
+	width: 100%; 
+}
+
+.pod-callout { 
+	width: 200px; 
+}
+.pod-callout input[type=text] { 
+	width: 180px; 
+}
+</code></pre>
+                        </div>
+
+                        <p class="_p">With sub-classing the module, both the base module and the sub-module class names get applied to the HTML element.</p>
+
+                        <div class="_example">
+                            <p class="_example-caption _p">Sub-module class name in HTML</p>
+                            <pre><code class="html"> &lt;div class="pod pod-constrained"&gt;...&lt;/div&gt;
+&lt;div class="pod pod-callout"&gt;...&lt;/div&gt; </code></pre>
+                        </div>
+
+                        <p class="_p">Try to avoid conditional styling based on location. If you are changing the look of a module for usage elsewhere on the page or site, sub-class the module instead. </p>
+
+                        <p class="_p">To help battle against specificity (and if IE6 isn’t a concern), then you can double up on your class names like in the next example.</p>
+                        <div class="_example">
+                            <p class="_example-caption _p">Subclassing</p>
+                            <pre><code class="css">.pod.pod-callout { }
+
+&lt;!-- In the HTML --&gt;
+&lt;div class="pod pod-callout"&gt; ... &lt;/div&gt;
+</code></pre>
+                        </div>
+
+                        <p class="_p">You may be concerned about this, depending on the order of loading. For example, on Yahoo! Mail, we have code coming from different places. We had our base button styles and then we had a special set of buttons for the compose
+                            screen. However, when you clicked to add a contact to your address book, it loaded a component from a different product: Address Book. (Yes, the address book is a different product within Yahoo!.) The address book loaded its
+                            own base button styles, thereby overwriting the sub-classed button styles that we had.</p>
+
+                        <p class="_p">If load order is a factor in your project, watch out for specificity issues.</p>
+
+                        <p class="_p">While more specific layout components assigned with IDs could be used to provide specialized styling for modules, sub-classing the module will allow the module to be moved to other sections of the site more easily and you will
+                            avoid increasing the specificity unnecessarily.</p>
+                    </li>
+            </div>
+            <div class="content">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
+
+
+                <p class="_p">Modules are the reusable and modular components of the page. Modules can be
+                    <strong>nested</strong> and each Module should be designed to exist as a
+                    <strong>standalone component</strong>. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.</p>
+                <h3 class="_h3">Examples of modules</h3>
+                <ul class="style-guide">
+                    <li>Navigation elements</li>
+                    <li>Sliders</li>
+                    <li>Dialogs</li>
+                    <li>Content Containers</li>
+                </ul>
+
+                <h3 class="_h3">Naming Best-Practices</h3>
+                <p class="_p">Unlike layouts that have a designation within the class name to indicate it's a layout element, Modules do not and instead have symantec names to indicate what the module is.</p>
+
+                <p class="_p">When defining the rule set for a module, Avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to
+                    target those elements.</p>
+
+                <pre><code class="css">#module { padding: 5px; } /* Avoid */
+p { padding: 5px; } /* Avoid */
+.module > h2 { padding: 5px; } /* Avoid Child Selectors */
+.module span { padding: 5px; } /* Avoid */</code></pre>
+
+                <p class="_p">Use child or descendant selectors with element selectors if the element selectors will and can be predictable. Using .module span is great if a span will predictably be used and styled the same way every time while within that module.</p>
+
+                <pre><code class="html">&lt;div class="folder"&gt;
+	&lt;span&gt;Folder Name&lt;/span&gt; &lt;!-- too broad --&gt;
+&lt;/div&gt;</code></pre>
+
+                <pre><code class="css">.folder &gt; span {
+	padding-left: 20px;
+	background: url(icon.png);
+}</code></pre>
+
+                <p class="_p">The problem is that as a project grows in complexity, the more likely that you will need to expand a component’s functionality and the more limited you will be in having used such a generic element within your rule.</p>
+
+                <pre><code class="html">&lt;div class="folder"&gt;
+  &lt;span&gt;Folder Name&lt;/span&gt; &lt;span&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;</code>
+</pre>
+                <p class="_p">Now we are in a pickle. We don’t want the icon to appear on both elements within our folder module. Which leads me to my next point:</p>
+                <p class="_p">Only include a selector that includes semantics. A span or div holds none. A heading has some. A class defined on an element has plenty.</p>
+
+                <pre><code class="html">&lt;div class="folder"&gt;
+  &lt;span class="folder-name"&gt;Folder Name&lt;/span&gt; &lt;span class="folder-items"&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+                <p class="_p">By adding the classes to the elements, we have increased the semantics of what those elements mean and removed any ambiguity when it comes to styling them.</p>
+                <p class="_p">If you do wish to use an element selector, it should be within one level of a class selector. In other words, you should be in a situation to use child selectors. Alternatively, you should be extremely confident that the element in question
+                    will not be confused with another element. The more semantically generic the HTML element (like a span or div), the more likely it will create a conflict down the road. Elements with greater semantics like headings are more likely
+                    to appear by themselves within a container and you are more likely able to use an element selector successfully.
+                </p>
+
+                <p class="_p">Using the module approach also allows us to better understand where context changes are likely to occur. The need for a new positioning context, for example, is likely to happen at either the layout level or at the root of a module.
+                </p>
+
+                <div class="row-style-guide">
+                    <h3 class="_h3">Subclassing Modules</h3>
+                </div>
+                <p class="_p">When we have the same module in different sections, the first instinct is to use a parent element to style that module differently.
+                </p>
+
+                <pre><code class="css">.pod { width: 100%; }
+.pod input[type=text] { width: 50%; }
+#sidebar .pod input[type=text] { width: 100%; }</code>
+</pre>
+                <p class="_p">The problem with this approach is that you can run into specificity issues that require adding even more selectors to battle against it or to quickly fall back to using
+                    <code>!important</code>.</p>
+                <p class="_p">Expanding on our example pod, we have an input with two different widths. Throughout the site, the input has a label beside it and therefore the field should only be half the width. In the sidebar, however, the field would be too small
+                    so we increase it to 100% and have the label on top. All looks well and good. Now, we need to add a new component to our page. It uses most of the same styling as a .pod and so we re-use that class. However, this pod is special and
+                    has a constrained width no matter where it is on the site. It is a little different, though, and needs a width of 180px.</p>
+
+                <pre><code class="css">.pod { width: 100%; }
+.pod input[type=text] { width: 50%; }
+#sidebar .pod input[type=text] { width: 100%; }
+.pod-callout { width: 200px; }
+#sidebar .pod-callout input[type=text],
+.pod-callout input[type=text] { width: 180px; }</code>
+</pre>
+                <p class="_p">We are doubling up on our selectors to be able to override the specificity of #sidebar.</p>
+                <p class="_p">What we should do instead is recognize that the constrained layout in the sidebar is a subclass of the pod and style it accordingly.</p>
+
+                <pre><code class="css">.pod { width: 100%; } /* Selector */
+.pod input[type=text] { width: 50%; } /* Descendant Selector */
+.pod-constrained input[type=text] { width: 100%; }
+.pod-callout { width: 200px; }
+.pod-callout input[type=text] { width: 180px; }</code></pre>
+
+                <p class="_p">With sub-classing the module, both the base module and the submodule class names get applied to the HTML element.</p>
+
+                <pre><code class="html">&lt;div class="pod pod-constrained"&gt;...&lt;/div&gt;
+&lt;div class="pod pod-callout"&gt;...&lt;/div&gt;</code>
+</pre>
+                <p class="_p">Try to Avoid conditional styling based on location. If you are changing the look of a module for usage elsewhere on the page or site, sub-class the module instead.</p>
+                <p class="_p">To help battle against specificity (and if IE6 isn’t a concern), then you can double up on your class names like in the next example.</p>
+
+                <pre><code class="css">.pod.pod-callout { }</code></pre>
+                <pre><code class="html">&lt;div class="pod pod-callout"&gt; ... &lt;/div&gt;</code></pre>
+                <p class="_p">While more specific layout components assigned with IDs could be used to provide specialized styling for modules, sub-classing the module will allow the module to be moved to other sections of the site more easily and you will Avoid increasing
+                    the specificity unnecessarily.</p>
+
+                <!-- end section -->
+                <!-- end section -->
+                <!-- end section -->
+                </li>
+                </ul>
+                             <!-- start style guide wrapper -->
+                            <!-- start style guide wrapper -->
+                            <!-- start style guide wrapper -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end style guide wrapper -->
+                <!-- end style guide wrapper -->
+                <!-- end style guide wrapper -->
+            </div>
+        </div>
+    </div>
+    <span class="add-footer"></span>
+</body>
+<!-- build:js ../assets/scripts/script.min.js -->
+<script src="../temp/scripts/scripts.js"></script>
+<!-- endbuild -->
+<!-- build:js ../assets/scripts/global.min.js -->
+<script src="../temp/scripts/global.js"></script>
+<!-- endbuild -->
+</html>

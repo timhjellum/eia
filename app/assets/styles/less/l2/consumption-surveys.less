@@ -1,0 +1,184 @@
+.residential {
+    &:before {
+        .controls-icon(55px, 55px);
+    }
+}
+.commercial {
+    &:before {
+        .controls-icon(55px, 55px);
+    }
+}
+.industrial {
+    &:before {
+        .controls-icon(55px, 55px);
+    }
+}
+
+@media @mobile {
+    .consumption-surveys {
+        //display: table; // not needed
+        width: 100%;
+        margin: 0 0 .5em; // margin-bottom: 1.5em;
+        &>div {
+            margin-bottom: 1.5em;
+        }
+        h1 {
+            display: block;
+            border-bottom: 1px solid shade(white, 16.8%);
+            padding: 1em 0 6px 0;
+            clear: both;
+            line-height: 1;
+            margin-bottom: 13px;
+            font-weight: normal;
+            .header-font;
+            font-size: 26px;
+            color: @eia-dark-grey;
+            width: 100%;
+        }
+        img {
+            margin: 0 auto 0 auto;
+            height: 94px;
+            float: none;
+            clear: both;
+        }
+        i {
+            .left;
+            width: 75px;
+            height: 66px;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 0 75px;
+            border: 1px solid white;
+            li {
+                &.head {
+                    padding: 0 0 2px 0;
+                    margin-top: 4px;
+                    text-align: center;
+                    h2 {
+                        .font;
+                        .bold;
+                        color: @eia-dark-blue;
+                        line-height: 1.2em;
+                        text-transform: uppercase;
+                        font-size: .9375rem; //15px
+                        .align-left;
+                        border-bottom: none;
+                        a {
+                            .font;
+                            .bold;
+                            color: @eia-dark-blue;
+                            line-height: 1.2em;
+                            text-transform: uppercase;
+                            font-size: .9375rem; //15px
+                            .align-left;
+                            display: inline-block;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            } 
+                        }
+                    }
+                }
+                &.sub-head {
+                    .font;
+                    font-size: .8125rem; // 13px
+                    line-height: 1.5em;
+                    color: @eia-dark-grey;
+                    .align-left;
+                    a {
+                        .font;
+                        font-size: .8125rem; // 13px
+                        line-height: 1.5em;
+                        color: @eia-dark-grey;
+                        display: inline-block;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        } 
+                    }
+                }
+                &.foot {
+                    margin-top: 8px;
+                    .align-left;
+                    a {
+                        .font;
+                        .bold;
+                        font-size: .750rem; // 12px
+                        line-height: 1.375em; // 22px
+                        display: inline-block;
+                        color: @eia-blue;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        &:after { 
+                            content:"\00a0\203A";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
+    .consumption-surveys {
+        margin-bottom: .5em;
+        &>div {
+            margin-bottom: 1.5em;
+        }
+        .l-col {
+            /*
+            &:nth-child(3) {
+                position: relative;
+                &:before {
+                    border-left: 1px solid shade(white, 17%);
+                    border-right: 1px solid shade(white, 17%);
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 10px;
+                    left: -16px;
+                    right: -16px;
+                }
+            }
+            */
+            &:nth-child(2) {
+                &:before {
+                    border-right: 1px solid shade(white, 17%);
+                    content: "";
+                    position: relative;
+                    top: 0;
+                    bottom: 10px;
+                    right: -16px;
+                    height: 100%;
+                    float: right;
+                }
+            }
+            &:nth-child(4) {
+                &:before {
+                    border-left: 1px solid shade(white, 17%);
+                    content: "";
+                    position: relative;
+                    top: 0;
+                    bottom: 10px;
+                    left: -16px;
+                    height: 100%;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+@media @laptop { // tablet, landscape iPad, lo-res laptops ands desktops
+    .consumption-surveys {
+        margin-bottom: 2em;
+        &>div {
+            margin-bottom: 0;
+        }
+
+    }
+}

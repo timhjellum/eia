@@ -1,0 +1,181 @@
+a,
+i,
+span {
+	&.ico {
+//		margin-left: 4px;
+		&>span {
+			.font;
+			.normal;
+//			margin-left: 4px;
+			font-size: 0.750rem; // 12 pixels
+			color: @eia-blue;
+			text-transform: uppercase;
+		}
+		&.pdf {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.xls {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.json {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.csv {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.ppt {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.html {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.doc {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.image {
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+		&.interactive {
+			margin-left: 0;
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+	}
+	/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+	&.down-arrow {			
+		text-indent: -9999px;
+		&:before {
+			.controls-icon(14px, 16px);
+			.left;
+			margin-right: 6px;
+		}
+	}
+	&.up-arrow {
+		text-indent: -9999px;		
+		&:before {
+			.controls-icon(14px, 16px);
+			.left;
+			margin-right: 6px;
+		}
+	}
+}
+
+
+
+
+
+
+a {
+	&.ico {
+//		margin-left: 4px;
+		text-decoration: underline;
+		cursor: pointer;
+		span {
+			.font;
+			.normal;
+//			margin-left: 4px;
+			font-size: 0.750rem; // 12 pixels
+			color: @eia-blue;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+a,
+i,
+span {
+	&.ico {
+		//margin-left: 4px;
+		font-size: 0;
+		line-height: 0;
+		&.icon-only {
+			margin: 0;
+			&>span {
+				font-size: 0;
+				line-height: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+td,
+div {
+	&.ico {
+		margin: 0;
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive {
+			&:before {
+				display: inline-block;
+				margin: 0 6px -1px 0;
+			}
+		}
+	}
+}
+
+
+
+.plus-yellow {
+	.font;
+	.bold;
+	color: @eia-yellow;
+	font-size: 18px;
+}
+.plus-greyish-blue {
+	.font;
+	.bold;
+	color: @eia-greyish-blue;
+	font-size: 12px;
+}
+/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+.down-arrow {			
+	&:before {
+		.controls-icon(12px, 14px);
+		position: relative;
+		top: -2px;
+	}
+}
+.up-arrow {
+	&:before {
+		.controls-icon(12px, 14px);
+		position: relative;
+		top: -2px;
+	}
+}
