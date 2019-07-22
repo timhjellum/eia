@@ -127,11 +127,13 @@ body,
 		li {
 			color: @eia-white;
 			margin-bottom: 14pt;
+			/*
 			.ico {
 				.font;
 				font-size: 12pt;
 				color: @eia-dark-grey;
 			}
+			*/
 			em {
 				.font;
 				font-size: 12pt;
@@ -222,18 +224,9 @@ body,
 		a {
 			color: @eia-blue;
 			border-bottom: 1px solid #189bd7;
-			&:link {
-				color: @eia-blue;
-				border-bottom: 1px solid #189bd7;
-			}
-			&:active {
-				color: @eia-blue;
-				border-bottom: 1px solid #189bd7;
-			}
-			&:visited {
-				color: @eia-blue;
-				border-bottom: 1px solid #189bd7;
-			}
+			&:link,
+			&:active,
+			&:visited,
 			&:after {
 				content: " (https://www.eia.gov" attr(href) ")";
 				font-size: 100%;
@@ -241,6 +234,9 @@ body,
 		}
 	}
 }
+
+// 
+
 .l-col {
 	h1 {
 		clear: both;

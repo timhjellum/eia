@@ -14,6 +14,7 @@
 		}
 		.l-row {
 			.l-col,
+			.l-report-header,
 			.l-full-width-col,
 			.l-col,
 			.l-two-col,
@@ -31,6 +32,7 @@
 					border-bottom: 3em solid #a32020;
 //					height: 125px;
 //					overflow: hidden;
+display: table;
 				}
 				.primary-fixed {
 					margin-bottom: 0;
@@ -52,6 +54,12 @@
 				}
 			}
 		}
+		.l-report-header {
+			display: table;
+			background-color: #fff;
+			margin-bottom: 0;
+			border-bottom: 1.5em solid #a32020;
+		}
 	}
 }
 /*
@@ -64,6 +72,7 @@
 @media @tablet {	// mobile panorama
 	.style-guide {
 		.l-row {
+			.l-report-header,
 			.l-full-width-col,
 			.l-col,
 			.l-two-col,

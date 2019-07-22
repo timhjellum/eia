@@ -43,6 +43,7 @@
 @import "less/l2/consumption-surveys";
 @import "less/l2/sub-navigation";
 @import "less/l2/updated-data-series";
+@import "less/l2/browse-by-tag";
 
 /* sliders */
 @import "less/sliders/shared";
@@ -57,7 +58,7 @@
 @import "less/theme/jquery-ui/tabs";
 /* home */
 @import "less/theme/homepage/modules";
-@import "less/theme/homepage/data-highlights";
+
 @import "less/theme/homepage/energy-kids";
 @import "less/theme/homepage/features";
 @import "less/theme/homepage/today-in-energy";
@@ -65,10 +66,15 @@
 
 /* list and content format */
 @import "less/theme/list-and-content";
-
+@import "less/theme/data-highlights";
 @import "less/theme/basic-table";
 @import "less/theme/data";
 @import "less/theme/natural-gas";
 @import "less/theme/primary-col-modules";
 @import "less/theme/secondary-col-modules";
-
+@import "less/theme/email";
+@import "less/theme/faqs";
+@import "less/theme/rss";
+@import "less/theme/glossary";
+@import "less/theme/a-z";
+@import "less/theme/survey";

@@ -1,7 +1,7 @@
 /* variables & mixins */
 @import "less/base/vars";
 @import "less/base/mixins";
-@import "less/base/base";
+/* @import "less/base/base"; */
 @import "less/base/icons-mixins";
 @import "less/base/icons-vars";
 @import "less/base/icons";

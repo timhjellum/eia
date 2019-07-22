@@ -11,32 +11,30 @@ header {
     .print {
         display: block !important;
         height: 108px !important;
-        width: 100% !important;	
+        width: 100% !important;
+        margin: 0 0 20px 0;
+        //padding: 52px 0 0 20px;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #ccc;
         img {
             display: none !important;
         }
         .print-logo {
             font-size: 0;
-            float: left;	
+            float: left;
             &:before {
-                .controls-icon();
-                .icon-eia-logomark(full, "@eia-dark-grey");
+                .controls-icon(302px, 101px);
+                .icon-logo(@font-color: "@eia-dark-grey");
             }
         }
         .print-title {
             background-color: transparent !important;
             background-image: none  !important;
-            //border: none !important;
-            margin: 0 0 20px 0;
-            //padding: 52px 0 0 20px;
-            padding: 0 0 20px 0;
-            border-bottom: 1px solid #ccc;
-            width: 100%;
-            float: left;
+            .right;
             .header-font;
             font-size: 32px;
             text-transform: uppercase;
-            //border: 1px solid red;
+            margin-top: 50px;
             &.bg-finance {
                 padding: 10px 0 0 0;
             }
@@ -46,7 +44,6 @@ header {
         display: none !important;
     }
 }
-
 
 
 .l-row {
@@ -59,15 +56,12 @@ header {
 
 
 
-
-
-
+/*
 .icon-eia-logomark(@fill-color-swoosh: full, @fill-color-text: #ffffff) {
 	.logomark-color(@fill-color-swoosh, @fill-color-text);
 	@icon-filter-svg: ~'<svg id="icon-eia-logomark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.83 75.33"><g id="logo-mark"><g id="eia"><path d="M16.63,42.39a6.19,6.19,0,0,1,4.88-2.09,6.37,6.37,0,0,1,4.77,2,7.39,7.39,0,0,1,1.91,5.36v0.49H14.58a9.25,9.25,0,0,1,2.05-5.74M32.18,59.53a18.46,18.46,0,0,1-3.45,3,8.1,8.1,0,0,1-4.19,1,8.45,8.45,0,0,1-5-1.74A10.77,10.77,0,0,1,15.84,57a19.05,19.05,0,0,1-1.26-7.25V49.35H33V48.83a9.26,9.26,0,0,0-3.24-7.06,10.9,10.9,0,0,0-7.58-3,11.67,11.67,0,0,0-8.91,3.93,13.7,13.7,0,0,0-3.64,9.68,12.58,12.58,0,0,0,3.81,9.42,13.31,13.31,0,0,0,9.67,3.7,12,12,0,0,0,5.67-1.25,14.94,14.94,0,0,0,4.64-4.18v0Z" fill="@{logo-text-color}"/><path d="M66.39,59.62a5.46,5.46,0,0,1-2.23,2.28,5.89,5.89,0,0,1-3,.92,3.4,3.4,0,0,1-2.7-1.37,5,5,0,0,1-1.13-3.26,5.17,5.17,0,0,1,1.06-3.43q1.06-1.27,4.85-2.56,2.05-.7,3.13-1.15v8.56Zm8.36,1c-0.32,1-1.34,2.2-2.1,2.17A1.13,1.13,0,0,1,71.52,62a10.83,10.83,0,0,1-.3-3.11V48.07A9.23,9.23,0,0,0,56.1,40.93a9.76,9.76,0,0,0-3.27,5.45l1.24,0.52a7.73,7.73,0,0,1,2.54-3.95,6.43,6.43,0,0,1,4.14-1.46,5.27,5.27,0,0,1,4.1,1.69,6.33,6.33,0,0,1,1.53,4.44v1.88a23.76,23.76,0,0,1-4.73,1.67q-5.6,1.57-7.43,3.29a5.74,5.74,0,0,0-1.82,4.36,6.24,6.24,0,0,0,2.12,4.75,7.22,7.22,0,0,0,5.08,2A7.37,7.37,0,0,0,63,64.77a13.35,13.35,0,0,0,3.34-2.82q1.18,3.59,4.28,3.58a4.5,4.5,0,0,0,3.43-1.39A5.64,5.64,0,0,0,75.5,61Z" fill="@{logo-text-color}"/><path d="M46.2,62.85c-0.61-.47-0.91-1.39-0.91-2.79V38.68H43.73l0,0c-1.49.68-8,.86-8,0.86v1.18c2.11,0,3.44.25,4,.73s0.8,1.5.8,3V60.06q0,2.13-.87,2.81c-0.58.45-1.88,0.68-3.9,0.68v1.18H49.5V63.55a5.67,5.67,0,0,1-3.3-.7" fill="@{logo-text-color}"/><path d="M45.1,32.78a2.71,2.71,0,1,1-2.71-2.71,2.71,2.71,0,0,1,2.71,2.71" fill="@{logo-text-color}"/></g><path d="M17.92,34.62c0.11-.12.26-0.27,0.46-0.47A104.56,104.56,0,0,1,42.47,16.59a56,56,0,0,1,14.26-5.23c10.1-2.08,16.36.35,18.25,1.93a2.27,2.27,0,0,1,.63.74,59.72,59.72,0,0,0-18.3,1C45.8,17.45,34.15,22.81,22.7,31c-1.48,1.06-2.95,2.17-4.36,3.29a5.12,5.12,0,0,1-.43.31" fill="@{middle-swoosh}"/><path d="M15.44,35.24c0.11-.19.28-0.46,0.55-0.86,2.48-3.58,6.32-8.79,9.33-12.34,7.15-8.45,13.92-10.88,17.32-11.58a13.7,13.7,0,0,1,3.47-.31,2.34,2.34,0,0,1-.3.36A92.51,92.51,0,0,0,23.63,26.39c-2.14,2.12-4.14,4.37-5.75,6.18-0.63.71-1.21,1.37-1.73,1.94-0.33.35-.55,0.58-0.71,0.73" fill="@{top-swoosh}"/><path d="M79.9,54.31a6,6,0,0,1,.28-1.38c2.14-6.48,2-12.49-.51-17.39C74.53,25.36,62,21.22,46.21,24.48a80,80,0,0,0-22.62,8.75q-0.66.36-1.29,0.75c-0.41.24-.7,0.4-0.9,0.5,0.18-.15.44-0.35,0.81-0.61A79.72,79.72,0,0,1,29,29.58a73.75,73.75,0,0,1,20.61-7.83c15.92-3.28,28.76.51,33.5,9.9a19.07,19.07,0,0,1,1.79,10.71,21.33,21.33,0,0,1-5,11.95" fill="@{bottom-swoosh}"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg);background: @-inline-svg-url @-bg-defaults;
 }
-//container mixin defaults for adding icon via ::before or ::after
 .controls-icon(@icon-width: 100px, @icon-height: 100px) {
     content: ' ';
     height: @icon-height;
@@ -75,7 +69,6 @@ header {
     display: block;
     text-indent: -9999px;
 }
-// -mixins for changing EIA logomark color between single color and full color---------------------*/
 .logomark-color(solid, @color) {
     @top-swoosh: @color;
     @middle-swoosh: @color;
@@ -88,10 +81,10 @@ header {
     @bottom-swoosh: @eia-blue;
     @logo-text-color: @color;
 }
-// -mixin for encoding the svg-------------*/
 .inline-svg-code( @code ) {
     @-svg-code: escape(~'@{code}');
     @-inline-svg-code: ~'data:image/svg+xml,@{-svg-code}';
     @-inline-svg-url: ~"url('@{-inline-svg-code}')";
     @-bg-defaults: ~"no-repeat center center";
 }
+*/

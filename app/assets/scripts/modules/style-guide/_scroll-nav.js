@@ -1,8 +1,8 @@
-import ScrollNav from 'scrollnav';
+import scrollNav from 'scrollnav';
 
-class scrollNav {
+class ScrollNav {
     constructor() {
-		//console.log("_scroll-nav");
+		console.log("_scroll-nav");
         $('._content').scrollNav({
             sections: '._h3',
             subSections: false,
@@ -16,7 +16,7 @@ class scrollNav {
             scrollOffset: 20,
             animated: true,
             speed: 500,
-            insertTarget: this.selector,
+            //insertTarget: this.selector,
             insertLocation: 'insertBefore',
             activeClass: 'active',
             arrowKeys: false,
@@ -27,4 +27,4 @@ class scrollNav {
         });
     }
 }
-export default scrollNav;
+export default ScrollNav;

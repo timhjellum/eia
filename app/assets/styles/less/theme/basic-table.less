@@ -32,6 +32,9 @@ div {
         &.basic-table {
             border-bottom: 2px solid @eia-blue;
             margin: 0;
+            overflow-y: hidden;
+            overflow-x: auto;
+            width: auto;
             &:last-of-type {
                 border-bottom: none;
             }
@@ -53,7 +56,7 @@ div {
                         .align-right;
                         padding: 6px 10px 5px 10px;
                         background-color: white; // required for sticky table header
-                        white-space: nowrap;
+                        vertical-align: bottom;
                         &:first-child {
                             .align-left;
                         }
@@ -139,6 +142,12 @@ div {
                         white-space: normal;
                         &:first-child {
                             .align-left;
+                        }
+                        &:active {
+                            outline: none;
+                        }
+                        &.custom-checkbox {
+                            padding: 4px 0 0 4px;
                         }
                         span {
                             &.number {

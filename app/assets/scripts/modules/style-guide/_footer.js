@@ -1,8 +1,7 @@
 class Footer {
     constructor() {
-
-
         $(".add-footer").html('<footer class="clearfix footer">' +
+       /*
         '   <div class="l-row  l-two-col-right address-bar">' +
         '       <div class="l-col">' +
         '           <ul class="above-address-links">' +
@@ -71,9 +70,8 @@ class Footer {
         '           <li><a href="/tools/rssfeeds/" target="_blank"><i class="ico-footer rss"></i>RSS Feeds</a></li>' +
         '       </ul>' +
         '   </div>' +
+        */
         '</footer>');
-
-
     }
 }
 export default Footer;

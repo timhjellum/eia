@@ -1,93 +1,164 @@
 @media @mobile {
-    .report-header {
-		display: table;
-		width: 100%;
-        padding: 0 0 6px 0;
-		border-bottom: solid 1px #ededee; // check
-        margin: 0 0 1.5em;
-        .report-header-inner {
-            margin: 0 0 6px 0;
-            padding: 0 1em 0 1em;
-        }
-		h2 {
-			.header-font;
-            font-size: 26px;
-            margin: 0;
-            padding: 0;
-        }
-        .publish-metadata {
-            .font;
-            width: 100%;
-            clear: both;
-            font-size: 0.688rem; // 11 pixels
-            margin: 0px;
-            padding: 2px 0px;
-            color: #7d7d7d;
-            span {
-                &.pipe {
-                    &:before {
-                        content: '|';
-                    }						
+    .l-row {
+        // 70% | 30%
+        &.l-report-header {
+            margin-bottom: 1.5em;
+            border-bottom: solid 1px #ededee;
+            //@media @mobile {
+            //.l-report-header {
+            .form-container {
+                width: 100%;
+            }
+            .go-back {
+                display: none;
+            }
+            //padding-top: 25px; // only if there's no navigation
+            .see-all {
+                font-size: 0.688rem; // 11 pixels
+                padding: 0 0 5px 0;
+                color: @eia-blue;
+                text-transform: uppercase;
+                &:before { 
+                    content:"\2039\00a0";
+                    vertical-align: text-top;
                 }
             }
-            /*
-            &>span {
-                &:before {
-                    content: '|';
-                    margin: 0 6px 0 3px;
-                }
+            .release-dates {
+                .font;
+                color: @eia-dark-grey;
+                font-size: 0.750rem; // 12 pixels
+                line-height: 1.4;
+                color: #7d7d7d;
+                //border-top: 1em solid blue;
+                //border-bottom: 1em solid blue;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                .bold;
                 a {
-                    display: inline-block;
-                    color: @eia-blue;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    &:hover {
-                        text-decoration: underline;
-                    } 
+                    .normal;
                 }
-                .pdf {
-                    .left;
-                    margin: -3px 6px 0 0;
+                .ico {
+                    margin: -3px 0 0 6px;
                     span {
-                        position: absolute;
-                        left: -10000px;
-                        top: auto;
-                        width: 1px;
-                        height: 1px;
-                        overflow: hidden;
+                        display: none;;
+                    }
+                }
+                .responsive-container {
+                    margin:0;
+                    display: inline-block;
+                    .date {
+                        display: inline-block;
+                        .normal;
+                    }
+                    .label {
+                        display: inline-block;
+                    }
+                    &:after {
+                        content: '\00a0\00a0|\00a0\00a0 ';
+                    }
+                    &:last-child {
+                        &:after {
+                            content: '';
+                        }
                     }
                 }
             }
-            &>span {
-                &:first-child {
-                    &:before {
-                        content: '';
-                        margin: 0 6px 0 3px;
-                    }						
+            h1 {
+                .header-font;
+                line-height: 1;
+                font-size: 1.625rem;
+                //margin: 0 0 .4em 0;
+                //padding: 0 0 6px 0;
+                padding: 0 0 0 0;
+                margin: 0 0 0 0;
+            }
+            .publish-metadata {
+                .font;
+                width: 100%;
+                clear: both;
+                font-size: 0.688rem; // 11 pixels
+                margin: 0 0 1em 0;
+                padding: 0;
+                color: #7d7d7d;
+                span {
+                    &.pipe {
+                        &:before {
+                            content: '|';
+                        }						
+                    }
                 }
             }
-            */
         }
-        .report-selector-container {
-            margin: 0;
-            padding: 6px 0 12px 0;
-            legend {
-                span {
+    }
+    .l-full-page {
+        .l-row {
+            &.l-report-header {
+                padding: 0;
+                .see-all,
+                .form-container,
+                .release-dates {
                     display: none;
                 }
+                .go-back {
+                    display: block;
+                    float: right;
+                    .ico {
+                        &.close {
+                            span {
+                                font-size: 0;
+                                line-height: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
             }
-            select {
-                width: 180px;
-            }
-
         }
     }
 }
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+}
+@media @tablet {	// mobile panorama
+    .l-row {
+        // 70% | 30%
+        &.l-report-header {
+            .l-col {
+                .release-dates {
+                    //border-top: 0;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media @tablet-landscape { // tablet, landscape iPad, lo-res laptops ands desktops
 
-@media @tablet-landscape {
-    .report-header {
-        .report-header-inner {
-            padding: 0 22px 0 22px;
+}
+@media @laptop {
+    .l-row {
+        // 70% | 30%
+        &.l-report-header {
+            &>.l-col {
+                width: 68%;
+                &:after {
+                    content: '';
+                    height: calc(100% - 10px);
+                    border-right: 1px solid #ededed;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 5px 0;
+                    right: -3%;
+                }
+                &:last-child { 
+                   width: 28%; 
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .form-container {
+                margin: 18px 0 0 0;
+            }
         }
     }
 }

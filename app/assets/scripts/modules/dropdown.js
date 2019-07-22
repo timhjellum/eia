@@ -9,7 +9,7 @@ class DropDown {
     }
 
     dropDownModule() {
-        console.log('dropdown module found');
+       //console.log('dropdown module found');
         const dropDownButton = $('.dropdown-container.js .dropdown-button');
         const dropDownMenu = $('.dropdown-container.js .dropdown-menu');        
 
@@ -36,16 +36,14 @@ class DropDown {
             }
         });
 
-
-
         dropDownMenu.on('change', function frequencySelected(event) {
             //setDropDownButtonText();
             dropDownButton.toggleClass('open', false);
             dropDownMenu.hide();
             $(window).off('resize', positionDropDownMenu);
         });
-        //dropDownMenu.on('change', tagChangeHandler);
     }
+
 }
 export default DropDown;
 

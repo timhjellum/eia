@@ -15,6 +15,7 @@
 }
 @media @laptop {
     .l-row {
+        &.l-report-header,
         &.l-full-width-col,
         &.l-two-col-left-narrow,
         &.l-two-col-left,
@@ -33,6 +34,7 @@
         }
         .l-row {
             padding: 0;
+            //&.l-report-header,
             &.l-full-width-col,
             &.l-two-col-left-narrow,
             &.l-two-col-left,
@@ -43,12 +45,9 @@
             &.l-three-col-even,
             &.l-four-col-even,
             &.l-five-col-even,
-            &.l-six-col-even {
-                padding: 0;
-            }
+            &.l-six-col-even,
             &.l-two-col-right-narrow {
                 padding: 0;
-
             }
             &.header { // fallback
                 display: none; // header cannot be nested

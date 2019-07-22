@@ -13,6 +13,9 @@ new HeaderSearch();
 import SocialSticker from './modules/social-sticker';
 new SocialSticker();
 
+//import ScrollTo from './modules/scroll-to';
+//new ScrollTo();
+
 import BxSlider from './modules/bxslider';
 new BxSlider();
 
@@ -22,13 +25,16 @@ new AnalysisProjections();
 import ModuleScripts from './modules/modules';
 new ModuleScripts();
 
-import Highlight from './modules/highlight-search-results';
-new Highlight();
+//import Highlight from './modules/highlight-search-results';
+//new Highlight();
+
+import BookshelfSearch from './modules/bookshelf-search';
+new BookshelfSearch();
 
 import './modules/jquery-ui';
 
-import cookie from './modules/cookie';
-new cookie();
+import CookieModule from './modules/cookie';
+new CookieModule();
 
 import GoogleAnalytics from './modules/google-analytics';
 new GoogleAnalytics();

@@ -1,22 +1,33 @@
 
 
-    .formats {
-        .italic;
-        a {
-            display: inline-block;
-            .ico {
-                &:before {
-                    display: inline-block;
-                }
-                span {
-                    margin: 0 0 0 2px;
-                }								
+.formats {
+    .italic;
+    a {
+        display: inline-block;
+        .ico {
+            &:before {
+                display: inline-block;
             }
+            span {
+                margin: 0 0 0 2px;
+            }								
         }
     }
-    .source {
-        .italic;
-    }
+}
+.source {
+    .italic;
+}
+
+
+
+.expand-collapse-content {
+    padding: 8px 0 16px 0;
+}
+
+
+
+
+
 
 .primary-alt,
 .primary,
@@ -29,8 +40,17 @@
 //margin: 0; // overide base
         list-style: none;
         &.basic-list {
+            list-style: none;
             li {
-                margin-bottom: 5px;
+                //list-style: none; Nope
+                margin: 0 0 5px 0
+            }
+        }
+        &.icon-list {
+            padding: 0;
+            li {
+                display: table;
+                margin: 1em 0 0 0;
             }
         }
         &.bullet {
@@ -51,6 +71,30 @@
             &.head {
                 .bold;
             }
+            // is this being used?
+            &.dilly {
+                list-style: none;
+                //margin: 5px 0;
+                //border-top: 4px solid red; // @eia-white;
+                //border-bottom: 12px solid red; // @eia-white;
+                ul {
+                    padding: 0; // overide base
+                    margin: 0; // overide base
+                    list-style: none;
+                    li {
+                        list-style: none;
+                        margin-left: 0;
+                        &.dash {
+                            text-indent: -5px;
+                            &:before {
+                                content: "— ";
+                                text-indent: -5px;
+                            }
+                        }
+                    }
+                }
+            }
+            //list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==');
             &.hide-bullet {
                 list-style: none;
             }
@@ -90,11 +134,11 @@
                     &:hover {
                         em {
                             text-decoration-line: underline;
-                            text-decoration-color: #fff;
+                            text-decoration-color: @eia-white;
                         }
                         span {
                             text-decoration-line: underline;
-                            text-decoration-color: #fff; 
+                            text-decoration-color: @eia-white; 
                         }
                     }
                 }
@@ -119,7 +163,7 @@
                     margin: 0; // overide base
                     display: block;
                     &>li {
-                        list-style-type: none;
+                        list-style: none;
                         &:first-child {
                             list-style-type: disc;
                         }
@@ -185,14 +229,15 @@
             &.sub-list {
                 ul {
                     list-style: none;
-                    list-style-type: none;
+                    list-style: none;
                     padding: 0;
                     margin: 0 0 12px 0;
                     li {
                         list-style: none;
-                        list-style-type: none;
+                        list-style: none;
                         padding-left: 0;
                         margin: 0;
+                        /*
                         &.sub-head {
                             a {
                                 color:@eia-blue;
@@ -209,6 +254,7 @@
                                 }
                             }
                         }
+                        */
                     }
                 }
                 &.list-item {
@@ -259,6 +305,21 @@
                     }
                 }
             }
+        }
+    }
+    ol {
+        padding: 0 0 0 17px;
+        li {
+            margin: 0 0 1em 0;
+        }
+    }
+}
+
+.primary-alt {
+    ul {
+        padding-left: 0;
+        &.bullet {
+    //        margin-left: 0;
         }
     }
 }

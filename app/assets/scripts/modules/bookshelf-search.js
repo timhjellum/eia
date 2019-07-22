@@ -17,7 +17,6 @@ class BookshelfSearch {
             self.searchElementSelectedHandler(e);
             e.preventDefault();
         });
-
         $('#header-bookshelf-search-form', this.container).on('submit', function(e) {
             self.submitSearch();
             e.preventDefault();
@@ -50,17 +49,17 @@ class BookshelfSearch {
     getAllTags() {
         var self = this;
         $.ajax({
-                "url": "/global/includes/bookshelf/index.php",
-                "dataType": "json",
-                "type": "GET"
-            })
-            .fail(function(jqXHR, textStatus, errorThrown) {
-                console.log('failed to retrieve tags');
-                self.container.hide();
-            })
-            .done(function(data, textStatus, jqHXR) {
-                self.tags = data.tags;
-            })
+            "url": "/global/includes/bookshelf/index.php",
+            "dataType": "json",
+            "type": "GET"
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            //console.log('failed to retrieve tags');
+            self.container.hide();
+        })
+        .done(function(data, textStatus, jqHXR) {
+            self.tags = data.tags;
+        })
     }
     hideControl() {
         $("#header-tags-search", this.container).hide();
@@ -68,6 +67,7 @@ class BookshelfSearch {
     resetControl() {
         this.hideControl();
         $("input", this.container).val(this.selectedTagText);
+        //console.log("reset found");
     }
     submitSearch() {
         $.fancybox.close();

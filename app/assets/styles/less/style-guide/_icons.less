@@ -1,21 +1,14 @@
 
-
-.tabs {
-	#tab-1,
-	#tab-2,
-	#tab-3,
-	#tab-4,
-	#tab-5 {
-		padding: 2em 0 0 0
-	}
+._header-logo {
+	background-color: #003C57;
+	//color: #fff;
+	text-align: center;
 }
-
-
-
-
-
-
-
+._print-logo {
+	background-color: #fff;
+	//color: #fff;
+	text-align: center;
+}
 .source-icon {
 	width: 241px;
 	padding: .5em 10px;
@@ -41,12 +34,12 @@
 	i {
 		margin-left: auto;
 		margin-right: auto;		
-    }
-    pre {
-        width: 230px;
-        code {
-        }
-    }
+	}
+	pre {
+		width: 230px;
+		code {
+		}
+	}
 }
 ._custom-modules {
 	.source-icon {
@@ -63,30 +56,37 @@
 	}
 }
 .logo-full-size {
-	float: left;
-	margin: 20px 0;
+	display: table;
+	margin: 20px auto;
+	border: 1px dotted white;
 	.logo {
 		&:before {
 			.controls-icon(302px, 101px);
 			.icon-logo;
-			background-color: #003c57;
 		}
 	}
 }
 .logo-shrink {
-	float: left;
-	margin: 20px 0;
+	display: table;
+	margin: 20px auto;
+	border: 1px dotted white;
 	.logo {
 		&:before {
 			.controls-icon(50px, 40px);
-			//.icon-eia-logomark;
-			background-color: #003c57;
+			.icon-eia-logomark;
 		}
 	}
 }
 .logo-logo-white-background {
-	float: left;
-	margin: 20px 0;
+	display: table;
+	margin: 20px auto;
+	border: 1px dotted #333;
+	.print-logo {
+		&:before {
+			.controls-icon(302px, 101px);
+			.icon-logo(@font-color: "@eia-dark-grey");
+		}
+	}
 	.logo-white-background {	
 		&:before {
 			.controls-icon(50px, 40px);
@@ -94,6 +94,37 @@
 		}
 	}
 }
+.style-guide{
+	.ico {
+		&.zoom {
+			&:before {
+				.controls-icon(16px, 16px);
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+&.pdf,
+&.xls,
+&.csv,
+&.json,
+&.ppt,
+&.html,
+&.doc,
+&.image,
+&.interactive {
+	&:before {
+		display: inline-block;
+		margin-bottom: -3px;
+		margin-right: 5px;
+	}
+	&:after {
+
+	}
+}
+
 /*
 .down-arrow,
 .up-arrow,
@@ -133,103 +164,114 @@
 .maps-icon,
 .international-icon,
 .a-z-index-icon,
-.search-submit,
-.close-menu,
-.analysis,
-.cancel,
-.column-chart,
-.compare,
-.d-arrow,
-.download,
-.edit,
-.filter,
-.grab-dot,
-.grid-column,
-.grid-line,
-.grid-map,
-.grid-parent-column,
-.grid-parent-line,
-.grid-parent-map,
-.grid-parent-pin,
-.grid-pin,
-.grid-key,
-.help,
-.key,
-.l-arrow,
-.l-range,
-.line-chart,
-.map,
-.pause,
-.pin,
-.play,
-.r-arrow,
-.r-range,
-.remove,
-.reset,
-.reset-animation,
-.scroll-h,
-.scroll-v,
-.search-icon,
-.slide,
-.sort,
-.sort-down,
-.sort-up,
-.submit,
-.checkmark,
-.dash,
-.dot,
-.collapse,
-.facebook,
-.twitter,
-.youtube,
-.flickr,
-.linkedin,
-.email,
-.rss,
-.residential,
-.commercial,
-.industrial,
-.d,
-.a,
-.p,
-.da,
-.ap,
-.dp,
-.dap,
-.printer,
-.beta,
-.interactive,
-.external-link,
-.tour,
-.info,
-.facebook,
-.twitter,
-.youtube,
-.flickr,
-.linkedin,
-.email,
-.rss,
-.pdf,
-.xls,
-.json,
-.csv,
-.add-download,
-.add-chart,
-.full-screen,
-.options,
-.table,
-.lock,
-.unlock,
-.submit,
-.clone {
-	cursor: pointer;
-    &:before {
-		margin: 0 auto
-	}
-	&>span {
-		color: @eia-blue !important;
-		text-transform: uppercase;
-		.font;
+*/
+
+
+
+.source-icon {
+	.ico {
+		&.search-submit,
+		&.close-menu,
+		&.analysis,
+		&.cancel,
+		&.column-chart,
+		&.compare,
+		&.d-arrow,
+		&.download,
+		&.edit,
+		&.filter,
+		&.grab-dot,
+		&.grid-column,
+		&.grid-line,
+		&.grid-map,
+		&.grid-parent-column,
+		&.grid-parent-line,
+		&.grid-parent-map,
+		&.grid-parent-pin,
+		&.grid-pin,
+		&.grid-key,
+		&.help,
+		&.key,
+		&.l-arrow,
+		&.l-range,
+		&.line-chart,
+		&.map,
+		&.pause,
+		&.pin,
+		&.play,
+		&.r-arrow,
+		&.r-range,
+		&.remove,
+		&.reset,
+		&.reset-animation,
+		&.scroll-h,
+		&.scroll-v,
+		&.search-icon,
+		&.slide,
+		&.sort,
+		&.sort-down,
+		&.sort-up,
+		&.submit,
+		&.checkmark,
+		&.dash,
+		&.dot,
+		&.collapse,
+		&.facebook,
+		&.twitter,
+		&.youtube,
+		&.flickr,
+		&.linkedin,
+		&.email,
+		&.rss,
+		&.residential,
+		&.commercial,
+		&.industrial,
+		&.d,
+		&.a,
+		&.p,
+		&.da,
+		&.ap,
+		&.dp,
+		&.dap,
+		&.printer,
+		&.beta,
+		&.interactive,
+		&.external-link,
+		&.tour,
+		&.info,
+		&.facebook,
+		&.twitter,
+		&.youtube,
+		&.flickr,
+		&.linkedin,
+		&.email,
+		&.rss,
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.add-download,
+		&.add-chart,
+		&.full-screen,
+		&.options,
+		&.table,
+		&.lock,
+		&.unlock,
+		&.submit,
+		&.clone {
+			cursor: pointer;
+			display: inline-block;
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+				margin-right: 5px;
+			}
+			&>span {
+				color: @eia-blue !important;
+				text-transform: uppercase;
+				.font;
+				display: inline-block;
+			}
+		}
 	}
 }
-*/

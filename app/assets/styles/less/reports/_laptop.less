@@ -1,59 +1,50 @@
 
 .ap {
 
-	
+	.reports-holder {
+		&.l-row {
+			&.l-two-col-right-narrow {
+				padding: 0 22px 0 22px;
+			}
+		}
+	}
+	.selected-tags-container {
+		margin: 10px 22px 22px 22px;
+	}
 
-
+	.reports-heading {
+		&>div {
+			&.frequency-container {
+				//width: 20%;
+				//padding-right: 22px;
+				margin: 0 11px 0 22px
+			}
+			&.time-series {
+				width: 35%;
+				//padding-right: 22px;
+				margin: 0 11px 0 11px
+			}
+			&.time-series { 
+				//margin: 0 22px 0 22px;
+				//width: 340px;
+			}
+			&.legend {
+				width: 35%;
+				margin: 0 22px 0 11px;
+				//width: auto;
+			}
+		}
+	}
 
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 	/* ***** ***** ***** **** #more-options **** ***** ***** ***** */
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-	
-	//#more-options
-	//.g-panel {
-		//border: 1px solid @eia-green; // #578833;
-		//border-top: 2px solid @eia-green; // #578833;
-	//}
 
 	#tags-container {
-		/*
-		h3 {
-			.font;
-			font-size: 14px;
-			.bold;
-			color: @eia-dark-grey;
-			text-transform: uppercase;
-			&#num-tags {
-				font-size: 13pt;
-				text-transform: none;
-				padding-top: 0;
-				color: @eia-dark-grey;
-				&.all {
-					display: none;
-				}
-			}
-		}
-		*/
 		.az-list {
 			a {
 				margin-right: 4px;
 			}
-			/*
-			.active {
-				background-color: #189bd7;
-				color: white;
-				text-decoration: none;
-				cursor: pointer;
-			}
-			&>a {
-				&:hover {
-					background-color: #189bd7;
-					color: white;
-					text-decoration: none;
-					cursor: pointer;
-				}
-			}
-			*/
 		}
 		/*
 		.az-index-container {
@@ -967,9 +958,9 @@
 			display: inline-block
 		}
 		*/
-		.ui-buttonset {
+		#filter-radio {
 			//min-width: 50px;
-			//width: auto;
+			width: auto;
 			label {
 				display: inline-block;
 				height: 134px;

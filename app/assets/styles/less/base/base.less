@@ -32,6 +32,18 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.print {
+	display: none;
+}
+.top {
+	.font;
+	font-size: 0.750rem; // 12 pixels;
+	width: 100%;
+	clear: both;
+	text-align: right;
+	display: block;
+	.bold;
+}
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** ***** **** global reset ***** ***** ***** ***** */
@@ -89,48 +101,37 @@ margin: 0;
 }
 
 
+
+.filtered-term {
+	.font;
+	display: block;
+	border-bottom: 1px solid shade(white, 16.8%);
+	padding: 1em 0 6px 0;
+	clear: both;
+	line-height: 1.5;
+	margin-bottom: 13px;
+	font-size: 26px;
+	color: @eia-dark-grey;  
+}
 .no-wrap {
-.no-wrap;
+	.no-wrap;
 }
 
-fieldset, 
-img, 
-abbr {
-border: 0;
-display: block;
-}
-address, 
-cite, 
-code {
-font-weight: normal;
-font-style: normal;
-}
-em {
-font-style: italic;
-}
-i {
-font-style: normal;
-}
-.print {
-display: none;
-}
+fieldset,img,abbr {border: 0;display: block}
+address,cite,code {font-weight: normal;font-style: normal}
+em {font-style: italic}
+i {font-style: normal}
+//.print {
+//	display: none;
+//}
 
-strong {
-font-weight: 700;
-}
+strong {font-weight: 700}
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** ***** ***** base styles ***** ***** ***** ***** */
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
-.hide {
-display: none;
-}
-
-
-
-
-
+.hide {display: none}
 
 /**
 * 1. Add the correct box sizing in Firefox.
@@ -226,10 +227,17 @@ a[href*="eia.gov"],
 /* ***** ***** ***** *** force line-break ** ***** ***** ***** */
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
+// this forces break
+// <span class="line-break">Data Tools, Apps,</span> <span class="line-break">and Maps</span>
+// Line will break after the Apps,
+
 span {
-&.line-break {
-	display: inline-block;
-}
+	&.line-break {
+		display: inline-block;
+	}
+	&.highlight {
+		background: #8ce44b; //tint(@eia-orange, 30%); // #ff0;
+	}
 }
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -237,8 +245,8 @@ span {
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
 .image-container {
-text-align: center;
-width: 100%;
+	text-align: center;
+	width: 100%;
 }
 .responsive {
 margin: 0 auto;
@@ -327,50 +335,21 @@ ul {
 
 
 
-// this forces break
-// <span class="line">Data Tools, Apps,</span> <span class="line">and Maps</span>
-// Line will break after the Apps,
+
 
 
 .pipe {
-padding: 0 8px;
-color: #d8d8d8;;
+	padding: 0 8px;
+	color: #d8d8d8;
+}
+.pipe-alt {
+	padding: 0;
+	color: #d8d8d8;
 }
 
 
 
 
-a {
-text-decoration: none;
-span {
-	&.inline {
-		white-space: nowrap;
-		margin-right: 5px;
-		.ico {
-			margin-left: 0;
-			span {
-				display: none;
-			}
-		}
-	}
-}
-&:hover {
-	text-decoration: underline;
-	span {
-		&.inline {						
-			text-decoration-line: underline;
-			text-decoration-color: white;
-			.ico {
-				text-decoration-line: underline;
-				text-decoration-color: @eia-blue;
-				span {
-					display: none;
-				}
-			}
-		}
-	}
-}
-}
 
 
 

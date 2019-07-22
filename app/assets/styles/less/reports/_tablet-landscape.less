@@ -37,7 +37,7 @@
 				background-color: transparent;
 			}
 		}
-		.ui-buttonset {
+		#filter-radio {
 			padding: 0; // overide
 			display: inline-block; // overide
 			//width: 100%;
@@ -74,71 +74,39 @@
 	*/
 
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-	/* ***** ***** *****  reports heading tablet ***** ***** ***** */
-	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-
-	/*
-	.reports-heading {
-		border-top: 2px solid #5d9732;
-		&>div {
-			display: table;
-			float: left;
-			&.frequency-container {
-				padding: 0;
-				margin: 0 0 0 0;
-				width: auto;
-			}
-			&.time-series {
-				margin: 0 22px 0 22px;
-				&>img {
-					vertical-align: text-bottom;
-				}
-				.datepicker {
-					width: 100px;
-				}
-				width: auto;
-			}
-			&.legend {
-				margin: 0 0 0 0;
-				width: auto;
-			}
-		}
-	}
-	*/
-
-	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 	/* ***** ***** * reports heading tablet-landscape  ***** ***** */
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
+
 	.reports-heading {
 		&>div {
-			display: table;
-			float: left;
-			&.frequency-container { 
-				padding: 0;
-				margin: 0 22px 0 22px;
-				width: 140px;
+			&.frequency-container {
+				width: 20%;
+				padding-right: 20px;
+			}
+			&.time-series {
+				width: 45%;
+				padding-right: 20px;
 			}
 			&.time-series { 
-				margin: 0 22px 0 22px;
+				//margin: 0 22px 0 22px;
 				&>img {
 					vertical-align: text-bottom;
 				}
-				.datepicker {
-					width: 100px;
-				}
-				width: 340px;
+				//width: 340px;
 			}
 			&.legend {
-				margin: 0 0 0 22px;
-				width: auto;
+				width: 35%;
+				//margin: 0 0 0 22px;
+				//width: auto;
 			}
 		}
 	}
+
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 	/* ***** ***** ***** ***  tags container *** ***** ***** ***** */
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-	/*
+
 	#tags {
 		column-count: 3;
 		-webkit-column-count: 3;
@@ -147,195 +115,59 @@
 		-webkit-column-fill: balance;
 		-moz-column-fill: balance;
 	}
-	.inner-tags-container[data-filter='source'] {
-		#tags[data-category='all-sources'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='alternative-fuels'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='coal'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='nuclear'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='natural-gas'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-		#tags[data-category='renewables'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-	}
-	.inner-tags-container[data-filter='geography'] {
-		#tags[data-category='padds'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='shale-play'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='spot-price-location'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='us-regions'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-	}
-	.inner-tags-container[data-filter='topic'] {
-		#tags[data-category='capacity'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='disruption-outages'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='exports-imports'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='standards-regulations'] {
-			column-count: 1;
-			-webkit-column-count: 1;
-			-moz-column-count: 1;
-		}
-		#tags[data-category='demand-end-use'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-		#tags[data-category='environment'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-		#tags[data-category='generation'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-		#tags[data-category='prices'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-		#tags[data-category='production-supply'] {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-	}
-	.inner-tags-container[data-filter='report'] {
+	&[data-filter='source'] {
 		#tags {
-			column-count: 2;
-			-webkit-column-count: 2;
-			-moz-column-count: 2;
-		}
-	}
-	.inner-tags-container {
-		/*
-		display: block;
-		//vertical-align: top;
-		width: 75%;
-		padding-left: 20px;
-		float: right;
-		height: 350px;
-		border-left: 1px solid #ccc;
-		overflow-y: auto;
-		&[data-filter="all"] {
-			float: none;
-			padding-left: 0px;
-			border-left: none;
-			width: 100%;
-			//border: 1px dotted red;
-		}
-		&[data-filter*="report"] {
-			float: none;
-			padding-left: 0px;
-			border-left: none;
-			width: 100%;
-			//border: 1px dotted red;
-		}
-		*/
-		#tags {
-			column-count: 3;
-			-webkit-column-count: 3;
-			-moz-column-count: 3;
-			column-fill: balance;
-			-webkit-column-fill: balance;
-			-moz-column-fill: balance;
-		}
-		&[data-filter='source'] {
-			#tags {
-				&[data-category='natural-gas'],
-				&[data-category='renewables'] {
-					column-count: 3;
-					-webkit-column-count: 3;
-					-moz-column-count: 3;
-				}
-			}
-		}
-		&[data-filter='geography'] {
-			&[data-filter='geography'] {
-				#tags {
-					&[data-category='country-international'],
-					&[data-category='us-states'] {
-						column-count: 3;
-						-webkit-column-count: 3;
-						-moz-column-count: 3;
-					}
-				}
-			}
-		}
-		&[data-filter='topic'] {
-			#tags {
-				&[data-category='capacity'],
-				&[data-category='disruption-outages'],
-				&[data-category='exports-imports'],
-				&[data-category='standards-regulations'] {
-					column-count: 2;
-					-webkit-column-count: 2;
-					-moz-column-count: 2;
-				}
-				&[data-category='demand-end-use'],
-				&[data-category='environment'],
-				&[data-category='generation'],
-				&[data-category='prices'],
-				&[data-category='production-supply'] {
-					column-count: 3;
-					-webkit-column-count: 3;
-					-moz-column-count: 3;
-				}
-			}
-		}
-		&[data-filter='report'] {
-			#tags {
+			&[data-category='natural-gas'],
+			&[data-category='renewables'] {
 				column-count: 3;
 				-webkit-column-count: 3;
 				-moz-column-count: 3;
 			}
 		}
+	}
+	&[data-filter='geography'] {
+		&[data-filter='geography'] {
+			#tags {
+				&[data-category='country-international'],
+				&[data-category='us-states'] {
+					column-count: 3;
+					-webkit-column-count: 3;
+					-moz-column-count: 3;
+				}
+			}
+		}
+	}
+	&[data-filter='topic'] {
+		#tags {
+			&[data-category='capacity'],
+			&[data-category='disruption-outages'],
+			&[data-category='exports-imports'],
+			&[data-category='standards-regulations'] {
+				column-count: 2;
+				-webkit-column-count: 2;
+				-moz-column-count: 2;
+			}
+			&[data-category='demand-end-use'],
+			&[data-category='environment'],
+			&[data-category='generation'],
+			&[data-category='prices'],
+			&[data-category='production-supply'] {
+				column-count: 3;
+				-webkit-column-count: 3;
+				-moz-column-count: 3;
+			}
+		}
+	}
+	&[data-filter='report'] {
+		#tags {
+			column-count: 3;
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+		}
+	}
+	.report-feature {
+		.l-col {
+			padding-bottom: 0;
+		}
+	}
 }

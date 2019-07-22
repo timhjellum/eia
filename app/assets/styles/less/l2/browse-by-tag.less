@@ -1,21 +1,9 @@
 @media @mobile {
     .browse-by-tag {
         .page-title {
-            border-bottom: 1px solid shade(white, 16.8%);
-            margin-top: 1em;
-            margin-bottom: 26px;
-            padding-bottom: 6px;
-            h1 {
-                border-bottom: none;
-                padding: 0;
-                line-height: 1;
-                margin: 0;
-                font-weight: normal;
-                .header-font;
-                font-size: 26px;
-                color: @eia-dark-grey;  
-            }
             .sort-by {
+                //display: inline-block;
+                float: right;
                 .font;
                 .bold;
                 font-size: 10px;
@@ -35,10 +23,26 @@
                         text-transform: uppercase;
                         &:hover {
                             text-decoration: underline;
-                        } 
+                        }
                     }
-                }
-                &>span {
+                    &.active {
+                        a {
+                            color:#ccc;
+                            text-decoration: none;
+                            &:link,
+                            &:active,
+                            &:visited {
+                                color:#ccc;
+                                text-decoration: none;
+                            }
+                            &:hover{
+                                text-decoration: underline;
+                                color:#ccc;
+                            }
+                        }
+                    }
+                //}
+                //&>span {
                     &:first-child {
                         &:before {
                             content: '';
@@ -48,7 +52,58 @@
                 }
             }
         }
-    }    
+    }
+    div {
+        #tag-frequency {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+            #tag-list {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .smallestTag {
+        font-size: 10px;
+    }
+    .smallTag {
+        font-size: 14px;
+    }
+    .mediumTag {
+        font-size: 20px;
+    }
+    .largeTag {
+        font-size: 30px;
+    }
+    .largestTag {
+        font-size: 36px;
+    }
+    .tagcloud {
+        a {
+            color: @eia-blue;
+            text-decoration: none;
+            border-bottom: 2px dotted @eia-blue;
+            padding-bottom: 1px;
+            margin: 4px;
+            &:hover {
+                text-decoration: none;
+                color: @eia-dark-blue;
+                border-bottom: 2px solid @eia-dark-blue;
+            }
+        }
+    }
+    .upcoming {
+        ul {
+            padding-left: 0;
+        }
+    }
 }
 @media @tablet { 
 	

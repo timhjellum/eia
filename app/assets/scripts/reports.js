@@ -1,1 +1,4 @@
-import './modules/reports/reports.js';
+import './modules/reports/reports';
+
+//import Reports from './modules/reports/reports';
+//new Reports();

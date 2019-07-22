@@ -1,3 +1,17 @@
+a.external-link:after,
+a[href*=".com"]:after,
+a[href^="http:"]:after,
+a[href^="https:"]:after {
+	background: none !important;
+	//url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20vi…83%2010.61%204.13%2012.92%206.44%22%20fill%3D%22%230096d7%22/%3E%3C/svg%3E) no-repeat center center;
+    content: '';
+    height: 0px;
+    width: 0px;
+    margin: 0 0 0 0;
+    display: inline-block;
+}
+
+
 @media @mobile {
 	._resolution {
 		background-color: #ff8c8c;

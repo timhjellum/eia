@@ -35,9 +35,9 @@
     <link rel="stylesheet" href="../temp/styles/global.css" media="screen">
     <!-- endbuild -->
 
-<!-- build:js ../assets/scripts/jquery.min.js -->
-<script src="../assets/scripts/modules/vendor/jquery/jquery.v3.3.1.min.js"></script>
-<!-- endbuild -->
+    <!-- build:js ../assets/scripts/jquery.min.js -->
+    <script src="../assets/scripts/modules/vendor/jquery/jquery.min.js"></script>
+    <!-- endbuild -->
     <!-- build:js ../assets/scripts/jquery-ui.min.js -->
     <script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
     <!-- endbuild -->
@@ -52,14 +52,15 @@
             <!-- start style guide -->
             <div class="_container">
                 <div class="_content">
-                    <div class="_content-inner">
-        				<div class="_content-inner">
+                    <!-- div class="_content-inner" -->
+
 			                <!-- start style guide -->
 			                <!-- start style guide -->
 			                <!-- start style guide -->
-                        <h1 class="_h1">Layout Rules</h1>
+                        
                         <ul class="style-guide">
                             <li class="style-guide">
+                                    <h1 class="_h1">Layouts</h1>
                         <h3 class="_h3">Introduction</h3>
                         <p class="_p">We leverage CSS to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor are called <a href="https://wwwdev.eia.gov/style-guide/modules/index.html">Modules</a> and include <a href="../modules/accordion.html">Accordions</a>,
                             <a href="../modules/fancybox.html">Modals</a>, and <a href="../modules/tabs.html">Tabs</a>; while the major <a href="./components/">Components</a> include the <a href="./components/header.html">header</a> and <a href="./components/footer.html">footer</a>.</p>
@@ -70,14 +71,14 @@
             to namespace your ID selectors, you can, but it is not as necessary to do so.</p>
             -->
 
-                        <h4 class="_h4">Naming Conventions</h4>
+                        <h2 class="_h2">Naming Conventions</h2>
                         <ul class="_ul">
                             <li>All style naming conventions use classes and not ID selectors.</li>
                             <li>All class names are lowercase and hyphenated.</li>
                             <li>Layout class names begin with a <code>l-</code>.</li>
                         </ul>
 
-                        <h5 class="_h5">Examples</h5>
+                        <h2 class="_h2">Examples</h2>
 
                         <div class="_example">
                             <p class="_p">Bad CSS structure might look something like this:</p>
@@ -95,7 +96,7 @@
 &lt;/div&gt;
 </code></pre>
                         </div>
-                        <h1 class="_h1">The Structure</h1>
+                        <h1 class="_h2">The Structure</h2>
                         <p class="_p">Layouts are brokendown into two parts, Rows and Columns.</p>
                         <p class="_p">All content should live within a row in order for it to responsively adapt to the <span class="_page _laptop">15px</span><span class="_page _tablet-landscape">16px</span><span class="_page _tablet">16px</span><span class="_page _mobile-landscape">12px</span>
                             <span class="_page _mobile">12px</span> page wrapper.</p>
@@ -109,7 +110,7 @@
                         
                     </li>
                     <li class="style-guide dally-row-one-one">
-                        <h1 class="_h1">Rows</h1>
+                        <h2 class="_h2">Rows</h2>
                         <h3 class="_h3">Row (Default)</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
@@ -164,7 +165,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                             
                             <!--pre><code class="html">&lt;!-- header row --&gt;
@@ -215,7 +218,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                             
                             
@@ -255,7 +260,7 @@ Code sample on the online style guide.
                         <!--    | | | | '_ \ / _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
                         <!--    | |_| | | | |  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
                         <!--     \___/|_| |_|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">1 Column</h3>
+                        <h3 class="_h3">One Column</h3>
                         <p>The fullpage row is similar to the
                             <code>class="l-row l-header</code> but can be applied to the entire section. An example might include a 'dashboard' page with multiple rows and columns.</p>
                         <ul class="dally">
@@ -303,7 +308,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                             
                             
@@ -325,7 +332,7 @@ Code sample on the online style guide.
                         <!--    |_   _\ \    / / _ \   / __/ _ \| | | | | |  \/  | \| / __|    -->
                         <!--      | |  \ \/\/ / (_) | | (_| (_) | |_| |_| | |\/| | .` \__ \    -->
                         <!--      |_|   \_/\_/ \___/   \___\___/|____\___/|_|  |_|_|\_|___/    -->
-                        <h3 class="_h3">2 Columns Narrow Left (25%/75%)</h3>
+                        <h3 class="_h3">Two Columns (25% 75%)</h3>
                         <p>25% / 75%</p>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
@@ -405,7 +412,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                             
                             
@@ -424,7 +433,7 @@ Code sample on the online style guide.
                     <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
                     <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
                     <li class="style-guide dally-two-two">
-                        <h3 class="_h3">2 Columns Narrow Right (75%/25%)</h3>
+                        <h3 class="_h3">Two Columns (75% 25%)</h3>
                         <p>75% / 25%</p>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
@@ -509,7 +518,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                             
 <!--pre><code class="html">&lt;!-- 75% / 25% --&gt; 
@@ -527,7 +538,7 @@ Code sample on the online style guide.
                     <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
                     <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
                     <li class="style-guide dally-two-thr">
-                        <h3 class="_h3">2 Columns (58.333% / 41.666%)</h3>
+                        <h3 class="_h3">Two Columns (58% 41%)</h3>
                         <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
                         <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
                         <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
@@ -616,11 +627,13 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
                     <li class="style-guide dally-two-thr">
-                        <h3 class="_h3">2 Columns (41.666% / 58.333%)</h3>
+                        <h3 class="_h3">Two Columns (41% 58%)</h3>
                         <p>41.666% / 58.333%</p>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
@@ -706,11 +719,13 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
                     <li class="style-guide dally-two-fiv">
-                        <h3 class="_h3">2 Columns (33.333% / 66.666%)</h3>
+                        <h3 class="_h3">Two Columns (33% 66%)</h3>
                         <p>33.333% / 66.666%</p>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
@@ -797,11 +812,13 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
                     <li class="style-guide dally-two-six">
-                        <h3 class="_h3">2 Columns (66.666% / 33.333%)</h3>
+                        <h3 class="_h3">Two Columns (66% 33%)</h3>
                         <p>66.666% / 33.333%</p>
 
                         <ul class="dally">
@@ -889,11 +906,13 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
                     <li class="style-guide dally-two-sev">
-                        <h3 class="_h3">2 Columns (50% / 50%)</h3>
+                        <h3 class="_h3">Two Columns (50% 50%)</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
                             <li class="_page _tablet-landscape">12px</li>
@@ -979,7 +998,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
 
@@ -1002,7 +1023,7 @@ Code sample on the online style guide.
                     <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
                     <!-- ***** ***** ***** *****             ***** ***** ***** ***** --
                     <li class="style-guide dally-two-eig">
-                        <h3 class="_h3">2 Columns (50% / 50%) App</h3>
+                        <h3 class="_h3">Two Columns (50% / 50%) App</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
                             <li class="_page _tablet-landscape">12px</li>
@@ -1084,7 +1105,9 @@ Code sample on the online style guide.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
     </div></textarea>
-    <a class="_copy" type="button">Copy to clipboard</a>
+    <div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
     </div>
     <!pre><code class="html">&lt;!-- 50% | 50% --&gt;       
 &lt;div class="l-row l-two-col-even"&gt;
@@ -1106,7 +1129,7 @@ Code sample on the online style guide.
                         <!--   | | | '_ \| '__/ _ \/ _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
                         <!--   | | | | | | | |  __/  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
                         <!--   |_| |_| |_|_|  \___|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">3 Columns (25% / 50% / 25%)</h3>
+                        <h3 class="_h3">Three Columns (25% 50% 25%)</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
                             <li class="_page _tablet-landscape">12px</li>
@@ -1205,11 +1228,13 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
                     <li class="style-guide dally-thr-two">
-                        <h3 class="_h3">3 Columns (33.333% / 33.333% / 33.333%)</h3>
+                        <h3 class="_h3">Three Columns Even (33%)</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
                             <li class="_page _tablet-landscape">12px</li>
@@ -1315,7 +1340,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
 <!--pre><code class="html">&lt;div class="l-row l-three-col-even"&gt;
 	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
@@ -1335,7 +1362,7 @@ Code sample on the online style guide.
                         <!-- | |_ / _ \| | | | '__| | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
                         <!-- |  _| (_) | |_| | |    | |__| (_) | | |_| | | | | | | | | \__ \ -->
                         <!-- |_|  \___/ \__,_|_|     \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">4 Columns (25% / 25% / 25% / 25%)</h3>
+                        <h3 class="_h3">Four Columns Even (25%)</h3>
                         <ul class="dally">
                             <li class="_page _laptop">15px</li>
                             <li class="_page _tablet-landscape">12px</li>
@@ -1467,7 +1494,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
 
@@ -1487,7 +1516,7 @@ Code sample on the online style guide.
 
                         <h2 class="_h2">Five Columns</h2>
 
-                        <h3 class="_h3">5 Columns (20% / 20% / 20% / 20% / 20% )</h3>
+                        <h3 class="_h3">Five Columns Even (20%)</h3>
                         <ul class="dally">
                             <li class="_start"></li>
                             <li class="_page _mobile">12px</li>
@@ -1653,7 +1682,9 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
                     </li>
 
@@ -1698,7 +1729,7 @@ Code sample on the online style guide.
                         <!--  ___) | | /  \  | |__| |_| | |__| |_| | |  | | |\  |___) |-->
                         <!-- |____/___/_/\_\  \____\___/|_____\___/|_|  |_|_| \_|____/ -->
                         <!--                                                           -->
-                        <h3 class="_h3">6 Columns (16.6% / 16.6% / 16.6% / 16.6% / 16.6% / 16.6% )</h3>
+                        <h3 class="_h3">Six Columns Even (16%)</h3>
                         <!-- p>6 / (992px - (1px + 15px + 22px + 15px + 1px)) - (44px x 5) = 119px</p -->
                         <ul class="dally">
                             <li class="_start"></li>
@@ -1888,12 +1919,14 @@ Code sample on the online style guide.
     </div>
 </div></textarea>
 <!-- Trigger -->
-<a class="_copy" type="button">Copy to clipboard</a>
+<div class="_button-container">
+<button type="button" class="_copy">Copy to clipboard</button>
+</div>
 </div>
 
                                 </li>
                             </ul>
-                        </div>
+
                     </div>
                 </div>
 			    <!-- end style guide -->

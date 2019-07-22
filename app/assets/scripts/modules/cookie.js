@@ -1,33 +1,21 @@
-/*!
-* jQuery Cookie Plugin v1.4.1
-* https://github.com/carhartl/jquery-cookie
-*
-* Copyright 2013 Klaus Hartl
-* Released under the MIT license
-*/
-
-class cookie {
+class CookieModule {
     constructor() {
-
-        (function (factory) {
+        (function(factory) {
             if (typeof define === 'function' && define.amd) {
-                // AMD
+
                 define(['jquery'], factory);
             } else if (typeof exports === 'object') {
-                // CommonJS
+
                 factory(require('jquery'));
             } else {
                 // Browser globals
                 factory(jQuery);
             }
-        }(function ($) {
-
+        }(function($) {
             var pluses = /\+/g;
-
             function encode(s) {
                 return config.raw ? s : encodeURIComponent(s);
             }
-
             function decode(s) {
                 return config.raw ? s : decodeURIComponent(s);
             }
@@ -90,36 +78,29 @@ class cookie {
                     var parts = cookies[i].split('=');
                     var name = decode(parts.shift());
                     var cookie = parts.join('=');
-
                     if (key && key === name) {
                         // If second argument (value) is a function it's a converter...
                         result = read(cookie, value);
                         break;
                     }
-
                     // Prevent storing a cookie that we couldn't decode.
                     if (!key && (cookie = read(cookie)) !== undefined) {
                         result[name] = cookie;
                     }
                 }
-
                 return result;
             };
-
             config.defaults = {};
-
             $.removeCookie = function (key, options) {
                 if ($.cookie(key) === undefined) {
                     return false;
                 }
-
-                // Must not alter options, thus extending a fresh object...
+// Must not alter options, thus extending a fresh object...
                 $.cookie(key, '', $.extend({}, options, { expires: -1 }));
                 return !$.cookie(key);
             };
-
         }));
 
     }
 }
-export default cookie;
+export default CookieModule;

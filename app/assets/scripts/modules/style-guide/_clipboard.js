@@ -1,12 +1,11 @@
 class clipBoard {
     constructor() {
         //console.log("cut-to-clipboard");
-        
+
         const copyButton = document.querySelectorAll('._copy');
-        
         for (let i = 0; i < copyButton.length; i++) {
             copyButton[i].addEventListener('click', () => {
-        
+            
                 const allAnchors = document.querySelectorAll('._copy');
                 const clickedAnchor = allAnchors[i]
                 

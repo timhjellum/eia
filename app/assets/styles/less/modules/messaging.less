@@ -37,7 +37,8 @@ div {
     &.error,
     &.alert,
     &.notice,
-    &.call-out {
+    &.call-out,
+    &.success {
         width: 100%;
         display: block;
         padding: 1.5em;
@@ -87,8 +88,8 @@ div {
 }
 // final
 span {
-    .alert {
-        color: red !important;
+    &.alert {
+        color: @eia-red;
     }
 }    
 div {
@@ -99,12 +100,38 @@ div {
             a {
                 color: @eia-dark-grey;
                 text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+// final 
+.success {
+    background-color: tint(@eia-green, 80%);
+    color: @eia-dark-grey;
+    p {
+        a {
+            color: @eia-green;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
 }
 
 
+// final
+span {
+    &.note {
+        //display: inline-block; try float
+        color: @eia-dark-grey;
+        font-weight: 300;
+        //margin: 0 0 0 8px;
+    }
+}   
 
 
 

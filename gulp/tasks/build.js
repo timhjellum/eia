@@ -81,29 +81,54 @@ function buildPrintStyle() {
 
 function buildScript() {
 	return gulp
-		.src('./app/assets/scripts/global.js')
-		.pipe(webpack({
-			mode: 'production',
-			module: {
-				rules: [{
-					test: /\.m?js$/,
-					exclude: /node_modules/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: ['@babel/preset-env']
-						}
+	.src('./app/assets/scripts/global.js')
+	.pipe(webpack({
+		mode: 'production',
+		module: {
+			rules: [{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
 					}
 				}
-				],
-			},
-			plugins: [
-				new uglify()
-			]
-	  	}))
-		.pipe(gulpRename('global.min.js'))
-		.pipe(gulp.dest(paths.scripts.dest))
-		.pipe(browserSync.stream());
+			}],
+		},
+		optimization: {
+			minimizer: [
+				  (compiler) => {
+					const TerserPlugin = require('terser-webpack-plugin');
+					new TerserPlugin({
+						terserOptions: {
+							ecma: undefined,
+							  warnings: "verbose",
+						parse: {
+							bare_returns: false
+						},
+						compress: {
+							warnings: "verbose",				//default: false -- display warnings when dropping unreachable code or unused declarations etc.
+						},
+						mangle: true, // Note `mangle.properties` is `false` by default.
+						module: false,
+						output: null,
+						toplevel: false,
+						nameCache: null,
+						ie8: false,
+						keep_classnames: undefined,
+						keep_fnames: false,
+						safari10: false,
+						},
+					}).apply(compiler);
+				}
+			],
+		}
+	}))
+	.on('error', console.log)
+	.pipe(gulpRename('global.min.js'))
+	.pipe(gulp.dest(paths.scripts.dest))
+	.pipe(browserSync.stream());
 }
 
 function buildStyleGuideScript() {
@@ -121,17 +146,99 @@ function buildStyleGuideScript() {
 							presets: ['@babel/preset-env']
 						}
 					}
-				}
-				],
+				}],
 			},
-			plugins: [
-				new uglify()
-			]
-	  	}))
+			optimization: {
+				minimizer: [
+					  (compiler) => {
+						const TerserPlugin = require('terser-webpack-plugin');
+						new TerserPlugin({
+							terserOptions: {
+								ecma: undefined,
+								  warnings: "verbose",
+							parse: {
+								bare_returns: false
+							},
+							compress: {
+								warnings: "verbose",				//default: false -- display warnings when dropping unreachable code or unused declarations etc.
+							},
+							mangle: true, // Note `mangle.properties` is `false` by default.
+							module: false,
+							output: null,
+							toplevel: false,
+							nameCache: null,
+							ie8: false,
+							keep_classnames: undefined,
+							keep_fnames: false,
+							safari10: false,
+							},
+						}).apply(compiler);
+					}
+				],
+			}
+		}))
+		.on('error', console.log)
 		.pipe(gulpRename('scripts.min.js'))
 		.pipe(gulp.dest(paths.scriptsStyleGuide.dest))
 		.pipe(browserSync.stream());
 }
+
+
+
+function buildHighlightSearchResults() {
+	return gulp
+	.src('./app/assets/scripts/highlight-search-results.js')
+	.pipe(webpack({
+		mode: 'production',
+		module: {
+			rules: [{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			}],
+		},
+		optimization: {
+			minimizer: [
+					(compiler) => {
+					const TerserPlugin = require('terser-webpack-plugin');
+					new TerserPlugin({
+						terserOptions: {
+							ecma: undefined,
+								warnings: "verbose",
+						parse: {
+							bare_returns: false
+						},
+						compress: {
+							warnings: "verbose",				//default: false -- display warnings when dropping unreachable code or unused declarations etc.
+						},
+						mangle: true, // Note `mangle.properties` is `false` by default.
+						module: false,
+						output: null,
+						toplevel: false,
+						nameCache: null,
+						ie8: false,
+						keep_classnames: undefined,
+						keep_fnames: false,
+						safari10: false,
+						},
+					}).apply(compiler);
+				}
+			],
+		}
+	}))
+	.on('error', console.log)
+	.pipe(gulpRename('highlight-search-results.min.js'))
+	.pipe(gulp.dest(paths.scriptsStyleGuide.dest))
+	//.pipe(browserSync.stream());
+}
+
+
+
 /*
 (callback) {
 	webpack(require('../../webpack.config.js'), function (err, stats) {
@@ -173,7 +280,8 @@ function copyGeneralFiles() {
 function usemin() {
 	return gulp
 	.src([
-        './app/index.html',
+				'./app/index.html',
+				'./app/sitemap.html',
         './app/base/*.html',
         './app/components/*.html',
         './app/examples/*.html',
@@ -194,4 +302,4 @@ function usemin() {
 	.pipe(gulp.dest('./dist'));
 }
 
-gulp.task('build', gulp.series(deleteDistFolder, usemin, copyGeneralFiles, buildScript, buildStyle, buildStyleGuide, buildPrintStyle, buildStyleGuideScript, previewDist));
+gulp.task('build', gulp.series(deleteDistFolder, usemin, copyGeneralFiles, buildScript, buildStyle, buildStyleGuide, buildPrintStyle, buildStyleGuideScript, buildHighlightSearchResults, previewDist));

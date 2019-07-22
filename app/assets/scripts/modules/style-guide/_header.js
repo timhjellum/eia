@@ -1,6 +1,5 @@
 class Header {
     constructor() {
-
         if (window.location.href.indexOf("http://localhost") > -1) {
             var newURL = window.location.protocol + "//" + window.location.host + "/"
         } else if (window.location.href.indexOf("http://localhost") < 1) {
@@ -46,12 +45,10 @@ class Header {
         '       </nav>' +
         '   </header>');
         $("._base").html('<li><a href="'+ newURL +'base/color-palette.html">Color Palette</a></li>' +
-        '<li><a href="'+ newURL +'base/forms.html">Forms</a></li>' +
+
         '<li><a href="'+ newURL +'base/icons.html">Icons</a></li>' +
-        '<li><a href="'+ newURL +'base/lists.html">Lists</a></li>' +
         '<li><a href="'+ newURL +'base/size-conversions.html">Size Conversions</a></li>' +
         '<li><a href="'+ newURL +'base/symbols.html">Symbols</a></li>' +
-        '<li><a href="'+ newURL +'base/tables.html">Tables</a></li>' +
         '<li><a href="'+ newURL +'base/typography.html">Typography</a></li>');
 
     $("._layouts").html('<li><a href="'+ newURL +'layouts/index.html">Layouts</a></li>' +
@@ -59,16 +56,14 @@ class Header {
 
     $("._modules").html('<li><a href="'+ newURL +'modules/accordion.html">Accordions</a></li>' +
         '<li><a href="'+ newURL +'modules/banners.html">Banners</a></li>' +
-        '<li><a href="'+ newURL +'modules/custom-modules.html">Custom Modules</a></li>' +
-        '<li><a href="'+ newURL +'modules/home-modules.html">Home Modules</a></li>' +
-    //    '<li><a href="'+ newURL +'modules/lists.html">Lists</a></li>' +
-    //    '<li><a href="'+ newURL +'modules/list-formatting.html">Lists Formatting</a></li>' +
-        '<li><a href="'+ newURL +'modules/fancybox.html">Modals (FancyBox)</a></li>' +
+        '<li><a href="'+ newURL +'modules/content-containers.html">Content Containers</a></li>' +
+        '<li><a href="'+ newURL +'modules/forms.html">Forms</a></li>' +
+        '<li><a href="'+ newURL +'modules/lists.html">Lists</a></li>' +
+        '<li><a href="'+ newURL +'modules/fancybox.html">Modals and Overlays</a></li>' +
         '<li><a href="'+ newURL +'modules/page-titles.html">Page Titles</a></li>' +
-        '<li><a href="'+ newURL +'modules/reusable-modules.html">Reusable Modules</a></li>' +
-        '<li><a href="'+ newURL +'modules/table-formatting.html">Tables</a></li>' +
-        '<li><a href="'+ newURL +'modules/tabs.html">Tabs</a></li>' +
-        '<li><a href="'+ newURL +'modules/side-content-containers.html>Side-Column Modules</a></li>');
+        '<li><a href="'+ newURL +'modules/report-headers.html">Report Headers</a></li>' +
+        '<li><a href="'+ newURL +'modules/tables.html">Tables</a></li>' +
+        '<li><a href="'+ newURL +'modules/tabs.html">Tabs</a></li>');
 
     $("._states").html('<li><a href="'+ newURL +'states/empty-list-items.html">Empty List Items</a></li>' +
         '<li><a href="'+ newURL +'states/sticky-table-headers.html">Sticky Table Headers</a></li>' +

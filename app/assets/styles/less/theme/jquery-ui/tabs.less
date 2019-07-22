@@ -109,3 +109,74 @@
 		}
     }
 }
+
+
+
+
+
+/*---------------------------------------------------*/
+/* FAUX jQuery UI Tabs not used on converted pages - yet/
+/*---------------------------------------------------*/
+#tab-container {
+	border-bottom: 4px solid #189BD7; 
+	padding-bottom:4px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+	}
+    a {
+        color:#555;
+        &:hover {
+            color:#000; 
+            text-decoration:none;
+        } 
+    }
+    .tab-unselected { /*not selected*/
+        display: inline;
+        font-weight:bold;
+        padding: .5em 1em;
+        border-top:1px solid #d3d3d3;
+        border-right:1px solid #d3d3d3;
+        border-left:1px solid #d3d3d3;
+        background:url('/global/images/sprites/bg-sprite.png') repeat-x;
+        background-position:0px 0px;
+        a {
+            color: #555;
+            text-decoration: none;
+            &:hover {
+                color:#000;
+                background:url('/global/images/sprites/bg-sprite.png') repeat-x;
+                background-position:0px -29px;
+            }
+        }
+        &:hover a {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    .tab-selected {display: inline;
+        background-color: #189BD7;
+        border-top:1px solid #189BD7;
+        border-right:1px solid #189BD7;
+        border-left:1px solid #189BD7;
+        color:#fff;
+        font-weight:bold;
+        padding: .5em 1em;
+        margin:-1px 0 ;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            cursor: default;
+        }
+        &:hover {
+            a {
+                color: #fff;
+                text-decoration: none;
+                cursor: default;
+            }
+        }
+    }
+}

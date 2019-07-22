@@ -29,9 +29,13 @@
 
 	.overlay {
 		position: fixed;
-		width: 100%;
-		height: 100%;
+		//width: 100%;
+		//height: 100%;
+		height: 100vh;
+		width: 100vw;
 		top: 0;
+		right: 0;
+		bottom: 0;
 		left: 0;
 		background: rgba(255, 255, 255, 1);
 		.overlay-selected-tags-wrapper {
@@ -141,6 +145,7 @@
 		-webkit-transition: opacity 0.5s;
 		transition: opacity 0.5s;
 		z-index: 5000;
+		overflow: hidden;
 		.l-first {
 			display: none;
 		}
@@ -201,7 +206,7 @@
 				}
 			}
 			button {
-				&.overlay-close {
+				&.close-overlay {
 					border: none;
 					width: 50px;
 					height: 50px;
@@ -210,7 +215,7 @@
 					float: right;
 					span {
 						&.ico {
-							&.close-menu {
+							&.close {
 								span {
 									display: none;
 								}
@@ -339,11 +344,11 @@
 	.tags_search {
 		margin: -1px 0 0 23px;
 		width: calc(100% - 24px); 
-		div {
-			padding: 5px 10px;
-			overflow: hidden;
-			text-transform: capitalize;
-		}
+		//div {
+		//	padding: 5px 10px;
+		//	overflow: hidden;
+		//	text-transform: capitalize;
+		//}
 	}
 	#tags {
 		[data-category] {
@@ -507,9 +512,34 @@
 		margin-left: -599px;
 		width: 100%;
 	}
-	.report-title-container {
-		display: none;
+	#filter-radio {
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		box-orient: vertical;
 	}
+	.g-a-z-label {
+		-webkit-box-ordinal-group: 2;
+		-moz-box-ordinal-group: 2;
+		box-ordinal-group: 2;
+		//background-color:  red;
+	}
+	.g-filter-all {
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		box-ordinal-group: 1;
+		//background-color:  green;
+	}
+	.g-filter-by {
+		-webkit-box-ordinal-group: 3;
+		-moz-box-ordinal-group: 3;
+		box-ordinal-group: 3;
+		//background-color:  blue;
+	}
+
 	.reports-panel {
 		position: fixed;
 		transition-property: all;
@@ -554,20 +584,6 @@
 		display: none;
 	}
 }
-#tags-container {
-	//border: 3px solid fuchsia !important;
-	#tags-holder {
-		//border: 3px solid black;
-		#tag_categories {
-			//border: 3px solid blue;
-		}
-		.inner-tags-container {
-			//border: 3px solid red;
-			#tags {
-				//border: 3px solid yellow;
-			}
-		}
-	}
-}
+
 
 
