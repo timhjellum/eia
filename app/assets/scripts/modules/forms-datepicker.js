@@ -8,7 +8,6 @@ class DatePicker {
 
         today = yyyy + '-' + mm + '-' + dd;
         //document.write(today);
-
         var dateControl = document.querySelector('input[type="date"]');
         dateControl.value = today;
 

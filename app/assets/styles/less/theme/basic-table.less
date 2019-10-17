@@ -25,109 +25,228 @@ div {
         overflow-y: hidden;
         overflow-x: auto;
         margin-bottom: 2em; // margin-bottom: 3em;
-        width: 100%;
+		width: 100%;
+		table {
+			&:nth-child(2) {
+				margin-top: 2em;
+			}
+			&:nth-child(3) {
+				margin-top: 2em;
+			}
+			&:nth-child(4) {
+				margin-top: 2em;
+			}
+			&:nth-child(5) {
+				margin-top: 2em;
+			}
+			&:nth-child(6) {
+				margin-top: 2em;
+			}
+			&:nth-child(7) {
+				margin-top: 2em;
+			}
+		}
     }
-    table {
-        &.basic_table,
-        &.basic-table {
-            border-bottom: 2px solid @eia-blue;
-            margin: 0;
-            overflow-y: hidden;
-            overflow-x: auto;
-            width: auto;
-            &:last-of-type {
-                border-bottom: none;
+}
+table {
+    &.basic_table,
+    &.basic-table {
+        border-bottom: 2px solid @eia-blue;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: auto;
+        //width: auto;
+        &:last-of-type {
+            border-bottom: none;
+        }
+        caption {
+            font-size: .9375rem;
+            span {
+                &.units {
+                    float: none;
+                    display: inline;
+                    font-weight: normal;
+                    .italic;
+                    font-size: 0.813rem;
+                }
             }
-            caption {
-                font-size: .9375rem;
-                span {
-                    &.units {
-                        float: none;
-                        display: inline;
-                        font-weight: normal;
-                        .italic;
-                        font-size: 0.813rem;
+        }
+        thead {
+//                tr {
+                th {
+                    //.align-right;
+                    
+                    //&:first-child {
+                    //    .align-left;
+                    //}
+                    /* cannot add the border here
+                    &:last-child {
+                        th {
+                        border-bottom: 3px solid @eia-blue;
+                        }
+                    }
+                    */
+                    em {
+                        .bold;
+                    }
+                    ////////////////////////////////////////////////////////////////
+                    //  petroleum new_navigation icons                                              //
+                    ////////////////////////////////////////////////////////////////
+                    button {
+                        &.ico {
+                            float: left;
+                            padding: 1px 5px 1px 0;
+                            border: none;
+                            margin-left: 0;
+                            font-size: 0;
+                            line-height: 0;
+                            background-color: transparent;
+                            &.reset-animation {
+                                &:before {
+                                    //.controls-icon(20px, 20px);
+                                    .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 0.8);
+                                }
+                                &:hover {
+                                    &:before {
+                                        .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 1);
+                                    }
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        &.ico {
+                            float: left;
+                            padding: 1px 0 1px 5px;
+                            border: none;
+                            margin-left: 0;
+                            font-size: 0;
+                            line-height: 0;
+                            background-color: transparent;
+                            &.line-chart {
+                                &:before {
+                                    .controls-icon(20px, 20px);
+                                    .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 0.8);
+                                }
+                                &:hover {
+                                    &:before {
+                                        .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            //}
+        }
+        td {
+            padding: 6px 10px 5px 10px;
+            .align-right;
+            border-bottom: 1px dashed #d8d8d8;
+            white-space: normal;
+            &:first-child {
+                .align-left;
+			}
+			&.divider {
+				border-color: @eia-white;
+				padding: 0;
+				width: 6px;
+			}
+            &:active {
+                outline: none;
+            }
+            &.custom-checkbox {
+                padding: 4px 0 0 4px;
+            }
+            span {
+                &.number {
+                    float: left;
+                    width: 20px;
+                    text-align: right;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+            }
+            // move this to modules > icons
+            a {
+                .ico {
+                    margin-left: 0;
+                    font-size: 0;
+                    line-height: 0;
+                    span {
+                        //.normal;
+                        margin-left: 4px;
+                        font-size: 0.750rem; // 12 pixels
+                    }
+                    &.key {
+                        margin: 0;
+                        width: 20px;
+                        height: 20px;
+                        span {// this hides the textual labels of the icons on tables.
+                            position: absolute;
+                            left: -10000px;
+                            top: auto;
+                            width: 1px;
+                            height: 1px;
+                            overflow: hidden;
+                        }
+                        &:before {
+                            .controls-icon(20px, 15px);
+                            .icon-key(@fill-color: @eia-blue, @fill-opacity: 0.8);
+                        }
+                        &:hover {
+                            &:before {
+                                .icon-key(@fill-color: @eia-blue, @fill-opacity: 1);
+                            }
+                        }
                     }
                 }
             }
-            thead {
+        }
+        tbody {
+            tr {
+                td {
+//vertical-align: top;
+//padding: 6px 10px 5px 10px;
+                    border-bottom: 1px dashed #d8d8d8;
+                }
+                &.past-holiday {
+                    td {
+                        border-bottom: 1px solid #d8d8d8;;
+                        color: fade(@eia-black, 40%);
+                        border-bottom: 1px solid #ccc;
+                        color: #999;
+
+                    }
+                }
+                &:first-child {
+                    td {
+                        border-top: 3px solid @eia-blue;
+                    }
+                }
+            }
+//}
+            &:last-child {
                 tr {
-                    th {
-                        .align-right;
-                        padding: 6px 10px 5px 10px;
-                        background-color: white; // required for sticky table header
-                        vertical-align: bottom;
-                        &:first-child {
-                            .align-left;
-                        }
-                        /* cannot add the border here
-                        &:last-child {
-                            th {
-                            border-bottom: 3px solid @eia-blue;
-                            }
-                        }
-                        */
-                        em {
-                            .bold;
-                        }
-                        ////////////////////////////////////////////////////////////////
-                        //  petroleum new_navigation icons                                              //
-                        ////////////////////////////////////////////////////////////////
-                        button {
-                            &.ico {
-                                float: left;
-                                padding: 1px 5px 1px 0;
-                                border: none;
-                                margin-left: 0;
-                                font-size: 0;
-                                line-height: 0;
-                                background-color: transparent;
-                                &.reset-animation {
-                                    &:before {
-                                        //.controls-icon(20px, 20px);
-                                        .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 0.8);
-                                    }
-                                    &:hover {
-                                        &:before {
-                                            .icon-reset-animation(@fill-color: @eia-red, @fill-opacity: 1);
-                                        }
-                                    }
-                                    span {
-                                        display: none;
-                                    }
-                                }
-                            }
-                        }
-                        a {
-                            &.ico {
-                                float: left;
-                                padding: 1px 0 1px 5px;
-                                border: none;
-                                margin-left: 0;
-                                font-size: 0;
-                                line-height: 0;
-                                background-color: transparent;
-                                &.line-chart {
-                                    &:before {
-                                        .controls-icon(20px, 20px);
-                                        .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 0.8);
-                                    }
-                                    &:hover {
-                                        &:before {
-                                            .icon-line-chart(@fill-color: @eia-blue, @fill-opacity: 1);
-                                        }
-                                    }
-                                }
-                            }
+                    &:last-child {
+                        td {
+                            border-bottom: none;
                         }
                     }
                 }
             }
-            tbody {
+            //&:nth-of-type(2),
+            //&:nth-of-type(3),
+            //&:nth-of-type(4),
+            //&:nth-of-type(5) {
+                /*
                 tr {
                     &:first-child {
                         td {
-                            border-top: 3px solid @eia-blue;
+                            border-top: 3px solid @eia-red;
                         }
                     }
                     &:last-child {
@@ -135,94 +254,32 @@ div {
                             border-bottom: none;
                         }
                     }
-                    td {
-                        padding: 6px 10px 5px 10px;
-                        .align-right;
-                        border-bottom: 1px dashed #d8d8d8;
-                        white-space: normal;
-                        &:first-child {
-                            .align-left;
-                        }
-                        &:active {
-                            outline: none;
-                        }
-                        &.custom-checkbox {
-                            padding: 4px 0 0 4px;
-                        }
-                        span {
-                            &.number {
-                                float: left;
-                                width: 20px;
-                                text-align: right;
-                                font-weight: bold;
-                                margin-right: 10px;
-                            }
-                        }
-                        a {
-                            .ico {
-                                margin-left: 0;
-                                font-size: 0;
-                                line-height: 0;
-                                span {
-                                    .normal;
-                                    margin-left: 4px;
-                                    font-size: 0.750rem; // 12 pixels
-                                    // this hides the textual labels of the icons on tables. Must get approved by Miroslava
-                                    //position: absolute;
-                                    //left: -10000px;
-                                    //top: auto;
-                                    //width: 1px;
-                                    //height: 1px;
-                                    //overflow: hidden;
-                                }
-                                &.key {
-                                    margin: 0;
-                                    width: 20px;
-                                    height: 20px;
-                                    span {// this hides the textual labels of the icons on tables.
-                                        position: absolute;
-                                        left: -10000px;
-                                        top: auto;
-                                        width: 1px;
-                                        height: 1px;
-                                        overflow: hidden;
-                                    }
-                                    &:before {
-                                        .controls-icon(20px, 15px);
-                                        .icon-key(@fill-color: @eia-blue, @fill-opacity: 0.8);
-                                    }
-                                    &:hover {
-                                        &:before {
-                                            .icon-key(@fill-color: @eia-blue, @fill-opacity: 1);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
-            }
-            tfoot {
-                tr {
-                    td {
-                        padding: 12px 10px 10px 10px;
-                        font-size: 0.688rem;
-                        text-align: right;
-                        a {
-                            font-size: 0.688rem; 
-                        }
-                        &:first-child {
-                            text-align: left;
-                        }
+                */
+            //}
+        }
+        tfoot {
+            tr {
+                td {
+                    padding: 12px 10px 10px 10px;
+                    font-size: 0.688rem;
+                    text-align: right;
+                    //background-color: white;
+                    a {
+                        font-size: 0.688rem; 
                     }
                     &:first-child {
-                        td {
-                            border-top: 2px solid @eia-blue;
-                            //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
-                        }
+                        text-align: left;
                     }
-                } 
-            }
+                }
+                &:first-child {
+                    td {
+                        border-top: 2px solid @eia-blue;
+                        //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+                    }
+                }
+            } 
         }
     }
 }
+//}

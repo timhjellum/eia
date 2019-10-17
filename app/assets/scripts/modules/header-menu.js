@@ -54,6 +54,7 @@ class HeaderMenu {
 		var viewPortHeight = window.innerHeight;
 		var fancyBoxWidth = 980;
 		var self = this;
+
 		$('.fancybox-menu').fancybox({
 			scrolling: 'visible',
 			type: 'inline',

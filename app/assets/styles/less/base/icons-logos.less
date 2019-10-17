@@ -44,7 +44,7 @@ display: block;
 /*--- mix-in that combines the page icon with the appropriate file type image and text ---*/
 .icon-file-type(@file-type, @base-fill-color: tint(@eia-black, 46.5%), @corner-fill-color: tint(tint(@eia-black, 46.5%), @icon-image-tint)) {
 	.file-ext(@file-type);
-	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.65 66.17">@{icon-file-type}<path d="M42.8,4.83H12.08V61H56.8V18.83ZM54,58.23H14.86V7.61H42.8V18.83H54v39.4Z" fill="@{base-fill-color}"/><rect x="4.16" y="12.34" width="33.28" height="14.5" fill="@{file-type-fill}"/><text transform="translate(11.08 23.24)" font-size="10" fill="#ffffff" font-family="Arial" font-weight="700" style="text-transform: uppercase">@{file-type}</text><polygon points="56.8 18.83 42.8 4.83 42.8 18.83 56.8 18.83" fill="@{corner-fill-color}"/></svg>';
+	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.65 66.17">@{icon-file-type}<polygon points="43.2 5.4 12.5 5.4 12.5 61.6 57.2 61.6 57.2 19.4 43.2 5.4" fill="@{base-fill-color}"/><polygon points="54.4 58.8 15.2 58.8 15.2 8.2 43.2 8.2 43.2 19.4 54.4 19.4 54.4 58.8" fill="#fff"/><rect x="4.16" y="12.34" width="33.28" height="14.5" fill="@{file-type-fill}"/><text transform="translate(11.08 23.24)" font-size="10" fill="#ffffff" font-family="Arial" font-weight="700" style="text-transform: uppercase">@{file-type}</text><polygon points="56.8 18.83 42.8 4.83 42.8 18.83 56.8 18.83" fill="@{corner-fill-color}"/></svg>';
 	.inline-svg-code(@icon-filter-svg);
 	background: @-inline-svg-url @-bg-defaults;
 }

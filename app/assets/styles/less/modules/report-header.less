@@ -1,4 +1,50 @@
 @media @mobile {
+
+
+    .release-dates {
+        font-size: 0.750rem; // 12 pixels
+        line-height: 1.4;
+        color: #7d7d7d;
+        &:last-child {
+            margin-bottom: 1em;
+        }
+        .bold;
+        a {
+            .normal;
+        }
+        .ico {
+            margin: -3px 0 0 6px;
+            span {
+                display: none;;
+            }
+        }
+        .responsive-container {
+            margin:0;
+            display: inline-block;
+            .date {
+                display: inline-block;
+                .normal;
+            }
+            .label {
+                display: inline-block;
+            }
+            &:after {
+                content: '\00a0\00a0|\00a0\00a0 ';
+            }
+            &:last-child {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
     .l-row {
         // 70% | 30%
         &.l-report-header {
@@ -23,54 +69,14 @@
                     vertical-align: text-top;
                 }
             }
-            .release-dates {
-                .font;
-                color: @eia-dark-grey;
-                font-size: 0.750rem; // 12 pixels
-                line-height: 1.4;
-                color: #7d7d7d;
-                //border-top: 1em solid blue;
-                //border-bottom: 1em solid blue;
-                margin-top: 1em;
-                margin-bottom: 1em;
-                .bold;
-                a {
-                    .normal;
-                }
-                .ico {
-                    margin: -3px 0 0 6px;
-                    span {
-                        display: none;;
-                    }
-                }
-                .responsive-container {
-                    margin:0;
-                    display: inline-block;
-                    .date {
-                        display: inline-block;
-                        .normal;
-                    }
-                    .label {
-                        display: inline-block;
-                    }
-                    &:after {
-                        content: '\00a0\00a0|\00a0\00a0 ';
-                    }
-                    &:last-child {
-                        &:after {
-                            content: '';
-                        }
-                    }
-                }
-            }
+
             h1 {
                 .header-font;
                 line-height: 1;
                 font-size: 1.625rem;
-                //margin: 0 0 .4em 0;
-                //padding: 0 0 6px 0;
+                margin: 0 0 2px 0;
                 padding: 0 0 0 0;
-                margin: 0 0 0 0;
+                //margin: 0 0 1em 0;
             }
             .publish-metadata {
                 .font;
@@ -98,6 +104,12 @@
                 .form-container,
                 .release-dates {
                     display: none;
+                }
+                &>.l-col {
+                    width: 68%;
+                    &:after {
+                        content: none;
+                    }
                 }
                 .go-back {
                     display: block;
@@ -139,7 +151,10 @@
         // 70% | 30%
         &.l-report-header {
             &>.l-col {
-                width: 68%;
+                width: 28%; 
+                &:first-of-type {
+                    width: 68%;
+                }
                 &:after {
                     content: '';
                     height: calc(100% - 10px);
@@ -150,7 +165,6 @@
                     right: -3%;
                 }
                 &:last-child { 
-                   width: 28%; 
                     &:after {
                         display: none;
                     }
@@ -158,6 +172,20 @@
             }
             .form-container {
                 margin: 18px 0 0 0;
+            }
+        }
+    }
+    .l-full-page {
+        .l-row {
+            &.l-report-header {
+                &>.l-col {
+                    &:after {
+                        border-right: none;
+                        bottom: 0;
+                        margin: 0;
+                        right: 0;
+                    }
+                }
             }
         }
     }

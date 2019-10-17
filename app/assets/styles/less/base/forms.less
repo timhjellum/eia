@@ -131,15 +131,27 @@ select {
 	outline-width: 0;
 	//display: block;
 }
+.primary,
+.primary-alt {
+	.form-container {
+		input[type="text"],
+		input[type="email"],
+		input[type="number"] {
+			width: 220px; 
+			padding: 5px 8px;
+		}
+		textarea {
+			padding: 8px;
+			width: 300px;
+		}
+	}
+}
 
 .form-container {
-	//ol,
 	ul {
-		//margin: 22px 0 22px 22px;
 		margin: 0 0 1em 0;
 		font-size: 0.875rem; // 14 pixels
         padding: 0;
-        //margin: 0; // overide base
         list-style: none;
 	}
 	label {
@@ -149,17 +161,7 @@ select {
 		//float:left;
 		padding: 3px;
 	}
-	input[type="text"],
-	input[type="email"],
-	input[type="number"] {
-		//height: 20px; 
-		width: 220px; 
-		padding: 5px 8px;
-	}
-	textarea {
-		padding: 8px;
-		width: 300px;
-	}
+
 
 	
 	/*
@@ -191,6 +193,10 @@ select {
 		font-size: 0.750rem; // 12 pixels
 	}
 
+
+	textarea {
+		padding: 8px;
+	}
 	input[type="text"],
 	input[type="email"],
 	input[type="number"],
@@ -198,6 +204,7 @@ select {
 		border: 1px solid #ccc; // #aaa;
 		//box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
 		border-radius: 1px;
+		padding: 5px 8px;
 		&:required {
 /*
 &:after {
@@ -336,13 +343,13 @@ fieldset {
 	display: table;
 	float: left;
 	border: 1px solid @eia-blue;
-	background-color: #fff;
+	//background-color: #fff;
 	// 1. Correct the text wrapping in Edge and IE.
 	// 2. Correct the color inheritance from `fieldset` elements in IE.
 	// 3. Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
 	legend {
-		.font;
-		//box-sizing: border-box; /* 1 */
+		//.font;
+		box-sizing: border-box; /* 1 */
 		//color: inherit; /* 2 */
 		display: table; /* 1 */
 		max-width: 100%; /* 1 */
@@ -353,8 +360,8 @@ fieldset {
 		line-height: 1em;
 		margin: 0 0 0 4px;
 		padding: 0 4px;
-		text-transform: uppercase;
-		font-weight: bold;
+		//text-transform: uppercase;
+		.bold;
 
 		//position: relative;
 		//background-color: #fff;
@@ -741,8 +748,43 @@ width: 100%; // must be 100%
         }
 	}
 }
-@media @mobile {
 
+
+
+
+
+
+
+.secondary-alt {
+	.form-container {
+		margin-bottom: .5em;
+		display: table;
+		width: 100%;
+		input[type="text"],
+		input[type="email"],
+		input[type="number"] {
+			width: 100%; 
+			padding: 5px 8px;
+		}
+		textarea {
+			padding: 8px;
+			width: 100%; 
+		}
+	}
+}
+
+
+
+
+@media @mobile {
+	.l-two-col-right-narrow {
+		.secondary,
+		.secondary-alt {
+			.dropdown-menu {
+				width: calc(100% - 12px);
+			}
+		}
+	}
 }
 @media @mobile-landscape { 
 
@@ -751,7 +793,15 @@ width: 100%; // must be 100%
 
 }
 @media @tablet-landscape {
-
+	.l-two-col-right-narrow {
+		.secondary,
+		.secondary-alt {
+			.dropdown-menu,
+			fieldset {
+				width: 203px;
+			}
+		}
+	}
 }
 @media @laptop {
 

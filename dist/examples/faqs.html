@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content=""><meta name="author" content=""><title>EIA Style Guide</title><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#292929"><link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet"><link rel="stylesheet" href="../assets/styles/styles-c1e86cd367.min.css"><link rel="stylesheet" href="../assets/styles/global-eaf517ff7f.min.css" media="screen"><script src="../assets/scripts/jquery-08b2631e87.min.js"></script><script src="../assets/scripts/jquery-ui-94d2435f33.min.js"></script></head><body><div class="l-body-wrapper l-full-page"><span class="add-header"></span><div class="l-outer-wrapper"><div class="l-inner-wrapper"><!-- start style guide wrapper --><!-- start style guide wrapper --><!-- start style guide wrapper --><div class="_container"><div class="_content"><div class="_content-inner"><!-- end style guide wrapper --><!-- end style guide wrapper --><!-- end style guide wrapper --><h1 class="_h1">Forms</h1><ul class="style-guide"><li class="style-guide"><h3 class="_h3">head</h3><!-- start --><!-- start --><!-- start --><h5 class="_h5">PHP/HTML</h5><p>Please note the <code>$locale = 'faqs';</code></p><div class="_example"><pre><code class="html">&lt;!doctype html&gt;
+&lt;?php
+$pageTitle = "U.S. Energy Information Administration (EIA)";
+$L2T = 'FAQs for Survey Form EIA-782A';
+$sectionname = 'survey';
+$locale = 'faqs';
+?&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;?php include('global/head/includes/head.inc') ?&gt;
+        &lt;title&gt;&lt;?=$L2T?&gt; - &lt;?=$pageTitle?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;?php include('global/header/includes/header.inc'); ?&gt;
+        &lt;div class="l-row l-full-width-col"&gt;
+            &lt;div class="l-col"&gt;
+                &lt;div class="article"&gt;
+                &lt;h1&gt;&lt;?=$L2T?&gt;&lt;/h1&gt;
+</code>
+</pre></div></li><li class="style-guide article"><h3 class="_h3">FAQ's Table of Contents (optional)</h3><h2>Section One</h2><ul><li><a href="#q1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a></li><li><a href="#q2">Morbi feugiat, nunc vel viverra scelerisque, risus turpis faucibus nunc, eget bibendum ligula augue non diam?</a></li></ul><h2>Section Two</h2><ul><li><a href="#q3">Sed condimentum suscipit egestas, praesent ullamcorper tempor enim, vel vehicula nisl congue eget.?</a></li><li><a href="#q4">Vivamus bibendum iaculis arcu vitae rhoncus. Mauris lacus leo, fermentum nec sapien a, tristique tempus ante?</a></li></ul><!-- start --><!-- start --><!-- start --><h5 class="_h5">PHP/HTML</h5><div class="_example"><pre><code class="html">&lt;h2&gt;Section One&lt;/h2&gt;   
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#q1"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#q2"&gt;Morbi feugiat, nunc vel viverra scelerisque, risus turpis faucibus nunc, eget bibendum ligula augue non diam?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Section Two&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#q3"&gt;Sed condimentum suscipit egestas, praesent ullamcorper tempor enim, vel vehicula nisl congue eget.?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#q4"&gt;Vivamus bibendum iaculis arcu vitae rhoncus. Mauris lacus leo, fermentum nec sapien a, tristique tempus ante?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre></div></li><li class="style-guide article"><h3 class="_h3">FAQ's Body</h3><!-- start --><!-- start --><!-- start --><h2>Section One</h2><!-- start faq item --> <a id="general"></a> <a name="q1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a><p>Vestibulum rutrum lorem vel tincidunt dictum. Vestibulum vitae tellus in diam malesuada mattis id non urna. Nunc enim odio, condimentum quis maximus eu, mollis non magna. Sed eleifend magna dignissim tincidunt varius. Pellentesque tincidunt libero in ante suscipit pulvinar.</p><!-- end faq item --><!-- start faq item --> <a name="q2"></a><h3>Morbi feugiat, nunc vel viverra scelerisque, risus turpis faucibus nunc, eget bibendum ligula augue non diam?</h3><p>Phasellus rutrum malesuada risus. Nulla placerat rutrum justo, nec consectetur justo porta condimentum. Vestibulum neque lacus, vulputate at libero eget, aliquet blandit eros.</p><!-- end faq item --><h2>Section Two</h2><!-- start faq item --> <a name="q3"></a><h3>Sed condimentum suscipit egestas. Praesent ullamcorper tempor enim, vel vehicula nisl congue eget?</h3><p>Phasellus tristique rhoncus justo interdum maximus. Maecenas iaculis enim elit, vitae vehicula ligula tempor ultrices. Sed vel commodo libero. Maecenas tempor mauris lorem, in facilisis justo pretium nec. Donec malesuada id tellus id convallis.</p><ul><li>Sed suscipit enim sed urna venenatis, ut volutpat mi lacinia.</li><li>Sed a nunc at arcu dignissim tristique.</li><li>Nullam in libero non ex convallis laoreet sed sit amet nunc.</li><li>Donec viverra sapien a mattis pharetra.</li><li>Sed in elit vulputate, pellentesque dolor et, dignissim dui.</li></ul><!-- end faq item --><!-- start faq item --> <a name="q4"></a><h3>Vivamus bibendum iaculis arcu vitae rhoncus. Mauris lacus leo, fermentum nec sapien a, tristique tempus ante?</h3><p>Price and volume data are published in the <a href="/petroleum/marketing/monthly/">Petroleum Marketing Monthly</a> (PMM) on the first business day of the third month following the reference period. Tables 2, 4, 6, 8, 10, and 16 contain refiner prices at the U.S. level. Tables 3, 5, 7, 9, 11, and 17 contain refiner volumes at the U.S. level. Tables 31 through 33 contain refiner prices at the U.S., PADD, and state levels. Tables 39 through 41 contain refiner volumes at the U.S., PADD, and state levels.</p><p>These data are used to analyze and report on petroleum product supply, demand, and price changes and in models to forecast petroleum product prices and sales by state and end-use category.</p><!-- end faq item --><h5 class="_h5">PHP/HTML</h5><div class="_example"><pre><code class="html">&lt;h2&gt;Section One&lt;/h2&gt;
+
+&lt;!-- start faq item --&gt;
+&lt;a id="general"&gt;&lt;/a&gt;
+&lt;a name="q1"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit?&lt;/a&gt;
+&lt;p&gt;Vestibulum rutrum lorem vel tincidunt dictum. Vestibulum vitae tellus in diam malesuada mattis id non urna. Nunc enim odio, condimentum quis maximus eu, mollis non magna. Sed eleifend magna dignissim tincidunt varius. Pellentesque tincidunt libero in ante suscipit pulvinar.&lt;/p&gt;
+&lt;!-- end faq item --&gt;
+
+&lt;!-- start faq item --&gt;
+&lt;a name="q2"&gt;&lt;/a&gt;
+&lt;h3&gt;Morbi feugiat, nunc vel viverra scelerisque, risus turpis faucibus nunc, eget bibendum ligula augue non diam?&lt;/h3&gt;
+&lt;p&gt;Phasellus rutrum malesuada risus. Nulla placerat rutrum justo, nec consectetur justo porta condimentum. Vestibulum neque lacus, vulputate at libero eget, aliquet blandit eros.&lt;/p&gt;
+&lt;!-- end faq item --&gt;
+
+&lt;h2&gt;Section Two&lt;/h2&gt;
+
+&lt;!-- start faq item --&gt;
+&lt;a name="q3"&gt;&lt;/a&gt;
+&lt;h3&gt;Sed condimentum suscipit egestas. Praesent ullamcorper tempor enim, vel vehicula nisl congue eget?&lt;/h3&gt;
+&lt;p&gt;Phasellus tristique rhoncus justo interdum maximus. Maecenas iaculis enim elit, vitae vehicula ligula tempor ultrices. Sed vel commodo libero. Maecenas tempor mauris lorem, in facilisis justo pretium nec. Donec malesuada id tellus id convallis.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Sed suscipit enim sed urna venenatis, ut volutpat mi lacinia.&lt;/li&gt;
+    &lt;li&gt;Sed a nunc at arcu dignissim tristique.&lt;/li&gt;
+    &lt;li&gt;Nullam in libero non ex convallis laoreet sed sit amet nunc.&lt;/li&gt;
+    &lt;li&gt;Donec viverra sapien a mattis pharetra.&lt;/li&gt;
+    &lt;li&gt;Sed in elit vulputate, pellentesque dolor et, dignissim dui.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- end faq item --&gt;
+        
+&lt;!-- start faq item --&gt;
+&lt;a name="q4"&gt;&lt;/a&gt;
+&lt;h3&gt;Vivamus bibendum iaculis arcu vitae rhoncus. Mauris lacus leo, fermentum nec sapien a, tristique tempus ante?&lt;/h3&gt;
+&lt;p&gt;Price and volume data are published in the &lt;a href="/petroleum/marketing/monthly/"&gt;Petroleum Marketing Monthly&lt;/a&gt; (PMM) on the first business day of the third month following the reference period. Tables 2, 4, 6, 8, 10, and 16 contain refiner prices at the U.S. level. Tables 3, 5, 7, 9, 11, and 17 contain refiner volumes at the U.S. level. Tables 31 through 33 contain refiner prices at the U.S., PADD, and state levels. Tables 39 through 41 contain refiner volumes at the U.S., PADD, and state levels.&lt;/p&gt;
+&lt;p&gt;These data are used to analyze and report on petroleum product supply, demand, and price changes and in models to forecast petroleum product prices and sales by state and end-use category.&lt;/p&gt;
+&lt;!-- end faq item --&gt; 
+<pre><code class="html"></code>
+        </pre>
+        </code></pre></div></li><li class="style-guide"><h3 class="_h3">FAQ's Foot</h3><!-- start --><!-- start --><!-- start --><h5 class="_h5">PHP/HTML</h5><div class="_example"><pre><code class="html">                &lt;/div&gt;
+                &lt;a href="#top" class="top"&gt;Top&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="l-col"&gt;
+                &lt;?php include('./includes/faq-side.inc'); ?&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;?php include('global/footer/includes/footer.inc') ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+</pre></div></li></ul><!-- start style guide wrapper --><!-- start style guide wrapper --><!-- start style guide wrapper --></div></div></div><!-- end style guide wrapper --><!-- end style guide wrapper --><!-- end style guide wrapper --></div></div></div><span class="add-footer"></span></body><script src="../assets/scripts/script-258fdb71f1.min.js"></script><script src="../assets/scripts/global-cdbb65ab77.min.js"></script></html>

@@ -1,7 +1,28 @@
 
 
+
+
+
+
+
+
 @media @mobile {
 	.homepage {
+		span {
+			&.ico_down,
+			&.ico_up {
+				&:before {
+					content: ' ';
+					height: 14px;
+					width: 12px;
+					display: inline-block;
+					position: relative;
+					margin-right: 3px;
+					top: 4px;
+					float: none;
+				}
+			}
+		}
         .secondary {
 			&.features {
 				border-top: solid 4px #003c57;

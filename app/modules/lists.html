@@ -2,893 +2,1804 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>EIA Style Guide</title>
-<!-- build:ico ../assets/images/favicon.ico -->
-    <link rel="icon" href="../src/images/favicon.ico">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/apple-touch-icon.png -->
-    <link href="../src/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/favicon-32x32.png -->
-    <link href="../src/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/favicon-16x16.png -->
-    <link href="../src/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <!-- endbuild -->
-    <!-- build:webmanifest ../assets/images/site.webmanifest -->
-    <link href="../src/images/site.webmanifest" rel="manifest">
-    <!-- endbuild -->
-    <!-- build:svg ../assets/images/safari-pinned-tab.svg -->
-    <link href="../src/images/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
-    <!-- endbuild -->
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#292929">
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-    <!-- build:css ../assets/styles/styles.min.css -->
-    <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- endbuild -->
-    <!-- build:css ../assets/styles/global.min.css -->
-    <link rel="stylesheet" href="../temp/styles/global.css" media="screen">
-    <!-- endbuild -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>EIA Style Guide</title>
+	<!-- build:ico ../assets/images/favicon.ico -->
+	<link rel="icon" href="../src/images/favicon.ico">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/apple-touch-icon.png -->
+	<link href="../src/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/favicon-32x32.png -->
+	<link href="../src/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/favicon-16x16.png -->
+	<link href="../src/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+	<!-- endbuild -->
+	<!-- build:webmanifest ../assets/images/site.webmanifest -->
+	<link href="../src/images/site.webmanifest" rel="manifest">
+	<!-- endbuild -->
+	<!-- build:svg ../assets/images/safari-pinned-tab.svg -->
+	<link href="../src/images/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+	<!-- endbuild -->
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#292929">
+	<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+	<!-- build:css ../assets/styles/styles.min.css -->
+	<link rel="stylesheet" href="../temp/styles/styles.css">
+	<!-- endbuild -->
+	<!-- build:css ../assets/styles/global.min.css -->
+	<link rel="stylesheet" href="../temp/styles/global.css" media="screen">
+	<!-- endbuild -->
 
-<!-- build:js ../assets/scripts/jquery.min.js -->
-<script src="../assets/scripts/modules/vendor/jquery/jquery.min.js"></script>
-<!-- endbuild -->
-    <!-- build:js ../assets/scripts/jquery-ui.min.js -->
-    <script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
-    <!-- endbuild -->
+	<!-- build:js ../assets/scripts/jquery.min.js -->
+	<script src="../assets/scripts/modules/vendor/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:js ../assets/scripts/jquery-ui.min.js -->
+	<script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<!-- endbuild -->
 </head>
 
 <body>
-    <div class="l-body-wrapper l-full-page">
-        <span class="add-header"></span>
-        <div class="l-outer-wrapper">
-            <div class="l-inner-wrapper">
-                <!-- start style guide wrapper -->
-                <!-- start style guide wrapper -->
-                <!-- start style guide wrapper -->
-                <div class="_container">
-                    <div class="_content">
-                        <div class="_content-inner">
-                            <!-- end style guide wrapper -->
-                            <!-- end style guide wrapper -->
-                            <!-- end style guide wrapper -->
-                            <h1 class="_h1">Lists</h1>
-                            <ul class="style-guide">
-                                    <li class="style-guide">
+	<div class="l-body-wrapper l-full-page">
+		<span class="add-header"></span>
+		<div class="l-outer-wrapper">
+			<div class="l-inner-wrapper">
+				<!-- start style guide wrapper -->
+				<!-- start style guide wrapper -->
+				<!-- start style guide wrapper -->
+				<div class="_container">
+					<div class="_content">
+						<div class="_content-inner">
 
+							<ul class="style-guide">
+								<li class="style-guide">
+									<h1 class="_h1">Lists</h1>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<p class="_p">Correct list nesting:</p>
+											<pre><code class="html">&lt;li&gt;Lorem ipsum dolor sit amet:&lt;/li&gt;
+&lt;li&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+        &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;</code></pre>
+										</div>
+										<div class="l-col">
+											<p class="_p">Incorrect list nesting:</p>
+											<pre><code class="html">&lt;li&gt;Lorem ipsum dolor sit amet:&lt;/li&gt;
+&lt;ul&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;Lorem ipsum dolor sit amet.&lt;/li&gt;</code></pre>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Head</h3>
 
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li class="head">Lorem ipsum dolor sit amet</h2>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="head"><a>Lorem ipsum dolor sit amet</a></li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="4"><li class="head">Lorem ipsum dolor sit amet</li>
+<li>Lorem ipsum dolor sit amet.</li>
+<li class="head"><a>Lorem ipsum dolor sit amet</a></li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
 
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Bullet List</h3>
+									<p class="_p">Article themes have bulletid lists by default. Primary and Secondary lists do not have bulletid lists by default and therefore adding the <code>bullet</code> class is required to force bullets.</p>
 
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul class="bullet">
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="4"><ul class="bullet">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
 
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Bulleted List</h3>
 
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul class="bullet">
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
-<!--
-  _   _                     _                   _       _     _     _   
- | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| |     | |   (_)___| |_ 
- | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` |_____| |   | / __| __|
- | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| |_____| |___| \__ \ |_ 
-  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_|     |_____|_|___/\__|
--->
-<li class="style-guide">
-        <h3 class="_h3">Default List (no styles applied)</h3>
-        <div class="_module-wrapper">
-            <div class="_module-container">
-                <!-- start -->
-                <!-- start -->
-                <!-- start -->
-                <div class="l-row l-full-width-col">
-                    <div class="primary">
-                        <span class="_module-bg">
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-                <!-- end -->
-                <!-- end -->
-                <!-- end -->
-            </div>
-        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="9"><div class="primary/primary-alt/secondary/secondary-alt">
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="4"><ul class="bullet">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Lorem ipsum dolor sit amet</li>
+</ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Foot</h3>
+
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="foot"><a>Lorem ipsum dolor sit amet</a></li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="6"><ul>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li class="foot"><a>Lorem ipsum dolor sit amet</a></li>
+</ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Spacer</h3>
+
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="list-spacer"></li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="5"><li>Lorem ipsum dolor sit amet.</li>
+<li>Lorem ipsum dolor sit amet.</li>
+<li class="list-spacer"></li>
+<li>Lorem ipsum dolor sit amet.</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Spacer with Nested List</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="list-spacer">
+															<ul>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="8"><li>Lorem ipsum dolor sit amet.</li>
+<li class="list-spacer">
     <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-        <!-- end section -->
-        <!-- end section -->
-        <!-- end section -->
-    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                            <h3 class="_h3">Basic List</h3>
-                                            <div class="_module-wrapper">
-                                                <div class="_module-container">
-                                                    <!-- start -->
-                                                    <!-- start -->
-                                                    <!-- start -->
-                                                    <div class="l-row l-full-width-col">
-                                                        <div class="primary">
-                                                            <span class="_module-bg">
-                                                                <ul class="basic-list">
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                </ul>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end -->
-                                                    <!-- end -->
-                                                    <!-- end -->
-                                                </div>
-                                            </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="9"><div class="primary/primary-alt/secondary/secondary-alt">
-    <ul class="basic-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                            <!-- end section -->
-                                            <!-- end section -->
-                                            <!-- end section -->
-                                        </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        <li class="style-guide">
-                                                <h3 class="_h3">Bulleted List</h3>
-                                                <div class="_module-wrapper">
-                                                    <div class="_module-container">
-                                                        <!-- start -->
-                                                        <!-- start -->
-                                                        <!-- start -->
-                                                        <div class="l-row l-full-width-col">
-                                                            <div class="primary">
-                                                                <span class="_module-bg">
-                                                                    <ul class="bullet">
-                                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    </ul>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end -->
-                                                        <!-- end -->
-                                                        <!-- end -->
-                                                    </div>
-                                                </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="7"><div class="primary/primary-alt/secondary/secondary-alt">
+</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Nested Bulleted List</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>
+															<ul class="bullet">
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="8"><li>Lorem ipsum dolor sit amet.</li>
+<li>
     <ul class="bullet">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                                <!-- end section -->
-                                                <!-- end section -->
-                                                <!-- end section -->
-                                            </li>
+</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Spacer with Nested Bulleted List</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="list-spacer">
+															<ul class="bullet">
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="8"><li>Lorem ipsum dolor sit amet.</li>
+<li class="list-spacer">
+    <ul class="bullet">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
 
-
-
-
-
-
-
-
-
-    <!--
-  _   _                     _                   _   ____        _ _      _           _       _     _     _   
- | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| | | __ ) _   _| | | ___| |_ ___  __| |     | |   (_)___| |_ 
- | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` | |  _ \| | | | | |/ _ \ __/ _ \/ _` |_____| |   | / __| __|
- | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| | | |_) | |_| | | |  __/ ||  __/ (_| |_____| |___| \__ \ |_ 
-  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_| |____/ \__,_|_|_|\___|\__\___|\__,_|     |_____|_|___/\__|
--->
-                                <li class="style-guide">
-                                    <h3 class="_h3">Unordered Bulleted-List</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-                                                        <ul>
-                                                            <li class="list-item">
-                                                                <ul>
-                                                                    <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                </ul>
-                                                                <ul>
-                                                                    <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Spacer with Multiple Nested Lists</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</li>
+														<li class="list-spacer">
+															<ul>
+																<li class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+															<ul>
+																<li class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+															<ul>
+																<li class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="10"><li class="list-spacer">
     <ul>
-        <li class="list-item">
-            <ul>
-                <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-            <ul>
-                <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-        </li>
+        <li class="head">Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                </li>
-<!--
-  ____                           _       _                   _   _   _                     _                   _       _     _     _   
- / ___|  ___  ___ ___  _ __   __| |     | |    _____   _____| | | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| |     | |   (_)___| |_ 
- \___ \ / _ \/ __/ _ \| '_ \ / _` |_____| |   / _ \ \ / / _ \ | | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` |_____| |   | / __| __|
-  ___) |  __/ (_| (_) | | | | (_| |_____| |__|  __/\ V /  __/ | | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| |_____| |___| \__ \ |_ 
- |____/ \___|\___\___/|_| |_|\__,_|     |_____\___| \_/ \___|_|  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_|     |_____|_|___/\__|
--->
-                                <li class="style-guide">
-                                    <h3 class="_h3">Second-Level Unordered-List</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-                                                        <ul>
-                                                            <li class="list-item">
-                                                                <ul>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li class="list-item">
-                                                                        <ul>
-                                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        </ul>
-                                                                        <ul>
-                                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
     <ul>
-        <li class="list-item">
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li class="list-item">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    </ul>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+        <li class="head">Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                </li>
-<!--
-  _____ _     _         _       _                   _   _   _                     _                   _       _     _     _   
- |_   _| |__ (_)_ __ __| |     | |    _____   _____| | | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| |     | |   (_)___| |_ 
-   | | | '_ \| | '__/ _` |_____| |   / _ \ \ / / _ \ | | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` |_____| |   | / __| __|
-   | | | | | | | | | (_| |_____| |__|  __/\ V /  __/ | | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| |_____| |___| \__ \ |_ 
-   |_| |_| |_|_|_|  \__,_|     |_____\___| \_/ \___|_|  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_|     |_____|_|___/\__|
--->
-                                <li class="style-guide">
-                                    <h3 class="_h3">Third-Level Unordered-List</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-                                                        <ul>
-                                                            <li class="list-item">
-                                                                <ul>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li class="list-item">
-                                                                        <ul>
-                                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                            <li class="list-item">
-                                                                                <ul>
-                                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                                </ul>
-                                                                                <ul>
-                                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                                </ul>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
-    <ul>
-        <li class="list-item">
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li class="list-item">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li class="list-item">
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            </ul>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                </li>
-<!--
-  _     _     _        _                    _           
- | |   (_)___| |_     | |__   ___  __ _  __| | ___ _ __ 
- | |   | / __| __|____| '_ \ / _ \/ _` |/ _` |/ _ \ '__|
- | |___| \__ \ ||_____| | | |  __/ (_| | (_| |  __/ |   
- |_____|_|___/\__|    |_| |_|\___|\__,_|\__,_|\___|_|                                                        
--->
+</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
 
-                                <li class="style-guide">
-                                    <h3 class="_h3">List Head</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-                                                        <ul>
-                                                            <li class="head"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                        </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="6"><div class="primary/primary-alt/secondary/secondary-alt">
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Sub List with Multiple Nested Bulleted List</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit:</li>
+														<li class="sub-list">
+															<ul>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="8"><li class="head">Lorem ipsum dolor sit amet:</li>
+<li class="sub-list">
     <ul>
-        <li class="head"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                </li>
-<!--
-  _   _                     _                   _   ____        _           _     _     _   
- | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| | / ___| _   _| |__       | |   (_)___| |_ 
- | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` | \___ \| | | | '_ \ _____| |   | / __| __|
- | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| |  ___) | |_| | |_) |_____| |___| \__ \ |_ 
-  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_| |____/ \__,_|_.__/      |_____|_|___/\__|
-                                                                                            
-
--->
-                                <li class="style-guide">
-                                    <h3 class="_h3">Unordered Sub-List</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-<ul>
-    <li class="sub-list">
+</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Sub List with Nested Bulleted List</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</li>
+														<li class="sub-list">
+															<ul class="bullet">
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="8"><li>Lorem ipsum dolor sit amet:</li>
+<li class="sub-list">
+    <ul class="bullet">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+</li>
+<li>Lorem ipsum dolor sit amet.</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Seperator</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li class="head">Lorem ipsum dolor sit amet</li>
+														<li>
+															<ul>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+															</ul>
+														</li>
+													</ul>
+													<ul class="list-seperator">
+														<li class="head">Lorem ipsum dolor sit amet</li>
+														<li>
+															<ul>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+															</ul>
+														</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="16"><ul>
+    <li class="head">Lorem ipsum dolor sit amet</li>
+    <li>
         <ul>
-            <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        </ul>
-    </li>
-    <li class="sub-list">
-        <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-        </ul>
-    </li>
-    <li class="sub-list">
-        <ul>
-            <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li><a>Lorem ipsum dolor sit amet.</a></li>
         </ul>
     </li>
 </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+<ul class="list-seperator">
+    <li class="head">Lorem ipsum dolor sit amet</li>
+    <li>
+        <ul>
+            <li><a>Lorem ipsum dolor sit amet.</a></li>
+        </ul>
+    </li>
+</ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Highlight</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li>
+															<ul class="highlight">
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+															</ul>
+														</li>
+														<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="6"><div class="primary">
     <ul>
-        <li class="sub-list">
-            <ul>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-        </li>
-        <li class="sub-list">
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-            </ul>
-        </li>
-        <li class="sub-list">
-            <ul>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-        </li>
+        <li class="head"><h2>Lorem ipsum</h2></li>
+        <li>Lorem ipsum dolor sit amet</li>
     </ul>
 </div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                    <!-- end section -->
-                                </li>
-<!--
-  _   _                     _                   _   ____        _ _      _           _   ____        _           _     _     _   
- | | | |_ __   ___  _ __ __| | ___ _ __ ___  __| | | __ ) _   _| | | ___| |_ ___  __| | / ___| _   _| |__       | |   (_)___| |_ 
- | | | | '_ \ / _ \| '__/ _` |/ _ \ '__/ _ \/ _` | |  _ \| | | | | |/ _ \ __/ _ \/ _` | \___ \| | | | '_ \ _____| |   | / __| __|
- | |_| | | | | (_) | | | (_| |  __/ | |  __/ (_| | | |_) | |_| | | |  __/ ||  __/ (_| |  ___) | |_| | |_) |_____| |___| \__ \ |_ 
-  \___/|_| |_|\___/|_|  \__,_|\___|_|  \___|\__,_| |____/ \__,_|_|_|\___|\__\___|\__,_| |____/ \__,_|_.__/      |_____|_|___/\__|
-   -->
-                                <li class="style-guide">
-                                    <h3 class="_h3">Unordered Bulleted Sub-List</h3>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <div class="primary">
-                                                    <span class="_module-bg">
-                                                        <ul>
-                                                            <li class="sub-list list-item">
-                                                                <ul>
-                                                                    <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="sub-list list-item">
-                                                                <ul>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                    <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="sub-list list-item">
-                                                                <ul>
-                                                                    <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Single Bullet List Item</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li class="head">Lorem ipsum dolor sit amet, consectetur adipiscing elit:</li>
+														<li class="list-item">
+															<ul>
+																<li class="sub-head"><a>Lorem ipsum dolor sit amet</a></li>
+																<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															</ul>
+															<ul>
+																<li class="sub-head">Lorem ipsum dolor sit amet</li>
+																<li><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+																<li><a>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+															</ul>
+														</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="7"><li class="list-item">
     <ul>
-        <li class="sub-list list-item">
-            <ul>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-        </li>
-        <li class="sub-list list-item">
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-            </ul>
-        </li>
-        <li class="sub-list list-item">
-            <ul>
-                <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-        </li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
     </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
+</li></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Iconic List Items</h3>
+									<p>Please see the <a href="../base/icons.html">Icons Style-Guide page</a> for more options</p>
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul class="icon-list">
+														<li class="ico pdf"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico xls"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico doc"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico csv"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico ppt"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico json"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico html"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico image"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico interactive"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico efile"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+														<li class="ico pedro"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="13"><ul class="icon-list">
+    <li class="ico pdf"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico xls"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico doc"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico csv"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico ppt"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico json"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico html"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico image"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico interactive"><a>Lorem ipsum sit amet</a></li>
+    <li class="ico efile"><a>Lorem ipsum dolor sit amet</a></li>
+    <li class="ico pedro"><a>Lorem ipsum dolor sit amet</a></li>
+</ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Release Date/Schedule List Items</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul>
+														<li class="release-schedule">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="release-schedule">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li class="release-schedule">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="3"><li class="release-schedule">Lorem ipsum dolor sit amet</li>
+<li class="release-schedule">Lorem ipsum dolor sit amet</li>
+<li class="release-schedule">Lorem ipsum dolor sit amet</li>
+</textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Numbered List Items</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
+													<ul class="numbered">
+														<li><span class="number">001</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li><span class="number">002</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														<li><span class="number">003</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													</ul>
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="5"><ul class="numbered">
+    <li><span class="number">001</span>Lorem ipsum.</li>
+    <li><span class="number">002</span>Lorem ipsum.</li>
+    <li><span class="number">003</span>Lorem ipsum.</li>
+</ul></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">tbd</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
 
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="6"></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">tbd</h3>
+									<p class="_p"></p>
+									<div class="l-row l-two-col-even">
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
+											<div class="primary">
+												<span class="_module-bg">
 
+												</span>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<div class="l-col">
+											<!-- start module -->
+											<!-- start module -->
+											<!-- start module -->
 
+											<div class="_example _html">
+												<pre>
+<textarea class="_copy-textarea" rows="6"></textarea>
+</pre>
+												<div class="_button-container">
+													<button type="button" class="_copy">Copy to clipboard</button>
+												</div>
+											</div>
+											<!-- end module -->
+											<!-- end module -->
+											<!-- end module -->
+										</div>
+										<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+										<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+										<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+										<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li class="style-guide">
-        <h3 class="_h3">Icon List</h3>
-        <div class="_module-wrapper">
-            <div class="_module-container">
-                <!-- start -->
-                <!-- start -->
-                <!-- start -->
-                <div class="l-row l-full-width-col">
-                    <div class="primary">
-                        <span class="_module-bg">
-                            <ul class="icon-list">
-                                <li><span class="ico reports-icon"></span><a href="/calendar/reports.html">Full list of upcoming reports</a></li>
-                                <li><span class="ico email-complex-icon"></span><a href="/tools/emailupdates/">Sign up for email notifications </a></li>
-                                <li><span class="ico rss-complex-icon"></span><a href="/tools/rssfeeds/">Get the What's New RSS feed</a></li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-                <!-- end -->
-                <!-- end -->
-                <!-- end -->
-            </div>
-        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
-    <ul class="icon-list">
-        <li><span class="ico reports-icon"></span><a href="/calendar/reports.html">Full list of upcoming reports</a></li>
-        <li><span class="ico email-complex-icon"></span><a href="/tools/emailupdates/">Sign up for email notifications </a></li>
-        <li><span class="ico rss-complex-icon"></span><a href="/tools/rssfeeds/">Get the What's New RSS feed</a></li>
-    </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-
-
-
-
-
-
-
-
-<li class="style-guide">
-        <h3 class="_h3">List Seperator</h3>
-        <div class="_module-wrapper">
-            <div class="_module-container">
-                <!-- start -->
-                <!-- start -->
-                <!-- start -->
-                <div class="l-row l-full-width-col">
-                    <div class="secondary">
-                        
-                            <ul>
-                                <li class="head"><h2>Most requested nuclear data</h2></li>
-                                <li class="sub-head">Uranium &amp; nuclear fuel</li>
-                                <li>
-                                    <ul>
-                                        <li><a href="/" title="">Nuclear reactor capacity</a></li>
-                                        <li><a href="/" title="">Nuclear electricity generation</a></li>
-                                        <li><a href="/" title="">Nuclear reactor owners/operators</a></li>
-                                        <li><a href="/" title="">Nuclear outages</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="list-seperator">
-                                <li class="head"><h2>Most requested nuclear data</h2></li>
-                                <li class="sub-head">Uranium &amp; nuclear fuel</li>
-                                <li>
-                                    <ul>
-                                        <li><a href="/" title="">Nuclear reactor capacity</a></li>
-                                        <li><a href="/" title="">Nuclear electricity generation</a></li>
-                                        <li><a href="/" title="">Nuclear reactor owners/operators</a></li>
-                                        <li><a href="/" title="">Nuclear outages</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        
-                    </div>
-                </div>
-                <!-- end -->
-                <!-- end -->
-                <!-- end -->
-            </div>
-        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
-    <ul>
-        <li class="head"><h2>International data</h2></li>
-        <li>
-            <ul>
-                <li><a href="/" title="">Nuclear reactor capacity</a></li>
-                <li><a href="/" title="">Nuclear electricity generation</a></li>
-                <li><a href="/" title="">Nuclear reactor owners/operators</a></li>
-                <li><a href="/" title="">Nuclear outages</a></li>
-            </ul>
-        </li>
-    </ul>
-    <ul class="list-seperator">
-        <li class="head"><h2>International data</h2></li>
-        <li>
-            <ul>
-                <li><a href="/" title="">Nuclear reactor capacity</a></li>
-                <li><a href="/" title="">Nuclear electricity generation</a></li>
-                <li><a href="/" title="">Nuclear reactor owners/operators</a></li>
-                <li><a href="/" title="">Nuclear outages</a></li>
-            </ul>
-        </li>
-    </ul>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-
-
-
-                                </li>
-                            </ul>
-                            <!-- start style guide wrapper -->
-                            <!-- start style guide wrapper -->
-                            <!-- start style guide wrapper -->
-                        </div>
-                    </div>
-                </div>
-                <!-- end style guide wrapper -->
-                <!-- end style guide wrapper -->
-                <!-- end style guide wrapper -->
-            </div>
-        </div>
-    </div>
-    <span class="add-footer"></span>
+									<h3 class="_h3">Default List (no styles applied)</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="9"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- end section -->
+									<!-- end section -->
+									<!-- end section -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Basic List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul class="basic-list">
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="9"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul class="basic-list">
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Bulleted List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul class="bullet">
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="7"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul class="bullet">
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Unordered Bulleted-List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="list-item">
+																<ul>
+																	<li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+																<ul>
+																	<li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="list-item">
+												   <ul>
+													   <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+												   <ul>
+													   <li><a class="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+											   </li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Second-Level Unordered-List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="list-item">
+																<ul>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li class="list-item">
+																		<ul>
+																			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																		</ul>
+																		<ul>
+																			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="list-item">
+												   <ul>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li class="list-item">
+														   <ul>
+															   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														   </ul>
+														   <ul>
+															   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														   </ul>
+													   </li>
+												   </ul>
+											   </li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Third-Level Unordered-List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="list-item">
+																<ul>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li class="list-item">
+																		<ul>
+																			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																			<li class="list-item">
+																				<ul>
+																					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																				</ul>
+																				<ul>
+																					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																				</ul>
+																			</li>
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="list-item">
+												   <ul>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li class="list-item">
+														   <ul>
+															   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+															   <li class="list-item">
+																   <ul>
+																	   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																   </ul>
+																   <ul>
+																	   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																   </ul>
+															   </li>
+														   </ul>
+													   </li>
+												   </ul>
+											   </li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">List Head</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="head"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+															<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="6"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="head"><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+											   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Unordered Sub-List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="sub-list">
+																<ul>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+															</li>
+															<li class="sub-list">
+																<ul>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																</ul>
+															</li>
+															<li class="sub-list">
+																<ul>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="sub-list">
+												   <ul>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+											   </li>
+											   <li class="sub-list">
+												   <ul>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+												   </ul>
+											   </li>
+											   <li class="sub-list">
+												   <ul>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+											   </li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+								</li>
+								<li class="style-guide">
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
+									<!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
+									<h3 class="_h3">Unordered Bulleted Sub-List</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="primary">
+													<span class="_module-bg">
+														<ul>
+															<li class="sub-list list-item">
+																<ul>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+															</li>
+															<li class="sub-list list-item">
+																<ul>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																</ul>
+															</li>
+															<li class="sub-list list-item">
+																<ul>
+																	<li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+																	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</div>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<textarea class="_copy-textarea" rows="12"><div class="primary/primary-alt/secondary/secondary-alt">
+										   <ul>
+											   <li class="sub-list list-item">
+												   <ul>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+											   </li>
+											   <li class="sub-list list-item">
+												   <ul>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+												   </ul>
+											   </li>
+											   <li class="sub-list list-item">
+												   <ul>
+													   <li><a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+													   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+												   </ul>
+											   </li>
+										   </ul>
+									   </div></textarea>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<span class="add-footer"></span>
 </body>
 <!-- build:js ../assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
@@ -896,4 +1807,5 @@ Code sample on the online style guide.
 <!-- build:js ../assets/scripts/global.min.js -->
 <script src="../temp/scripts/global.js"></script>
 <!-- endbuild -->
+
 </html>

@@ -1,24 +1,35 @@
 class ModuleScripts {
     constructor() {
-        $('.toggle.expand-collapse').click(function (e) {
+        $('.toggle.expand-collapse').click(function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
-            $(this).next('.expand-collapse-content').slideToggle("slow", function () {
-                //console.log("expand-collapse-content")
+            $(this).next('.expand-collapse-content').slideToggle("slow", function() {
+                console.log("it worked");
             });
+            console.log("expand-collapse-content");
         });
-        $('.toggle.expand-collapse-content-above').click(function (e) {
+
+        $('.toggle.tbody-expand-collapse').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).parent().parent().parent().next('.expand-collapse-tbody').slideToggle("slow", function() {
+                console.log("it worked");
+            });
+            console.log("tr expand-collapse-content");
+        });
+
+        $('.toggle.expand-collapse-content-above').click(function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $(this).prev('.expand-collapse-content').slideToggle("slow", function () {
-                //console.log("expand-collapse-content")
+                //console.log("expand-collapse-content");
             });
         });
-        $('.toggle.show-hide').click(function (e) {
+        $('.toggle.show-hide').click(function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.show-hide-content').toggle();
-            //console.log("show-hide-content")
+            //console.log("show-hide-content");
         });
         $('a').each(function () {
             var a = new RegExp('/' + window.location.host + '/');
@@ -27,7 +38,6 @@ class ModuleScripts {
             }
             //console.log("external-image-link")
         });
-
         var primaryHide = document.querySelectorAll('.primary.hide-mt a'), i;
         for (i = 0; i < primaryHide.length; ++i) {
             var $true = (primaryHide[i].getAttribute('href') == '')

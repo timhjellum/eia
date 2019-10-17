@@ -32,238 +32,10 @@ svg:not(:root) {
 		.controls-icon;
 	}
 }
-/*-ico-menu --------------
-.ico-menu {
-	&.analysis-projections-icon {
-		&:before {
-			.icon-analysis-projections;
-			.nav-bar-icon;
-		}
-	}
-	&.markets-finance-icon {
-		&:before {
-			.icon-markets-finance;
-			.nav-bar-icon;
-		}
-	}
-	&.environment-icon {
-		&:before {
-			.icon-environment;
-			.nav-bar-icon;
-		}
-	}
-	/*-Sources & Uses Icons --------------
-	&.petroleum-icon {
-		&:before {
-			.icon-petroleum;
-			.nav-bar-icon;
-		}
-	}
-	&.natural-gas-icon {
-		&:before {
-			.icon-natural-gas;
-			.nav-bar-icon;
-		}
-	}
-	&.electricity-icon {
-		&:before {
-			.icon-electricity;
-			.nav-bar-icon;
-		}
-	}
-	&.consumption-icon {
-		&:before {
-			.icon-consumption;
-			.nav-bar-icon;
-		}
-	}
-	&.coal-icon {
-		&:before {
-			.icon-coal;
-			.nav-bar-icon;
-		}
-	}
-	&.nuclear-icon {
-		&:before {
-			.icon-nuclear;
-			.nav-bar-icon;
-		}
-	}
-	&.renewable-icon {
-		&:before {
-			.icon-renewable;
-			.nav-bar-icon;
-		}
-	}
-	&.total-energy-icon {
-		&:before {
-			.icon-total-energy;
-			.nav-bar-icon;
-		}
-	}
-	/*-News Icons -------------------------------
-	&.featured-reports-icon {
-		&:before {
-			.icon-featured-reports;
-			.nav-bar-icon;
-		}
-	}
-	&.press-room-icon {
-		&:before {
-			.icon-press-room;
-			.nav-bar-icon;
-		}
-	}
-	&.whats-new-icon {
-		&:before {
-			.icon-whats-new;
-			.nav-bar-icon;
-		}
-	}
-	&.upcoming-icon {
-		&:before {
-			.icon-upcoming;
-			.nav-bar-icon;
-		}
-	}
-	/*-Tools Icons ----------------------------
-	&.eia-glossary-icon {
-		&:before {
-			.icon-glossary;
-			.nav-bar-icon;
-		}
-	}
-	&.data-tools-model-icon {
-		&:before {
-			.icon-data-tools-model;
-			.nav-bar-icon;
-		}
-	}
-	&.open-data-icon {
-		&:before {
-			.icon-open-data;
-			.nav-bar-icon;
-		}
-	}
-	&.beta-icon {
-		&:before {
-			.icon-beta;
-			.nav-bar-icon;
-		}
-	}
-	&.follow-us-icon {
-		&:before {
-			.icon-follow-us;
-			.nav-bar-icon;
-		}
-	}
-	&.reports-icon {
-		&:before {
-			.icon-reports;
-			.nav-bar-icon;
-		}
-	}
-	&.survey-forms-icon {
-		&:before {
-			.icon-survey-forms;
-			.nav-bar-icon;
-		}
-	}
-	&.email-complex-icon {
-		&:before {
-			.icon-email-complex;
-			.nav-bar-icon;
-		}
-	}
-	&.rss-complex-icon {
-		&:before {
-			.icon-rss-complex;
-			.nav-bar-icon;
-		}
-	}
-	/*-Learn About Energy Icons -----------------
-	&.today-in-energy-icon {
-		&:before {
-			.icon-today-in-energy;
-			.nav-bar-icon;
-		}
-	}
-	&.energy-explained-icon {
-		&:before {
-			.icon-energy-explained;
-			.nav-bar-icon;
-		}
-	}
-	&.energy-in-brief-icon {
-		&:before {
-			.icon-energy-in-brief;
-			.nav-bar-icon;
-		}
-	}
-	&.faq-icon {
-		&:before {
-			.icon-faq;
-			.nav-bar-icon;
-		}
-	}
-	&.teachers-icon {
-		&:before {
-			.icon-teachers;
-			.nav-bar-icon;
-		}
-	}
-	/*-Geography Icons ------------------------
-	&.states-icon {
-		&:before {
-			.icon-states;
-			.nav-bar-icon;
-		}
-	}
-	&.maps-icon {
-		&:before {
-			.icon-maps;
-			.nav-bar-icon;
-		}
-	}
-	&.international-icon {
-		&:before {
-			.icon-international;
-			.nav-bar-icon;
-		}
-	}
-	/*-A-Z Icon --------------------------
-	&.a-z-index-icon {
-		&:before {
-			.icon-a-z-index;
-			.nav-bar-icon;
-		}
-	}
-	/*-Regional Icon --------------------------
-	&.regional-icon {
-		&:before {
-			.icon-regional;
-			.nav-bar-icon;
-		}
-	}
-	/*-search icon (magnifying glass) -------------------------- 
-	&.search-icon {
-		&:before {
-        	.controls-icon(20px, 20px);
-			.icon-search;
-		}
-	}
-}
-*/
-/*-Close menu Icon --------------------------*/
-/*
-.close-menu {
-	&:before {
-		.icon-cancel;
-		.controls-icon(40px, 40px);
-	}
-}
-*/
+
+
 .ico {
+
 	/*-search submit -------------------------- */
 	&.search-submit {
 		&:before {
@@ -549,6 +321,7 @@ svg:not(:root) {
 			.icon-collapse;
 		}
 	}
+
 	&.zoom {
 		&:before {
         	.controls-icon(20px, 20px);
@@ -644,35 +417,39 @@ svg:not(:root) {
 			margin: 0;
 		}
 	}
-	/*
-	.beta {
+	// accordion + / -
+	&.expand-plus {
 		&:before {
-			display: inline-block;
-			margin-bottom: -5px;
+			.controls-icon(12px, 12px);
+			.icon-remove(@fill-color: @eia-blue);
+			transform: rotate(45deg);
+		}
+		span {// this hides the textual labels of the icons on tables.
+			position: absolute;
+			left: -10000px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
 		}
 	}
-	*/
+	&.collapse-minus {
+		&:before {
+			.controls-icon(12px, 12px);
+			.icon-dash(@fill-color: @eia-blue);
+		}
+		span {// this hides the textual labels of the icons on tables.
+			position: absolute;
+			left: -10000px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+		}
+	}
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 	/* ***** ***** ***** **** document icons *** ***** ***** ***** */
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-	&.pdf,
-	&.xls,
-	&.csv,
-	&.json,
-	&.ppt,
-	&.html,
-	&.doc,
-	&.image,
-	&.interactive {
-		background-color: #fff;
-		&:before {
-			background-color: #fff;
-		}
-		&:after {
-			background-color: #fff;
-		}
-	}
-
 	&.pdf {
 		&:before {
 			.icon-file-type(pdf);
@@ -718,14 +495,24 @@ svg:not(:root) {
 	&.image {
 		&:before {
 			.icon-file-type(image);
-			//.icon-image;
 			.controls-icon(15px, 16px);
 		}
 	}
 	&.interactive {
-		//margin-left: 0;
 		&:before {
 			.icon-interactive;
+			.controls-icon(15px, 16px);
+		}
+	}
+	&.efile {
+		&:before {
+			.icon-interactive;
+			.controls-icon(15px, 16px);
+		}
+	}
+	&.pedro {
+		&:before {
+			.icon-pedro;
 			.controls-icon(15px, 16px);
 		}
 	}
@@ -764,20 +551,7 @@ button {
 		display: none;
 	}
 }
-// accordion + / -
-.expand-plus {
-	&:before {
-		.controls-icon(12px, 12px);
-		.icon-remove(@fill-color: @eia-blue);
-		transform: rotate(45deg);
-	}
-}
-.collapse-minus {
-	&:before {
-		.controls-icon(12px, 12px);
-		.icon-dash(@fill-color: @eia-blue);
-	}
-}
+
 
 
 .fancybox-close {
@@ -868,7 +642,14 @@ button {
 		.controls-icon;
 	}
 }
-
+.top {
+	&:before {
+		.icon-up-arrow(@fill-color: @eia-blue);
+		.controls-icon(18px, 16px);
+		display: inline-block;
+		margin-right: 2px;
+	}
+}
 
 
 
@@ -1022,12 +803,16 @@ background: @-inline-svg-url @-bg-defaults;
 /*--- mix-in that combines the page icon with the appropriate file type image and text ---*/
 .icon-file-type(@file-type, @base-fill-color: tint(@eia-black, 46.5%), @corner-fill-color: tint(tint(@eia-black, 46.5%), @icon-image-tint)) {
 	.file-ext(@file-type);
-	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.65 66.17">@{icon-file-type}<path d="M42.8,4.83H12.08V61H56.8V18.83ZM54,58.23H14.86V7.61H42.8V18.83H54v39.4Z" fill="@{base-fill-color}"/><rect x="4.16" y="12.34" width="33.28" height="14.5" fill="@{file-type-fill}"/><text transform="translate(11.08 23.24)" font-size="10" fill="#ffffff" font-family="Arial" font-weight="700" style="text-transform: uppercase">@{file-type}</text><polygon points="56.8 18.83 42.8 4.83 42.8 18.83 56.8 18.83" fill="@{corner-fill-color}"/></svg>';
+	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.65 66.17">@{icon-file-type}<polygon points="43.2 5.4 12.5 5.4 12.5 61.6 57.2 61.6 57.2 19.4 43.2 5.4" fill="@{base-fill-color}"/><polygon points="54.4 58.8 15.2 58.8 15.2 8.2 43.2 8.2 43.2 19.4 54.4 19.4 54.4 58.8" fill="#fff"/><rect x="4.16" y="12.34" width="33.28" height="14.5" fill="@{file-type-fill}"/><text transform="translate(11.08 23.24)" font-size="10" fill="#ffffff" font-family="Arial" font-weight="700" style="text-transform: uppercase">@{file-type}</text><polygon points="56.8 18.83 42.8 4.83 42.8 18.83 56.8 18.83" fill="@{corner-fill-color}"/></svg>';
 	.inline-svg-code(@icon-filter-svg);
 	background: @-inline-svg-url @-bg-defaults;
 }
-
 /* Call the icon using --> .icon-file-type(xls); make sure file type (in parenthesis) is lowercase so it matches the variable names */
+.icon-pedro(@fill-color: @eia-green) {
+	@icon-filter-svg: ~'<svg id="icon-pedro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 42"><polygon id="icon-pedro-2" data-name="icon-pedro" points="9.09 23.35 18.42 23.93 10.24 41.62 30.91 16.5 21.27 16.03 26.93 0.38 9.09 23.35" fill="@{fill-color}"/></svg>';
+	.inline-svg-code(@icon-filter-svg); background: @-inline-svg-url @-bg-defaults;
+	}
+
 
 /*---External link icon--*/
 .icon-external-link(@fill-color: @eia-blue) {
@@ -1062,6 +847,9 @@ background: @-inline-svg-url @-bg-defaults;
 @icon-filter-svg: ~'<svg id="email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M32.78,5H7.21A2.19,2.19,0,0,0,5,7.16V32.84A2.19,2.19,0,0,0,7.21,35H32.78A2.19,2.19,0,0,0,35,32.84V7.16A2.19,2.19,0,0,0,32.78,5Z" fill="@{fill-color}"/><g id="envelope"><path d="M19.82,22.28L8.72,12.83c-0.12-.1,0-0.25.18-0.25H31.11c0.19,0,.3.15,0.18,0.25L20.18,22.28A0.3,0.3,0,0,1,19.82,22.28Z" fill="#fff"/><path d="M31.62,14.5l-5.86,5a0.12,0.12,0,0,0,0,.17l5.86,8.17c0.11,0.15.43,0.1,0.43-.07V14.6C32,14.45,31.76,14.39,31.62,14.5Z" fill="#fff"/><path d="M8.39,14.51l5.85,5a0.12,0.12,0,0,1,0,.17L8.41,27.82C8.3,28,8,27.92,8,27.75V14.61C8,14.46,8.25,14.39,8.39,14.51Z" fill="#fff"/><path d="M24.19,20.8l-4,3.33a0.31,0.31,0,0,1-.36,0l-4-3.34a0.3,0.3,0,0,0-.39,0L9.76,28.72H30.24l-5.67-7.9A0.3,0.3,0,0,0,24.19,20.8Z" fill="#fff"/></g></svg>';
 .inline-svg-code(@icon-filter-svg); background: @-inline-svg-url @-bg-defaults;
 }
+
+
+	
 .icon-rss(@fill-color: @eia-blue) {
 @icon-filter-svg: ~'<svg id="icon-rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M9.29,5H30.71A4.29,4.29,0,0,1,35,9.29V30.72A4.28,4.28,0,0,1,30.71,35H9.29A4.28,4.28,0,0,1,5,30.72V9.29A4.29,4.29,0,0,1,9.29,5Z" fill="@{fill-color}"/><path d="M12.17,31.06a3.22,3.22,0,1,1,3.22-3.22A3.23,3.23,0,0,1,12.17,31.06ZM23.7,29.17A12.9,12.9,0,0,0,10.83,16.3a1.88,1.88,0,0,0,0,3.77,9.13,9.13,0,0,1,9.1,9.1A1.89,1.89,0,1,0,23.7,29.17Zm7.35,0A20.26,20.26,0,0,0,10.83,8.94a1.88,1.88,0,0,0,0,3.77A16.51,16.51,0,0,1,27.29,29.17,1.89,1.89,0,1,0,31.06,29.17Z" fill="#ffffff"/></svg>';
 .inline-svg-code(@icon-filter-svg); background: @-inline-svg-url @-bg-defaults;

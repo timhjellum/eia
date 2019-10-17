@@ -4,6 +4,7 @@
 *.orig
 *.log
 *.rej
+*.bak
 *.swo
 *.swp
 *.vi
@@ -29,5 +30,3 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
-styles.js
-scripts.js

@@ -1,27 +1,37 @@
 @media @mobile {
     table {
-        width: 100%;
         border-collapse: collapse; // eliminate all cellspacing
         border-spacing: 0;
         color: @eia-dark-grey;
+        &.full-width {
+            width: 100%;
+        }
         a {
             color: @eia-blue;
             text-decoration: none;
             display: inline-block;
-            //&:link,
-            //&:active,
-            //&:visited {
-            //    color: @eia-blue;
-            //    text-decoration: none;
-            //}
             &:hover{
                 text-decoration: underline;
                 color:@eia-blue;
             }
-        }
+		}
         &.highlight-col-1 {
             td:nth-child(1) {
                 background-color: #f7f7f7;
+            }
+            tr {
+                &.bold {
+                    td:nth-child(1) {
+                        background-color: white;
+                    }
+                }
+            }
+            tfoot {
+                td {
+                    &.footnotes {
+                        background-color: white;
+                    }
+                }
             }
         }
         &.highlight-col-2 {
@@ -130,15 +140,14 @@
                 text-align: left;
             }
         }
-
-
         &.align-right-col-1 {
             th:nth-child(1),
             td:nth-child(1) {
                 text-align: right;
             }
         }
-        &.align-right-col-2 {
+		/*
+		&.align-right-col-2 {
             th:nth-child(2),
             td:nth-child(2) {
                 text-align: right;
@@ -191,8 +200,68 @@
             td:nth-child(10) {
                 text-align: right;
             }
+		}
+		*/
+        &.align-center-col-1 {
+            th:nth-child(1),
+            td:nth-child(1) {
+                text-align: center;
+            }
         }
-
+        &.align-center-col-2 {
+            th:nth-child(2),
+            td:nth-child(2) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-3 {
+            th:nth-child(3),
+            td:nth-child(3) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-4 {
+            th:nth-child(4),
+            td:nth-child(4) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-5 {
+            th:nth-child(5),
+            td:nth-child(5) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-6 {
+            th:nth-child(6),
+            td:nth-child(6) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-7 {
+            th:nth-child(7),
+            td:nth-child(7) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-8 {
+            th:nth-child(8),
+            td:nth-child(8) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-9 {
+            th:nth-child(9),
+            td:nth-child(9) {
+                text-align: center;
+            }
+        }
+        &.align-center-col-10 {
+            th:nth-child(10),
+            td:nth-child(10) {
+                text-align: center;
+            }
+        }
 
         &.hide-1 {
             th:nth-child(1),
@@ -276,8 +345,7 @@
             .font;
             .bold;
             a {
-                color: @eia-blue;
-                //font-size: 0.750rem; 
+                color: @eia-blue; 
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
@@ -292,47 +360,76 @@
                 .normal;
                 text-transform: none;
             }
-            p {
+            p, span {
                 .normal;
-                .font;
                 font-size: 0.750rem; // 12 pixels
                 text-transform: none;
             }
         }
         thead {
-            tr {
-                &.double-header {
+            th {
+				font-size: .750rem;
+				.align-right;
+				.bold;
+				padding: 6px 10px 5px 10px;
+                background-color: white; // required for sticky table header
+                vertical-align: bottom;
+                &.divider {
+                    border-color: @eia-white;
+                    padding: 0;
+                    width: 6px;
+				}
+				&:first-child {
+					.align-left;
+					&.divider {
+						border-color: @eia-white;
+						padding: 0;
+						width: 6px;
+					}
+				}
+			}
+			th[colspan] {
+				border-bottom: 1px solid #d8d8d8;
+				border-right: 6px solid @eia-white;
+				text-align: center;
+				&:last-child {
+					border-right: none;
+				}
+			}
+			/*
+			&.double-header {
+                tr {
                     th[colspan] {
-                        border-bottom: 1px solid #d8d8d8;;
-                        border-right: 6px solid #fff;
-                        .align-left;
+                        border-bottom: 1px solid #d8d8d8;
+                        border-right: 6px solid @eia-white;
+                        text-align: center;
                         &:last-child {
                             border-right: none;
                         }
                     }
                 }
-                th {
-                    font-size: .750rem;
-                    color: @eia-dark-grey;
-                    .font;
-                    .bold;
-                    &.divider {
-                        border-color:  #fff;
-                        padding: 0;
-                        width: 6px;
+            }
+            tr {
+                &.double-header {
+                    th[colspan] {
+                        border-bottom: 1px solid #d8d8d8;
+                        border-right: 6px solid @eia-white;
+                        text-align: center;
+                        &:last-child {
+                            border-right: none;
+                        }
                     }
-
                 }
                 td {
                     color: RED;// used to identify bad formatted HTML tables
                 }
-            }
+			}
+			*/
             &.nested-header {
                 th {
-                    border-top: 1px solid #d8d8d8;;
-                    background-color: #fff;
+                    border-top: 1px solid #d8d8d8;
+                    background-color: @eia-white;
                     padding: 8px 10px 7px 10px;
-                    font-weight: 13px;
                 }
             }
         }
@@ -341,83 +438,87 @@
                 td {
                     font-size: .750rem;
                     color: @eia-dark-grey;
-                    .font;
                     h4 {
                         margin: 0;
                         padding: 0;
-                    }
-                    &.divider {
-                        border-color: #fff;
-                        padding: 0;
-                        width: 6px;
-                        &:first-child {
-                            td {
-                                border-top: 3px solid #fff;
-                            }
-                        }
-                    }
-        
+					}
+					/*
+
+*/
+					&.indent-1 {
+						padding-left: 20px;
+					}
+					&.indent-2 {
+						padding-left: 40px;
+					}
+					&.indent-3 {
+						padding-left: 60px;
+					}
+//						}
+//					}
                 }
-                /*
-                &.past-holiday{
-                    td {
-                        border-bottom:1px solid #d8d8d8;;
-                        color:fade(@eia-black, 40%);
-                    }
-                }
-                &.total {
-                    td {
-                        .semi-bold;
-                    }
-                }
-                */
                 &.indented {
                     td {
                         &:first-child {
                             padding-left: 20px;
+						}
+					}
+                }
+                &.total,
+                &.bold {
+                    td {
+                        .bold;
+                        a {
+                            .bold;
                         }
-                        &.indented {
-                            padding-left: 20px;
+                        &.bold {
+                            .bold;
+                            a {
+                                .bold;
+                            }  
                         }
+                    }
+                }
+                &.total,
+                &.tr-divider {
+                    td {
+                        color: black;
+                        border-top: 1px solid #d8d8d8;
                     }
                 }
             }   
         }
         tfoot {
-            tr {
-                td {
-                    font-size: .750rem;
-                    color: @eia-dark-grey;
-                    .font;
+            td {
+                font-size: .750rem;
+                &.footnotes {
+                    background-color: white;
+                    border-bottom: none;
+                    font-size: 0.625rem; // 10 pixels	
+                    //font-size: 0.688rem; // 11 pixels
                 }
-            }    
+            }   
         }
     }
     // this applies the styles to all new tables (just incase there's old ones thst we don't want to mess up
-    .l-row {
+//    .l-row {
         table {
             thead {
                 tr {
                     th {
                         vertical-align: bottom;
-                        .align-left;                     
+//                        .align-left;                     
                         padding: 6px 10px 5px 10px;
                     }
-                    /*
-                    &:last-child {
-                        th {
-                            border-bottom: 3px solid #d8d8d8;
-                        }
-                    }
-                    */
                 }
             }
+
             tbody {
                 tr {
                     td {
                         vertical-align: top;
                         padding: 6px 10px 5px 10px;
-                        border-bottom: 1px dashed #d8d8d8;
+                        //border-bottom: 1px dashed #d8d8d8;
                     }
                     /*
                     &:last-child {
@@ -425,7 +526,7 @@
                             border-bottom: 1px solid #d8d8d8;
                         }
                     }
-                    */
+
                     &:first-child {
                         td {
                             border-top: 3px solid @eia-blue;
@@ -436,7 +537,8 @@
                         td {
                             border-bottom: none;
                         }
-                    } 
+                    }
+                                        */
                 }   
             }
             tfoot {
@@ -453,6 +555,6 @@
                 }    
             }
         }
-    }
+//    }
 }
 

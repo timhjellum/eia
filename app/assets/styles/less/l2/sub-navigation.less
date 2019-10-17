@@ -14,17 +14,29 @@
 			border-bottom: 1px solid @eia-blue;
 			ul {
 				list-style: none;
-				&.left-nav {
+				ul {
 					list-style: none;
+					li {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+				}
+				&.left-nav {
+					//list-style: none;
 					margin: 2px 0 0 22px;
 					li {
 						float: left;
 						background-color: @eia-white;
 						padding: 10px 10px 10px 10px;
 						text-transform: uppercase;
-						.font;
+						//.font;
 						font-size: 0.9375rem;
+						
+
 						a {
+							line-height: 1.0;
+							/*
 							&:link,
 							&:active,
 							&:visited {
@@ -35,12 +47,15 @@
 								text-decoration: underline;
 								color:@eia-blue;
 							}
+							*/
 						}
+
 						&.active {
 							border: 1px solid @eia-blue;
 							border-bottom: 1px solid @eia-white;
 							position: relative;
 							margin-bottom: -1px;
+							/*
 							a {
 								&:link,
 								&:active,
@@ -53,6 +68,7 @@
 									text-decoration: none;
 								}
 							}
+							*/
 						}
 					}
 				}
@@ -73,16 +89,25 @@
 			.left;
 			ul {
 				list-style: none;
-				&.left-nav {
+				ul {
 					list-style: none;
+					li {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+				}
+				&.left-nav {
 					margin: 0;
 					padding: 0;
+					list-style: none;
 					&>li {
 						margin: 0;
 						padding: 0 6px 0 6px;
 						border-right: 1px solid #d8d8d8;;
 						border-right: 1px solid shade(white, 7.0%);
 						float: left;
+						line-height: 1.0;
 						&:first-child {
 							padding: 0 6px 0 0;
 						}
@@ -91,7 +116,23 @@
 							padding: 0 0 0 6px;
 						}
 						a {
-							.font;
+							
+							/*
+							&:link,
+							&:active,
+							&:visited {
+								color:@eia-blue;
+								text-decoration: none;
+							}
+							&:hover{
+								text-decoration: underline;
+								color:@eia-blue;
+							}
+							*/
+						}
+
+						a {
+							//.font;
 							font-size: 12px;
 							display: block;
 							color: tint(@eia-black, 60%);
@@ -101,6 +142,7 @@
 								display: none;
 							}
 						}
+
 						&.active {
 							a {
 								color: @eia-blue;

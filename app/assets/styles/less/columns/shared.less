@@ -1,0 +1,151 @@
+
+.article-alt,
+.article,
+.primary-alt,
+.primary,
+.secondary-alt,
+.secondary,
+.accordion-content,
+.tab-content {
+    margin-bottom: 2em;
+    width: 100%;
+    li {
+        .ico {
+            margin-right: 8px;
+			display: inline-block;
+        }
+    }
+}
+
+
+.primary-alt,
+.primary,
+.secondary-alt,
+.secondary,
+.accordion-content,
+.tab-content {
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            list-style: none;
+        }
+        ul {
+            //padding: 0;
+            //margin: 0;
+            li {
+                margin: 3px 0 0 17px;
+                list-style-type: disc;
+            }
+        }
+    }
+}
+.accordion-content {
+    ul {
+        li {
+            margin: 0 0 5px 0;
+        }
+    }
+}
+
+
+.secondary-alt,
+.secondary {
+    &.align-with-tabs {
+        margin-top: 30px;
+    }
+}
+
+
+.formats {
+    .italic;
+    a {
+        display: inline-block;
+        .ico {
+            &:before {
+                display: inline-block;
+            }
+            span {
+                margin: 0 0 0 2px;
+            }								
+        }
+    }
+}
+.indent {
+    margin-left: 35px;
+    &.indent {
+        margin-left: 70px;
+        &.indent {
+            margin-left: 100px;
+        }
+    }
+}
+.release-schedule,
+.formats,
+.source {
+    .italic;
+}
+.normal {
+    font-style: normal;
+    color: @eia-dark-grey;
+}
+.release-date {
+    .italic;
+    color: #999;
+}
+.date {
+    font-style: normal;
+    color: #999;
+}
+
+// move to primary
+
+.primary-alt {
+    ul {
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+li {
+	&.contact,
+	&.downloadable-files {
+		span {
+			&.label {
+				.italic;
+				display: inline;
+			}
+			&.pipe {
+				padding-left: 0;
+				display: inline;
+			}
+		}
+		a {
+			display: inline-block;
+		}
+	}
+	&.contact {
+		a[href^="tel:"] {
+			color: @eia-dark-grey;
+			text-decoration: none;
+			&:hover {
+				color: @eia-dark-grey;
+				text-decoration: none;
+			}
+		}
+		a {
+			padding: 0 8px 0 0;
+		}
+		@media @mobile-only {
+			a[href^="tel:"] {
+				color: @eia-blue;
+				text-decoration: none;
+			}
+		}
+	}
+}

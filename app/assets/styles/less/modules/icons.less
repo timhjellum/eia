@@ -1,17 +1,8 @@
-
-a,
-i,
-span {
-
+p {
 	&.ico {
-		//&>span {
-		//	.font;
-		//	.normal;
-		//	font-size: 0.750rem; 
-		//	color: @eia-blue;
-		//	text-transform: uppercase;
-		//}
-		&.pdf,
+		&.pdf
+/*
+		,
 		&.xls,
 		&.json,
 		&.csv,
@@ -19,35 +10,24 @@ span {
 		&.html,
 		&.doc,
 		&.image,
-		&.interactive {
+		&.interactive,
+		&.efile,
+		&.pedro
+		*/
+		{
 			&:before {
 				display: inline-block;
-				margin-bottom: -3px;
-				margin-right: 3px;
-			}
-			&:after {
-				display: inline-block;
-				margin-bottom: -3px;
-				margin-left: 3px;
-			}
-			&.icon-only {
-				margin: 0;
-				&:before {
-					margin-bottom: 0;
-					margin-right: 0;
-				}
-				&:after {
-					margin-bottom: 0;
-					margin-left: 0;
-				}
-				&>span {
-					font-size: 0;
-					line-height: 0;
-					margin: 0;
-				}
+				padding: 0;
+				margin: 0 4px -1px 0;
 			}
 		}
 	}
+}
+
+
+a,
+i,
+span {
 	&.rss {
 		&:before {
 			height: 20px;
@@ -85,7 +65,123 @@ span {
 			margin-right: 6px;
 		}
 	}
+	&.ico {
+		font-size: 0;
+		line-height: 0;
+		//display: inline-block; <-- no!!
+		span {
+			.font;
+			.normal;
+			font-size: 0.750rem;
+			color: @eia-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+			margin-left: 3px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro	{
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+//margin-right: 5px;
+			}
+//		}
+			&:after {
+				display: inline-block;
+				margin-bottom: -3px;
+//margin-left: 5px;
+			}
+//		}
+			&.icon-only {
+				&>span {
+					font-size: 0;
+					line-height: 0;
+					margin: 0;
+				}
+			}
+		}
+	}
 }
+
+	
+li,
+div,
+td {
+	&.ico {
+		margin: 0;
+		//a[href] {
+		//	padding-left: 20px;
+		//}
+		a[href] {
+			//display: table; this doesn't work of there's a (map) afterwards
+			//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+			padding-left: 20px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro	{
+			position: relative;
+			&:before {
+				position: absolute;
+			}
+		}
+	}
+}
+
+li {
+	&.ico {
+		list-style: none;
+		margin-left: 0;
+		min-height: 15px; // same as icon
+		padding-bottom: 6px;
+	}
+}
+div {
+	&.ico {
+		padding-left: 6px;
+		min-height: 15px; // same as icon
+		padding-top: 6px;
+		/*
+		a {
+			line-height: 1.4; // important
+			display: table;
+		}
+		*/
+	}
+}
+table {
+	&.basic-table {
+		td {
+			&.ico {
+				padding-left: 6px;
+				min-height: 15px; // same as icon
+				a {
+					margin-top: 2px;
+				}
+			}
+		}
+	} 
+} 
+
+
 
 .dashboard {
 	a {
@@ -108,18 +204,17 @@ a {
 	&.ico {
 		text-decoration: none;
 		cursor: pointer;
-
 	}
 	text-decoration: none;
 	span {
 		&.inline {
 			white-space: nowrap;
-			margin-right: 5px;
 			.ico {
-				margin-left: 0;
-				span {
-					display: none;
-				}
+				margin: 0;
+				display: inline;
+				//span {
+				//	display: none;
+				//}
 			}
 		}
 	}
@@ -128,65 +223,30 @@ a {
 		span {
 			&.inline {						
 				text-decoration-line: underline;
-				text-decoration-color: white;
+				//text-decoration-color: white;
 				.ico {
 					text-decoration-line: underline;
 					text-decoration-color: @eia-blue;
-					span {
-						display: none;
-					}
+					//span {
+					//	display: none;
+					//}
 				}
 			}
 		}
 	}
 }
-a,
-i,
-span {
-	&.ico {
-		font-size: 0;
-		line-height: 0;
-		span {
-			.font;
-			.normal;
-			font-size: 0.750rem;
-			color: @eia-blue;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-		/*
-		&:before {
-			display: inline-block;
-    		margin-bottom: -3px;
-    		margin-right: 5px;
-		}
-		&:after {
-			display: inline-block;
-    		margin-bottom: -3px;
-    		margin-left: 5px;
-		}
-		*/
-		&.icon-only {
-			margin: 0;
-			&:before {
-				margin-bottom: 0;
-				margin-right: 0;
-			}
-			&:after {
-				margin-bottom: 0;
-				margin-left: 0;
-			}
-			&>span {
-				font-size: 0;
-				line-height: 0;
-				margin: 0;
-			}
-		}
-	}
-}
+ 
 
 
+
+
+
+
+
+
+
+
+/*
 td,
 div {
 	&.ico {
@@ -204,9 +264,16 @@ div {
 				display: inline-block;
 				margin: 0 6px -1px 0;
 			}
+			a {
+				display: block;
+				position: relative;
+				top: -16px;
+				left: 26px;
+			}
 		}
 	}
 }
+*/
 
 
 
@@ -238,27 +305,36 @@ div {
 	}
 }
 
-
-/* side column */
-.secondary,
-.secondary-alt {
-	ul {
+ul {
+	&.icon-list {
 		li {
-			&.rss,
-			&.email {
-				&:before {
-					height: 20px;
-					width: 20px;
-					display: inline-block;
-					vertical-align: top;
+			&.head {
+				margin: 0;
+			}
+			&.ico {
+				min-height: 44px;
+				display: inline-block;
+				width: 100%;
+				a[href] {
+					//display: table; this doesn't work of there's a (map) afterwards
+					//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+					padding-left: 0;
 				}
-				a {
-					width: (100% - 30px);
-					display: inline-block;
-					margin-left: 12px;
+				&.rss-complex-icon {
+					&:before {
+						.icon-rss-complex(@fill-color: @eia-green, @fill-color-lt: @eia-green);
+						background-size: 60%;
+					}
 				}
 			}
 		}
 	}
-
 }
+
+
+
+
+
+
+		
+	

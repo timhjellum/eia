@@ -1,8 +1,8 @@
 
-.tabs,
-.page_tabs {
-    //background: none;
-    //border: none;
+.tabs
+//,
+//.page_tabs 
+{
     padding: 0;
     margin: 0;  
     display: block;
@@ -110,7 +110,48 @@
     }
 }
 
-
+@media @mobile-only {
+    .tabs {
+        /*
+        padding: 0;
+        margin: 0;  
+        display: block;
+        width: 100%;
+        */   
+        &>ul {
+            //list-style: none;
+            //position: relative;
+            //width: 100%; 
+            //padding: 0;
+            //margin: 0;  
+            //display: table;
+            border: none;
+            li {
+                //margin: 0 1px 1px 0;
+                float: none;
+                width: 100%;
+                clear: both;
+                &.ui-state-default {
+                    border-top: none;
+                    border-right: none;
+                    border-bottom-width: 1px;
+                    border-bottom-color: white;
+                    border-left: none;
+                    margin: 0;
+                    &.ui-tabs-active {
+                        &.ui-state-active {
+                            border-top: none;
+                            border-right: none;
+                            border-bottom-width: 1px;
+                            border-bottom-color: white;
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

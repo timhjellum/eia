@@ -1,6 +1,9 @@
 import FancyBox from './modules/fancybox';
 new FancyBox();
 
+import AZ from './modules/a-z';
+new AZ();
+
 import HeaderMenu from './modules/header-menu';
 new HeaderMenu();
 
@@ -13,8 +16,8 @@ new HeaderSearch();
 import SocialSticker from './modules/social-sticker';
 new SocialSticker();
 
-//import ScrollTo from './modules/scroll-to';
-//new ScrollTo();
+import ScrollTo from './modules/scroll-to';
+new ScrollTo();
 
 import BxSlider from './modules/bxslider';
 new BxSlider();
@@ -44,5 +47,3 @@ new DropDown();
 
 import ShrinkExpand from './modules/header-shrink-expand';
 new ShrinkExpand();
-
-

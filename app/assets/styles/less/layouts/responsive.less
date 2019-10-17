@@ -23,10 +23,11 @@
         &.l-two-col-right,
         &.l-two-col-right-wide,
         &.l-two-col-even,
-        &.l-three-col-even,
-        &.l-four-col-even,
-        &.l-five-col-even,
-        &.l-six-col-even {
+        &.l-three-col-even, //<--- fallback only - should be nested only
+        &.l-three-col,
+        &.l-four-col-even,  //<--- fallback only - should be nested only
+        &.l-five-col-even,  //<--- fallback only - should be nested only
+        &.l-six-col-even {  //<--- fallback only - should be nested only
             padding: 0 22px;
         }
         &.l-two-col-right-narrow {
@@ -43,6 +44,7 @@
             &.l-two-col-right-wide,
             &.l-two-col-even,
             &.l-three-col-even,
+            &.l-three-col,
             &.l-four-col-even,
             &.l-five-col-even,
             &.l-six-col-even,
@@ -63,6 +65,7 @@
             &.l-two-col-right-wide,
             &.l-two-col-even,
             &.l-three-col-even,
+            &.l-three-col,
             &.l-four-col-even,
             &.l-five-col-even,
             &.l-six-col-even,
@@ -72,5 +75,3 @@
 		}
     }
 }
-
-

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>EIA Style Guide</title>
-<!-- build:ico ../assets/images/favicon.ico -->
+    <!-- build:ico ../assets/images/favicon.ico -->
     <link rel="icon" href="../src/images/favicon.ico">
     <!-- endbuild -->
     <!-- build:png ../assets/images/apple-touch-icon.png -->
@@ -42,1900 +43,335 @@
     <script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
     <!-- endbuild -->
 </head>
-<body>
-<div class="l-body-wrapper l-full-page">
-    <span class="add-header"></span>
-    <div class="l-outer-wrapper">
-        <div class="l-inner-wrapper">
-            <!-- start style guide -->
-            <!-- start style guide -->
-            <!-- start style guide -->
-            <div class="_container">
-                <div class="_content">
-                    <!-- div class="_content-inner" -->
 
-			                <!-- start style guide -->
-			                <!-- start style guide -->
-			                <!-- start style guide -->
-                        
+<body>
+    <div class="l-body-wrapper l-full-page">
+        <span class="add-header"></span>
+        <div class="l-outer-wrapper">
+            <div class="l-inner-wrapper">
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <!-- start style guide -->
+                <div class="_container">
+                    <div class="_content">
+                        <!-- start style guide -->
+                        <!-- start style guide -->
+                        <!-- start style guide -->
                         <ul class="style-guide">
                             <li class="style-guide">
-                                    <h1 class="_h1">Layouts</h1>
-                        <h3 class="_h3">Introduction</h3>
-                        <p class="_p">We leverage CSS to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor are called <a href="https://wwwdev.eia.gov/style-guide/modules/index.html">Modules</a> and include <a href="../modules/accordion.html">Accordions</a>,
-                            <a href="../modules/fancybox.html">Modals</a>, and <a href="../modules/tabs.html">Tabs</a>; while the major <a href="./components/">Components</a> include the <a href="./components/header.html">header</a> and <a href="./components/footer.html">footer</a>.</p>
+                                <a name="top"></a>
+                                <h1 class="_h1">Page Layouts</h1>
+                                <h3 class="_h3">Introduction</h3>
+<p class="_p">
+    Page layouts have two required definitions, <a href="row-examples.html">rows</a> and <a href="examples.html">columns</a>. You should be familiar with both in order to use them correctly. Below are the available page layouts:
+</p>
 
-                        <!--
-            <p class="_p">One other thing to note in the Layout example is the naming convention that I have used. The declarations that use ID selectors are named accurately and with no particular namespacing. The class-based selectors, however, <em>do</em> use an
-            <code>l-</code> prefix. This helps easily identify the purpose of these styles and separate them from Modules or States. Layout styles are the only primary category type to use ID selectors, if you choose to use them at all. If you wish
-            to namespace your ID selectors, you can, but it is not as necessary to do so.</p>
+
+
+                                    <a href="examples.html#l-full-width-col" class="prototype-link l-full-width-col">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w100">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-left-narrow" class="prototype-link l-two-col-left-narrow">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                            <div class="prototype-column-container w75">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-left" class="prototype-link l-two-col-left">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w33">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                            <div class="prototype-column-container w66">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-right-wide" class="prototype-link l-two-col-right-wide">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w42">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                            <div class="prototype-column-container w58">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-even" class="prototype-link l-two-col-even">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w50">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w50">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-left-wide" class="prototype-link l-two-col-left-wide">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w58">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w42">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-right" class="prototype-link l-two-col-right">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w66">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w33">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-two-col-right-narrow" class="prototype-link l-two-col-right-narrow">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w75">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-three-col" class="prototype-link l-three-col">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                            <div class="prototype-column-container w50">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column prototype-secondary"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-three-col-even" class="prototype-link l-three-col-even">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w33">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w33">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w33">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-four-col-even" class="prototype-link l-four-col-even">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w25">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-five-col-even" class="prototype-link l-five-col-even">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w20">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w20">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w20">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w20">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w20">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="examples.html#l-six-col-even" class="prototype-link l-six-col-even">
+                                        <div class="prototype-thumb">
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                            <div class="prototype-column-container w16">
+                                                <div class="prototype-column"></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <p class="_p">Layout class names begin with a <code>l-row <span class="l-full-width-col">l-full-width-col</span><span class="l-two-col-left-narrow">l-row l-two-col-left-narrow</span><span class="l-two-col-left" class="prototype-link ">l-row l-two-col-left"</span><span class="l-two-col-right-wide">l-row l-two-col-right-wide</span><span class="l-two-col-even">l-row l-two-col-even</span><span class="l-two-col-left-wide">l-row l-two-col-left-wide</span><span class="l-two-col-right">l-row l-two-col-right</span><span class="l-two-col-right-narrow">l-row l-two-col-right-narrow</span><span class="l-three-col">l-three-col</span><span class="l-three-col-even">l-row l-three-col-even</span><span class="l-four-col-even">l-row l-four-col-even</span><span class="l-five-col-even">l-row l-five-col-even</span><span class="l-six-col-even">l-row l-six-col-even</span></code>.</p>
+    
+                            </li>
+
+
+
+                            <li class="style-guide">
+                                <h3 class="_h3">Architecture</h3>
+                                <p class="_p">We leverage a custom <a href="https://www.w3schools.com/css/css_grid.asp">CSS Grid</a> system for the page layouts. The page layouts allow for the pages and elements on the page to be responsive based on the users' media device (e.g. print, mobile, laptop, desktop). To accomplish this, we use break points based off of the width of the users' media device. The breakpoints are as follows:</p>
+                                <div class="basic-table">
+                                    <table class="basic-table align-left-col-4">
+                                        <thead>
+                                            <tr>
+                                                <th>Break Name</th><th>Minimum Width (px)</th><th>Maximum Width (px)</th><th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>mobile</td>
+                                                <td>1</td>
+                                                <td>479</td>
+                                                <td>Smartphones, portrait iPhone, portrait 480x320 phones (Android)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mobile-landscape</td>
+                                                <td>480</td>
+                                                <td>599</td>
+                                                <td>Smartphones, Android phones, landscape iPhone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>tablet</td>
+                                                <td>600</td>
+                                                <td>800</td>
+                                                <td>Mobile panorama</td>
+                                            </tr>
+                                            <tr>
+                                                <td>tablet-landscape</td>
+                                                <td>801</td>
+                                                <td>955</td>
+                                                <td>Tablet, landscape iPad, lo-resolution laptops and desktops</td>
+                                            </tr>
+                                            <tr>
+                                                <td>laptop</td>
+                                                <td>956</td>
+                                                <td>1355</td>
+                                                <td>big landscape tablets, laptops, and desktops</td>
+                                            </tr>
+                                            <tr>
+                                                <td>desktop</td>
+                                                <td>1366</td>
+                                                <td>2299</td>
+                                                <td>Big landscape tablets, hi-resolution laptops, and desktops</td>
+                                            </tr>
+                                            <tr>
+                                                <td>desktop-lg</td>
+                                                <td>2300</td>
+                                                <td>&#8734;</td>
+                                                <td>Desktop and television</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mobile-only</td>
+                                                <td>1</td>
+                                                <td>599px</td>
+                                                <td>Mmartphones, portrait iPhone, portrait 480x320 phones (Android)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="notice">
+                                    <p>Notice that on the upper right of every page of this style-guide there's a small box with the resolution defined media-query type that you are viewing this page.</p>
+                                </div>
+                                
+                                <!--
+                                    to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor are called <a href="../modules/index.html">Modules</a> and include <a href="../modules/accordion.html">Accordions</a>,
+                                        <a href="../modules/fancybox.html">Modals</a>, and <a href="../modules/tabs.html">Tabs</a>; while the major <a href="../components/">Componentsinclude the <a href="../components/header.html">headerand <a href="../components/footer.html">footer</a>.</p>
+
             -->
 
-                        <h2 class="_h2">Naming Conventions</h2>
-                        <ul class="_ul">
-                            <li>All style naming conventions use classes and not ID selectors.</li>
-                            <li>All class names are lowercase and hyphenated.</li>
-                            <li>Layout class names begin with a <code>l-</code>.</li>
-                        </ul>
 
-                        <h2 class="_h2">Examples</h2>
 
-                        <div class="_example">
-                            <p class="_p">Bad CSS structure might look something like this:</p>
-                            <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
+                        </li>
+
+
+
+                        <li class="style-guide">
+                            <h3 class="_h3">Naming Conventions</h3>
+                                <ul class="_ul">
+                                    <li>All style naming conventions use classes and not ID selectors.</li>
+                                    <li>All class names are lowercase and hyphenated.</li>
+                                    <li>Layout class names begin with a <code>l-</code>.</li>
+                                </ul>
+
+
+                                <h2 class="_h2">Examples</h2>
+
+                                <div class="_example">
+                                    <p class="_p">Bad CSS structure might look something like this:</p>
+                                    <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
 &lt;div id="Row"&gt;&lt;/div&gt;
     &lt;div class="Row_Header"&gt;&lt;/div&gt;
 &lt;div class="row"&gt;&lt;/div&gt;
 </code></pre>
-                        </div>
-                        <div class="_example">
-                            <p class="_p">Good CSS structure might look something like this:</p>
-                            <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
-&lt;div class="l-row"&gt;&lt;/div&gt;
-    &lt;div class="l-row l-header"&gt;
+                                </div>
+                                <div class="_example">
+                                    <p class="_p">Good CSS structure might look something like this:</p>
+                                    <pre><code class="html">&lt;!-- examples of bad naming conventions --&gt;
+&lt;div class="l-row l-header"&gt;&lt;/div&gt;
+    &lt;div class="l-col"&gt;
 &lt;/div&gt;
 </code></pre>
-                        </div>
-                        <h1 class="_h2">The Structure</h2>
-                        <p class="_p">Layouts are brokendown into two parts, Rows and Columns.</p>
-                        <p class="_p">All content should live within a row in order for it to responsively adapt to the <span class="_page _laptop">15px</span><span class="_page _tablet-landscape">16px</span><span class="_page _tablet">16px</span><span class="_page _mobile-landscape">12px</span>
-                            <span class="_page _mobile">12px</span> page wrapper.</p>
-                        <p class="_p">There's only two types of row class names, <code>l-row</code> and <code>l-row header</code>. The difference it that the default row adds a <span class="_row">22px</span> space on the left and sometimes has a <span class="_col">22px</span> space on the right (based on the type of content). As a developer or content editor, always use the <code>l-row</code> as the other is reserved for special applications.</p>
-                        <div class="_example">
-                            <p class="_p">Good CSS structure might look something like this:</p>
-                            <pre><code class="html">&lt;!-- default row --&gt;
-&lt;div class="l-row"&gt;&lt;/div&gt;
-</code></pre>
-                        </div>
-                        
-                    </li>
-                    <li class="style-guide dally-row-one-one">
-                        <h2 class="_h2">Rows</h2>
-                        <h3 class="_h3">Row (Default)</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_row-one-one-one"></span><span>px</span> or 100%</li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _row-one-one-one">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="5"><div class="l-row header l-full-width-col">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                            
-                            <!--pre><code class="html">&lt;!-- header row --&gt;
-&lt;div class="l-row l-full-width-col"&gt;
-    &lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre-->
-                    </li>
+                                <h1 class="_h2">The Structure</h2>
+                                    <p class="_p">Page layouts have two required definitions, <a href="row-examples.html">rows</a> and <a href="examples.html">columns</a>.</p>
+                                    <!--
+p class="_p">All content should live within a row in order for it to responsively adapt to the <span class="_page _laptop">15px</span><span class="_page _tablet-landscape">16px</span><span class="_page _tablet">16px</span><span class="_page _mobile-landscape">12px</span>
+                                        <span class="_page _mobile">12px</span> page wrapper.</p>
 
-                    <!--  _   _                _             ____                -->
-                    <!-- | | | | ___  __ _  __| | ___ _ __  |  _ \ _____      __ -->
-                    <!-- | |_| |/ _ \/ _` |/ _` |/ _ \ '__| | |_) / _ \ \ /\ / / -->
-                    <!-- |  _  |  __/ (_| | (_| |  __/ |    |  _ < (_) \ V  V /  -->
-                    <!-- |_| |_|\___|\__,_|\__,_|\___|_|    |_| \_\___/ \_/\_/   -->
+                                    -->
 
 
-                    <li class="style-guide dally-row-one-two">
-                        <h3 class="_h3">Header Row</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_row-one-two-one"></span><span>px</span> or 100%</li>
-                            <li class="_end"></li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row header l-full-width-col">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _row-one-two-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="5"><div class="l-row header l-full-width-col">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                            
-                            
-<!-- pre><code class="html">&lt;!-- header row --&gt;
-&lt;div class="l-row header l-full-width-col"&gt;
-    &lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre -->
-
-                    </li>
-                    <li class="style-guide">
-                        <!--      ____      _                            -->
-                        <!--     / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--    | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--    | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--     \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h1 class="_h1">Columns</h1>
-                        <!--      ____      _                            -->
-                        <!--     / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--    | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--    | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--     \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <p class="_p">Layouts are brokendown into two parts, Rows and Columns.</p>
-                        <p class="_p">All content (modules) should live within a column nested in a row in order for it react responsively.</p>
-                        <p class="_p">There's are many types of column class names to include: <code>l-col</code>, <code>l-full-width-col</code>, <code>l-col</code>, <code>l-col</code>, <code>l-col</code>, <code>l-col</code>, <code>l-col</code>,
-                            <code>l-col</code>, and <code>l-col</code>. By combining them in logical sequences, the modules will move, adapt, expand, contract to the users' page resolution on their media device. Columns can be nested
-                            as well but the examples below are all of the column layouts that fir the needs of the EIA website.</p>
-                    </li>
-                    <li class="style-guide dally-one-one">
-                        <!--      ___                ____      _                            -->
-                        <!--     / _ \ _ __   ___   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--    | | | | '_ \ / _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--    | |_| | | | |  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--     \___/|_| |_|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h2 class="_h2">Single Columns</h2>
-                        <!--      ___                ____      _                            -->
-                        <!--     / _ \ _ __   ___   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--    | | | | '_ \ / _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--    | |_| | | | |  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--     \___/|_| |_|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">One Column</h3>
-                        <p>The fullpage row is similar to the
-                            <code>class="l-row l-header</code> but can be applied to the entire section. An example might include a 'dashboard' page with multiple rows and columns.</p>
-                        <ul class="dally">
-                            
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-one-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">100%</span>
-                                <span class="_desktop">100%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-full-width-col">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-one-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="5"><div class="l-row l-full-width-col">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                            
-                            
-                            <!--pre><code class="html">&lt;!-- 100% --&gt;
-&lt;div class="l-row l-full-width-col"&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre-->
-                    </li>
-
-
-
-                    <li class="style-guide dally-two-one">
-                        <!--     _______      _____     ___ ___  _   _   _ __  __ _  _ ___     -->
-                        <!--    |_   _\ \    / / _ \   / __/ _ \| | | | | |  \/  | \| / __|    -->
-                        <!--      | |  \ \/\/ / (_) | | (_| (_) | |_| |_| | |\/| | .` \__ \    -->
-                        <!--      |_|   \_/\_/ \___/   \___\___/|____\___/|_|  |_|_|\_|___/    -->
-                        <h2 class="_h2">Two Column</h2>
-                        <!--     _______      _____     ___ ___  _   _   _ __  __ _  _ ___     -->
-                        <!--    |_   _\ \    / / _ \   / __/ _ \| | | | | |  \/  | \| / __|    -->
-                        <!--      | |  \ \/\/ / (_) | | (_| (_) | |_| |_| | |\/| | .` \__ \    -->
-                        <!--      |_|   \_/\_/ \___/   \___\___/|____\___/|_|  |_|_|\_|___/    -->
-                        <h3 class="_h3">Two Columns (25% 75%)</h3>
-                        <p>25% / 75%</p>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">75%</span>
-                                <span class="_desktop">75%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 25% | 75% -->
-                                <div class="l-row l-two-col-left-narrow">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-<!-- start style-guide code -->
-<div class="primary-fixed">
-    <span class="_module-bg _col-two-one-two">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra tellus.
-    </span>
-</div>
-<!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-left-narrow">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                            
-                            
-                            <!--pre><code class="html">&lt;!-- 25% / 75% --&gt; 
-&lt;div class="l-row l-two-col-left-narrow"&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre-->
-                    </li>
-                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                    <li class="style-guide dally-two-two">
-                        <h3 class="_h3">Two Columns (75% 25%)</h3>
-                        <p>75% / 25%</p>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">75%</span>
-                                <span class="_desktop">75%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 75% | 25% -->
-                                <div class="l-row l-two-col-right-narrow">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-two-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-two-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-right-narrow">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                            
-<!--pre><code class="html">&lt;!-- 75% / 25% --&gt; 
-&lt;div class="l-row l-two-col-right-narrow"&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre-->
-                    </li>
-                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <li class="style-guide dally-two-thr">
-                        <h3 class="_h3">Two Columns (58% 41%)</h3>
-                        <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                        <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                        <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                        <p>58.333% / 41.666%</p>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-thr-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">58.333%</span>
-                                <span class="_desktop">58.333%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-thr-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">41.666%</span>
-                                <span class="_desktop">41.666%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 58.333% | 41.666% -->
-                                <div class="l-row l-two-col-right-wide">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-fou-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-fou-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-right-wide">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-                    <li class="style-guide dally-two-thr">
-                        <h3 class="_h3">Two Columns (41% 58%)</h3>
-                        <p>41.666% / 58.333%</p>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">41.666%</span>
-                                <span class="_desktop">41.666%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">58.333%</span>
-                                <span class="_desktop">58.333%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 41.666% | 58.333% -->
-                                <div class="l-row l-two-col-left-wide">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-thr-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-thr-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-left-wide">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-                    <li class="style-guide dally-two-fiv">
-                        <h3 class="_h3">Two Columns (33% 66%)</h3>
-                        <p>33.333% / 66.666%</p>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">33.333%</span>
-                                <span class="_desktop">33.333%</span></li>
-                                
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">66.666%</span>
-                                <span class="_desktop">66.666%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 33.333% | 66.666% -->
-                                <div class="l-row l-two-col-left">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-fiv-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-fiv-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-left">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-                    <li class="style-guide dally-two-six">
-                        <h3 class="_h3">Two Columns (66% 33%)</h3>
-                        <p>66.666% / 33.333%</p>
-
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">66.666%</span>
-                                <span class="_desktop">66.666%</span></li>
-                                
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">33.333%</span>
-                                <span class="_desktop">33.333%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 66.666% | 33.333% -->
-                                <div class="l-row l-two-col-right">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-six-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-six-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-right">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-                    <li class="style-guide dally-two-sev">
-                        <h3 class="_h3">Two Columns (50% 50%)</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-sev-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">50%</span></li>
-                                
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-sev-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">50%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- 50% | 50% -->
-                                <div class="l-row l-two-col-even">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-sev-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-sev-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-even">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** -->
-                    <!-- ***** ***** ***** *****             ***** ***** ***** ***** --
-                    <li class="style-guide dally-two-eig">
-                        <h3 class="_h3">Two Columns (50% / 50%) App</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-eig-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">50%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-two-eig-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">50%</span></li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-
-                                <div class="l-row l-two-col-even">
-                                    <div class="l-col">
-
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-eig-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                             
-                                    </div>
-                                    <div class="l-col">
-                       
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-two-eig-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                             
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<textarea class="_copy-textarea" rows="8"><div class="l-row l-two-col-left-wide">
-        <div class="l-col">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-        <div class="l-col">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
-    </div></textarea>
-    <div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-    </div>
-    <!pre><code class="html">&lt;!-- 50% | 50% --&gt;       
-&lt;div class="l-row l-two-col-even"&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </li
-                    -->
-                    <li class="style-guide dally-thr-one">
-                        <!-- _____ _                      ____      _                            -->
-                        <!-- |_   _| |__  _ __ ___  ___   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--   | | | '_ \| '__/ _ \/ _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--   | | | | | | | |  __/  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--   |_| |_| |_|_|  \___|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h2 class="_h2">3 Columns</h2>
-                        <!-- _____ _                      ____      _                            -->
-                        <!-- |_   _| |__  _ __ ___  ___   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!--   | | | '_ \| '__/ _ \/ _ \ | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!--   | | | | | | | |  __/  __/ | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!--   |_| |_| |_|_|  \___|\___|  \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">Three Columns (25% 50% 25%)</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-thr-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod _mid"><span class="_col-thr-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">50%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-thr-one-thr"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-three-col l-reorder">
-                                    <div class="l-col l-second">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col l-first">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-one-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col l-third">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-one-thr">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="11"><div class="l-row l-three-col">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-                    <li class="style-guide dally-thr-two">
-                        <h3 class="_h3">Three Columns Even (33%)</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-thr-two-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span><span class="_desktop">33.333%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod _mid"><span class="_col-thr-two-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">33.333%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-thr-two-thr"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">33.333%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-three-col-even">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-two-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-two-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-thr-two-thr">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="11"><div class="l-row l-three-col-even">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-<!--pre><code class="html">&lt;div class="l-row l-three-col-even"&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-	&lt;div class="l-col"&gt;Sed id imperdiet quam, tempor euismod lorem.&lt;/div&gt;
-&lt;/div&gt;</code></pre-->
-                    </li>
-                    <li class="style-guide dally-fou-one">
-                        <!-- _____                   ____      _                             -->
-                        <!-- |  ___|__  _   _ _ __   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!-- | |_ / _ \| | | | '__| | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!-- |  _| (_) | |_| | |    | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!-- |_|  \___/ \__,_|_|     \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h2 class="_h2">Four Columns</h2>
-                        <!-- _____                   ____      _                             -->
-                        <!-- |  ___|__  _   _ _ __   / ___|___ | |_   _ _ __ ___  _ __  ___  -->
-                        <!-- | |_ / _ \| | | | '__| | |   / _ \| | | | | '_ ` _ \| '_ \/ __| -->
-                        <!-- |  _| (_) | |_| | |    | |__| (_) | | |_| | | | | | | | | \__ \ -->
-                        <!-- |_|  \___/ \__,_|_|     \____\___/|_|\__,_|_| |_| |_|_| |_|___/ -->
-                        <h3 class="_h3">Four Columns Even (25%)</h3>
-                        <ul class="dally">
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-
-                            <li class="_row _laptop">22px</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-fou-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod _mid"><span class="_col-fou-one-two"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod _mid"><span class="_col-fou-one-thr"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-fou-one-fou"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">100%</span><span class="_tablet">100%</span><span class="_tablet-landscape">100%</span><span class="_laptop">25%</span>
-                                <span class="_desktop">25%</span></li>
-                                <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _laptop">15px</li>
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-four-col-even">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-fou-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-fou-one-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-fou-one-thr">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-fou-one-fou">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="14"><div class="l-row l-four-col-even">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <li class="style-guide dally-six-one">
-
-                        <h2 class="_h2">Five Columns</h2>
-
-                        <h3 class="_h3">Five Columns Even (20%)</h3>
-                        <ul class="dally">
-                            <li class="_start"></li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _laptop">15px</li>
-                            <li class="_row _laptop">22px</li>
-
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">20%</span>
-                                <span class="_desktop">20%</span>
                             </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                          
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">20%</span>
-                                <span class="_desktop">20%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">20%</span>
-                                <span class="_desktop">20%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">20%</span>
-                                <span class="_desktop">20%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">20%</span>
-                                <span class="_desktop">20%</span>
-                            </li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_end"></li>
-
                         </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-six-col-even">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-thr">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-fou">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-fiv">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="17"><div class="l-row l-five-col-even">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-                    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <li class="style-guide dally-six-one">
-                        <!--  ____ _____  __   ____ ___  _    _   _ __  __ _   _ ____  -->
-                        <!-- / ___|_ _\ \/ /  / ___/ _ \| |  | | | |  \/  | \ | / ___| -->
-                        <!-- \___ \| | \  /  | |  | | | | |  | | | | |\/| |  \| \___ \ -->
-                        <!--  ___) | | /  \  | |__| |_| | |__| |_| | |  | | |\  |___) |-->
-                        <!-- |____/___/_/\_\  \____\___/|_____\___/|_|  |_|_| \_|____/ -->
-                        <!--                                                           -->
-                        <h2 class="_h2">Six Columns</h2>
-                        <!--  ____ _____  __   ____ ___  _    _   _ __  __ _   _ ____  -->
-                        <!-- / ___|_ _\ \/ /  / ___/ _ \| |  | | | |  \/  | \ | / ___| -->
-                        <!-- \___ \| | \  /  | |  | | | | |  | | | | |\/| |  \| \___ \ -->
-                        <!--  ___) | | /  \  | |__| |_| | |__| |_| | |  | | |\  |___) |-->
-                        <!-- |____/___/_/\_\  \____\___/|_____\___/|_|  |_|_| \_|____/ -->
-                        <!--                                                           -->
-                        <h3 class="_h3">Six Columns Even (16%)</h3>
-                        <!-- p>6 / (992px - (1px + 15px + 22px + 15px + 1px)) - (44px x 5) = 119px</p -->
-                        <ul class="dally">
-                            <li class="_start"></li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _laptop">15px</li>
-                            <li class="_row _laptop">22px</li>
-
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_end"></li>
-                            <li class="_col _laptop">4%</li>
-                            <li class="_start"></li>
-                            <li class="_mod"><span class="_col-six-one-one"></span><span>px</span> or <span class="_mobile">100%</span><span class="_mobile-landscape">50%</span><span class="_tablet">50%</span><span class="_tablet-landscape">33.333%</span><span class="_laptop">16.6%</span>
-                                <span class="_desktop">16.6%</span>
-                            </li>
-                            <li class="_col _laptop">22px</li>
-                            <li class="_end"></li>
-
-                            <li class="_page _laptop">15px</li>
-                            <li class="_page _tablet-landscape">12px</li>
-                            <li class="_page _tablet">12px</li>
-                            <li class="_page _mobile-landscape">12px</li>
-                            <li class="_page _mobile">12px</li>
-                            <li class="_end"></li>
-
-                        </ul>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <div class="l-row l-six-col-even">
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-one">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-two">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-thr">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-fou">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-fiv">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                    <div class="l-col">
-                                        <!-- start style-guide code -->
-                                        <div class="primary-fixed">
-                                            <span class="_module-bg _col-six-one-six">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem massa, semper nec eros a, lacinia porttitor nunc. Phasellus
-                                                ex dolor, ultricies eu ornare ut, placerat non sapien. Suspendisse sagittis
-                                                risus eu sem suscipit sodales. Vivamus ligula turpis, aliquam et maximus
-                                                vel, tempor sed lectus. Mauris quis posuere massa. Ut quis diam sed mi placerat
-                                                efficitur eu sed felis. Aliquam ipsum metus, bibendum vel ipsum sed, lobortis
-                                                fringilla sem. Vestibulum ut odio id nulla commodo dignissim. Proin a pharetra
-                                                tellus.
-                                            </span>
-                                        </div>
-                                        <!-- end style-guide code -->
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <ul class="_legend">
-                            <li>
-                                <div class="_page"></div> page margin</li>
-                            <li>
-                                <div class="_row"></div> row margin</li>
-                            <li>
-                                <div class="_col"></div> column margin</li>
-                            <li>
-                                <div class="_module"></div> module margin</li>
-                        </ul>
-<div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-<!-- Target -->
-<textarea class="_copy-textarea" rows="20"><div class="l-row l-six-col-even">
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-    <div class="l-col">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-</div></textarea>
-<!-- Trigger -->
-<div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-</div>
-
-                                </li>
-                            </ul>
 
                     </div>
                 </div>
-			    <!-- end style guide -->
-			    <!-- end style guide -->
-			    <!-- end style guide -->
-			</div>
-		</div>
-	</div>
-	<span class="add-footer"></span>
+                <!-- end style guide -->
+                <!-- end style guide -->
+                <!-- end style guide -->
+            </div>
+        </div>
+    </div>
+    <span class="add-footer"></span>
 </body>
 <!-- build:js ../assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
@@ -1943,4 +379,5 @@ Code sample on the online style guide.
 <!-- build:js ../assets/scripts/global.min.js -->
 <script src="../temp/scripts/global.js"></script>
 <!-- endbuild -->
+
 </html>

@@ -12,14 +12,22 @@ var paths = {
 		dest: './app/temp/styles/'
 	},
 	stylesPrint: {
-		src: './app/assets/styles/less/print/*.less',
+		src: './app/assets/styles/less/print/*.less'
 	},
 	stylesStyleGuide: {
-		src: './app/assets/styles/less/style-guide/*.less',
+		src: './app/assets/styles/less/style-guide/*.less'
 	},
-	// temporary: reports
+	// reports
 	stylesReports: {
-		src: './app/assets/styles/less/reports/*.less',
+		src: './app/assets/styles/less/reports/*.less'
+	},
+	// beta
+	stylesBetaBanner: {
+		src: './app/assets/styles/less/beta/banner.less'
+	},
+	// beta
+	stylesBetaFeedback: {
+		src: './app/assets/styles/less/beta/feedback.less'
 	},
 	// scripts
 	scripts: {
@@ -27,14 +35,14 @@ var paths = {
 		dest: './app/temp/scripts/'
 	},
 	scriptsStyleGuide: {
-		src: './app/assets/scripts/modules/style-guide/*.js',
+		src: './app/assets/scripts/modules/style-guide/*.js'
 	},
-	// temporary: reports
+	// reports
 	scriptsReports: {
-		src: './app/assets/scripts/modules/reports/*.js',
+		src: './app/assets/scripts/modules/reports/*.js'
 	},
 	scriptsHighlightSearchResults: {
-		src: './app/assets/scripts/modules/legacy/*.js',
+		src: './app/assets/scripts/modules/legacy/*.js'
 	}
 }
 
@@ -51,6 +59,8 @@ function watch() {
 	gulp.watch(paths.stylesPrint.src, stylesPrint);
 	gulp.watch(paths.stylesStyleGuide.src, stylesStyleGuide);
 	gulp.watch(paths.stylesReports.src, stylesReports);
+	gulp.watch(paths.stylesBetaFeedback.src, stylesBetaFeedback);
+	gulp.watch(paths.stylesBetaBanner.src, stylesBetaBanner);
 	gulp.watch(paths.scripts.src, scripts);
 	gulp.watch(paths.scriptsStyleGuide.src, scriptsStyleGuide);
 	gulp.watch(paths.scriptsReports.src, scriptsReports);
@@ -93,6 +103,32 @@ function stylesReports() {
 		}
 	))
 	.pipe(gulpRename('reports.min.css'))
+	.pipe(gulp.dest(paths.styles.dest));
+}
+function stylesBetaFeedback() {
+	return gulp
+	.src('./app/assets/styles/beta-feedback.css')
+	.pipe(gulpLess())
+	.pipe(gulp.dest(paths.styles.dest))
+	.pipe(gulpUglifyCSS(
+		{
+			maxLineLen: 0,
+		}
+	))
+	.pipe(gulpRename('beta-feedback.min.css'))
+	.pipe(gulp.dest(paths.styles.dest));
+}
+function stylesBetaBanner() {
+	return gulp
+	.src('./app/assets/styles/beta-banner.css')
+	.pipe(gulpLess())
+	.pipe(gulp.dest(paths.styles.dest))
+	.pipe(gulpUglifyCSS(
+		{
+			maxLineLen: 0,
+		}
+	))
+	.pipe(gulpRename('beta-banner.min.css'))
 	.pipe(gulp.dest(paths.styles.dest));
 }
 function stylesPrint() {

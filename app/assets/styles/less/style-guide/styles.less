@@ -1,29 +1,32 @@
 @media screen {
     /* variables & mixins */
-    @import "../base/base";
-    @import "../base/icons-mixins";
-    @import "../base/icons-vars";
-    @import "../base/icons";
-    @import "../base/icons-header";
-    @import "../base/icons-logos";
-    @import "../base/forms";
-    @import "../base/tables";
+    //@import "../base/base";
+    //@import "../base/icons-mixins";
+    //@import "../base/icons-vars";
+    //@import "../base/icons";
+    //@import "../base/icons-header";
+    //@import "../base/icons-logos";
+    //@import "../base/forms";
+    //@import "../base/tables";
     /* style guide */
-    @import "_color-palette";
-    @import "_example";
-    @import "_expand-collapse";
-    @import "_footer";
-    @import "_forms";
-    @import "_header";
-    @import "_icons";
-    @import "_layout";
-    @import "_legend";
-    @import "_module-containers";
-    @import "_page-titles";
-    @import "_resolution";
-    @import "_sitemap";
-    @import "_tabs";
-    @import "_typography";
+    @import "color-palette";
+    @import "example";
+    @import "expand-collapse";
+    @import "footer";
+    @import "forms"; /* remove styles from style guide to global as needed */
+    @import "header";
+    @import "icons";
+    @import "layout";
+    @import "legend";
+    @import "module-containers";
+    @import "page-titles";
+    @import "prototype";
+    @import "resolution";
+    @import "sitemap";
+    @import "tabs";
+    @import "typography";
+    @import "tables";
+    @import "tomorrow";
 }
 
 @media print and (color) {
@@ -33,5 +36,5 @@
     }
 }
 @media print {
-    @import "_print";
+    @import "print";
 }

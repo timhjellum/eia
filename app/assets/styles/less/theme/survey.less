@@ -30,10 +30,19 @@ font-size: 1.500rem; // 24 pixels
 
 //@media @mobile {
     .survey {
+        span {
+            &.fixed-width {
+                width: 180px;
+                &.label {
+                    .italic;
+                    display: inline-block;
+                }
+            }
+        }
         .accordion-content {
             ul {
                 &.numbered {
-                    li {
+                    &>li {
                         span {
                             &.number {
                                 width: 80px;
@@ -44,33 +53,26 @@ font-size: 1.500rem; // 24 pixels
                                     color: #999;
                                 }
                             }
+                            &.fixed-width {
+                                width: 180px;
+                            }
                         }
-                    }
-                    li {
                         padding-left: 80px;
                         &.head {
-                            .note,
                             .alert {
                                 font-weight: 300;
                             }
                         }
-                        .frequency-of-collection,
-                        .number-of-respondents,
-                        .reporting-Requirement,
-                        .legal-citation {
-                            color: #666;
-                            width: 180px;
-                            display: inline-block;
-                        }
-                        .phone-number,
-                        .survey-manager,
-                        .email-address {
-                            color: #666;
-                            width: 60px;
-                            display: inline-block;
-                        }
                         &.sub-head {
                             margin: 12px 0 5px 0;
+                        }
+                    }
+                    ul {
+                        &.highlight {
+                            li {
+                                padding-left: 20px;
+                                //border: 3px solid red;
+                            }
                         }
                     }
                 }

@@ -267,7 +267,6 @@ function copyGeneralFiles() {
         '!./app/modules/**',
         '!./app/states/**',
 		'!./app/themes/**',
-        '!./app/src/**',
 		'!./app/assets/images/**',
 		'!./app/assets/styles/**',
 		'!./app/assets/scripts/**',

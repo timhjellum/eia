@@ -6,6 +6,7 @@ class FancyBox {
 		this.enlargeImage();
 		this.enlargeContent();
 		this.enlargeChart();
+		this.enlargeSVG();
 		this.iFrame();
 		this.iFrameFullWidth();
 		this.iFrameScrollTo();
@@ -13,6 +14,7 @@ class FancyBox {
 		this.fancyBoxInlineTrigger = $('.inline-content-trigger');
 		//this.events();
 	}
+
 	enlargeImage() {
 		$('.enlarge-image').fancybox({
 			padding: 0,
@@ -24,34 +26,91 @@ class FancyBox {
 			},
 		});
 	}
+
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 	/* $$$$$                  enlarge chart                  $$$$$ */
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	
 	enlargeChart() {	
-		$('.enlarge-chart').click(function( event ) {
+		$('.enlarge-chart').click(function(event) {
 			event.preventDefault();
-		  });
-		  $(".enlarge-chart").fancybox({
-			  fitToView	: true,
-			  width		: '70%',
-			  height		: 'auto',
-			  autoSize	: false,
-			  openEffect	: 'none',
-			  closeEffect	: 'none',
-			  afterShow : function() {
-				  $(this.href).highcharts().reflow();
-				  return;
+		});
+		$(".enlarge-chart").fancybox({
+			fitToView	: true,
+			width		: '70%',
+			height		: 'auto',
+			autoSize	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none',
+			afterShow : function() {
+				$(this.href).highcharts().reflow();
+				//chartInnerContainer.highcharts().reflow();
+				return;
 			},
 			afterClose: function () {
-				  $(this.href).css('display','block');
-				  $(this.href).highcharts().reflow();
-				  return;
+				$(this.href).css('display','block');
+				$(this.href).highcharts().reflow();
+				return;
 			}
 		});
 	}
+	
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
-	/* $$$$$                  enlarge content                  $$$$$ */
+	/* $$$$$                  enlarge svg                $$$$$ */
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	
+	/*
+	enlargeSVG() {	
+		$('.enlarge-svg').click(function(event) {
+			event.preventDefault();
+		});
+		$('.enlarge-svg').fancybox({
+			fitToView	: true,
+			width		: '70%',
+			height		: 'auto',
+			autoSize	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none',
+		});
+	}
+	*/
+	enlargeSVG() {	
+		$('.enlarge-svg').click(function(event) {
+			//var elementID 	= 	$(this).attr('id');
+			//var modalWidth 	=	$(this).attr('modal-width');
+			//var modalHeight = 	$(this).attr('modal-height');
+			var modalHREF 	= 	$(this).attr('href');
+			event.preventDefault();
+			//alert(modalWidth + ', ' + modalHeight + ', ' + modalHREF);
+			$('.enlarge-svg').fancybox({
+				fitToView	: true,
+				//width		: modalWidth,
+				//height	: modalHeight,
+				width		: '70%',
+				height		: 'auto',
+				autoSize	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none',
+				/*
+				beforeLoad: function() {
+					this.width 		= modalWidth;
+					this.height 	= modalHeight;
+					return;
+				},
+				*/
+				afterClose: function() {
+					$(modalHREF).css('display','block');
+					//console.log("closed");
+					return;
+				}
+			});
+		});
+	}
+
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	/* $$$$$                  enlarge content                $$$$$ */
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	
 	enlargeContent() {
 		var viewPortWidth = window.innerWidth;
 		//var fancyBoxWidth = 'auto';
@@ -69,7 +128,7 @@ class FancyBox {
 			},
 			beforeLoad: function() {
 				viewPortWidth = window.innerWidth;
-				console.log(viewPortWidth)
+				//console.log(viewPortWidth)
 				if (viewPortWidth <= 599) {
 					//his.width = viewPortWidth;
 					this.fitToView = true;
@@ -81,16 +140,18 @@ class FancyBox {
 			}
 		});
 	}
+
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 	/* $$$$$                      iframe                     $$$$$ */
 	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	
 	iFrame() {
 		var viewPortWidth = window.innerWidth;
 		//var viewPortHeight = window.innerHeight;
 		var fancyBoxWidth = 980;
 		$('.iframe').click(function(event) {
 
-			var target = $(this).attr("href");   
+			var target = $(this).attr('href');   
 			$.fancybox({
 				href: target,
 				//scrolling: 'true',
@@ -134,11 +195,13 @@ class FancyBox {
 		});
 	}
 
-
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	/* $$$$$                iFrame Full-Width                $$$$$ */
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	
 	iFrameFullWidth() {
-		//const iFrameWidth = ($('footer').width() - 60);
 		$('.iframe-full-width').click(function(event) {
-			var target = $(this).attr("href");
+			var target = $(this).attr('href');
 			$.fancybox({
 				href: target,
 				scrolling: 'yes',
@@ -166,12 +229,14 @@ class FancyBox {
 		});
 	}
 
-
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	/* $$$$$                  iframe ScrollTo                $$$$$ */
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 
 	iFrameScrollTo() {
 		const iFrameWidth = ($('footer').width() - 60);
 		$('.scroll-to-iframe').click(function(event) {
-			var target = $(this).attr("href");
+			var target = $(this).attr('href');
 			$.fancybox({
 				href: target,
 				scrolling: 'yes',
@@ -197,47 +262,28 @@ class FancyBox {
 			var iFrameHeight = $('.fancybox-inner').height();
 			$('iframe').css('height', iFrameHeight);
 		});
-	}   
+	}
 
-
-
-
-
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
+	/* $$$$$                      Legacy                     $$$$$ */
+	/* $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ $$$$$ */
 
 	legacy() {
 		$('.image-modal').click(function() {
-			console.log("please update class name to enlarge-image");
+			console.log('please update class name to enlarge-image');
 		});
-		$(".lightbox").click(function() {
-			console.log("please update fancybox");
+		$('.lightbox').click(function() {
+			console.log('please update fancybox');
 		});
-		$(".lightboxhtml").click(function() {
-			console.log("please update fancybox");
+		$('.lightboxhtml').click(function() {
+			console.log('please update fancybox');
 		});
-		$("#youtube").click(function() {
-			console.log("please update fancybox");
+		$('#youtube').click(function() {
+			console.log('please update fancybox');
 		});
-		$("button.lightbox").click(function() {
-			console.log("please update fancybox");
-		});
-	}
-	/*
-	events() {
-		this.fancyBoxInlineTrigger.click(this.fancyBoxInlineContent());
-		$('.inline-content-trigger').on('click', function(event) {
-			var $this = $(this); 
-			var elementWidth = $this.attr("data-width");
-			var elementHeight = $this.attr("data-height");
-			//console.log('element width is :' + elementWidth + ', element height is :' + elementHeight);
-			event.preventDefault(); 
-		});  
-	   $('.inline-content').fancybox({
-			type: 'inline',
-			tpl: {
-				closeBtn: '<a title="Close" class="close-menu" href="javascript:;"><i class="ico close"><span>Close</span></i></a>'
-			},
+		$('button.lightbox').click(function() {
+			console.log('please update fancybox');
 		});
 	}
-	*/
 }
 export default FancyBox;

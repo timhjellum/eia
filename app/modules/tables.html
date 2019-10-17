@@ -2,277 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>EIA Style Guide</title>
-<!-- build:ico ../assets/images/favicon.ico -->
-    <link rel="icon" href="../src/images/favicon.ico">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/apple-touch-icon.png -->
-    <link href="../src/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/favicon-32x32.png -->
-    <link href="../src/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <!-- endbuild -->
-    <!-- build:png ../assets/images/favicon-16x16.png -->
-    <link href="../src/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <!-- endbuild -->
-    <!-- build:webmanifest ../assets/images/site.webmanifest -->
-    <link href="../src/images/site.webmanifest" rel="manifest">
-    <!-- endbuild -->
-    <!-- build:svg ../assets/images/safari-pinned-tab.svg -->
-    <link href="../src/images/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
-    <!-- endbuild -->
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#292929">
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-    <!-- build:css ../assets/styles/styles.min.css -->
-    <link rel="stylesheet" href="../temp/styles/styles.css">
-    <!-- endbuild -->
-    <!-- build:css ../assets/styles/global.min.css -->
-    <link rel="stylesheet" href="../temp/styles/global.css" media="screen">
-    <!-- endbuild -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>EIA Style Guide</title>
+	<!-- build:ico ../assets/images/favicon.ico -->
+	<link rel="icon" href="../src/images/favicon.ico">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/apple-touch-icon.png -->
+	<link href="../src/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/favicon-32x32.png -->
+	<link href="../src/images/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+	<!-- endbuild -->
+	<!-- build:png ../assets/images/favicon-16x16.png -->
+	<link href="../src/images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+	<!-- endbuild -->
+	<!-- build:webmanifest ../assets/images/site.webmanifest -->
+	<link href="../src/images/site.webmanifest" rel="manifest">
+	<!-- endbuild -->
+	<!-- build:svg ../assets/images/safari-pinned-tab.svg -->
+	<link href="../src/images/safari-pinned-tab.svg" rel="mask-icon" color="#292929">
+	<!-- endbuild -->
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#292929">
+	<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+	<!-- build:css ../assets/styles/styles.min.css -->
+	<link rel="stylesheet" href="../temp/styles/styles.css">
+	<!-- endbuild -->
+	<!-- build:css ../assets/styles/global.min.css -->
+	<link rel="stylesheet" href="../temp/styles/global.css" media="screen">
+	<!-- endbuild -->
 
-<!-- build:js ../assets/scripts/jquery.min.js -->
-<script src="../assets/scripts/modules/vendor/jquery/jquery.min.js"></script>
-<!-- endbuild -->
-    <!-- build:js ../assets/scripts/jquery-ui.min.js -->
-    <script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
-    <!-- endbuild -->
+	<!-- build:js ../assets/scripts/jquery.min.js -->
+	<script src="../assets/scripts/modules/vendor/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:js ../assets/scripts/jquery-ui.min.js -->
+	<script src="../assets/scripts/modules/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<!-- endbuild -->
 </head>
 
 <body>
-    <div class="l-body-wrapper l-full-page">
-        <span class="add-header"></span>
-        <div class="l-outer-wrapper">
-            <div class="l-inner-wrapper">
-                <!-- start style guide wrapper -->
-                <!-- start style guide wrapper -->
-                <!-- start style guide wrapper -->
-                <div class="_container">
-                    <div class="_content">
-                        <div class="_content-inner">
-                            <!-- end style guide wrapper -->
-                            <!-- end style guide wrapper -->
-                            <!-- end style guide wrapper -->
-                            <ul class="style-guide">
-                                <li class="style-guide">
-                                    <h1 class="_h1">Tables</h1>
-                                    <h3 class="_h3">Introduction</h3>
-                                    <h4 class="_h4">Purpose</h4>
-                                    <p class="_p">Users need to see structured data in a manner that makes the data readable, scannable, and comparable.</p>
-                                    <h4 class="_h4">Description</h4>
-                                    <p class="_p">Tables provide customizable views of tabular data with features including sorting and managing columns. Tables are useful when a collection of data requires vertical alignment through columns for quick scanning and discovery of information, as well as for data that with many attributes that requires sorting, grouping, and a user customizable display.</p>
-                                    <h4 class="_h4">Basic functionality</h4>
-                                    <p class="_p">Tables list a collection of items in rows that have similar attributes, usually with headers to label each attribute.</p>
-                                    <p class="_p">The following functionality can be provided by tables:</p>
-                                    <ul class="_ul">
-                                        <!-- li>Sorting by columns</li>-->
-                                        <!-- <li>Resizing columns</li>-->
-                                        <li>Showing and hiding columns</li>
-                                        <li>Highlight columns</li>
-                                        <li>Sticky Table Headers</li>
-                                        <li>Column Alignment</li>
-                                        <!-- <li>Grouping by attributes</li>-->
-                                        <!-- <li>Expanding rows</li>-->
-                                    </ul>
-                                    <p class="_p">A table’s complexity and needs can vary greatly. This pattern provides many different features a table <em>may</em> have. Features can be mixed and matched based on your needs. Don’t include features unless they’re actually needed.</p>
-                                </li>
-                    <li class="style-guide">
-                        <h3 class="_h3">Data Table</h3>
-                        <div class="_module-wrapper">
-                            <div class="_module-container">
-                                <!-- start -->
-                                <!-- start -->
-                                <!-- start -->
-                                <div class="l-row l-full-width-col">
-                                    <span class="_module-bg">
-                                        <table>
-                                            <caption>Caption<br />
-                                            <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="/">Lorem ipsum</a></td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                    <td>Lorem ipsum</td>
-                                                </tr>
-                                            </foot>
-                                        </table>
-                                    </span>
-                                </div>
-                                <!-- end -->
-                                <!-- end -->
-                                <!-- end -->
-                            </div>
-                        </div>
-                        <div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-                                <!-- Target -->
-<textarea class="_copy-textarea" rows="5"><div class="basic-table">
-    <table class="highlight-col-2 highlight-col-4">
-        <caption>Table Example<br />
-            <em>(This is a basic table example</em></caption>
-        <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-            </tr>
-        </foot>
-    </table>
-</div></textarea>
-                                <!-- Trigger -->
-                                <div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-                                </div>
-                    </li>
+	<div class="l-body-wrapper l-full-page">
+		<span class="add-header"></span>
+		<div class="l-outer-wrapper">
+			<div class="l-inner-wrapper">
+				<!-- start style guide wrapper -->
+				<!-- start style guide wrapper -->
+				<!-- start style guide wrapper -->
+				<div class="_container">
+					<div class="_content">
+						<div class="_content-inner">
+							<!-- end style guide wrapper -->
+							<!-- end style guide wrapper -->
+							<!-- end style guide wrapper -->
 
+							<ul class="style-guide">
+								<li class="style-guide">
+									<h1 class="_h1">Tables</h1>
+									<h4 class="_h4">Purpose</h4>
+									<p class="_p">Users need to see structured data in a manner that makes the data readable, scannable, and comparable.</p>
+									<h4 class="_h4">Description</h4>
+									<p class="_p">Tables provide customizable views of tabular data with features including sorting and managing columns. Tables are useful when a collection of data requires vertical alignment through columns for quick scanning and discovery of information, as well as for data that with many attributes that requires sorting, grouping, and a user customizable display.</p>
+									<h4 class="_h4">Basic functionality</h4>
+									<p class="_p">Tables list a collection of items in rows that have similar attributes, usually with headers to label each attribute.</p>
+									<p class="_p">The following functionality can be provided by tables:</p>
 
-
-
-
-
-
-
-
-                    <li class="style-guide">
-                            <h3 class="_h3">Highlight Columns</h3>
-<p class="_p">Highlighting a column (body and foot, not the head) by adding a <code>highlight-col-x</code> to the <code>table class</code>.</p>
-<div class="_example">
-<p class="_p">Example:</p>
-<pre><code class="html">&lt;!-- highlight the second and fourth columns --&gt;
-&lt;table class="highlight-col-2 highlight-col-4"&gt;&lt;/div&gt;
-</code></pre>
-</div>
-                            <div class="_module-wrapper">
-                                <div class="_module-container">
-                                    <!-- start -->
-                                    <!-- start -->
-                                    <!-- start -->
-                                    <div class="l-row l-full-width-col">
-                                        <span class="_module-bg">
-                                            <table class="highlight-col-2 highlight-col-4">
-                                                <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                    </tr>
-                                                </tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                        <td>Lorem ipsum</td>
-                                                    </tr>
-                                                </foot>
-                                            </table>
-                                        </span>
-                                    </div>
-                                    <!-- end -->
-                                    <!-- end -->
-                                    <!-- end -->
-                                </div>
-                            </div>
-                            <div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-                                    <!-- Target -->
-<textarea class="_copy-textarea" rows="5"><table class="highlight-col-2 highlight-col-4">
-    <caption>Caption</caption>
-    <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </foot>
+									<h3 class="_h3">Properly formed table</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<span class="_module-bg">
+													<table>
+														<caption>Caption<br />
+														<thead>
+															<tr>
+																<th>Column One</th>
+																<th>Column Two</th>
+																<th>Column Thr</th>
+																<th>Column Fou</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><a href="/">Lorem ipsum</a></td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+															</tr>
+															<tr>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+																<td>Lorem ipsum</td>
+															</tr>
+															</foot>
+													</table>
+												</span>
+											</div>
+											<!-- end -->
+											<!-- end -->
+											<!-- end -->
+										</div>
+									</div>
+									<div>
+										<br />
+										<br />
+									</div>
+									<div class="_example _html">
+										<pre>
+<textarea class="_copy-textarea" rows="27"><table>
+	<caption>Table Example<br /><em>(This is table example</em></caption>
+	<thead>
+		<tr>
+			<th>Column One</th>
+			<th>Column Two</th>
+			<th>Column Thr</th>
+			<th>Column Fou</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+			<td>Lorem ipsum</td>
+		</tr>
+	</foot>
 </table></textarea>
-                                    <!-- Trigger -->
-                                    <div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-                                    </div>
-                        </li>
+</pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
 
 
 
@@ -282,99 +167,118 @@ Code sample on the online style guide.
 
 
 
-                        <li class="style-guide">
-                                <h3 class="_h3">Align Columns</h3>
-<p class="_p">Overiding the column alignment (head, body and foot) can be accomplished by adding a <code>align-left-col-x</code> or <code> align-right-col-x</code> to the <code>table class</code>.</p>
-<div class="_example">
-<p class="_p">Example:</p>
-<pre><code class="html">&lt;!-- align right the second and fourth columns --&gt;
-&lt;table class="align-right-col-2 align-right-col-4"&gt;&lt;/div&gt;
-</code></pre>
-</div>
-                                <div class="_module-wrapper">
-                                    <div class="_module-container">
-                                        <!-- start -->
-                                        <!-- start -->
-                                        <!-- start -->
-                                        <div class="l-row l-full-width-col">
-                                            <span class="_module-bg">
-                                                <table class="align-right-col-2 align-right-col-4">
-                                                    <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                            <td>Lorem ipsum</td>
-                                                        </tr>
-                                                    </foot>
-                                                </table>
-                                            </span>
-                                        </div>
-                                        <!-- end -->
-                                        <!-- end -->
-                                        <!-- end -->
-                                    </div>
-                                </div>
-                                <div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-                                        <!-- Target -->
-<textarea class="_copy-textarea" rows="5"><table class="align-right-col-2 align-right-col-4">
-    <caption>Caption</caption>
-    <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </foot>
-</table></textarea>
-                                        <!-- Trigger -->
-                                        <div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-                                        </div>
-                            </li>
+
+								<li class="style-guide">
+									<h3 class="_h3">Basic Table</h3>
+									<ul class="_ul">
+										<li>Column Alignment</li>
+										<li>Highlight columns</li>
+										<!-- li>Sorting by columns</li>-->
+										<!-- <li>Resizing columns</li>-->
+										<li>Showing and hiding columns</li>
+										<li>Sticky Table Headers (see <a href="../states/">Sticky Headers under States</a>)</li>
+
+										<!-- <li>Grouping by attributes</li>-->
+										<!-- <li>Expanding rows</li>-->
+									</ul>
+									<p class="_p">A table’s complexity and needs can vary greatly. This pattern provides many different features a table <em>may</em> have. Features can be mixed and matched based on your needs. Don’t include features unless they’re actually needed.</p>
+								</li>
+								<li class="style-guide">
+
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table">
+														<caption>Caption<br />
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Aligned Center</th>
+															</tr>
+															<tr>
+																<th>Align-Left</th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="4">Align-Left</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="28"><div class="basic-table">
+		<table class="basic-table">
+		<caption>Table Example<br /><em>(This is table example</em></caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th colspan="3">Aligned Center</th>
+				</tr>
+				<tr>
+					<th>Align-Left</th>
+					<th>Align-Right</th>
+					<th>Align-Right</th>
+					<th>Align-Right</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Align-Left</td>
+					<td>Align-Right</td>
+					<td>Align-Right</td>
+					<td>Align-Right</td>
+				</tr>
+				<tr>
+					<td>Align-Left</td>
+					<td>Align-Right</td>
+					<td>Align-Right</td>
+					<td>Align-Right</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">Align-Left</td>
+				</tr>
+			</foot>
+		</table>
+	</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
 
 
 
@@ -384,113 +288,755 @@ Code sample on the online style guide.
 
 
 
-                            <li class="style-guide">
-                                    <h3 class="_h3">Hide Columns</h3>
-<p class="_p">Hiding a column (head, body and foot) can be accomplished by adding a <code>hide-col-x</code> to the <code>table class</code>.</p>
-<div class="_example">
-<p class="_p">Example:</p>
-<pre><code class="html">&lt;!-- hide the second and fourth columns --&gt;
-&lt;table class="hide-col-2 hide-col-4"&gt;&lt;/div&gt;
-</code></pre>
-</div>
-                                    <div class="_module-wrapper">
-                                        <div class="_module-container">
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <!-- start -->
-                                            <div class="l-row l-full-width-col">
-                                                <span class="_module-bg">
-                                                    <table class="hide-col-2 hide-col-4">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Column One</th>
-                                                                <th>Column Two</th>
-                                                                <th>Column Thr</th>
-                                                                <th>Column Fou</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                            </tr>
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                                <td>Lorem ipsum</td>
-                                                            </tr>
-                                                        </foot>
-                                                    </table>
-                                                </span>
-                                            </div>
-                                            <!-- end -->
-                                            <!-- end -->
-                                            <!-- end -->
-                                        </div>
-                                    </div>
-                                    <div class="print-only">
-Code sample on the online style guide.
-</div>
-<div class="_example _html">
-                                            <!-- Target -->
-<textarea class="_copy-textarea" rows="5"><table class="hide-col-2 hide-col-4">
-    <caption>Caption</caption>
-    <thead>
-        <tr>
-            <th>Column One</th>
-            <th>Column Two</th>
-            <th>Column Thr</th>
-            <th>Column Fou</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-            <td>Lorem ipsum</td>
-        </tr>
-    </foot>
-</table></textarea>
-                                            <!-- Trigger -->
-                                            <div class="_button-container">
-<button type="button" class="_copy">Copy to clipboard</button>
-</div>
-                                            </div>
-                                </li>
-                </ul>
-                            <!-- start style guide wrapper -->
-                            <!-- start style guide wrapper -->
-                            <!-- start style guide wrapper -->
-                        </div>
-                    </div>
-                </div>
-                <!-- end style guide wrapper -->
-                <!-- end style guide wrapper -->
-                <!-- end style guide wrapper -->
-            </div>
-        </div>
-    </div>
-    <span class="add-footer"></span>
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Full-Width</h3>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width">
+														<caption>Table Example<br /><em>(This is table example</em></caption>
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Aligned Center</th>
+															</tr>
+															<tr>
+																<th>Align-Left</th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="4">Align-Left</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="5"><div class="basic-table">
+		<table class="basic-table auto">
+			...
+		</table>
+	</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Highlight Columns</h3>
+									<p class="_p">Highlighting a column (body and foot, not the head) by adding a <code>highlight-col-x</code> to the <code>table class</code>.</p>
+									<div class="_example">
+										<p class="_p">Example:</p>
+										<pre><code class="html">&lt;!-- highlight the second and fourth columns --&gt;
+	&lt;table class="highlight-col-2 highlight-col-4"&gt;&lt;/div&gt;
+	</code></pre>
+									</div>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width highlight-col-2 highlight-col-4">
+														<caption>Table Example<br /><em>(This is table example</em></caption>
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Colspan</th>
+															</tr>
+															<tr>
+																<th>Col-1</th>
+																<th>Col-2</th>
+																<th>Col-3</th>
+																<th>Col-4</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="4">Col-1</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="5"><div class="basic-table">
+		<table class="basic-table full-width highlight-col-2 highlight-col-4">
+			...
+		</table>
+	</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Align Columns</h3>
+									<p class="_p">Overiding the column alignment (head, body and foot) can be accomplished by adding a <code>align-left-col-x</code> or <code> align-right-col-x</code> to the <code>table class</code>.</p>
+									<div class="_example">
+										<p class="_p">Example:</p>
+										<pre><code class="html">&lt;!-- align left the second column, and center the third column (the fourth column is right aligned by default) --&gt;
+	&lt;table class="basic-table full-width align-left-col-2 align-center-col-3"&gt;&lt;/table&gt;
+	</code></pre>
+									</div>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width align-left-col-2 align-center-col-3">
+														<caption>Table Example<br /><em>(This is table example</em></caption>
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Aligned Center</th>
+															</tr>
+															<tr>
+																<th>Align-Left</th>
+																<th>Align-Left</th>
+																<th>Align-Center</th>
+																<th>Align-Right</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Left</td>
+																<td>Align-center</td>
+																<td>Align-right</td>
+															</tr>
+															<tr>
+																<td>Align-Left</td>
+																<td>Align-Left</td>
+																<td>Align-center</td>
+																<td>Align-right</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="4">Align-Left</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="5"><div class="basic-table">
+		<table class="basic-table full-width align-left-col-2 align-center-col-3">
+			...
+		</table>
+	</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Hide Columns</h3>
+									<p class="_p">Hiding a column (head, body and foot) can be accomplished by adding a <code>hide-col-x</code> to the <code>table class</code>.</p>
+									<div class="_example">
+										<p class="_p">Example:</p>
+										<pre><code class="html">&lt;!-- hide the second and fourth columns --&gt;
+	&lt;table class="hide-col-2 hide-col-4"&gt;&lt;/div&gt;
+	</code></pre>
+									</div>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width hide-col-2 hide-col-4">
+														<caption>Table Example<br /><em>(This is table example</em></caption>
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Col-2</th>
+															</tr>
+															<tr>
+																<th>Col-1</th>
+																<th>Col-2</th>
+																<th>Col-3</th>
+																<th>Col-4</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="4">Col-1</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="5"><div class="basic-table">
+		<table class="basic-table full-width hide-col-2 hide-col-4">
+			...
+		</table>
+	</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Stacked Tables</h3>
+									<p class="_p">All tables within the <code>div.basic-table</code> will have a 32 pixel (2em) space between the tables and all but the last will have a blue bottom border.</p>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width">
+														<caption>Table One</caption>
+														<tbody>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<table class="basic-table full-width">
+														<caption>Table Two</caption>
+														<tbody>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<table class="basic-table full-width">
+														<caption>Table Three</caption>
+														<tbody>
+															<tr>
+																<td>Col-1</td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="12"><div class="basic-table">
+	<table class="basic-table">
+		table 1
+	</table>
+	<table class="basic-table">
+		table 2
+	</table>
+	<table class="basic-table">
+		table 3
+	</table>
+</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<!-- start -->
+											<!-- start -->
+											<!-- start -->
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width">
+														<thead>
+															<tr>
+																<th></th>
+																<th class="divider"></th>
+																<th colspan="3">Aligned Center</th>
+															</tr>
+															<tr>
+																<th>Align-Left</th>
+																<th class="divider"></th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+																<th>Align-Right</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<h4>Header</h4>
+																</td>
+																<td class="divider"></td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr class="indented">
+																<td>Indented</td>
+																<td class="divider"></td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td class="indent-1">Indent One</td>
+																<td class="divider"></td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td class="indent-2">Indent Two</td>
+																<td class="divider"></td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td class="indent-3">Indent Three</td>
+																<td class="divider"></td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+																<td>Align-Right</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td class="divider"></td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+															<tr class="total">
+																<td>Total Row</td>
+																<td class="divider"></td>
+																<td>Total Row</td>
+																<td>Total Row</td>
+																<td>Total Row</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td class="divider"></td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+															<tr class="bold">
+																<td>Bold Row</td>
+																<td class="divider"></td>
+																<td>Bold Row</td>
+																<td>Bold Row</td>
+																<td>Bold Row</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td class="divider"></td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+															<tr class="tr-divider">
+																<td>Row Divider</td>
+																<td class="divider"></td>
+																<td>Row Divider</td>
+																<td>Row Divider</td>
+																<td>Row Divider</td>
+															</tr>
+															<tr>
+																<td>Col-1</td>
+																<td class="divider"></td>
+																<td>Col-2</td>
+																<td>Col-3</td>
+																<td>Col-4</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="99" class="footnotes">Footnotes</td>
+															</tr>
+															</foot>
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+									<div class="_example _html">
+										<!-- Target -->
+										<pre><textarea class="_copy-textarea" rows="28"><div class="basic-table">
+	<table class="basic-table">
+	<caption>Table Example<br /><em>(This is table example</em></caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th colspan="3">Aligned Center</th>
+			</tr>
+			<tr>
+				<th>Align-Left</th>
+				<th>Align-Right</th>
+				<th>Align-Right</th>
+				<th>Align-Right</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Align-Left</td>
+				<td>Align-Right</td>
+				<td>Align-Right</td>
+				<td>Align-Right</td>
+			</tr>
+			<tr>
+				<td>Align-Left</td>
+				<td>Align-Right</td>
+				<td>Align-Right</td>
+				<td>Align-Right</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="99">Align-Left</td>
+			</tr>
+		</foot>
+	</table>
+</div></textarea></pre>
+										<!-- Trigger -->
+										<div class="_button-container">
+											<button type="button" class="_copy">Copy to clipboard</button>
+										</div>
+									</div>
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<li class="style-guide">
+									<h3 class="_h3">Icons</h3>
+									<p>See the <a href="../base/icons.html">Base / Icons</a> section for usage</p>
+									<div class="_module-wrapper">
+										<div class="_module-container">
+											<div class="l-row l-full-width-col">
+												<div class="basic-table">
+													<table class="basic-table full-width">
+														<!--
+														<thead>
+															<tr>
+																<th></th>
+																<th colspan="3">Aligned Center</th>
+															</tr>
+															<tr>
+																<th>Align-Left</th>
+																<th><button class="ico reset-animation">Reset</button></th>
+																<th><a href="/" class="ico line-chart">Chart This</a></th>
+																<th>Align-Right</th>
+															</tr>
+														</thead>
+														-->
+														<tbody>
+															<tr>
+																<td class="ico pdf"><a href="/">Link to PDF</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico xls"><a href="/">Link to XLS</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico json"><a href="/">Link to JSON</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico csv"><a href="/">Link to CSV</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico ppt"><a href="/">Link to PPT</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico html"><a href="/">Link to HTML</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico doc"><a href="/">Link to DOC</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico image"><a href="/">Link to image</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico interactive"><a href="/">Link to interactive</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico efile"><a href="/">Link to eFile</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="ico pedro"><a href="/">Link to PEDRO</a></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														</tbody>
+														<!--
+														<tfoot>
+															<tr>
+																<td colspan="4">Align-Left</td>
+															</tr>
+														</foot>
+														-->
+													</table>
+												</div>
+												<!-- end -->
+												<!-- end -->
+												<!-- end -->
+											</div>
+										</div>
+									</div>
+									<br />
+									<br />
+								</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</ul>
+							<!-- start style guide wrapper -->
+							<!-- start style guide wrapper -->
+							<!-- start style guide wrapper -->
+						</div>
+					</div>
+				</div>
+				<!-- end style guide wrapper -->
+				<!-- end style guide wrapper -->
+				<!-- end style guide wrapper -->
+			</div>
+		</div>
+	</div>
+	<span class="add-footer"></span>
 </body>
 <!-- build:js ../assets/scripts/script.min.js -->
 <script src="../temp/scripts/scripts.js"></script>
@@ -498,4 +1044,5 @@ Code sample on the online style guide.
 <!-- build:js ../assets/scripts/global.min.js -->
 <script src="../temp/scripts/global.js"></script>
 <!-- endbuild -->
+
 </html>
