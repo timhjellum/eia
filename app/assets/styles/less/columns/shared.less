@@ -28,7 +28,15 @@
         list-style: none;
         padding-left: 0;
         li {
-            list-style: none;
+			list-style: none;
+			ol {
+				//margin: 3px 0 0 17px;
+				list-style-type: decimal;
+				li {
+					margin: 3px 0 0 17px;
+					list-style-type: decimal;
+				}
+			}
         }
         ul {
             //padding: 0;
@@ -36,9 +44,10 @@
             li {
                 margin: 3px 0 0 17px;
                 list-style-type: disc;
-            }
-        }
-    }
+			}
+			
+		}
+	}
 }
 .accordion-content {
     ul {

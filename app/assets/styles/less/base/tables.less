@@ -437,14 +437,15 @@
             tr {
                 td {
                     font-size: .750rem;
-                    color: @eia-dark-grey;
+					color: @eia-dark-grey;
+					&.number {
+						//color: #000;
+						font-weight: bold;
+					}
                     h4 {
                         margin: 0;
                         padding: 0;
 					}
-					/*
-
-*/
 					&.indent-1 {
 						padding-left: 20px;
 					}
@@ -454,9 +455,19 @@
 					&.indent-3 {
 						padding-left: 60px;
 					}
-//						}
-//					}
-                }
+				}
+				&.terminated {
+					td {
+						opacity: .6;
+						&.number {
+							font-weight: normal;
+						}
+						a {
+							opacity: .6;
+							
+						}
+					}
+				}
                 &.indented {
                     td {
                         &:first-child {

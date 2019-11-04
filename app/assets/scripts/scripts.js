@@ -1,5 +1,5 @@
-import ScrollNav from './modules/style-guide/scroll-nav.js';
-new ScrollNav();
+//import ScrollNav from './modules/style-guide/scroll-nav.js';
+//new ScrollNav();
 
 //import StickyTableHeaders from './modules/sticky-table-headers';
 //new StickyTableHeaders();

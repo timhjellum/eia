@@ -3,26 +3,26 @@
         margin-right: 0 !important;
     }
     .fancybox-lock {
-        overflow: visible !important; // important
+        overflow: visible !important;  // do not edit
         width: auto;
         body {
-            overflow: hidden !important; // important
+            overflow: hidden !important;  // do not edit
         }
         .fancybox-overlay {
-            overflow: auto !important; // important
-            overflow-y: scroll !important; // important
+            overflow: auto !important;  // do not edit
+            overflow-y: scroll !important;  // do not edit
         }
     }
     .fancybox-lock-test { // might not be needed
         overflow-y: hidden !important;
     }
-    .fancybox-overlay {// important
-        position: absolute;// important
-        top: 0;// important
-        left: 0;// important
-        overflow: hidden;// important
+    .fancybox-overlay { // do not edit
+        position: absolute; // do not edit
+        top: 0; // do not edit
+        left: 0; // do not edit
+        overflow: hidden; // do not edit
         display: none;
-        z-index: 8010;// important
+        z-index: 8010; // do not edit
         //background: rgba(0,0,0,0.7);
         background: rgba(0,0,0,0.7);
     }
@@ -31,11 +31,13 @@
         bottom: 0;
         right: 0;
     }
-    .fancybox-close,
+	/*
+	.fancybox-close,
     .fancybox-next span,
     .fancybox-prev span {
         background-image: none;
-    }
+	}
+	*/
     .ui-state-focus {
         outline: 0 !important;
     }
@@ -54,10 +56,10 @@
             right: -15px;
             .ico {
                 &.close {
-                    &:before {
-                        .icon-cancel;
+                    //&:before {
+                        //.icon-cancel;
                         .controls-icon(40px, 40px);
-                    }
+                    //}
                 }
             }
         }
@@ -71,10 +73,10 @@
             right: 5px;
             .ico {
                 &.close {
-                    &:before {
+                    //&:before {
                         //.icon-cancel;
                         .controls-icon(40px, 40px);
-                    }
+                    //}
                 }
             }
         }
@@ -172,13 +174,14 @@
             }
         }
     }
-    .fancybox-wrap {
+	/*
+	.fancybox-wrap {
         &.fancybox-type-iframe {
             display: table !important;
             height: 100% !important;
             .fancybox-skin {
                 display: table !important;
-                height: 100% !important;
+				height: 100%;
                 .fancybox-outer {
                     display: table !important;
                     height: 100% !important;
@@ -197,7 +200,8 @@
                 }
             }
         }
-    }
+	}
+	*/
 }
 @media @mobile { 
     .fancybox-wrap {
@@ -218,7 +222,14 @@
                     }
                 }
             }
-        }
+		}
+		/*
+		&.fancybox-type-iframe {
+            .fancybox-skin {
+				height: 95vh;
+			}
+		}
+		*/
     }
 }
 @media @laptop { 
@@ -227,5 +238,5 @@
             top: -15px;
             right: -15px;
         }
-    }
+	}
 }

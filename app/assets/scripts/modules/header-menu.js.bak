@@ -1,10 +1,11 @@
-import fancybox from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.js';
-import fancyboxPack from '../../../../node_modules/fancybox/dist/js/jquery.fancybox.pack.js';
+import fancyboxPack from '../../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js';
 
 class HeaderMenu {
 	constructor() {
 		this.initMenu();
+		//this.headerTabs = $('.section-tabs');
 		this.checkForBaseAndCorrectTabHrefs();
+		//this.headerTabs.tabs();
 		$('.section-tabs').tabs();
 	}
 
@@ -52,7 +53,6 @@ class HeaderMenu {
 		var viewPortHeight = window.innerHeight;
 		var fancyBoxWidth = 980;
 		var self = this;
-
 		$('.fancybox-menu').fancybox({
 			scrolling: 'visible',
 			type: 'inline',
