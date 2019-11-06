@@ -1,0 +1,31 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_eia_homepage_0_document_0_tablet.png",
+        "test": "..\\bitmaps_test\\20191104-142546\\backstop_default_eia_homepage_0_document_0_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_eia_homepage_0_document_0_tablet.png",
+        "label": "eia homepage",
+        "misMatchThreshold": 0.1,
+        "url": "https://eia.gov/index.php",
+        "referenceUrl": "https://eia.gov/index.php",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "12.89",
+          "analysisTime": 52
+        },
+        "diffImage": "..\\bitmaps_test\\20191104-142546\\failed_diff_backstop_default_eia_homepage_0_document_0_tablet.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}

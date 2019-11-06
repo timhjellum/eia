@@ -1,19 +1,19 @@
 class AZ {
     constructor() {
-        /*
-                var className = document.getElementsByClassName('az-list');
-                if (className.length > 0) {
-                    // step 1 - fire script if classname is found
-                    if (window.location.href.indexOf('?id=') > -1) {
-                        var url = window.location.href;
-                        var id = url.substring(url.lastIndexOf('=') + 1);
-                        document.getElementById(id).classList.add('active');
-                        //console.log(id);
-                    } else if (window.location.href.indexOf('?id=') < 1) {
-                        document.getElementById('A').classList.add('active');
-                    }
-                }
-                */
+/*
+var className = document.getElementsByClassName('az-list');
+if (className.length > 0) {
+    // step 1 - fire script if classname is found
+    if (window.location.href.indexOf('?id=') > -1) {
+        var url = window.location.href;
+        var id = url.substring(url.lastIndexOf('=') + 1);
+        document.getElementById(id).classList.add('active');
+        //console.log(id);
+    } else if (window.location.href.indexOf('?id=') < 1) {
+        document.getElementById('A').classList.add('active');
+    }
+}
+*/
         var url = window.location.href;
         var valueOfSecondIdChar = url.substring(url.lastIndexOf('=') + 2);
         var className = document.getElementsByClassName('az-list');

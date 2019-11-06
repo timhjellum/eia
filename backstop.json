@@ -1,0 +1,328 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+
+  "scenarios": [
+    {
+      "label": "eia homepage",
+      "url": "https://eia.gov/index.php",
+      "referenceUrl": "https://eia.gov/index.php",
+      "hideSelectors": [
+      ".bx-viewport"
+      ]
+    },
+    {
+      "label": "Petroleum > Articles > Accuracy index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/accuracyindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/accuracyindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > art9904 index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/art9904index.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/art9904index.php"
+      },
+      {
+      "label": "Petroleum > Articles > capexpansion index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/capexpansionindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/capexpansionindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > caprice index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/capriceindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/capriceindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > compare index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/compareindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/compareindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Contrastdist index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/contrastdistindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/contrastdistindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Crude forecast index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/crudeforecastindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/crudeforecastindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Dalezyrn index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/dalezyrnindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/dalezyrnindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Dependence index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/dependenceindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/dependenceindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Distillate assess index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/distillateassessindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/distillateassessindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Distillate Production index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/distillateprodindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/distillateprodindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Exxon index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/exxonindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/exxonindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Fergana index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/ferganaindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/ferganaindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > Futureans index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/futureansindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/futureansindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > gasanalaysis96 index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasanalaysis96index.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/gasanalaysis96index.php"
+      },
+      {
+      "label": "Petroleum > Articles > gasassess97 index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasassess97index.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/gasassess97index.php"
+      },
+      {
+      "label": "Petroleum > Articles > gasassess index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasassessindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/gasassessindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > gasps index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/gaspsindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/gaspsindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > holly index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/hollyindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/hollyindex.php"
+
+      },
+      {
+      "label": "Petroleum > Articles > index1",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/index1.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/index1.php"
+      },
+      {
+      "label": "Petroleum > Articles > issuestrends index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/issuestrendsindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/issuestrendsindex.php"
+      },
+      {
+      "referenceUrl": "https://eia.gov/petroleum/articles/longtermindex.php",
+      "label": "Petroleum > Articles > longterm index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/longtermindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > lsdoutlook index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/lsdoutlookindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/lsdoutlookindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > mtbe index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/mtbeindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/mtbeindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > northeast index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/northeastindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/northeastindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > oilgasdev index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilgasdevindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/oilgasdevindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > oilgasexpl index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilgasexplindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/oilgasexplindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > oilsupply index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilsupplyindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/oilsupplyindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > passthrough index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/passthroughindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/passthroughindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > pricecompare index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/pricecompareindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/pricecompareindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > profile index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/profileindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/profileindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > propassess index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/propassessindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/propassessindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > reform95 index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/reform95index.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/reform95index.php"
+      },
+      {
+      "label": "Petroleum > Articles > reform index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/reformindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/reformindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > refoutages index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/refoutagesindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/refoutagesindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > siberia index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/siberiaindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/siberiaindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > sideways index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/sidewaysindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/sidewaysindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > spgmogas index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/spgmogasindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/spgmogasindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > sticky index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/stickyindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/stickyindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > stocklevels index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/stocklevelsindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/stocklevelsindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > utilization index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/utilizationindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/utilizationindex.php"
+      },
+      {
+      "label": "Petroleum > Articles > vzimpacts index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/articles/vzimpactsindex.php",
+      "referenceUrl": "https://eia.gov/petroleum/articles/vzimpactsindex.php"
+  },
+  {
+    "referenceUrl": "http://eia.gov/petroleum/drilling/faqs.php",
+      "label": "faqs",
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php"
+  },
+  {
+    "referenceUrl": "http://eia.gov/adaptive/petroleum/drilling/faqs.php",
+      "label": "Petroleum Drilling faqs",
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php"
+  },
+  {
+    "label": "Petroleum Drilling faqs",
+    "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php",
+    "referenceUrl":  "http://eia.gov/petroleum/drilling/faqs.php"
+      },
+      {
+      "label": " index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/index.php",
+      "referenceUrl": "https://eia.gov/petroleum/drilling/index.php"
+      },
+      {
+      "label": "Petroleum > Ethanol Capacity Home",
+      "url": "https://eia.gov/archive/adaptive/petroleum/ethanolcapacity/index.php",
+      "referenceUrl": "https://eia.gov/petroleum/ethanolcapacity/index.php"
+      },
+      {
+      "label": "Petroleum > Fueloil & Kerosene Home",
+      "url": "https://eia.gov/archive/adaptive/petroleum/fueloilkerosene/index.php",
+      "referenceUrl": "https://eia.gov/petroleum/fueloilkerosene/index.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > _reformulated_map",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/_reformulated_map.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/_reformulated_map.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_builder",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_builder.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_builder.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_chart",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_chart.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_chart.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_map",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_map.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_map.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_methodology",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_methodology.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_methodology.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_methodology_archive",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_methodology_archive.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_methodology_archive.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_procedure",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_procedure.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_procedure.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_procedure_archive",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_procedure_archive.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_procedure_archive.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_proc-methods",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_proc-methods.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_proc-methods.php"
+      },
+      {
+      "label": "Petroleum > gasdiesel > diesel_taxes",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_taxes.php",
+      "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_taxes.php"
+      }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

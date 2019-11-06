@@ -25,5 +25,5 @@ new Footer();
 import Tabs from './modules/style-guide/tabs.js';
 new Tabs();
 
-//import DatePicker from './modules/forms-datepicker';
-//new DatePicker();
+import SiteMap from './modules/style-guide/sitemap.js';
+new SiteMap();

@@ -2,7 +2,7 @@
 
 //$('.page_tabs').tabs();
 $('.tabs').tabs();
-//console.log("tabs found");
+
 
 
 $('.accordion').accordion({

@@ -8,7 +8,6 @@
 	var filter = 'all';
 	var fidSuffix, trimmedTagCategories;
     var frequencyMenu, frequencyButton;
-
 // start Mobile-Only
 var heightMeasurement = window.innerHeight;
 var scrollArea = (heightMeasurement - 100);

@@ -8,14 +8,6 @@ class HighlightModule {
 
 
 
-
-
-
-
-
-
-
-
 		function addEvent(obj, type, fn) {
 			if (obj.attachEvent) {
 				obj['e' + type + fn] = fn;
