@@ -7,307 +7,1475 @@
       "height": 768
     }
   ],
-
   "scenarios": [
     {
       "label": "eia homepage",
       "url": "https://eia.gov/index.php",
       "referenceUrl": "https://eia.gov/index.php",
       "hideSelectors": [
-      ".bx-viewport"
+        ".bx-viewport"
       ]
     },
     {
       "label": "Petroleum > Articles > Accuracy index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/accuracyindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/accuracyindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > art9904 index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/art9904index.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/art9904index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > capexpansion index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/capexpansionindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/capexpansionindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > caprice index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/capriceindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/capriceindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > compare index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/compareindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/compareindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Contrastdist index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/contrastdistindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/contrastdistindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Crude forecast index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/crudeforecastindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/crudeforecastindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Dalezyrn index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/dalezyrnindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/dalezyrnindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Dependence index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/dependenceindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/dependenceindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Distillate assess index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/distillateassessindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/distillateassessindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Distillate Production index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/distillateprodindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/distillateprodindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Exxon index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/exxonindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/exxonindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Fergana index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/ferganaindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/ferganaindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > Futureans index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/futureansindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/futureansindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > gasanalaysis96 index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasanalaysis96index.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/gasanalaysis96index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > gasassess97 index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasassess97index.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/gasassess97index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > gasassess index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/gasassessindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/gasassessindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > gasps index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/gaspsindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/gaspsindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > holly index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/hollyindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/hollyindex.php"
-
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > index1",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/index1.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/index1.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > issuestrends index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/issuestrendsindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/issuestrendsindex.php"
-      },
-      {
+    },
+    {
       "referenceUrl": "https://eia.gov/petroleum/articles/longtermindex.php",
       "label": "Petroleum > Articles > longterm index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/longtermindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > lsdoutlook index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/lsdoutlookindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/lsdoutlookindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > mtbe index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/mtbeindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/mtbeindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > northeast index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/northeastindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/northeastindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > oilgasdev index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilgasdevindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/oilgasdevindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > oilgasexpl index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilgasexplindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/oilgasexplindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > oilsupply index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/oilsupplyindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/oilsupplyindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > passthrough index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/passthroughindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/passthroughindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > pricecompare index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/pricecompareindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/pricecompareindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > profile index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/profileindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/profileindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > propassess index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/propassessindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/propassessindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > reform95 index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/reform95index.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/reform95index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > reform index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/reformindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/reformindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > refoutages index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/refoutagesindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/refoutagesindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > siberia index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/siberiaindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/siberiaindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > sideways index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/sidewaysindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/sidewaysindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > spgmogas index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/spgmogasindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/spgmogasindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > sticky index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/stickyindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/stickyindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > stocklevels index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/stocklevelsindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/stocklevelsindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > utilization index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/utilizationindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/utilizationindex.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Articles > vzimpacts index",
       "url": "https://eia.gov/archive/adaptive/petroleum/articles/vzimpactsindex.php",
       "referenceUrl": "https://eia.gov/petroleum/articles/vzimpactsindex.php"
-  },
-  {
-    "referenceUrl": "http://eia.gov/petroleum/drilling/faqs.php",
+    },
+    {
       "label": "faqs",
-      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php"
-  },
-  {
-    "referenceUrl": "http://eia.gov/adaptive/petroleum/drilling/faqs.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php",
+      "referenceUrl": "http://eia.gov/petroleum/drilling/faqs.php"
+    },
+    {
       "label": "Petroleum Drilling faqs",
-      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php"
-  },
-  {
-    "label": "Petroleum Drilling faqs",
-    "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php",
-    "referenceUrl":  "http://eia.gov/petroleum/drilling/faqs.php"
-      },
-      {
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php",
+      "referenceUrl": "http://eia.gov/adaptive/petroleum/drilling/faqs.php"
+    },
+    {
+      "label": "Petroleum Drilling faqs",
+      "url": "https://eia.gov/archive/adaptive/petroleum/drilling/faqs.php",
+      "referenceUrl": "http://eia.gov/petroleum/drilling/faqs.php"
+    },
+    {
       "label": " index",
       "url": "https://eia.gov/archive/adaptive/petroleum/drilling/index.php",
       "referenceUrl": "https://eia.gov/petroleum/drilling/index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Ethanol Capacity Home",
       "url": "https://eia.gov/archive/adaptive/petroleum/ethanolcapacity/index.php",
       "referenceUrl": "https://eia.gov/petroleum/ethanolcapacity/index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > Fueloil & Kerosene Home",
       "url": "https://eia.gov/archive/adaptive/petroleum/fueloilkerosene/index.php",
       "referenceUrl": "https://eia.gov/petroleum/fueloilkerosene/index.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > _reformulated_map",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/_reformulated_map.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/_reformulated_map.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_builder",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_builder.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_builder.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_chart",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_chart.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_chart.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_map",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_map.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_map.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_methodology",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_methodology.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_methodology.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_methodology_archive",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_methodology_archive.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_methodology_archive.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_procedure",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_procedure.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_procedure.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_procedure_archive",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_procedure_archive.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_procedure_archive.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_proc-methods",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_proc-methods.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_proc-methods.php"
-      },
-      {
+    },
+    {
       "label": "Petroleum > gasdiesel > diesel_taxes",
       "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/diesel_taxes.php",
       "referenceUrl": "https://eia.gov/petroleum/gasdiesel/diesel_taxes.php"
-      }
+    },
+    {
+      "label": "Petroleum > gasdiesel > dieselpump_hist",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/dieselpump_hist.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/dieselpump_hist.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > dieselpump_hist",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/dieselpump_hist.php",
+      "referenceUrl": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/dieselpump_hist.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-noq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-noq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-noq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > FAQs eia878-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia878-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia878-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-noq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia888-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-noq.php",
+      "referenceUrl": "http://wwwd.eia.gov/petroleum/gasdiesel/faq_eia888-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-noq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-noq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia888-noq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia888-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia888-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia888-wq",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/faq_eia888-wq.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/faq_eia888-wq.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_builder",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_builder.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_builder.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_geographies",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_geographies.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_geographies.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_methodology",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_methodology.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_methodology.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_nyc_counties",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_nyc_counties.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_nyc_counties.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_procedure",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_procedure.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_procedure.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gas_proc-methods",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gas_proc-methods.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gas_proc-methods.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gasoline_taxes",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gasoline_taxes.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gasoline_taxes.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gaspump_hist",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gaspump_hist.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gaspump_hist.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gdu_noticerev",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gdu_noticerev.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gdu_noticerev.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > geographies",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/geographies.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/geographies.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > highchart_gdu",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/highchart_gdu.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/highchart_gdu.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gdu_diesel",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gdu_diesel.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gdu_diesel.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gdu_dieselpump",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gdu_dieselpump.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gdu_dieselpump.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gdu_gas",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gdu_gas.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gdu_gas.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gdu_gaspump",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gdu_gaspump.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gdu_gaspump.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gduin_diesel",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gduin_diesel.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gduin_diesel.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > gduin_gas",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/gduin_gas.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/gduin_gas.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > hhhtest",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/hhhtest.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/hhhtest.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/index.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > learnmore",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/learnmore.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/learnmore.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > notice-changes",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/notice-changes.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/notice-changes.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > notice-revision",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/notice-revision.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/notice-revision.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > pump_methodology",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/pump_methodology.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/pump_methodology.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > reformulated_map",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/reformulated_map.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/reformulated_map.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > sampling_error",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/sampling_error.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/sampling_error.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > sampling_error_report",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/sampling_error_report.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/sampling_error_report.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > scache_report",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scache_report.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/scache_report.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > schedule",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/schedule.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/schedule.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > scopecache",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scopecache.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/scopecache.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > scopecache_report",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scopecache_report.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/scopecache_report.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > tgas_geographies",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/tgas_geographies.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/gasdiesel/tgas_geographies.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_datausers",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scopecache_report.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/heatingoilpropane/faq_datausers.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_eia878",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scopecache_report.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/heatingoilpropane/faq_eia878.php"
+    },
+    {
+      "label": "Petroleum > gasdiesel > faq_respondents",
+      "url": "https://eia.gov/archive/adaptive/petroleum/gasdiesel/scopecache_report.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/gasdiesel/scopecache_report.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > faq_stateofficials",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/faq_stateofficials.php",
+      "referenceUrl": "http://www.eia.gov/petroleum/heatingoilpropane/faq_stateofficials.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > forstateofficials",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/forstateofficials.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/forstateofficials.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/index.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > padd-state_maps",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/padd-state_maps.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/padd-state_maps.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > revision_report",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/revision_report.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/revision_report.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > schedule",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/schedule.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/schedule.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > confirm",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/webinar/confirm.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/webinar/confirm.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/webinar/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/webinar/index.php"
+    },
+    {
+      "label": "Petroleum > Heatingoil Propane > mail-wapp2",
+      "url": "https://eia.gov/archive/adaptive/petroleum/heatingoilpropane/webinar/mail-wapp2.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/heatingoilpropane/webinar/mail-wapp2.php"
+    },
+    {
+      "label": "Petroleum > Imports > index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/browser/data/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/browser/data/index.php"
+    },
+    {
+      "label": "Petroleum > Imports >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/browser/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/browser/index.php"
+    },
+    {
+      "label": "Petroleum > Imports > cli_note",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/companylevel/cli_note.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/companylevel/cli_note.php"
+    },
+    {
+      "label": "Petroleum > Imports >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/companylevel/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/companylevel/index.php"
+    },
+    {
+      "label": "Petroleum > Imports > summary",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/companylevel/summary.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/companylevel/summary.php"
+    },
+    {
+      "label": "Petroleum > Imports >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/imports/samples/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/imports/samples/index.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > index.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/index.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > nehor.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/nehor.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/nehor.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > schedule.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/schedule.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/schedule.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > testsite.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/testsite.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/testsite.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > wpsr_notice.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/wpsr_notice.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/wpsr_notice.php"
+    },
+    {
+      "label": "Petroleum > Supply > Weekly > wpsr_notice_propane.php",
+      "url": "https://eia.gov/archive/adaptive/petroleum/supply/weekly/wpsr_notice_propane.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/supply/weekly/wpsr_notice_propane.php"
+    },
+    {
+      "label": "Petroleum > Marketing > Monthly >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/marketing/monthly/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/marketing/monthly/index.php"
+    },
+    {
+      "label": "Petroleum > Marketing > Prime >  index",
+      "url": "https://eia.gov/archive/adaptive/petroleum/marketing/prime/index.php",
+      "referenceUrl": "https://www.eia.gov/petroleum/marketing/prime/index.php"
+    },
+    {
+      "label": "Coal > Annual > Home",
+      "url": "https://eia.gov/archive/adaptive/coal/annual/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/annual/index.php"
+    },
+    {
+      "label": "Coal > Annual > Distribution > index.php",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/annual/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/annual/index.php"
+    },
+    {
+      "label": "Coal > Annual > Distribution > archive",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/annual/archive.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/annual/archive.php"
+    },
+    {
+      "label": "Coal > Annual > Distribution > coal_origin_destin",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/annual/coal_origin_destin.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/annual/coal_origin_destin.php"
+    },
+    {
+      "label": "Coal > Annual > Distribution > correction",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/annual/correction.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/annual/correction.php"
+    },
+    {
+      "label": "Coal > Annual > Distribution > revision_notice",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/annual/revision_notice.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/annual/revision_notice.php"
+    },
+    {
+      "label": "Coal > Distribution > Quarterly > index.php",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/quarterly/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/quarterly/index.php"
+    },
+    {
+      "label": "Coal > Distribution > Quarterly > back_q_distributions",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/quarterly/back_q_distributions.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/quarterly/back_q_distributions.php"
+    },
+    {
+      "label": "Coal > Distribution > Quarterly > revision_notice",
+      "url": "https://eia.gov/archive/adaptive/coal/distribution/quarterly/revision_notice.php",
+      "referenceUrl": "http://www.eia.gov/coal/distribution/quarterly/revision_notice.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > index.php",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/index.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > revision_notice",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/revision_notice.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/revision_notice.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > correction",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/correction.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/correction.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > Distribution > index.php",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/distribution/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/distribution/index.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > Distribution > annual-coal-distribution",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/distribution/annual-coal-distribution.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/distribution/annual-coal-distribution.php"
+    },
+    {
+      "label": "Coal > Production > Quarterly > Distribution > back_q_distributions",
+      "url": "https://eia.gov/archive/adaptive/coal/production/quarterly/distribution/back_q_distributions.php",
+      "referenceUrl": "http://www.eia.gov/coal/production/quarterly/distribution/back_q_distributions.php"
+    },
+    {
+      "label": "Coal > Reserves > index.php",
+      "url": "https://eia.gov/archive/adaptive/coal/reserves/index.php",
+      "referenceUrl": "http://www.eia.gov/coal/reserves/index.php"
+    },
+    {
+      "label": "Survey > Changes > Coal > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/coal/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/coal/index.php"
+    },
+    {
+      "label": "Survey > Changes > Coal > 2013 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/coal/2013/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/coal/2013/index.php"
+    },
+    {
+      "label": "Survey > Changes > Coal > 2017 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/coal/2017/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/coal/2017/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > Comments",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/comments.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/comments.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > comments30day",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/comments30day.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/comments30day.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > 2020 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/2020/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/2020/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > Archive > 2013 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/archive/2013/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/archive/2013/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > Archive > 2014 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/archive/2014/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/archive/2014/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > Archive > 2018 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/archive/2018/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/archive/2018/index.php"
+    },
+    {
+      "label": "Survey > Changes > Electricity > Archive > Solar > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/electricity/archive/solar/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/electricity/archive/solar/index.php"
+    },
+    {
+      "label": "Survey > Changes > Nuclear > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/nuclear/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/nuclear/index.php"
+    },
+    {
+      "label": "Survey > Changes > Renewables > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/renewables/2018/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/renewables/2018/index.php"
+    },
+    {
+      "label": "Survey > Changes > Uranium > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/uranium/2018/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/uranium/2018/index.php"
+    },
+    {
+      "label": "Survey > Changes > Uranium > Archive > > Survey > Changes > Coal > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/changes/uranium/archive/2015/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/changes/uranium/archive/2015/index.php"
+    },
+    {
+      "label": "Survey > FAQs > bulk_terminal",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/bulk_terminal.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/bulk_terminal.php"
+    },
+    {
+      "label": "Survey > FAQs > eia914",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/eia914.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/eia914.php"
+    },
+    {
+      "label": "Survey > FAQs > electricity",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/electricity.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/electricity.php"
+    },
+    {
+      "label": "Survey > FAQs > imports",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/imports.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/imports.php"
+    },
+    {
+      "label": "Survey > FAQs > oxygenate",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/oxygenate.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/oxygenate.php"
+    },
+    {
+      "label": "Survey > FAQs > product_pipeline",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/product_pipeline.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/product_pipeline.php"
+    },
+    {
+      "label": "Survey > FAQs > refinery",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/refinery.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/refinery.php"
+    },
+    {
+      "label": "Survey > FAQs > storage_capacity",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/storage_capacity.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/storage_capacity.php"
+    },
+    {
+      "label": "Survey > FAQs > terminal_blenders",
+      "url": "https://eia.gov/archive/adaptive/survey/faqs/terminal_blenders.php",
+      "referenceUrl": "https://www.eia.gov/survey/faqs/terminal_blenders.php"
+    },
+    {
+      "label": "Survey > Form > eia_14 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_14/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_14/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_14/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_176 > efs176",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_176/efs176.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_176/efs176.php"
+    },
+    {
+      "label": "Survey > Form > eia_182 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_182/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_182/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_182/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_182/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_23l > rigs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_23l/rigs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_23l/rigs.php"
+    },
+    {
+      "label": "Survey > Form > eia_3 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_3/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_3/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_63c/proposed/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_63c/proposed/index.php"
+    },
+    {
+      "label": "Survey > Form > eia_782a > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_782a/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_782a/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_782a/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_782a/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_782c > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_782c/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_782c/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_782c/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_782c/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_7a > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_7a/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_7a/faqs.php"
+    },
+    {
+      "label": "Survey > Form > eia_821 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_821/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_821/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_821/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_821/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_826 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_826/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_826/faqs.php"
+    },
+    {
+      "label": "Survey > Form > eia_856 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_856/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_856/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/form/eia_856/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_856/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_857 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_857/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_857/faqs.php"
+    },
+    {
+      "label": "Survey > Form > eia_861 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_861/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_861/faqs.php"
+    },
+    {
+      "label": "Survey > Form > eia_861m > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_861m/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_861m/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_863/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_863/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_878 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_878/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_878/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_878/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_878/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_888 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_888/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_888/faqs.php"
+    },
+    {
+      "label": "Survey > Form > proposed > frn_note",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_888/proposed/frn_note.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_888/proposed/frn_note.php"
+    },
+    {
+      "label": "Survey > Form > eia_8a > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_8a/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_8a/faqs.php"
+    },
+    {
+      "label": "Survey > Form > eia_914 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_914/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_914/faqs.php"
+    },
+    {
+      "label": "Survey > Form > 2014 > FAQs",
+      "url": "https://eia.gov/archive/adaptive/survey/form/eia_914/2014/faqs.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/eia_914/2014/faqs.php"
+    },
+    {
+      "label": "Survey > Form > pedro > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/form/pedro/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/form/pedro/index.php"
+    },
+    {
+      "label": "Survey > Meetings > coal1212 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/meetings/coal1212/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/meetings/coal1212/index.php"
+    },
+    {
+      "label": "Survey > Meetings > mail-wapp",
+      "url": "https://eia.gov/archive/adaptive/survey/meetings/coal1212/mail-wapp.php",
+      "referenceUrl": "https://www.eia.gov/survey/meetings/coal1212/mail-wapp.php"
+    },
+    {
+      "label": "Survey > Meetings > elec-prelim0612 > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/meetings/elec-prelim0612/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/meetings/elec-prelim0612/index.php"
+    },
+    {
+      "label": "Survey > Notice > consumption_mecs2014",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/consumption_mecs2014.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/consumption_mecs2014.php"
+    },
+    {
+      "label": "Survey > Notice > marketing2013",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/marketing2013.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/marketing2013.php"
+    },
+    {
+      "label": "Survey > Notice > marketing2014",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/marketing2014.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/marketing2014.php"
+    },
+    {
+      "label": "Survey > Notice > marketing2017",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/marketing2017.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/marketing2017.php"
+    },
+    {
+      "label": "Survey > Notice > marketing2019",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/marketing2019.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/marketing2019.php"
+    },
+    {
+      "label": "Survey > Notice > ngdownstreamforms2015",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/ngdownstreamforms2015.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/ngdownstreamforms2015.php"
+    },
+    {
+      "label": "Survey > Notice > ngdownstreamforms2018",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/ngdownstreamforms2018.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/ngdownstreamforms2018.php"
+    },
+    {
+      "label": "Survey > Notice > ngforms2015",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/ngforms2015.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/ngforms2015.php"
+    },
+    {
+      "label": "Survey > Notice > petform806ngliquids",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/petform806ngliquids.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/petform806ngliquids.php"
+    },
+    {
+      "label": "Survey > Notice > petngproduction2017",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/petngproduction2017.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/petngproduction2017.php"
+    },
+    {
+      "label": "Survey > Notice > petsupply2013",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/petsupply2013.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/petsupply2013.php"
+    },
+    {
+      "label": "Survey > Notice > petsupply2019",
+      "url": "https://eia.gov/archive/adaptive/survey/notice/petsupply2019.php",
+      "referenceUrl": "https://www.eia.gov/survey/notice/petsupply2019.php"
+    },
+    {
+      "label": "Survey > PrivateResponse > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/PrivateResponse/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/PrivateResponse/index.php"
+    },
+    {
+      "label": "Survey > shoppfeedback > index.php",
+      "url": "https://eia.gov/archive/adaptive/survey/shoppfeedback/index.php",
+      "referenceUrl": "https://www.eia.gov/survey/shoppfeedback/index.php"
+    },
+    {
+      "label": "Tools",
+      "url": "https://eia.gov/archive/adaptive/tools/",
+      "referenceUrl": "https://www.eia.gov/tools/"
+    },
+    {
+      "label": "Tools > A-Z",
+      "url": "https://eia.gov/archive/adaptive/tools/a-z/",
+      "referenceUrl": "https://www.eia.gov/tools/a-z/"
+    },
+    {
+      "label": "Tools > Glossary",
+      "url": "https://eia.gov/archive/adaptive/tools/glossary/",
+      "referenceUrl": "https://www.eia.gov/tools/glossary/"
+    },
+    {
+      "label": "Tools > FAQs",
+      "url": "https://eia.gov/archive/adaptive/tools/faqs/",
+      "referenceUrl": "https://www.eia.gov/tools/faqs/"
+    },
+    {
+      "label": "Tools > FAQs",
+      "url": "https://eia.gov/archive/adaptive/tools/faqs/faq.php",
+      "referenceUrl": "https://www.eia.gov/tools/faqs/faq.php"
+    },
+    {
+      "label": "Tools > Faqs (ask question)",
+      "url": "https://eia.gov/archive/tools/faqs/ask_q.php",
+      "referenceUrl": "https://www.eia.gov/tools/faqs/ask_q.php"
+    },
+    {
+      "label": "Tools > Faqs (gasprimer)",
+      "url": "https://eia.gov/archive/adaptive/tools/faqs/gasprimer.php",
+      "referenceUrl": "https://www.eia.gov/tools/faqs/gasprimer.php"
+    },
+    {
+      "label": "Tools > Sign-up",
+      "url": "https://eia.gov/archive/adaptive/tools/emailupdates/",
+      "referenceUrl": "https://www.eia.gov/tools/emailupdates/"
+    },
+    {
+      "label": "Tools > Unsubscribe",
+      "url": "https://eia.gov/archive/adaptive/tools/emailupdates/unsubscribe.php",
+      "referenceUrl": "https://www.eia.gov/tools/emailupdates/unsubscribe.php"
+    },
+    {
+      "label": "Tools > Disabled",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/tools/emailupdates/index_disabled.php"
+    },
+    {
+      "label": "Tools > Maintenance",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/tools/emailupdates/index_maintenance.php"
+    },
+    {
+      "label": "Tools > RSS",
+      "url": "https://eia.gov/archive/adaptive/tools/rssfeeds/",
+      "referenceUrl": "https://www.eia.gov/tools/rssfeeds/"
+    },
+    {
+      "label": "Uranium > Marketing > index.php",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/index.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/index.php"
+    },
+    {
+      "label": "Uranium > Marketing > summarytable1a",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/summarytable1a.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/summarytable1a.php"
+    },
+    {
+      "label": "Uranium > Marketing > summarytable1b",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/summarytable1b.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/summarytable1b.php"
+    },
+    {
+      "label": "Uranium > Marketing > summarytable2",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/summarytable2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/summarytable2.php"
+    },
+    {
+      "label": "Uranium > Marketing > summarytable3a",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/summarytable3a.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/summarytable3a.php"
+    },
+    {
+      "label": "Uranium > Marketing > summarytable3b",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/summarytable3b.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/summarytable3b.php"
+    },
+    {
+      "label": "Uranium > Marketing > table1",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table1.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table1.php"
+    },
+    {
+      "label": "Uranium > Marketing > table2",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table2.php"
+    },
+    {
+      "label": "Uranium > Marketing > table3",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table3.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table3.php"
+    },
+    {
+      "label": "Uranium > Marketing > table4",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table4.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table4.php"
+    },
+    {
+      "label": "Uranium > Marketing > table5",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table5.php"
+    },
+    {
+      "label": "Uranium > Marketing > table6a",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table6a.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table6a.php"
+    },
+    {
+      "label": "Uranium > Marketing > table6b",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table6b.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table6b.php"
+    },
+    {
+      "label": "Uranium > Marketing > table7",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table7.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table7.php"
+    },
+    {
+      "label": "Uranium > Marketing > table8",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table8.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table8.php"
+    },
+    {
+      "label": "Uranium > Marketing > table9",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table9.php"
+    },
+    {
+      "label": "Uranium > Marketing > table10",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table10.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table10.php"
+    },
+    {
+      "label": "Uranium > Marketing > table11",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table11.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table11.php"
+    },
+    {
+      "label": "Uranium > Marketing > table12",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table12.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table12.php"
+    },
+    {
+      "label": "Uranium > Marketing > table13",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table13.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table13.php"
+    },
+    {
+      "label": "Uranium > Marketing > table14",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table14.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table14.php"
+    },
+    {
+      "label": "Uranium > Marketing > table15",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table15.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table15.php"
+    },
+    {
+      "label": "Uranium > Marketing > table16",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table16.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table16.php"
+    },
+    {
+      "label": "Uranium > Marketing > table17",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table17.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table17.php"
+    },
+    {
+      "label": "Uranium > Marketing > table18",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table18.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table18.php"
+    },
+    {
+      "label": "Uranium > Marketing > table19",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table19.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table19.php"
+    },
+    {
+      "label": "Uranium > Marketing > table20",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table20.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table20.php"
+    },
+    {
+      "label": "Uranium > Marketing > table21",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table21.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table21.php"
+    },
+    {
+      "label": "Uranium > Marketing > table22",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table22.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table22.php"
+    },
+    {
+      "label": "Uranium > Marketing > table23",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table23.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table23.php"
+    },
+    {
+      "label": "Uranium > Marketing > table24",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table24.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table24.php"
+    },
+    {
+      "label": "Uranium > Marketing > table25",
+      "url": "https://eia.gov/archive/adaptive/uranium/marketing/table25.php",
+      "referenceUrl": "https://www.eia.gov/uranium/marketing/table25.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > index.php",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/index.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/index.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig1",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig1.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig1.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig2",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig2.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig3",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig3.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig3.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig4",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig4.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig4.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig5",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig5.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig5.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig6",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig6.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig6.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ufig7",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig7.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ufig7.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > udrilling",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/udrilling.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/udrilling.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > uemploycat",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/uemploycat.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/uemploycat.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > uemplystate",
+      "url": "https://eia.gov/archive/adaptive/",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/uemplystate.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > uexpenditures",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/uexpenditures.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/uexpenditures.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > uisl",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/uisl.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/uisl.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > umills",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/umills.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/umills.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > umine",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/umine.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/umine.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > uprodship",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/uprodship.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/uprodship.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > ureserve",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ureserve.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/ureserve.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > usummary",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/usummary.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/annual/usummary.php"
+    },
+    {
+      "label": "Uranium > Production > Annual > US Mine Production of Uranium 1993-2018",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/annual/ufig5.php",
+      "referenceUrl": "https://eia.gov/archive/uranium/production/annual/ufig5.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > index.php",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/index.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/index.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > 1st_quarter_prod",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/1st_quarter_prod.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/1st_quarter_prod.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupd_table1",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupd_table1.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupd_table1.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupd_table2",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupd_table2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupd_table2.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupd_table3",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupd_table3.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupd_table3.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupd_table4",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupd_table4.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupd_table4.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdfigure",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdfigure.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdfigure.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdfigure1",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdfigure1.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdfigure1.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdtable1",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdtable2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdtable1.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdtable2",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdtable2.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdtable2.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdtable3",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdtable3.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdtable3.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdtable4",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdtable4.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdtable4.php"
+    },
+    {
+      "label": "Uranium > Production > Quarterly > qupdtable5",
+      "url": "https://eia.gov/archive/adaptive/uranium/production/quarterly/qupdtable5.php",
+      "referenceUrl": "https://www.eia.gov/uranium/production/quarterly/qupdtable5.php"
+    }
   ],
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",
@@ -316,10 +1484,14 @@
     "html_report": "backstop_data/html_report",
     "ci_report": "backstop_data/ci_report"
   },
-  "report": ["browser"],
+  "report": [
+    "browser"
+  ],
   "engine": "puppeteer",
   "engineOptions": {
-    "args": ["--no-sandbox"]
+    "args": [
+      "--no-sandbox"
+    ]
   },
   "asyncCaptureLimit": 5,
   "asyncCompareLimit": 50,
