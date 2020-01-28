@@ -1,50 +1,216 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
-
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
-
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+# Style Guide
 
 
-## GULP BUILD
+# Powered by:
 
-1. Delete the **docs** folder.
+<img src="http://lesscss.org/public/img/less_logo.png" alt="LESS" width="100" /> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Babel_Logo.svg/1280px-Babel_Logo.svg.png" alt="Babel" width="100" /> | <img src="https://s3.amazonaws.com/kajabi-storefronts-production/blogs/3971/images/8ruOp1kKQDuczshP4kX8_webpack.png" alt="Webpack" width="100" />
+------------ | ------------ | -------------
+[LESS](http://lesscss.org/) | [Babel](https://babeljs.io/) | [Webpack 4](https://webpack.js.org/)
+
+## Install
+
+Clone the repository and run NPM
+
+First, clone the repo via git:
+
+```bash
+git clone https://git.eia.gov/oc/design/style-guide.git
+```
+
+```bash
+$ cd style-guide
+```
+And then install the dependencies.
+
+1) Run npm install and npm update in the same directory as the package.json file of the application that you want to update.
+``` bash
+npm install
+npm update
+```
+
+## Gulp is being phased out but it's still a dependency if you are going to EDIT the style-guide.
+
+2A) Are you upgrading to Gulp 4? If so, you must remove older versions first:
+``` bash
+npm rm gulp -g
+npm rm gulp-cli -g
+npm rm gulp --save-dev
+npm rm gulp --save
+npm rm gulp --save-optional
+npm cache clean
+```
+
+2B) Install Gulp (no need to install globally)
+``` bash
+npm install gulp --save-dev
+npm install gulp-cli --save-dev
+gulp -v
+```
+
+4) Run the server 
+``` bash
+npm run gulp watch
+```
+
+## Packaging global.min.js and global.min.css for Production
+
+```bash
+$ npm run build
+```
+```
+.
+└── dist_global
+	├── global.min.js
+	└── global.min.css
+```
+## Packaging the style-guide files for Production
+
+```bash
+$ npm run build
+```
+```
+.
+└── dist_styles
+	├── assets
+	│   └── images
+	├── scripts.min.js
+	├── styles.min.css
+	├── index.html
+	├── base
+	│	├── color-palette.html
+	│	├── forms-no-script.html
+	│	├── forms.html
+	│	├── icons.html
+	│	├── index.html
+	│	├── size-conversions.html
+	│	├── symbols.html
+	│	└── typography.html
+	├── components
+	│	├── index.html
+	│	├── page-content.html
+	│	├── slider-home.html
+	│	├── slider-multi-cards.html
+	│	└── sub-navigation.html
+	├── examples
+	│ 	├── contact-formatting.html
+	│	├── frequently-asked-questions-example-1.html
+	│	├── frequently-asked-questions-example-2.html
+	│	├── home-slider.html
+	│	├── index.html
+	│	├── multi-card-slider.html
+	│	├──sub-navigation.html
+	│	├── template.html
+	│	├── template2.html
+	│	└── test.html
+	├── modules
+	│	├── accordion.html
+	│	├── banners.html
+	│	├── contact.html
+	│	├──content-containers-home.html
+	│	├── delete.html
+	│	├── energy-education.html
+	│	├── fancybox.html
+	│	├── forms.html
+	│	├── home-modules.html
+	│	├── images.html
+	│	├── index.html
+	│	├── lists.html
+	│	├── page-titles.html
+	│	├── primary-content-containers.html
+	│	├── report-headers.html
+	│	├── reusable-modules.html
+	│	├── secondary-containers.html
+	│	├── side-content-containers.html
+	│	├── tables.html
+	│	├── tabs.html
+	│	├── template.html
+	│	├── ufig3.html
+	│	└── visulizations.html
+	├── layouts
+	│	├── examples.html
+	│	├── full-page-examples.html
+	│	├── index.html
+	│	├── nested-examples.html
+	│	└──row-examples.html
+	├── states
+	│	├── empty-list-items.html
+	│	└──index.html
+	│	├──links-list.html
+	│	├── sticky-table-headers.html
+	│	├── toggle.html
+	│	└── _empty-list-items.html
+	└── themes
+		├── accordion-list.html
+		├── article.html
+		├── faqs.html
+		├── index.html
+		└──themes.html
+```
+
+
+## Directory Structure
+```bash
+.
+├── app
+│   └── assets
+│       ├── images
+│       ├── scripts
+│       │   ├── .js
+│       │   └── modules
+│       └── styles
+│           ├── .css
+│           └── less
+│               └── .less
+├── gulp
+│   └── tasks
+│       └── build.js
+│       └── watch.js
+├── .gitignore
+├── .babelrc
+├── gulpfile.js
+├── package-lock.json
+├── package.json
+├── webpack.config
+└── README.md
+```
+
+## Watch
+When a .js file or .less file is updated
+
+```bash
+assets
+   └── Temp
+       ├── scripts
+       │   └── scripts.min.js
+       └── styles
+           └── stylesmin.css
+```
+
+## Build
+``` bash
+gulp build
+```
+
+Output production files and folder structure for the web:
+
+```bash
+app					# App folder
+   └── dist                     	# Dist folder
+       ├── assets			# Assets folder
+       │   ├── images			# Images folder
+       │   └── fonts			# Fonts file
+       ├── scripts			# Scripts folder
+       │   └── scripts.min.js	    	# Minimized scripts file
+       ├── styles			# Styles folder
+       │   └── stylesmin.css	    	# Minimized styles file
+	   └── index.html		# Index file
+```
+
+
+## Package Structure
+NPM Package | Version | Description
+------------ | ------------- | -------------
+
+
+## To do
+- 
