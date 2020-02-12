@@ -1,1 +1,0 @@
-<?php$fp = fopen($_SERVER['DOCUMENT_ROOT'] . '/petroleum/marketing/prime/includes/gas_static_vars_include.inc', 'w');fwrite($fp, "");fwrite($fp, "<?php $gas_us = '" . $gas_us . "'; ?>");fclose($fp);

@@ -1,0 +1,376 @@
+.icon {
+//	display: inline-block;
+//	cursor: pointer;
+	&.linechart {
+		background-position: -62px -67px;
+	}
+}
+.selected {
+	.icon {
+		&.linechart {
+			background-position: -2px -67px;
+		}
+	}
+}
+
+td {
+	span {
+		&.icon {
+			display: inline-block;
+			width: 24px;
+			height: 13px;
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p {
+	&.ico {
+		&.pdf
+/*
+		,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro
+		*/
+		{
+			&:before {
+				display: inline-block;
+				padding: 0;
+				margin: 0 4px -1px 0;
+			}
+		}
+	}
+}
+
+
+a,
+i,
+span {
+	&.rss {
+		&:before {
+			height: 20px;
+			width: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0;
+    		margin: 0 3px 0 0;
+		}
+		span {
+			.font;
+			.normal;
+			font-size: 0.750rem;
+			color: @eia-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.ico {
+
+		font-size: 0;
+		line-height: 0;
+		//display: inline-block; <-- no!!
+		span {
+			.font;
+			.normal;
+			font-size: 0.750rem;
+			color: @eia-blue;
+			&:hover {
+				text-decoration: underline;
+			}
+			margin-left: 3px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro	{
+			&:before {
+				display: inline-block;
+				margin-bottom: -3px;
+//margin-right: 5px;
+			}
+//		}
+			&:after {
+				display: inline-block;
+				margin-bottom: -3px;
+//margin-left: 5px;
+			}
+//		}
+			&.icon-only {
+				&>span {
+					font-size: 0;
+					line-height: 0;
+					margin: 0;
+					text-indent: -9999px;
+				}
+			}
+		}
+		/*---Up and Down arrows for use in data highlights and elsewhere on the website---*/
+		&.up-arrow,
+		&.down-arrow {
+				&:before {
+					//.controls-icon(14px, 16px);
+					.right;
+					margin-right: 0;
+					.controls-icon(12px, 14px);
+					position: relative;
+					top: 0;
+				}
+				span {
+					font-size: 0;
+					line-height: 0;
+					text-indent: -9999px;
+				}
+		}
+	}
+}
+li,
+div,
+td {
+	&.ico {
+		margin: 0;
+		a[href] {
+			//display: table; this doesn't work of there's a (map) afterwards
+			//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+			padding-left: 20px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro	{
+			position: relative;
+			&:before {
+				position: absolute;
+			}
+		}
+	}
+}
+
+li {
+	&.ico {
+		list-style: none;
+		margin-left: 0;
+		min-height: 15px; // same as icon
+		padding-bottom: 6px;
+	}
+}
+div {
+	&.ico {
+		padding-left: 6px;
+		min-height: 15px; // same as icon
+		padding-top: 6px;
+	}
+}
+table {
+	&.basic-table {
+		td {
+			&.ico {
+				padding-left: 6px;
+				min-height: 15px; // same as icon
+				a {
+					margin-top: 2px;
+				}
+			}
+		}
+	} 
+} 
+
+
+
+.dashboard {
+	a {
+		.ico {
+			&.full-screen,
+			&.info,
+			&.printer,
+			&.download {
+				font-size: 0;
+				line-height: 0;	
+			}
+		}
+	}
+}
+
+
+
+
+a {
+	&.ico {
+		text-decoration: none;
+		cursor: pointer;
+	}
+	text-decoration: none;
+	span {
+		&.inline {
+			white-space: nowrap;
+			.ico {
+				margin: 0;
+				display: inline;
+				//span {
+				//	display: none;
+				//}
+			}
+		}
+	}
+	&:hover {
+		text-decoration: underline;
+		span {
+			&.inline {						
+				text-decoration-line: underline;
+				//text-decoration-color: white;
+				.ico {
+					text-decoration-line: underline;
+					text-decoration-color: @eia-blue;
+					//span {
+					//	display: none;
+					//}
+				}
+			}
+		}
+	}
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+.plus-yellow {
+	.font;
+	.bold;
+	color: @eia-yellow;
+	font-size: 18px;
+}
+.plus-greyish-blue {
+	.font;
+	.bold;
+	color: @eia-greyish-blue;
+	font-size: 12px;
+}
+
+
+.up-arrow,
+.down-arrow {			
+	&:before {
+		position: relative;
+		top: -2px;
+		display: inline-block;
+	}
+}
+
+ul {
+	&.icon-list {
+		li {
+			&.head {
+				margin: 0;
+			}
+			&.ico {
+				min-height: 44px;
+				display: inline-block;
+				width: 100%;
+				a[href] {
+					//display: table; this doesn't work of there's a (map) afterwards
+					//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+					padding-left: 0;
+				}
+				&.radio {
+					&:before {
+						//.icon-upcoming;
+						//.nav-bar-icon;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						float: left;
+					}
+				}
+				&.upcoming-icon {
+					&:before {
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						float: left;
+					}
+				}
+				&.email-simple {
+					&:before {
+						.icon-email-simple;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+					}
+				}
+				&.rss-complex-icon {
+					&:before {
+						.icon-rss-complex(@fill-color: @eia-green, @fill-color-lt: @eia-green);
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: 0 12px 0 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+		
+	

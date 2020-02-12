@@ -1,1 +1,0 @@
-<?phpclass DestinationType extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT ID, Name, 'dt' as "group", area_type, location_type, plural_namefrom PETIMP.DESTINATION_TYPESORDER BY DECODE(ID, 'PP', 0, 'PS', 1, 'PC', 2, 'PT', 3, 'RP', 4, 'RS', 5, 'RC', 6, 'RF', 7)SQL;

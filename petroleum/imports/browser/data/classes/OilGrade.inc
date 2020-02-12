@@ -1,1 +1,0 @@
-<?phpclass OilGrade extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT id, name, 'g' as "GROUP", bitmap_indexFROM petimp.GRADESORDER BY bitmap_indexSQL;

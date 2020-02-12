@@ -1,0 +1,71 @@
+//@media @mobile {
+	.expand-collapse-content,
+	.expand-collapse-tbody,
+	.show-hide-content { /* sets initial state */
+		display: none;
+		width: 100%;
+	}
+	.expand-collapse-content {
+		&[style*='display: none'] {
+			//background-color: red;
+		}
+		&[style*='display: block'] {
+			animation: change-background .5s ease;
+		}
+	}
+
+	@keyframes change-background {
+		0% {
+			background: #ffc;
+		}
+		100% {
+			background: #fff;
+		}
+	}
+
+	.toggle {
+		font-size: 12px;
+		cursor: pointer;
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+		.active-text {
+			display: none;
+		}
+		&.active {
+			.active-text {
+				display: block;
+			}
+			.inactive-text {
+				display: none;
+			}
+		}
+		span {
+			display: block;
+			&.ico {
+				cursor: pointer;
+				&.expand {
+					&:before {
+						.controls-icon(12px, 12px);
+						.icon-remove();
+						transform: rotate(45deg);
+						.left;
+						margin: 2px 3px 0 0;
+					}
+				}
+				&.collapse {
+					&:before {
+						.controls-icon(12px, 12px);
+						.icon-collapse;
+						.left;
+						display: inline-block;
+						margin: 4px 3px 0 0;
+					}
+				}
+			}
+		}
+	}
+
+
+//opacity: 0;
+//transition: opacity 2s ease-in;

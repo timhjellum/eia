@@ -1,0 +1,623 @@
+.ico-menu {
+    width: auto;
+    float: left;
+    &.analysis-projections-icon {
+        &:before {
+            background-position: 60% 70%;
+        }
+    }
+    &.environment-icon {
+        &:before {
+            background-position-y: 45%;
+        }
+    }
+    &.coal-icon {
+        &:before {
+            background-position-y: 45%;
+        }
+    }
+    &.eia-glossary-icon {
+        &:before {
+            background-position-y: 45%;
+            background-position-x: 67%;
+        }
+    }
+    &.maps-icon {
+        &:before {
+            background-size: 100% 100%;
+        }
+    }
+    &.international-icon {
+        &:before {
+            background-size: 100% 100%;
+        }
+    }
+    &.regional-icon {
+        &:before {
+            background-size: 100% 100%;
+        }
+    }
+}
+/*-Close Icon --------------------------*/
+//.close-menu,
+//.fancybox-close {
+//	&:before {
+//		.controls-icon(40px, 40px);
+//	}
+//}
+i {
+    &.close-menu {
+        display: none;
+    }
+}
+.ico-menu {
+    font-size:	0;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    text-indent: -9999px;
+    &.facebook,
+    &.twitter,
+    &.youtube,
+    &.flickr,
+    &.linkedin,
+    &.email,
+    &.rss {
+        display: inline-block;
+        &:before {
+            .controls-icon(40px, 40px);
+        }
+    }
+}
+
+
+@media @mobile {
+    //.global-nav {
+    .fancybox-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8020;      
+        .section-tabs {
+            border-radius: 0;
+            background-color: white;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            .tabs-wrapper {
+                background: @eia-darker-blue;
+                min-height:95px;
+                border:none;
+                //padding: 2em 0 0 1em;
+                padding: 1em 0 1em 1em;
+                ul {
+                    width: 90%;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        margin: 15px 20px 5px;
+                        display: inline-block;
+                        border-bottom-width: 0 !important;
+                        padding: 0;
+                        a {
+                            display: block;
+                            .header-font;
+                            color: white;
+                            font-size: 1.3rem;
+                            font-weight: 100;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &.ui-state-default {
+                            background-color: transparent;
+                            a {
+                                // start underline effects
+                                border: 0;
+                                box-sizing: border-box;
+                                position: relative;
+                                &::before {
+                                    box-sizing: inherit;
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    transform-origin: center;
+                                    // ensure scaling is done from the center (expands outwards)
+                                    -webkit-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                    -moz-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                    box-shadow: 0 7px 0 -2px @eia-yellow;
+                                    transform: scale3d(0,1,1);
+                                    // shrink only width
+                                    transition: transform 0.05s;
+                                }
+                                &:hover::before {
+                                    transform: scale3d(1,1,1);
+                                    // show full-size
+                                    transition: transform 0.05s;
+                                }
+                            }
+                        }
+                        &.ui-state-active {
+                            background-color: transparent;
+                            a {
+                                // use box shadow to have flat left and right edges
+                                -webkit-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                -moz-box-shadow: 0 7px 0 -2px @eia-yellow;
+                                box-shadow: 0 7px 0 -2px @eia-yellow;
+                                &:hover {
+                                    transform: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sources-uses, .topics, .geography, .tools, .learn, .news {
+                &.left {
+                    width: 91%;
+                    margin: 0 6% 0 3%;
+                    border: none;
+                    > div {
+                        width: 100%;
+                        margin: 0;
+                        padding: 1em 0;
+                    }
+                }
+                &.right {
+                    width: 91%;
+                    margin: 0 6% 0 3%;
+                    border: none;
+                    > div {
+                        width: 100%;
+                        margin: 0;
+                        padding: 1em 0;
+                    }
+                }
+            }
+            .a-z-bottom {
+                border: none;
+                padding: 1em 0;
+            }
+            .nav-menu {
+                border-bottom: 1px solid shade(white, 17%);
+                display: table;
+                min-height: 100px;
+                clear: both;
+                position: relative;
+                i {
+                    position: absolute;
+                }
+                h3 {
+                    margin: 0 0 0 80px;
+                    .header-font;
+                    font-weight: 100;
+                    text-transform: none;
+                    font-size: 1.375em;
+                    line-height: 0.8;
+                    display: block;
+                    a {
+                        .header-font;
+                        line-height: 1.2em;
+                        font-weight: 100;
+                        text-transform: none;
+                        text-decoration: none;
+                        font-size: 1.375rem;
+                        color: @eia-darker-blue;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                        &:after { 
+							content:"\00a0\203A";
+						}
+                    }
+                }
+                p {
+                    .font;
+                    display: block;
+                    margin: 0 0 0 80px;
+                    font-size: 0.875rem;
+                    line-height: 1.4;
+                    color: #7d7d7d;
+                    a {
+                        position: relative;
+                        i {
+                            position: relative;
+                        }
+                    }
+                }
+                ul {
+                    margin: 8px 0 8px 56px;
+                    padding-left: 40px;
+                    overflow: hidden;
+                    list-style-type: disc;
+                    li {
+                        .font;                            
+                        line-height: 1.6em;
+                        font-size: 0.875rem;
+                        cursor: pointer;
+                        list-style-type: disc;
+                        a {
+                            text-decoration: none;
+                            color: @eia-blue; 
+                            display: block;
+                            &:after {
+                                content: "\00a0\203A";
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }                           
+                    }
+                }
+                &.energy-explained {
+                    display: inline-block;
+                    width: 100%;
+                    .energy-explained-list {
+                        &.left {
+                            .left;
+                            margin: 8px 0 0 0;
+                            //margin: 8px 0 0 60px;
+                            clear: both;
+                        }
+                        &.right {
+                            .left;
+                            //margin: 0 0 8px 60px;
+                            margin: 0 0 8px 0;
+                        }
+                    }
+                }
+                &.faq {
+                    display: inline-block;
+                    width: 100%;
+                    .faq-list {
+                        &.left {
+                            .left;
+                            //margin: 8px 0 0 60px;
+                            margin: 8px 0 0 0;
+                            clear: both;
+                        }
+                        &.right {
+                            .left;
+                            //margin: 0 0 8px 60px;
+                            margin: 0 0 8px 0;
+                            //margin-left: 60px;
+                        }
+                    }
+                }
+                &.energy-kids {
+                    a {
+                        padding: 0;
+                        width: 100%;
+                        display: block;
+                        svg {
+                            path {
+                                fill: @eia-light-blue;
+                            }
+                        }
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: @eia-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.follow-us {
+                    p {
+                        margin: 8px 0 0 74px;
+                    }
+                }
+                &.whats-new {
+                    ul {
+                        list-style: none;
+                        padding-left: 26px;
+                        li {
+                            &.date {
+                                margin-top: -6px;
+                                .italic;
+                                color: tint(@eia-black, 46.4%);;
+                            }
+                        }
+                    }
+                }
+                &.upcoming {
+                    h2 {
+                        display: none;
+                    }
+                    h5 {
+                        b {
+                            display: none
+                        }
+                    }
+                    h5 {
+                        .font;                            
+                        line-height: 1.6em;
+                        font-size: 0.875rem;
+                        cursor: pointer;
+                        margin: 0 0 0 0;
+                        display: list-item;          /* This has to be "list-item"                                               */
+                        list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+                        // list-style-position: inside; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position */
+                        &:last-child {
+                            display: none;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: @eia-blue; 
+                            display: block;
+                            &:after {
+                                content: "";
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                &.reports {
+                    //.reports-publication-search {
+                    .tags-search {
+                        position: absolute;
+                        max-height: 150px;
+                        overflow-y: auto;
+                        z-index: 99;
+                        width: 250px;
+                        background-color: #fff;
+                        border: 1px solid #aaa;
+                    } 
+                    //}
+                    #header-tags-search {
+                        ul {
+                            margin: 0;
+                            padding: 5px;
+                            //border: 1px solid #aaa;
+                            background-color: white;
+                            background-image: none;
+                            .font;
+                            list-style-type: none;
+                            .option {
+                                &:hover {
+                                    cursor: pointer;
+                                    color: @eia-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.a-z-index {
+                    //width: 94%;
+                    //margin: 0 3%;
+                    width: 91%;
+                    margin: 0 6% 0 3%;
+                    padding: 1em 0 2em 0;
+                    border-bottom: none;
+                    .a-z-list {
+                        position: relative;
+                        display: block;
+                        margin-left: 80px;
+                        overflow-wrap: break-word;
+                        color: @eia-dark-grey;
+                        line-height: 1.6em;
+                        .font;
+                        font-size: 0.875rem;
+                        a {
+                            display: inline-block;
+                            font-weight: 400;
+                            padding: 5px;
+                            cursor: pointer;
+                            color: @eia-blue;
+                        }
+                    }
+                }
+                .form-wrapper {
+                    margin: 6px 0 0 80px;
+                    display: block;   
+                    width: 250px;
+                    position: relative;
+                    input[type=text],
+                    textarea {
+                        margin: 0;
+                        .font;
+                        font-size: 0.875rem;
+                        width: 250px;
+                    }
+                    input {
+                        &.fancy-search-box {
+                            padding: 2px;
+                        }
+                    }
+                    textarea {
+                        &.fancy-search-box {
+                            width: 250px;
+                            height: auto;
+                        }
+                    }  
+                    button {
+                        &.search-submit {
+                            //text-indent: -9999px;
+                            //font-size: 0;	
+                            //background-color: transparent;
+                            //border: none;
+                            position: absolute;
+                            top: 2px;
+                            right: -30px;
+                            //cursor: pointer;
+//                          &:before {
+//                              .controls-icon(19px, 19px);
+//                          }
+                        }
+                    }
+                }
+                /*
+                .ui-autocomplete {
+                    position: absolute;
+                    cursor: default;
+                    background-color: #eee;
+                    .ui-menu-item {
+                        .font;
+                        margin-bottom: .5em;
+                        font-size: 0.813rem;
+                        .ui-menu-item-wrapper {
+                            &:hover {
+                                background-color: white;
+                            }
+                        }
+                    }
+                    &.ui-widget-content {
+                        border: 1px solid shade(white, 13.4%); // shade(white, 13.4%); // #ddd
+                        //background: #ffffff;
+                        color: @eia-dark-grey;
+                    }
+                    &.ui-menu {
+                        list-style: none;
+                        padding: .5em;
+                        margin: 0;
+                        display: block;
+                        outline: 0;
+                    }
+                }
+                */
+            }
+        } 
+    }
+}
+
+@media @tablet {
+    .global-nav {
+        top: 40px;
+        .section-tabs {
+            .nav-menu {
+                &.energy-explained {
+                    .energy-explained-list {
+                        &.left {
+                            .left;
+                            width: 42%;
+                            margin: 8px 0;
+                            //margin: 8px 0 8px 60px;
+                            clear: none;
+                        }
+                        &.right {
+                            .right;
+                            width: 42%;
+                            margin: 8px 0;
+                            clear: none;
+                        }
+                    }
+                }
+                &.faq {
+                    .faq-list {
+                        &.left {
+                            .left;
+                            width: 42%;
+                            //margin-left: 60px;
+                            clear: none;
+                        }
+                        &.right {
+                            .right;
+                            width: 42%;
+                            //margin-left: 0;
+                            clear: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media @laptop {
+    .global-nav {
+        .section-tabs {
+            .tabs-wrapper {
+                ul {
+                    li {
+                        margin: 15px 24px 5px;
+                        a {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+            .sources-uses, .topics, .geography, .tools, .learn, .news {
+                &.left {
+                    width: 50%;
+                    margin: 0 0 1em 0;
+                    padding: 0;
+                    border-right: 1px solid shade(white, 17%);
+                    .left;
+                    > div {
+                        width: 90%;
+                        margin: 0 5%;
+                        padding: 1em 0;
+                    }
+                }
+                &.right {
+                    width: 50%;
+                    margin: 0 0 1em 0;
+                    padding: 0;
+                    .right;
+                    > div {
+                        width: 90%;
+                        margin: 0 5%;
+                        padding: 1em 0;
+                    }
+                }
+            }
+            .a-z-bottom {
+                border: none;
+            }
+            .nav-menu {
+                &:last-child {
+                    border-bottom: none;
+                }
+                &.energy-kids {
+                    a {
+                        &.energy-kids {
+                            .right;
+                        }
+                    }
+                }
+                &.a-z-index {
+                    width: 95%;
+                    margin: 0 2.5%;
+                    padding: 1em 0 2em 0;
+                    border-top: 1px solid shade(white, 17%);
+                    border-bottom: none;
+                    p {
+                        margin-bottom: 5px;
+                    }
+                    .a-z-list {
+                        font-size: 1em;
+                        .font;
+                        font-size: 1em;
+                        margin-top: 10px;
+                        a {
+                            padding: 0 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

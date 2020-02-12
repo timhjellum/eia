@@ -1,0 +1,32 @@
+@import "./assets/styles/less/base/vars";
+@import "./assets/styles/less/base/mixins";
+@import "./assets/styles/less/base/base";
+@import "./assets/styles/less/base/icons-mixins";
+@import "./assets/styles/less/base/icons-vars";
+@import "./assets/styles/less/base/icons";
+@import "./assets/styles/less/base/icons-header";
+@import "./assets/styles/less/base/icons-logos";
+@import "./assets/styles/less/base/tables";
+
+@import "./assets/styles/less/theme/basic-table";
+/* remove styles from style guide to global as needed */
+@import "./assets/styles/less/style-guide/color-palette";
+@import "./assets/styles/less/style-guide/example";
+@import "./assets/styles/less/style-guide/expand-collapse";
+@import "./assets/styles/less/style-guide/footer";
+@import "./assets/styles/less/style-guide/forms";
+
+@import "./assets/styles/less/style-guide/header";
+@import "./assets/styles/less/style-guide/icons";
+@import "./assets/styles/less/style-guide/layout";
+@import "./assets/styles/less/style-guide/legend";
+@import "./assets/styles/less/style-guide/module-containers";
+@import "./assets/styles/less/style-guide/page-titles";
+@import "./assets/styles/less/style-guide/prototype";
+@import "./assets/styles/less/style-guide/resolution";
+@import "./assets/styles/less/style-guide/sitemap";
+@import "./assets/styles/less/style-guide/tabs";
+@import "./assets/styles/less/style-guide/typography";
+@import "./assets/styles/less/style-guide/tables";
+@import "./assets/styles/less/style-guide/tomorrow";
+@import "./assets/styles/less/style-guide/reveal-on-scroll";

@@ -1,1 +1,0 @@
-<?phpclass Configurations extends localDatabase{var              $jsonType = null;var $sql      = <<< SQLSELECT ID, VALUE FROM PETIMP.CONFIGURATIONSSQL;

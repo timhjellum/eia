@@ -1,0 +1,144 @@
+//@media @mobile {
+    table {
+		//border-collapse: separate;
+		border-spacing: 0;
+		.font;
+        &.full-width {
+            width: 100%;
+		}
+
+
+        a {
+            color: @eia-blue;
+            text-decoration: none;
+            display: inline-block;
+            &:hover{
+                text-decoration: underline;
+                color:@eia-blue;
+            }
+		}
+
+
+
+        caption {
+            font-size: .938rem; 
+            .align-left;
+            caption-side: top;
+            color: @eia-dark-grey;
+            .font;
+            .bold;
+            a {
+                color: @eia-blue; 
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            em {
+                .normal;
+                text-transform: none;
+                font-weight: 400;
+            }
+            .right {
+                .normal;
+                text-transform: none;
+            }
+            p, span {
+                .normal;
+                font-size: 0.750rem; // 12 pixels
+                text-transform: none;
+            }
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+        thead {
+            th {
+				font-size: .750rem;
+				.align-right;
+				.bold;
+				padding: 6px 10px 5px 10px;
+                vertical-align: bottom;
+				&:first-child {
+					.align-left;
+				}
+				span {
+					&.normal {
+						.normal;
+					}
+				}
+			}
+
+		}
+
+
+
+
+		td,
+		th {
+			&.divider {
+				border-right: 5px solid @eia-white;
+			}
+		}
+
+
+
+
+
+
+
+
+
+	//tbody {
+		tr {
+			td {
+				font-size: .750rem;
+				color: @eia-dark-grey;
+				vertical-align: top;
+				padding: 6px 10px 5px 10px;
+			}
+		}
+	//}
+
+
+
+
+
+
+
+
+
+
+		tfoot {
+			td {
+				font-size: .750rem;
+				vertical-align: top;                    
+				padding: 6px 10px 5px 10px; 
+				&.footnotes {
+					background-color: white;
+					border-bottom: none;
+					font-size: 0.625rem; // 10 pixels	
+					//font-size: 0.688rem; // 11 pixels
+				}
+			}
+			tr {
+				&:first-child {
+					td {
+						border-top: 1px solid #d8d8d8;
+					}
+				}
+			}   
+		}
+	}
+//}
