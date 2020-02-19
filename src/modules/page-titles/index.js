@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,7 +7,7 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesPageTitles extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Page Titles</h1>
 				<h3 class="_h3">All-Sources Page Title</h3>
 				<Legend />
@@ -429,7 +430,7 @@ class ModulesPageTitles extends Component {
 
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

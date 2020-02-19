@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -10,7 +11,7 @@ import LoremIpsumH4 from "../../assets/containers/LoremIpsumH4.js";
 class ModulesTabs extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div className="section-container">
 				<h1 className="_h1">Tabs</h1>
 				<p className="_p">
 					Jquery UI Tabs - A single content area with multiple panels,
@@ -544,7 +545,7 @@ class ModulesTabs extends Component {
 
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

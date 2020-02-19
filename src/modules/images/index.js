@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,7 +7,7 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesImages extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Images</h1>
 				<p className="_p">
 					Please refer to the{" "}
@@ -273,7 +274,7 @@ class ModulesImages extends Component {
 
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

@@ -1,3 +1,4 @@
+/* variables & mixins */
 @import "./assets/styles/less/base/vars";
 @import "./assets/styles/less/base/mixins";
 @import "./assets/styles/less/base/base";
@@ -6,16 +7,80 @@
 @import "./assets/styles/less/base/icons";
 @import "./assets/styles/less/base/icons-header";
 @import "./assets/styles/less/base/icons-logos";
+@import "./assets/styles/less/base/forms";
 @import "./assets/styles/less/base/tables";
+@import "./assets/styles/less/base/lists";
+/* header / footer / menus */
+@import "./assets/styles/less/header-footer/footer";
+@import "./assets/styles/less/header-footer/header";
+@import "./assets/styles/less/header-footer/header-menu";
+@import "./assets/styles/less/header-footer/social-sticker";
+/* layouts */
+@import "./assets/styles/less/layouts/global";
+@import "./assets/styles/less/layouts/full-page";
+@import "./assets/styles/less/layouts/reordering";
+@import "./assets/styles/less/layouts/responsive";
+@import "./assets/styles/less/layouts/flex";
+@import "./assets/styles/less/layouts/sticky-footer";
 
+/* modules */
+@import "./assets/styles/less/modules/banners";
+@import "./assets/styles/less/modules/messaging";
+@import "./assets/styles/less/modules/dropdown-menu";
+@import "./assets/styles/less/modules/page-titles";
+@import "./assets/styles/less/modules/report-header";
+@import "./assets/styles/less/modules/weeklies";
+@import "./assets/styles/less/modules/fancybox";
+@import "./assets/styles/less/modules/icons";
+/* L2 */
+@import "./assets/styles/less/l2/analysis-projections.less";
+@import "./assets/styles/less/l2/visualizations";
+@import "./assets/styles/less/l2/energy-education";
+@import "./assets/styles/less/l2/consumption-surveys";
+@import "./assets/styles/less/l2/sub-navigation";
+@import "./assets/styles/less/l2/updated-data-series";
+@import "./assets/styles/less/l2/browse-by-tag";
+/* sliders */
+@import "./assets/styles/less/sliders/shared";
+@import "./assets/styles/less/sliders/home";
+@import "./assets/styles/less/sliders/multi";
+/* theme */
+/* jQuery UI */
+@import "./assets/styles/less/theme/jquery-ui/date-picker";
+@import "./assets/styles/less/theme/jquery-ui/accordion";
+@import "./assets/styles/less/theme/jquery-ui/tabs";
+/* home */
+@import "./assets/styles/less/theme/homepage/modules";
+@import "./assets/styles/less/theme/homepage/energy-kids";
+@import "./assets/styles/less/theme/homepage/features";
+@import "./assets/styles/less/theme/homepage/today-in-energy";
+@import "./assets/styles/less/theme/homepage/layout";
+/* list and content format */
+@import "./assets/styles/less/theme/a-z";
 @import "./assets/styles/less/theme/basic-table";
+@import "./assets/styles/less/theme/beta";
+@import "./assets/styles/less/theme/data-highlights";
+@import "./assets/styles/less/theme/data";
+@import "./assets/styles/less/theme/email";
+@import "./assets/styles/less/theme/faqs";
+@import "./assets/styles/less/theme/glossary";
+@import "./assets/styles/less/theme/natural-gas";
+@import "./assets/styles/less/theme/rss";
+@import "./assets/styles/less/theme/steps";
+@import "./assets/styles/less/theme/survey";
+@import "./assets/styles/less/theme/update";
+
+@import "./assets/styles/less/columns/primary";
+@import "./assets/styles/less/columns/secondary";
+@import "./assets/styles/less/columns/article";
+@import "./assets/styles/less/columns/shared";
+
 /* remove styles from style guide to global as needed */
 @import "./assets/styles/less/style-guide/color-palette";
 @import "./assets/styles/less/style-guide/example";
 @import "./assets/styles/less/style-guide/expand-collapse";
 @import "./assets/styles/less/style-guide/footer";
 @import "./assets/styles/less/style-guide/forms";
-
 @import "./assets/styles/less/style-guide/header";
 @import "./assets/styles/less/style-guide/icons";
 @import "./assets/styles/less/style-guide/layout";

@@ -3,7 +3,7 @@ import TableRowTotal from "../../assets/examples/TableRowTotal";
 class RowTotal extends Component {
   render() {
     return (
-      <li className="section-container">
+      <div class="right-content">
         <h3 className="_h3">Row Total</h3>
         <p className="_p">
           Adding a <code>className="total"</code> to the table row.
@@ -52,8 +52,8 @@ class RowTotal extends Component {
           </div>
         </div>
         <TableRowTotal />
-      </li>
-    );
-  }
+			</div>
+		);
+	}
 }
 export default TableRowTotal;

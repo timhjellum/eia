@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import Scrollchor from "react-scrollchor";
 
 class SectionContainer extends Component {
-  render() {
-    return (
-      <li className="section-container">
-        <h3 className="_h3">{this.props.sectionHeader}</h3>
-        {this.props.sectionContent}
-      </li>
-    );
-  }
+	render() {
+		return (
+			<div className="container">
+				<Scrollchor to="#top" className="top">
+					Top
+				</Scrollchor>
+			</div>
+		);
+	}
 }
 
 export default SectionContainer;

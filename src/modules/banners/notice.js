@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,7 +7,7 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesBannersNotice extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h3 class="_h3">Notice</h3>
 				<Legend />
 				<div class="_module-wrapper">
@@ -23,7 +24,7 @@ class ModulesBannersNotice extends Component {
 				</div>
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

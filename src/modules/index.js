@@ -35,7 +35,7 @@ class Modules extends Component {
 	render() {
 		return (
 			<Router>
-				<ul>
+				<ul className="left-content">
 					<li>
 						<NavLink to="/modules/">Modules Home</NavLink>
 					</li>
@@ -80,61 +80,60 @@ class Modules extends Component {
 						<NavLink to="/modules/tabs">Tabs</NavLink>
 					</li>
 				</ul>
-				<div className="mainContent">
-					<Route
-						exact
-						path={`${this.props.match.path}/`}
-						component={ModulesHome}
-					/>
-					<Route
-						path={`${this.props.match.path}/accordion`}
-						component={ModulesAccordion}
-					/>
-					<Route
-						path={`${this.props.match.path}/banners`}
-						component={ModulesBanners}
-					/>
-					<Route
-						path={`${this.props.match.path}/contact`}
-						component={ModulesContact}
-					/>
-					<Route
-						path={`${this.props.match.path}/energy-education`}
-						component={ModulesEnergyEducation}
-					/>
-					<Route
-						path={`${this.props.match.path}/fancybox`}
-						component={ModulesFancyBox}
-					/>
-					<Route
-						path={`${this.props.match.path}/forms`}
-						component={ModulesForms}
-					/>
-					<Route
-						path={`${this.props.match.path}/images`}
-						component={ModulesImages}
-					/>
-					<Route
-						path={`${this.props.match.path}/lists`}
-						component={ModulesLists}
-					/>
-					<Route
-						path={`${this.props.match.path}/page-titles`}
-						component={ModulesPageTitles}
-					/>
-					<Route
-						path={`${this.props.match.path}/report-headers`}
-						component={ModulesReportHeaders}
-					/>
-					<Route
-						path={`${this.props.match.path}/tables`}
-						component={ModulesTables}
-					/>
-					<Route
-						path={`${this.props.match.path}/tabs`}
-						component={ModulesTabs}
-					/>
-				</div>
+
+				<Route
+					exact
+					path={`${this.props.match.path}/`}
+					component={ModulesHome}
+				/>
+				<Route
+					path={`${this.props.match.path}/accordion`}
+					component={ModulesAccordion}
+				/>
+				<Route
+					path={`${this.props.match.path}/banners`}
+					component={ModulesBanners}
+				/>
+				<Route
+					path={`${this.props.match.path}/contact`}
+					component={ModulesContact}
+				/>
+				<Route
+					path={`${this.props.match.path}/energy-education`}
+					component={ModulesEnergyEducation}
+				/>
+				<Route
+					path={`${this.props.match.path}/fancybox`}
+					component={ModulesFancyBox}
+				/>
+				<Route
+					path={`${this.props.match.path}/forms`}
+					component={ModulesForms}
+				/>
+				<Route
+					path={`${this.props.match.path}/images`}
+					component={ModulesImages}
+				/>
+				<Route
+					path={`${this.props.match.path}/lists`}
+					component={ModulesLists}
+				/>
+				<Route
+					path={`${this.props.match.path}/page-titles`}
+					component={ModulesPageTitles}
+				/>
+				<Route
+					path={`${this.props.match.path}/report-headers`}
+					component={ModulesReportHeaders}
+				/>
+				<Route
+					path={`${this.props.match.path}/tables`}
+					component={ModulesTables}
+				/>
+				<Route
+					path={`${this.props.match.path}/tabs`}
+					component={ModulesTabs}
+				/>
 			</Router>
 		);
 	}

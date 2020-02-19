@@ -6,7 +6,7 @@ import ExamplePlaceholder from "../assets/examples/Placeholder.js";
 class BaseTypography extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Typography</h1>
 				<h3 className="_h3">Header 1</h3>
 				<Legend />
@@ -763,7 +763,7 @@ class BaseTypography extends Component {
 						</div>
 					</div>
 				</div>
-			</li>
+			</div>
 		);
 	}
 }

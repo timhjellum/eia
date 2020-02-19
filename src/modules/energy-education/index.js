@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,7 +7,7 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesEnergyEducation extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Visualizations</h1>
 				<p class="_p">
 					If any of the <code>h3</code> anchors are empty, the closest{" "}
@@ -92,7 +93,7 @@ class ModulesEnergyEducation extends Component {
 				</div>
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

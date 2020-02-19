@@ -3,7 +3,7 @@
 class Examples1 extends Component {
 	render() {
 		return (<ul class="style-guide">
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Multi-Card Slider</h1>
 				<p class="_p">The sliders use the
 <a href="https://bxslider.com/">bxslider</a> which is a fully responsive and highly

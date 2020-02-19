@@ -3,7 +3,7 @@ import TablesStacked from "../../assets/examples/TablesStacked";
 class Stacked extends Component {
   render() {
     return (
-      <li className="section-container">
+      <div class="right-content">
         <h3 className="_h3">Tables Stackeds</h3>
         <p className="_p">
           All tables within the <code>div.basic-table</code> will have a 32
@@ -54,8 +54,8 @@ class Stacked extends Component {
           </div>
         </div>
         <TablesStacked />
-      </li>
-    );
-  }
+			</div>
+		);
+	}
 }
 export default Stacked;

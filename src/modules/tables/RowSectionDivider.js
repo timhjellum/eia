@@ -3,7 +3,7 @@ import TableRowSectionDivider from "../../assets/examples/TableRowSectionDivider
 class RowSectionDivider extends Component {
   render() {
     return (
-      <li className="section-container">
+      <div class="right-content">
         <h3 className="_h3">Row Section Divider</h3>
 
         <p className="_p">
@@ -43,8 +43,8 @@ class RowSectionDivider extends Component {
           </div>
         </div>
         <TableRowSectionDivider />
-      </li>
-    );
-  }
+			</div>
+		);
+	}
 }
 export default RowSectionDivider;

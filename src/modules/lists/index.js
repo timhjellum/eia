@@ -1,11 +1,12 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 
 class Base extends Component {
 	render() {
-		return (<li className="section-container">
+		return (<div class="right-content">
 		<h1 className="_h1">Lists</h1>
 		<div className="l-row l-two-col-even">
 			<div className="l-col">
@@ -631,7 +632,7 @@ class Base extends Component {
 		</div>
 		<ExamplePlaceholder />
 		<Top />
-	</li>);
+	</div>);
 	}
 }
 export default Base;

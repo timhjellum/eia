@@ -53,1526 +53,1524 @@ export default ExampleIconXXX;
 
 {
 	/*
-<pre><code class="html">&lt;!-- PDF --&gt;
-&lt;span class="ico pdf"&gt;
-&lt;span&gt;PDF&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- PDF -->
+<span class="ico inline pdf">\n	<span>PDF</span>\n</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- XLS --&gt;
-&lt;span class="ico xls"&gt;
-&lt;span&gt;XLS&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- XLS -->
+<span class="ico xls">
+<span>XLS</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- CSV --&gt;
-&lt;span class="ico csv"&gt;
-&lt;span&gt;CSV&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- CSV -->
+<span class="ico csv">
+<span>CSV</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- interactive --&gt;
-&lt;span class="ico interactive"&gt;
-&lt;span&gt;INTERACTIVE&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- interactive -->
+<span class="ico interactive">
+<span>INTERACTIVE</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PPT --&gt;
-&lt;span class="ico ppt"&gt;
-&lt;span&gt;PPT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- PPT -->
+<span class="ico ppt">
+<span>PPT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- html --&gt;
-&lt;span class="ico html"&gt;
-&lt;span&gt;HTML&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- html -->
+<span class="ico html">
+<span>HTML</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- doc --&gt;
-&lt;span class="ico doc"&gt;
-&lt;span&gt;DOC&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- doc -->
+<span class="ico doc">
+<span>DOC</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- image --&gt;
-&lt;span class="ico image"&gt;
-&lt;span&gt;IMAGE&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- image -->
+<span class="ico image">
+<span>IMAGE</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- json --&gt;
-&lt;span class="ico json"&gt;
-&lt;span&gt;JSON&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- json -->
+<span class="ico json">
+<span>JSON</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- eFile --&gt;
-&lt;span class="ico efile"&gt;
-&lt;span&gt;eFile&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- eFile -->
+<span class="ico efile">
+<span>eFile</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- txt --&gt;
-&lt;span class="ico txt"&gt;
-&lt;span&gt;TXT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- txt -->
+<span class="ico txt">
+<span>TXT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PDF --&gt;
-&lt;a href="/" class="ico pdf"&gt;
-&lt;span&gt;PDF&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<pre><code class="html"><!-- PDF -->
+<a href="/" class="ico pdf">
+<span>PDF</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- XLS --&gt;
-&lt;a href="/" class="ico xls"&gt;
-&lt;span&gt;XLS&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- XLS -->
+<a href="/" class="ico xls">
+<span>XLS</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- CSV --&gt;
-&lt;a href="/" class="ico csv"&gt;
-&lt;span&gt;CSV&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- CSV -->
+<a href="/" class="ico csv">
+<span>CSV</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- interactive --&gt;
-&lt;a href="/" class="ico interactive"&gt;
-&lt;span&gt;INTERACTIVE&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- interactive -->
+<a href="/" class="ico interactive">
+<span>INTERACTIVE</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- PPT --&gt;
-&lt;a href="/" class="ico ppt"&gt;
-&lt;span&gt;PPT&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- PPT -->
+<a href="/" class="ico ppt">
+<span>PPT</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- html --&gt;
-&lt;a href="/" class="ico html"&gt;
-&lt;span&gt;HTML&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- html -->
+<a href="/" class="ico html">
+<span>HTML</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- doc --&gt;
-&lt;a href="/" class="ico doc"&gt;
-&lt;span&gt;DOC&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- doc -->
+<a href="/" class="ico doc">
+<span>DOC</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- image --&gt;
-&lt;a href="/" class="ico image"&gt;
-&lt;span&gt;IMAGE&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- image -->
+<a href="/" class="ico image">
+<span>IMAGE</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- pedro --&gt;
-&lt;a href="/" class="ico pedro"&gt;
-&lt;span&gt;PEDRO&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- pedro -->
+<a href="/" class="ico pedro">
+<span>PEDRO</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- eFile --&gt;
-&lt;a href="/" class="ico efile"&gt;
-&lt;span&gt;eFile&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- eFile -->
+<a href="/" class="ico efile">
+<span>eFile</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<span className="ico <code class="html">&lt;!-- txt --&gt;
-&lt;a href="/" class="ico txt"&gt;
-&lt;span&gt;TXT&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<span className="ico <code class="html"><!-- txt -->
+<a href="/" class="ico txt">
+<span>TXT</span>
+</a></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PDF --&gt;
-&lt;span class="ico icon-only pdf"&gt;
-&lt;span&gt;PDF&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- PDF -->
+<span class="ico icon-only pdf">
+<span>PDF</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- XLS --&gt;
-&lt;span class="ico icon-only xls"&gt;
-&lt;span&gt;XLS&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- XLS -->
+<span class="ico icon-only xls">
+<span>XLS</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- CSV --&gt;
-&lt;span class="ico icon-only csv"&gt;
-&lt;span&gt;CSV&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- CSV -->
+<span class="ico icon-only csv">
+<span>CSV</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- interactive --&gt;
-&lt;span class="ico icon-only interactive"&gt;
-&lt;span&gt;Interactive&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- interactive -->
+<span class="ico icon-only interactive">
+<span>Interactive</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PPT --&gt;
-&lt;span class="ico icon-only ppt"&gt;
-&lt;span&gt;PPT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- PPT -->
+<span class="ico icon-only ppt">
+<span>PPT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- html --&gt;
-&lt;span class="ico icon-only html"&gt;
-&lt;span&gt;HTML&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- html -->
+<span class="ico icon-only html">
+<span>HTML</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- doc --&gt;
-&lt;span class="ico icon-only doc"&gt;
-&lt;span&gt;DOC&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- doc -->
+<span class="ico icon-only doc">
+<span>DOC</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- image --&gt;
-&lt;span class="ico icon-only image"&gt;
-&lt;span&gt;IMAGE&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- image -->
+<span class="ico icon-only image">
+<span>IMAGE</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- pedro --&gt;
-&lt;span href="/" class="ico icon-only pedro"&gt;
-&lt;span&gt;PEDRO&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- pedro -->
+<span href="/" class="ico icon-only pedro">
+<span>PEDRO</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- eFile --&gt;
-&lt;span href="/" class="ico icon-only efile"&gt;
-&lt;span&gt;eFile&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- eFile -->
+<span href="/" class="ico icon-only efile">
+<span>eFile</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- txt --&gt;
-&lt;span href="/" class="ico icon-only txt"&gt;
-&lt;span&gt;TXT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- txt -->
+<span href="/" class="ico icon-only txt">
+<span>TXT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PDF --&gt;
-&lt;li class="ico pdf"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- PDF -->
+<li class="ico pdf">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- XLS --&gt;
-&lt;li class="ico xls"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- XLS -->
+<li class="ico xls">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- CSV --&gt;
-&lt;li class="ico csv"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- CSV -->
+<li class="ico csv">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- interactive --&gt;
-&lt;li class="ico interactive"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- interactive -->
+<li class="ico interactive">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 {
 	/*
-<pre><code class="html">&lt;!-- PPT --&gt;
-&lt;li class="ico ppt"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- PPT -->
+<li class="ico ppt">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- html --&gt;
-&lt;li class="ico html"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- html -->
+<li class="ico html">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- doc --&gt;
-&lt;li class="ico doc"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- doc -->
+<li class="ico doc">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- image --&gt;
-&lt;li class="ico image"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- image -->
+<li class="ico image">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- pedro --&gt;
-&lt;li href="/" class="ico pedro"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- pedro -->
+<li href="/" class="ico pedro">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- eFile --&gt;
-&lt;li href="/" class="ico efile"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- eFile -->
+<li href="/" class="ico efile">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- txt --&gt;
-&lt;li href="/" class="ico txt"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/li&gt;</code></pre>
+<pre><code class="html"><!-- txt -->
+<li href="/" class="ico txt">
+<a href="/">Lorem ipsum...</a>
+</li></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PDF --&gt;
-&lt;td class="ico pdf"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- PDF -->
+<td class="ico pdf">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- XLS --&gt;
-&lt;td class="ico xls"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- XLS -->
+<td class="ico xls">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- CSV --&gt;
-&lt;td class="ico csv"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- CSV -->
+<td class="ico csv">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- interactive --&gt;
-&lt;td class="ico interactive"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- interactive -->
+<td class="ico interactive">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- PPT --&gt;
-&lt;td class="ico ppt"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- PPT -->
+<td class="ico ppt">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- html --&gt;
-&lt;td class="ico html"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- html -->
+<td class="ico html">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- doc --&gt;
-&lt;td class="ico doc"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- doc -->
+<td class="ico doc">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- image --&gt;
-&lt;td class="ico image"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- image -->
+<td class="ico image">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- pedro --&gt;
-&lt;td href="/" class="ico pedro"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- pedro -->
+<td href="/" class="ico pedro">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- eFile --&gt;
-&lt;td href="/" class="ico efile"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- eFile -->
+<td href="/" class="ico efile">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- txt --&gt;
-&lt;td href="/" class="ico txt"&gt;
-&lt;a href="/"&gt;Lorem ipsum...&lt;/a&gt;
-&lt;/td&gt;</code></pre>
+<pre><code class="html"><!-- txt -->
+<td href="/" class="ico txt">
+<a href="/">Lorem ipsum...</a>
+</td></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- close-menu --&gt;
-&lt;span class="ico close-menu"&gt;
-&lt;span&gt;CLOSE MENU&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- close-menu -->
+<span class="ico close-menu">
+<span>CLOSE MENU</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- search-submit --&gt;
-&lt;span class="ico search-submit"&gt;
-&lt;span&gt;SUBMIT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- search-submit -->
+<span class="ico search-submit">
+<span>SUBMIT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- analysis --&gt;
-&lt;span class="ico analysis"&gt;
-&lt;span&gt;analysis&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- analysis -->
+<span class="ico analysis">
+<span>analysis</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- cancel --&gt;
-&lt;span class="ico cancel"&gt;
-&lt;span&gt;cancel&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- cancel -->
+<span class="ico cancel">
+<span>cancel</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- column-chart --&gt;
-&lt;span class="ico column-chart"&gt;
-&lt;span&gt;column-chart&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- column-chart -->
+<span class="ico column-chart">
+<span>column-chart</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- compare --&gt;
-&lt;span class="ico compare"&gt;
-&lt;span&gt;compare&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- compare -->
+<span class="ico compare">
+<span>compare</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- d-arrow --&gt;
-&lt;span class="ico d-arrow"&gt;
-&lt;span&gt;DOWN ARROW&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- d-arrow -->
+<span class="ico d-arrow">
+<span>DOWN ARROW</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- download --&gt;
-&lt;span class="ico download"&gt;
-&lt;span&gt;download&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- download -->
+<span class="ico download">
+<span>download</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- edit --&gt;
-&lt;span class="ico edit"&gt;
-&lt;span&gt;edit&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- edit -->
+<span class="ico edit">
+<span>edit</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- filter --&gt;
-&lt;span class="ico filter"&gt;
-&lt;span&gt;filter&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- filter -->
+<span class="ico filter">
+<span>filter</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grab-dot --&gt;
-&lt;span class="ico grab-dot"&gt;
-&lt;span&gt;grab-dot&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grab-dot -->
+<span class="ico grab-dot">
+<span>grab-dot</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-column --&gt;
-&lt;span class="ico grid-column"&gt;
-&lt;span&gt;grid column&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-column -->
+<span class="ico grid-column">
+<span>grid column</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-line --&gt;
-&lt;span class="ico grid-line"&gt;
-&lt;span&gt;grid line&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-line -->
+<span class="ico grid-line">
+<span>grid line</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-map --&gt;
-&lt;span class="ico grid-map"&gt;
-&lt;span&gt;grid map&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-map -->
+<span class="ico grid-map">
+<span>grid map</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-parent-column --&gt;
-&lt;span class="ico grid-parent-column"&gt;
-&lt;span&gt;grid parent column&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-parent-column -->
+<span class="ico grid-parent-column">
+<span>grid parent column</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-parent-line --&gt;
-&lt;span class="ico grid-parent-line"&gt;
-&lt;span&gt;grid parent line&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-parent-line -->
+<span class="ico grid-parent-line">
+<span>grid parent line</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-parent-map --&gt;
-&lt;span class="ico grid-parent-map"&gt;
-&lt;span&gt;grid-parent-map&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-parent-map -->
+<span class="ico grid-parent-map">
+<span>grid-parent-map</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-parent-pin --&gt;
-&lt;span class="ico grid-parent-pin"&gt;
-&lt;span&gt;grid-parent-pin&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-parent-pin -->
+<span class="ico grid-parent-pin">
+<span>grid-parent-pin</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-pin --&gt;
-&lt;span class="ico grid-pin"&gt;
-&lt;span&gt;grid-pin&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-pin -->
+<span class="ico grid-pin">
+<span>grid-pin</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- grid-key --&gt;
-&lt;span class="ico grid-key"&gt;
-&lt;span&gt;grid-key&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- grid-key -->
+<span class="ico grid-key">
+<span>grid-key</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- help --&gt;
-&lt;span class="ico help"&gt;
-&lt;span&gt;help&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- help -->
+<span class="ico help">
+<span>help</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- key --&gt;
-&lt;span class="ico key"&gt;
-&lt;span&gt;key&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- key -->
+<span class="ico key">
+<span>key</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- l-arrow --&gt;
-&lt;span class="ico l-arrow"&gt;
-&lt;span&gt;l-arrow&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- l-arrow -->
+<span class="ico l-arrow">
+<span>l-arrow</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- l-range --&gt;
-&lt;span class="ico l-range"&gt;
-&lt;span&gt;l-range&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- l-range -->
+<span class="ico l-range">
+<span>l-range</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- line-chart --&gt;
-&lt;span class="ico line-chart"&gt;
-&lt;span&gt;line-chart&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- line-chart -->
+<span class="ico line-chart">
+<span>line-chart</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- map --&gt;
-&lt;span class="ico map"&gt;
-&lt;span&gt;map&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- map -->
+<span class="ico map">
+<span>map</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- pause --&gt;
-&lt;span class="ico pause"&gt;
-&lt;span&gt;pause&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- pause -->
+<span class="ico pause">
+<span>pause</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- pin --&gt;
-&lt;span class="ico pin"&gt;
-&lt;span&gt;pin&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- pin -->
+<span class="ico pin">
+<span>pin</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- play --&gt;
-&lt;span class="ico play"&gt;
-&lt;span&gt;play&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- play -->
+<span class="ico play">
+<span>play</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- r-arrow --&gt;
-&lt;span class="ico r-arrow"&gt;
-&lt;span&gt;r-arrow&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- r-arrow -->
+<span class="ico r-arrow">
+<span>r-arrow</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- r-range --&gt;
-&lt;span class="ico r-range"&gt;
-&lt;span&gt;r-range&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- r-range -->
+<span class="ico r-range">
+<span>r-range</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- remove --&gt;
-&lt;span class="ico remove"&gt;
-&lt;span&gt;remove&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- remove -->
+<span class="ico remove">
+<span>remove</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- reset --&gt;
-&lt;span class="ico reset"&gt;
-&lt;span&gt;reset&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- reset -->
+<span class="ico reset">
+<span>reset</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- reset-animation --&gt;
-&lt;span class="ico reset-animation"&gt;
-&lt;span&gt;reset-animation&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- reset-animation -->
+<span class="ico reset-animation">
+<span>reset-animation</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- scroll-h --&gt;
-&lt;span class="ico scroll-h"&gt;
-&lt;span&gt;scroll-h&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- scroll-h -->
+<span class="ico scroll-h">
+<span>scroll-h</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- scroll-v --&gt;
-&lt;span class="ico scroll-v"&gt;
-&lt;span&gt;scroll-v&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- scroll-v -->
+<span class="ico scroll-v">
+<span>scroll-v</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- search-icon --&gt;
-&lt;span class="ico search-icon"&gt;
-&lt;span&gt;SEARCH&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- search-icon -->
+<span class="ico search-icon">
+<span>SEARCH</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- slide --&gt;
-&lt;span class="ico slide"&gt;
-&lt;span&gt;slide&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- slide -->
+<span class="ico slide">
+<span>slide</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- sort --&gt;
-&lt;span class="ico sort"&gt;
-&lt;span&gt;sort&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- sort -->
+<span class="ico sort">
+<span>sort</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- sort-down --&gt;
-&lt;span class="ico sort-down"&gt;
-&lt;span&gt;sort-down&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- sort-down -->
+<span class="ico sort-down">
+<span>sort-down</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- sort-up --&gt;
-&lt;span class="ico sort-up"&gt;
-&lt;span&gt;sort-up&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- sort-up -->
+<span class="ico sort-up">
+<span>sort-up</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- submit --&gt;
-&lt;span class="ico submit"&gt;
-&lt;span&gt;submit&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- submit -->
+<span class="ico submit">
+<span>submit</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- checkmark --&gt;
-&lt;span class="ico checkmark"&gt;
-&lt;span&gt;checkmark&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- checkmark -->
+<span class="ico checkmark">
+<span>checkmark</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- dash --&gt;
-&lt;span class="ico dash"&gt;
-&lt;span&gt;dash&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- dash -->
+<span class="ico dash">
+<span>dash</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- dot --&gt;
-&lt;span class="ico dot"&gt;
-&lt;span&gt;dot&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- dot -->
+<span class="ico dot">
+<span>dot</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- add-chart --&gt;
-&lt;span class="ico add-chart"&gt;
-&lt;span&gt;add-chart&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- add-chart -->
+<span class="ico add-chart">
+<span>add-chart</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- add-download --&gt;
-&lt;span class="ico add-download"&gt;
-&lt;span&gt;add-download&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- add-download -->
+<span class="ico add-download">
+<span>add-download</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- full-screen --&gt;
-&lt;span class="ico full-screen"&gt;
-&lt;span&gt;full-screen&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- full-screen -->
+<span class="ico full-screen">
+<span>full-screen</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- options --&gt;
-&lt;span class="ico options"&gt;
-&lt;span&gt;options&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- options -->
+<span class="ico options">
+<span>options</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- table --&gt;
-&lt;span class="ico table"&gt;
-&lt;span&gt;table&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- table -->
+<span class="ico table">
+<span>table</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- lock --&gt;
-&lt;span class="ico lock"&gt;
-&lt;span&gt;lock&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- lock -->
+<span class="ico lock">
+<span>lock</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- unlock --&gt;
-&lt;span class="ico unlock"&gt;
-&lt;span&gt;unlock&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- unlock -->
+<span class="ico unlock">
+<span>unlock</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- submit --&gt;
-&lt;span class="ico submit"&gt;
-&lt;span&gt;submit&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- submit -->
+<span class="ico submit">
+<span>submit</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- clone --&gt;
-&lt;span class="ico clone"&gt;
-&lt;span&gt;clone&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- clone -->
+<span class="ico clone">
+<span>clone</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- d --&gt;
-&lt;span class="ico d"&gt;
-&lt;span&gt;ico d&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- d -->
+<span class="ico d">
+<span>ico d</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- a --&gt;
-&lt;span class="ico a"&gt;
-&lt;span&gt;ico a&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- a -->
+<span class="ico a">
+<span>ico a</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- p --&gt;
-&lt;span class="ico p"&gt;
-&lt;span&gt;ico p&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- p -->
+<span class="ico p">
+<span>ico p</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- da --&gt;
-&lt;span class="ico da"&gt;
-&lt;span&gt;ico da&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- da -->
+<span class="ico da">
+<span>ico da</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- ap --&gt;
-&lt;span class="ico ap"&gt;
-&lt;span&gt;ico ap&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- ap -->
+<span class="ico ap">
+<span>ico ap</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- dp --&gt;
-&lt;span class="ico dp"&gt;
-&lt;span&gt;ico dp&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- dp -->
+<span class="ico dp">
+<span>ico dp</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- dap --&gt;
-&lt;span class="ico dap"&gt;
-&lt;span&gt;ico dap&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- dap -->
+<span class="ico dap">
+<span>ico dap</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- print --&gt;
-&lt;span class="ico print"&gt;
-&lt;span&gt;PRINT&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- print -->
+<span class="ico print">
+<span>PRINT</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- info --&gt;
-&lt;span class="ico info"&gt;
-&lt;span&gt;Info&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- info -->
+<span class="ico info">
+<span>Info</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- tour --&gt;
-&lt;span class="ico tour"&gt;
-&lt;span&gt;Tour&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- tour -->
+<span class="ico tour">
+<span>Tour</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- external-link --&gt;
-&lt;span class="external-link"&gt;
-&lt;span&gt;External Link&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- external-link -->
+<span class="external-link">
+<span>External Link</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!--  analysis-projections --&gt;
-&lt;span class="ico-menu analysis-projections-icon"&gt;
-&lt;span&gt;analysis-projections&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!--  analysis-projections -->
+<span class="ico-menu analysis-projections-icon">
+<span>analysis-projections</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- az-index --&gt;
-&lt;span class="ico-menu a-z-index-icon"&gt;
-&lt;span&gt;az-index&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- az-index -->
+<span class="ico-menu a-z-index-icon">
+<span>az-index</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- beta --&gt;
-&lt;span class="ico-menu beta-icon"&gt;
-&lt;span&gt;beta&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- beta -->
+<span class="ico-menu beta-icon">
+<span>beta</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- coal --&gt;
-&lt;span class="ico-menu coal-icon"&gt;
-&lt;span&gt;coal&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- coal -->
+<span class="ico-menu coal-icon">
+<span>coal</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- upcoming --&gt;
-&lt;span class="ico-menu upcoming-icon"&gt;
-&lt;span&gt;upcoming&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- upcoming -->
+<span class="ico-menu upcoming-icon">
+<span>upcoming</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- consumption --&gt;
-&lt;span class="ico-menu consumption-icon"&gt;
-&lt;span&gt;consumption&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- consumption -->
+<span class="ico-menu consumption-icon">
+<span>consumption</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- data-tools-model --&gt;
-&lt;span class="ico-menu data-tools-model-icon"&gt;
-&lt;span&gt;data-tools-model&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- data-tools-model -->
+<span class="ico-menu data-tools-model-icon">
+<span>data-tools-model</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- electricity --&gt;
-&lt;span class="ico-menu electricity-icon"&gt;
-&lt;span&gt;electricity&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- electricity -->
+<span class="ico-menu electricity-icon">
+<span>electricity</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- email-complex --&gt;
-&lt;span class="ico-menu email-complex-icon"&gt;
-&lt;span&gt;email-complex&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- email-complex -->
+<span class="ico-menu email-complex-icon">
+<span>email-complex</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- email-simple --&gt;
-&lt;span class="ico-menu email-simple"&gt;
-&lt;span&gt;email-simple&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- email-simple -->
+<span class="ico-menu email-simple">
+<span>email-simple</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- energy-explained --&gt;
-&lt;span class="ico-menu energy-explained-icon"&gt;
-&lt;span&gt;energy-explained&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- energy-explained -->
+<span class="ico-menu energy-explained-icon">
+<span>energy-explained</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- energy-in-brief --&gt;
-&lt;span class="ico-menu energy-in-brief-icon"&gt;
-&lt;span&gt;energy-in-brief&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- energy-in-brief -->
+<span class="ico-menu energy-in-brief-icon">
+<span>energy-in-brief</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- environment --&gt;
-&lt;span class="ico-menu environment-icon"&gt;
-&lt;span&gt;environment&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- environment -->
+<span class="ico-menu environment-icon">
+<span>environment</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- disruptions --&gt;
-&lt;span class="ico-menu disruptions-icon"&gt;
-&lt;span&gt;disruptions&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- disruptions -->
+<span class="ico-menu disruptions-icon">
+<span>disruptions</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- faq --&gt;
-&lt;span class="ico-menu faq-icon"&gt;
-&lt;span&gt;faq&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- faq -->
+<span class="ico-menu faq-icon">
+<span>faq</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- featured-reports --&gt;
-&lt;span class="ico-menu featured-reports-icon"&gt;
-&lt;span&gt;featured-reports&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- featured-reports -->
+<span class="ico-menu featured-reports-icon">
+<span>featured-reports</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- markets-finance --&gt;
-&lt;span class="ico-menu markets-finance-icon"&gt;
-&lt;span&gt;markets-finance&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- markets-finance -->
+<span class="ico-menu markets-finance-icon">
+<span>markets-finance</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- follow-us --&gt;
-&lt;span class="ico-menu follow-us-icon"&gt;
-&lt;span&gt;follow-us&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- follow-us -->
+<span class="ico-menu follow-us-icon">
+<span>follow-us</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- glossary --&gt;
-&lt;span class="ico-menu eia-glossary-icon"&gt;
-&lt;span&gt;glossary&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- glossary -->
+<span class="ico-menu eia-glossary-icon">
+<span>glossary</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- international --&gt;
-&lt;span class="ico-menu international-icon"&gt;
-&lt;span&gt;international&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- international -->
+<span class="ico-menu international-icon">
+<span>international</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- maps --&gt;
-&lt;span class="ico-menu maps-icon"&gt;
-&lt;span&gt;maps&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- maps -->
+<span class="ico-menu maps-icon">
+<span>maps</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- natural-gas --&gt;
-&lt;span class="ico-menu natural-gas-icon"&gt;
-&lt;span&gt;natural-gas&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- natural-gas -->
+<span class="ico-menu natural-gas-icon">
+<span>natural-gas</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- nuclear --&gt;
-&lt;span class="ico-menu nuclear-icon"&gt;
-&lt;span&gt;nuclear&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- nuclear -->
+<span class="ico-menu nuclear-icon">
+<span>nuclear</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- open-data --&gt;
-&lt;span class="ico-menu open-data-icon"&gt;
-&lt;span&gt;open-data&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- open-data -->
+<span class="ico-menu open-data-icon">
+<span>open-data</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- petroleum --&gt;
-&lt;span class="ico-menu petroleum-icon"&gt;
-&lt;span&gt;petroleum&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- petroleum -->
+<span class="ico-menu petroleum-icon">
+<span>petroleum</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- press-room --&gt;
-&lt;span class="ico-menu press-room-icon"&gt;
-&lt;span&gt;press-room&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- press-room -->
+<span class="ico-menu press-room-icon">
+<span>press-room</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!--  regional-icon --&gt;
-&lt;span class="ico-menu regional-icon"&gt;
-&lt;span&gt;regional-icons&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!--  regional-icon -->
+<span class="ico-menu regional-icon">
+<span>regional-icons</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- renewable --&gt;
-&lt;span class="ico-menu renewable-icon"&gt;
-&lt;span&gt;renewable&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- renewable -->
+<span class="ico-menu renewable-icon">
+<span>renewable</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- reports --&gt;
-&lt;span class="ico-menu reports-icon"&gt;
-&lt;span&gt;reports&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- reports -->
+<span class="ico-menu reports-icon">
+<span>reports</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- rss-complex --&gt;
-&lt;span class="ico-menu rss-complex-icon"&gt;
-&lt;span&gt;rss-complex&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- rss-complex -->
+<span class="ico-menu rss-complex-icon">
+<span>rss-complex</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- survey-forms --&gt;
-&lt;span class="ico-menu survey-forms-icon"&gt;
-&lt;span&gt;survey-forms&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- survey-forms -->
+<span class="ico-menu survey-forms-icon">
+<span>survey-forms</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- teachers --&gt;
-&lt;span class="ico-menu teachers-icon"&gt;
-&lt;span&gt;teachers&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- teachers -->
+<span class="ico-menu teachers-icon">
+<span>teachers</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- today-in-energy --&gt;
-&lt;span class="ico-menu today-in-energy-icon"&gt;
-&lt;span&gt;today-in-energy&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- today-in-energy -->
+<span class="ico-menu today-in-energy-icon">
+<span>today-in-energy</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- total-energy --&gt;
-&lt;span class="ico-menu total-energy-icon"&gt;
-&lt;span&gt;total-energy&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- total-energy -->
+<span class="ico-menu total-energy-icon">
+<span>total-energy</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- states --&gt;
-&lt;span class="ico-menu states-icon"&gt;
-&lt;span&gt;states&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- states -->
+<span class="ico-menu states-icon">
+<span>states</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- whats-new --&gt;
-&lt;span class="ico-menu whats-new-icon"&gt;
-&lt;span&gt;whats-new&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- whats-new -->
+<span class="ico-menu whats-new-icon">
+<span>whats-new</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
 	<pre><code class="html">
-&lt;ul class="ico icon-list"&gt;
-&lt;li class="ico reports-icon"&gt;
-&lt;a href&gt;Link&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<ul class="ico icon-list">
+<li class="ico reports-icon">
+<a href>Link</a>
+</li>
+</ul></code></pre>
 */
 }
 
 {
 	/*
 <pre><code class="html">
-&lt;ul class="ico icon-list"&gt;
-&lt;li class="ico email-simple"&gt;
-&lt;a href&gt;Link&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<ul class="ico icon-list">
+<li class="ico email-simple">
+<a href>Link</a>
+</li>
+</ul></code></pre>
 */
 }
 
 {
 	/*
 <pre><code class="html">
-&lt;ul class="ico icon-list"&gt;
-&lt;li class="ico rss-complex-icon"&gt;
-&lt;a href&gt;Link&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<ul class="ico icon-list">
+<li class="ico rss-complex-icon">
+<a href>Link</a>
+</li>
+</ul></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- residential --&gt;
-&lt;span class="residential-icon"&gt;
-&lt;span&gt;residential&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- residential -->
+<span class="residential-icon">
+<span>residential</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- commercial --&gt;
-&lt;span class="commercial-icon"&gt;
-&lt;span&gt;commercial&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- commercial -->
+<span class="commercial-icon">
+<span>commercial</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- industrial --&gt;
-&lt;span class="industrial-icon"&gt;
-&lt;span&gt;industrial&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- industrial -->
+<span class="industrial-icon">
+<span>industrial</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- facebook --&gt;
-&lt;span class="facebook"&gt;
-&lt;span&gt;facebook&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- facebook -->
+<span class="facebook">
+<span>facebook</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- twitter --&gt;
-&lt;span class="twitter"&gt;
-&lt;span&gt;twitter&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- twitter -->
+<span class="twitter">
+<span>twitter</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- youtube --&gt;
-&lt;span class="youtube"&gt;
-&lt;span&gt;youtube&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- youtube -->
+<span class="youtube">
+<span>youtube</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- flickr --&gt;
-&lt;span class="flickr"&gt;
-&lt;span&gt;flickr&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- flickr -->
+<span class="flickr">
+<span>flickr</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- linkedin --&gt;
-&lt;span class="linkedin"&gt;
-&lt;span&gt;linkedin&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- linkedin -->
+<span class="linkedin">
+<span>linkedin</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- email --&gt;
-&lt;span class="email"&gt;
-&lt;span&gt;email&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- email -->
+<span class="email">
+<span>email</span>
+</span></code></pre>
 */
 }
 
 {
 	/*
-<pre><code class="html">&lt;!-- rss --&gt;
-&lt;span class="rss"&gt;
-&lt;span&gt;rss&lt;/span&gt;
-&lt;/span&gt;</code></pre>
+<pre><code class="html"><!-- rss -->
+<span class="rss">
+<span>rss</span>
+</span></code></pre>
 */
 }

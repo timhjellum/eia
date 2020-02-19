@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class SectionContainer extends Component {
 	render() {
-		return (<li className="section-container">
+		return (<div className="right-content">
 			<h3 className="_h3">{this.props.sectionHeader}</h3>
 			{this.props.sectionContent}
-		</li>);
+		</div>);
 	}
 }
 

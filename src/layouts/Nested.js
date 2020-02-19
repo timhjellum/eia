@@ -6,7 +6,7 @@ import Legend from "../assets/components/Legend.js";
 class Nested extends Component {
 	render() {
 		return (
-			<li class="page-section">
+			<div class="right-content">
 
 						<h3 class="_h3">Visualizations</h3>
 				<p class="_p">
@@ -1529,7 +1529,7 @@ class Nested extends Component {
 						</div>
 					</div>
 				</div>
-			</li>
+			</div>
 		);
 	}
 }

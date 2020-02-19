@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,14 +7,14 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesAccordionAllOpen extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div className="right-content">
 				<h3 className="_h3">All Open</h3>
 				<p>
 					Add <code>all-open</code> to the accordion div
 				</p>
 				<Legend />
-				<div class="_module-wrapper">
-					<div class="_module-container">
+				<div className="_module-wrapper">
+					<div className="_module-container">
 						<div className="l-row l-two-col-right-narrow">
 							<div className="l-col">
 								<span className="expand-collapse-container">
@@ -128,7 +129,7 @@ class ModulesAccordionAllOpen extends Component {
 				<Legend />
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

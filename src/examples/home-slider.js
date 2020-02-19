@@ -3,7 +3,7 @@
 class Examples3 extends Component {
 	render() {
 		return (<ul class="style-guide">
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Home Slider</h1>
 				{/*start module */}
 				{/*start module */}

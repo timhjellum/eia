@@ -6,16 +6,10 @@ html {
 	}
 }
 
-
-.content {
-	margin-top: 100px;
-}
-
-
 @media @mobile {
 	*,
 	*:before,
-	*:after{
+	*:after {
 		box-sizing: border-box;
 	}
 	body {
@@ -24,8 +18,21 @@ html {
 		margin: 0;
 		background-color: #fff !important;
 	}
-	.l-body-wrapper.l-full-page .l-outer-wrapper .l-inner-wrapper
-	.l-body-wrapper {
+	.content {
+		margin: 120px auto;
+		//width: 100%;
+		width: 1292px; // 992 + 300px
+	}
+	.left-content {
+		display: none;
+	}
+	.right-content {
+		width: 100%;
+	}
+	.l-body-wrapper.l-full-page
+		.l-outer-wrapper
+		.l-inner-wrapper
+		.l-body-wrapper {
 		&.l-full-page {
 			.l-outer-wrapper {
 				.l-inner-wrapper {
@@ -35,189 +42,32 @@ html {
 			}
 		}
 	}
-
-	ul {
-		&.style-guide {
-			list-style: none;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			li {
-				&.section-container {
-					margin: 0 0 20px 0;
-					//border-radius: 5px;
-					//border: 1px solid #eee;
-					padding: 0 0 0 0;
-					width: 100%;
-					display: table; // required
-					//@import "../base/list.less";
-				}
-			}
-		}
-	}
-	/*
-	div { // lists page
-		&.style-guide {
-			width: 100%;
-			margin: 0;
-			padding: 0;
-//			background-color: @eia-white;
-			.l-row {
-				margin: 0;
-				padding: 0;
-				&.l-two-col-even {
-					margin: 0;
-					padding: 0;
-					.l-col {
-						margin: 0;
-						padding: 0;
-					}
-				}
-			}
-		}
-	}
-	*/
-	//.scroll-nav {
-	//	display: none;
-	//}
-	footer {
-		width: 100%;
-	}
-	.clearfix {
-		&:after {
-			display: block;
-			content: "";
-			clear: both;
-		}
-	}
-	.side-nav-open,
-	.side-nav-closed {
-		left: 0;
-	}
-	#menu,
-	._nav {
-		display: none;
-	}
-
-
-
-
-
-
 }
-@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
-
+@media @mobile-landscape {
+	// smartphones, Android phones, landscape iPhone
 }
 @media @tablet {
-	ul {
-		&.style-guide {
-			li {
-				&.section-container {
-					//margin: 0 0 20px 0;
-					border-radius: 5px;
-					border: 1px solid #eee;
-					padding: 5px 20px 40px 20px;
-					//width: 100%;
-					//display: table; // required
-					//@import "../base/list.less";
-				}
-			}
-		}
-	}
 }
 @media @tablet-landscape {
-
 }
 @media @laptop {
 	background-color: #fff;
+	.content {
+		margin: 0 auto;
+		width: 1292px; // 992 + 300px
+	}
+	.left-content {
+		display: block;
+		width: 200px;
+		float: left;
+		padding: 2em 0 3em 2em;
+	}
+	.right-content {
+		width: 992px;
+		float: right;
+	}
 }
-
 
 //@media @desktop {
 @media (min-width: 1400px) {
-	._nav,
-	#menu {
-		display: block;
-	}
-	.side-nav-open {
-		left: 320px; 
-	}
-	.side-nav-closed {
-		left: 20px;
-	}
-
-	.side-nav {
-		transform: translateX(0);
-		width: 300px;
-		border-right: 1px dotted #ccc;
-		height: calc(100% - 50px); // 50px - header
-		position: fixed;
-		left: 0;
-		top: 50px;
-	}
-	.side-nav.navigation-closed {
-		left: -290px;
-	}
-	
-	
-	#toggle {
-		position: absolute;
-		right: -10px;
-		top: 0;
-		width: 10px;
-		height: 30px;
-		display: block;
-		background-color: #ccc;
-		cursor: pointer;
-	}
-	
-	.scroll-nav {
-		width: 300px;
-		position: fixed;
-		top: 80px;
-		left: 40px;
-		display: block;
-	}
-	ol {
-		&.scroll-nav__list {
-			padding-left: 0;
-			list-style: none;
-			margin-bottom: 0;
-			li {
-				&.scroll-nav__item {
-					padding: 5px 10px;
-					border: 1px solid transparent;
-					/*
-					a {
-						color: #333;
-						text-decoration: none;
-						.bold;
-						& {
-							&:hover {
-							color: #333;
-						}
-						text-decoration: none;
-					}
-					&:hover {
-						border: 1px solid #000;
-					}
-					*/
-				}
-			}
-			&.scroll-nav__item--active {
-				border-color: #333;
-				background-color: #fff;
-				padding: 5px 10px;
-				&.active {
-					&.in-view {
-						a {
-							&.scroll-nav__link {
-								color: #333;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }

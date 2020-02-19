@@ -1,3 +1,35 @@
 {
-    "git.ignoreLimitWarning": true
+    "workbench.iconTheme": "vscode-icons",
+    "files.associations": {
+        "*.inc": "html",
+        "*.php": "html",
+        "*.js": "javascriptreact"
+    },
+    "php.validate.executablePath": "C:/php/php.exe",
+    // The following will hide the .bak files in the editor
+    "files.exclude": {
+        "**/*.bak": true
+    },
+    "editor.minimap.enabled": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.activityBar.visible": true,
+    "vsicons.projectDetection.autoReload": true,
+    "explorer.confirmDelete": false,
+    "window.menuBarVisibility": "visible",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": true,
+	"prettier.useEditorConfig": false,
+	"prettier.disableLanguages": [
+		".less"
+	],
 }

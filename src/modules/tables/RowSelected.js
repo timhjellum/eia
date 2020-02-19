@@ -4,7 +4,7 @@ import TableRowSelected from "../../assets/examples/TableRowSelected";
 class RowSelected extends Component {
   render() {
     return (
-      <li className="section-container">
+      <div class="right-content">
         <h3 className="_h3">Row Selected</h3>
         <p className="_p">
           Overiding the column alignment (head, body and foot) can be
@@ -181,8 +181,8 @@ class RowSelected extends Component {
           </div>
         </div>
         <TableRowSelected />
-      </li>
-    );
-  }
+			</div>
+		);
+	}
 }
 export default RowSelected;

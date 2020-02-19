@@ -4,7 +4,7 @@ import ExamplePlaceholder from "../assets/examples/Placeholder.js";
 class ModulesHome extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1"></h1>
 				<h3 className="_h3">Module Rules</h3>
 
@@ -346,7 +346,7 @@ class ModulesHome extends Component {
 					other sections of the site more easily and you will Avoid
 					increasing the specificity unnecessarily.
 				</p>
-			</li>
+			</div>
 		);
 	}
 }

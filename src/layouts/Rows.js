@@ -7,7 +7,7 @@ import LoremIpsum from "../assets/containers/LoremIpsum.js";
 class Rows extends Component {
 	render() {
 		return (
-			<li class="page-section">
+			<div class="right-content">
 				<h3 class="_h3">Visualizations</h3>
 				<h1 class="_h1">Row Layout Examples</h1>
 
@@ -101,7 +101,7 @@ class Rows extends Component {
 						</div>
 					</div>
 				</div>
-			</li>
+			</div>
 		);
 	}
 }

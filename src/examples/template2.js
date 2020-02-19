@@ -3,7 +3,7 @@
 class Base extends Component {
 	render() {
 		return (<ul class="style-guide">
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Frequently Asked Questions (FAQs) Example #1</h1>
 
 

@@ -3,7 +3,7 @@
 class Examples2 extends Component {
 	render() {
 		return (<ul class="style-guide">
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Article Theme</h1>
 			</li >
 		</ul >);

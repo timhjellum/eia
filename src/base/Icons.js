@@ -1,12 +1,60 @@
 ﻿import React, { Component } from "react";
 import Top from "../assets/components/Top.js";
 import ExamplePlaceholder from "../assets/examples/Placeholder.js";
+import SpanIcoPDF from "../assets/examples/SpanIcoPDF";
+import AnchorIcoPDF from "../assets/examples/AnchorIcoPDF";
+import InlineIcoPDF from "../assets/examples/InlineIcoPDF";
+import IconOnlyIcoPDF from "../assets/examples/IconOnlyIcoPDF";
 import ExampleTableIcons from "../modules/tables/Icons.js";
+import SpanIcoXLS from "../assets/examples/SpanIcoXLS";
+import AnchorIcoXLS from "../assets/examples/AnchorIcoXLS";
+import InlineIcoXLS from "../assets/examples/InlineIcoXLS";
+import IconOnlyIcoXLS from "../assets/examples/IconOnlyIcoXLS";
+import SpanIcoCSV from "../assets/examples/SpanIcoCSV";
+import AnchorIcoCSV from "../assets/examples/AnchorIcoCSV";
+import InlineIcoCSV from "../assets/examples/InlineIcoCSV";
+import IconOnlyIcoCSV from "../assets/examples/IconOnlyIcoCSV";
+import SpanIcoDOC from "../assets/examples/SpanIcoDOC";
+import AnchorIcoDOC from "../assets/examples/AnchorIcoDOC";
+import InlineIcoDOC from "../assets/examples/InlineIcoDOC";
+import IconOnlyIcoDOC from "../assets/examples/IconOnlyIcoDOC";
+import SpanIcoPPT from "../assets/examples/SpanIcoPPT";
+import AnchorIcoPPT from "../assets/examples/AnchorIcoPPT";
+import InlineIcoPPT from "../assets/examples/InlineIcoPPT";
+import IconOnlyIcoPPT from "../assets/examples/IconOnlyIcoPPT";
+import SpanIcoInteractive from "../assets/examples/SpanIcoInteractive";
+import AnchorIcoInteractive from "../assets/examples/AnchorIcoInteractive";
+import InlineIcoInteractive from "../assets/examples/InlineIcoInteractive";
+import IconOnlyIcoInteractive from "../assets/examples/IconOnlyIcoInteractive";
+import SpanIcoHTML from "../assets/examples/SpanIcoHTML";
+import AnchorIcoHTML from "../assets/examples/AnchorIcoHTML";
+import InlineIcoHTML from "../assets/examples/InlineIcoHTML";
+import IconOnlyIcoHTML from "../assets/examples/IconOnlyIcoHTML";
+import SpanIcoTXT from "../assets/examples/SpanIcoTXT";
+import AnchorIcoTXT from "../assets/examples/AnchorIcoTXT";
+import InlineIcoTXT from "../assets/examples/InlineIcoTXT";
+import IconOnlyIcoTXT from "../assets/examples/IconOnlyIcoTXT";
+import SpanIcoImage from "../assets/examples/SpanIcoImage";
+import AnchorIcoImage from "../assets/examples/AnchorIcoImage";
+import InlineIcoImage from "../assets/examples/InlineIcoImage";
+import IconOnlyIcoImage from "../assets/examples/IconOnlyIcoImage";
+import SpanIcoJSON from "../assets/examples/SpanIcoJSON";
+import AnchorIcoJSON from "../assets/examples/AnchorIcoJSON";
+import InlineIcoJSON from "../assets/examples/InlineIcoJSON";
+import IconOnlyIcoJSON from "../assets/examples/IconOnlyIcoJSON";
+import SpanIcoEFILE from "../assets/examples/SpanIcoEFILE";
+import AnchorIcoEFILE from "../assets/examples/AnchorIcoEFILE";
+import InlineIcoEFILE from "../assets/examples/InlineIcoEFILE";
+import IconOnlyIcoEFILE from "../assets/examples/IconOnlyIcoEFILE";
+import SpanIcoPEDRO from "../assets/examples/SpanIcoPEDRO";
+import AnchorIcoPEDRO from "../assets/examples/AnchorIcoPEDRO";
+import InlineIcoPEDRO from "../assets/examples/InlineIcoPEDRO";
+import IconOnlyIcoPEDRO from "../assets/examples/IconOnlyIcoPEDRO";
 
 class Icons extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Icons</h1>
 				<p class="_p">
 					The graphic images below are SVG, an image format for vector
@@ -55,90 +103,223 @@ class Icons extends Component {
 						</div>
 					</li>
 				</ol>
-				<ExamplePlaceholder />
+
+				<Top />
+				<h3 class="_h3">Usage</h3>
+				<p></p>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico pdf">
+							<span>PDF</span>
+						</span>
+					</a>
+					<SpanIcoPDF />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico xls">
+							<span>XLS</span>
+						</span>
+					</a>
+					<SpanIcoXLS />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico csv">
+							<span>CSV</span>
+						</span>
+					</a>
+					<SpanIcoCSV />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico interactive">
+							<span>Interactive</span>
+						</span>
+					</a>
+					<SpanIcoInteractive />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico ppt">
+							<span>PPT</span>
+						</span>
+					</a>
+					<SpanIcoPPT />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico html">
+							<span>HTML</span>
+						</span>
+					</a>
+					<SpanIcoHTML />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico doc">
+							<span>DOC</span>
+						</span>
+					</a>
+					<SpanIcoDOC />
+				</div>
+
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico image">
+							<span>IMAGE</span>
+						</span>
+					</a>
+					<SpanIcoImage />
+				</div>
+
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico json">
+							<span>JSON</span>
+						</span>
+					</a>
+					<SpanIcoJSON />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico efile">
+							<span>eFile</span>
+						</span>
+					</a>
+					<SpanIcoEFILE />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico txt">
+							<span>TXT</span>
+						</span>
+					</a>
+					<SpanIcoTXT />
+				</div>
+				<div className="_source-icon">
+					<span class="formats">Available formats:</span>{" "}
+					<a>
+						<span className="ico pedro">
+							<span>PEDRO</span>
+						</span>
+					</a>
+					<SpanIcoPEDRO />
+				</div>
 				<Top />
 				<h3 class="_h3">Inline Usage</h3>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico pdf inline">
 							<span>PDF</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoPDF />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico xls inline">
 							<span>XLS</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoXLS />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico csv inline">
 							<span>CSV</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoCSV />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico interactive inline">
-							<span>INTERACTIVE</span>
+							<span>Interactive</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoInteractive />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico ppt inline">
 							<span>PPT</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoPPT />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico html inline">
 							<span>HTML</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoHTML />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico doc inline">
 							<span>DOC</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoDOC />
 				</div>
 
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico image inline">
 							<span>IMAGE</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoImage />
 				</div>
 
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico json inline">
 							<span>JSON</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoJSON />
 				</div>
 				<div className="_source-icon">
+					Lorem ipsum dolor sit amet (
 					<a>
 						<span className="ico efile inline">
 							<span>eFile</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					) consectetur adipiscing elit
+					<InlineIcoEFILE />
 				</div>
 				<div className="_source-icon">
 					<a>
@@ -146,7 +327,15 @@ class Icons extends Component {
 							<span>TXT</span>
 						</span>
 					</a>
-					<ExamplePlaceholder />
+					<InlineIcoTXT />
+				</div>
+				<div className="_source-icon">
+					<a>
+						<span className="ico pedro inline">
+							<span>PEDRO</span>
+						</span>
+					</a>
+					<InlineIcoPEDRO />
 				</div>
 
 				<Top />
@@ -155,67 +344,74 @@ class Icons extends Component {
 					<a className="ico pdf">
 						<span>PDF</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoPDF />
 				</div>
 				<div className="_source-icon">
 					<a className="ico xls">
 						<span>XLS</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoXLS />
 				</div>
 				<div className="_source-icon">
 					<a className="ico csv">
 						<span>CSV</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoCSV />
 				</div>
 				<div className="_source-icon">
 					<a className="ico interactive">
-						<span>INTERACTIVE</span>
+						<span>Interactive</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoInteractive />
 				</div>
 				<div className="_source-icon">
 					<a className="ico ppt">
 						<span>PPT</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoPPT />
 				</div>
 				<div className="_source-icon">
 					<a className="ico html">
 						<span>HTML</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoHTML />
 				</div>
 				<div className="_source-icon">
 					<a className="ico doc">
 						<span>DOC</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoDOC />
+				</div>
+				<div className="_source-icon">
+					<a className="ico jspn">
+						<span>JSON</span>
+					</a>
+					<AnchorIcoJSON />
 				</div>
 				<div className="_source-icon">
 					<a className="ico image">
 						<span>IMAGE</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoImage />
 				</div>
-				<div className="_source-icon">
-					<a className="ico pedro">
-						<span>PEDRO</span>
-					</a>
-					<ExamplePlaceholder />
-				</div>
+
 				<div className="_source-icon">
 					<a className="ico efile">
 						<span>eFile</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoEFILE />
 				</div>
 				<div className="_source-icon">
 					<a className="ico txt">
 						<span>TXT</span>
 					</a>
-					<ExamplePlaceholder />
+					<AnchorIcoTXT />
+				</div>
+				<div className="_source-icon">
+					<a className="ico pedro">
+						<span>PEDRO</span>
+					</a>
+					<AnchorIcoPEDRO />
 				</div>
 				<Top />
 
@@ -224,70 +420,74 @@ class Icons extends Component {
 					<span class="ico icon-only pdf">
 						<span>PDF</span>
 					</span>
-					<ExamplePlaceholder />
-					<ExamplePlaceholder />
+					<IconOnlyIcoPDF />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only xls">
 						<span>XLS</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoXLS />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only csv">
 						<span>CSV</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoCSV />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only interactive">
 						<span>Interactive</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoInteractive />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only ppt">
 						<span>PPT</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoPPT />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only html">
 						<span>HTML</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoHTML />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only doc">
 						<span>DOC</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoDOC />
 				</div>
 				<div className="_source-icon">
 					<span class="ico icon-only image">
 						<span>IMAGE</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoImage />
 				</div>
 				<div className="_source-icon">
-					<span className="ico icon-only pedro">
-						<span>PEDRO</span>
+					<span className="ico icon-only json">
+						<span>JSON</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoJSON />
 				</div>
 				<div className="_source-icon">
 					<span className="ico icon-only efile">
 						<span>eFile</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoEFILE />
 				</div>
 				<div className="_source-icon">
 					<span className="ico icon-only txt">
 						<span>TXT</span>
 					</span>
-					<ExamplePlaceholder />
+					<IconOnlyIcoTXT />
 				</div>
-
+				<div className="_source-icon">
+					<span className="ico icon-only pedro">
+						<span>PEDRO</span>
+					</span>
+					<IconOnlyIcoPEDRO />
+				</div>
 				<Top />
 				<h3 class="_h3">List-item Icons</h3>
 				<div className="_source-icon">
@@ -1202,7 +1402,7 @@ class Icons extends Component {
 					</span>
 					<ExamplePlaceholder />
 				</div>
-			</li>
+			</div>
 		);
 	}
 }

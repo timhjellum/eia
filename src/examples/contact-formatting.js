@@ -2,9 +2,7 @@
 
 class ExamplesContact extends Component {
 	render() {
-		return (<ul class="style-guide">
-			<li class="section-container"></li >
-		</ul >);
+		return <div class="right-content"></div>;
 	}
 }
 

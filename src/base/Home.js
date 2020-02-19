@@ -3,9 +3,9 @@
 class BaseHome extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Base</h1>
-			</li>
+			</div>
 		);
 	}
 }

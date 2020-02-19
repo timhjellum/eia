@@ -7,7 +7,7 @@ import LoremIpsum from "../assets/containers/LoremIpsum.js";
 class ColorPalette extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Color Palette</h1>
 				<h3 className="_h3 blue">
 					<a name="one"></a>Blues
@@ -536,7 +536,7 @@ class ColorPalette extends Component {
 					</div>
 				</div>
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

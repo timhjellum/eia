@@ -1,11 +1,12 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 
 class Modules1 extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Visualizations</h1>
 				<p className="_p">
 					If any of the <code>h3</code> anchors are empty, the closest{" "}
@@ -440,7 +441,7 @@ class Modules1 extends Component {
 					</div>
 				</span>
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

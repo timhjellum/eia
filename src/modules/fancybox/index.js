@@ -1,11 +1,12 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 
 class ModulesFancyBox extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">FancyBox</h1>
 				<p class="_p">
 					fancyBox is a tool that offers a nice and elegant way to add
@@ -722,7 +723,7 @@ data: [124, 155, 155, 154, 162, 125, 102, 179, 199, 161, 116, 98, 100, 138]
 
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }

@@ -3,10 +3,10 @@ import Top from "../assets/components/Top.js";
 import Legend from "../assets/components/Legend.js";
 import ExamplePlaceholder from "../assets/examples/Placeholder.js";
 
-class BaseForms extends Component {
+class Forms extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h1 className="_h1">Forms</h1>
 				<h3 className="_h3">No Javascript</h3>
 				<Legend />
@@ -191,9 +191,9 @@ class BaseForms extends Component {
 				</div>
 				<ExamplePlaceholder />
 				<Top />
-			</li>
+			</div>
 		);
 	}
 }
 
-export default BaseForms;
+export default Forms;

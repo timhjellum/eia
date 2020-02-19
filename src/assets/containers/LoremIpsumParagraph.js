@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class LoremIpsumParagraph extends Component {
 	render() {
 		return (
-			<p class="_module-bg">
+			<p className="_module-bg">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
 				lorem massa, semper nec eros a, lacinia porttitor nunc.
 				Phasellus ex dolor, ultricies eu ornare ut, placerat non sapien.

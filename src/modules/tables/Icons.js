@@ -3,7 +3,7 @@ import ExampleTableIcons from "../../assets/examples/TableIcons";
 class TableIcons extends Component {
 	render() {
 		return (
-			<li className="section-container">
+			<div class="right-content">
 				<h3 className="_h3">Table Icons</h3>
 				<p>
 					See the <a href="../base/icons.html">Base / Icons</a>{" "}
@@ -112,7 +112,7 @@ class TableIcons extends Component {
 					</div>
 				</div>
 				<ExampleTableIcons />
-			</li>
+			</div>
 		);
 	}
 }

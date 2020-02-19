@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Home extends Component {
 	render() {
 		return (
-			<li className="page-section">
+			<div class="right-content">
 				<h3 className="_h3">Page Layouts</h3>
 				<h3 className="_h3">Introduction</h3>
 				<p className="_p">
@@ -420,7 +420,7 @@ class Home extends Component {
 					<a href="row-examples.html">rows</a> and{" "}
 					<a href="examples.html">columns</a>.
 				</p>
-			</li>
+			</div>
 		);
 	}
 }

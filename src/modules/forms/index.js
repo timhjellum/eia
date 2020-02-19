@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+
 import Top from "../../assets/components/Top.js";
 import Legend from "../../assets/components/Legend.js";
 import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
@@ -6,7 +7,7 @@ import ExamplePlaceholder from "../../assets/examples/Placeholder.js";
 class ModulesForms extends Component {
 	render() {
 		return (
-			<li class="section-container">
+			<div class="right-content">
 				<h1 class="_h1">Forms</h1>
 
 				<div class="alert">
@@ -1058,7 +1059,7 @@ Radiobuttons should be utilized when the user must choose from two or more optio
 
 
 
-<li class="section-container">
+<div class="right-content">
 <h3 class="_h3">legend</h3>
 
 <div class="l-row l-two-col-left">
@@ -1087,7 +1088,7 @@ Radiobuttons should be utilized when the user must choose from two or more optio
 
 
 
-<li class="section-container">
+<div class="right-content">
 <h3 class="_h3">textarea</h3>
 
 <p class="_p">Defines a <strong>multi-line text control</strong> within a web form.</p>
@@ -1407,7 +1408,7 @@ example coming soon...
 </div>
 </div>
 </li>
-<li class="section-container">
+<div class="right-content">
 <h3 class="_h3">Validation</h3>
 <div class="form-container">
 <label>Form Label</label><textarea class="textarea invalid" rows="10" placeholder="e.g. Hello my name is Alex" name="message"></textarea>
@@ -1466,7 +1467,7 @@ example coming soon...
 <button type="reset">Resetform</button>
 </div></div>
 */}
-			</li>
+			</div>
 		);
 	}
 }
