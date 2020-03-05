@@ -1,0 +1,833 @@
+/*
+REMs        Pixels
+_________________________________
+font-size: 0.625rem; // 10 pixels	
+font-size: 0.688rem; // 11 pixels
+font-size: 0.750rem; // 12 pixels
+font-size: 0.813rem; // 13 pixels
+font-size: 0.875rem; // 14 pixels
+font-size: 0.938rem; // 15 pixels
+font-size: 1.000rem; // 16 pixels
+font-size: 0.063rem; // 17 pixels
+font-size: 1.125rem; // 18 pixels
+font-size: 1.188rem; // 19 pixels
+font-size: 1.250rem; // 20 pixels
+font-size: 1.313rem; // 21 pixels
+font-size: 1.375rem; // 22 pixels
+font-size: 1.438rem; // 23 pixels
+font-size: 1.500rem; // 24 pixels
+*/
+
+*:focus {outline: none;}
+// 2. Remove the margin in Firefox and Safari.
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0; /* 2 */
+}
+
+// Show the overflow in IE.
+// 1. Show the overflow in Edge.
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+// Remove the inheritance of text transform in Edge, Firefox, and IE.
+// 1. Remove the inheritance of text transform in Firefox.
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video` controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+}
+
+// Remove the inner border and padding in Firefox.
+button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+// Restore the focus styles unset by the previous rule.
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+// Remove the default vertical scrollbar in IE.
+textarea {
+	overflow: auto;
+}
+
+// 1. Add the correct box sizing in IE 10-.
+// 2. Remove the padding in IE 10-.
+[type="checkbox"],
+[type="radio"] {
+box-sizing: border-box; /* 1 */
+padding: 0; /* 2 */
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+height: auto;
+}
+
+// 1. Correct the odd appearance in Chrome and Safari.
+// 2. Correct the outline style in Safari.
+[type="search"] {
+-webkit-appearance: textfield; /* 1 */
+outline-offset: -2px; /* 2 */
+}
+
+// Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+-webkit-appearance: button; /* 1 */
+font: inherit; /* 2 */
+}
+/*
+button,
+input[type=button] {
+	.font;
+	font-size: 0.875rem;
+	color: @eia-blue;
+	//float: left;
+	padding: 3px 8px;
+	//margin-right: 4px;
+	background: #fff;
+	border: 1px solid #333;
+}
+*/
+.image-download {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    float: right;
+    margin-bottom: 20px;
+    color: @eia-blue; 
+    border: none;
+	background: none;
+	cursor: pointer;
+	.ico {
+		&.download {
+			margin-left: 4px;
+			&:before {
+				.controls-icon(20px, 20px);
+				.icon-download(@fill-color: @eia-blue);
+				position: relative;
+				top: 4px;
+				display: inline-block;
+			}
+		}
+	}
+
+}
+
+select {
+	padding: 0 0 0 5px;
+	margin: 0;
+	//border: none;
+	font-size: 0.750rem; // 12 pixels
+	//-moz-appearance: none;
+	//-webkit-appearance: none;
+	//-webkit-border-radius: 0px;
+	//appearance: none;
+	outline-width: 0;
+	//display: block;
+}
+.primary,
+.primary-alt {
+	.form-container {
+		input[type="text"],
+		input[type="email"],
+		input[type="number"] {
+			width: 220px; 
+			padding: 5px 8px;
+		}
+		textarea {
+			padding: 8px;
+			width: 300px;
+		}
+	}
+}
+
+.form-container {
+	ul {
+		margin: 0 0 1em 0;
+		font-size: 0.875rem; // 14 pixels
+        padding: 0;
+        list-style: none;
+	}
+	label {
+		width: 150px;
+		margin: 3px 0 0 0;
+		display: inline-block;
+		//float:left;
+		padding: 3px;
+	}
+
+
+	
+	/*
+	input,
+	textarea { 
+		border:1px solid #aaa;
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		border-radius:2px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+		&:focus {
+			background: #fff; 
+			border:1px solid #555; 
+			box-shadow: 0 0 3px #aaa; 
+		}
+	}
+	*/
+	.required-notification {
+		color: @eia-red; // @eia-red; 
+		//margin: 5px 0 0 0; 
+		//display:inline;
+		float: right;
+		font-size: 0.750rem; // 12 pixels
+	}
+	.required {
+		color: @eia-red; // @eia-red; 
+		font-size: 0.750rem; // 12 pixels
+	}
+
+
+	textarea {
+		padding: 8px;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	textarea {
+		border: 1px solid #ccc; // #aaa;
+		//box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		border-radius: 1px;
+		padding: 5px 8px;
+		&:required {
+/*
+&:after {
+	content: "*";
+	margin: 0 0 0 6px;
+	font-weight: bold;
+	color: @eia-red;
+	display: inline-block;
+	position: absolute;
+}
+
+&:before {
+	content: "*";
+	margin: 0 0 0 6px;
+	font-weight: bold;
+	color: @eia-red;
+	display: inline-block;
+	position: absolute;
+}
+*/
+			&:valid {
+				+.form_hint {
+					background: @eia-green;
+				} 
+				+.form_hint::before {
+					color: @eia-green;
+				} 
+				.valid {
+					background: #fff;
+					box-shadow: 0 0 5px @eia-green;
+					border-color: @eia-green;
+					+span {
+						position: relative;
+						left: -20px;
+						top: 2px;
+						&:after {
+							.controls-icon(20px, 20px);
+							.icon-checkmark;
+							display: inline-block;
+							position: absolute;
+						}
+					}
+				}
+			}
+	
+		}
+
+		&:focus {
+			+.form_hint {
+				display: inline;
+			}
+			&:invalid {
+				.invalid {
+					background: @eia-white;
+					box-shadow: 0 0 5px @eia-red;
+					border-color: @eia-red;
+					+span {
+						position: relative;
+						left: -20px;
+						top: 2px;
+						&:after {
+							//.controls-icon(20px, 20px);
+							//.icon-checkmark;
+							content: "x";
+							margin: 0 0 0 6px;
+							font-weight: bold;
+							color: @eia-red;
+							display: inline-block;
+							position: absolute;
+						}
+					}
+				}
+			}
+		}
+	}
+	.form_hint {
+		background: @eia-red;
+		border-radius: 3px 3px 3px 3px;
+		color: white;
+		margin-left: 4px;
+		padding: 8px 6px;
+		z-index: 999; /* hints stay above all other elements */
+		position: absolute; /* allows proper formatting if hint is two lines */
+		height: 30px;
+		display: none;
+		&:before {
+			content: "\25C0"; /* left point triangle in escaped unicode */
+			color:@eia-red;
+			position: absolute;
+			top: 7px;
+			left: -6px;
+		}
+	}
+	:-moz-placeholder {
+		color: @eia-blue;
+	}
+	:-webkit-input-placeholder {
+		color: @eia-blue;
+	}
+	:-webkit-validation-bubble-message {
+		padding: 1em;
+	}
+	.date-picker {
+		height: 24px;
+	}
+	/*
+	span {
+		&.required {
+			&:after {
+				content: "*";
+				margin: 8px 0 0 6px;
+				font-weight: bold;
+				color: @eia-red;
+				display: inline-block;
+				position: absolute;
+			}
+			&:before {
+				content: "*";
+				margin: 0 0 0 6px;
+				font-weight: bold;
+				color: @eia-red;
+				display: inline-block;
+				position: absolute;
+			}
+		}
+	}
+	*/
+}
+
+
+fieldset {
+	margin: 0 0 .5em 0;
+	padding: 0 4px 3px 4px;
+	//padding: 0 14px 3px 4px;
+	width: 100%;
+	display: table;
+	float: left;
+	border: 1px solid @eia-blue;
+	//background-color: #fff;
+	// 1. Correct the text wrapping in Edge and IE.
+	// 2. Correct the color inheritance from `fieldset` elements in IE.
+	// 3. Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+	legend {
+		//.font;
+		box-sizing: border-box; /* 1 */
+		//color: inherit; /* 2 */
+		display: table; /* 1 */
+		max-width: 100%; /* 1 */
+		//padding: 0; /* 3 */
+		white-space: normal; /* 1 */
+		color: @eia-blue;
+		font-size: 0.750rem; // 12 pixels
+		line-height: 1em;
+		margin: 0 0 0 4px;
+		padding: 0 4px;
+		//text-transform: uppercase;
+		.bold;
+
+		//position: relative;
+		//background-color: #fff;
+		//top: -6px;
+	}
+	select {
+		border: none;
+	}
+	&.green {
+		border: 1px solid @eia-green;
+		legend {
+			color: @eia-green;
+		}
+	}
+}
+
+
+
+ul {
+	&.checkbox-container {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		.bold;
+		li {
+			&.custom-checkbox {
+				font-size: 0.875rem; 
+				margin-bottom: 2px;
+				margin-left: 2px;
+				width: 100%;
+				display: table;
+				&:active {
+					outline: none;
+				}
+
+				span {
+					font-size: 0.875rem; 
+					margin-bottom: 2px;
+					margin-left: 2px;
+				}
+				.custom-checkbox-input {
+					opacity: 0;
+					display: inline-block;
+					margin: 0px;
+					height: 0px;
+					width: 0px;
+					position: absolute;
+					+.custom-checkbox-label {
+						&:before {
+							content: '';
+							background: #fff;
+							border: 1px solid @eia-blue;
+							display: block;
+							float: left;
+							width: 10px;
+							height: 10px;
+							padding: 2px;
+							text-align: center;
+						}
+					}
+					&:checked {
+						+.custom-checkbox-label {
+							&:before {
+								border: 1px solid @eia-blue;
+							}
+							&:before {
+								.controls-icon(12px, 12px);
+								.icon-checkmark(@eia-blue);
+							}
+						}
+					}
+
+					&:focus {
+						+.custom-checkbox-label {
+							outline: 1px solid #ddd;
+						}
+					}
+				}
+				.custom-checkbox-label {
+					position: relative;
+					display: inline-block;
+					vertical-align: middle;
+					cursor: pointer;
+					//margin: 3px 3px 3px 0px;
+					margin: 0;
+					.normal;
+				}
+				.custom-checkbox-label-inside {
+					display: block;
+					padding-left: 26px;
+					margin-top: 1px;
+					line-height: 1.2em;
+					/*
+					.disabled {
+						text-decoration: line-through;
+						padding-right: 1px;
+						color: #999999;
+						cursor: default;
+					}
+					.instances {
+						margin-left: 3px;
+					}
+					*/
+				}
+			}
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			ul {
+				margin-left: 15px;
+			}
+			h4 {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+td {
+	&.custom-checkbox {
+
+		.custom-checkbox-input {
+			opacity: 0;
+			display: inline-block;
+			margin: 0px;
+			height: 0px;
+			width: 0px;
+			position: absolute;
+			+.custom-checkbox-label {
+				&:before {
+					content: '';
+					background: #fff;
+					border: 1px solid @eia-blue;
+					display: block;
+					float: left;
+					//width: 12px;
+					//height: 12px;
+					width: 10px;
+					height: 10px;
+					padding: 2px;
+					text-align: center;
+				}
+			}
+			&:checked {
+				+.custom-checkbox-label {
+					&:before {
+
+content: '';
+background: #fff;
+border: 1px solid @eia-blue;
+display: block;
+float: left;
+//width: 12px;
+//height: 12px;
+width: 10px;
+height: 10px;
+padding: 2px;
+text-align: center;
+					}
+
+					&:before {
+						.controls-icon(10px, 10px);
+						.icon-checkmark(@eia-blue);
+						background-size: 125% 125%;
+					}
+				}
+			}
+			&:focus {
+				+.custom-checkbox-label {
+					outline: 1px solid #ddd;
+				}
+			}
+		}
+		.custom-checkbox-label {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			//margin: 3px 3px 3px 0px;
+			margin: 0;
+			.normal;
+		}
+		.custom-checkbox-label-inside {
+			display: block;
+			padding-left: 26px;
+			margin-top: 1px;
+			line-height: 1.2em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.button-container {
+	width: 100%;
+	display: table;
+	padding: 0 0 1.5em 0;
+	clear: both;
+	button,
+	input[type=button] {
+		.font;
+		font-size: 0.750rem; // 12 pixels
+		color: @eia-dark-grey;
+		float: left;
+		padding: 3px 8px;
+		margin-right: 4px;
+	}
+	button {
+		background-color: @eia-blue;
+		border: 1px solid @eia-blue;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		color: @eia-white;
+		font-weight: bold;
+		padding: 6px 20px;
+		text-align: center;
+		margin: .5em .5em 0 0;
+		&:hover {
+			background-color: @eia-dark-blue;
+			border: 1px solid@eia-dark-blue;
+			color: @eia-white;
+			cursor: pointer; 
+		}
+	}
+}
+
+
+.dropdown-container {
+	display: table;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    &:focus {
+        outline: none;
+	}
+	.ico {
+		font-size: 0;
+		line-height: 0;
+		&.d-arrow {
+			&:before {
+				.controls-icon(12px, 12px);
+				.icon-d-arrow(@fill-color: @eia-blue);
+				display: inline-block;
+			}
+			//margin: 0;
+			//position: relative;
+			//top: 3px;
+			float: right;
+			&>span {
+				font-size: 0;
+				line-height: 0;
+				margin: 0;
+			}
+		}					
+	}
+
+	.dropdown-menu {
+		display: none;
+		width: 100%;
+		background: #fff;
+		z-index: 2;
+		position: absolute;
+		border: 1px solid #0096d7;
+		border-top: none;
+		box-shadow: 0px 9px 9px -2px rgba(0, 0, 0, 0.4);
+		padding: 6px 0;
+		margin: 0 0 0 -5px;
+		&:before {
+			content: '';
+			height: 0;
+			width: calc(100% - 20px);
+			border-top: 1px solid #ddd;
+			display: block;
+			margin: 0 10px 12px 10px;
+		}
+        ul {
+			margin: 5px 10px;
+			padding: 0;
+			list-style: none;
+			width: calc(100% - 20px);
+			li {
+				margin-bottom: 5px;
+				display: table;
+width: 100%; // must be 100%
+				clear: both;
+				cursor: pointer;
+				color: @eia-dark-grey;
+				a {
+					color:@eia-blue;
+					text-decoration: none;
+					line-height: 1.4;
+					//color: @eia-dark-grey;
+					font-size: .875rem;
+					&:link,
+					&:active,
+					&:visited {
+						color:@eia-blue;
+						text-decoration: none;
+					}
+					&:hover{
+						text-decoration: underline;
+						color:@eia-blue;
+					}
+				}
+				&:hover {
+					text-decoration: underline;
+					color:@eia-blue;
+				}
+				&.head {
+					.font;
+					.bold;
+					line-height: 1.4;
+					color: @eia-dark-grey;
+					font-size: .875rem;
+					text-transform: uppercase;
+					h2 {
+						.font;
+						.bold;
+						line-height: 1.4;
+						color: @eia-dark-grey;
+						font-size: .875rem;
+						text-transform: uppercase;	
+					}
+				}
+				&.list-seperator {
+					border-top: 1px solid silver;
+				}
+				&.ico {
+					&.pdf,
+					&.xls,
+					&.csv,
+					&.html,
+					&.json,
+					&.ppt,
+					&.doc {
+						position: relative;
+						list-style: none;
+						margin-left: 0;
+						a {
+							padding-left: 20px;
+							//display: table;
+						}
+						&:before {
+							.controls-icon(15px, 16px);
+							position: absolute;
+						}
+					}
+				}
+			}
+        }
+    }
+	&:hover {
+		.ico {
+			&.d-arrow {
+				&:before {
+					.icon-d-arrow(@fill-color: @eia-blue);
+				}
+			}					
+		}
+		.dropdown-menu {
+			display: block;
+		}
+	}
+    .dropdown-button {
+		//padding: 6px 8px 2px 8px;
+		padding: 6px 0 2px 8px; // does this work? 
+		color: @eia-blue;
+        display: inline-block;
+		cursor: pointer;
+		width: 100%;
+        &>.text {
+            //border-bottom: 2px solid #fff;
+            margin-right: 6px;
+            font-size: 0.8rem; // 12.8013 px
+        }
+	}
+}
+
+
+
+
+
+
+
+.secondary-alt {
+	.form-container {
+		margin-bottom: .5em;
+		display: table;
+		width: 100%;
+		input[type="text"],
+		input[type="email"],
+		input[type="number"] {
+			width: 100%; 
+			padding: 5px 8px;
+		}
+		textarea {
+			padding: 8px;
+			width: 100%; 
+		}
+	}
+}
+
+
+
+
+@media @mobile {
+	.l-two-col-right-narrow {
+		.secondary,
+		.secondary-alt {
+			.dropdown-menu {
+				width: calc(100% - 12px);
+			}
+		}
+	}
+}
+@media @mobile-landscape { 
+
+}
+@media @tablet { 
+
+}
+@media @tablet-landscape {
+	.l-two-col-right-narrow {
+		.secondary,
+		.secondary-alt {
+			.dropdown-menu,
+			fieldset {
+				width: 203px;
+			}
+		}
+	}
+}
+@media @laptop {
+
+}

@@ -1,0 +1,83 @@
+@media @mobile {
+    .l-row {
+        //		overflow: hidden; <--- cannot be hidden
+		//		display: table; <--- cannot be a table
+		padding: 0 12px;
+		clear: both;
+        .l-row {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &.header {
+        padding: 0;
+    }
+}
+@media @laptop {
+    .l-row {
+        &.l-report-header,
+        &.l-full-width-col,
+        &.l-two-col-left-narrow,
+        &.l-two-col-left,
+        &.l-two-col-left-wide,
+        &.l-two-col-right,
+        &.l-two-col-right-wide,
+        &.l-two-col-even,
+        &.l-three-col-even, //<--- fallback only - should be nested only
+        &.l-three-col,
+        &.l-four-col-even,  //<--- fallback only - should be nested only
+        &.l-five-col-even,  //<--- fallback only - should be nested only
+        &.l-six-col-even {  //<--- fallback only - should be nested only
+            padding: 0 22px;
+        }
+        &.l-two-col-right-narrow {
+            padding: 0 0 0 22px;
+        }
+        .l-row {
+            padding: 0;
+            //&.l-report-header,
+            &.l-full-width-col,
+            &.l-two-col-left-narrow,
+            &.l-two-col-left,
+            &.l-two-col-left-wide,
+            &.l-two-col-right,
+            &.l-two-col-right-wide,
+            &.l-two-col-even,
+            &.l-three-col-even,
+            &.l-three-col,
+            &.l-four-col-even,
+            &.l-five-col-even,
+            &.l-six-col-even,
+            &.l-two-col-right-narrow {
+                padding: 0;
+            }
+            &.header { // fallback
+                display: none; // header cannot be nested
+            }
+        }
+        &.header {
+            padding: 0;
+            &.l-full-width-col,
+            &.l-two-col-left-narrow,
+            &.l-two-col-left,
+            &.l-two-col-left-wide,
+            &.l-two-col-right,
+            &.l-two-col-right-wide,
+            &.l-two-col-even,
+            &.l-three-col-even,
+            &.l-three-col,
+            &.l-four-col-even,
+            &.l-five-col-even,
+            &.l-six-col-even,
+            &.l-two-col-right-narrow {
+                padding: 0;
+            }
+		}
+    }
+    .svg-450 {
+        &>svg {
+            height: 450px;
+        }
+        
+    }
+}

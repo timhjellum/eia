@@ -1,0 +1,17 @@
+@media print and (color) {
+	* {
+	   -webkit-print-color-adjust: exact;
+	   print-color-adjust: exact;
+	}
+}
+@media print {
+	@import '_header';
+	@import '_reports';
+	@import '_accordion';
+	@import '_lists';
+	@import '_print';
+	@import '_dont-print';
+	@import '../modules/messaging';
+	@import '_tables';
+	@import '_contact';
+}

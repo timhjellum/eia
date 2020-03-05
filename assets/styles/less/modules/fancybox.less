@@ -1,0 +1,242 @@
+@media @mobile {
+    .fancybox-margin {
+        margin-right: 0 !important;
+    }
+    .fancybox-lock {
+        overflow: visible !important;  // do not edit
+        width: auto;
+        body {
+            overflow: hidden !important;  // do not edit
+        }
+        .fancybox-overlay {
+            overflow: auto !important;  // do not edit
+            overflow-y: scroll !important;  // do not edit
+        }
+    }
+    .fancybox-lock-test { // might not be needed
+        overflow-y: hidden !important;
+    }
+    .fancybox-overlay { // do not edit
+        position: absolute; // do not edit
+        top: 0; // do not edit
+        left: 0; // do not edit
+        overflow: hidden; // do not edit
+        display: none;
+        z-index: 8010; // do not edit
+        //background: rgba(0,0,0,0.7);
+        background: rgba(0,0,0,0.7);
+    }
+    .fancybox-overlay-fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+	/*
+	.fancybox-close,
+    .fancybox-next span,
+    .fancybox-prev span {
+        background-image: none;
+	}
+	*/
+    .ui-state-focus {
+        outline: 0 !important;
+    }
+    .fancybox-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8020; 
+        .close-menu {
+            text-indent: -9999px;
+            font-size: 0;	
+            position: absolute;
+            cursor: pointer;
+            z-index: 8040;
+            top: -15px;
+            right: -15px;
+            .ico {
+                &.close {
+                    //&:before {
+                        //.icon-cancel;
+                        .controls-icon(40px, 40px);
+                    //}
+                }
+            }
+        }
+        .close-overlay {
+            text-indent: -9999px;
+            font-size: 0;	
+            position: absolute;
+            cursor: pointer;
+            z-index: 8040;
+            top: 5px;
+            right: 5px;
+            .ico {
+                &.close {
+                    //&:before {
+                        //.icon-cancel;
+                        .controls-icon(40px, 40px);
+                    //}
+                }
+            }
+        }
+        .close-chart {
+            text-indent: -9999px;
+            font-size: 0;	
+            .ico {
+                &.close {
+                    &:before {
+                        .controls-icon(40px, 40px);
+                    }
+                }
+            }
+            position: absolute;
+            cursor: pointer;
+            z-index: 8040;
+            top: -25px;
+            right: -25px;
+        }
+        outline: 0;
+        :active,
+        :hover,
+        :visited {
+            outline: 0;
+	}
+	.fancybox-skin {
+		background: #fff;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+            .fancybox-outer {
+                outline: 0;
+                :active,
+                :hover,
+                :visited {
+                    outline: 0;
+                }
+                .fancybox-inner {
+                    //height: auto !important;
+                    display: table;
+                    outline: 0;
+                    &:active,
+                    &:hover,
+                    &:visited, 
+                    &:focus {
+                        padding: 0;
+                        margin: 0;
+                        outline: none;
+                    }
+		        }
+	        }
+		}
+    }
+    .fancybox-wrap {
+        &.global-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 8020;        
+            outline: 0;
+            &.fancybox-mobile {
+                top: 0;
+                left: 0;
+                margin: 0 auto 0 auto;
+                -moz-transition: opacity 0.4s ease-in-out;
+                -o-transition: opacity 0.4s ease-in-out;
+                -webkit-transition: opacity 0.4s ease-in-out;
+                transition: opacity 0.4s ease-in-out;
+            }
+            .fancybox-inner {
+                &.ui-widget-content {
+                    border: none;
+                    outline: 0;
+                    background-image: none;
+                    color: transparent;
+                    a {
+                        color: transparent;
+                    }
+                }
+            }   
+        }
+        a {
+            &.image {
+                img {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    background-size: cover;
+                }
+                .fancybox-title {
+                    .fancybox-title-over-wrap {
+                        padding: 5px 10px 3px 10px;
+                    }
+                }
+            }
+        }
+	}
+	.fancybox-iframe {
+		padding: 0;
+		display: table !important;
+		height: 100%;
+		width: 100% !important;
+		overflow: visible;
+	}
+	/*
+	.fancybox-wrap {
+        &.fancybox-type-iframe {
+            display: table !important;
+            height: 100% !important;
+            .fancybox-skin {
+                display: table !important;
+				height: 100%;
+                .fancybox-outer {
+                    display: table !important;
+                    height: 100% !important;
+                    .fancybox-inner {
+                        display: table !important;
+                        height: 100% !important;
+                        
+                    }
+                }
+            }
+        }
+	}
+	*/
+}
+@media @mobile { 
+    .fancybox-wrap {
+        .close-menu {
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+    .fancybox-wrap {
+        .fancybox-inner {
+            .fancybox-type-inline {
+                &.fancybox-wrap {
+                    width: 980px;
+                    .fancybox-inner {
+                        width: 980px;
+                    }
+                }
+            }
+		}
+		/*
+		&.fancybox-type-iframe {
+            .fancybox-skin {
+				height: 95vh;
+			}
+		}
+		*/
+    }
+}
+@media @laptop { 
+    .fancybox-wrap {
+        .close-menu {
+            top: -15px;
+            right: -15px;
+        }
+	}
+}

@@ -1,0 +1,717 @@
+html {
+	-ms-text-size-adjust: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	.font;
+	color: @eia-dark-grey;
+	a {
+		color:@eia-blue;
+		text-decoration: none;
+		&:link,
+		&:active,
+		&:visited {
+			color:@eia-blue;
+			text-decoration: none;
+		}
+		&:hover{
+			text-decoration: underline;
+			color:@eia-blue;
+		}
+	}
+	
+	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+	/* ***** ***** ***** *****   anchors   ***** ***** ***** ***** */
+	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+	
+
+	a[name] {
+		vertical-align: top;
+	}
+
+
+	a[href*="eia.gov"],
+	.global-nav a[href*=".com"],
+	.global-nav a[href^="http:"],
+	.global-nav a[href^="https:"],
+	.social a,
+	.social a[href^="https:"],
+	.bx-viewport a,
+	.bx-viewport a[href^="https:"] {
+		&:after {
+			content: none;
+			background: none;
+		}
+	}
+
+	// these are iconic links only
+	.downloadable-files {
+		a[href*=".com"],
+		a[href^="http:"],
+		a[href^="https:"] {
+			&:after {
+				margin: 0 8px 0 -6px;
+			}
+		}
+	}
+	a[href^="tel:"] {
+		color: @eia-dark-grey;
+		text-decoration: none;
+		&:hover {
+			color: @eia-dark-grey;
+			text-decoration: none;
+		}
+	}
+	@media @mobile-only {
+		a[href^="tel:"] {
+			color: @eia-blue;
+			text-decoration: none;
+		}
+	}
+	box-sizing: border-box;
+	* {
+		box-sizing: border-box;
+	}
+}
+body {
+	width: 100%;
+	height: 100%;
+}
+.print {
+	display: none;
+}
+.top {
+	.font;
+	font-size: 0.750rem; // 12 pixels;
+	text-align: left;
+	.bold;
+	display:flex;
+	align-items: flex-end;
+	margin: 2em 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** **** global reset ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+.fancybox-overlay {
+	.ui-widget,
+	.ui-state-default,
+	.ui-widget-content .ui-state-default,
+	.ui-state-active,
+	.ui-widget-content .ui-state-active {
+		border-width: 0px;
+		background-color: transparent;
+		background-image: none;
+		color: @eia-dark-grey;
+		outline: none;
+		.font;
+		.normal;
+	}
+	.ui-corner-left {
+		-moz-border-radius-topleft: 0;
+		-webkit-border-top-left-radius: 0;
+		-moz-border-radius-bottomleft: 0;
+		-webkit-border-bottom-left-radius: 0;
+	}
+}
+
+body, 
+div, 
+li,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+i, 
+label, 
+legend, 
+input, 
+select, 
+p, 
+blockquote, 
+th, 
+td, 
+ul, 
+ol, 
+form, 
+fieldset, 
+table, 
+embed, 
+object {
+padding: 0;
+margin: 0;
+}
+
+
+
+.filtered-term {
+	.font;
+	display: block;
+	border-bottom: 1px solid shade(white, 16.8%);
+	padding: 1em 0 6px 0;
+	clear: both;
+	line-height: 1.5;
+	margin-bottom: 13px;
+	font-size: 1.875rem; // 30 pixels
+	color: @eia-dark-grey;  
+}
+.no-wrap {
+	white-space: nowrap;
+}
+
+fieldset,img,abbr {border: 0;display: block}
+address,cite,code {font-weight: normal;font-style: normal}
+em {font-style: italic}
+i {font-style: normal}
+//.print {
+//	display: none;
+//}
+
+strong {font-weight: 700}
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** ***** base styles ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+.hide {display: none}
+
+/**
+* 1. Add the correct box sizing in Firefox.
+* 2. Show the overflow in Edge and IE.
+*/
+hr {
+//	box-sizing: content-box; /* 1 */
+//	height: 0; /* 1 */
+overflow: visible; /* 2 */
+background: shade(white, 17%);
+color: shade(white, 17%);
+clear: both;
+float: none;
+width: 100%;
+height: 1px;
+margin: 1.45em 0;
+border: none;
+	&.secondary {
+		background: @eia-blue;
+		color: @eia-blue;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.no-border {
+border-color: transparent;
+border-top: none;
+border-right: none;
+border-bottom: none !important;
+border-left: none;
+}
+
+
+
+
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** *** force line-break ** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+
+// this forces break
+// <span class="line-break">Data Tools, Apps,</span> <span class="line-break">and Maps</span>
+// Line will break after the Apps,
+
+span {
+	&.line-break {
+		display: inline-block;
+	}
+	&.highlight {
+		background: #8ce44b; //tint(@eia-orange, 30%); // #ff0;
+	}
+}
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** **** responsiveness *** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+.svg-container {
+	overflow: hidden;
+}
+.svg-container,
+.image-container {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto 1em auto;
+	a {
+		width: 100%;
+		img {
+			text-align: center;
+			padding: 0;
+			margin: 0 auto;
+		}
+	}
+	svg {
+		margin: 0 auto;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+		background-size: cover;
+	}
+}
+.responsive {
+	margin: 0 auto;
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 100%;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	background-size: cover;
+	&.frame {
+		padding: 4px;
+    	border: 1px solid #dadada;
+    //float: left;
+    	margin: 0px 18px 10px 0px;
+	}
+}
+.responsive-container {
+//	margin:0;
+//	display: inline-block;
+	.font;
+	color: #858585;
+	font-size: 12px;
+	.date {
+		display: inline-block;
+		.normal;
+		color: #858585;
+	}
+	.label {
+		display: inline-block;
+		.bold;
+		color: #858585;
+	}
+}
+
+
+
+
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** *****   footnotes ***** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+span,
+p {
+	&.footnotes {
+		display: inline-block;
+		position: relative;
+		margin: 0 0 12px 8px;
+		padding: 0 0 0 0;
+		font-size: 0.688rem; // 11 pixels
+		sup {
+			position: absolute;
+			left: -8px;
+			top: 0;
+		}
+	}
+	&.source {
+		font-size: 0.688rem; // 11 pixels
+		.italic;
+		color: #7d7d7d;
+	}
+}
+/*
+h4 {
+	.font;
+	.bold;
+	font-size: .9375rem;
+	line-height: 1.25;
+	margin: 1em 0 0 0;
+	&.footnotes {
+		margin: 20px 0 0 0;
+		padding: 10px 0 0 0;
+		border-top: 1px dashed #adadad;
+	}
+} // finalized
+p {
+	margin: 1em 0 0 0;
+	&.footnotes {
+		display: inline-block;
+		position: relative;
+		margin: 0 0 12px 8px;
+		padding: 0 0 0 0;
+		font-size: 0.688rem; // 11 pixels
+		sup {
+			position: absolute;
+			left: -8px;
+			top: 0;
+		}
+	}
+}
+//p + h4 {
+//	&.footnotes {
+//		margin-top: 30px;
+//	}
+//}
+ul,ol {
+	margin: 0;
+	padding: 0;
+	&.footnotes {
+		display: inline-block;
+		position: relative;
+		margin: 0 0 12px 8px;
+		padding: 0 0 0 0;
+		sup {
+			position: absolute;
+			left: -8px;
+			top: 0;
+		}
+		li {
+			.font;
+			font-size: 0.688rem; // 11 pixels
+		}
+	}
+}
+*/
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** ***** **** accessibility **** ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/*
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+#skip a { 
+	position:absolute; 
+	left:-10000px; 
+	top:auto; 
+	width:1px; 
+	height:1px; 
+	overflow:hidden;
+} 
+	
+#skip a:focus { 
+	position:static; 
+	width:auto; 
+	height:auto; 
+}
+end accessibility */
+
+
+	
+
+
+
+
+h1 { font-size: 1.625rem; color: @eia-dark-grey; } // 26px finalized
+h2 { font-size: 1.125rem; color: @eia-dark-grey; } //0.75rem; } // finalized
+h3 { font-size: .9375rem; color: @eia-dark-grey; } // finalized
+h4 { font-size: .9375rem; color: @eia-dark-grey; } // finalized
+h5 { font-size: .8rem; color: @eia-dark-grey; } // finalized
+h6 { font-size: .8rem; color: @eia-dark-grey; } // finalized
+p {
+	.font;
+	color: @eia-dark-grey;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	margin: 0 0 1.0em;
+	&.foot {
+		.bold;
+		margin-top: 1.0em;
+	}
+}
+ul {
+	margin: 0;
+	//list-style: none;
+	padding-left: 22px;
+	li {
+		margin: 0;
+		padding: 0;
+		font-size: 0.875rem; // * 1.20%; 
+		line-height: 1.4;
+		color: @eia-dark-grey;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.pipe {
+	padding: 0 8px;
+	color: #d8d8d8;
+}
+.pipe-alt {
+	padding: 0;
+	color: #d8d8d8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+/* ***** ***** *****  browser compatability  ***** ***** ***** */
+/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+display: block;
+}
+
+/* Grouping content
+========================================================================== */
+
+/**
+* Add the correct display in IE 9-.
+* 1. Add the correct display in IE.
+*/
+
+figcaption,
+figure,
+main { /* 1 */
+display: block;
+}
+
+/**
+* Add the correct margin in IE 8.
+*/
+
+figure {
+margin: 1em 40px;
+}
+
+
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+pre {
+font-family: monospace, 
+monospace; /* 1 */
+font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+========================================================================== */
+
+/**
+* 1. Remove the gray background on active links in IE 10.
+* 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+*/
+
+a {
+background-color: transparent; /* 1 */
+-webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+* 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+* 2. Add the correct text decoration in Chrome, 
+Edge, 
+IE, 
+Opera, 
+and Safari.
+*/
+
+abbr[title] {
+border-bottom: none; /* 1 */
+text-decoration: underline; /* 2 */
+text-decoration: underline dotted; /* 2 */
+}
+
+/**
+* Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+*/
+
+
+
+/**
+* Add the correct font weight in Chrome, 
+Edge, 
+and Safari.
+*/
+
+
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp {
+font-family: monospace, 
+monospace; /* 1 */
+font-size: 1em; /* 2 */
+}
+
+/**
+* Add the correct font style in Android 4.3-.
+*/
+
+dfn {
+font-style: italic;
+}
+
+/**
+* Add the correct background and color in IE 9-.
+*/
+
+mark {
+background-color: #ff0;
+color: black;
+}
+
+/**
+* Add the correct font size in all browsers.
+*/
+
+small {
+font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+
+sub,
+sup {
+font-size: 70%;
+line-height: 1;
+position: relative;
+vertical-align: baseline;
+}
+
+sub {
+bottom: -0.25em;
+}
+sup {
+top: -0.5em;
+}
+
+/* Embedded content
+========================================================================== */
+
+/**
+* Add the correct display in IE 9-.
+*/
+
+audio,
+video {
+display: inline-block;
+}
+
+/**
+* Add the correct display in iOS 4-7.
+*/
+
+audio:not([controls]) {
+display: none;
+height: 0;
+}
+
+/**
+* Remove the border on images inside links in IE 10-.
+*/
+
+img {
+border-style: none;
+max-width: 100%;
+}
+
+
+// 1. Add the correct display in IE 9-.
+// 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+display: inline-block; /* 1 */
+vertical-align: baseline; /* 2 */
+}
+
+/* Interactive
+========================================================================== */
+
+/*
+* Add the correct display in IE 9-.
+* 1. Add the correct display in Edge, IE, and Firefox.
+*/
+details, /* 1 */
+menu {
+display: block;
+}
+
+/*
+* Add the correct display in all browsers.
+*/
+
+summary {
+display: list-item;
+}
+
+/* Scripting
+========================================================================== */
+
+/**
+* Add the correct display in IE 9-.
+*/
+
+canvas {
+display: inline-block;
+}
+
+/**
+* Add the correct display in IE.
+*/
+
+template {
+display: none;
+}
