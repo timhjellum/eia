@@ -1,10 +1,10 @@
 ﻿import React, { Component } from "react";
 
-import Alert from "./Banners/alert";
-import Error from "./Banners/error";
-import Information from "./Banners/information";
-import Notice from "./Banners/notice";
-import Success from "./Banners/success";
+import Alert from "./banners/alert";
+import Error from "./banners/error";
+import Information from "./banners/information";
+import Notice from "./banners/notice";
+import Success from "./banners/success";
 
 class Banners extends Component {
 	render() {
