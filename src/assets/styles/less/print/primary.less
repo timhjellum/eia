@@ -1,0 +1,64 @@
+
+    .primary-alt,
+    .primary {
+        p {
+            &.foot {
+                vertical-align: top;
+                width: 100%;
+                margin-top: 10px;
+                a {
+                    &:after { 
+                        content:"\00a0\203A";
+                    }
+                    &.ico {
+                        line-height: 1.4;
+                        font-size: 0.875rem;
+                        vertical-align: top;
+                        margin-top: 10px;
+                        &:before {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            &.bullet {
+                margin-left: 0;
+            }
+        }
+        h4 {
+            span {
+                .right;
+            }
+        }
+
+        ul {
+            &.presentations {
+                li {
+                    &.date {
+                        .italic;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .primary {
+        h2 {
+            &.alt {
+                border-bottom: none;
+                display: inline-block;
+            }           
+        }
+    }
+    .primary-alt { 
+        h2 {
+            &:first-child {
+                padding: 0;
+            }
+        }
+    }
+

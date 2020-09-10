@@ -1,0 +1,785 @@
+.tabs {
+  display: block !important;
+}
+
+.visualizations {
+  width: 100%;
+  display: table;
+  padding: 0 0 3em 0;
+  padding: 0 0 0 0;
+  border-bottom: 3em solid #fefefe;
+  list-style: none;
+  .l-col {
+    width: 16.666%;
+    float: left;
+  }
+}
+
+.energy-education {
+  width: 100%;
+  display: table;
+  padding: 0 0 3em 0;
+  padding: 0 0 0 0;
+  border-bottom: 3em solid #fefefe;
+  list-style: none;
+  .l-one-third-col {
+    width: 33.333%;
+    float: left;
+  }
+}
+
+.upcoming-releases {
+  li {
+    a {
+      color: #0096d7;
+      border-bottom: 1px solid #189bd7;
+      &:after {
+        content: " (https://www.eia.gov" attr(href) ")";
+        font-size: 100%;
+      }
+    }
+  }
+}
+
+.updated-data-series {
+  li {
+    position: relative;
+    width: 100%;
+    padding-left: 80px;
+    span {
+      &.date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        //width: 80px;
+        display: inline-block;
+      }
+    }
+    &.head {
+      padding-left: 0;
+      h2 {
+        padding: 0;
+        margin: 0 0 7px 0;
+        color: @eia-dark-grey;
+        border-bottom: 1px solid shade(white, 40%);
+        .font;
+        .bold;
+        font-size: 0.938rem; // 15 pixels
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      &.pdf {
+        position: relative;
+        list-style: none;
+        &:after {
+          //.icon-file-type(pdf);
+          .controls-icon(15px, 16px);
+          display: inline-block;
+          position: relative;
+          top: 2px;
+          margin: -2px 0 0 0;
+        }
+        &:before {
+          //.icon-file-type(pdf);
+          //.controls-icon(15px, 16px);
+          display: none;
+        }
+      }
+      &.xls {
+        position: relative;
+        list-style: none;
+        &:after {
+          .icon-file-type(xls);
+          .controls-icon(15px, 16px);
+          display: inline-block;
+          position: relative;
+          top: 2px;
+          margin: -2px 0 0 0;
+        }
+        &:before {
+          //.icon-file-type(pdf);
+          //.controls-icon(15px, 16px);
+          display: none;
+        }
+      }
+      &.csv {
+        position: relative;
+        list-style: none;
+        &:after {
+          .icon-file-type(csv);
+          .controls-icon(15px, 16px);
+          display: inline-block;
+          position: relative;
+          top: 2px;
+          margin: -2px 0 0 0;
+        }
+        &:before {
+          //.icon-file-type(pdf);
+          //.controls-icon(15px, 16px);
+          display: none;
+        }
+      }
+      /*
+					&.interactive {
+						position: relative;
+						list-style: none;
+						margin: -2px 0 0 0;
+						&:after {
+							.icon-file-type(interactive);
+							.controls-icon(15px, 16px);
+						}
+					}
+					*/
+    }
+  }
+}
+
+.l-row {
+  clear: none;
+}
+
+/*
+  @page {
+	margin: 2cm;
+  }
+*/
+
+.l-col {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+}
+
+.analysis-projections {
+  page-break-inside: avoid;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 16pt;
+      width: 100%;
+      display: table;
+      clear: both;
+      .ico {
+        //font-family: Arial, Helvetica, sans-serif;
+        //font-weight: normal;
+        //font-size: 12pt;
+        //color: #333;
+        float: left;
+      }
+      & > div {
+        float: left;
+        margin-left: 30px;
+      }
+      em {
+        //font-family: Arial, Helvetica, sans-serif;
+        //font-weight: normal;
+        font-size: 12pt;
+        color: #333;
+      }
+      h2 {
+        //font-family: Arial, Helvetica, sans-serif;
+        //font-weight: normal;
+        //color: #333;
+        //font-size: 14pt;
+        //color: black;
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.overview .l-row.l-two-col-even .l-col:first-of-type {
+  width: 100%;
+  float: left;
+}
+.overview .l-row.l-two-col-even .l-col:last-of-type {
+  width: 100%;
+  float: left;
+}
+
+.primary {
+  width: 100%;
+  display: table;
+  padding: 0 0 3em 0;
+  padding: 0 0 0 0;
+  border-bottom: 3em solid #fefefe;
+}
+.primary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.secondary {
+  width: 100%;
+  display: table;
+  padding: 0 0 3em 0;
+  padding: 0 0 0 0;
+  border-bottom: 3em solid #fefefe;
+}
+
+/*
+  .secondary ul .energy-education {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+
+*/
+
+/*
+div,
+li,
+p,
+blockquote,
+th,
+td,
+table {
+	.font;
+}
+
+.slider-home-top,
+.slider-home,
+.slider-home-bottom,
+.hidden,
+.eia-accessibility-link,
+.eia-accessibility-link-description,
+.eia-accessibility {
+	display: none !important;
+}
+*/
+
+ul
+//img
+{
+  page-break-inside: avoid;
+}
+
+/*
+html,
+body,
+.l-full-width-col,
+.l-row,
+.page-wrapper,
+.l-outer-wrapper,
+.l-inner-wrapper {
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	color: #333;
+	background: white;
+	width: 100%;
+}
+body {
+	font-size: 80%;
+	color: #333;
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 1.5;
+  	a {
+		color: #0096d7;
+		border-bottom: 1px solid #189bd7;
+		text-decoration: none;
+	}
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	line-height: 1;
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: normal;
+	font-weight: 400;
+}
+h1 {
+	font-size: 1.7em;
+	margin-top: 0;
+	margin-bottom: 2px;
+	line-height: 1.2;
+}
+h3 {
+	font-size: 18pt;
+  }
+h4 {
+	font-size: 16pt;
+  }
+h5 {
+	font-size: 16pt;
+  }
+h6 {
+	font-size: 16pt;
+  }
+.title-cad {
+	h1 {
+		text-transform: uppercase;
+	}
+}
+
+  
+.l-one-third-col {
+	h1 {
+		clear: both;
+		border-bottom: 1px solid #333;
+		padding: 12pt 0 6px 0;
+		margin-bottom: 13px;
+		font-size: 26pt;
+	}
+	h2 {
+		clear: both;
+		font-size: 20pt;
+		border-bottom: 1px solid #333;
+		padding: 12pt 0 6px 0;
+		margin-bottom: 13px;
+	}
+}
+.l-two-third-col {
+	h1 {
+		clear: both;
+		border-bottom: 1px solid #333;
+		padding: 12pt 0 6px 0;
+		margin-bottom: 13px;
+		font-size: 26pt;
+	}
+	h2 {
+		clear: both;
+		font-size: 20pt;
+		border-bottom: 1px solid #333;
+		padding: 12pt 0 6px 0;
+		margin-bottom: 13px;
+	}
+}
+
+
+  .l-row.header.l-full-width-col {
+	display: none;
+  }
+
+  /* moved to reports
+  .ap .clear-all-container,
+  .ap .overlay,
+  .ap .frequency-container,
+  .ap .time-series,
+  .ap .tags,
+  .ap .reports-search-filter-button-container {
+	display: none;
+  }
+  .ap h2 {
+	border: none;
+  }
+  .ap .reports-heading > div.legend {
+	margin: 0;
+	width: 100%;
+  }
+  .ap .report-title-container {
+	display: block;
+  }
+  .ap .report-title-container .reports-title {
+	width: 100%;
+	display: block;
+  }
+  */
+
+/* mov3ed to accordion
+  .accordion {
+	background-color: white;
+	margin-bottom: 32pt;
+  }
+  .accordion h3 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: normal;
+	font-size: 18pt;
+	width: 100%;
+	color: #333;
+	border: 0;
+	padding: 7pt 0;
+	border-top: 1pt solid #0096d7;
+  }
+  .accordion .accordion-content {
+	display: block;
+	font-size: 12pt;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: white;
+  }
+  .accordion > ul.highlight {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #333;
+	border-top: 1pt solid #d8d8d8;
+	background-color: #f5fbfd;
+	border-bottom: 1pt solid #d8d8d8;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  }
+  .accordion > ul.highlight > li {
+	padding: 0 27pt;
+  }
+  .accordion > ul.highlight > li:first-child {
+	padding-top: 12pt;
+  }
+  .accordion > ul.highlight > li:last-child {
+	padding-bottom: 12pt;
+  }
+  .ui-accordion-content-active {
+	border-bottom: 2pt solid #0096d7;
+  }
+
+*/
+
+/*
+  .ico.pdf:before,
+  .ico.xls:before,
+  .ico.csv:before,
+  .ico.interactive:before {
+	display: none;
+  }
+  .ico.pdf span,
+  .ico.xls span,
+  .ico.csv span,
+  .ico.interactive span {
+	border: 2px solid #333;
+	padding: 1px 3px;
+	color: #333;
+	font-weight: bold;
+  }
+  .ico.pdf a,
+  .ico.xls a,
+  .ico.csv a,
+  .ico.interactive a {
+	padding-left: 20px;
+	display: table;
+  }
+
+  .formats {
+	font-style: italic;
+  }
+  .formats a {
+	display: inline-block;
+  }
+  .formats a.ico:before,
+  .formats a.pdf:before,
+  .formats a.xls:before,
+  .formats a.csv:before,
+  .formats a.interactive:before {
+	display: none;
+  }
+  .formats a.ico span,
+  .formats a.pdf span,
+  .formats a.xls span,
+  .formats a.csv span,
+  .formats a.interactive span {
+	border: 2px solid #333;
+	padding: 1px 3px;
+	color: #333;
+	font-weight: bold;
+  }
+  .source {
+	font-style: italic;
+  }
+  .primary-alt ul,
+  .primary ul,
+  .secondary-alt ul,
+  .secondary ul,
+  .accordion-content ul {
+	list-style: none;
+  }
+  .primary-alt ul.basic-list li,
+  .primary ul.basic-list li,
+  .secondary-alt ul.basic-list li,
+  .secondary ul.basic-list li,
+  .accordion-content ul.basic-list li {
+	margin-bottom: 5px;
+  }
+  .primary-alt ul.bullet,
+  .primary ul.bullet,
+  .secondary-alt ul.bullet,
+  .secondary ul.bullet,
+  .accordion-content ul.bullet {
+	list-style-type: disc;
+	margin-left: 22px;
+  }
+  .primary-alt ul.bullet li,
+  .primary ul.bullet li,
+  .secondary-alt ul.bullet li,
+  .secondary ul.bullet li,
+  .accordion-content ul.bullet li {
+	margin-bottom: 5px;
+  }
+  .primary-alt ul.list-seperator,
+  .primary ul.list-seperator,
+  .secondary-alt ul.list-seperator,
+  .secondary ul.list-seperator,
+  .accordion-content ul.list-seperator {
+	border-top: 1px solid silver;
+  }
+  .primary-alt ul li,
+  .primary ul li,
+  .secondary-alt ul li,
+  .secondary ul li,
+  .accordion-content ul li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	line-height: 1.4;
+	color: #333;
+	font-size: 11pt;
+  }
+  .primary-alt ul li.head,
+  .primary ul li.head,
+  .secondary-alt ul li.head,
+  .secondary ul li.head,
+  .accordion-content ul li.head {
+	font-weight: 700;
+  }
+  .primary-alt ul li.hide-bullet,
+  .primary ul li.hide-bullet,
+  .secondary-alt ul li.hide-bullet,
+  .secondary ul li.hide-bullet,
+  .accordion-content ul li.hide-bullet {
+	list-style: none;
+  }
+  .primary-alt ul li a,
+  .primary ul li a,
+  .secondary-alt ul li a,
+  .secondary ul li a,
+  .accordion-content ul li a {
+	color: #0096d7;
+	text-decoration: underline;
+  }
+  .primary-alt ul li a:link,
+  .primary ul li a:link,
+  .secondary-alt ul li a:link,
+  .secondary ul li a:link,
+  .accordion-content ul li a:link,
+  .primary-alt ul li a:active,
+  .primary ul li a:active,
+  .secondary-alt ul li a:active,
+  .secondary ul li a:active,
+  .accordion-content ul li a:active,
+  .primary-alt ul li a:visited,
+  .primary ul li a:visited,
+  .secondary-alt ul li a:visited,
+  .secondary ul li a:visited,
+  .accordion-content ul li a:visited {
+	color: #0096d7;
+	text-decoration: underline;
+  }
+  .primary-alt ul li a:after,
+  .primary ul li a:after,
+  .secondary-alt ul li a:after,
+  .secondary ul li a:after,
+  .accordion-content ul li a:after {
+	content: " (https://www.eia.gov" attr(href) ")";
+	font-size: 100%;
+  }
+  .primary-alt ul li a span.date,
+  .primary ul li a span.date,
+  .secondary-alt ul li a span.date,
+  .secondary ul li a span.date,
+  .accordion-content ul li a span.date {
+	margin-right: 12px;
+	color: #333;
+	display: inline-block;
+	text-decoration: underline;
+  }
+  .primary-alt ul li a span.link-label,
+  .primary ul li a span.link-label,
+  .secondary-alt ul li a span.link-label,
+  .secondary ul li a span.link-label,
+  .accordion-content ul li a span.link-label {
+	margin-right: 12px;
+  }
+  .primary-alt ul li a.link-label em,
+  .primary ul li a.link-label em,
+  .secondary-alt ul li a.link-label em,
+  .secondary ul li a.link-label em,
+  .accordion-content ul li a.link-label em {
+	color: #333;
+  }
+  .primary-alt ul li a.link-label span,
+  .primary ul li a.link-label span,
+  .secondary-alt ul li a.link-label span,
+  .secondary ul li a.link-label span,
+  .accordion-content ul li a.link-label span {
+	color: #333;
+  }
+  .primary-alt ul li.release-schedule,
+  .primary ul li.release-schedule,
+  .secondary-alt ul li.release-schedule,
+  .secondary ul li.release-schedule,
+  .accordion-content ul li.release-schedule {
+	font-style: italic;
+  }
+  .primary-alt ul li.list-item,
+  .primary ul li.list-item,
+  .secondary-alt ul li.list-item,
+  .secondary ul li.list-item,
+  .accordion-content ul li.list-item {
+	list-style: none;
+  }
+  .primary-alt ul li.list-item > ul,
+  .primary ul li.list-item > ul,
+  .secondary-alt ul li.list-item > ul,
+  .secondary ul li.list-item > ul,
+  .accordion-content ul li.list-item > ul {
+	padding: 0;
+	margin: 0;
+	display: block;
+  }
+  .primary-alt ul li.list-item > ul > li,
+  .primary ul li.list-item > ul > li,
+  .secondary-alt ul li.list-item > ul > li,
+  .secondary ul li.list-item > ul > li,
+  .accordion-content ul li.list-item > ul > li {
+	list-style-type: none;
+  }
+  .primary-alt ul li.list-item > ul > li:first-child,
+  .primary ul li.list-item > ul > li:first-child,
+  .secondary-alt ul li.list-item > ul > li:first-child,
+  .secondary ul li.list-item > ul > li:first-child,
+  .accordion-content ul li.list-item > ul > li:first-child {
+	list-style-type: disc;
+  }
+  .primary-alt ul li.list-item > ul:last-child,
+  .primary ul li.list-item > ul:last-child,
+  .secondary-alt ul li.list-item > ul:last-child,
+  .secondary ul li.list-item > ul:last-child,
+  .accordion-content ul li.list-item > ul:last-child {
+	margin-bottom: 12px;
+  }
+  .primary-alt ul li ul,
+  .primary ul li ul,
+  .secondary-alt ul li ul,
+  .secondary ul li ul,
+  .accordion-content ul li ul {
+	padding: 0;
+	margin: 0;
+  }
+  .primary-alt ul li ul li,
+  .primary ul li ul li,
+  .secondary-alt ul li ul li,
+  .secondary ul li ul li,
+  .accordion-content ul li ul li {
+	margin: 3px 0 0 17px;
+	list-style-type: disc;
+  }
+  .primary-alt ul li.sub-list ul,
+  .primary ul li.sub-list ul,
+  .secondary-alt ul li.sub-list ul,
+  .secondary ul li.sub-list ul,
+  .accordion-content ul li.sub-list ul {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 12px 0;
+  }
+  .primary-alt ul li.sub-list ul li,
+  .primary ul li.sub-list ul li,
+  .secondary-alt ul li.sub-list ul li,
+  .secondary ul li.sub-list ul li,
+  .accordion-content ul li.sub-list ul li {
+	list-style: none;
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+  }
+  .primary-alt ul li.sub-list ul li.sub-head a,
+  .primary ul li.sub-list ul li.sub-head a,
+  .secondary-alt ul li.sub-list ul li.sub-head a,
+  .secondary ul li.sub-list ul li.sub-head a,
+  .accordion-content ul li.sub-list ul li.sub-head a {
+	color: #0096d7;
+	text-decoration: underline;
+	font-weight: 700;
+  }
+  .primary-alt ul li.sub-list ul li.sub-head a.see-more:after,
+  .primary ul li.sub-list ul li.sub-head a.see-more:after,
+  .secondary-alt ul li.sub-list ul li.sub-head a.see-more:after,
+  .secondary ul li.sub-list ul li.sub-head a.see-more:after,
+  .accordion-content ul li.sub-list ul li.sub-head a.see-more:after {
+	content: "\00a0\203A";
+  }
+  .primary-alt ul li.sub-list.list-item,
+  .primary ul li.sub-list.list-item,
+  .secondary-alt ul li.sub-list.list-item,
+  .secondary ul li.sub-list.list-item,
+  .accordion-content ul li.sub-list.list-item {
+	list-style: none;
+  }
+  .primary-alt ul li.sub-list.list-item > ul,
+  .primary ul li.sub-list.list-item > ul,
+  .secondary-alt ul li.sub-list.list-item > ul,
+  .secondary ul li.sub-list.list-item > ul,
+  .accordion-content ul li.sub-list.list-item > ul {
+	padding: 0 0 0 22px;
+
+  }
+  .primary-alt ul li.list-spacer,
+  .primary ul li.list-spacer,
+  .secondary-alt ul li.list-spacer,
+  .secondary ul li.list-spacer,
+  .accordion-content ul li.list-spacer {
+	margin-top: 12pt;
+	margin-bottom: 12pt;
+  }
+  .primary-alt ul li.list-spacer ul,
+  .primary ul li.list-spacer ul,
+  .secondary-alt ul li.list-spacer ul,
+  .secondary ul li.list-spacer ul,
+  .accordion-content ul li.list-spacer ul {
+	margin: 12pt 0;
+	padding: 0;
+	display: block;
+  }
+  .primary-alt ul li.list-spacer ul:first-child,
+  .primary ul li.list-spacer ul:first-child,
+  .secondary-alt ul li.list-spacer ul:first-child,
+  .secondary ul li.list-spacer ul:first-child,
+  .accordion-content ul li.list-spacer ul:first-child {
+	margin-top: 0;
+  }
+  .primary-alt ul li.list-spacer ul:first-child,
+  .primary ul li.list-spacer ul:first-child,
+  .secondary-alt ul li.list-spacer ul:first-child,
+  .secondary ul li.list-spacer ul:first-child,
+  .accordion-content ul li.list-spacer ul:first-child {
+	margin-bottom: 0;
+  }
+  .primary-alt > ul > li,
+  .primary > ul > li,
+  .secondary-alt > ul > li,
+  .secondary > ul > li,
+  .accordion-content > ul > li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #333;
+	line-height: 1.4;
+	min-height: 011pt;
+	vertical-align: top;
+	width: 100%;
+  }
+  .primary-alt > ul > li.head,
+  .primary > ul > li.head,
+  .secondary-alt > ul > li.head,
+  .secondary > ul > li.head,
+  .accordion-content > ul > li.head {
+	font-weight: 700;
+  }
+*/

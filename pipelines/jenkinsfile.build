@@ -1,0 +1,48 @@
+def deployPath = 'style-guide'
+
+properties([
+  buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')),
+  [$class: 'ScannerJobProperty', doNotScan: false],
+  [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false],
+  gitLabConnection('GitLab'),
+  pipelineTriggers([
+      [
+        $class: 'GitLabPushTrigger',
+        triggerOnPush: true,
+        triggerOnMergeRequest: false,
+        triggerOpenMergeRequestOnPush: "never",
+        triggerOnNoteRequest: false,
+        noteRegex: "Jenkins please retry a build",
+        skipWorkInProgressMergeRequest: true,
+        secretToken: "e4d3d58f076c37418723c3e09200ae5b",
+        ciSkip: false,
+        setBuildDescription: true,
+        addNoteOnMergeRequest: false,
+        addCiMessage: false,
+        addVoteOnMergeRequest: false,
+        acceptMergeRequestOnSuccess: false
+    ]
+  ]),
+  disableConcurrentBuilds()
+])
+
+
+node('windows') {
+    stage('Checkout') {
+      checkout scm
+    }
+
+
+    stage('Build') {
+      nodejs(configId: 'b38ac62c-4b5d-4e22-8506-ba8944bf2b4b', nodeJSInstallationName: 'NodeJS 10.16.1') {
+        bat('npm install')
+      }
+    }
+
+    stage('Deploy') {
+      if ( env.BRANCH_NAME == 'master' && deployPath != '') {
+        powershell returnStatus: true, script: "robocopy build\\ X:\\${deployPath} /MIR"
+      }
+    }
+
+}

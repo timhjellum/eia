@@ -12,7 +12,6 @@
 @import "less/base/forms";
 @import "less/base/footnotes";
 @import "less/base/tables";
-@import "less/base/lists";
 
 /* header / footer / menus */
 @import "less/header-footer/footer";
@@ -90,3 +89,6 @@
 @import "less/theme/steps";
 @import "less/theme/survey";
 @import "less/theme/update";
+
+@import "less/theme/lists";
+@import "less/theme/list-mixins";

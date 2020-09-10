@@ -79,7 +79,7 @@ table {
 		.font;
 		.bold;
 		a {
-			color: @eia-blue; 
+			color: @eia-blue;
 			text-decoration: underline;
 		}
 		em {
@@ -91,7 +91,8 @@ table {
 			.normal;
 			text-transform: none;
 		}
-		p, span {
+		p,
+		span {
 			.normal;
 			font-size: 9pt; // 12 pixels
 			text-transform: none;
@@ -150,13 +151,12 @@ table {
 			}
 			&.terminated {
 				td {
-					opacity: .6;
+					opacity: 0.6;
 					&.number {
 						font-weight: normal;
 					}
 					a {
-						opacity: .6;
-						
+						opacity: 0.6;
 					}
 				}
 			}
@@ -178,7 +178,7 @@ table {
 						.bold;
 						a {
 							.bold;
-						}  
+						}
 					}
 				}
 			}
@@ -189,7 +189,7 @@ table {
 					border-top: 1px solid #d8d8d8;
 				}
 			}
-		}   
+		}
 	}
 	tfoot {
 		td {
@@ -199,14 +199,14 @@ table {
 				border-bottom: none;
 				font-size: 8pt; // 0.688rem / 11 pixels
 			}
-		}   
+		}
 	}
-//}
-//table {
+	//}
+	//table {
 	thead {
 		tr {
 			th {
-				vertical-align: bottom;                   
+				vertical-align: bottom;
 				padding: 6px 10px 5px 10px;
 			}
 		}
@@ -218,56 +218,56 @@ table {
 				vertical-align: top;
 				padding: 6px 10px 5px 10px;
 			}
-		}   
+		}
 	}
 	tfoot {
 		tr {
 			td {
-				vertical-align: top;                    
-				padding: 6px 10px 5px 10px; 
+				vertical-align: top;
+				padding: 6px 10px 5px 10px;
 			}
 			&:first-child {
 				td {
 					border-top: 1px solid #d8d8d8;
 				}
 			}
-		}    
+		}
 	}
-//}
-//table {
-    &.basic_table,
-    &.basic-table {
-        border-bottom: 2px solid @eia-blue;
-        margin: 0;
-        overflow-y: hidden;
-        overflow-x: auto;
-        //width: auto;
-        &:last-of-type {
-            border-bottom: none;
-        }
-        caption {
-            font-size: .9375rem;
-            span {
-                &.units {
-                    float: none;
-                    display: inline;
-                    font-weight: normal;
-                    .italic;
-                    font-size: 0.813rem;
-                }
-            }
-        }
-        thead {
+	//}
+	//table {
+	&.basic_table,
+	&.basic-table {
+		border-bottom: 2px solid @eia-blue;
+		margin: 0;
+		overflow-y: hidden;
+		overflow-x: auto;
+		//width: auto;
+		&:last-of-type {
+			border-bottom: none;
+		}
+		caption {
+			font-size: 0.9375rem;
+			span {
+				&.units {
+					float: none;
+					display: inline;
+					font-weight: normal;
+					.italic;
+					font-size: 0.813rem;
+				}
+			}
+		}
+		thead {
 			th {
 				em {
 					.bold;
 				}
 			}
-        }
-				////////////////////////////////////////////////////////////////
-				//  petroleum new_navigation icons                                              //
-				////////////////////////////////////////////////////////////////
-				/*
+		}
+		////////////////////////////////////////////////////////////////
+		//  petroleum new_navigation icons                                              //
+		////////////////////////////////////////////////////////////////
+		/*
 				thead {
 				th
 				button {
@@ -276,7 +276,8 @@ table {
 						padding: 1px 5px 1px 0;
 						border: none;
 						margin-left: 0;
-						font-size: 0;
+						//font-size: 0;
+text-indent: -9999px;
 						line-height: 0;
 						background-color: transparent;
 						&.reset-animation {
@@ -301,7 +302,8 @@ table {
 						padding: 1px 0 1px 5px;
 						border: none;
 						margin-left: 0;
-						font-size: 0;
+						//font-size: 0;
+text-indent: -9999px;
 						line-height: 0;
 						background-color: transparent;
 						&.line-chart {
@@ -321,35 +323,36 @@ table {
 				}
 				*/
 
-        td {
-            padding: 6px 10px 5px 10px;
-            .align-right;
-            border-bottom: 1px dashed #d8d8d8;
-            white-space: normal;
-            &:first-child {
-                .align-left;
+		td {
+			padding: 6px 10px 5px 10px;
+			.align-right;
+			border-bottom: 1px dashed #d8d8d8;
+			white-space: normal;
+			&:first-child {
+				.align-left;
 			}
-            &:active {
-                outline: none;
-            }
-            &.custom-checkbox {
-                padding: 4px 0 0 4px;
-            }
-            span {
-                &.number {
-                    float: left;
-                    width: 20px;
-                    text-align: right;
-                    font-weight: bold;
-                    margin-right: 10px;
-                }
-            }
+			&:active {
+				outline: none;
+			}
+			&.custom-checkbox {
+				padding: 4px 0 0 4px;
+			}
+			span {
+				&.number {
+					float: left;
+					width: 20px;
+					text-align: right;
+					font-weight: bold;
+					margin-right: 10px;
+				}
+			}
 			// move this to modules > icons
 			/*
             a {
                 .ico {
                     margin-left: 0;
-                    font-size: 0;
+                    //font-size: 0;
+text-indent: -9999px;
                     line-height: 0;
                     span {
                         //.normal;
@@ -381,43 +384,43 @@ table {
                 }
 			}
 			*/
-        }
-        tbody {
-            tr {
-                td {
-                    border-bottom: 1px dashed #d8d8d8;
-                }
-                &.past-holiday {
-                    td {
-                        border-bottom: 1px solid #d8d8d8;;
-                        color: fade(@eia-black, 40%);
-                        border-bottom: 1px solid #ccc;
-                        color: #999;
-                    }
-                }
-                &:first-child {
-                    td {
-                        border-top: 3px solid @eia-blue;
-                    }
+		}
+		tbody {
+			tr {
+				td {
+					border-bottom: 1px dashed #d8d8d8;
+				}
+				&.past-holiday {
+					td {
+						border-bottom: 1px solid #d8d8d8;
+						color: fade(@eia-black, 40%);
+						border-bottom: 1px solid #ccc;
+						color: #999;
+					}
+				}
+				&:first-child {
+					td {
+						border-top: 3px solid @eia-blue;
+					}
 				}
 				&.selected {
 					background-color: #e4f7ff;
 				}
-            }
-            &:last-child {
-                tr {
-                    &:last-child {
-                        td {
-                            border-bottom: none;
-                        }
-                    }
-                }
-            }
-            //&:nth-of-type(2),
-            //&:nth-of-type(3),
-            //&:nth-of-type(4),
-            //&:nth-of-type(5) {
-                /*
+			}
+			&:last-child {
+				tr {
+					&:last-child {
+						td {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+			//&:nth-of-type(2),
+			//&:nth-of-type(3),
+			//&:nth-of-type(4),
+			//&:nth-of-type(5) {
+			/*
                 tr {
                     &:first-child {
                         td {
@@ -431,30 +434,30 @@ table {
                     }
                 }
                 */
-            //}
-        }
-        tfoot {
-            tr {
-                td {
-                    padding: 12px 10px 10px 10px;
-                    font-size: 0.688rem;
-                    text-align: right;
-                    //background-color: white;
-                    a {
-                        font-size: 0.688rem; 
-                    }
-                    &:first-child {
-                        text-align: left;
-                    }
-                }
-                &:first-child {
-                    td {
-                        border-top: 2px solid @eia-blue;
-                        //border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
-                    }
-                }
-            } 
-        }
+			//}
+		}
+		tfoot {
+			tr {
+				td {
+					padding: 12px 10px 10px 10px;
+					font-size: 0.688rem;
+					text-align: right;
+					//background-color: white;
+					a {
+						font-size: 0.688rem;
+					}
+					&:first-child {
+						text-align: left;
+					}
+				}
+				&:first-child {
+					td {
+						border-top: 2px solid @eia-blue;
+						//border-bottom: 1px solid @eia-blue; // only if there's a second table do we use the bottom border
+					}
+				}
+			}
+		}
 	}
 	&.highlight-col-3 {
 		td:nth-child(3) {
@@ -514,7 +517,7 @@ table {
 			background-color: #f7f7f7;
 		}
 	}
-	
+
 	&.align-left-col-1 {
 		th:nth-child(1),
 		td:nth-child(1) {
@@ -701,61 +704,61 @@ table {
 	&.hide-1 {
 		th:nth-child(1),
 		td:nth-child(1) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-2 {
 		th:nth-child(2),
 		td:nth-child(2) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-3 {
 		th:nth-child(3),
 		td:nth-child(3) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-4 {
 		th:nth-child(4),
 		td:nth-child(4) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-5 {
 		th:nth-child(5),
 		td:nth-child(5) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-6 {
 		th:nth-child(6),
 		td:nth-child(6) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-7 {
 		th:nth-child(7),
 		td:nth-child(7) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-8 {
 		th:nth-child(8),
 		td:nth-child(8) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-9 {
 		th:nth-child(9),
 		td:nth-child(9) {
-			display: none
+			display: none;
 		}
 	}
 	&.hide-col-10 {
 		th:nth-child(10),
 		td:nth-child(10) {
-			display: none
+			display: none;
 		}
 	}
 	&.selector {
@@ -764,21 +767,15 @@ table {
 				background-color: #e4f7ff;
 			}
 		}
-		
 	}
 }
-
-
-
-
-
 
 div {
 	&.table-wrapper,
 	&.basic-table {
-        overflow-y: hidden;
-        overflow-x: auto;
-        margin-bottom: 2em; // margin-bottom: 3em;
+		overflow-y: hidden;
+		overflow-x: auto;
+		margin-bottom: 2em; // margin-bottom: 3em;
 		width: 100%;
 		table {
 			&:nth-child(2) {
@@ -800,9 +797,10 @@ div {
 				margin-top: 2em;
 			}
 		}
-    }
+	}
 }
-th, td {
+th,
+td {
 	&.divider {
 		border-right: 5px solid @eia-white;
 	}

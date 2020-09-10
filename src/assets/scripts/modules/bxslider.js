@@ -33,7 +33,9 @@ class BxSlider {
 		if (sliderExists !== null) {
 			var mySettings = {
 				auto: false,
-				touchEnabled: false,
+				//preventDefaultSwipeX: false,
+				//preventDefaultSwipeY: true,
+				touchEnabled: true,
 				wrapperClass: "slider-multi-wrapper",
 				nextText: "&#8250;",
 				prevText: "&#8249;",
@@ -50,13 +52,9 @@ class BxSlider {
 					const footerWidth = $("footer").width();
 					const mobileSlideWidth = parseInt(footerWidth - 40); // for left/right peeking
 					//const mobileSlideWidth            = parseInt(footerWidth);
-					const mobileLandscapeSlideWidth = parseInt(
-						(footerWidth - 40) / 2
-					);
+					const mobileLandscapeSlideWidth = parseInt((footerWidth - 40) / 2);
 					const tabletSlideWidth = parseInt((footerWidth - 40) / 3);
-					const tabletLandscapeSlideWidth = parseInt(
-						(footerWidth - 40) / 3
-					);
+					const tabletLandscapeSlideWidth = parseInt((footerWidth - 40) / 3);
 					//const basicTable                  = parseInt(footerWidth - 12);
 					//const stickyTable                  = parseInt(footerWidth - 16);
 
@@ -191,6 +189,9 @@ class BxSlider {
 	bxSliderHome() {
 		$(".slider-home ul").bxSlider({
 			auto: true,
+			//preventDefaultSwipeX: false,
+			//preventDefaultSwipeY: true,
+			touchEnabled: true,
 			minSlides: 1,
 			maxSlides: 1,
 			slideMargin: 0, //integer

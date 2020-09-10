@@ -19,7 +19,7 @@ font-size: 1.500rem; // 24 pixels
 */
 
 @media @mobile {
-    ul  {
+    ul {
         &.accent {
             list-style: none;
             padding: 0;
@@ -27,32 +27,40 @@ font-size: 1.500rem; // 24 pixels
             border: 4px solid white;
             background-color: @eia-blue-module-background;
             outline: #e3e5e6 solid 1px;
+
             &>li {
                 padding-left: 20px;
                 padding-right: 20px;
                 margin: 0;
                 display: table;
                 .font;
-                font-size: .875rem; 
+                font-size: .875rem;
                 line-height: 1.5em;
                 list-style: none;
+                width: 100%;
+
                 a {
                     display: block;
                     color: @eia-blue;
                     text-decoration: none;
-                    &:after { 
-                        content:"\00a0\203A";
-                    } 
+
+                    &:after {
+                        content: "\00a0\203A";
+                    }
+
                     &:hover {
                         text-decoration: underline;
-                    } 
+                    }
                 }
+
                 &:first-child {
-                    padding-top: 20px; 
+                    padding-top: 20px;
                 }
+
                 &:last-child {
-                    padding-bottom: 20px; 
+                    padding-bottom: 20px;
                 }
+
                 &.head {
                     h2 {
                         .header-font;
@@ -66,6 +74,7 @@ font-size: 1.500rem; // 24 pixels
                         border-bottom: solid 1px #dadada;
                     }
                 }
+
                 &.sub-head {
                     h3 {
                         padding: 10px 0 6px 0;
@@ -76,24 +85,30 @@ font-size: 1.500rem; // 24 pixels
                         text-transform: uppercase;
                     }
                 }
+
                 &.list-spacer {
                     margin: 0;
+
                     ul {
                         margin: 0;
                         padding: 0 0 11px 0;
                         list-style: none;
+
                         li {
                             list-style: none;
                             margin: 0;
                         }
+
                         &:last-child {
                             border-bottom: solid 1px #dadada;
                         }
                     }
                 }
+
                 &.release-schedule {
                     padding-top: 11px;
                 }
+
                 ul {
                     li {
                         &.release-schedule {

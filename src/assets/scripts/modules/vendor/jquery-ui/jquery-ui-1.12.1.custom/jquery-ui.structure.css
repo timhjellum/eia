@@ -39,13 +39,12 @@
 	left: 0;
 	position: absolute;
 	opacity: 0;
-	filter:Alpha(Opacity=0); /* support: IE8 */
+	filter: Alpha(Opacity=0); /* support: IE8 */
 }
 
 .ui-front {
 	z-index: 100;
 }
-
 
 /* Interaction Cues
 ----------------------------------*/
@@ -54,13 +53,12 @@
 	pointer-events: none;
 }
 
-
 /* Icons
 ----------------------------------*/
 .ui-icon {
 	display: inline-block;
 	vertical-align: middle;
-	margin-top: -.25em;
+	margin-top: -0.25em;
 	position: relative;
 	text-indent: -99999px;
 	overflow: hidden;
@@ -89,7 +87,7 @@
 	cursor: pointer;
 	position: relative;
 	margin: 2px 0 0 0;
-	padding: .5em .5em .5em .7em;
+	padding: 0.5em 0.5em 0.5em 0.7em;
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
@@ -99,12 +97,12 @@
 }
 .ui-datepicker {
 	width: 17em;
-	padding: .2em .2em 0;
+	padding: 0.2em 0.2em 0;
 	display: none;
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
-	padding: .2em 0;
+	padding: 0.2em 0;
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
@@ -153,12 +151,12 @@
 }
 .ui-datepicker table {
 	width: 100%;
-	font-size: .9em;
+	font-size: 0.9em;
 	border-collapse: collapse;
-	margin: 0 0 .4em;
+	margin: 0 0 0.4em;
 }
 .ui-datepicker th {
-	padding: .7em .3em;
+	padding: 0.7em 0.3em;
 	text-align: center;
 	font-weight: bold;
 	border: 0;
@@ -170,23 +168,23 @@
 .ui-datepicker td span,
 .ui-datepicker td a {
 	display: block;
-	padding: .2em;
+	padding: 0.2em;
 	text-align: right;
 	text-decoration: none;
 }
 .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
-	margin: .7em 0 0 0;
-	padding: 0 .2em;
+	margin: 0.7em 0 0 0;
+	padding: 0 0.2em;
 	border-left: 0;
 	border-right: 0;
 	border-bottom: 0;
 }
 .ui-datepicker .ui-datepicker-buttonpane button {
 	float: right;
-	margin: .5em .2em .4em;
+	margin: 0.5em 0.2em 0.4em;
 	cursor: pointer;
-	padding: .2em .6em .3em .6em;
+	padding: 0.2em 0.6em 0.3em 0.6em;
 	width: auto;
 	overflow: visible;
 }
@@ -203,7 +201,7 @@
 }
 .ui-datepicker-multi .ui-datepicker-group table {
 	width: 95%;
-	margin: 0 auto .4em;
+	margin: 0 auto 0.4em;
 }
 .ui-datepicker-multi-2 .ui-datepicker-group {
 	width: 50%;
@@ -224,7 +222,8 @@
 .ui-datepicker-row-break {
 	clear: both;
 	width: 100%;
-	font-size: 0;
+	//font-size: 0;
+	text-indent: -9999px;
 }
 
 /* RTL support */
@@ -269,30 +268,30 @@
 	text-indent: -99999px;
 	overflow: hidden;
 	background-repeat: no-repeat;
-	left: .5em;
-	top: .3em;
+	left: 0.5em;
+	top: 0.3em;
 }
 .ui-tabs {
-	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
+	position: relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: 0.2em;
 }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
-	padding: .2em .2em 0;
+	padding: 0.2em 0.2em 0;
 }
 .ui-tabs .ui-tabs-nav li {
 	list-style: none;
 	float: left;
 	position: relative;
 	top: 0;
-	margin: 1px .2em 0 0;
+	margin: 1px 0.2em 0 0;
 	border-bottom-width: 0;
 	padding: 0;
 	white-space: nowrap;
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 	float: left;
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 	text-decoration: none;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {

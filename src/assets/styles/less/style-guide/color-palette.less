@@ -2,11 +2,12 @@
 	.color-palette {
 		.row {
 			margin: 20px 0;
-			>div {
+			> div {
 				margin-bottom: 20px;
 			}
 		}
 	}
+	/*
 	.font-black {
 		//color: #000;
 		white-space: nowrap;
@@ -21,22 +22,22 @@
 		font-size: 1em;
 		text-shadow: 0 -1px 0 rgba(0,0,0,1);
 	}
+	*/
 	.swatch-wrapper {
 		width: 100%;
 		text-align: center;
 		//padding: 12px 1%;
 		.left;
 		color: #666;
+		/*
 		button {
 			border-radius: 2px;
-			//box-sizing: border-box;
 			border-width: 1px;
 			background-color: #eee;
 			font-size: 14px;
 			font-weight: 500;
 			padding: 3px 18px;
 			margin: 5px 0;
-			//border-color: #66615B;
 			color: #66615B;
 			-webkit-transition: all 150ms linear;
 			-moz-transition: all 150ms linear;
@@ -46,9 +47,7 @@
 			&:hover {
 				background-color: #fff;
 				color: #333;
-				//border-color: #66615B;
 				outline: 0 !important;
-
 			}
 			&:focus {
 				background-color: #fff;
@@ -59,30 +58,32 @@
 			&:active {
 				background-color: #66615B;
 				color: #333;
-				//border-color: #66615B;
 				-webkit-box-shadow: none;
 				box-shadow: none;
 				outline: 0 !important;
 			}		
 		}
+		*/
 	}
 	.swatch {
-		height: 90px;
+		padding: 8% 0;
 		width: 100%;
-		overflow: hidden;
+		//overflow: hidden;
+		/*
 		span {
 			width: 100%;
 			clear: both;
 			float: left;
 			text-align: center;
 		}
+		*/
 	}
 }
 
 @media @tablet {
 	.swatch-wrapper {
 		width: 32.333%;
-		margin: .25%;
+		margin: 0.25%;
 	}
 	.font-black {
 		font-size: 12px;
@@ -123,20 +124,37 @@
 	}
 }
 
+.eia-666666 {
+	background-color: tint(black, 40%);
+}
+.eia-767676 {
+	background-color: tint(black, 46.4%);
+}
+.eia-999999 {
+	background-color: tint(black, 60%);
+}
+.eia-d8d8d8 {
+	background-color: tint(black, 80%);
+}
 
-
-.eia-666666 { background-color: tint(black, 40%); }
-.eia-767676 { background-color: tint(black, 46.4%); }
-.eia-999999 { background-color: tint(black, 60%); }
-.eia-d8d8d8 { background-color: tint(black, 80%); }
-
-.eia-b2b2b2 { background-color: shade(white, 30.2%); }
-.eia-d3d3d3 { background-color: shade(white, 17.2%); }
-.eia-d4d4d4 { background-color: shade(white, 16.8%); }
-.eia-dddddd { background-color: shade(white, 13.4%); }
-.eia-e5e5e5 { background-color: shade(white, 10.2%); }
-.eia-ededed { background-color: shade(white, 7.0%); }
-
+.eia-b2b2b2 {
+	background-color: shade(white, 30.2%);
+}
+.eia-d3d3d3 {
+	background-color: shade(white, 17.2%);
+}
+.eia-d4d4d4 {
+	background-color: shade(white, 16.8%);
+}
+.eia-dddddd {
+	background-color: shade(white, 13.4%);
+}
+.eia-e5e5e5 {
+	background-color: shade(white, 10.2%);
+}
+.eia-ededed {
+	background-color: shade(white, 7%);
+}
 
 //.misc-one { background-color: @eia-darker-brown }
 //.misc-two { background-color: @port-blue }
@@ -145,154 +163,362 @@
 //.misc-fiv { background-color: @eia-yellow-mono }
 //.misc-six { background-color: @eia-blue-module-background }
 
-.eia-dark-blue.swatch {background-color: shade(@eia-blue, 60%); color: contrast(shade(@eia-blue, 60%)); }
-.eia-dark-blue-75.swatch {background-color: shade(@eia-blue, 45%); color: contrast(shade(@eia-blue, 45%)); }
-.eia-dark-blue-50.swatch {background-color: shade(@eia-blue, 30%); color: contrast(shade(@eia-blue, 30%)); }
-.eia-dark-blue-25.swatch {background-color: shade(@eia-blue, 15%); color: contrast(shade(@eia-blue, 15%)); }
-.eia-blue {background-color: @eia-blue; color: contrast(@eia-blue); }
-.eia-light-blue-25.swatch {background-color: tint(@eia-blue, 15%); color: contrast(tint(@eia-blue, 15%)); }
-.eia-light-blue-50.swatch {background-color: tint(@eia-blue, 30%); color: contrast(tint(@eia-blue, 30%)); }
-.eia-light-blue-75.swatch {background-color: tint(@eia-blue, 45%); color: contrast(tint(@eia-blue, 45%)); }
-.eia-light-blue.swatch {background-color: tint(@eia-blue, 60%); color: contrast(tint(@eia-blue, 60%)); }
+.eia-dark-blue.swatch {
+	background-color: shade(@eia-blue, 60%);
+}
+.eia-dark-blue-75.swatch {
+	background-color: shade(@eia-blue, 45%);
+}
+.eia-dark-blue-50.swatch {
+	background-color: shade(@eia-blue, 30%);
+}
+.eia-dark-blue-25.swatch {
+	background-color: shade(@eia-blue, 15%);
+}
+.eia-blue {
+	background-color: @eia-blue;
+}
+.eia-light-blue-25.swatch {
+	background-color: tint(@eia-blue, 15%);
+}
+.eia-light-blue-50.swatch {
+	background-color: tint(@eia-blue, 30%);
+}
+.eia-light-blue-75.swatch {
+	background-color: tint(@eia-blue, 45%);
+}
+.eia-light-blue.swatch {
+	background-color: tint(@eia-blue, 60%);
+}
 
-.eia-dark-green.swatch {background-color: shade(@eia-green, 60%); color: contrast(shade(@eia-green, 60%)); }
-.eia-dark-green-75.swatch {background-color: shade(@eia-green, 45%); color: contrast(shade(@eia-green, 45%)); }
-.eia-dark-green-50.swatch {background-color: shade(@eia-green, 30%); color: contrast(shade(@eia-green, 30%)); }
-.eia-dark-green-25.swatch {background-color: shade(@eia-green, 15%); color: contrast(shade(@eia-green, 15%)); }
-.eia-green {background-color: @eia-green; color: contrast(@eia-green); }
-.eia-light-green-25.swatch {background-color: tint(@eia-green, 15%); color: contrast(tint(@eia-green, 15%)); }
-.eia-light-green-50.swatch {background-color: tint(@eia-green, 30%); color: contrast(tint(@eia-green, 30%)); }
-.eia-light-green-75.swatch {background-color: tint(@eia-green, 45%); color: contrast(tint(@eia-green, 45%)); }
-.eia-light-green.swatch {background-color: tint(@eia-green, 60%); color: contrast(tint(@eia-green, 60%)); }
+.eia-dark-green.swatch {
+	background-color: shade(@eia-green, 60%);
+}
+.eia-dark-green-75.swatch {
+	background-color: shade(@eia-green, 45%);
+}
+.eia-dark-green-50.swatch {
+	background-color: shade(@eia-green, 30%);
+}
+.eia-dark-green-25.swatch {
+	background-color: shade(@eia-green, 15%);
+}
+.eia-green {
+	background-color: @eia-green;
+}
+.eia-light-green-25.swatch {
+	background-color: tint(@eia-green, 15%);
+}
+.eia-light-green-50.swatch {
+	background-color: tint(@eia-green, 30%);
+}
+.eia-light-green-75.swatch {
+	background-color: tint(@eia-green, 45%);
+}
+.eia-light-green.swatch {
+	background-color: tint(@eia-green, 60%);
+}
 
-.eia-dark-red.swatch {background-color: shade(@eia-red, 60%); color: contrast(shade(@eia-red, 60%)); }
-.eia-dark-red-75.swatch {background-color: shade(@eia-red, 45%); color: contrast(shade(@eia-red, 45%)); }
-.eia-dark-red-50.swatch {background-color: shade(@eia-red, 30%); color: contrast(shade(@eia-red, 30%)); }
-.eia-dark-red-25.swatch {background-color: shade(@eia-red, 15%); color: contrast(shade(@eia-red, 15%)); }
-.eia-red {background-color: @eia-red; color: contrast(@eia-red); }
-.eia-light-red-25.swatch {background-color: tint(@eia-red, 15%); color: contrast(tint(@eia-red, 15%)); }
-.eia-light-red-50.swatch {background-color: tint(@eia-red, 30%); color: contrast(tint(@eia-red, 30%)); }
-.eia-light-red-75.swatch {background-color: tint(@eia-red, 45%); color: contrast(tint(@eia-red, 45%)); }
-.eia-light-red.swatch {background-color: tint(@eia-red, 60%); color: contrast(tint(@eia-red, 60%)); }
+.eia-dark-red.swatch {
+	background-color: shade(@eia-red, 60%);
+}
+.eia-dark-red-75.swatch {
+	background-color: shade(@eia-red, 45%);
+}
+.eia-dark-red-50.swatch {
+	background-color: shade(@eia-red, 30%);
+}
+.eia-dark-red-25.swatch {
+	background-color: shade(@eia-red, 15%);
+}
+.eia-red {
+	background-color: @eia-red;
+}
+.eia-light-red-25.swatch {
+	background-color: tint(@eia-red, 15%);
+}
+.eia-light-red-50.swatch {
+	background-color: tint(@eia-red, 30%);
+}
+.eia-light-red-75.swatch {
+	background-color: tint(@eia-red, 45%);
+}
+.eia-light-red.swatch {
+	background-color: tint(@eia-red, 60%);
+}
 
-.eia-dark-yellow.swatch {background-color: shade(@eia-yellow, 60%); color: contrast(shade(@eia-yellow, 60%)); }
-.eia-dark-yellow-75.swatch {background-color: shade(@eia-yellow, 45%); color: contrast(shade(@eia-yellow, 45%)); }
-.eia-dark-yellow-50.swatch {background-color: shade(@eia-yellow, 30%); color: contrast(shade(@eia-yellow, 30%)); }
-.eia-dark-yellow-25.swatch {background-color: shade(@eia-yellow, 15%); color: contrast(shade(@eia-yellow, 15%)); }
-.eia-yellow {background-color: @eia-yellow; color: contrast(@eia-yellow); }
-.eia-light-yellow-25.swatch {background-color: tint(@eia-yellow, 15%); color: contrast(tint(@eia-yellow, 15%)); }
-.eia-light-yellow-50.swatch {background-color: tint(@eia-yellow, 30%); color: contrast(tint(@eia-yellow, 30%)); }
-.eia-light-yellow-75.swatch {background-color: tint(@eia-yellow, 45%); color: contrast(tint(@eia-yellow, 45%)); }
-.eia-light-yellow.swatch {background-color: tint(@eia-yellow, 60%); color: contrast(tint(@eia-yellow, 60%)); }
+.eia-dark-yellow.swatch {
+	background-color: shade(@eia-yellow, 60%);
+}
+.eia-dark-yellow-75.swatch {
+	background-color: shade(@eia-yellow, 45%);
+}
+.eia-dark-yellow-50.swatch {
+	background-color: shade(@eia-yellow, 30%);
+}
+.eia-dark-yellow-25.swatch {
+	background-color: shade(@eia-yellow, 15%);
+}
+.eia-yellow {
+	background-color: @eia-yellow;
+}
+.eia-light-yellow-25.swatch {
+	background-color: tint(@eia-yellow, 15%);
+}
+.eia-light-yellow-50.swatch {
+	background-color: tint(@eia-yellow, 30%);
+}
+.eia-light-yellow-75.swatch {
+	background-color: tint(@eia-yellow, 45%);
+}
+.eia-light-yellow.swatch {
+	background-color: tint(@eia-yellow, 60%);
+}
 
-.eia-dark-purple.swatch {background-color: shade(@eia-purple, 60%); color: contrast(shade(@eia-purple, 60%)); }
-.eia-dark-purple-75.swatch {background-color: shade(@eia-purple, 45%); color: contrast(shade(@eia-purple, 45%)); }
-.eia-dark-purple-50.swatch {background-color: shade(@eia-purple, 30%); color: contrast(shade(@eia-purple, 30%)); }
-.eia-dark-purple-25.swatch {background-color: shade(@eia-purple, 15%); color: contrast(shade(@eia-purple, 15%)); }
-.eia-purple {background-color: @eia-purple; color: contrast(@eia-purple); }
-.eia-light-purple-25.swatch {background-color: tint(@eia-purple, 15%); color: contrast(tint(@eia-purple, 15%)); }
-.eia-light-purple-50.swatch {background-color: tint(@eia-purple, 30%); color: contrast(tint(@eia-purple, 30%)); }
-.eia-light-purple-75.swatch {background-color: tint(@eia-purple, 45%); color: contrast(tint(@eia-purple, 45%)); }
-.eia-light-purple.swatch {background-color: tint(@eia-purple, 60%); color: contrast(tint(@eia-purple, 60%)); }
+.eia-dark-purple.swatch {
+	background-color: shade(@eia-purple, 60%);
+}
+.eia-dark-purple-75.swatch {
+	background-color: shade(@eia-purple, 45%);
+}
+.eia-dark-purple-50.swatch {
+	background-color: shade(@eia-purple, 30%);
+}
+.eia-dark-purple-25.swatch {
+	background-color: shade(@eia-purple, 15%);
+}
+.eia-purple {
+	background-color: @eia-purple;
+}
+.eia-light-purple-25.swatch {
+	background-color: tint(@eia-purple, 15%);
+}
+.eia-light-purple-50.swatch {
+	background-color: tint(@eia-purple, 30%);
+}
+.eia-light-purple-75.swatch {
+	background-color: tint(@eia-purple, 45%);
+}
+.eia-light-purple.swatch {
+	background-color: tint(@eia-purple, 60%);
+}
 
-.eia-dark-orange.swatch {background-color: shade(@eia-orange, 60%); color: contrast(shade(@eia-orange, 60%)); }
-.eia-dark-orange-75.swatch {background-color: shade(@eia-orange, 45%); color: contrast(shade(@eia-orange, 45%)); }
-.eia-dark-orange-50.swatch {background-color: shade(@eia-orange, 30%); color: contrast(shade(@eia-orange, 30%)); }
-.eia-dark-orange-25.swatch {background-color: shade(@eia-orange, 15%); color: contrast(shade(@eia-orange, 15%)); }
-.eia-orange {background-color: @eia-orange; color: contrast(@eia-orange); }
-.eia-light-orange-25.swatch {background-color: tint(@eia-orange, 15%); color: contrast(tint(@eia-orange, 15%)); }
-.eia-light-orange-50.swatch {background-color: tint(@eia-orange, 30%); color: contrast(tint(@eia-orange, 30%)); }
-.eia-light-orange-75.swatch {background-color: tint(@eia-orange, 45%); color: contrast(tint(@eia-orange, 45%)); }
-.eia-light-orange.swatch {background-color: tint(@eia-orange, 60%); color: contrast(tint(@eia-orange, 60%)); }
+.eia-dark-orange.swatch {
+	background-color: shade(@eia-orange, 60%);
+}
+.eia-dark-orange-75.swatch {
+	background-color: shade(@eia-orange, 45%);
+}
+.eia-dark-orange-50.swatch {
+	background-color: shade(@eia-orange, 30%);
+}
+.eia-dark-orange-25.swatch {
+	background-color: shade(@eia-orange, 15%);
+}
+.eia-orange {
+	background-color: @eia-orange;
+}
+.eia-light-orange-25.swatch {
+	background-color: tint(@eia-orange, 15%);
+}
+.eia-light-orange-50.swatch {
+	background-color: tint(@eia-orange, 30%);
+}
+.eia-light-orange-75.swatch {
+	background-color: tint(@eia-orange, 45%);
+}
+.eia-light-orange.swatch {
+	background-color: tint(@eia-orange, 60%);
+}
 
-.eia-dark-brown.swatch {background-color: shade(@eia-brown, 60%); color: contrast(shade(@eia-brown, 60%)); }
-.eia-dark-brown-75.swatch {background-color: shade(@eia-brown, 45%); color: contrast(shade(@eia-brown, 45%)); }
-.eia-dark-brown-50.swatch {background-color: shade(@eia-brown, 30%); color: contrast(shade(@eia-brown, 30%)); }
-.eia-dark-brown-25.swatch {background-color: shade(@eia-brown, 15%); color: contrast(shade(@eia-brown, 15%)); }
-.eia-brown {background-color: @eia-brown; color: contrast(@eia-brown); }
-.eia-light-brown-25.swatch {background-color: tint(@eia-brown, 15%); color: contrast(tint(@eia-brown, 15%)); }
-.eia-light-brown-50.swatch {background-color: tint(@eia-brown, 30%); color: contrast(tint(@eia-brown, 30%)); }
-.eia-light-brown-75.swatch {background-color: tint(@eia-brown, 45%); color: contrast(tint(@eia-brown, 45%)); }
-.eia-light-brown.swatch {background-color: tint(@eia-brown, 60%); color: contrast(tint(@eia-brown, 60%)); }
+.eia-dark-brown.swatch {
+	background-color: shade(@eia-brown, 60%);
+}
+.eia-dark-brown-75.swatch {
+	background-color: shade(@eia-brown, 45%);
+}
+.eia-dark-brown-50.swatch {
+	background-color: shade(@eia-brown, 30%);
+}
+.eia-dark-brown-25.swatch {
+	background-color: shade(@eia-brown, 15%);
+}
+.eia-brown {
+	background-color: @eia-brown;
+}
+.eia-light-brown-25.swatch {
+	background-color: tint(@eia-brown, 15%);
+}
+.eia-light-brown-50.swatch {
+	background-color: tint(@eia-brown, 30%);
+}
+.eia-light-brown-75.swatch {
+	background-color: tint(@eia-brown, 45%);
+}
+.eia-light-brown.swatch {
+	background-color: tint(@eia-brown, 60%);
+}
 
-
-
-
-
-.eia-black.swatch {background-color: #000000; color: contrast(#000000); }
-.eia-dark-black.swatch {background-color: #111111; color: contrast(#111111); }
-.eia-dark-black-75.swatch {background-color: #222222; color: contrast(#222222); }
-.eia-dark-grey.swatch {background-color: #333333; color: contrast(#333333); }
-.eia-dark-black-50.swatch {background-color: #444444; color: contrast(#444444); }
-.eia-dark-black-25.swatch {background-color: #555555; color: contrast(#555555); }
-.eia-light-black-25.swatch {background-color: #666666; color: contrast(#666666); }
-.eia-light-black-50.swatch {background-color: #777777; color: contrast(#777777); }
-.eia-light-black-75.swatch {background-color: #888888; color: contrast(#888888); }
-.eia-light-black.swatch {background-color: #999999; color: contrast(#999999); }
+.eia-black.swatch {
+	background-color: #000000;
+}
+.eia-dark-black.swatch {
+	background-color: #111111;
+}
+.eia-dark-black-75.swatch {
+	background-color: #222222;
+}
+.eia-dark-grey.swatch {
+	background-color: #333333;
+}
+.eia-dark-black-50.swatch {
+	background-color: #444444;
+}
+.eia-dark-black-25.swatch {
+	background-color: #555555;
+}
+.eia-light-black-25.swatch {
+	background-color: #666666;
+}
+.eia-light-black-50.swatch {
+	background-color: #777777;
+}
+.eia-light-black-75.swatch {
+	background-color: #888888;
+}
+.eia-light-black.swatch {
+	background-color: #999999;
+}
 
 .eia-dark-white {
 	&.swatch {
 		background-color: #aaaaaa;
-		color: contrast(#aaaaaa);
 	}
 }
-.eia-dark-white-75  {
+.eia-dark-white-75 {
 	&.swatch {
 		background-color: mix(#aaaaaa, #bbbbbb, 50%);
-		color: contrast(mix(#aaaaaa, #bbbbbb, 50%));
 	}
 }
 .eia-dark-white-50 {
 	&.swatch {
 		background-color: #bbbbbb;
-		color: contrast(#bbbbbb);
 	}
 }
 .eia-dark-white-25 {
 	&.swatch {
 		background-color: mix(#bbbbbb, #cccccc, 50%);
-		color: contrast(mix(#bbbbbb, #cccccc, 50%));
 	}
 }
 .eia-light-white-25 {
 	&.swatch {
 		background-color: #cccccc;
-		color: contrast(#cccccc);
 	}
 }
 .eia-light-white-50 {
 	&.swatch {
 		background-color: mix(#cccccc, #dddddd, 50%);
-		color: contrast(mix(#cccccc, #dddddd, 50%));
 	}
 }
 .eia-light-white-75 {
 	&.swatch {
 		background-color: #dddddd;
-		color: contrast(#dddddd);
 	}
 }
 .eia-light-white-80 {
 	&.swatch {
 		background-color: mix(#dddddd, #eeeeee, 50%);
-		color: contrast(mix(#dddddd, #eeeeee, 50%));
 	}
 }
 .eia-light-white-85 {
 	&.swatch {
 		background-color: #eeeeee;
-		color: contrast(#eeeeee);
 	}
 }
 .eia-light-white {
 	&.swatch {
 		background-color: mix(#ffffff, #eeeeee, 50%);
-		color: contrast(mix(#ffffff, #eeeeee, 50%));
 	}
 }
 .eia-white {
 	&.swatch {
 		background-color: #ffffff;
-		color: contrast(#ffffff);
 	}
 }
+
+.eia-muted-blue {
+	&.swatch {
+		background-color: @eia-muted-blue;
+	}
+}
+.eia-muted-green {
+	&.swatch {
+		background-color: @eia-muted-green;
+	}
+}
+.eia-muted-brown {
+	&.swatch {
+		background-color: @eia-muted-brown;
+	}
+}
+
+/*
+@button_green: #7da85b;
+@slider_green: #9ec184;
+@eia-dark-blue: #003953;
+
+@eia-dark-blue-75: mix(@eia-dark-blue, @eia-blue, 75%);
+@eia-dark-blue-50: mix(@eia-dark-blue, @eia-blue, 50%);
+@eia-dark-blue-25: mix(@eia-dark-blue, @eia-blue, 25%);
+@eia-blue: #0096d7; // #189bd7;
+@eia-light-blue-75: mix(@eia-light-blue, @eia-blue, 75%);
+@eia-light-blue-50: mix(@eia-light-blue, @eia-blue, 50%);
+@eia-light-blue-25: mix(@eia-light-blue, @eia-blue, 25%);
+@eia-light-blue:  #76d5ff;
+
+@eia-dark-green: #2a4b11;
+@eia-dark-green-75: mix(@eia-dark-green, @eia-green, 75%);
+@eia-dark-green-50: mix(@eia-dark-green, @eia-green, 50%);
+@eia-dark-green-25: mix(@eia-dark-green, @eia-green, 25%);
+@eia-green: #5d9732;
+@eia-light-green-75: mix(@eia-light-green, @eia-green, 75%);
+@eia-light-green-50: mix(@eia-light-green, @eia-green, 50%);
+@eia-light-green-25: mix(@eia-light-green, @eia-green, 25%);
+@eia-light-green:  #bed5ad;
+
+@eia-dark-red: #410e14;
+@eia-dark-red-75: mix(@eia-dark-red, @eia-red, 75%);
+@eia-dark-red-50: mix(@eia-dark-red, @eia-red, 50%);
+@eia-dark-red-25: mix(@eia-dark-red, @eia-red, 25%);
+@eia-red:  #a33340;
+@eia-light-red-75: mix(@eia-light-red, @eia-red, 75%);
+@eia-light-red-50: mix(@eia-light-red, @eia-red, 50%);
+@eia-light-red-25: mix(@eia-light-red, @eia-red, 25%);
+@eia-light-red:  #daadb3;
+
+@eia-dark-yellow: #806401;
+@eia-dark-yellow-75: mix(@eia-dark-yellow, @eia-yellow, 75%);
+@eia-dark-yellow-50: mix(@eia-dark-yellow, @eia-yellow, 50%);
+@eia-dark-yellow-25: mix(@eia-dark-yellow, @eia-yellow, 25%);
+@eia-yellow: #ffc702;
+@eia-light-yellow-75: mix(@eia-light-yellow, @eia-yellow, 75%);
+@eia-light-yellow-50: mix(@eia-light-yellow, @eia-yellow, 50%);
+@eia-light-yellow-25: mix(@eia-light-yellow, @eia-yellow, 25%);
+@eia-light-yellow: #ffe99a;
+
+@eia-brown: #bd732a; // tan
+
+@eia-light-orange: #ffddc5;
+@eia-orange: #ff6f1f;
+@eia-dark-orange: #de611c;
+
+@eia-dark-purple: #362852;
+@eia-dark-purple-75: mix(@eia-dark-purple, @eia-purple, 75%);
+@eia-dark-purple-50: mix(@eia-dark-purple, @eia-purple, 50%);
+@eia-dark-purple-25: mix(@eia-dark-purple, @eia-purple, 25%);
+@eia-purple: #513c7a;
+@eia-light-purple-75: mix(@eia-light-purple, @eia-purple, 75%);
+@eia-light-purple-50: mix(@eia-light-purple, @eia-purple, 50%);
+@eia-light-purple-25: mix(@eia-light-purple, @eia-purple, 25%);
+@eia-light-purple: #b9b1ca;
+*/

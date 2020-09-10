@@ -3,7 +3,6 @@ window.jQuery = $;
 window.$ = $;
 
 //var requirejs = require("requirejs");
-
 class JqueryCookie {
   constructor() {
     (function(factory) {

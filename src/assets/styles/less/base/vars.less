@@ -1,4 +1,3 @@
-
 //@eia-orange: #ff6f1f;
 
 //@eia-dark-green: #2a4b11;
@@ -22,17 +21,17 @@
 .a10 { background-color: @slider_bg_green; }
 .a11 { background-color: fade(@eia-green, 10%) }
 */
-.eia-green(@eia-green: #5d9732) {color:@eia-green;background-color:@eia-green; border-color:@eia-green;}
-
-
-
-
+.eia-green(@eia-green: #5d9732) {
+	color: @eia-green;
+	background-color: @eia-green;
+	border-color: @eia-green;
+}
 
 // @gradient-background: #d8e6ce;
 //@eia-dark-grey: #333;
 //@eia-light-grey: #dadada;
 
-@gradient-background: rgba(238,238,238,1);
+@gradient-background: rgba(238, 238, 238, 1);
 //.gradient(@stops: rgba(238,238,238,1) 0, rgba(244,244,244,1) 50%, rgba(252,252,252,1) 90%, rgba(254,254,254,1) 100%;);
 @eia-divider: #e3e5e6;
 //@eia-muted-blue: tint(@eia-blue, 30%); //#66a0b9;
@@ -42,12 +41,9 @@
 //color updates for the consumption icons
 @eia-muted-blue: #66a0b9;
 @eia-muted-green: #92a753;
-@eia-muted-brown: #a27d33; 
+@eia-muted-brown: #a27d33;
 
-
-
-
-@eia-dark-blue: #003953; 
+@eia-dark-blue: #003953;
 //@eia-dark-blue-75: mix(@eia-dark-blue, @eia-blue, 75%);
 //@eia-dark-blue-50: mix(@eia-dark-blue, @eia-blue, 50%);
 //@eia-dark-blue-25: mix(@eia-dark-blue, @eia-blue, 25%);
@@ -55,7 +51,7 @@
 //@eia-light-blue-75: mix(@eia-light-blue, @eia-blue, 75%);
 //@eia-light-blue-50: mix(@eia-light-blue, @eia-blue, 50%);
 //@eia-light-blue-25: mix(@eia-light-blue, @eia-blue, 25%);
-@eia-light-blue:  #76d5ff;
+@eia-light-blue: #76d5ff;
 
 @eia-dark-green: #2a4b11;
 //@eia-dark-green-75: mix(@eia-dark-green, @eia-green, 75%);
@@ -65,17 +61,17 @@
 //@eia-light-green-75: mix(@eia-light-green, @eia-green, 75%);
 //@eia-light-green-50: mix(@eia-light-green, @eia-green, 50%);
 //@eia-light-green-25: mix(@eia-light-green, @eia-green, 25%);
-@eia-light-green:  #bed5ad;
+@eia-light-green: #bed5ad;
 
 @eia-dark-red: #410e14;
 //@eia-dark-red-75: mix(@eia-dark-red, @eia-red, 75%);
 //@eia-dark-red-50: mix(@eia-dark-red, @eia-red, 50%);
 //@eia-dark-red-25: mix(@eia-dark-red, @eia-red, 25%);
-@eia-red:  #a33340;
+@eia-red: #a33340;
 //@eia-light-red-75: mix(@eia-light-red, @eia-red, 75%);
 //@eia-light-red-50: mix(@eia-light-red, @eia-red, 50%);
 //@eia-light-red-25: mix(@eia-light-red, @eia-red, 25%);
-@eia-light-red:  #daadb3;
+@eia-light-red: #daadb3;
 
 @eia-dark-yellow: #806401;
 //@eia-dark-yellow-75: mix(@eia-dark-yellow, @eia-yellow, 75%);
@@ -110,47 +106,33 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 */
 @eia-white: white;
 
-
-
-
-
-
-
-
-
-
 // commonly used - converted to tint / shade
 @eia-tan: red;
-
 
 //@eia-dark-grey:#333;
 
 //tint(@eia-black, 46.4%);:#767676;
 //@eia-light-grey:#999; tint(@eia-black, 60%)
 
-
-
 //@eia-light-purple: #6f2e9f;
-//@eia-purple: #513c7a; 
-//@eia-dark-purple: #362852; 
+//@eia-purple: #513c7a;
+//@eia-dark-purple: #362852;
 //@eia-#d8d8d8;: #cccccc;
 //@eia-white: #ffffff;
 
 // ---New Purple Color---*/
 //@eia-yellow: #ffc702;
-@eia-yellow-mono: #d0d0d0;// top swoosh
-@eia-blue-mono: #6e6e6e;// top swoosh
+@eia-yellow-mono: #d0d0d0; // top swoosh
+@eia-blue-mono: #6e6e6e; // top swoosh
 
 //@eia-red: #a33340;
 
 @eia-greyish-blue: #a9c1da;
-@eia-darker-blue: #003C57;
-
-
+@eia-darker-blue: #003c57;
 
 @port-blue: #3380a2;
 
-@eia-blue-module-background: #dff2fB;
+@eia-blue-module-background: #dff2fb;
 @alert-background: #e8cccf;
 @eia-date-light: #928b81;
 //@eia-yellow: #bd732a;
@@ -162,26 +144,23 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 //@green_border: 1px solid @eia-green;
 //: 1px solid @eia-light-grey;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@margin: margin;
+/*
+.widget {
+	@{margin}: 5px 5px 5px 5px;
+	@{margin}-top: 5px;
+	@{margin}-right: 5px;
+	@{margin}-bottom: 5px;
+	@{margin}-left: 5px;
+}
+*/
 
 //@media print {
 @default_font: Arial, Helvetica, sans-serif;
 @header_font: "Times New Roman", "Times", serif;
 
 @mobile: ~"(min-width: 1px)"; // could be 320px - smartphones, portrait iPhone, portrait 480x320 phones (Android)
-//@mobile-aspect-ratio: ~"(max-aspect-ratio: 5/7)"; 
+//@mobile-aspect-ratio: ~"(max-aspect-ratio: 5/7)";
 @mobile-landscape: ~"(min-width: 480px)"; // smartphones, Android phones, landscape iPhone
 @tablet: ~"(min-width: 600px)"; // mobile panorama
 @tablet-landscape: ~"(min-width: 801px)"; // tablet, landscape iPad, lo-res laptops ands desktops
@@ -192,8 +171,7 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 //@print: ~"@media print";
 @mobile-only: ~"(max-width: 599px)";
 //~"(max-width: 599px)";
-//~"(max-width: 599px)"; // 
-
+//~"(max-width: 599px)"; //
 
 @baseFontSize: 16;
 @fontWeightBold: 700;
@@ -214,4 +192,3 @@ shade(@eia-white, 30%): mix(@eia-white, tint(@eia-black, 46.5%), 50%);
 
 @DisplayNone: hide;
 @DisplayShow: block;
-

@@ -1,15 +1,36 @@
-/* variables & mixins */
-
-@import "less/base/vars";
-@import "less/base/mixins";
-
-/* @import "less/base/base"; */
-@import "less/base/icons-mixins";
-@import "less/base/icons-vars";
-/* @import "less/base/icons"; */
-/* @import "less/base/icons-header"; */
-@import "less/base/icons-logos";
-/* @import "less/base/forms"; */
-/* @import "less/base/tables"; */
-
-@import "less/print/styles";
+@media print and (color) {
+	* {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact !important; /* Chrome, Safari */
+		color-adjust: exact !important; /*Firefox*/
+	}
+}
+@media print {
+	@page {
+		margin: 1cm;
+	}
+	@import "less/base/vars";
+	@import "less/base/mixins";
+	@import "less/print/base";
+	@import "less/print/accessibility";
+	@import "less/base/icons-vars";
+	@import "less/base/icons-mixins";
+	@import "less/base/icons";
+	@import "less/base/tables";
+	@import "less/base/icons-logos";
+	@import "less/modules/banners";
+	@import "less/print/modules";
+	@import "less/print/article";
+	@import "less/print/primary";
+	@import "less/print/secondary";
+	@import "less/print/shared";
+	@import "less/print/header";
+	@import "less/print/reports";
+	@import "less/print/report-header";
+	@import "less/print/accordion";
+	@import "less/print/lists";
+	@import "less/print/dont-print";
+	@import "less/theme/basic-table.less";
+	@import "less/print/contact";
+	@import "less/print/layouts";
+}

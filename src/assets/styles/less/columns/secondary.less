@@ -17,54 +17,109 @@ font-size: 1.375rem; // 22 pixels
 font-size: 1.438rem; // 23 pixels
 font-size: 1.500rem; // 24 pixels
 */
-@media @mobile {
+
+
+	/* ************ ************ ************ */
+	// adds a left margin to tab content (must be different than secondary
+	/* ************ ************ ************ */
+
+	/*
 	.secondary-alt,
 	.secondary {
-		h1 { // not approved
+		& > ul {
+			li {
+				margin-left: 0;
+				border: 1px solid red;
+			}
+		}
+		.tab-content {
+			& > p,
+			& > ul,
+			& > ol,
+			//& > h1,
+			& > h2,
+			& > h3,
+			& > h4,
+			& > h5,
+			//& > h6
+			img {
+				margin: 0 0 0 6px;
+			}
+		}
+	}
+	*/
+
+
+
+@media @mobile {
+	.secondary-alt {
+		border-top: 4px solid @eia-green;
+	}
+	.secondary {
+		border-top: 4px solid @eia-blue;
+	}
+	.secondary-alt,
+	.secondary {
+		display: table;
+		.tab-content {
+			& > p,
+			& > ul,
+			& > ol,
+			//& > h1,
+			& > h2,
+			& > h3,
+			& > h4,
+			& > h5,
+			//& > h6
+			img {
+				margin: 0 0 0 6px;
+			}
+		}
+		/* ************ ************ ************ */
+		// adds a space if/when the accordions fall after the secondary tag
+		/* ************ ************ ************ */
+		.accordion {
+			&:first-child {
+				border-top: 22px solid #fff;
+			}
+		}
+		/* ************ ************ ************ */
+		// adds a space if/when the tabs fall after the secondary tag
+		/* ************ ************ ************ */
+		.tabs {
+			&:first-child {
+				border-top: 22px solid #fff;
+			}
+		}
+		h1 {
+			// not approved
 			.header-font;
-			font-size: 2rem;// 32px;
+			font-size: 2rem; // 32px;
 			line-height: 1.25;
 			color: @eia-dark-grey;
 			padding: 1em 0 0 0;
 		}
 		h3 {
 			color: @eia-dark-grey;
-		} 
-		h4, h5, h6 { // no styles defined yet
-			color: red !important;
-		} 
+		}
+		h4,
+		h5,
+		//h6 {
+		//}
 		ul {
 			li {
-				/*
-				a {
-					color:@eia-blue;
-					text-decoration: none;
-					&:link,
-					&:active,
-					&:visited {
-						color:@eia-blue;
-						text-decoration: none;
-						font-size: .875rem;
-						//font-size: 0.78rem;// 12 pixels
-					}
-					&:hover{
-						text-decoration: underline;
-						color:@eia-blue;
-					}
-				}
-				*/
 				&.sub-head {
 					margin-top: 14px;
 					margin-bottom: 8px;
 					line-height: 1.3em;
-					font-size: .875rem;
+					font-size: 0.875rem;
 					font-weight: 600;
 					//font-size: 0.78rem;// 12 pixels
 				}
 				&.description {
 					margin-top: 8px;
 					margin-bottom: 8px;
-					font-size: .875rem;
+					font-size: 0.875rem;
 					//font-size: 0.78rem;// 12 pixels
 				}
 				&.image {
@@ -85,7 +140,7 @@ font-size: 1.500rem; // 24 pixels
 							position: relative;
 							top: 3px;
 							a {
-								border-left: 1px solid #d8d8d8;;
+								border-left: 1px solid #d8d8d8;
 								margin-left: 5px;
 								padding-left: 5px;
 								.right;
@@ -103,11 +158,7 @@ font-size: 1.500rem; // 24 pixels
 						}
 					}
 				}
-			}
-		}
-		&>ul {
-			padding: 6px;
-			&>li {
+				/*
 				a {
 					span {
 						&.link-label {
@@ -117,7 +168,6 @@ font-size: 1.500rem; // 24 pixels
 					em {
 						.italic;
 						color: @eia-dark-grey;
-
 					}
 					span {
 						&.date {
@@ -126,7 +176,7 @@ font-size: 1.500rem; // 24 pixels
 
 							text-decoration: none;
 							display: table-cell;
-							padding-right: 12px;				
+							padding-right: 12px;
 						}
 					}
 					&:hover {
@@ -142,11 +192,31 @@ font-size: 1.500rem; // 24 pixels
 						}
 					}
 				}
+				*/
+			}
+		}
+		& > .tabs,
+		& > .accordion,
+		& > p,
+		& > img,
+		& > ul {
+			padding-left: 6px;
+			padding-right: 6px;
+			&.icon-list {
+				margin-top: 1em;
+			}
+			& > li {
+				margin-left: 0;
+				& > ul {
+					& > li {
+						margin-left: 0;
+					}
+				}
 				&.head {
-					margin-bottom: 0.78rem;// 12 pixels
+					margin-bottom: 0.78rem; // 12 pixels
 					width: 100%;
 					display: block;
-					h2  {
+					h2 {
 						.header-font;
 						color: @eia-dark-grey;
 						font-weight: normal;
@@ -159,7 +229,7 @@ font-size: 1.500rem; // 24 pixels
 							color: @eia-blue;
 							font-weight: normal;
 							font-size: 1.4rem;
-							line-height: 1.3em;	
+							line-height: 1.3em;
 						}
 						.ico {
 							.left;
@@ -172,12 +242,12 @@ font-size: 1.500rem; // 24 pixels
 									.icon-interactive;
 									.controls-icon(40px, 43px);
 									margin-bottom: 0;
-
 								}
 							}
 						}
 					}
 				}
+				
 				/*
 				&.sub-head {
 					line-height: 1.3em;
@@ -206,11 +276,5 @@ font-size: 1.500rem; // 24 pixels
 				}
 			}
 		}
-	}
-	.secondary {
-		border-top: 4px solid @eia-blue;
-	}
-	.secondary-alt {
-		border-top: 4px solid @eia-green;
 	}
 }

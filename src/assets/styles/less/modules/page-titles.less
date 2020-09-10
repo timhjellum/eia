@@ -1,272 +1,278 @@
 @media @mobile {
-	.title-banner {
-		display: block;
-		min-height: 74px;
-		border: none;
-		width: 100%;
-		background-color: shade(white, 4.2%);
-		padding: 22px 12px 0 12px;
+  .title-banner {
+    display: block;
+    min-height: 74px;
+    border: none;
+    width: 100%;
+    background-color: shade(white, 4.2%);
+    padding: 22px 12px 0 12px;
+    .print {
+      display: none;
+    }
+    /*
 		.see-all {
 			font-size: 0.688rem; // 11 pixels
 			padding: 0 0 5px 0;
 			color: @eia-blue;
 			text-transform: uppercase;
+
 			&:before { 
 				content:"\2039\00a0";
 				vertical-align: text-top;
 			}
 		}
-		h1 {
-			.header-font;
-			.normal;
-			width: 100%;
-			font-size: 2rem !important; // 32px
-			border-bottom: none !important;
-			padding: 0 !important;
-			margin: 0;
-		}
-		a {
-			color: @eia-blue;
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-		&.bg-commercial {
-			padding-bottom: 10px;
-		}
+		*/
+    h1 {
+      .header-font;
+      .normal;
+      width: 100%;
+      font-size: 2rem !important; // 32px
+      border-bottom: none !important;
+      padding: 0 !important;
+      margin: 0;
+    }
+    a {
+      color: @eia-blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.bg-commercial {
+      padding-bottom: 10px;
+    }
 
-		&.bg-page-title {
-			.pub-title {
-				.font;
-				width: 100%;
-				clear: both;
-				font-size: 0.688rem; // 11 pixels
-				margin: 0px;
-				padding: 2px 0 22px 0;
-				color: #7d7d7d;
-				line-height: 1.6;
-				//span {
-				//	line-height: 1.8em;
-				//}
-				&>span {
-					&:before {
-						content: '|';
-						margin: 0 6px 0 3px;
-					}
-					a {
-						display: inline-block;
-						color: @eia-blue;
-						text-decoration: none;
-						text-transform: uppercase;
-						&:hover {
-							text-decoration: underline;
-						} 
-					}
-					.pdf {
-						.left;
-						margin: -1px 6px 0 0;
-						span {
-							position: absolute;
-							left: -10000px;
-							top: auto;
-							width: 1px;
-							height: 1px;
-							overflow: hidden;
-						}
-					}
-				}
-				&>span {
-					&:first-child {
-						&:before {
-							content: none;
-							margin: 0 6px 0 3px;
-						}						
-					}
-				}
-			}
-		}
-	}
+    &.bg-page-title {
+      .pub-title {
+        .font;
+        width: 100%;
+        clear: both;
+        font-size: 0.688rem; // 11 pixels
+        margin: 0px;
+        padding: 2px 0 22px 0;
+        color: #7d7d7d;
+        line-height: 1.6;
+        //span {
+        //	line-height: 1.8em;
+        //}
+        & > span {
+          &:before {
+            content: "|";
+            margin: 0 6px 0 3px;
+          }
+          a {
+            display: inline-block;
+            color: @eia-blue;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .pdf {
+            .left;
+            margin: -1px 6px 0 0;
+            span {
+              position: absolute;
+              left: -10000px;
+              top: auto;
+              width: 1px;
+              height: 1px;
+              overflow: hidden;
+            }
+          }
+        }
+        & > span {
+          &:first-child {
+            &:before {
+              content: none;
+              margin: 0 6px 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media @tablet-landscape {
-
 }
 
 @media @laptop {
-	.bg_pub_states_tall {
-		background: url(/global/images/page-titles/states_tall.jpg) no-repeat right top;
-	}
-	.title-banner {
-		border-bottom: solid 1px #ededee;
-		background-repeat: no-repeat;
-		background-position: top right;
-		background-size: cover;
-		background-color: white;
-		padding: 22px 22px 0 22px;
-		min-height: 74px;
-		h1 {
-			text-transform: uppercase;
-			&.cbecs { // legacy stuff - not sure of history
-				font-size: 1.125em;
-				padding: 15px 0 0 20px;
-			}
-		}
-		&.bg-page-title {
-			background-image: url(/global/images/page-titles/default-pub-header.jpg);
-		}
-		&.bg-all-sources {
-			background-image: url(/global/images/page-titles/all-sources.jpg);
-		}
-		&.bg-analysis {
-			background-image: url(/global/images/page-titles/analysis-projections.jpg);
-		}
-		&.bg-coal {
-			background-image: url(/global/images/page-titles/coal.jpg);
-		}
-		&.bg-commercial {
-			background-image: url(/global/images/page-titles/commercial.jpg);
-		}
-		&.bg-countries {
-			background-image: url(/global/images/page-titles/countries.jpg);
-		}
-		&.bg-electricity {
-			background-image: url(/global/images/page-titles/electricity.jpg);
-		}
-		&.bg-environment {
-			background-image: url(/global/images/page-titles/environment.jpg);
-		}
-		&.bg-enduse {
-			background-image: url(/global/images/page-titles/enduse.jpg);
-		}
-		&.bg-finance {
-			background-image: url(/global/images/page-titles/finance.jpg);
-		}
-		&.bg-industrial {
-			background-image: url(/global/images/page-titles/industrial.jpg);
-		}
-		&.bg-maps {
-			background-image: url(/global/images/page-titles/maps.jpg);
-		}
-		&.bg-models {
-			background-image: url(/global/images/page-titles/models.jpg);
-		}
-		&.bg-natural-gas {
-			background-image: url(/global/images/page-titles/natural-gas.jpg);
-		}
-		&.bg-nuclear {
-			background-image: url(/global/images/page-titles/nuclear.jpg);
-		}
-		&.bg-petroleum {
-			background-image: url(/global/images/page-titles/petroleum.jpg);
-		}
-		&.bg-press {
-			background-image: url(/global/images/page-titles/press.jpg);
-		}
-		&.bg-regions {
-			background-image: url(/global/images/page-titles/regions.jpg);
-		}
-		&.bg-renewable {
-			background-image: url(/global/images/page-titles/renewable.jpg);
-		}
-		&.bg-residential {
-			background-image: url(/global/images/page-titles/residential.jpg);
-		}
-		&.bg-states {
-			background-image: url(/global/images/page-titles/states.jpg);
-		}
-		&.bg-transportation {
-			background-image: url(/global/images/page-titles/transportation.jpg);
-		}
-		&.bg-tie {
-			background-image: url(/global/images/page-titles/today-in-energy.jpg);
-		}
-		/* min-height: 106px; */
-		&.bg-az {
-			background-image: url(/global/images/page-titles/az.jpg);
-		}
-		&.bg-about {
-			background-image: url(/global/images/page-titles/about.jpg);
-		}
-		&.bg-careers {
-			background-image: url(/global/images/page-titles/careers.jpg);
-		}
-		&.bg-conference {
-			background-image: url(/global/images/page-titles/conference.jpg);
-		}
-		&.bg-contact {
-			background-image: url(/global/images/page-titles/contact.jpg);
-		}
-		&.bg-eib {
-			background-image: url(/global/images/page-titles/eib.jpg);
-		}
-		&.bg-email {
-			background-image: url(/global/images/page-titles/email.jpg);
-		}
-		&.bg-faqs {
-			background-image: url(/global/images/page-titles/faqs.jpg);
-		}
-		&.bg-feedback {
-			background-image: url(/global/images/page-titles/feedback.jpg);
-		}
-		&.bg-glossary {
-			background-image: url(/global/images/page-titles/glossary.jpg);
-		}
-		&.bg-reports {
-			background-image: url(/global/images/page-titles/reports.jpg);
-		}
-		&.bg-rss {
-			background-image: url(/global/images/page-titles/rss.jpg);
-		}
-		&.bg-survey {
-			background-image: url(/global/images/page-titles/survey.jpg);
-		}
-		&.bg-whats-new {
-			background-image: url(/global/images/page-titles/whats-new.jpg);
-		}
-		&.bg-az,
-		&.bg-about,
-		&.bg-careers,
-		&.bg-conference,
-		&.bg-contact,
-		&.bg-eib,
-		&.bg-email,
-		&.bg-faqs,
-		&.bg-feedback,
-		&.bg-glossary,
-		&.bg-reports,
-		&.bg-rss,
-		&.bg-survey,
-		&.bg-whats-new {
-			min-height: 106px;
-			padding: 44px 22px 0 22px;
-		}
-		/* min-height: 124px; */
-		&.bg-recs {
-			background-image: url(/global/images/page-titles/recs.jpg);
-		}
-		&.bg-aeo {
-			background-image: url(/global/images/page-titles/aeo.jpg);
-		}
-		&.bg-countries-big {
-			background-image: url(/global/images/page-titles/countries-big.jpg);
-		}
-		&.bg-disruptions {
-			background-image: url(/global/images/page-titles/disruptions.jpg);
-		}
-		&.bg-states-big {
-			background-image: url(/global/images/page-titles/states-big.jpg);
-		}
-		&.bg-recs,
-		&.bg-aeo,
-		&.bg-countries-big,
-		&.bg-disruptions,
-		&.bg-states-big {
-			min-height: 124px;
-			//padding: 54px 22px 0 22px;
-			padding: 22px;
-		}
-	}
-	/*
+  .bg_pub_states_tall {
+    background: url(/global/images/page-titles/states_tall.jpg) no-repeat right top;
+  }
+  .title-banner {
+    border-bottom: solid 1px #ededee;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    background-color: white;
+    padding: 22px 22px 0 22px;
+    min-height: 74px;
+    h1 {
+      text-transform: uppercase;
+      &.cbecs {
+        // legacy stuff - not sure of history
+        font-size: 1.125em;
+        padding: 15px 0 0 20px;
+      }
+    }
+    &.bg-page-title {
+      background-image: url(/global/images/page-titles/default-pub-header.jpg);
+    }
+    &.bg-all-sources {
+      background-image: url(/global/images/page-titles/all-sources.jpg);
+    }
+    &.bg-analysis {
+      background-image: url(/global/images/page-titles/analysis-projections.jpg);
+    }
+    &.bg-coal {
+      background-image: url(/global/images/page-titles/coal.jpg);
+    }
+    &.bg-commercial {
+      background-image: url(/global/images/page-titles/commercial.jpg);
+    }
+    &.bg-countries {
+      background-image: url(/global/images/page-titles/countries.jpg);
+    }
+    &.bg-electricity {
+      background-image: url(/global/images/page-titles/electricity.jpg);
+    }
+    &.bg-environment {
+      background-image: url(/global/images/page-titles/environment.jpg);
+    }
+    &.bg-enduse {
+      background-image: url(/global/images/page-titles/enduse.jpg);
+    }
+    &.bg-finance {
+      background-image: url(/global/images/page-titles/finance.jpg);
+    }
+    &.bg-industrial {
+      background-image: url(/global/images/page-titles/industrial.jpg);
+    }
+    &.bg-maps {
+      background-image: url(/global/images/page-titles/maps.jpg);
+    }
+    &.bg-models {
+      background-image: url(/global/images/page-titles/models.jpg);
+    }
+    &.bg-natural-gas {
+      background-image: url(/global/images/page-titles/natural-gas.jpg);
+    }
+    &.bg-nuclear {
+      background-image: url(/global/images/page-titles/nuclear.jpg);
+    }
+    &.bg-petroleum {
+      background-image: url(/global/images/page-titles/petroleum.jpg);
+    }
+    &.bg-press {
+      background-image: url(/global/images/page-titles/press.jpg);
+    }
+    &.bg-regions {
+      background-image: url(/global/images/page-titles/regions.jpg);
+    }
+    &.bg-renewable {
+      background-image: url(/global/images/page-titles/renewable.jpg);
+    }
+    &.bg-residential {
+      background-image: url(/global/images/page-titles/residential.jpg);
+    }
+    &.bg-states {
+      background-image: url(/global/images/page-titles/states.jpg);
+    }
+    &.bg-transportation {
+      background-image: url(/global/images/page-titles/transportation.jpg);
+    }
+    &.bg-tie {
+      background-image: url(/global/images/page-titles/today-in-energy.jpg);
+    }
+    /* min-height: 106px; */
+    &.bg-az {
+      background-image: url(/global/images/page-titles/az.jpg);
+    }
+    &.bg-about {
+      background-image: url(/global/images/page-titles/about.jpg);
+    }
+    &.bg-careers {
+      background-image: url(/global/images/page-titles/careers.jpg);
+    }
+    &.bg-conference {
+      background-image: url(/global/images/page-titles/conference.jpg);
+    }
+    &.bg-contact {
+      background-image: url(/global/images/page-titles/contact.jpg);
+    }
+    &.bg-eib {
+      background-image: url(/global/images/page-titles/eib.jpg);
+    }
+    &.bg-email {
+      background-image: url(/global/images/page-titles/email.jpg);
+    }
+    &.bg-faqs {
+      background-image: url(/global/images/page-titles/faqs.jpg);
+    }
+    &.bg-feedback {
+      background-image: url(/global/images/page-titles/feedback.jpg);
+    }
+    &.bg-glossary {
+      background-image: url(/global/images/page-titles/glossary.jpg);
+    }
+    &.bg-reports {
+      background-image: url(/global/images/page-titles/reports.jpg);
+    }
+    &.bg-rss {
+      background-image: url(/global/images/page-titles/rss.jpg);
+    }
+    &.bg-survey {
+      background-image: url(/global/images/page-titles/survey.jpg);
+    }
+    &.bg-whats-new {
+      background-image: url(/global/images/page-titles/whats-new.jpg);
+    }
+    &.bg-az,
+    &.bg-about,
+    &.bg-careers,
+    &.bg-conference,
+    &.bg-contact,
+    &.bg-eib,
+    &.bg-email,
+    &.bg-faqs,
+    &.bg-feedback,
+    &.bg-glossary,
+    &.bg-reports,
+    &.bg-rss,
+    &.bg-survey,
+    &.bg-whats-new {
+      min-height: 106px;
+      padding: 44px 22px 0 22px;
+    }
+    /* min-height: 124px; */
+    &.bg-recs {
+      background-image: url(/global/images/page-titles/recs.jpg);
+    }
+    &.bg-aeo {
+      background-image: url(/global/images/page-titles/aeo.jpg);
+    }
+    &.bg-countries-big {
+      background-image: url(/global/images/page-titles/countries-big.jpg);
+    }
+    &.bg-disruptions {
+      background-image: url(/global/images/page-titles/disruptions.jpg);
+    }
+    &.bg-states-big {
+      background-image: url(/global/images/page-titles/states-big.jpg);
+    }
+    &.bg-recs,
+    &.bg-aeo,
+    &.bg-countries-big,
+    &.bg-disruptions,
+    &.bg-states-big {
+      min-height: 124px;
+      //padding: 54px 22px 0 22px;
+      padding: 22px;
+    }
+  }
+  /*
 	.l-full-page {
         .l-row {
             &.title-banner {

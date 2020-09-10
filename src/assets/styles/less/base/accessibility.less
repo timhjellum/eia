@@ -22,27 +22,74 @@ font-size: 1.500rem; // 24 pixels
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
 .hidden {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
+	clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
-#skip a { 
-	position:absolute; 
-	left:-10000px; 
-	top:auto; 
-	width:1px; 
-	height:1px; 
-	overflow:hidden;
-} 
-	
-#skip a:focus { 
-	position:static; 
-	width:auto; 
-	height:auto; 
+//.emulated-link-button,
+//.accessibility-link-button,
+//.eia-accessibility-link,
+.eia-accessibility-link-description,
+.eia-accessibility {
+	clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
-
-
-// end accessibility
+/*
+.emulated-link-button {
+	cursor: pointer;
+	text-decoration: underline;
+	color: blue;
+}
+a {
+	&.eia-accessibility-link {
+		color: #0000ee;
+		text-decoration: underline;
+		&:link {
+			color: #0000ee;
+			text-decoration: underline;
+		}
+		&:active {
+			color: red;
+			text-decoration-color: red;
+			text-decoration-style: dotted;
+		}
+		&:visited {
+			color: #551a8b;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: #0000ee;
+			text-decoration: none;
+		}
+		&:focus {
+			color: red;
+			text-decoration-color: red;
+			text-decoration-style: dotted;
+		}
+	}
+}
+*/
+#skip {
+	a {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		&:focus {
+			position: static;
+			width: auto;
+			height: auto;
+		}
+	}
+}

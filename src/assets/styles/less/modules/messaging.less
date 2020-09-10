@@ -18,38 +18,149 @@ font-size: 1.438rem; // 23 pixels
 font-size: 1.500rem; // 24 pixels
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 div {
-    &.error,
-    &.alert,
-    &.notice,
-    &.call-out,
-    &.success {
-        width: 100%;
-        display: block;
-        padding: 1.5em;
-        margin: 0 0 1em 0;
-        font-size: 0.938rem; // 15 pixels
-        clear: both;
-    }   
+	&.error,
+	&.alert,
+	&.notice,
+	&.call-out,
+	&.success {
+		width: 100%;
+		display: block;
+		padding: 1.5em;
+		margin: 0 0 1em 0;
+		font-size: 0.938rem; // 15 pixels
+		clear: both;
+	}
+}
+div {
+	&.info {
+		color: @eia-dark-grey;
+		padding: 0 0 0 25px;
+		position: relative;
+		&:before {
+			.controls-icon(20px, 20px);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		p {
+			color: @eia-dark-grey;
+			display: inline-block;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-blue;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-blue;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.error {
+		background-color: tint(@eia-red, 60%);
+		color: @eia-dark-grey;
+		p {
+			color: @eia-dark-grey;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-red;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-red;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.notice {
+		background-color: tint(@eia-blue, 80%);
+		color: @eia-dark-grey;
+		p {
+			color: @eia-dark-grey;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-blue;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-blue;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// final
+	&.call-out {
+		background-color: #ededed;
+		color: @eia-dark-grey;
+		p {
+			padding: 0;
+			margin: 0 0 11px 0;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-blue;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-blue;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.alert {
+		background-color: tint(@eia-red, 80%);
+		color: @eia-dark-grey;
+		p {
+			color: @eia-dark-grey;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-red;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-red;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&.success {
+		background-color: tint(@eia-green, 80%);
+		color: @eia-dark-grey;
+		p {
+			color: @eia-dark-grey;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					color: @eia-green;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @eia-green;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 }
 p {
 	&.note {
-		font-size: 0.750rem; // 12 pixels
+		font-size: 0.75rem; // 12 pixels
 		color: @eia-dark-grey;
 		padding: 12px 0;
 		&.right {
@@ -58,98 +169,105 @@ p {
 		}
 	}
 }
-
-
-.error {
-    background-color: tint(@eia-red, 60%);
-    color: @eia-dark-grey;
-    p {
-        a {
-            color: @eia-blue;
-            text-decoration: none;
-        }
-    }
-}
-// final 
-.notice {
-    background-color: tint(@eia-blue, 80%);
-    color: @eia-dark-grey;
-    p {
-        a {
-            color: @eia-blue;
-            text-decoration: none;
-        }
-    }
-}
-// final
-.call-out {
-    background-color: #ededed;
-    color: @eia-dark-grey;
-    p {
-        padding: 0;
-        margin: 0 0 11px 0;
-        a {
-            color: @eia-blue;
-            text-decoration: none;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-}
-// final
+p,
 span {
-    &.alert {
-        color: @eia-red;
-    }
-}    
-div {
-    &.alert {
-        background-color: tint(@eia-red, 80%);
-        color: @eia-dark-grey;
-        p {
-            a {
-                color: @eia-dark-grey;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
+	&.alert {
+		color: @eia-red;
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-red;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-red;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.note {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-blue;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-blue;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.success {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-green;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-green;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.call-out {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-blue;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-blue;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.notice {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-blue;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-blue;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.error {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-red;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-red;
+				text-decoration: underline;
+			}
+		}
+	}
+	&.info {
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: @eia-blue;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @eia-blue;
+				text-decoration: underline;
+			}
+		}
+	}
 }
-// final 
-.success {
-    background-color: tint(@eia-green, 80%);
-    color: @eia-dark-grey;
-    p {
-        a {
-            color: @eia-green;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-
-// final
-span {
-    &.note {
-        //display: inline-block; try float
-        color: @eia-dark-grey;
-        font-weight: 300;
-        //margin: 0 0 0 8px;
-    }
-}   
-
-
-
-
-
-
-
-
-
-

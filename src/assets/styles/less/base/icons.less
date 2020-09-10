@@ -53,21 +53,48 @@ svg:not(:root) {
 	}
 }
 
+.fancybox-item {
+	&.fancybox-close {
+		//font-size: 0;
+		text-indent: -9999px;
+		line-height: 0;
+		.icon-cancel;
+		.controls-icon(40px, 40px);
+		& > span {
+			//font-size: 0;
+			text-indent: -9999px;
+			line-height: 0;
+			margin: 0;
+		}
+	}
+}
+
 .ico {
+	span {
+		margin-left: 3px;
+		margin-right: 3px;
+		.font;
+		//font-size: 0.875rem;
+		font-size: 0.75rem; // 12 pixels
+		color: @eia-blue;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&.video {
+		&:before {
+			.icon-you-tube;
+			.controls-icon(16px, 16px);
+			display: inline-block;
+			margin: 0 0 -4px 0;
+		}
+	}
 	&.radio {
 		&:before {
 			.icon-radio-spot;
 			.controls-icon;
 		}
 	}
-	/*
-	&.upcoming-icon {
-		&:before {
-			.icon-upcoming;
-			.controls-icon;
-		}
-	}
-	*/
 	&.down-arrow {
 		&:before {
 			.icon-down-arrow;
@@ -90,277 +117,509 @@ svg:not(:root) {
 	}
 	/*-Close Icon --------------------------*/
 	&.close {
-		font-size: 0;
+		//font-size: 0;
+		text-indent: -9999px;
 		line-height: 0;
 		//&:before {
 		.icon-cancel;
 		.controls-icon;
 		//}
 		& > span {
-			font-size: 0;
+			//font-size: 0;
+			text-indent: -9999px;
 			line-height: 0;
 			margin: 0;
 		}
 	}
 	/*-general Icon --------------------------*/
 	&.analysis {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-analysis;
 		}
 	}
 	&.cancel {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-cancel;
 		}
 	}
 	&.column-chart {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-column-chart;
 		}
 	}
 	&.compare {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-compare;
 		}
 	}
 	&.d-arrow {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-d-arrow;
 		}
 	}
 	&.download {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-download;
 		}
 	}
 	&.edit {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-edit;
 		}
 	}
 	&.filter {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-filter;
 		}
 	}
 	&.grab-dot {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-grab-dot;
 		}
 	}
 	&.grid-column {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-column;
+			.icon-grid-column(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-line {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-line;
+			.icon-grid-line(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-map {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-map;
+			.icon-grid-map(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-parent-column {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-parent-column;
+			.icon-grid-parent-column(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-parent-line {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-parent-line;
+			.icon-grid-parent-line(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-parent-map {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-parent-map;
+			.icon-grid-parent-map(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-parent-pin {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-parent-pin;
+			.icon-grid-parent-pin(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-pin {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.controls-icon(20px, 20px);
-			.icon-grid-pin;
+			.icon-grid-pin(@fill-color: #99d5ef);
 		}
 	}
 	&.grid-key {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
+		display: inline-block;
 		&:before {
 			.icon-grid-key();
-			.icon-grid-key;
+			.icon-grid-key(@fill-color: #99d5ef);
 		}
 	}
+
 	&.help {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-help;
 		}
 	}
 	&.key {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.icon-key;
 		}
 	}
 	&.l-arrow {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-l-arrow;
 		}
 	}
 	&.l-range {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-l-range;
 		}
 	}
 	&.line-chart {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-line-chart;
 		}
 	}
 	&.map {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-map;
 		}
 	}
 	&.pause {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-pause;
 		}
 	}
 	&.pin {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-pin;
 		}
 	}
 	&.play {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-play;
 		}
 	}
 	&.r-arrow {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-r-arrow;
 		}
 	}
 	&.r-range {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-r-range;
 		}
 	}
 	&.remove {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-remove;
 		}
 	}
 	&.reset {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-reset;
 		}
 	}
 	&.reset-animation {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-reset-animation;
 		}
 	}
 	&.scroll-h {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-scroll-h;
 		}
 	}
 	&.scroll-v {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-scroll-v;
 		}
 	}
 	&.search-icon {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-search;
 		}
 	}
 	&.slide {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-slide;
 		}
 	}
 	&.sort {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-sort;
 		}
 	}
 	&.sort-down {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-sort-down;
 		}
 	}
 	&.sort-up {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-d-arrow;
 		}
 	}
 	&.submit {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-submit;
 		}
 	}
 	&.checkmark {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-checkmark;
 		}
 	}
 	&.dash {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-dash;
 		}
 	}
 	&.dot {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-dot;
 		}
 	}
 	&.collapse {
+		//span {
+		//position:absolute;
+		//left:-10000px;
+		//top:auto;
+		//}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-collapse;
@@ -368,6 +627,11 @@ svg:not(:root) {
 	}
 
 	&.zoom {
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
+		}
 		&:before {
 			.controls-icon(20px, 20px);
 			.icon-zoom;
@@ -439,10 +703,10 @@ svg:not(:root) {
 	&.dp,
 	&.dap {
 		margin: 0;
-		& > span {
-			font-size: 0;
-			line-height: 0;
-			margin: 0;
+		span {
+			position: absolute;
+			left: -10000px;
+			top: auto;
 		}
 	}
 
@@ -469,7 +733,8 @@ svg:not(:root) {
 	&.industrial {
 		margin: 0;
 		& > span {
-			font-size: 0;
+			//font-size: 0;
+			text-indent: -9999px;
 			line-height: 0;
 			margin: 0;
 		}
@@ -513,68 +778,358 @@ svg:not(:root) {
 		&:before {
 			.controls-icon(15px, 16px);
 			.icon-file-type(pdf);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(pdf);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.xls {
 		&:before {
-			.icon-file-type(xls);
 			.controls-icon(15px, 16px);
+			.icon-file-type(xls);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(xls);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.csv {
 		&:before {
-			.icon-file-type(csv);
 			.controls-icon(15px, 16px);
+			.icon-file-type(csv);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(csv);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.json {
 		&:before {
-			.icon-file-type(json);
 			.controls-icon(15px, 16px);
+			.icon-file-type(json);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(json);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.ppt {
 		&:before {
-			.icon-file-type(ppt);
 			.controls-icon(15px, 16px);
+			.icon-file-type(ppt);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(ppt);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.html {
 		&:before {
-			.icon-file-type(html);
 			.controls-icon(15px, 16px);
+			.icon-file-type(html);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(html);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.doc {
 		&:before {
-			.icon-file-type(doc);
 			.controls-icon(15px, 16px);
+			.icon-file-type(doc);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(doc);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.image {
 		&:before {
-			.icon-file-type(image);
 			.controls-icon(15px, 16px);
+			.icon-file-type(image);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(image);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
+	&.efile,
 	&.interactive {
 		&:before {
-			.icon-interactive;
 			.controls-icon(15px, 16px);
+			.icon-interactive;
+			display: inline-block;
+			margin-bottom: -3px;
 		}
-	}
-	&.efile {
-		&:before {
-			.icon-interactive;
-			.controls-icon(15px, 16px);
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-interactive;
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
 	&.pedro {
 		&:before {
-			.icon-pedro;
 			.controls-icon(15px, 16px);
+			.icon-file-type(pedro);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(pedro);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		}
 	}
+	&.zip {
+		&:before {
+			.controls-icon(15px, 16px);
+			.icon-file-type(zip);
+			display: inline-block;
+			margin-bottom: -3px;
+		}
+		&.right {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.controls-icon(15px, 16px);
+				.icon-file-type(zip);
+				display: inline-block;
+				margin-bottom: -3px;
+			}
+		}
+	}
+	/*
+	&.pdf,
+	&.xls,
+	&.json,
+	&.csv,
+	&.ppt,
+	&.html,
+	&.doc,
+	&.image,
+	&.interactive,
+	&.efile,
+	&.pedro,
+	&.zip {
+hi
+		//}
+	}
+	*/
+	&.icon-only {
+		//margin-left: -3px;
+		//margin-right: -3px;
+		& > span {
+			font-size: 0;
+			text-indent: -9999px;
+			line-height: 0;
+			margin: 0;
+		}
+	}
+	&.up-arrow,
+	&.down-arrow {
+		&:before {
+			.right;
+			margin-right: 0;
+			.controls-icon(12px, 14px);
+			position: relative;
+			top: 0;
+		}
+		span {
+			font-size: 0;
+			text-indent: -9999px;
+			line-height: 0;
+		}
+	}
+	/*
+		&.xls {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(xls);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.csv {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(csv);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.json {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(json);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.ppt {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(ppt);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.html {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(html);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.doc {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(doc);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.image {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(image);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.efile,
+		&.interactive {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-interactive;
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.pedro {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(pedro);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+		&.zip {
+			&:before {
+				display: none;
+			}
+			&:after {
+				.icon-file-type(zip);
+				.controls-icon(15px, 16px);
+				display: inline-block;
+			}
+		}
+	}
+*/
 	&.printer {
 		&:before {
 			.icon-print;
@@ -584,10 +1139,96 @@ svg:not(:root) {
 		}
 	}
 }
+li {
+	&.ico {
+		list-style: none;
+		margin: 0;
+		min-height: 15px; // same as icon
+		padding-bottom: 6px;
+	}
+}
+li,
+div,
+td {
+	&.ico {
+		margin: 0;
+		a[href] {
+			//display: table; this doesn't work of there's a (map) afterwards
+			//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+			padding-left: 20px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro {
+			position: relative;
+			&:before {
+				position: absolute;
+			}
+		}
+	}
+}
+a {
+	/*
+	&.ico {
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro {
+			&:before {
+				//margin: 0 5px -1px 0;
+			}
+		}
+		text-decoration: none;
+	}
+	*/
+	&:hover {
+		text-decoration: underline;
+		span {
+			&.inline {
+				text-decoration-line: underline;
+				.ico {
+					text-decoration-line: underline;
+					text-decoration-color: @eia-blue;
+				}
+			}
+		}
+	}
+}
+div {
+	&.ico {
+		padding-left: 6px;
+		min-height: 15px; // same as icon
+		padding-top: 6px;
+	}
+}
+p {
+	&.ico {
+		&:before {
+			padding: 0;
+			margin: 0 4px -1px 0;
+		}
+	}
+}
+
 button {
 	&.search-submit {
+		//font-size: 0;
 		text-indent: -9999px;
-		font-size: 0;
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
@@ -674,17 +1315,6 @@ button {
 		.controls-icon;
 	}
 }
-
-/*
-.beta {
-	&:before {
-		.icon-interactive;
-		.controls-icon(15px, 16px);
-		//display: inline-block;
-		//margin-bottom: -5px;
-	}
-}
-*/
 
 .ico {
 	&.add-download {
@@ -876,6 +1506,17 @@ ul {
 					}
 				}
 				*/
+				&.faq {
+					&:before {
+						.controls-icon();
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: 0 12px 0 0;
+						position: relative;
+					}
+				}
 				&.radio {
 					&:before {
 						//.icon-radio-spot;
@@ -1361,13 +2002,6 @@ background:  @-inline-svg-url @-bg-defaults;
 	.inline-svg-code(@icon-filter-svg);
 	background: @-inline-svg-url @-bg-defaults;
 }
-/*
-.icon-beta(@fill-color: @eia-blue, @fill-color-lt: tint(@eia-blue, 60%)) {
-@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.94 13.08"><g id="icon-beta"><path d="M8.55,8.5H2.4C1.69,9.81,1.06,11,1.06,11a1.14,1.14,0,0,0-.13.45.46.46,0,0,0,.06.23c.15.26.62.4,1.33.4H8.63c.71,0,1.18-.14,1.33-.4A.46.46,0,0,0,10,11.4a1,1,0,0,0-.14-.46Z" fill="@{fill-color-lt}"/><path d="M10.3,10.68,7,4.61V1.86l.14,0a.76.76,0,0,0,.45-.18.24.24,0,0,0,.06-.09A2.38,2.38,0,0,0,7.75.77.27.27,0,0,0,7.49.5h-4a.27.27,0,0,0-.27.27,2.69,2.69,0,0,0,.12.79.47.47,0,0,0,.06.09.78.78,0,0,0,.45.18l.15,0V4.61L.71,10.67a1.25,1.25,0,0,0-.08,1.19q.37.66,1.77.66H8.61q1.39,0,1.77-.66A1.25,1.25,0,0,0,10.3,10.68Zm-.38.92c-.14.25-.61.39-1.31.39H2.4c-.7,0-1.17-.14-1.31-.39A.56.56,0,0,1,1,11.26H2.61A.26.26,0,0,0,2.87,11a.26.26,0,0,0-.26-.26H1.27l.6-1.1H3.43a.27.27,0,0,0,0-.53H2.16l.55-1H4.36a.26.26,0,0,0,.26-.26.26.26,0,0,0-.26-.26H3l.62-1.14H5.19a.27.27,0,0,0,.27-.26.26.26,0,0,0-.27-.26H3.91L4.52,4.8a.28.28,0,0,0,0-.12V1.82s0,0,0,0A.58.58,0,0,0,4,1.32l-.15,0a1.64,1.64,0,0,1,0-.25H7.21a1.64,1.64,0,0,1,0,.25L7,1.32a.59.59,0,0,0-.58.47V4.68a.27.27,0,0,0,0,.12l3.37,6.14A.8.8,0,0,1,9.92,11.6Z" fill="@{fill-color}"/></g></svg>';
-.inline-svg-code(@icon-filter-svg);
-background: @-inline-svg-url @-bg-defaults;
-}
-*/
 .icon-interactive(@fill-color: @eia-blue, @fill-color-lt: tint(@eia-blue, 40%)) {
 	@icon-filter-svg: ~'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14"><g id="icon-interactive"><path d="M4.11,3.85c-.1-.09-.18-.05-.18.09v7.15c0,.13.08.18.19.1l1.47-1.14a.18.18,0,0,1,.29.07L7.5,13.57a.24.24,0,0,0,.32.12l1.33-.62a.24.24,0,0,0,.11-.32L7.64,9.29A.17.17,0,0,1,7.77,9l1.78-.39c.13,0,.15-.11,0-.2Z" fill="@{fill-color}"/><path d="M4.18,2.43a.35.35,0,0,1-.35-.34V.63A.35.35,0,0,1,4.18.29a.34.34,0,0,1,.34.34V2.09A.34.34,0,0,1,4.18,2.43Z" fill="@{fill-color-lt}"/><path d="M6,3a.39.39,0,0,1-.25-.1.36.36,0,0,1,0-.49l1-1a.35.35,0,0,1,.49.49l-1,1A.39.39,0,0,1,6,3Z" fill="@{fill-color-lt}"/><path d="M7.46,4.73H6a.34.34,0,0,1-.34-.34A.35.35,0,0,1,6,4H7.46a.35.35,0,0,1,.34.35A.34.34,0,0,1,7.46,4.73Z" fill="@{fill-color-lt}"/><path d="M2.5,3a.39.39,0,0,1-.25-.1l-1-1a.35.35,0,0,1,.49-.49l1,1a.34.34,0,0,1,0,.49A.37.37,0,0,1,2.5,3Z" fill="@{fill-color-lt}"/><path d="M2.13,4.63H.68a.35.35,0,0,1-.35-.34.35.35,0,0,1,.35-.35H2.13a.35.35,0,0,1,.35.35A.35.35,0,0,1,2.13,4.63Z" fill="@{fill-color-lt}"/><path d="M1.81,7.45a.32.32,0,0,1-.24-.11.33.33,0,0,1,0-.48l1-1a.33.33,0,0,1,.48,0,.34.34,0,0,1,0,.49l-1,1A.32.32,0,0,1,1.81,7.45Z" fill="@{fill-color-lt}"/></g></svg>';
 	.inline-svg-code(@icon-filter-svg);

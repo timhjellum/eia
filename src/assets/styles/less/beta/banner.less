@@ -1,7 +1,8 @@
 @media (min-width: 1px) {
 	header {
 		.logo-beta {
-			background: url(https://www.eia.gov/global/images/logos/beta_logo.png) no-repeat top left;
+			background: url(https://www.eia.gov/global/images/logos/beta_logo.png)
+				no-repeat top left;
 			//padding: 0;
 			//margin: 0 140px 0 12px;
 			width: 321px;
@@ -19,14 +20,11 @@
 				background-size: 100% 100%;
 				transition: all 0.3s ease-in-out;
 			}
-		} 
+		}
 	}
 	.l-body-wrapper {
 		&.l-full-page {
 			header {
-				//.navigation {
-				//	a {
-				//&.logo-beta {
 				.logo-beta {
 					height: 50px;
 					width: 176px;
@@ -35,104 +33,72 @@
 					background-size: 100% 100%;
 					transition: all 0.3s ease-in-out;
 				}
-				//}
-				//} 
 			}
 			.social-fixed {
 				display: none;
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	  .fblink_give {
+	.secondary-alt {
+		span {
+			&.toggle-feedback-button {
+				color: #0096d7;
+				text-decoration: none;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	/*
+	.fblink_give {
 		width: 130px;
 		height: 28px;
 		text-indent: -99999px;
 		background: url(/global/images/btns/give_feedback_btn_off.png) no-repeat;
 		margin: 1px 0 0 0;
 		cursor: pointer;
-	  }
-	  .fblink_give:hover {
+	}
+	.fblink_give:hover {
 		background: url(/global/images/btns/give_feedback_btn.png) no-repeat;
-	  }
-	  #secondary {
-		color: #fff;
-		padding: 10px 35px;
-		margin-top: 1px;
-	  }
-	  /*
-	  .secondary {
-		color: #fff;
-		padding: 0;
-		margin: 0;
-	
-	  }
-	  */
-	  #pageslide-slide-wrap {
+	}
+	#pageslide-slide-wrap {
 		background-color: #003851;
-	  }
+	}
 
-
-
-
-
-
-
-
-
-
-
-  #pageslide-content a {
-	font-size: 12px;
-	padding: 20px;
-  }
-  .pageslide-close {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 10px !important;
-	border: 1px solid #C60;
-  }
-  .fblink {
-	color: #fff;
-	display: block;
-	width: 65px;
-	height: 19px;
-	background-color: #003851;
-	font-size: 15px;
-	margin: 1px 0px 0px 0px;
-	padding: 4px 10px 7px 10px;
-	cursor: pointer;
-  }
-  /*
-  .fblink_give {
-	  width:130px;
-	  height:28px;
-	  text-indent:-99999px;
-	  background: url(/global/images/btns/give_feedback_btn_off.png) no-repeat;
-	  margin:1px 0px 0px 0px;
-	  cursor:pointer;
-  }
-  .fblink_give:hover {
-	  background: url(/global/images/btns/give_feedback_btn.png) no-repeat;
-  }
-  */
-  .fblink_hide {
-	width: 130;
-	height: 28px;
-	text-indent: -99999px;
-	background: url(/global/images/btns/hide_feedback_btn_off.png) no-repeat;
-	margin: 1px 0px 0px 0px;
-	cursor: pointer;
-  }
-  .fblink_hide:hover {
-	background: url(/global/images/btns/hide_feedback_btn.png) no-repeat;
-  }
+	#pageslide-content a {
+		font-size: 12px;
+		padding: 20px;
+	}
+	.pageslide-close {
+		font-size: 12px;
+		font-weight: bold;
+		padding: 10px !important;
+		border: 1px solid #c60;
+	}
+	.fblink {
+		color: #fff;
+		display: block;
+		width: 65px;
+		height: 19px;
+		background-color: #003851;
+		font-size: 15px;
+		margin: 1px 0px 0px 0px;
+		padding: 4px 10px 7px 10px;
+		cursor: pointer;
+	}
+	.fblink_hide {
+		width: 130;
+		height: 28px;
+		text-indent: -99999px;
+		background: url(/global/images/btns/hide_feedback_btn_off.png) no-repeat;
+		margin: 1px 0px 0px 0px;
+		cursor: pointer;
+	}
+	.fblink_hide:hover {
+		background: url(/global/images/btns/hide_feedback_btn.png) no-repeat;
+	}
 	#feedcomments {
 		display: block;
 		overflow: auto;
@@ -177,36 +143,9 @@
 			margin-bottom: 1em;
 		}
 	}
-  
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	  .beta-banner {
+  */
+
+	.beta-banner {
 		background-color: #e8cccf;
 		border-top: 3px solid #a33340;
 		border-bottom: 3px solid #a33340;
@@ -214,20 +153,34 @@
 		margin: 0;
 		display: table;
 		box-sizing: border-box;
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+			color: #333;
+			font-weight: normal;
+			color: #a33340;
+			font-size: 18px;
+			margin-bottom: 6px;
+			line-height: 1.3em;
+			span {
+				&.toggle-feedback-button {
+					color: #a33340;
+					text-decoration: underline;
+					cursor: pointer;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			a {
+				color: #a33340;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
-	.beta-banner p {
-		font-family: Arial, Helvetica, sans-serif;
-		color: #333;
-		font-weight: normal;
-		color: #a33340;
-		font-size: 18px;
-		margin-bottom: 6px;
-		line-height: 1.3em;
-	}
-	.beta-banner p a {
-		color: #a33340;
-		text-decoration: underline;
-	}
+	/*
 	.toggle-feedback-button {
 		width: 100%;
 		background-color: #dff2fB;
@@ -257,26 +210,6 @@
 		display: inline-block;
 		margin: 0 4px 0 0
 	}
-	
-	
-	
-
-
-	/*
-	.link_hide .show-feedback {
-		display: none;
-	}
-	.link_hide .hide-feedback {
-		display: inline-block;
-	}
-	.link_show .show-feedback {
-		display: inline-block;
-	}
-	.link_show .hide-feedback {
-		display: none;
-	}
-	*/
-
 	.l-row {
 		width: 100%;
 		box-sizing: border-box;
@@ -366,21 +299,10 @@
 			margin: 0 0 1em;
 		}
 	}
-	/*
-	.submit_btn {
-		background: url(/global/images/btns/submit.png) no-repeat center left;
-		cursor: pointer;
-		width: 56px;
-		height: 20px;
-		border: none;
-		text-indent: -99999px;
-	}
-	.submit_btn:hover {
-		background: url(/global/images/btns/submit_over.png) no-repeat center left;
-	}
-	*/
+*/
 }
 @media (min-width: 956px) {
+	/*
 	.l-row.header.l-full-width-col,
 	.l-row.header {
 		padding: 0;
@@ -391,4 +313,5 @@
 	.l-row.l-two-col-right-wide>.l-col:last-child {
 		width: 56.333%;
 	}
+	*/
 }

@@ -1,0 +1,1186 @@
+.l {text-align: left; }
+.c {text-align: center;}
+.r {text-align: right; }
+.d {text-align: right; }
+.j {text-align: justify; }
+.t {vertical-align: top; }
+.m {vertical-align: middle; }
+.b {vertical-align: bottom; }
+TD, TH {vertical-align: top; border-bottom: none; }
+.stacked_cell{padding: 0; } 
+
+.AfterCaption{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.Batch{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+	border-style: solid;
+	border-color: #333333;border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;	border-collapse: separate;
+	border-spacing: 0px;
+}
+.BeforeCaption{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.body{
+	font-family: arial,helvetica,sans-serif;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	margin-right: 8px;
+	margin-left: 8px;
+}
+.BodyDate{
+	font-family: arial,helvetica,sans-serif;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+}
+.ByContentFolder{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.Byline{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+}
+.BylineContainer{
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+border-width: 0px;
+	border-style: solid;
+	border-color: #333333;	border-spacing: 1px;
+	width: 100%;
+}
+.Caption{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #189BD7;
+	background-color: transparent;
+	font-weight: bold;
+}
+.ContentFolder{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.ContentItem{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.ContentProcLabel{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	list-style-type: decimal;
+}
+.ContentProcName{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	list-style-type: decimal;
+}
+.Contents{
+	font-family: arial,helvetica,sans-serif;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	margin-right: 8px;
+	margin-left: 8px;
+	list-style-type: decimal;
+}
+.ContentsDate{
+	font-family: arial,helvetica,sans-serif;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+}
+.ContentTitle{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+.Continued{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-spacing: 0px;
+	width: 100%;
+}
+.data{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	vertical-align: def;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #bababa;
+}
+	
+.dataemphasis{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.dataemphasisfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.dataempty{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+}
+.datafixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+}
+.datastrong{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.datastrongfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.Date{
+	color: #333333;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+}
+.Document{
+	font-style: normal;
+	font-weight: normal;
+}
+.branch a:link{
+	font-family: arial,helvetica,sans-serif;
+	color: #189BD7;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+}
+.branch a:visited{
+	font-family: arial,helvetica,sans-serif;
+	color: #189BD7;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+}
+.branch a:active{
+	font-family: arial,helvetica,sans-serif;
+	color: #189BD7;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+}
+.ErrorContent{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.ErrorContentFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.ExtendedPage{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	padding-top: 2pt;
+	padding-right: 2pt;
+	padding-bottom: 2pt;
+	padding-left: 2pt;
+border-width: 1pt;
+	border-style: solid;
+	border-color: #333333;}
+.FatalContent{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.FatalContentFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.FolderAction{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.footer{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	vertical-align: top;
+	text-align: left;
+}
+.footeremphasis{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	vertical-align: top;
+	text-align: left;
+}
+.footeremphasisfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: left;
+}
+.footerempty{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	vertical-align: top;
+	text-align: left;
+}
+.footerfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	vertical-align: top;
+	text-align: left;
+}
+.footerstrong{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: left;
+}
+.footerstrongfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: left;
+}
+.Frame{
+	font-style: normal;
+	font-weight: normal;
+}
+.Graph{
+	font-family: arial,helvetica,sans-serif;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;	border-collapse: collapse;
+	border-spacing: 0px;
+}
+.header{
+	background-color: transparent;
+  border-bottom: 1px solid #bababa;
+  border-collapse: collapse;
+  border-left: 1px solid #bababa;
+  border-top: 1px solid #bababa !important;
+  color: #333333;
+  font-family: arial,helvetica,helv;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  vertical-align: bottom;
+}
+.header:first-child{
+	border-left: none;
+}
+.r.header:first-child, .c.header:first-child {
+	text-align: left;
+}
+.header_blue{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: transparent;
+	font-weight: bold;
+	vertical-align: bottom;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #189BD7;
+	border-collapse: collapse;
+}
+.table thead tr:last-child th.header {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #189BD7;
+}
+.table thead tr th[type=num] {
+	text-align: right;
+}
+.table thead tr th[type=char] {
+	text-align: left;
+}
+.headerEmphasis{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.headerEmphasisFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.headerEmpty{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.headerFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+}
+.headersandfooters{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.headerStrong{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.headerStrongFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.Index{
+	color: #333333;
+	font-style: normal;
+	font-weight: normal;
+}
+.IndexAction{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.IndexItem{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.IndexProcName{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	list-style-type: decimal;
+}
+.IndexTitle{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+.LayoutContainer{
+	font-family: arial,helvetica,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+/*	border-width: 0px;
+	border-style: solid;
+	border-color: #333333;
+	border-spacing: 30px;*/
+	border: none;
+}
+.LayoutRegion{
+	font-family: arial,helvetica,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+/*
+	border-width: 0px;
+	border-style: solid;
+	border-color: #333333;
+	border-spacing: 30px;*/
+	border: none;
+}
+.List{
+	font-family: arial,helvetica,sans-serif;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: disc;
+	width: 100%;
+}
+.List10{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List2{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: circle;
+	width: 100%;
+}
+.List3{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List4{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List5{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List6{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List7{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List8{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.List9{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	list-style-type: square;
+	width: 100%;
+}
+.ListItem{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem10{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem2{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem3{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem4{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem5{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem6{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem7{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem8{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.ListItem9{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.NoteBanner{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+}
+.notecontent{
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+	background-color: transparent !important;
+	color: #333333; !important;
+	border-top: 1px solid #189BD7;
+	border-bottom: 1px solid #BABABA;
+}
+/* Added for SAS version 9.4 Prior to 9.4 this was notecontent*/
+.linecontent{
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+	background-color: transparent !important;
+	color: #333333; !important;
+	border-top: 1px solid #189BD7;
+	border-bottom: 1px solid #BABABA;
+}
+.notecontentfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.Output{
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+/*	border-style: solid;
+	border-color: #333333;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-collapse: separate;
+	border-spacing: 0px;*/
+	border: none;
+}
+.PageNo{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: right;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-spacing: 0px;
+}
+.Pages{
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	margin-right: 8px;
+	margin-left: 8px;
+	list-style-type: decimal;
+}
+.PagesDate{
+	color: #333333;
+	font-style: normal;
+	font-weight: normal;
+	width: 100%;
+}
+.PagesItem{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	list-style-type: none;
+}
+.PagesProcLabel{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	list-style-type: decimal;
+}
+.PagesProcName{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+	list-style-type: decimal;
+}
+.PagesTitle{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+.Paragraph{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	width: 100%;
+}
+.Parskip{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-spacing: 0px;
+}
+.PrePage{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.ProcTitle{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: transparent;
+	font-weight: bold;
+	text-align: left;
+}
+.ProcTitleFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+.rowfooter{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	padding-top: 12px;
+border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #189BD7;}
+.rowfooteremphasis{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.rowfooteremphasisfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.rowfooterempty{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	padding-top: 12px;
+border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #189BD7;}
+.rowfooterfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+}
+.rowfooterstrong{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.rowfooterstrongfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.rowheader{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #bababa;	border-collapse: collapse;
+}
+.rowheaderemphasis{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.rowheaderemphasisfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.rowheaderempty{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.rowheaderfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: normal;
+}
+.rowheaderstrong{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.rowheaderstrongfixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.systemfooter, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9, .systemfooter10{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.systemtitle{
+	font-family: arial,helvetica,helv;
+	font-size: 14pt;
+	color: #189BD7;
+	background-color: transparent;
+	font-weight: bold;
+	text-align: left;
+	font-style: normal;
+}
+.systemtitle10{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle2{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: normal;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle3{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle4{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle5{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle6{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle7{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle8{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systemtitle9{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	text-align: left;
+	font-weight: bold;
+}
+.systitleandfootercontainer{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #333333;	border-spacing: 0px;
+	width: 100%;
+	margin-bottom: 0px;
+}
+.table{
+	font-family: arial,helvetica,sans-serif;
+	/*background-color: #FFFFFF;*/
+	font-style: normal;
+	font-weight: normal;
+	/*border-style: hidden;*/
+	/*border-left: hidden;
+	border-right: hidden;*/
+	border-spacing: 0px;
+	border-collapse: collapse;
+/*	border-bottom-style: none;*/
+}
+.top_stacked_value{
+	font-family: arial,helvetica,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	padding-bottom: 1px;
+}
+.middle_stacked_value{
+	font-family: arial,helvetica,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.bottom_stacked_value{
+	font-family: arial,helvetica,sans-serif;
+	color: #333333;
+	background-color: transparent;
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 1px;
+}
+.titleandnotecontainer{
+	font-style: normal;
+	font-weight: normal;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+border-width: 0px;
+	border-style: solid;
+	border-color: #333333;	border-spacing: 1px;
+	width: 100%;
+}
+.titlesandfooters{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	color: #333333;
+	font-style: italic;
+	font-weight: bold;
+}
+.UserText{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.WarnContent{
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.WarnContentFixed{
+	font-family: arial,helvetica,helv;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.branch {
+	display: inline-block;
+}
+.branch table {
+	float: left;
+	width: 100%;
+}
+.branch th[scope="colgroup"] {
+	text-align: left;
+}
+caption p.systemtitle {
+	margin-bottom: 4px;
+}
+caption p.systemtitle2 {
+	margin-top: 0px;
+}
+table.systitleandfootercontainer ~ table.systitleandfootercontainer {
+	margin-top: 0px;
+	margin-bottom: 14px;
+}
+.c.header {
+	text-align: left !important;
+}
+tbody tr td:first-child.r.data {
+	text-align: left !important;
+}
+tbody tr td:first-child.data {
+	padding-right: 24px;
+}
+tbody tr td:first-child.data a {
+	float: right;
+	/*background: url("/global/images/icons/chart12.png") no-repeat scroll left -4px transparent !important;*/
+	background: url("/global/images/icons/sprites/icon-sprites2.png") no-repeat scroll -2px -6px transparent !important;
+	padding: 0px;
+	text-indent: 26px;
+	overflow: hidden;
+	width: 20px;
+	/*width: 60px;*/
+	margin-right: -18px;
+	cursor: pointer;
+}
+tbody tr td:first-child.data a:hover {
+	background: url("/global/images/icons/sprites/icon-sprites2.png") no-repeat scroll -32px -6px transparent !important;
+}
+tbody tr td.data[style*="background"] {
+	background-color: transparent !important;
+	/*color: #333333; !important;*/
+	border-top: 1px solid #189BD7;
+	border-bottom: 1px solid #BABABA;
+	font-weight: bold;
+}
+.table tbody tr:first-child td {
+	border-top: none;
+}
+.table tbody tr:last-child td {
+	border-bottom: 2px solid #189bd7;
+}
+p.graphLink {
+  margin: 0 !important;
+  padding-right: 10px;
+}
+p.graphLink a, p.graphLink a:link {
+	float: right;
+	font-weight: bold;
+}
+p.graphLink a span{
+	width: 22px;
+	margin-right: 2px;
+	display: inline-block;
+	float: left;
+	background: url("/global/images/icons/sprites/icon-sprites2.png") no-repeat scroll -2px -4px transparent !important;
+}
+p.graphLink a:hover span{
+	background: url("/global/images/icons/sprites/icon-sprites2.png") no-repeat scroll -32px -4px transparent !important;
+}
+p.graphLink~.table {
+	margin-top: 4px;
+}

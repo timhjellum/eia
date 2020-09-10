@@ -1,6 +1,6 @@
 html {
-	-ms-text-size-adjust: 100%; 
-	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -9,30 +9,27 @@ html {
 	.font;
 	color: @eia-dark-grey;
 	a {
-		color:@eia-blue;
+		color: @eia-blue;
 		text-decoration: none;
 		&:link,
 		&:active,
 		&:visited {
-			color:@eia-blue;
+			color: @eia-blue;
 			text-decoration: none;
 		}
-		&:hover{
+		&:hover {
 			text-decoration: underline;
-			color:@eia-blue;
+			color: @eia-blue;
 		}
 	}
-	
+
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 	/* ***** ***** ***** *****   anchors   ***** ***** ***** ***** */
 	/* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 
-	
-
 	a[name] {
 		vertical-align: top;
 	}
-
 
 	a[href*="eia.gov"],
 	.global-nav a[href*=".com"],
@@ -81,15 +78,15 @@ body {
 	width: 100%;
 	height: 100%;
 }
-.print {
+.print-only {
 	display: none;
 }
 .top {
 	.font;
-	font-size: 0.750rem; // 12 pixels;
+	font-size: 0.75rem; // 12 pixels;
 	text-align: left;
 	.bold;
-	display:flex;
+	display: flex;
 	align-items: flex-end;
 	margin: 2em 0 0 0;
 	padding: 0 0 0 0;
@@ -121,36 +118,34 @@ body {
 	}
 }
 
-body, 
-div, 
+body,
+div,
 li,
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-i, 
-label, 
-legend, 
-input, 
-select, 
-p, 
-blockquote, 
-th, 
-td, 
-ul, 
-ol, 
-form, 
-fieldset, 
-table, 
-embed, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+label,
+legend,
+input,
+select,
+p,
+blockquote,
+th,
+td,
+ul,
+ol,
+form,
+fieldset,
+table,
+embed,
 object {
-padding: 0;
-margin: 0;
+	padding: 0;
+	margin: 0;
 }
-
-
 
 .filtered-term {
 	.font;
@@ -161,76 +156,71 @@ margin: 0;
 	line-height: 1.5;
 	margin-bottom: 13px;
 	font-size: 1.875rem; // 30 pixels
-	color: @eia-dark-grey;  
+	color: @eia-dark-grey;
 }
 .no-wrap {
 	white-space: nowrap;
 }
 
-fieldset,img,abbr {border: 0;display: block}
-address,cite,code {font-weight: normal;font-style: normal}
-em {font-style: italic}
-i {font-style: normal}
-//.print {
-//	display: none;
-//}
-
-strong {font-weight: 700}
+fieldset,
+img,
+abbr {
+	border: 0;
+	display: block;
+}
+address,
+cite,
+code {
+	font-weight: normal;
+	font-style: normal;
+}
+em {
+	font-style: italic;
+}
+i {
+	font-style: normal;
+}
+strong {
+	font-weight: 700;
+}
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** ***** ***** base styles ***** ***** ***** ***** */
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
-
-.hide {display: none}
+.print-version,
+.hide {
+	display: none;
+}
 
 /**
 * 1. Add the correct box sizing in Firefox.
 * 2. Show the overflow in Edge and IE.
 */
 hr {
-//	box-sizing: content-box; /* 1 */
-//	height: 0; /* 1 */
-overflow: visible; /* 2 */
-background: shade(white, 17%);
-color: shade(white, 17%);
-clear: both;
-float: none;
-width: 100%;
-height: 1px;
-margin: 1.45em 0;
-border: none;
+	//	box-sizing: content-box; /* 1 */
+	//	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+	background: shade(white, 17%);
+	color: shade(white, 17%);
+	clear: both;
+	float: none;
+	width: 100%;
+	height: 1px;
+	margin: 1.45em 0;
+	border: none;
 	&.secondary {
 		background: @eia-blue;
 		color: @eia-blue;
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .no-border {
-border-color: transparent;
-border-top: none;
-border-right: none;
-border-bottom: none !important;
-border-left: none;
+	border-color: transparent;
+	border-top: none;
+	border-right: none;
+	border-bottom: none !important;
+	border-left: none;
 }
-
-
-
-
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** ***** *** force line-break ** ***** ***** ***** */
@@ -294,14 +284,14 @@ span {
 	background-size: cover;
 	&.frame {
 		padding: 4px;
-    	border: 1px solid #dadada;
-    //float: left;
-    	margin: 0px 18px 10px 0px;
+		border: 1px solid #dadada;
+		//float: left;
+		margin: 0px 18px 10px 0px;
 	}
 }
 .responsive-container {
-//	margin:0;
-//	display: inline-block;
+	//	margin:0;
+	//	display: inline-block;
 	.font;
 	color: #858585;
 	font-size: 12px;
@@ -317,9 +307,96 @@ span {
 	}
 }
 
+/* this should go to base */
+/* this should go to base */
+/* this should go to base */
+.formats {
+	.italic;
+	a {
+		display: inline-block;
+		.ico {
+			&:before {
+				display: inline-block;
+			}
+			span {
+				margin: 0 0 0 2px;
+			}
+		}
+	}
+}
 
+.release-schedule,
+.source {
+	.italic;
+}
+.normal {
+	font-style: normal;
+	color: @eia-dark-grey;
+}
+.release-date {
+	.italic;
+	color: #999;
+}
 
-
+/*
+	h1 {
+		font-size: 1.625rem; // 20pt 26px
+		color: @eia-dark-grey;
+	} // 26px finalized
+	h2 {
+		font-size: 1.125rem;
+		color: @eia-dark-grey;
+	} //0.75rem; } // finalized
+	h3 {
+		font-size: 0.9375rem;
+		color: @eia-dark-grey;
+	} // finalized
+	h4 {
+		font-size: 0.9375rem;
+		color: @eia-dark-grey;
+	} // finalized
+	h5 {
+		font-size: 0.8rem;
+		color: @eia-dark-grey;
+	} // finalized
+	h6 {
+		font-size: 0.8rem;
+		color: @eia-dark-grey;
+	} // finalized
+	p {
+		.font;
+		color: @eia-dark-grey;
+		font-size: 0.875rem;
+		line-height: 1.4;
+		margin: 0 0 1em;
+		&.foot {
+			.bold;
+			margin-top: 1em;
+		}
+	}
+	*/
+ul {
+	margin: 0;
+	padding: 0;
+	li {
+		.font;
+		margin: 0;
+		padding: 0;
+		font-size: 0.875rem; // * 1.20%;
+		line-height: 1.4;
+	}
+}
+ol {
+	padding: 0;
+	margin: 6px 0 1em 16px;
+	li {
+		.font;
+		padding: 0;
+		margin: 0 0 5px 0;
+		font-size: 0.875rem; // * 1.20%;
+		line-height: 1.4;
+	}
+}
 
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** ***** *****   footnotes ***** ***** ***** ***** */
@@ -340,8 +417,9 @@ p {
 	}
 	&.source {
 		font-size: 0.688rem; // 11 pixels
-		.italic;
-		color: #7d7d7d;
+		//.italic;
+		color: #999;
+		//color: #7d7d7d;
 	}
 }
 /*
@@ -426,27 +504,39 @@ ul,ol {
 }
 end accessibility */
 
-
-	
-
-
-
-
-h1 { font-size: 1.625rem; color: @eia-dark-grey; } // 26px finalized
-h2 { font-size: 1.125rem; color: @eia-dark-grey; } //0.75rem; } // finalized
-h3 { font-size: .9375rem; color: @eia-dark-grey; } // finalized
-h4 { font-size: .9375rem; color: @eia-dark-grey; } // finalized
-h5 { font-size: .8rem; color: @eia-dark-grey; } // finalized
-h6 { font-size: .8rem; color: @eia-dark-grey; } // finalized
+h1 {
+	font-size: 1.625rem; // 20pt 26px
+	color: @eia-dark-grey;
+} // 26px finalized
+h2 {
+	font-size: 1.125rem;
+	color: @eia-dark-grey;
+} //0.75rem; } // finalized
+h3 {
+	font-size: 0.9375rem;
+	color: @eia-dark-grey;
+} // finalized
+h4 {
+	font-size: 0.9375rem;
+	color: @eia-dark-grey;
+} // finalized
+h5 {
+	font-size: 0.8rem;
+	color: @eia-dark-grey;
+} // finalized
+h6 {
+	font-size: 0.8rem;
+	color: @eia-dark-grey;
+} // finalized
 p {
 	.font;
 	color: @eia-dark-grey;
 	font-size: 0.875rem;
 	line-height: 1.4;
-	margin: 0 0 1.0em;
+	margin: 0 0 1em;
 	&.foot {
 		.bold;
-		margin-top: 1.0em;
+		margin-top: 1em;
 	}
 }
 ul {
@@ -456,21 +546,11 @@ ul {
 	li {
 		margin: 0;
 		padding: 0;
-		font-size: 0.875rem; // * 1.20%; 
+		font-size: 0.875rem; // * 1.20%;
 		line-height: 1.4;
 		color: @eia-dark-grey;
 	}
 }
-
-
-
-
-
-
-
-
-
-
 
 .pipe {
 	padding: 0 8px;
@@ -481,17 +561,6 @@ ul {
 	color: #d8d8d8;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
 /* ***** ***** *****  browser compatability  ***** ***** ***** */
 /* ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** */
@@ -501,7 +570,7 @@ footer,
 header,
 nav,
 section {
-display: block;
+	display: block;
 }
 
 /* Grouping content
@@ -514,8 +583,9 @@ display: block;
 
 figcaption,
 figure,
-main { /* 1 */
-display: block;
+main {
+	/* 1 */
+	display: block;
 }
 
 /**
@@ -523,10 +593,8 @@ display: block;
 */
 
 figure {
-margin: 1em 40px;
+	margin: 1em 40px;
 }
-
-
 
 /**
 * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -534,9 +602,8 @@ margin: 1em 40px;
 */
 
 pre {
-font-family: monospace, 
-monospace; /* 1 */
-font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -548,8 +615,8 @@ font-size: 1em; /* 2 */
 */
 
 a {
-background-color: transparent; /* 1 */
--webkit-text-decoration-skip: objects; /* 2 */
+	background-color: transparent; /* 1 */
+	-webkit-text-decoration-skip: objects; /* 2 */
 }
 
 /**
@@ -562,24 +629,20 @@ and Safari.
 */
 
 abbr[title] {
-border-bottom: none; /* 1 */
-text-decoration: underline; /* 2 */
-text-decoration: underline dotted; /* 2 */
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
 }
 
 /**
 * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
 */
 
-
-
 /**
 * Add the correct font weight in Chrome, 
 Edge, 
 and Safari.
 */
-
-
 
 /**
 * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -589,9 +652,8 @@ and Safari.
 code,
 kbd,
 samp {
-font-family: monospace, 
-monospace; /* 1 */
-font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /**
@@ -599,7 +661,7 @@ font-size: 1em; /* 2 */
 */
 
 dfn {
-font-style: italic;
+	font-style: italic;
 }
 
 /**
@@ -607,8 +669,8 @@ font-style: italic;
 */
 
 mark {
-background-color: #ff0;
-color: black;
+	background-color: #ff0;
+	color: black;
 }
 
 /**
@@ -616,7 +678,7 @@ color: black;
 */
 
 small {
-font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -626,17 +688,17 @@ font-size: 80%;
 
 sub,
 sup {
-font-size: 70%;
-line-height: 1;
-position: relative;
-vertical-align: baseline;
+	font-size: 70%;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-bottom: -0.25em;
+	bottom: -0.25em;
 }
 sup {
-top: -0.5em;
+	top: -0.5em;
 }
 
 /* Embedded content
@@ -648,7 +710,7 @@ top: -0.5em;
 
 audio,
 video {
-display: inline-block;
+	display: inline-block;
 }
 
 /**
@@ -656,8 +718,8 @@ display: inline-block;
 */
 
 audio:not([controls]) {
-display: none;
-height: 0;
+	display: none;
+	height: 0;
 }
 
 /**
@@ -665,16 +727,15 @@ height: 0;
 */
 
 img {
-border-style: none;
-max-width: 100%;
+	border-style: none;
+	max-width: 100%;
 }
-
 
 // 1. Add the correct display in IE 9-.
 // 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
 progress {
-display: inline-block; /* 1 */
-vertical-align: baseline; /* 2 */
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
 }
 
 /* Interactive
@@ -686,7 +747,7 @@ vertical-align: baseline; /* 2 */
 */
 details, /* 1 */
 menu {
-display: block;
+	display: block;
 }
 
 /*
@@ -694,7 +755,7 @@ display: block;
 */
 
 summary {
-display: list-item;
+	display: list-item;
 }
 
 /* Scripting
@@ -705,7 +766,7 @@ display: list-item;
 */
 
 canvas {
-display: inline-block;
+	display: inline-block;
 }
 
 /**
@@ -713,5 +774,5 @@ display: inline-block;
 */
 
 template {
-display: none;
+	display: none;
 }

@@ -1,105 +1,82 @@
-import $ from "jquery";
+import $ from "jquery"
 
 class ScrollTo {
-	constructor() {
-		var reportsPage = $(".l-body-wrapper.ap").length;
-
-		if (reportsPage == 1) {
-			console.log("REPORTS PAGE");
-		} else if (reportsPage == 0) {
-			console.log("NOT A REPORTS PAGE");
-			$('.l-inner-wrapper a[href*="#"]')
-				.not('.l-inner-wrapper [href="#"]')
-				.not('.l-inner-wrapper [href="#0"]')
-				.click(function(event) {
-					//console.log("clicked");
-					if (
-						window.location.pathname.replace(/^\//, "") ===
-							this.pathname.replace(/^\//, "") &&
-						window.location.hostname === this.hostname
-					) {
-						// Figure out element to scroll to
-						var target = $(this.hash);
-						target = target.length
-							? target
-							: $("[name=" + this.hash.slice(1) + "]");
-						// Does a scroll target exist?
-						if (target.length) {
-							// Only prevent default if animation is actually gonna happen
-							event.preventDefault();
-							$("html, body").animate(
-								{
-									scrollTop: target.offset().top - 60
-								},
-								1000,
-								function() {
-									// Callback after animation
-									// Must change focus!
-									var $target = $(target);
-									$target
-										.closest("h3")
-										.next("div")
-										.css("display", "block");
-									$target.focus();
-									if ($target.is(":focus")) {
-										// Checking if the target was focused
-										return false;
-									} else {
-										$target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-										$target.focus(); // Set focus again
-									}
-								}
-							);
-						}
-					}
-				});
-			// old
-			//function scrollToAnchor(pageHash){
-			//    if($('a[name='+pageHash+']:not(.ui-tabs-anchor)').length>0){
-			//        $('html').animate({scrollTop: $('a[name='+pageHash+']').offset().top-50}, 'slow');
-			//        console.log(pageHash + ' offsest: ' + $('a[name='+pageHash+']').offset().top +' page load anchor scroll - 1');
-			//    }
-			//    else if($(window.window.location.hash).length>0){
-			//        $('html').animate({scrollTop: $(window.window.location.hash).offset().top-50}, 'slow');
-			//        console.log($(window.window.location.hash) + ' offsest: ' + $(window.window.location.hash).offset().top +' page load page scroll - 2');
-			//    }
-			//}
-			var windowHash = decodeURI(window.location.hash);
-			// opens accordion when user is navigating to the data page from another page
-			if (windowHash) {
-				//console.log(windowHash);
-				var target = $(windowHash);
-				target = target.length
-					? target
-					: $("[name=" + windowHash.substr(1) + "]");
-				if (target.length) {
-					$("html, body").animate(
-						{
-							scrollTop: target.offset().top - 60
-						},
-						1000,
-						function() {
-							var $target = $(target);
-							$target
-								.closest("h3")
-								.next("div")
-								.css("display", "block");
-							$target.focus();
-							if ($target.is(":focus")) {
-								return false;
-							} else {
-								$target.attr("tabindex", "-1");
-								$target.focus();
-							}
-						}
-					);
-				}
-			}
-			//if (document.referrer.toLowerCase().indexOf('eia.gov') > 0) {
-			//    // if referrer is eia.gov, show below. console.log("referrer is eia");
-			//    $('.l-report-header > .l-col').prepend('<a href="' + document.referrer + '" class="go-back"><span class="ico close"><span>Go Back</span></span></a>');
-			//}
-		}
-	}
+  constructor() {
+    var apPage = $(".l-body-wrapper.ap").length
+    var glossaryPage = $(".l-body-wrapper.glossary").length
+    if (apPage < 1 && glossaryPage < 1) {
+      //console.log("this is NOT an AP or Glossary page")
+      $('.l-inner-wrapper a[href*="#"]')
+        .not('.l-inner-wrapper [href="#"]')
+        .not('.l-inner-wrapper [href="#0"]')
+        .not(".tabs a")
+        .click(function (event) {
+          if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+            var target = $(this.hash)
+            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]")
+            if (target.length) {
+              event.preventDefault()
+              $("html, body").animate(
+                {
+                  scrollTop: target.offset().top - 60
+                },
+                1000,
+                function () {
+                  var $target = $(target)
+                  $target.closest("h3").next("div").css("display", "block")
+                  $target.focus()
+                  if ($target.is(":focus")) {
+                    return false
+                  } else {
+                    $target.attr("tabindex", "-1") // Adding tabindex for elements not focusable
+                    $target.focus() // Set focus again
+                  }
+                }
+              )
+            }
+          }
+        })
+      var windowHash = decodeURI(window.location.hash)
+      //console.log("window hash: " + windowHash)
+      if (windowHash) {
+        var target = $(windowHash)
+        target = target.length ? target : $("[name=" + windowHash.substr(1) + "]")
+        if (target.length) {
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - 60
+            },
+            1000,
+            function () {
+              var $target = $(target)
+              $target.focus()
+              if ($target.is(":focus")) {
+                return false
+              } else {
+                $target.attr("tabindex", "-1")
+                $target.focus()
+              }
+              $target
+                .closest("h3")
+                .click()
+                .accordion({
+                  activate: function (event, ui) {
+                    if (!$.isEmptyObject(ui.newHeader.offset())) {
+                      $("html:not(:animated), body:not(:animated)").animate({ scrollTop: ui.newHeader.offset().top - 50 }, "slow")
+                    }
+                  }
+                })
+              $(".accordion-content").each(function () {
+                if ($(this).css("display") == "block") {
+                  $(".expand-collapse-container .expand").css("display", "none")
+                  $(".expand-collapse-container .collapse").css("display", "block")
+                }
+              })
+            }
+          )
+        }
+      }
+    }
+  }
 }
-export default ScrollTo;
+export default ScrollTo

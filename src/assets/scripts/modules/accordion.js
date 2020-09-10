@@ -1,10 +1,7 @@
 class AccordionModule {
 	constructor() {
-
-		window.onload = function () {
-			setInterval(function () {
-
-
+		window.onload = function() {
+			setInterval(function() {
 				var accItem = document.getElementsByClassName("accordion-item");
 				var accHD = document.getElementsByTagName("h3");
 				var i = [];
@@ -20,13 +17,9 @@ class AccordionModule {
 						this.parentNode.className = "accordion-item open";
 					}
 				}
-				console.log("fire")
+				//console.log("fire")
 			}, 5000);
 		};
-
-
-
-
 	}
 }
 export default AccordionModule;

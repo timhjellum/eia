@@ -1,0 +1,373 @@
+/* ************ ************ ************ */
+// adds a left margin to tab content (must be different than secondary
+/* ************ ************ ************ */
+@media @mobile {
+  .article-alt,
+  .article,
+  .primary-alt,
+  .primary {
+    .tab-content {
+      & > p,
+			& > ul,
+			& > ol,
+			//& > h1,
+			& > h2,
+			& > h3,
+			& > h4,
+			& > h5,
+			//& > h6
+			img {
+        margin: 0;
+      }
+    }
+  }
+
+  .article-alt,
+  .article,
+  .primary-alt,
+  .primary,
+  .secondary-alt,
+  .secondary {
+    margin-bottom: 2em;
+    width: 100%;
+
+    /* ************ ************ ************ */
+    // not sure what this does below
+    /* ************ ************ ************ */
+    //li {
+    // move to ico???
+    /*
+			.ico {
+				margin-right: 8px;
+				display: inline-block;
+				border: 3px solid red;
+			}
+			*/
+    //}
+
+    &.no-sub-navigation {
+      margin-top: 2em;
+    }
+  }
+
+  .primary-alt,
+  .primary,
+  .secondary-alt,
+  .secondary {
+    & > ul {
+      li {
+        list-style: none;
+        & > ul {
+          li {
+            margin: 3px 0 0 17px;
+            list-style: disc;
+          }
+        }
+      }
+    }
+  }
+  /* all list styles */
+  /* all list styles */
+  /* all list styles */
+  /* all list styles */
+  ul {
+    padding: 0;
+    margin: 0;
+    &.labeled-list {
+      .label {
+        display: inline-block;
+        width: 90px;
+        + .ico {
+          margin-right: 12px;
+        }
+      }
+    }
+    &.bullet {
+      margin: 5px 0 0 22px;
+      li {
+        margin-bottom: 5px;
+        list-style: disc;
+        &.list-item {
+          list-style: none;
+          ul {
+            list-style: none;
+            li {
+              list-style: none;
+              margin-left: 0; // approved
+            }
+          }
+        }
+      }
+    }
+    /* second level */
+    /* second level */
+    /* second level */
+    ul {
+      &.bullet {
+        margin-left: 0;
+        li {
+          margin-bottom: 5px;
+          list-style: disc;
+        }
+      }
+      li {
+        margin: 3px 0 0 17px;
+        list-style: disc;
+        &.list-seperator {
+          border-top: 1px solid silver;
+          margin-top: 1.2em;
+          padding-top: 0.5em;
+        }
+        &.list-seperator-alt {
+          border-top: 1px dashed silver;
+          margin-top: 1.2em;
+          padding-top: 0.5em;
+        }
+      }
+    }
+    ol {
+      padding: 14px 0;
+      margin: 0 0 0 22px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    li {
+      margin: 0;
+      &.list-seperator {
+        border-top: 1px solid silver;
+        margin-top: 1.2em;
+        padding-top: 0.5em;
+      }
+      &.list-seperator-alt {
+        border-top: 1px dashed silver;
+        margin-top: 1.2em;
+        padding-top: 0.5em;
+      }
+      //ul {
+      //padding: 0;
+      //margin: 0;
+      //}
+      &.hide-bullet {
+        list-style: none;
+      }
+      //}
+      &.list-item {
+        list-style: none;
+        ul {
+          padding: 0;
+          padding-left: 22px;
+          margin: 0;
+          display: block;
+          li {
+            padding: 0;
+            margin: 3px 0 0 0;
+            //margin: 3px 0 0 17px;
+            list-style: none;
+            &:first-child {
+              list-style: disc;
+            }
+          }
+          &:last-child {
+            margin-bottom: 12px;
+          }
+        }
+      }
+      // creates vertical space to indicate a new list
+      &.sub-list {
+        & > li {
+          margin-bottom: 5px;
+          list-style: none;
+          &.sub-list {
+            ul {
+              & > li {
+                margin-bottom: 5px;
+                list-style: none;
+              }
+            }
+          }
+        }
+        ul {
+          padding: 0;
+          margin: 0 0 12px 0;
+          &.bullet {
+            list-style: disc;
+            margin-left: 22px;
+            margin-top: 5px;
+            & > li {
+              margin-bottom: 5px;
+              list-style: disc;
+              &.sub-list {
+                ul {
+                  & > li {
+                    margin-bottom: 5px;
+                    list-style: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.list-item {
+          //list-style: none;
+          & > ul {
+            padding: 0 0 0 22px;
+          }
+        }
+      }
+      &.list-spacer {
+        //margin-top: 1em;
+        //margin-bottom: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        ul {
+          margin-top: 1em;
+          margin-bottom: 1em;
+          padding: 0;
+          display: block;
+          &:first-child {
+            margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &.indent {
+        margin-left: 35px;
+        &.indent {
+          margin-left: 70px;
+          &.indent {
+            margin-left: 100px;
+          }
+        }
+      }
+      &.head,
+      &.sub-head {
+        .bold;
+        a {
+          color: @eia-blue;
+          text-decoration: none;
+          //.bold;
+          &:hover {
+            text-decoration: underline;
+            color: @eia-blue;
+          }
+          &.f-more {
+            &:after {
+              content: "\00a0\203A";
+            }
+          }
+        }
+        h3 {
+          a {
+            font-weight: 300;
+            &:hover {
+              font-weight: 300;
+            }
+          }
+        }
+      }
+      &.foot {
+        margin-top: 10px;
+        a {
+          .bold;
+          color: @eia-blue;
+          &:after {
+            content: "\00a0\203A";
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      a {
+        &.active {
+          text-decoration: none;
+          color: @eia-blue;
+          .bold;
+        }
+        em {
+          .italic;
+          color: @eia-dark-grey;
+        }
+        /* homepage modules */
+        span {
+          &.date {
+            margin-right: 12px;
+            color: @eia-dark-grey;
+            display: inline-block;
+            text-decoration: none;
+          }
+        }
+        /* homepage modules */
+
+        span {
+          &.date {
+            font-style: normal;
+            color: @eia-dark-grey;
+
+            text-decoration: none;
+            display: table-cell;
+            padding-right: 12px;
+          }
+        }
+        &:hover {
+          span {
+            &.date {
+              text-decoration-line: underline;
+              text-decoration-color: underline solid white;
+            }
+          }
+          em {
+            text-decoration-line: underline;
+            text-decoration-color: underline solid white;
+          }
+        }
+
+        /* homepage modules */
+        span {
+          &.link-label {
+            display: table-cell;
+          }
+        }
+        span {
+          &.link-label {
+            margin-right: 12px;
+          }
+        }
+        &.link-label {
+          em {
+            color: @eia-dark-grey;
+          }
+          span {
+            color: @eia-dark-grey;
+          }
+          &:hover {
+            em {
+              text-decoration-line: underline;
+              text-decoration-color: @eia-white;
+            }
+            span {
+              text-decoration-line: underline;
+              text-decoration-color: @eia-white;
+            }
+          }
+        }
+        &:hover {
+          .ico {
+            text-decoration: underline;
+          }
+          span {
+            &.date {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .numbered; // see list mixins
+    .highlight; // see list mixins
+  }
+}

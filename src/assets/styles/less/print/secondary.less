@@ -1,0 +1,137 @@
+.secondary-alt,
+	.secondary {
+		ul {
+			li {
+
+				&.sub-head {
+					margin-top: 14px;
+					margin-bottom: 8px;
+					font-weight: 600;
+				}
+				&.description {
+					margin-top: 8px;
+					margin-bottom: 8px;
+				}
+				&.image {
+					img {
+						width: 100%;
+					}
+					margin-bottom: 12pt;
+				}
+				&.icon {
+					width: 100%;
+					display: table;
+					padding: 0 0 5px 0;
+					span {
+						&.formats {
+							display: table-cell;
+							white-space: nowrap;
+							height: 12px;
+							position: relative;
+							top: 3px;
+							a {
+								border-left: 1px solid #d8d8d8;
+								margin-left: 5px;
+								padding-left: 5px;
+								.right;
+							}
+						}
+					}
+					a {
+						display: table-cell;
+						text-decoration: none;
+						&:hover {
+							text-decoration: underline;
+							.ico {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		& > ul {
+			padding: 6px;
+			&.icon-list {
+				margin-top: 12pt;
+			}
+			& > li {
+				a {
+					span {
+						&.link-label {
+							display: table-cell;
+						}
+					}
+					em {
+						.italic;
+						color: @eia-dark-grey;
+					}
+					span {
+						&.date {
+							font-style: normal;
+							text-decoration: none;
+							display: table-cell;
+							padding-right: 12px;
+						}
+					}
+					&:hover {
+						span {
+							&.date {
+								text-decoration-line: underline;
+								text-decoration-color: underline solid white;
+							}
+						}
+						em {
+							text-decoration-line: underline;
+							text-decoration-color: underline solid white;
+						}
+					}
+				}
+				&.head {
+					margin-bottom: 0.78rem; // 12 pixels
+					width: 100%;
+					display: block;
+					h2 {
+						padding: 0;
+						margin: 0;
+						a {
+							font-weight: normal;
+						}
+						.ico {
+							.left;
+							margin: 8px 8px 0 0;
+							&.interactive {
+								span {
+									display: none;
+								}
+								&:before {
+									.icon-interactive;
+									.controls-icon(40px, 43px);
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.no-sub-navigation {
+		.l-two-col-right-narrow {
+			margin: 36pt 0 0 0;
+			.l-col {
+				&:last-child {
+					.secondary {
+						border-top: 4px solid @eia-blue;
+					}
+				}
+			}
+		}
+	}
+	.secondary {
+		border-top: 4px solid @eia-blue;
+	}
+	.secondary-alt {
+		border-top: 4px solid @eia-green;
+	}
+

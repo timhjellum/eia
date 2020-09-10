@@ -1,4 +1,3 @@
-
 @media @mobile {
 	.homepage {
         //display: table;
@@ -39,11 +38,6 @@
                 }
             }
         }
-
-
-
-
-
         .primary {
             border-top: solid 4px @eia-darker-blue;
             ul {
@@ -145,9 +139,14 @@
         }
     }
 }
-
+@media @tablet-landscape {
+	.homepage {
+        margin-bottom: 0;
+    }
+}
 @media @laptop {
 	.homepage {
+        //margin-bottom: 0;
         .primary {
             ul {
                 li  {
@@ -169,7 +168,6 @@
         }
         .l-main-col {
             .secondary {
-//                border: none;
                 ul {
                     padding: 0;
                     width: 100%;

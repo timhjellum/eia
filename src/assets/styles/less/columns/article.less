@@ -20,16 +20,18 @@ font-size: 1.500rem; // 24 pixels
 
 @media @mobile {
 	.top-container {
-		padding: 0 0 2em 0;
-		margin: 2em 0 0 0;
-		border-top: 1px dashed #ccc;
-	}
-	.top {
-		visibility: hidden;
+		width: 100%;
+		padding: 0 0 2em;
+		margin: 2em 0 0;
+		border-top: 1px dashed #eee;
+		float: left;
+		clear: both;
 	}
 	article,
 	.article-alt,
 	.article {
+		//.tab-content;
+		//.accordion-content;
 		blockquote {
 			//background: #f9f9f9;
 			//border-left: 10px solid #ccc;
@@ -37,27 +39,18 @@ font-size: 1.500rem; // 24 pixels
 			padding: 0.5em 10px;
 			//quotes: "\201C""\201D""\2018""\2019";
 		}
-		.secondary {
-			ul {
-				list-style-type: none;
-				margin-left: 0px;
-				li {
-					margin: 0 0 5px 0;
-				}
-			}
-		}
 		.see-all {
 			+ h1 {
 				margin-top: 0.8em;
 				padding-top: 0;
 			}
 		}
-		//		ul {
-		//			margin: 6px 0 1em 22px;
-		//		}
+		ol {
+			margin: 6px 0 1em 16px;
+		}
 		ul {
-			list-style-type: disc;
-			margin: 6px 0 1em 22px;
+			margin: 6px 0 1em 16px;
+			//margin: 6px 0 1em 22px;
 			//border: 1px solid white; border shows up in page messaging like note:
 			&.contact {
 				list-style: none;
@@ -71,22 +64,25 @@ font-size: 1.500rem; // 24 pixels
 				}
 			}
 			li {
-				margin: 5px 0 0 0;
-				padding: 0;
-			}
-			ul {
 				list-style-type: disc;
-				margin: 0 0 6px 0;
-				li {
-					margin-bottom: 5px;
-					padding: 0;
-					font-size: 0.875rem;
-					line-height: 1.4;
+				margin: 5px 0 0 0;
+				ul {
+					margin: 0 0 6px 16px;
+					&.highlight {
+						margin: 0;
+						padding: 0;
+						border-bottom: 1px solid #d8d8d8;
+					}
+					li {
+						margin-bottom: 5px;
+						padding: 0;
+						font-size: 0.875rem;
+						line-height: 1.4;
+					}
 				}
 			}
-
 			&.basic-list {
-				list-style: none;
+				//list-style: none;
 				margin: 0;
 				padding: 0;
 				li {
@@ -107,13 +103,33 @@ font-size: 1.500rem; // 24 pixels
 								margin: 0 0 5px 0;
 							}
 						}
+						&.highlight {
+							margin: 0;
+							padding: 0;
+							border-bottom: 1px solid #d8d8d8;
+						}
 					}
+				}
+			}
+		}
+		.primary-alt,
+		.primary,
+		.secondary-alt,
+		.secondary {
+			//.accordion-content {
+			ul {
+				padding-left: 0;
+				margin-left: 0;
+				li {
+					list-style: none;
+					margin: 0 0 5px 0;
 				}
 			}
 		}
 		.image-container {
 			margin-bottom: 1em;
 		}
+		/*
 		.accordion-content {
 			& > ul {
 				border-bottom: dashed 1px #d8d8d8;
@@ -124,15 +140,32 @@ font-size: 1.500rem; // 24 pixels
 				}
 			}
 		}
+		*/
+		/*
 		.tabs {
-			& > ul {
-				list-style: none;
-				width: 100%;
-				padding: 0;
+			ul {
 				margin: 0;
-				display: table;
+				padding: 0;
+				li {
+					list-style: none;
+				}
+				.tab-content {
+					& > ul {
+						padding: 14px 0;
+						margin: 0 20px;
+						li {
+							list-style: none;
+							margin: 0 0 5px 0;
+							li {
+								list-style: disc;
+								margin: 0 0 5px 0;
+							}
+						}
+					}
+				}
 			}
 		}
+		*/
 		p {
 			+ div {
 				margin: 0.5em 0 0 0;
@@ -141,20 +174,16 @@ font-size: 1.500rem; // 24 pixels
 					margin: 1em 0 1em 0;
 				}
 			}
+			&.list-header {
+				margin-bottom: 0px;
+				+ ul,
+				+ ol {
+					margin-top: 0;
+				}
+			}
 		}
 		.ico {
 			margin-left: 0;
-		}
-		ol {
-			padding: 1em 0 1em 1em;
-			li {
-				//.font;
-				margin: 5px 0 0 0;
-				padding: 0;
-				//font-size: 0.875rem;
-				//line-height: 1.4;
-				//color: @eia-dark-grey;
-			}
 		}
 		// article ul
 		h1 {
@@ -163,7 +192,14 @@ font-size: 1.500rem; // 24 pixels
 			line-height: 1.15;
 		}
 		h1 + .accordion {
-			padding: 1em 0 0 0;
+			padding: 1em 0 0 0; // too much padding on Beta
+		}
+		h1 {
+			+ .accordion {
+				&.all-open {
+					padding: 0; // too much padding on Beta
+				}
+			}
 		}
 		h5 {
 			.font;
@@ -222,8 +258,9 @@ font-size: 1.500rem; // 24 pixels
 				margin: 4px 0 20px 0;
 			}
 		}
-	}
-	.article {
+
+		//	}
+		//	.article {
 		h3 {
 			.font;
 			.bold;
@@ -247,21 +284,19 @@ font-size: 1.500rem; // 24 pixels
 			}
 		}
 	}
+
 	.article-alt {
 		h3 {
 			.header-font;
-			font-size: 1.625rem; // 26? pixels
+			font-weight: normal;
+			font-size: 1.625rem; // 20pt 26px
 			line-height: 1;
 			margin: 0 0 0.5em;
 			padding: 0.5em 0 6px;
+			text-transform: none;
 			border-bottom: solid 1px #dadada;
 		}
 		h2 {
-			.font;
-			.bold;
-			font-size: 1.1875rem;
-			line-height: 1.25;
-			color: @eia-dark-grey;
 			margin: 1em 0 0.5em 0;
 			text-transform: uppercase;
 		}
@@ -270,18 +305,11 @@ font-size: 1.500rem; // 24 pixels
 		}
 	}
 }
-
 @media @tablet {
 	.article {
 		margin-bottom: 1em;
 	}
 }
-@media @laptop {
-	.top {
-		visibility: visible;
-	}
-}
-
 .l-two-col-right-narrow,
 .l-two-col-right {
 	.l-col {

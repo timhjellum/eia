@@ -3,13 +3,13 @@
 	//  home slider ratio is 283 / 958 = 29.123%                 //
 	////////////////////////////////////////////////////////////////
 	.slider-home {
-		opacity: 0;
-		visibility: hidden;
+		//opacity: 0;
+		//visibility: hidden;
 		padding-top: 1px;
 		padding-bottom: 1px;
 		width: 100%;
 		overflow: hidden;
-		
+
 		ul {
 			list-style: none;
 			margin: 0;
@@ -35,7 +35,7 @@
 			touch-action: pan-y;
 			.bx-viewport {
 				/*fix other elements on the page moving (on Chrome)*/
-				-webkit-transform: translatez(0);
+				//-webkit-transform: translatez(0);
 				.slider-overlay {
 					display: block;
 					width: 100%;
@@ -46,26 +46,28 @@
 					&.no-description {
 						h2 {
 							a {
-								&:after { 
-									content:"\00a0\203A";
+								&:after {
+									content: "\00a0\203A";
 								}
 							}
 						}
-						h3 { display: none;}
+						h3 {
+							display: none;
+						}
 					}
 					h2 {
 						.header-font;
 						color: #fff;
 						font-size: 24px;
 						//line-height: 32px;
-						margin: 0 0 .5em 0;
+						margin: 0 0 0.5em 0;
 						//height: 90px;
 						a {
 							color: #fff;
 							text-decoration: none;
 							&:hover {
 								text-decoration: underline;
-							} 
+							}
 						}
 					}
 					h3 {
@@ -76,16 +78,16 @@
 						margin: 0;
 						//height: 80px;
 						a {
-							color:#b3c2c9;
+							color: #b3c2c9;
 							text-decoration: none;
 							&:hover {
 								text-decoration: underline;
 							}
-							&:after { 
-								content:"\00a0\203A";
+							&:after {
+								content: "\00a0\203A";
 							}
 							&:empty {
-							 display: none;
+								display: none;
 							}
 						}
 					}
@@ -126,7 +128,8 @@
 		}
 	}
 }
-@media @mobile-landscape { // smartphones, Android phones, landscape iPhone
+@media @mobile-landscape {
+	// smartphones, Android phones, landscape iPhone
 	.slider-home {
 		.slider-home-wrapper {
 			.bx-viewport {
@@ -135,11 +138,11 @@
 					height: 140px;
 					h2 {
 						font-size: 24px;
-					//	height: 55px;
+						//	height: 55px;
 					}
 					h3 {
 						font-size: 18px;
-					//	height: 40px;
+						//	height: 40px;
 					}
 				}
 			}
@@ -152,11 +155,11 @@
 			.slider-overlay {
 				h2 {
 					font-size: 24px;
-				//	height: 60px;
+					//	height: 60px;
 				}
 				h3 {
 					font-size: 18px;
-				//	height: 60px;
+					//	height: 60px;
 				}
 			}
 		}
@@ -185,14 +188,19 @@
 					height: 224px; // 280 - ( 28 - 28 ) = 234
 					top: -280px;
 					position: relative;
-					background-color: rgba(0, 60, 87, 0.7); // must be rgba - do not use var
+					background-color: rgba(
+						0,
+						60,
+						87,
+						0.7
+					); // must be rgba - do not use var
 					h2 {
 						font-size: 24px;
-					//	height: 90px;
+						//	height: 90px;
 					}
 					h3 {
 						font-size: 18px;
-					//	height: 90px;
+						//	height: 90px;
 					}
 				}
 
@@ -222,13 +230,10 @@
 		padding: 0;
 		margin: 0;
 		//margin-bottom: 1em;
-		background: url(/global/images/bg/h_line_shadow_feature_banner.png) no-repeat top center;
+		background: url(/global/images/bg/h_line_shadow_feature_banner.png)
+			no-repeat top center;
 	}
 }
-
-
-
-
 
 @media @desktop {
 	//////////////////////////////////////////////////////////////////

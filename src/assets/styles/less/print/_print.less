@@ -1,123 +1,8 @@
-html,	
-body,
-.l-full-width-col,
-.l-row,
-.page-wrapper,
-.l-outer-wrapper,
-.l-inner-wrapper {
-	border: none !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	//background-image: none !important;
-	background-color: transparent !important;
-	//clear: none !important;
-	//box-sizing: border-box !important;
-	color:@eia-dark-grey;
-	background:@eia-white;
-	width: 100% !important;
-}
-.l-row {
-	clear: none !important;
-}
-@page {
-	margin: 2cm;
-}
-
-.l-col {
-	border: none !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	background-image: none !important;
-	background-color: transparent !important;
-	//clear: both !important;
-	box-sizing: border-box !important;
-	h1, h2, h3 {
-		page-break-after: avoid;
-		}
-	h1, h2, h3, h4, h5, h6 {
-		//clear: both;
-		line-height: 1;
-		font-weight: normal;
-		.header-font;
-		color: @eia-dark-grey;
-		a {
-			color: @eia-blue;
-			border-bottom: 1px solid #189bd7;
-			&:link,
-			&:active,
-			&:visited {
-				color: @eia-blue;
-				border-bottom: 1px solid #189bd7;
-			}
-			&:after {
-				content: " (https://www.eia.gov" attr(href) ")";
-				font-size: 100%;
-			}
-		}
-	}
-	h1 {
-		border-bottom: 1px solid #333;
-		padding: 1em 0 6px 0;
-		margin-bottom: 13px;
-		font-size: 26pt !important;
-	}
-	h2 {
-		font-size: 20pt;
-		border-bottom: 1px solid #333;
-		padding: 1em 0 6px 0;
-		margin-bottom: 13px !important;
-	}
-	h3 {
-		color: @eia-dark-grey;
-		font-size: 18pt !important;
-	}
-	h4 {
-		color: @eia-dark-grey;
-		font-size: 16pt !important;
-	}
-	h5 {
-		color: @eia-dark-grey;
-		font-size: 16pt !important;
-	}
-	h6 {
-		color: @eia-dark-grey;
-		font-size: 16pt !important;
-	}
-}
-
-
-
-
-
 .title {
 	width: 100%;
-//	display: table;
-//	clear: both;
+	//	display: table;
+	//	clear: both;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .analysis-projections {
 	page-break-inside: avoid;
@@ -152,21 +37,21 @@ body,
 }
 
 .overview {
-	.l-row.l-two-col-even {
-		.l-col {
-			&:first-of-type {
-				width: 100%;
-				float: left;
-			}
-			&:last-of-type {
-				width: 100%;
-				float: left;
+	.l-row {
+		&.l-two-col-even {
+			.l-col {
+				&:first-of-type {
+					width: 100%;
+					float: left;
+				}
+				&:last-of-type {
+					width: 100%;
+					float: left;
+				}
 			}
 		}
 	}
 }
-
-
 
 .primary {
 	width: 100%;
@@ -194,7 +79,7 @@ body,
 		}
 	}
 }
-
+/*
 .visualizations {
 	width: 100%;
 	display: table;
@@ -224,18 +109,15 @@ body,
 		a {
 			color: @eia-blue;
 			border-bottom: 1px solid #189bd7;
-			&:link,
-			&:active,
-			&:visited,
+
 			&:after {
 				content: " (https://www.eia.gov" attr(href) ")";
 				font-size: 100%;
 			}
+
 		}
 	}
 }
-
-// 
 
 .l-col {
 	h1 {
@@ -545,6 +427,7 @@ body,
 		font-size: 16pt;
 	}
 }
+*/
 .see-all,
 .top-container,
 .ico > span {

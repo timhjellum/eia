@@ -1,0 +1,68 @@
+header {
+	background-color: transparent;
+	height: 88px;
+	width: 100%;
+	border: none;
+	margin: 0 0 18pt 0;
+	margin: 0;
+	clear: both;
+	border-top: 5px solid #189bd7;
+	border-bottom: 1px solid #ccc;
+	position: initial;
+	.print {
+		//height: 108px;
+		width: 100%;
+		display: table;
+		img {
+			max-width: 100%;
+			height: 88px;
+			position: relative;
+			top: -10px;
+		}
+		.print-button {
+			float: right;
+			margin: 24pt 12pt 0 0;
+			padding: 12px 18px;
+			background-color: #0096d7;
+			border: none;
+			color: white;
+			font-weight: bold;
+			font-size: 12pt;
+			position: relative;
+			top: -83px;
+		}
+		.print-title {
+			background-color: transparent;
+			background-image: none;
+			margin: 0 0 20px 0;
+			padding: 0 0 20px 0;
+			border-bottom: 1px solid #ccc;
+			width: 100%;
+			float: left;
+			font-family: "Times New Roman", "Times", serif;
+			font-weight: normal;
+			color: #333;
+			font-size: 32px;
+			text-transform: uppercase;
+			&.bg-finance {
+				padding: 10px 0 0 0;
+			}
+		}
+	}
+
+	.fancybox-menu.menu-toggle,
+	.nav-search.search-panel.form-wrapper,
+	.search-menu-toggle,
+	.nav-primary,
+	.nav-secondary,
+	.nav-menu {
+		display: none;
+	}
+}
+
+.fancybox-lock {
+	.fancybox-overlay {
+		overflow: hidden !important;
+		overflow-y: hidden !important;
+	}
+}

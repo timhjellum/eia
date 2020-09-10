@@ -1,43 +1,6 @@
-.App {
-	text-align: center;
-}
-
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
-
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
-
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
 /* variables & mixins */
+/* @import "./assets/images/accesssibility.png"; */
+
 @import "./assets/styles/less/base/vars";
 @import "./assets/styles/less/base/mixins";
 @import "./assets/styles/less/base/base";
@@ -48,7 +11,9 @@
 @import "./assets/styles/less/base/icons-logos";
 @import "./assets/styles/less/base/forms";
 @import "./assets/styles/less/base/tables";
-@import "./assets/styles/less/base/lists";
+@import "./assets/styles/less/base/accessibility";
+
+/* @import "./assets/styles/less/base/accessibility"; */
 /* header / footer / menus */
 @import "./assets/styles/less/header-footer/footer";
 @import "./assets/styles/less/header-footer/header";
@@ -108,6 +73,8 @@
 @import "./assets/styles/less/theme/steps";
 @import "./assets/styles/less/theme/survey";
 @import "./assets/styles/less/theme/update";
+@import "./assets/styles/less/theme/lists";
+@import "./assets/styles/less/theme/list-mixins";
 
 @import "./assets/styles/less/columns/primary";
 @import "./assets/styles/less/columns/secondary";
@@ -131,6 +98,6 @@
 @import "./assets/styles/less/style-guide/sitemap";
 @import "./assets/styles/less/style-guide/tabs";
 @import "./assets/styles/less/style-guide/typography";
+@import "./assets/styles/less/style-guide/smacss";
 @import "./assets/styles/less/style-guide/tables";
-@import "./assets/styles/less/style-guide/tomorrow";
 @import "./assets/styles/less/style-guide/reveal-on-scroll";
