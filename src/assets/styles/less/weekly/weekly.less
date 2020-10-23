@@ -1,0 +1,262 @@
+@media @mobile {
+	// could be 320px - smartphones, portrait iPhone, portrait 480x320 phones (Android)
+	.l-report-header-petroleum-weekly {
+		& ~ div.l-row {
+			margin-top: 36px;
+		}
+		.l-col {
+			&.twip-navigation {
+				margin: -1px;
+				display: flex;
+				align-items: flex-end;
+				& > a {
+					flex-grow: 1;
+					padding: 6px 0 8px 0;
+					vertical-align: bottom;
+					width: 20%;
+					& > span {
+						font-size: 9px;
+					}
+				}
+			}
+		}
+		/*
+		h1 {
+			font-family: "Times New Roman", Times, serif;
+			font-weight: normal;
+			line-height: 1;
+			font-size: 1.625rem;
+			margin: 0 0 2px 0;
+			padding: 0 0 0 0;
+		}
+		*/
+		border-bottom: solid 1.5px @eia-green; // #5e9c30;
+	}
+	.tabs {
+		&.petroleum-weekly {
+			margin: 2em 0 1px 0;
+			ul {
+				float: left;
+				border: none;
+				padding-left: 0px;
+				width: 100%;
+				li {
+					display: inline-block;
+					width: 100%;
+					border: none;
+					margin: 6px 0;
+					padding: 6px 0 6px 0px;
+					a {
+						margin: 0;
+						padding: 0;
+						font-size: 17.333px;
+						font-weight: 700;
+						text-transform: unset;
+						font-style: italic;
+						//color: #d5d5d5 !important; // style-guide only
+					}
+					.ico {
+						height: 32px;
+						width: 32px;
+						border-radius: 50%;
+						top: 1px;
+						position: absolute;
+						left: -36px;
+					}
+					&.ui-state-active {
+						/*
+						a {
+							color: @eia-blue !important; // style-guide only
+						}
+						*/
+						border: none;
+					}
+					/*
+					&:hover {
+						a {
+							color: @eia-blue !important; // style-guide only
+						}
+					}
+					*/
+				}
+			}
+		}
+	}
+	.l-full-width-col {
+		.basic-table {
+			margin-top: 30px;
+			th:first-child {
+				min-width: 150px;
+			}
+			caption {
+				padding: 0;
+				border-bottom: 1px solid @eia-blue; // #189bd7;
+				a {
+					width: 100%;
+					color: @eia-blue; // #189bd7;
+					line-height: 22px;
+					em {
+						font-weight: bold;
+						color: @eia-blue; // #189bd7;
+						font-style: italic;
+					}
+					span {
+						float: right;
+						font-size: 14.666px;
+						color: @eia-blue; // #189bd7;
+					}
+					&:hover {
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			&.highlight-col-2 {
+				th {
+					&:nth-child(2) {
+						background-color: #f7f7f7;
+					}
+				}
+			}
+
+			&.highlight-col-6 {
+				&.fourweek {
+					tr {
+						&:first-child th {
+							&:nth-child(4) {
+								background-color: #f7f7f7;
+							}
+						}
+						&:last-child th {
+							&:nth-child(6) {
+								background-color: #f7f7f7;
+							}
+						}
+					}
+				}
+			}
+		}
+		.g_container {
+			border-top: 3px solid @eia-blue; // #189bd7;
+			border-bottom: 1px dashed #cccccc;
+			padding-top: 6px;
+			padding-bottom: 16px;
+			margin-top: 44px;
+			& ~ .primary {
+				margin-top: 30px;
+			}
+			&:first-child {
+				margin-top: 0px;
+			}
+		}
+	}
+}
+@media @mobile-landscape {
+	// min-width: 480px)"; // smartphones, Android phones, landscape iPhone
+	.l-report-header-petroleum-weekly {
+		.l-col {
+			&.twip-navigation {
+				& > a {
+					& > span {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet {
+	// min-width: 600px)"; // mobile panorama
+	.l-report-header-petroleum-weekly {
+		.l-col {
+			&.twip-navigation {
+				& > a {
+					& > span {
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet-landscape {
+	// min-width: 801px)"; // tablet, landscape iPad, lo-res laptops ands desktops
+	.l-report-header-petroleum-weekly {
+		.l-col {
+			&.twip-navigation {
+				& > a {
+					width: 87px;
+					& > span {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	.tabs {
+		&.petroleum-weekly {
+			ul {
+				float: right;
+				border: none;
+				width: 136px;
+				position: relative;
+				li {
+					float: none;
+					&:first-child {
+						margin: 6px 0;
+						padding: 6px 0 6px 0px;
+					}
+					.ico {
+						left: -36px;
+					}
+					&.ui-state-default {
+						a {
+							&:link,
+							&:visited {
+								color: #999;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+			.ui-tabs-panel {
+				border: none;
+				padding: 0;
+			}
+		}
+	}
+	.l-full-width-col {
+		.g_container .graph {
+			border-right: 1px solid #cccccc;
+			padding-right: 40px;
+			width: 759px;
+			min-height: 390px;
+			.image-container {
+				display: table;
+				width: auto;
+				clear: none;
+				.graph {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+@media @laptop {
+	// min-width: 956px)"; // normall 1025 - big landscape tablets, laptops, and desktops
+}
+//@desktop { // min-width: 1025px)"; // big landscape tablets, laptops, and desktops
+@media @desktop {
+	// min-width: 1366px)"; // big landscape tablets, laptops, and desktops
+}
+@media @desktop-lg {
+	// min-width: 2300px)"; // hi-res laptops and desktops
+}
+//@print: ~"@media print";
+@media @mobile-only {
+	// max-width: 599px)";
+}
+//~"(max-width: 599px)";
+//~"(max-width: 599px)"; //

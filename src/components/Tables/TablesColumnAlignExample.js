@@ -19,6 +19,7 @@ class TablesColumnAlignExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesColumnAlignExample"></a>
 				<h3 className="_h3">Table Column Alignment</h3>
 				<p className="_p">
 					Adding a <code>class="align-left-col-1/2/3/4/5/6/7/8/9/10"</code> to the to the table class (Note, this may not have the desired effect if there are spanned columns).

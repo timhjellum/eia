@@ -1,0 +1,220 @@
+.tabs {
+	&.petroleum-weekly {
+		ul {
+			li {
+				a {
+					color: #d5d5d5;
+				}
+				.ico {
+					background-color: #d5d5d5;
+					&.grid-line {
+						&:before {
+							.controls-icon(28px, 28px);
+							.icon-grid-line(@fill-color: #d5d5d5);
+							margin: 2px 0 0 2px;
+						}
+					}
+				}
+				&.ui-state-active {
+					a {
+						color: @eia-blue;
+					}
+					.ico {
+						background-color: @eia-blue;
+						&.grid-line {
+							&:before {
+								.controls-icon(28px, 28px);
+								.icon-grid-line(@fill-color: @eia-blue);
+								margin: 2px 0 0 2px;
+							}
+						}
+					}
+				}
+				&:hover {
+					a {
+						color: @eia-blue;
+						text-decoration: none;
+					}
+					.ico {
+						height: 32px;
+						width: 32px;
+						background-color: @eia-blue;
+						border-radius: 50%;
+						top: 1px;
+						position: absolute;
+						left: -36px;
+						&.grid-line {
+							&:before {
+								.controls-icon(28px, 28px);
+								.icon-grid-line(@fill-color: @eia-blue);
+								margin: 2px 0 0 2px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.ico {
+	&.crude-oil,
+	&.this-week-analysis,
+	&.propane,
+	&.gasoline,
+	&.distillate {
+		text-align: center;
+		display: block;
+		padding: 0;
+		margin: 0;
+		float: left;
+		border-top: 1.5px solid white;
+		border-right: 1.5px solid white;
+		border-bottom: 1.5px solid transparent;
+		border-left: 1.5px solid white;
+		&:before {
+			.controls-icon(@icon-width: 42px, @icon-height: 51px);
+			margin: 0 auto;
+		}
+		& > span {
+			text-transform: uppercase;
+			.bold;
+			color: #d5d5d5;
+		}
+		&:hover {
+			&:before {
+				.controls-icon(@icon-width: 42px, @icon-height: 51px);
+				margin: 0 auto;
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+		&.active {
+			& > span {
+				color: @eia-green;
+			}
+			border-top-color: @eia-green;
+			border-right-color: @eia-green;
+			border-bottom-color: white;
+			border-left-color: @eia-green;
+		}
+	}
+	&.crude-oil {
+		&.active {
+			&:before {
+				.icon-petroleum;
+			}
+		}
+	}
+	&.this-week-analysis {
+		&.active {
+			&:before {
+				.icon-total-energy;
+			}
+		}
+	}
+	&.propane {
+		&.active {
+			&:before {
+				.icon-propane;
+				background-size: 100%;
+			}
+		}
+	}
+	&.gasoline {
+		&.active {
+			&:before {
+				.icon-gasoline;
+				background-size: 100%;
+			}
+		}
+	}
+	&.distillate {
+		&.active {
+			&:before {
+				.icon-distillate;
+				background-size: 200%;
+				background-position-x: -40px;
+				background-position-y: -30px;
+			}
+		}
+	}
+	&.crude-oil {
+		&:before {
+			.icon-petroleum(@fill-color: "#d5d5d5");
+		}
+		&:hover {
+			&:before {
+				.icon-petroleum(@fill-color: @eia-green);
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+	}
+	&.this-week-analysis {
+		&:before {
+			.icon-total-energy(@fill-color: "#d5d5d5", @fill-color-lt: fade(#d5d5d5, 40%));
+		}
+		&:hover {
+			&:before {
+				.icon-total-energy(@fill-color: @eia-green, @fill-color-lt: fade(@eia-green, 40%));
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+	}
+	&.propane {
+		&:before {
+			.icon-propane(@fill-color: "#d5d5d5");
+		}
+		&:hover {
+			&:before {
+				.icon-propane(@fill-color: @eia-green);
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+	}
+	&.gasoline {
+		&:before {
+			.icon-gasoline(@fill-color:"#d5d5d5");
+		}
+		&:hover {
+			&:before {
+				.icon-gasoline(@fill-color: @eia-green);
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+	}
+	&.distillate {
+		&:before {
+			.icon-distillate(@fill-color: "#d5d5d5");
+			background-size: 200%;
+			background-position-x: -40px;
+			background-position-y: -30px;
+		}
+		&:hover {
+			&:before {
+				.icon-distillate(@fill-color: @eia-green);
+				background-size: 200%;
+				background-position-x: -40px;
+				background-position-y: -30px;
+			}
+			& > span {
+				text-decoration: underline;
+				color: @eia-green;
+			}
+		}
+	}
+}

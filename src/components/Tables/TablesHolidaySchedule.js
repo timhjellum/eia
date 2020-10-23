@@ -3,8 +3,6 @@
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
-
-import ContainerWrapper from "../Containers/ContainerWrapper"
 import ContainerLayout from "../Containers/ContainerLayout"
 
 class HolidaySchedule extends Component {
@@ -21,6 +19,7 @@ class HolidaySchedule extends Component {
 	render() {
 		return (
 			<>
+				<a name="HolidaySchedule"></a>
 				<h3 className="_h3">Holiday Release Schedule</h3>
 
 				<ContainerLayout>

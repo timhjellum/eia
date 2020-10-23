@@ -6,6 +6,7 @@ class TablesDefaultExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesDefaultExample"></a>
 				<h3 className="_h3">Table with default base styles</h3>
 				<ContainerLayout>
 					<div>

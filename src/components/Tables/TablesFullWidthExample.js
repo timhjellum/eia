@@ -19,6 +19,7 @@ class TablesFullWidthExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesFullWidthExample"></a>
 				<h3 className="_h3">Full Width Table</h3>
 				<p className="_p">
 					Adding a <code>&lt;full-width&gt;</code> to the table class (&lt;table class="basic-table full-width&gt;).

@@ -20,6 +20,7 @@ class TablesRowSectionHeadExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesRowSectionHeadExample"></a>
 				<h3 className="_h3">Tables Section-Head</h3>
 
 				<p className="_p">

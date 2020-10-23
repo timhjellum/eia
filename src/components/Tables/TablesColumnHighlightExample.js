@@ -4,7 +4,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
 
-import ContainerWrapper from "../Containers/ContainerWrapper"
 import ContainerLayout from "../Containers/ContainerLayout"
 
 class TablesColumnHighlightExampleExample extends Component {
@@ -21,6 +20,7 @@ class TablesColumnHighlightExampleExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesColumnHighlightExampleExample"></a>
 				<h3 className="_h3">Highlight Columns</h3>
 				<p className="_p">
 					Highlighting a column can be accomplished by adding a <code>class="highlight-col-1/2/3/4/5..."</code> to the to the table class.

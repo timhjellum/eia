@@ -1,0 +1,2 @@
+(this["webpackJsonpstyle-guide"]=this["webpackJsonpstyle-guide"]||[]).push([[7],{254:function(e,t,n){"use strict";n.r(t);var o=n(2),l=n(1),a=function(){function e(){Object(o.a)(this,e),console.log("v.secondary-alt.1")}return Object(l.a)(e,[{key:"runSecondaryAltHide",value:function(){console.log("v.secondary-alt.2");var e,t=document.querySelectorAll(".secondary-alt.hide-mt a");for(e=0;e<t.length;++e){!0===(""===t[e].getAttribute("href"))&&(t[e].parentElement.style.display="none")}}}]),e}();t.default=a}}]);
+//# sourceMappingURL=7.00d7f5d6.chunk.js.map

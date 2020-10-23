@@ -20,6 +20,7 @@ class TablesCaptionExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesCaptionExample"></a>
 				<h3 className="_h3">Table Caption</h3>
 				<ContainerLayout>
 					<div className="table-wrapper">

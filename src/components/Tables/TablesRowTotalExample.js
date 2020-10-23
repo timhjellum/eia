@@ -20,6 +20,7 @@ class TablesRowTotalExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesRowTotalExample"></a>
 				<h3 className="_h3">Row Totals</h3>
 
 				<ContainerLayout>

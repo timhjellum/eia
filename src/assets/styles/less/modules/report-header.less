@@ -80,7 +80,36 @@
 		}
 	}
 	//}
-
+	&.l-report-header-petroleum-weekly,
+	&.l-report-header {
+		h1 {
+			.header-font;
+			line-height: 1;
+			font-size: 1.625rem; // 20pt 26px
+			margin: 0 0 2px 0;
+			padding: 0 0 0 0;
+		}
+		.ico {
+			&.download {
+				&:before {
+					display: inline-block;
+					margin: 0 6px -5px 0;
+					.icon-download(@fill-color: @eia-green);
+				}
+			}
+			&.printer {
+				&:before {
+					margin: 0 6px -5px 0;
+					.icon-print(@fill-color: @eia-green);
+				}
+			}
+		}
+		.release-dates {
+			.ico {
+				margin-left: 0;
+			}
+		}
+	}
 	//.l-row {
 	// 70% | 30%
 	&.l-report-header {
@@ -94,14 +123,7 @@
 		.go-back {
 			display: none;
 		}
-		h1 {
-			.header-font;
-			line-height: 1;
-			font-size: 1.625rem; // 20pt 26px
-			margin: 0 0 2px 0;
-			padding: 0 0 0 0;
-			//margin: 0 0 1em 0;
-		}
+
 		.publish-metadata {
 			.font;
 			width: 100%;

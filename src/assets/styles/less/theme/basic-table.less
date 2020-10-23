@@ -24,6 +24,93 @@
 	*/
 }
 
+@media @mobile {
+	table {
+		&.basic-table {
+			thead {
+				tr {
+					th {
+						padding: 6px 10px 5px 10px;
+						&:first-child {
+							padding-left: 0;
+						}
+						&:last-child {
+							padding-right: 0;
+						}
+						padding: 6px 10px 5px 10px;
+					}
+				}
+			}
+			tbody {
+				tr {
+					th,
+					td {
+						padding: 6px 10px 5px 10px;
+						&:first-child {
+							padding-left: 0;
+						}
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+			tfoot {
+				tr {
+					td {
+						padding: 6px 10px 5px 10px;
+						&:first-child {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media @tablet {
+	table {
+		&.basic-table {
+			thead {
+				tr {
+					th {
+						&:first-child {
+							padding-left: 10px;
+						}
+						&:last-child {
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+			tbody {
+				tr {
+					th,
+					td {
+						&:first-child {
+							padding-left: 10px;
+						}
+						&:last-child {
+							padding-right: 10px;
+						}
+					}
+				}
+			}
+
+			tfoot {
+				tr {
+					td {
+						&:first-child {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 div {
 	&.table-wrapper,
 	&.basic-table {
@@ -68,6 +155,21 @@ table {
 		&.no-bottom-border,
 		&:last-of-type {
 			border-bottom: none;
+		}
+		&.selector {
+			// see petrol weekly
+			tbody {
+				tr {
+					td {
+						&:first-child {
+							.ico {
+								margin: -4px 6px 0 0;
+								float: left;
+							}
+						}
+					}
+				}
+			}
 		}
 		caption {
 			font-size: 0.9375rem;
@@ -320,7 +422,7 @@ table {
 					}
 				}
 				td {
-					padding: 6px 10px 5px 10px;
+					//padding: 6px 10px 5px 10px;
 					.align-right;
 					border-top: 1px dashed #d8d8d8;
 					white-space: normal;

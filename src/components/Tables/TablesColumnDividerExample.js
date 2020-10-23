@@ -20,6 +20,7 @@ class TablesColumnDividerExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesColumnDividerExample"></a>
 				<h3 className="_h3">Table Column Divider</h3>
 
 				<p className="_p">

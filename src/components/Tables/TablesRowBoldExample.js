@@ -20,6 +20,7 @@ class TablesRowBoldExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesRowBoldExample"></a>
 				<h3 className="_h3">Row Bold</h3>
 				<p className="_p">
 					Adding a <code>class="bold"</code> to the table row (&lt;tr&gt;).

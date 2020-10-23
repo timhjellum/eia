@@ -8,6 +8,7 @@ class TablesAccessibility extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesAccessibility"></a>
 				<h2 className="_h2">Accessible Tables</h2>
 				<p className="_p">Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.</p>
 

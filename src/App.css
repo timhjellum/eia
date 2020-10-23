@@ -6,6 +6,10 @@
 @import "./assets/styles/less/base/base";
 @import "./assets/styles/less/base/icons-mixins";
 @import "./assets/styles/less/base/icons-vars";
+@import "./assets/styles/less/base/icons-list";
+@import "./assets/styles/less/base/icons-file-type";
+@import "./assets/styles/less/base/icons-social";
+@import "./assets/styles/less/base/icons-weekly";
 @import "./assets/styles/less/base/icons";
 @import "./assets/styles/less/base/icons-header";
 @import "./assets/styles/less/base/icons-logos";

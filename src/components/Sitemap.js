@@ -1,5 +1,6 @@
 ﻿import React, { Component } from "react"
 import Top from "./Placeholders/Top.js"
+import ContainerLayout from "./Containers/ContainerLayout"
 import Page from "./Page"
 
 class Sitemap extends Component {
@@ -24,13 +25,11 @@ class Sitemap extends Component {
 									<h2 className="_h2">In Progress</h2> <Top />
 								</td>
 							</tr>
-
 							<tr className="_head _section">
 								<td colSpan="3">
 									<h2 className="_h2">Daily</h2>
 								</td>
 							</tr>
-
 							<tr className="complete">
 								<td onClick={() => window.open("https://www.eia.gov/dashboard/newengland/overview", "_blank")}>New England Dashboard</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/dashboard/newengland/overview", "_blank")}>New England Dashboard</td>
@@ -86,28 +85,93 @@ class Sitemap extends Component {
 								<td onClick={() => window.open("https://wwwdev.eia.gov/naturalgas/weekly/", "_blank")}>Natural Gas Weekly Update</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/naturalgas/weekly/", "_blank")}>Natural Gas Weekly Update</td>
 							</tr>
-							<tr>
+							<tr className="complete">
 								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/", "_blank")}>This Week in Petroleum</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/", "_blank")}>This Week in Petroleum</td>
-								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/", "_blank")}>This Week in Petroleum</td>
+								<td>This Week in Petroleum</td>
 							</tr>
-							<tr>
+							<tr className="complete">
 								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/includes/schedule.php", "_blank")}>schedule</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/includes/schedule.php", "_blank")}>schedule</td>
-								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/includes/schedule.php", "_blank")}>schedule</td>
+								<td>schedule</td>
 							</tr>
 							<tr>
 								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
 							</tr>
-
+							{/*
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/highlights_jason_list.ph", "_blank")}>highlights_jason_list</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/index - Copy (2).php", "_blank")}>index - Copy (2)</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/index - Copy.php", "_blank")}>index - Copy</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/index.php", "_blank")}>index</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							*/}
+							{/*
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/production/weekly/index_replicator_10112017.php", "_blank")}>index_replicator_10112017</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/coal_markets_archive_json.php", "_blank")}>coal_markets_archive_json.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/coal_markets_json.php", "_blank")}>coal_markets_json.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/coal_markets_json_archive.php", "_blank")}>coal_markets_json_archive.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/data_table.php", "_blank")}>data_table.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Weekly Coal Production</td>
+							</tr>
+							*/}
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/index.php", "_blank")}>Coal Markets</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/weekly/", "_blank")}>Coal Markets</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/production/weekly/", "_blank")}>Coal Markets</td>
+							</tr>
+							{/*}
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/jason-rchive.php", "_blank")}>jason-rchive.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/markets/jason-rchive.php", "_blank")}>jason-rchive.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/markets/jason-rchive.php", "_blank")}>jason-rchive.php</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/coal/markets/release_date_json.php", "_blank")}>release_date_json.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/markets/release_date_json.php", "_blank")}>release_date_json.php</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/coal/markets/release_date_json.php", "_blank")}>release_date_json.php</td>
+							</tr>
+						*/}
 							<tr>
 								<td onClick={() => window.open("https://www.eia.gov/oil_gas/natural_gas/ngs/schedule.html", "_blank")}>Schedule</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/oil_gas/natural_gas/ngs/schedule.html", "_blank")}>Schedule</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/adaptive/oil_gas/natural_gas/ngs/schedule.html", "_blank")}>Schedule</td>
 							</tr>
-							<tr className="complete">
+							<tr>
 								<td onClick={() => window.open("https://www.eia.gov/petroleum/supply/weekly/", "_blank")}> Weekly Petroleum Status Report</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/supply/weekly/", "_blank")}> Weekly Petroleum Status Report</td>
 								<td> Weekly Petroleum Status Report</td>
@@ -492,7 +556,6 @@ class Sitemap extends Component {
 								<td onClick={() => window.open("https://wwwdev.eia.gov/electricity/monthly/index.php", "_blank")}>Electricity &rsaquo; Monthly &rsaquo; Backissues</td>
 								<td>Electricity &rsaquo; Monthly &rsaquo; Backissues</td>
 							</tr>
-
 							{/* 
 <tr><td onClick={() => window.open("https://www.eia.gov/electricity/monthly/update/end-use.php", "_blank")}>End Use</td><td onClick={() => window.open("https://wwwdev.eia.gov/electricity/monthly/update/end-use.php", "_blank")}>End Use</td><td className="in-development"></td>
 </tr>
@@ -520,7 +583,6 @@ class Sitemap extends Component {
 <tr><td onClick={() => window.open("https://www.eia.gov/electricity/monthly/update/report-overview.php", "_blank")}>report_overview</td><td onClick={() => window.open("https://wwwdev.eia.gov/electricity/monthly/update/report-overview.php", "_blank")}>report_overview</td><td className="in-development"></td>
 </tr>
 */}
-
 							<tr className="_head _section">
 								<td colSpan="3">
 									<h2 className="_h2">Home</h2> <Top />
@@ -656,7 +718,6 @@ class Sitemap extends Component {
 								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/quarterly/correction.php", "_blank")}>Coal &rsaquo; Production &rsaquo; Quarterly &rsaquo; correction</td>
 								<td className="in-development"></td>
 							</tr>
-
 							<tr>
 								<td onClick={() => window.open("https://www.eia.gov/coal/production/quarterly/distribution/index.php", "_blank")}>Coal &rsaquo; Production &rsaquo; Quarterly &rsaquo; Distribution</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/coal/production/quarterly/distribution/index.php", "_blank")}>Coal &rsaquo; Production &rsaquo; Quarterly &rsaquo; Distribution</td>
@@ -1420,7 +1481,6 @@ class Sitemap extends Component {
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/articles/vzimpactsindex.php", "_blank")}>Petroleum &rsaquo; Articles &rsaquo; vzimpactsindex</td>
 								<td className="in-development"></td>
 							</tr>
-
 							<tr>
 								<td onClick={() => window.open("https://www.eia.gov/petroleum/drilling/faqs.php", "_blank")}>Petroleum &rsaquo; Drilling &rsaquo; faqs</td>
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/drilling/faqs.php", "_blank")}>Petroleum &rsaquo; Drilling &rsaquo; faqs</td>
@@ -1804,6 +1864,62 @@ summary
 								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/marketing/prime/index.php", "_blank")}>Petroleum &rsaquo; Marketing &rsaquo; Prime</td>
 								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/petroleum/marketing/prime/index.php", "_blank")}>
 									Petroleum &rsaquo; Marketing &rsaquo; Prime
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/index.php", "_blank")}>Petroleum &rsaquo; Weekly</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/index.php", "_blank")}>Petroleum &rsaquo; Weekly</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/index.php", "_blank")}>
+									Petroleum &rsaquo; Weekly
+								</td>
+							</tr>
+							<tr className="complete">
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/index_no_tags.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; no tags</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/index_no_tags.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; no tags</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/index_no_tags.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; no tags
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/print-version.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; print-version</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/print-version.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; print-version</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/print-version.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; print-version
+								</td>
+							</tr>{" "}
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/schedule.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; schedule</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/schedule.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; schedule</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/schedule.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; schedule
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/propane.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; propane</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/propane.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; propane</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/propane.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; propane
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/gasoline.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; gasoline</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/gasoline.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; gasoline</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/gasoline.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; gasoline
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/distille.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; distille</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/distille.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; distille</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/distille.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; distille
+								</td>
+							</tr>
+							<tr>
+								<td onClick={() => window.open("https://www.eia.gov/petroleum/weekly/crude.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; crude</td>
+								<td onClick={() => window.open("https://wwwdev.eia.gov/petroleum/weekly/crude.php", "_blank")}>Petroleum &rsaquo; Weekly &rsaquo; crude</td>
+								<td className="in-development" onClick={() => window.open("https://wwwdev.eia.gov/adaptive/petroleum/weekly/crude.php", "_blank")}>
+									Petroleum &rsaquo; Weekly &rsaquo; crude
 								</td>
 							</tr>
 							<tr className="_head _section">
@@ -2774,6 +2890,28 @@ summary
 						</tfoot>
 					</table>
 				</div>
+				<hr />
+
+				<ContainerLayout>
+					<div className="l-row l-two-col-left-wide">
+						<div className="l-col image"></div>
+						<div className="l-col message">
+							<div className="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_dark et_had_animation">
+								<div className="et_pb_text_inner">
+									<h2>Perfect for smaller groups…</h2>
+								</div>
+							</div>
+							<div className="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_center et_pb_space et_had_animation">
+								<div className="et_pb_divider_internal"></div>
+							</div>
+							<div className="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light et_had_animation">
+								<div className="et_pb_text_inner">
+									<p>With a ton of extra storage, built-in hot water, and an additional shower extension room, the 2-sleeper has all you need to explore further.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ContainerLayout>
 			</Page>
 		)
 	}

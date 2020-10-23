@@ -1,7 +1,7 @@
 ﻿import React, { Component } from "react"
 import Page from "./Page"
 import ContainerLayout from "./Containers/ContainerLayout"
-import ExamplesOfAllLists from "./Themes/ExamplesOfAllLists"
+import PrimaryLists from "./Themes/PrimaryLists"
 import { Tabs } from "@yazanaabed/react-tabs"
 
 class ThemesTabs extends Component {
@@ -37,7 +37,7 @@ class ThemesTabs extends Component {
 										<div id="crude-oil" aria-labelledby="ui-id-7" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style={{ display: "none" }}></div>
 										<div id="natural-gas" aria-labelledby="ui-id-8" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style={{ display: "block" }}>
 											<div className="tab-content">
-												<ExamplesOfAllLists />
+												<PrimaryLists />
 											</div>
 										</div>
 									</div>
@@ -62,7 +62,7 @@ class ThemesTabs extends Component {
 										<div id="crude-oil" aria-labelledby="ui-id-7" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style={{ display: "none" }}></div>
 										<div id="natural-gas" aria-labelledby="ui-id-8" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style={{ display: "block" }}>
 											<div className="tab-content">
-												<ExamplesOfAllLists />
+												<PrimaryLists />
 											</div>
 										</div>
 									</div>
@@ -87,7 +87,7 @@ class ThemesTabs extends Component {
 										<div id="crude-oil" aria-labelledby="ui-id-7" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style={{ display: "none" }}></div>
 										<div id="natural-gas" aria-labelledby="ui-id-8" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style={{ display: "block" }}>
 											<div className="tab-content">
-												<ExamplesOfAllLists />
+												<PrimaryLists />
 											</div>
 										</div>
 									</div>
@@ -112,7 +112,7 @@ class ThemesTabs extends Component {
 										<div id="crude-oil" aria-labelledby="ui-id-7" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style={{ display: "none" }}></div>
 										<div id="natural-gas" aria-labelledby="ui-id-8" role="tabpanel" className="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style={{ display: "block" }}>
 											<div className="tab-content">
-												<ExamplesOfAllLists />
+												<PrimaryLists />
 											</div>
 										</div>
 									</div>

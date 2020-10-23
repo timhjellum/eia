@@ -2,9 +2,8 @@
 import Page from "./Page"
 import { Link } from "react-router-dom"
 import Top from "./Placeholders/Top.js"
-import Visualizations from "./States/Visualizations"
+
 import VisualizationsExample from "./States/VisualizationsExample"
-import ContainerLayout from "./Containers/ContainerLayout"
 
 class Visulizations extends Component {
 	render() {
@@ -21,10 +20,7 @@ class Visulizations extends Component {
 						</p>
 					</p>
 
-					<ContainerLayout>
-						<VisualizationsExample />
-					</ContainerLayout>
-					<Visualizations />
+					<VisualizationsExample />
 
 					<Top />
 					<h3 className="_h3">General Icons</h3>

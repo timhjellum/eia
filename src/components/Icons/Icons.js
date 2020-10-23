@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import ContainerLayout from "../Containers/ContainerLayout"
 
 class ExampleIconXXX extends Component {
 	constructor() {
@@ -10,7 +11,7 @@ class ExampleIconXXX extends Component {
 		const initialCodeString = `<thead className="double-head">\n  <tr>\n    <th>Align left</th>\n    <th colSpan="3">Aligned Left</th>\n    <th>Aligned right</th>\n  </tr>\n  <tr>\n    <th>Aligned Left</th>\n    <th>Aligned right</th>\n    <th>Aligned right</th>\n    <th>Aligned right</th>\n    <th>Aligned right</th>\n  </tr>\n  </thead>`
 		this.state = {
 			selected: tomorrow,
-			//style: require("../../assets/styles/hljs/tomorrow").default,
+
 			code: initialCodeString,
 			showLineNumbers: true,
 			copied: false
@@ -26,7 +27,10 @@ class ExampleIconXXX extends Component {
 		return (
 			<div className="_example">
 				<h4 className="_h4">HTML Code Example</h4>
-				<SyntaxHighlighter language="html" style={this.state.selected}>
+</ContainerLayout>
+
+<div className="_example">
+<SyntaxHighlighter language="html" style={this.state.selected}>
 					{this.state.code}
 				</SyntaxHighlighter>
 				<input hidden value={this.state.code} onChange={({ target: { value } }) => this.setState({ value, copied: false })} />
@@ -35,6 +39,7 @@ class ExampleIconXXX extends Component {
 				</CopyToClipboard>
 
 				{this.state.copied ? <span className="copied">The HTML has been copied to your clipboard.</span> : null}
+				</div>
 			</div>
 		)
 	}

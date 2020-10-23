@@ -1,0 +1,152 @@
+ul {
+	&.icon-list {
+		li {
+			&.ico {
+				//&.automated-retrieval-policy {
+				&.pedro {
+					&:before {
+						.icon-bot-policy();
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				&.email {
+					&:before {
+						//.icon-email-simple();
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				&.rss {
+					&:before {
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				&.reports {
+					&:before {
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				&.calendar {
+					&:before {
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				/*
+				&.pedro {
+					&:before {
+						//.icon-pedro;
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+    					position: relative;
+					}
+				}
+				*/
+				&.faq {
+					&:before {
+						.controls-icon();
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: 0 12px 0 0;
+						position: relative;
+					}
+				}
+				&.radio {
+					&:before {
+						//.icon-radio-spot;
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 40px;
+						width: 40px;
+						margin: -5px 12px 0 0;
+						position: relative;
+					}
+				}
+				&.webinar {
+					&:before {
+						.icon-webinar();
+						.controls-icon(15px, 16px);
+						float: left;
+						background-size: 100%;
+						height: 36px;
+						width: 36px;
+						margin: 0 12px 0 0;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+}
+
+li {
+	&.ico {
+		list-style: none;
+		margin: 0;
+		min-height: 15px; // same as icon
+		padding-bottom: 6px;
+	}
+}
+li,
+div,
+td {
+	&.ico {
+		margin: 0;
+		a[href] {
+			//display: table; this doesn't work of there's a (map) afterwards
+			//display: inline-block; // dont set: https://wwwdev.eia.gov/adaptive/tools/a-z/index.php?id=N
+			padding-left: 20px;
+		}
+		&.pdf,
+		&.xls,
+		&.json,
+		&.csv,
+		&.ppt,
+		&.html,
+		&.doc,
+		&.image,
+		&.interactive,
+		&.efile,
+		&.pedro {
+			position: relative;
+			&:before {
+				position: absolute;
+			}
+		}
+	}
+}

@@ -18,6 +18,7 @@ class TablesFootnotesExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesFootnotesExample"></a>
 				<h3 className="_h3">Table Footnotes</h3>
 				<p className="_p">
 					Adding a <code>class="footnotes"</code> to the first table cell (&lt;td&gt;).

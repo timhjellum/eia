@@ -20,6 +20,7 @@ class TablesBasicExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesBasicExample"></a>
 				<h3 className="_h3">Basic Table</h3>
 				<p className="_p">
 					The basic EIA styled table can created by nesting the table in a div with the style: <code>class="table-wrapper"</code>, and adding the style <code>class="basic-table"</code> to the <code>table</code> tag. It's also important to use the HTML table structure of <code>&lt;head&gt;&lt;/head&gt;</code>, <code>&lt;body&gt;&lt;/body&gt;</code>, and <code>&lt;foot&gt;&lt;/foot&gt;</code> as needed.

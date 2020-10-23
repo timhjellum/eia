@@ -20,6 +20,7 @@ class TablesColumnHideExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesColumnHideExample"></a>
 				<h3 className="_h3">Hide Columns</h3>
 				<p className="_p">
 					Hiding a column (head, body and foot) can be accomplished by adding a <code>class="hide-col-1/2/3/4/5..."</code> to the table class.

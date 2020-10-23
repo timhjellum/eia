@@ -3,7 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import ContainerLayout from "../Containers/ContainerLayout"
-import ExamplesOfAllLists from "../Themes/ExamplesOfAllLists"
+import PrimaryLists from "../Themes/PrimaryLists"
 
 class AccordionFirstOpen extends Component {
 	constructor() {
@@ -40,7 +40,7 @@ class AccordionFirstOpen extends Component {
 									Introduction
 								</h3>
 								<div className="accordion-content" style={{ display: "block" }}>
-									<ExamplesOfAllLists />
+									<PrimaryLists />
 								</div>
 								<h3>
 									<span className="ui-accordion-header-icon ui-icon ico expand" style={{ display: "block" }}></span>

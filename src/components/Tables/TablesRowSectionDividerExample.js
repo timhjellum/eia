@@ -19,6 +19,7 @@ class TablesRowSectionDividerExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesRowSectionDividerExample"></a>
 				<h3 className="_h3">Tables Section Divider</h3>
 
 				<p className="_p">

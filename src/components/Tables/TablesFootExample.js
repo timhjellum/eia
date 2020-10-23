@@ -18,6 +18,7 @@ class TablesFootExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesFootExample"></a>
 				<h3 className="_h3">Table Foot</h3>
 				<ContainerLayout>
 					<div className="table-wrapper">

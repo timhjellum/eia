@@ -1,28 +1,43 @@
 import React, { Component } from "react"
-
-import SyntaxHighlighter from "react-syntax-highlighter"
-import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import ContainerLayout from "../Containers/ContainerLayout"
 
 class ThemeListIncorrectNesting extends Component {
-	constructor() {
-		super()
-		const initialCodeString = `<ul>\n  <li>Lorem ipsum dolor sit amet</li>\n  \n    <ul>\n      <li>Lorem ipsum dolor sit amet</li>\n      <li>Lorem ipsum dolor sit amet</li>\n      <li>Lorem ipsum dolor sit amet</li>\n    </ul>\n  \n  <li>Lorem ipsum dolor sit amet</li>\n</ul>`
-		this.state = {
-			selected: tomorrow,
-			//style: require("../../assets/styles/hljs/tomorrow").default,
-			code: initialCodeString,
-			showLineNumbers: true,
-			copied: false
-		}
-	}
 	render() {
 		return (
-			<div className="_example">
-				<h4 className="_h4">HTML Code Example</h4>
-				<SyntaxHighlighter language="html" style={this.state.selected}>
-					{this.state.code}
-				</SyntaxHighlighter>
-			</div>
+			<>
+				<h2 className="_h2 themes">Nested Lists</h2>
+				<ContainerLayout>
+					<div className="l-row l-two-col-even">
+						<div className="l-col">
+							<h4 className="_h4">Correct list nesting:</h4>
+							<ul>
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>
+									<ul>
+										<li>Lorem ipsum dolor sit amet</li>
+										<li>Lorem ipsum dolor sit amet</li>
+										<li>Lorem ipsum dolor sit amet</li>
+									</ul>
+								</li>
+								<li>Lorem ipsum dolor sit amet</li>
+							</ul>
+						</div>
+						<div className="l-col">
+							<h4 className="_h4">Incorrect list nesting:</h4>
+							<ul>
+								<li>Lorem ipsum dolor sit amet</li>
+								<ul>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>Lorem ipsum dolor sit amet</li>
+								</ul>
+								<li>Lorem ipsum dolor sit amet</li>
+							</ul>
+						</div>
+					</div>
+				</ContainerLayout>
+				{/* end list item */}
+			</>
 		)
 	}
 }

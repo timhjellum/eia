@@ -27,7 +27,7 @@ import LayoutsNestedRows from "./components/LayoutsNestedRows"
 import ModulesHome from "./components/ModulesHome"
 import ModulesBanners from "./components/ModulesBanners"
 import ModulesContact from "./components/ModulesContact"
-import ModulesEnergyEducation from "./components/ModulesEnergyEducation"
+import ModulesListItems from "./components/ModulesListItems"
 import ModulesFancybox from "./components/ModulesFancybox"
 import ModulesFootnotes from "./components/ModulesFootnotes"
 //import ModulesForms from "./components/ModulesForms"
@@ -46,7 +46,8 @@ import ThemesHome from "./components/ThemesHome"
 import ThemesAccordions from "./components/ThemesAccordions"
 import ThemesArticle from "./components/ThemesArticle"
 import ThemeFAQs from "./components/ThemesFAQs"
-import ThemesLists from "./components/ThemesLists"
+import ThemesPrimaryLists from "./components/ThemesPrimaryLists"
+import ThemesSecondaryLists from "./components/ThemesSecondaryLists"
 import ThemesTables from "./components/ThemesTables"
 import ThemesTabs from "./components/ThemesTabs"
 
@@ -226,7 +227,7 @@ class App extends Component {
 									<NavLink to="/style-guide/modules/contact">Contact</NavLink>
 								</li>
 								<li>
-									<NavLink to="/style-guide/modules/energy-education">Energy Education</NavLink>
+									<NavLink to="/style-guide/modules/list-items">List Items</NavLink>
 								</li>
 								<li>
 									<NavLink to="/style-guide/modules/modals">Modals</NavLink>
@@ -244,9 +245,6 @@ class App extends Component {
 								</li>
 								<li>
 									<NavLink to="/style-guide/modules/report-headers">Report Headers</NavLink>
-								</li>
-								<li>
-									<NavLink to="/style-guide/modules/visulizations">Visulizations</NavLink>
 								</li>
 							</ul>
 
@@ -288,7 +286,10 @@ class App extends Component {
 									<NavLink to="/style-guide/themes/faqs">FAQs Page</NavLink>
 								</li>
 								<li>
-									<NavLink to="/style-guide/themes/lists">Lists (ul)</NavLink>
+									<NavLink to="/style-guide/themes/secondary-lists">Primary Lists (ul)</NavLink>
+								</li>
+								<li>
+									<NavLink to="/style-guide/themes/primary-lists">Secondary Lists (ul)</NavLink>
 								</li>
 								<li>
 									<NavLink to="/style-guide/themes/tables">Tables</NavLink>
@@ -320,13 +321,12 @@ class App extends Component {
 						<Route path="/style-guide/modules/home" component={ModulesHome} />
 						<Route path="/style-guide/modules/banners" component={ModulesBanners} />
 						<Route path="/style-guide/modules/contact" component={ModulesContact} />
-						<Route path="/style-guide/modules/energy-education" component={ModulesEnergyEducation} />
+						<Route path="/style-guide/modules/list-items" component={ModulesListItems} />
 						<Route path="/style-guide/modules/modals" component={ModulesFancybox} />
 						<Route path="/style-guide/modules/footnotes" component={ModulesFootnotes} />
 						<Route path="/style-guide/modules/images" component={ModulesImages} />
 						<Route path="/style-guide/modules/page-titles" component={ModulesPageTitles} />
 						<Route path="/style-guide/modules/report-headers" component={ModulesReportHeaders} />
-						<Route path="/style-guide/modules/visulizations" component={ModulesVisulizations} />
 
 						<Route path="/style-guide/states/home" component={StatesHome} />
 						<Route path="/style-guide/states/build-anchor" component={StatesBuildAnchor} />
@@ -338,7 +338,8 @@ class App extends Component {
 						<Route path="/style-guide/themes/accordions" component={ThemesAccordions} />
 						<Route path="/style-guide/themes/article" component={ThemesArticle} />
 						<Route path="/style-guide/themes/faqs" component={ThemeFAQs} />
-						<Route path="/style-guide/themes/lists" component={ThemesLists} />
+						<Route path="/style-guide/themes/primary-lists" component={ThemesPrimaryLists} />
+						<Route path="/style-guide/themes/secondary-lists" component={ThemesSecondaryLists} />
 						<Route path="/style-guide/themes/tables" component={ThemesTables} />
 						<Route path="/style-guide/themes/tabs" component={ThemesTabs} />
 					</div>

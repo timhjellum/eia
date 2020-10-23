@@ -19,6 +19,7 @@ class TablesRowSelectedExample extends Component {
 	render() {
 		return (
 			<>
+				<a name="TablesRowSelectedExample"></a>
 				<h3 className="_h3">Row Selected</h3>
 				<p className="_p">
 					Overiding the column alignment (head, body and foot) can be accomplished by adding a <code>selector</code> to the table class.
@@ -121,35 +122,212 @@ class TablesRowSelectedExample extends Component {
 											</span>
 										</td>
 									</tr>
-									<tr id="rp_pad4">
+								</tbody>
+							</table>
+							<table className="basic-table full-width selector">
+								<tbody>
+									<tr>
 										<td>
-											<span className="icon linechart" title="Click to chart this series">
-												<span>LINECHART</span>
+											<span className="ico grid-column">
+												<span></span>
 											</span>
-											Rhode Island
+											Lorem ipsum
 										</td>
-										<td>3.654</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
 										<td>
-											-0.049
-											<span className="ico down-arrow">
-												<span>DOWN</span>
+											<span className="ico grid-line">
+												<span></span>
 											</span>
+											Lorem ipsum
 										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
 										<td>
-											0.138
-											<span className="ico up-arrow">
-												<span>UP</span>
+											<span className="ico grid-map">
+												<span></span>
 											</span>
+											Lorem ipsum
 										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-column">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-line">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-map">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-pin">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-pin">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-key">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td className="sectionhead" colSpan="3">
+											Selected
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span className="ico grid-column">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-line">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-map">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-column">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-line">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-map">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-parent-pin">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-pin">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td>
+											<span className="ico grid-key">
+												<span></span>
+											</span>
+											Lorem ipsum
+										</td>
+										<td></td>
+										<td></td>
 									</tr>
 								</tbody>
-								<tfoot>
-									<tr>
-										<td colSpan="99" className="footnotes">
-											Footnotes
-										</td>
-									</tr>
-								</tfoot>
 							</table>
 						</div>
 					</div>

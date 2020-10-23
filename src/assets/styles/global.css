@@ -7,8 +7,12 @@
 @import "less/base/icons-vars";
 @import "less/base/icons-mixins";
 @import "less/base/icons";
+@import "less/base/icons-list";
+@import "less/base/icons-file-type";
+@import "less/base/icons-social";
 @import "less/base/icons-header";
 @import "less/base/icons-logos";
+@import "less/base/icons-weekly";
 @import "less/base/forms";
 @import "less/base/footnotes";
 @import "less/base/tables";

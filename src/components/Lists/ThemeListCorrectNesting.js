@@ -17,18 +17,20 @@ class ThemeListCorrectNesting extends Component {
 	}
 	render() {
 		return (
-			<div className="_example">
-				<h4 className="_h4">HTML Code Example</h4>
-				<SyntaxHighlighter language="html" style={this.state.selected}>
-					{this.state.code}
-				</SyntaxHighlighter>
-				<input hidden value={this.state.code} onChange={({ target: { value } }) => this.setState({ value, copied: false })} />
-				<CopyToClipboard text={this.state.code} onCopy={() => this.setState({ copied: true })}>
-					<button>Copy to clipboard</button>
-				</CopyToClipboard>
+			<>
+				<div className="_example">
+					<h4 className="_h4">HTML Code Example</h4>
+					<SyntaxHighlighter language="html" style={this.state.selected}>
+						{this.state.code}
+					</SyntaxHighlighter>
+					<input hidden value={this.state.code} onChange={({ target: { value } }) => this.setState({ value, copied: false })} />
+					<CopyToClipboard text={this.state.code} onCopy={() => this.setState({ copied: true })}>
+						<button>Copy to clipboard</button>
+					</CopyToClipboard>
 
-				{this.state.copied ? <span className="copied">The HTML has been copied to your clipboard.</span> : null}
-			</div>
+					{this.state.copied ? <span className="copied">The HTML has been copied to your clipboard.</span> : null}
+				</div>
+			</>
 		)
 	}
 }

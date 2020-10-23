@@ -27,9 +27,6 @@ class BuildAnchorExample extends Component {
 				</CopyToClipboard>
 
 				{this.state.copied ? <span className="copied">The HTML has been copied to your clipboard.</span> : null}
-				{/*
-<ul class="numbered build-anchor">\n  <li>\n    <span class="number">ES1.A</span>\n    <span class="report-name">Total Electric Power Industry</span>\n  </li>\n  <li>\n    <span class="formats">Available formats:</span>\n    <a href="xls/table_es1a.xlsx" class="ico xls" title="ES1.A Total Electric Power Industry">\n      <span>XLS</span>\n    </a>\n  </li>\n</ul>
-				*/}
 			</div>
 		)
 	}

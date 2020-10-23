@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/hljs"
+import ContainerLayout from "../Containers/ContainerLayout"
 
 class IconLargeRSS extends Component {
 	constructor() {
@@ -10,7 +11,7 @@ class IconLargeRSS extends Component {
 		const initialCodeString = `<ul class="icon-list">\n  <li class="ico rss">\n    <a href="/">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>\n  </li>\n</ul>`
 		this.state = {
 			selected: tomorrow,
-			//style: require("../../assets/styles/hljs/tomorrow").default,
+
 			code: initialCodeString,
 			showLineNumbers: true,
 			copied: false
@@ -20,7 +21,10 @@ class IconLargeRSS extends Component {
 		return (
 			<div className="_example">
 				<h4 className="_h4">HTML Code Example</h4>
-				<SyntaxHighlighter language="html" style={this.state.selected}>
+</ContainerLayout>
+
+<div className="_example">
+<SyntaxHighlighter language="html" style={this.state.selected}>
 					{this.state.code}
 				</SyntaxHighlighter>
 				<input hidden value={this.state.code} onChange={({ target: { value } }) => this.setState({ value, copied: false })} />
@@ -29,6 +33,7 @@ class IconLargeRSS extends Component {
 				</CopyToClipboard>
 
 				{this.state.copied ? <span className="copied">The HTML has been copied to your clipboard.</span> : null}
+				</div>
 			</div>
 		)
 	}

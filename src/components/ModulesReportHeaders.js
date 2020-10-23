@@ -2,12 +2,13 @@
 import Page from "./Page"
 import Top from "./Placeholders/Top.js"
 import Placeholder from "./Placeholders/Placeholder"
+import PetroleumWeekly from "./Modules/PetroleumWeekly"
 import ContainerLayout from "./Containers/ContainerLayout"
 
 class ModulesReportHeaders extends Component {
 	render() {
 		return (
-			<Page title="Coming Soon">
+			<Page title="Report Headers">
 				<span className="modules">
 					<h1 className="_h1">Report Header</h1>
 
@@ -190,6 +191,8 @@ class ModulesReportHeaders extends Component {
 						</div>
 					</ContainerLayout>
 					<Placeholder />
+					<Top />
+					<PetroleumWeekly />
 					<Top />
 				</span>
 			</Page>
