@@ -1,9 +1,7 @@
 # Numerous always-ignore extensions
 *.diff
 *.bak
-*.pdf
-*.ppt
-*.doc
+
 *.db
 *~
 node_modules/
@@ -11,9 +9,7 @@ node_modules/
 
 # Build folder
 _beta-header/
-_feedback/
-_global/
-_reports/
+
 
 # OS or Editor folders
 .DS_Store
