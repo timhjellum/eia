@@ -1,0 +1,27 @@
+.header {
+  background-color: #001744;
+  //background-image: url(/images/logo.png);
+  //background-repeat: no-repeat;
+  //background-size: 200px;
+  //background-position-y: -28px;
+  //height: 67px;
+}
+
+.headroom--pinned {
+  display: block;
+}
+.headroom--unpinned {
+  display: block;
+}
+/*
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+*/
